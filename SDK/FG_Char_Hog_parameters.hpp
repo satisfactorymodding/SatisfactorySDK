@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,8 +78,8 @@ struct AChar_Hog_C_CheckTargetHeight_Params
 {
 };
 
-// Function Char_Hog.Char_Hog_C.circle
-struct AChar_Hog_C_circle_Params
+// Function Char_Hog.Char_Hog_C.Circle
+struct AChar_Hog_C_Circle_Params
 {
 };
 

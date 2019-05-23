@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -123,7 +123,7 @@ public:
 	bool                                               mAG_IsFalling;                                            // 0x3D1A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_IsWalking;                                            // 0x3D1B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_WalkToIdleTransition;                                 // 0x3D1C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               mAG_IdleToWalkTransition;                                 // 0x3D1D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAg_IdleToWalkTransition;                                 // 0x3D1D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_WalkToRunTransition;                                  // 0x3D1E(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_RunToWalkTransition;                                  // 0x3D1F(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              mAG_InvertedAimPitch;                                     // 0x3D20(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)

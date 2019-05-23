@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -64,7 +64,7 @@ public:
 	bool                                               mPointDmgTaken;                                           // 0x17E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mRadialDmgTaken;                                          // 0x17E5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_WalkToIdleTransition;                                 // 0x17E6(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               mAG_IdleToWalkTransition;                                 // 0x17E7(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAg_IdleToWalkTransition;                                 // 0x17E7(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FRotator                                    mAG_SurfaceRotationClamp;                                 // 0x17E8(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_IsRunning;                                            // 0x17F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x17F5(0x0003) MISSED OFFSET

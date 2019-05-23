@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -150,7 +150,7 @@ public:
 	bool                                               mAG_WalkToRunTransition;                                  // 0x4430(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_RunToWalkTransition;                                  // 0x4431(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_IsFalling;                                            // 0x4432(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               mAG_IdleToWalkTransition;                                 // 0x4433(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAg_IdleToWalkTransition;                                 // 0x4433(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_WalkToIdleTransition;                                 // 0x4434(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_FallingToWalkTransition;                              // 0x4435(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAG_IsWalking;                                            // 0x4436(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)

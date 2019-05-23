@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -130,8 +130,8 @@ struct UWidget_InventorySlot_C_OnMouseDoubleClick_Params
 	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Widget_InventorySlot.Widget_InventorySlot_C.GetTooltipWidget
-struct UWidget_InventorySlot_C_GetTooltipWidget_Params
+// Function Widget_InventorySlot.Widget_InventorySlot_C.GetToolTipWidget
+struct UWidget_InventorySlot_C_GetToolTipWidget_Params
 {
 	class UWidget*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };

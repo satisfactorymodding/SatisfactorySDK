@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,14 +41,14 @@ void UWidget_UseableBase_C::DropInventoryStackOnInventoryWidget(class UWidget_In
 // Function Widget_UseableBase.Widget_UseableBase_C.InitInventoryWidgetCallbacks
 // ()
 // Parameters:
-// class UWidget_Inventory_C*     inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Inventory_C*     InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_UseableBase_C::InitInventoryWidgetCallbacks(class UWidget_Inventory_C* inventoryComponent)
+void UWidget_UseableBase_C::InitInventoryWidgetCallbacks(class UWidget_Inventory_C* InventoryComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.InitInventoryWidgetCallbacks");
 
 	UWidget_UseableBase_C_InitInventoryWidgetCallbacks_Params params;
-	params.inventoryComponent = inventoryComponent;
+	params.InventoryComponent = InventoryComponent;
 
 	auto flags = fn->FunctionFlags;
 

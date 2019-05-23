@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -213,14 +213,14 @@ void AChar_Hog_C::CheckTargetHeight()
 }
 
 
-// Function Char_Hog.Char_Hog_C.circle
+// Function Char_Hog.Char_Hog_C.Circle
 // ()
 
-void AChar_Hog_C::circle()
+void AChar_Hog_C::Circle()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Hog.Char_Hog_C.circle");
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Hog.Char_Hog_C.Circle");
 
-	AChar_Hog_C_circle_Params params;
+	AChar_Hog_C_Circle_Params params;
 
 	auto flags = fn->FunctionFlags;
 

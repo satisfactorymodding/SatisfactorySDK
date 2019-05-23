@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.Test
-struct UWidget_TradingPost_LaunchButton_C_Test_Params
+// Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.test
+struct UWidget_TradingPost_LaunchButton_C_test_Params
 {
 	bool                                               NewParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

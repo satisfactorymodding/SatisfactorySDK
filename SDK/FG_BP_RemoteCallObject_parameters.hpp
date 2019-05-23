@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ struct UBP_RemoteCallObject_C_ServerDismantlePortableMiner_Params
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SplitResource
 struct UBP_RemoteCallObject_C_Server_SplitResource_Params
 {
-	class UFGInventoryComponent*                       inventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent*                       InventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	int                                                sourceIdx;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                numResourceToMove;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -126,7 +126,7 @@ struct UBP_RemoteCallObject_C_ServerPickUpBeacon_Params
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DropItem
 struct UBP_RemoteCallObject_C_Server_DropItem_Params
 {
-	class UFGInventoryComponent*                       inventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent*                       InventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	int                                                sourceIdx;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     SpawnLocation;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FRotator                                    spawnRotation;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -390,7 +390,7 @@ struct UBP_RemoteCallObject_C_Server_SetSignWallData_Params
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SortInventory
 struct UBP_RemoteCallObject_C_Server_SortInventory_Params
 {
-	class UFGInventoryComponent*                       inventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent*                       InventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.ExecuteUbergraph_BP_RemoteCallObject

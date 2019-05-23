@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -127,16 +127,16 @@ void UBP_RemoteCallObject_C::ServerDismantlePortableMiner(class ABP_PortableMine
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SplitResource
 // ()
 // Parameters:
-// class UFGInventoryComponent*   inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent*   InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            sourceIdx                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            numResourceToMove              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::Server_SplitResource(class UFGInventoryComponent* inventoryComponent, int sourceIdx, int numResourceToMove)
+void UBP_RemoteCallObject_C::Server_SplitResource(class UFGInventoryComponent* InventoryComponent, int sourceIdx, int numResourceToMove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SplitResource");
 
 	UBP_RemoteCallObject_C_Server_SplitResource_Params params;
-	params.inventoryComponent = inventoryComponent;
+	params.InventoryComponent = InventoryComponent;
 	params.sourceIdx = sourceIdx;
 	params.numResourceToMove = numResourceToMove;
 
@@ -355,17 +355,17 @@ void UBP_RemoteCallObject_C::ServerPickUpBeacon(class ABP_Beacon_C* Beacon, clas
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DropItem
 // ()
 // Parameters:
-// class UFGInventoryComponent*   inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent*   InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            sourceIdx                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 SpawnLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                spawnRotation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::Server_DropItem(class UFGInventoryComponent* inventoryComponent, int sourceIdx, const struct FVector& SpawnLocation, const struct FRotator& spawnRotation)
+void UBP_RemoteCallObject_C::Server_DropItem(class UFGInventoryComponent* InventoryComponent, int sourceIdx, const struct FVector& SpawnLocation, const struct FRotator& spawnRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DropItem");
 
 	UBP_RemoteCallObject_C_Server_DropItem_Params params;
-	params.inventoryComponent = inventoryComponent;
+	params.InventoryComponent = InventoryComponent;
 	params.sourceIdx = sourceIdx;
 	params.SpawnLocation = SpawnLocation;
 	params.spawnRotation = spawnRotation;
@@ -1177,14 +1177,14 @@ void UBP_RemoteCallObject_C::Server_SetSignWallData(class AFGBuildableSignWall* 
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SortInventory
 // ()
 // Parameters:
-// class UFGInventoryComponent*   inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent*   InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::Server_SortInventory(class UFGInventoryComponent* inventoryComponent)
+void UBP_RemoteCallObject_C::Server_SortInventory(class UFGInventoryComponent* InventoryComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SortInventory");
 
 	UBP_RemoteCallObject_C_Server_SortInventory_Params params;
-	params.inventoryComponent = inventoryComponent;
+	params.InventoryComponent = InventoryComponent;
 
 	auto flags = fn->FunctionFlags;
 

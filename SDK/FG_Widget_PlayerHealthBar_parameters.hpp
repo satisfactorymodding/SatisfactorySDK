@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,8 +32,8 @@ struct UWidget_PlayerHealthBar_C_GetHealthbar_Params
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.GetProgressBarPercent
-struct UWidget_PlayerHealthBar_C_GetProgressBarPercent_Params
+// Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.GetProgressbarPercent
+struct UWidget_PlayerHealthBar_C_GetProgressbarPercent_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

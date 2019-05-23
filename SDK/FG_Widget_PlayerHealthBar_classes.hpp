@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,7 +49,7 @@ public:
 	struct FLinearColor GetHealthFillColor();
 	void IsValidHealthComponent(bool* Valid);
 	ESlateVisibility GetHealthbar();
-	float GetProgressBarPercent();
+	float GetProgressbarPercent();
 	void Construct();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void ResetAnimGate();

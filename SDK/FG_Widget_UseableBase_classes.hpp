@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ public:
 
 
 	void DropInventoryStackOnInventoryWidget(class UWidget_InventorySlot_C* InventorySlot, class UWidget_Inventory_C* WidgetInventory, bool* Result);
-	void InitInventoryWidgetCallbacks(class UWidget_Inventory_C* inventoryComponent);
+	void InitInventoryWidgetCallbacks(class UWidget_Inventory_C* InventoryComponent);
 	void OnInventorySlotStackMove(class UWidget_InventorySlot_C* InventorySlot);
 	void DropInventorySlotStack(class UWidget_InventorySlot_C* InventorySlot, bool* WasStackMoved);
 	void SetInventoryVisibility(bool Visible);

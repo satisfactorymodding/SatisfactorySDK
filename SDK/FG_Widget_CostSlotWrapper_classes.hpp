@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,12 +56,12 @@ public:
 
 
 	void SetIconBrush(class UTexture* IconTexture);
-	float GetProgressBarPercent();
+	float GetProgressbarPercent();
 	struct FLinearColor GetOrange();
 	void SetTextboxFormating(bool HasItems);
 	struct FLinearColor GetDarkGray();
 	struct FText SetPartsNumbers();
-	void Setup_CostIcon(class UTexture* IconTexture, const struct FItemAmount& ItemAmount, class UFGInventoryComponent* CachedInventoryComponent, int SlotIdx, int CurrentNumInSlot, bool SmallSlot, bool BigSlot, bool ForceOrangeTextbox);
+	void Setup_CostIcon(class UTexture* IconTexture, const struct FItemAmount& ItemAmount, class UFGInventoryComponent* CachedInventoryComponent, int slotIdx, int CurrentNumInSlot, bool SmallSlot, bool BigSlot, bool ForceOrangeTextbox);
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void PreConstruct(bool* IsDesignTime);
 	void ExecuteUbergraph_Widget_CostSlotWrapper(int EntryPoint);

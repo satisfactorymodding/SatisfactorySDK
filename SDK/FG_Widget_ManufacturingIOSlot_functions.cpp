@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -218,14 +218,14 @@ void UWidget_ManufacturingIOSlot_C::Construct()
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.Set CostSlot
 // ()
 // Parameters:
-// int                            SlotIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            slotIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManufacturingIOSlot_C::Set_CostSlot(int SlotIdx)
+void UWidget_ManufacturingIOSlot_C::Set_CostSlot(int slotIdx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.Set CostSlot");
 
 	UWidget_ManufacturingIOSlot_C_Set_CostSlot_Params params;
-	params.SlotIdx = SlotIdx;
+	params.slotIdx = slotIdx;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,7 +75,7 @@ struct UWidget_ManufacturingIOSlot_C_Construct_Params
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.Set CostSlot
 struct UWidget_ManufacturingIOSlot_C_Set_CostSlot_Params
 {
-	int                                                SlotIdx;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                slotIdx;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.ExecuteUbergraph_Widget_ManufacturingIOSlot

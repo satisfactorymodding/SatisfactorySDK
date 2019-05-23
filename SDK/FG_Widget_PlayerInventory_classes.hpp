@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -64,7 +64,7 @@ public:
 	void TryGetCentralStorages();
 	struct FEventReply OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent);
 	void Cleanup();
-	void SetInventoryComponents(class UFGInventoryComponent* inventoryComponent, class UFGInventoryComponent* arms, class UFGInventoryComponent* Back, class UFGInventoryComponent* head, class UFGInventoryComponent* Trash);
+	void SetInventoryComponents(class UFGInventoryComponent* InventoryComponent, class UFGInventoryComponent* arms, class UFGInventoryComponent* Back, class UFGInventoryComponent* head, class UFGInventoryComponent* Trash);
 	void Init();
 	void CloseInventory();
 	void Destruct();

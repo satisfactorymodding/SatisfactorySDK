@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,7 +90,7 @@ public:
 	void GetItemClass(class UClass** ItemClass);
 	void GetStack(struct FInventoryStack* stack);
 	struct FEventReply OnMouseDoubleClick(const struct FGeometry& MyGeometry, struct FPointerEvent* MouseEvent);
-	class UWidget* GetTooltipWidget();
+	class UWidget* GetToolTipWidget();
 	ESlateVisibility GetNumLabelVisibility();
 	void GetFilterImageVisibility(bool* Visible);
 	class UWidget* CreateSplitSlider();

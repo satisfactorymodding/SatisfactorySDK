@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,11 +48,11 @@ public:
 	void DropOntoInventorySlot(class UWidget_InventorySlot_C* InventorySlot, bool* Result);
 	struct FSlateBrush GetSlotBackgroundBrush();
 	struct FLinearColor GetDarkGrayColor();
-	float GetProgressBarPercent();
+	float GetProgressbarPercent();
 	void SetTextboxFormating();
 	class UWidget* GetCustomTooltip();
 	ESlateVisibility GetPaidOffSlotVisibility();
-	ESlateVisibility GetProgressBarVisibility();
+	ESlateVisibility GetProgressbarVisibility();
 	struct FSlateColor GetPaidOffColorFeedback();
 	ESlateVisibility GetPaidOffFeedbackImage();
 	bool OnDrop(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation);

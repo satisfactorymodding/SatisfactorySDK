@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -408,16 +408,16 @@ struct FEventReply UWidget_InventorySlot_C::OnMouseDoubleClick(const struct FGeo
 }
 
 
-// Function Widget_InventorySlot.Widget_InventorySlot_C.GetTooltipWidget
+// Function Widget_InventorySlot.Widget_InventorySlot_C.GetToolTipWidget
 // ()
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UWidget* UWidget_InventorySlot_C::GetTooltipWidget()
+class UWidget* UWidget_InventorySlot_C::GetToolTipWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventorySlot.Widget_InventorySlot_C.GetTooltipWidget");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventorySlot.Widget_InventorySlot_C.GetToolTipWidget");
 
-	UWidget_InventorySlot_C_GetTooltipWidget_Params params;
+	UWidget_InventorySlot_C_GetToolTipWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
 

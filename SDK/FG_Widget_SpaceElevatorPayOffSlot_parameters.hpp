@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.12 - Build 99303)
+// Satisfactory SDK (V0.1.13 - Build 99427)
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,8 +33,8 @@ struct UWidget_SpaceElevatorPayOffSlot_C_GetPaidOffSlotVisibility_Params
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressBarVisibility
-struct UWidget_SpaceElevatorPayOffSlot_C_GetProgressBarVisibility_Params
+// Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressbarVisibility
+struct UWidget_SpaceElevatorPayOffSlot_C_GetProgressbarVisibility_Params
 {
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -51,8 +51,8 @@ struct UWidget_SpaceElevatorPayOffSlot_C_GetPaidOffFeedbackImage_Params
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressBarPercent
-struct UWidget_SpaceElevatorPayOffSlot_C_GetProgressBarPercent_Params
+// Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressbarPercent
+struct UWidget_SpaceElevatorPayOffSlot_C_GetProgressbarPercent_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
