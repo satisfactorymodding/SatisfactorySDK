@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,17 +71,17 @@ void UWidget_InventoryAddNotification_C::IsInventoryOpen(bool* IsOpen)
 }
 
 
-// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemADded
+// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemAdded
 // ()
 // Parameters:
 // class UClass*                  ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            numAdded                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventoryAddNotification_C::OnItemADded(class UClass* ItemClass, int numAdded)
+void UWidget_InventoryAddNotification_C::OnItemAdded(class UClass* ItemClass, int numAdded)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemADded");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemAdded");
 
-	UWidget_InventoryAddNotification_C_OnItemADded_Params params;
+	UWidget_InventoryAddNotification_C_OnItemAdded_Params params;
 	params.ItemClass = ItemClass;
 	params.numAdded = numAdded;
 

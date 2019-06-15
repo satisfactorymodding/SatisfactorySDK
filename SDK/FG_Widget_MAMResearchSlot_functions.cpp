@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,16 +78,16 @@ ESlateVisibility UWidget_MAMResearchSlot_C::GetPaidOffSlotVisibility()
 }
 
 
-// Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.GetProgressbarVisibility
+// Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.GetProgressBarVisibility
 // ()
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UWidget_MAMResearchSlot_C::GetProgressbarVisibility()
+ESlateVisibility UWidget_MAMResearchSlot_C::GetProgressBarVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.GetProgressbarVisibility");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.GetProgressBarVisibility");
 
-	UWidget_MAMResearchSlot_C_GetProgressbarVisibility_Params params;
+	UWidget_MAMResearchSlot_C_GetProgressBarVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
 

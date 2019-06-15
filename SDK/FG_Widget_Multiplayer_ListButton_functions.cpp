@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -271,7 +271,7 @@ void UWidget_Multiplayer_ListButton_C::SetupForJoinGame(struct FFGOnlineFriend* 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetButtonColor
 // ()
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
 void UWidget_Multiplayer_ListButton_C::SetButtonColor(const struct FLinearColor& Color)
 {

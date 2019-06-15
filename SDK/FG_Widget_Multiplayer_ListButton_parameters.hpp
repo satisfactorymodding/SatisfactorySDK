@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,7 +100,7 @@ struct UWidget_Multiplayer_ListButton_C_SetupForJoinGame_Params
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetButtonColor
 struct UWidget_Multiplayer_ListButton_C_SetButtonColor_Params
 {
-	struct FLinearColor                                Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.ClearListSelection

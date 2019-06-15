@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -209,7 +209,7 @@ void UBP_OnlineHelpers_C::IsFriendInOnlineSession(class UObject* WorldContext, c
 // Parameters:
 // struct FOnlinePresence         presence                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FFCompactPresence       compactPresence                (Parm, OutParm)
+// struct FFCompactPresence       compactPresence                (Parm, OutParm, ZeroConstructor)
 
 void UBP_OnlineHelpers_C::GetCompactPresence(const struct FOnlinePresence& presence, class UObject* __WorldContext, struct FFCompactPresence* compactPresence)
 {

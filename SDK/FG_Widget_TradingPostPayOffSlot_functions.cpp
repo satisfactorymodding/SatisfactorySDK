@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,7 +77,7 @@ struct FSlateBrush UWidget_TradingPostPayOffSlot_C::GetSlotBackgroundBrush()
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetDarkGrayColor
 // ()
 // Parameters:
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FLinearColor UWidget_TradingPostPayOffSlot_C::GetDarkGrayColor()
 {
@@ -175,16 +175,16 @@ ESlateVisibility UWidget_TradingPostPayOffSlot_C::GetPaidOffSlotVisibility()
 }
 
 
-// Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressbarVisibility
+// Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressBarVisibility
 // ()
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UWidget_TradingPostPayOffSlot_C::GetProgressbarVisibility()
+ESlateVisibility UWidget_TradingPostPayOffSlot_C::GetProgressBarVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressbarVisibility");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressBarVisibility");
 
-	UWidget_TradingPostPayOffSlot_C_GetProgressbarVisibility_Params params;
+	UWidget_TradingPostPayOffSlot_C_GetProgressBarVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
 
