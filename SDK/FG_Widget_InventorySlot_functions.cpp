@@ -453,9 +453,9 @@ ESlateVisibility UWidget_InventorySlot_C::GetNumLabelVisibility()
 // Function Widget_InventorySlot.Widget_InventorySlot_C.GetFilterImageVisibility
 // ()
 // Parameters:
-// bool                           Visible                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           visible                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventorySlot_C::GetFilterImageVisibility(bool* Visible)
+void UWidget_InventorySlot_C::GetFilterImageVisibility(bool* visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventorySlot.Widget_InventorySlot_C.GetFilterImageVisibility");
 
@@ -467,8 +467,8 @@ void UWidget_InventorySlot_C::GetFilterImageVisibility(bool* Visible)
 
 	fn->FunctionFlags = flags;
 
-	if (Visible != nullptr)
-		*Visible = params.Visible;
+	if (visible != nullptr)
+		*visible = params.visible;
 }
 
 
@@ -884,23 +884,6 @@ void UWidget_InventorySlot_C::SubscribeToParentWindow(class UWidget_Window_C* Pa
 }
 
 
-// Function Widget_InventorySlot.Widget_InventorySlot_C.Construct
-// ()
-
-void UWidget_InventorySlot_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventorySlot.Widget_InventorySlot_C.Construct");
-
-	UWidget_InventorySlot_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_InventorySlot.Widget_InventorySlot_C.PreConstruct
 // ()
 // Parameters:
@@ -968,6 +951,23 @@ void UWidget_InventorySlot_C::Destruct()
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventorySlot.Widget_InventorySlot_C.Destruct");
 
 	UWidget_InventorySlot_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_InventorySlot.Widget_InventorySlot_C.Construct
+// ()
+
+void UWidget_InventorySlot_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventorySlot.Widget_InventorySlot_C.Construct");
+
+	UWidget_InventorySlot_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

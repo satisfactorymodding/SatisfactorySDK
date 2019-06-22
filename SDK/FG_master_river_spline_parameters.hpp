@@ -14,6 +14,21 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function master_river_spline.master_river_spline_C.ModifyTerrain
+struct Amaster_river_spline_C_ModifyTerrain_Params
+{
+};
+
+// Function master_river_spline.master_river_spline_C.CheckPointsHeight
+struct Amaster_river_spline_C_CheckPointsHeight_Params
+{
+};
+
+// Function master_river_spline.master_river_spline_C.SnapToTerrain
+struct Amaster_river_spline_C_SnapToTerrain_Params
+{
+};
+
 // Function master_river_spline.master_river_spline_C.UserConstructionScript
 struct Amaster_river_spline_C_UserConstructionScript_Params
 {

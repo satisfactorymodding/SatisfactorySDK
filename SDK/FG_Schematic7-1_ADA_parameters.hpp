@@ -1,15 +1,17 @@
+#pragma once
+
 // Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "FG_Attack_StingerSwipeStrong_parameters.hpp"
+#include "FG_Schematic7-1_ADA_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
-//Functions
+//Parameters
 //---------------------------------------------------------------------------
 
 }

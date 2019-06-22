@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "FG_DamageType_StingerJumpStrong_structs.hpp"
+#include "FG_Persistent_Exploration_3_structs.hpp"
 
 namespace SDK
 {
@@ -14,15 +14,15 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass DamageType_StingerJumpStrong.DamageType_StingerJumpStrong_C
-// 0x0000 (0x006B - 0x006B)
-class UDamageType_StingerJumpStrong_C : public UBP_DamageType_C
+// BlueprintGeneratedClass Persistent_Exploration_3.Persistent_Exploration_C
+// 0x0000 (0x0330 - 0x0330)
+class APersistent_Exploration_3_C : public ALevelScriptActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass DamageType_StingerJumpStrong.DamageType_StingerJumpStrong_C");
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Persistent_Exploration_3.Persistent_Exploration_C");
 		return ptr;
 	}
 

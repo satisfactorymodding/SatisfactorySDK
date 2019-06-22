@@ -71,17 +71,17 @@ void UWidget_InventoryAddNotification_C::IsInventoryOpen(bool* IsOpen)
 }
 
 
-// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemAdded
+// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemADded
 // ()
 // Parameters:
 // class UClass*                  ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            numAdded                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventoryAddNotification_C::OnItemAdded(class UClass* ItemClass, int numAdded)
+void UWidget_InventoryAddNotification_C::OnItemADded(class UClass* ItemClass, int numAdded)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemAdded");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemADded");
 
-	UWidget_InventoryAddNotification_C_OnItemAdded_Params params;
+	UWidget_InventoryAddNotification_C_OnItemADded_Params params;
 	params.ItemClass = ItemClass;
 	params.numAdded = numAdded;
 

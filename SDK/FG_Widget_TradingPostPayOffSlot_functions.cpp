@@ -95,16 +95,16 @@ struct FLinearColor UWidget_TradingPostPayOffSlot_C::GetDarkGrayColor()
 }
 
 
-// Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressbarPercent
+// Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressBarPercent
 // ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UWidget_TradingPostPayOffSlot_C::GetProgressbarPercent()
+float UWidget_TradingPostPayOffSlot_C::GetProgressBarPercent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressbarPercent");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressBarPercent");
 
-	UWidget_TradingPostPayOffSlot_C_GetProgressbarPercent_Params params;
+	UWidget_TradingPostPayOffSlot_C_GetProgressBarPercent_Params params;
 
 	auto flags = fn->FunctionFlags;
 

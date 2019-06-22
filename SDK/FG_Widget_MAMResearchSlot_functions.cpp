@@ -141,16 +141,16 @@ ESlateVisibility UWidget_MAMResearchSlot_C::GetPaidOffFeedbackImage()
 }
 
 
-// Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.GetProgressbarPercent
+// Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.GetProgressBarPercent
 // ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UWidget_MAMResearchSlot_C::GetProgressbarPercent()
+float UWidget_MAMResearchSlot_C::GetProgressBarPercent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.GetProgressbarPercent");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.GetProgressBarPercent");
 
-	UWidget_MAMResearchSlot_C_GetProgressbarPercent_Params params;
+	UWidget_MAMResearchSlot_C_GetProgressBarPercent_Params params;
 
 	auto flags = fn->FunctionFlags;
 

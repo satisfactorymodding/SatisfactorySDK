@@ -94,7 +94,7 @@ public:
 	struct FEventReply OnMouseDoubleClick(const struct FGeometry& MyGeometry, struct FPointerEvent* MouseEvent);
 	class UWidget* GetTooltipWidget();
 	ESlateVisibility GetNumLabelVisibility();
-	void GetFilterImageVisibility(bool* Visible);
+	void GetFilterImageVisibility(bool* visible);
 	class UWidget* CreateSplitSlider();
 	struct FText GetStackNumber();
 	struct FEventReply OnFocusReceived(struct FGeometry* MyGeometry, struct FFocusEvent* InFocusEvent);
@@ -114,11 +114,11 @@ public:
 	void OnFocusLost(struct FFocusEvent* InFocusEvent);
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void SubscribeToParentWindow(class UWidget_Window_C* ParentWindow);
-	void Construct();
 	void PreConstruct(bool* IsDesignTime);
 	void UpdateStyle();
 	void OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
 	void Destruct();
+	void Construct();
 	void ExecuteUbergraph_Widget_InventorySlot(int EntryPoint);
 	void OnMoveStack__DelegateSignature(class UWidget_InventorySlot_C* Sender);
 	void OnSlotHovered__DelegateSignature(class UWidget_InventorySlot_C* SelfInventorySlot);

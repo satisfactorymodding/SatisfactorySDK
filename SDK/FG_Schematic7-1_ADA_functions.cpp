@@ -1,17 +1,15 @@
-#pragma once
-
 // Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "FG_DamageType_StingerJumpStrong_classes.hpp"
+#include "FG_Schematic7-1_ADA_parameters.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
-//Parameters
+//Functions
 //---------------------------------------------------------------------------
 
 }

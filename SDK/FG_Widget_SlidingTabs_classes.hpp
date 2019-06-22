@@ -43,7 +43,7 @@ public:
 
 	void SetActiveButton();
 	void SetupIndexOffset();
-	void SetActiveIndex(int Index, bool Animate);
+	void SetActiveIndex(int Index, bool animate);
 	void Construct();
 	void SlideLerp();
 	void PreConstruct(bool* IsDesignTime);

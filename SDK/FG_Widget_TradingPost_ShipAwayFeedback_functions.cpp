@@ -33,16 +33,16 @@ ESlateVisibility UWidget_TradingPost_ShipAwayFeedback_C::GetProgressBarVisibilit
 }
 
 
-// Function Widget_TradingPost_ShipAwayFeedback.Widget_TradingPost_ShipAwayFeedback_C.GetProgressbarPercent
+// Function Widget_TradingPost_ShipAwayFeedback.Widget_TradingPost_ShipAwayFeedback_C.GetProgressBarPercent
 // ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UWidget_TradingPost_ShipAwayFeedback_C::GetProgressbarPercent()
+float UWidget_TradingPost_ShipAwayFeedback_C::GetProgressBarPercent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_ShipAwayFeedback.Widget_TradingPost_ShipAwayFeedback_C.GetProgressbarPercent");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_ShipAwayFeedback.Widget_TradingPost_ShipAwayFeedback_C.GetProgressBarPercent");
 
-	UWidget_TradingPost_ShipAwayFeedback_C_GetProgressbarPercent_Params params;
+	UWidget_TradingPost_ShipAwayFeedback_C_GetProgressBarPercent_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_SpaceElevator.Widget_SpaceElevator_C.DisplayEarlyAccessBlocker
+struct UWidget_SpaceElevator_C_DisplayEarlyAccessBlocker_Params
+{
+};
+
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.UpdateHeaderText
 struct UWidget_SpaceElevator_C_UpdateHeaderText_Params
 {

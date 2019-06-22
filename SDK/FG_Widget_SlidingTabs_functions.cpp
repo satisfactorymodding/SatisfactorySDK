@@ -50,15 +50,15 @@ void UWidget_SlidingTabs_C::SetupIndexOffset()
 // ()
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Animate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           animate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SlidingTabs_C::SetActiveIndex(int Index, bool Animate)
+void UWidget_SlidingTabs_C::SetActiveIndex(int Index, bool animate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SlidingTabs.Widget_SlidingTabs_C.SetActiveIndex");
 
 	UWidget_SlidingTabs_C_SetActiveIndex_Params params;
 	params.Index = Index;
-	params.Animate = Animate;
+	params.animate = animate;
 
 	auto flags = fn->FunctionFlags;
 

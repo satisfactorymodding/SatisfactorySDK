@@ -43,7 +43,7 @@ public:
 	}
 
 
-	void Test(bool* NewParam);
+	void test(bool* NewParam);
 	void IsTutorialPhase(bool* IsTutorialPhase);
 	ESlateVisibility GetButtonClickedVisibility();
 	bool IsSchematicPaidOff();

@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "FG_Attack_StingerSwipeStrong_classes.hpp"
+#include "FG_Attack_StingerGasCloud_classes.hpp"
 
 namespace SDK
 {

@@ -70,9 +70,9 @@ void UBP_MenuBase_C::PlayEnterAnimation(class UWidget* prevMenu)
 // ()
 // Parameters:
 // class UWidget*                 prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           Animate                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           animate                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MenuBase_C::ShouldAnimateBackground(class UWidget* prevMenu, bool* Animate)
+void UBP_MenuBase_C::ShouldAnimateBackground(class UWidget* prevMenu, bool* animate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuBase.BP_MenuBase_C.ShouldAnimateBackground");
 
@@ -85,8 +85,8 @@ void UBP_MenuBase_C::ShouldAnimateBackground(class UWidget* prevMenu, bool* Anim
 
 	fn->FunctionFlags = flags;
 
-	if (Animate != nullptr)
-		*Animate = params.Animate;
+	if (animate != nullptr)
+		*animate = params.animate;
 }
 
 

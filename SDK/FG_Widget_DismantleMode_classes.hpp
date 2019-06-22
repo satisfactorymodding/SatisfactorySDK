@@ -44,6 +44,7 @@ public:
 	void Init();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void Construct();
+	void OnDismantleRefundChanged(class UFGBuildGunStateDismantle* dismantleGun);
 	void ExecuteUbergraph_Widget_DismantleMode(int EntryPoint);
 };
 

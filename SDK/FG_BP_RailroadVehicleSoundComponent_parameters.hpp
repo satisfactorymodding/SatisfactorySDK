@@ -24,13 +24,13 @@ struct UBP_RailroadVehicleSoundComponent_C_OnStoppedMoving_Params
 {
 };
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.UpdateRTPCs
-struct UBP_RailroadVehicleSoundComponent_C_UpdateRTPCs_Params
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay
+struct UBP_RailroadVehicleSoundComponent_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay
-struct UBP_RailroadVehicleSoundComponent_C_ReceiveBeginPlay_Params
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.UpdateRTPCs
+struct UBP_RailroadVehicleSoundComponent_C_UpdateRTPCs_Params
 {
 };
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Char_EliteCaveStinger.Char_EliteCaveStinger_C
-// 0x0035 (0x09ED - 0x09B8)
+// 0x0036 (0x09EE - 0x09B8)
 class AChar_EliteCaveStinger_C : public AChar_Stinger_C
 {
 public:
@@ -27,6 +27,7 @@ public:
 	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x09E0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              GasOnHitChance;                                           // 0x09E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               OffCooldown;                                              // 0x09EC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bSpawnGas;                                                // 0x09ED(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35,10 +36,10 @@ public:
 	}
 
 
+	void OnRep_bSpawnGass();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
 	void SpawnGas();
-	void OnTakeAnyDamage_Event_1(class AActor* damagedActor, float Damage, class UDamageType* DamageType, class AController* instigatedBy, class AActor* damageCauser);
+	void GasEffect();
 	void ExecuteUbergraph_Char_EliteCaveStinger(int EntryPoint);
 };
 

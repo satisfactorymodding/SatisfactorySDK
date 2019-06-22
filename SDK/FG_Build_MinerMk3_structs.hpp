@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_Build_MinerMk2_classes.hpp"
+#include "FG_Engine_classes.hpp"
 #include "FG_EMinerState_classes.hpp"
 
 namespace SDK

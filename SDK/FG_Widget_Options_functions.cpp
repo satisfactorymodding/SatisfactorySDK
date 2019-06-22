@@ -511,23 +511,6 @@ void UWidget_Options_C::PostProcessingPrevious()
 }
 
 
-// Function Widget_Options.Widget_Options_C.FoliagePrevious
-// ()
-
-void UWidget_Options_C::FoliagePrevious()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.FoliagePrevious");
-
-	UWidget_Options_C_FoliagePrevious_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Options.Widget_Options_C.ShadowQualityNext
 // ()
 
@@ -553,6 +536,23 @@ void UWidget_Options_C::ShadowQualityPrevious()
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.ShadowQualityPrevious");
 
 	UWidget_Options_C_ShadowQualityPrevious_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Options.Widget_Options_C.FoliagePrevious
+// ()
+
+void UWidget_Options_C::FoliagePrevious()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.FoliagePrevious");
+
+	UWidget_Options_C_FoliagePrevious_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1097,6 +1097,23 @@ void UWidget_Options_C::ResolutionChangedAccepted(bool confirm)
 
 	UWidget_Options_C_ResolutionChangedAccepted_Params params;
 	params.confirm = confirm;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Options.Widget_Options_C.OpenRequireRestartIfRequired
+// ()
+
+void UWidget_Options_C::OpenRequireRestartIfRequired()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.OpenRequireRestartIfRequired");
+
+	UWidget_Options_C_OpenRequireRestartIfRequired_Params params;
 
 	auto flags = fn->FunctionFlags;
 

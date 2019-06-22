@@ -145,7 +145,7 @@ struct UWidget_InventorySlot_C_GetNumLabelVisibility_Params
 // Function Widget_InventorySlot.Widget_InventorySlot_C.GetFilterImageVisibility
 struct UWidget_InventorySlot_C_GetFilterImageVisibility_Params
 {
-	bool                                               Visible;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               visible;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.CreateSplitSlider
@@ -273,11 +273,6 @@ struct UWidget_InventorySlot_C_SubscribeToParentWindow_Params
 	class UWidget_Window_C*                            ParentWindow;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
-// Function Widget_InventorySlot.Widget_InventorySlot_C.Construct
-struct UWidget_InventorySlot_C_Construct_Params
-{
-};
-
 // Function Widget_InventorySlot.Widget_InventorySlot_C.PreConstruct
 struct UWidget_InventorySlot_C_PreConstruct_Params
 {
@@ -298,6 +293,11 @@ struct UWidget_InventorySlot_C_OnMouseEnter_Params
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.Destruct
 struct UWidget_InventorySlot_C_Destruct_Params
+{
+};
+
+// Function Widget_InventorySlot.Widget_InventorySlot_C.Construct
+struct UWidget_InventorySlot_C_Construct_Params
 {
 };
 

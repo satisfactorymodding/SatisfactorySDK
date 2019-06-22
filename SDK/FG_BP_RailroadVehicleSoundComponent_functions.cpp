@@ -46,14 +46,14 @@ void UBP_RailroadVehicleSoundComponent_C::OnStoppedMoving()
 }
 
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.UpdateRTPCs
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay
 // ()
 
-void UBP_RailroadVehicleSoundComponent_C::UpdateRTPCs()
+void UBP_RailroadVehicleSoundComponent_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.UpdateRTPCs");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay");
 
-	UBP_RailroadVehicleSoundComponent_C_UpdateRTPCs_Params params;
+	UBP_RailroadVehicleSoundComponent_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -63,14 +63,14 @@ void UBP_RailroadVehicleSoundComponent_C::UpdateRTPCs()
 }
 
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.UpdateRTPCs
 // ()
 
-void UBP_RailroadVehicleSoundComponent_C::ReceiveBeginPlay()
+void UBP_RailroadVehicleSoundComponent_C::UpdateRTPCs()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.UpdateRTPCs");
 
-	UBP_RailroadVehicleSoundComponent_C_ReceiveBeginPlay_Params params;
+	UBP_RailroadVehicleSoundComponent_C_UpdateRTPCs_Params params;
 
 	auto flags = fn->FunctionFlags;
 

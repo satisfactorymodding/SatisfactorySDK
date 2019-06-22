@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass master_river_spline.master_river_spline_C
-// 0x00D8 (0x0420 - 0x0348)
+// 0x00F9 (0x0441 - 0x0348)
 class Amaster_river_spline_C : public AFGRiverSpline
 {
 public:
@@ -54,6 +54,14 @@ public:
 	unsigned char                                      UnknownData03[0x4];                                       // 0x0404(0x0004) MISSED OFFSET
 	class FString                                      Spline_Point_Number;                                      // 0x0408(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class UFGSoundSplineComponent*                     mAudioSpline;                                             // 0x0418(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              SnapOffset;                                               // 0x0420(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x0424(0x0004) MISSED OFFSET
+	class ALandscapeProxy*                             LandscapeProxy;                                           // 0x0428(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData)
+	float                                              WidthStart;                                               // 0x0430(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              Width_End;                                                // 0x0434(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              TerrainOffset;                                            // 0x0438(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              Falloff;                                                  // 0x043C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               bShouldPaintWetSand;                                      // 0x0440(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -62,6 +70,9 @@ public:
 	}
 
 
+	void ModifyTerrain();
+	void CheckPointsHeight();
+	void SnapToTerrain();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_master_river_spline(int EntryPoint);

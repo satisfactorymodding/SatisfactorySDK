@@ -123,9 +123,9 @@ public:
 	void PopulateResolutionBox();
 	void PostProcessingNext();
 	void PostProcessingPrevious();
-	void FoliagePrevious();
 	void ShadowQualityNext();
 	void ShadowQualityPrevious();
+	void FoliagePrevious();
 	void FoliageNext();
 	void TextureQualityNext();
 	void TextureQualityPrevious();
@@ -156,6 +156,7 @@ public:
 	void OnMenuExit(class UWidget** prevMenu, bool* noAnimation);
 	void CheckResolutionChanges();
 	void ResolutionChangedAccepted(bool confirm);
+	void OpenRequireRestartIfRequired();
 	void Construct();
 	void ExecuteUbergraph_Widget_Options(int EntryPoint);
 	void OnBackClicked__DelegateSignature();

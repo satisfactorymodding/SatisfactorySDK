@@ -12,6 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function master_river_spline.master_river_spline_C.ModifyTerrain
+// ()
+
+void Amaster_river_spline_C::ModifyTerrain()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function master_river_spline.master_river_spline_C.ModifyTerrain");
+
+	Amaster_river_spline_C_ModifyTerrain_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function master_river_spline.master_river_spline_C.CheckPointsHeight
+// ()
+
+void Amaster_river_spline_C::CheckPointsHeight()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function master_river_spline.master_river_spline_C.CheckPointsHeight");
+
+	Amaster_river_spline_C_CheckPointsHeight_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function master_river_spline.master_river_spline_C.SnapToTerrain
+// ()
+
+void Amaster_river_spline_C::SnapToTerrain()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function master_river_spline.master_river_spline_C.SnapToTerrain");
+
+	Amaster_river_spline_C_SnapToTerrain_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function master_river_spline.master_river_spline_C.UserConstructionScript
 // ()
 

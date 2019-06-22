@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "FG_Attack_StingerSwipeStrong_structs.hpp"
+#include "FG_Schematic7-1_ADA_structs.hpp"
 
 namespace SDK
 {
@@ -14,15 +14,15 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass Attack_StingerSwipeStrong.Attack_StingerSwipeStrong_C
-// 0x0000 (0x0050 - 0x0050)
-class UAttack_StingerSwipeStrong_C : public UFGAttackMelee
+// WidgetBlueprintGeneratedClass Schematic7-1_ADA.Schematic7-1_ADA_C
+// 0x0000 (0x02F0 - 0x02F0)
+class USchematic7_1_ADA_C : public UWidget_AudioMessage_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Attack_StingerSwipeStrong.Attack_StingerSwipeStrong_C");
+		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass Schematic7-1_ADA.Schematic7-1_ADA_C");
 		return ptr;
 	}
 

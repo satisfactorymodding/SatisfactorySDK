@@ -43,7 +43,7 @@ public:
 
 
 	ESlateVisibility GetProgressBarVisibility();
-	float GetProgressbarPercent();
+	float GetProgressBarPercent();
 	struct FText GetSchematicTitle();
 	struct FSlateBrush GetScematicIcon();
 	struct FText GetShipTimerText();

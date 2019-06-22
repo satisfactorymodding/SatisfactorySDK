@@ -31,8 +31,8 @@ struct UWidget_InventoryAddNotification_C_IsInventoryOpen_Params
 	bool                                               IsOpen;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemAdded
-struct UWidget_InventoryAddNotification_C_OnItemAdded_Params
+// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemADded
+struct UWidget_InventoryAddNotification_C_OnItemADded_Params
 {
 	class UClass*                                      ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                numAdded;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

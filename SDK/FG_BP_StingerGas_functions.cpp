@@ -29,40 +29,6 @@ void ABP_StingerGas_C::UserConstructionScript()
 }
 
 
-// Function BP_StingerGas.BP_StingerGas_C.Timeline_0__FinishedFunc
-// ()
-
-void ABP_StingerGas_C::Timeline_0__FinishedFunc()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_StingerGas.BP_StingerGas_C.Timeline_0__FinishedFunc");
-
-	ABP_StingerGas_C_Timeline_0__FinishedFunc_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_StingerGas.BP_StingerGas_C.Timeline_0__UpdateFunc
-// ()
-
-void ABP_StingerGas_C::Timeline_0__UpdateFunc()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_StingerGas.BP_StingerGas_C.Timeline_0__UpdateFunc");
-
-	ABP_StingerGas_C_Timeline_0__UpdateFunc_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_StingerGas.BP_StingerGas_C.Timeline_1__FinishedFunc
 // ()
 
@@ -88,6 +54,40 @@ void ABP_StingerGas_C::Timeline_1__UpdateFunc()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StingerGas.BP_StingerGas_C.Timeline_1__UpdateFunc");
 
 	ABP_StingerGas_C_Timeline_1__UpdateFunc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_StingerGas.BP_StingerGas_C.Timeline_0__FinishedFunc
+// ()
+
+void ABP_StingerGas_C::Timeline_0__FinishedFunc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_StingerGas.BP_StingerGas_C.Timeline_0__FinishedFunc");
+
+	ABP_StingerGas_C_Timeline_0__FinishedFunc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_StingerGas.BP_StingerGas_C.Timeline_0__UpdateFunc
+// ()
+
+void ABP_StingerGas_C::Timeline_0__UpdateFunc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_StingerGas.BP_StingerGas_C.Timeline_0__UpdateFunc");
+
+	ABP_StingerGas_C_Timeline_0__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
 

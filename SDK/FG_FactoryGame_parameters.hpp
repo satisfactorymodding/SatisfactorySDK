@@ -1793,40 +1793,21 @@ struct AFGBuildableRailroadBridge_GetLength_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function FactoryGame.FGBuildableTrainPlatform.GetPreviousPlatform
-struct AFGBuildableTrainPlatform_GetPreviousPlatform_Params
+// Function FactoryGame.FGBuildableTrainPlatform.GetDockingStatus
+struct AFGBuildableTrainPlatform_GetDockingStatus_Params
 {
-	class AFGBuildableTrainPlatform*                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGBuildableTrainPlatform.GetPlatformConnectionComponents
-struct AFGBuildableTrainPlatform_GetPlatformConnectionComponents_Params
-{
-	TArray<class UFGTrainPlatformConnection*>          ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function FactoryGame.FGBuildableTrainPlatform.GetNextPlatform
-struct AFGBuildableTrainPlatform_GetNextPlatform_Params
-{
-	class AFGBuildableTrainPlatform*                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGBuildableTrainPlatform.GetChildTrackBuildable
-struct AFGBuildableTrainPlatform_GetChildTrackBuildable_Params
-{
-	class AFGBuildableRailroadTrack*                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGBuildableTrainPlatform.AssignChildTrackBuildable
-struct AFGBuildableTrainPlatform_AssignChildTrackBuildable_Params
-{
-	class AFGBuildableRailroadTrack*                   railroadTrack;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	ETrainPlatformDockingStatus                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildableRailroadStation.SetName
 struct AFGBuildableRailroadStation_SetName_Params
 {
 	struct FText                                       Name;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function FactoryGame.FGBuildableRailroadStation.PerformIsDockedCheck
+struct AFGBuildableRailroadStation_PerformIsDockedCheck_Params
+{
 };
 
 // Function FactoryGame.FGBuildableRailroadStation.OnRep_Name
@@ -1839,22 +1820,53 @@ struct AFGBuildableRailroadStation_OnNameChanged_Params
 {
 };
 
-// Function FactoryGame.FGBuildableRailroadStation.GetStationID
-struct AFGBuildableRailroadStation_GetStationID_Params
+// Function FactoryGame.FGBuildableRailroadStation.OnLocomotiveDocked
+struct AFGBuildableRailroadStation_OnLocomotiveDocked_Params
 {
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableRailroadStation.OnDockingColliderEndOverlap
+struct AFGBuildableRailroadStation_OnDockingColliderEndOverlap_Params
+{
+	class UPrimitiveComponent*                         OverlappedComponent;                                      // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableRailroadStation.OnDockingColliderBeginOverlap
+struct AFGBuildableRailroadStation_OnDockingColliderBeginOverlap_Params
+{
+	class UPrimitiveComponent*                         OverlappedComp;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bFromSweep;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FHitResult                                  SweepResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildableRailroadStation.GetName
 struct AFGBuildableRailroadStation_GetName_Params
 {
-	struct FText                                       ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function FactoryGame.FGBuildableRailroadSwitchControl.GetSwitchPosition
 struct AFGBuildableRailroadSwitchControl_GetSwitchPosition_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableRailroadTrack.GetSplineComponent
+struct AFGBuildableRailroadTrack_GetSplineComponent_Params
+{
+	class USplineComponent*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableRailroadTrack.GetLength
+struct AFGBuildableRailroadTrack_GetLength_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildableResourceExtractor.IsStartupComplete
@@ -2129,6 +2141,63 @@ struct AFGBuildableTradingPost_GetStorageInventory_Params
 // Function FactoryGame.FGBuildableTradingPost.AreChildBuildingsLoaded
 struct AFGBuildableTradingPost_AreChildBuildingsLoaded_Params
 {
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.Undock
+struct AFGBuildableTrainPlatformCargo_Undock_Params
+{
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.SetIsInLoadMode
+struct AFGBuildableTrainPlatformCargo_SetIsInLoadMode_Params
+{
+	bool                                               isInLoadMode;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.OnTransferComplete
+struct AFGBuildableTrainPlatformCargo_OnTransferComplete_Params
+{
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.OnBeginUnloadSequence
+struct AFGBuildableTrainPlatformCargo_OnBeginUnloadSequence_Params
+{
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.OnBeginLoadSequence
+struct AFGBuildableTrainPlatformCargo_OnBeginLoadSequence_Params
+{
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.IsLoadUnloading
+struct AFGBuildableTrainPlatformCargo_IsLoadUnloading_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.GetIsInLoadMode
+struct AFGBuildableTrainPlatformCargo_GetIsInLoadMode_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.GetInventory
+struct AFGBuildableTrainPlatformCargo_GetInventory_Params
+{
+	class UFGInventoryComponent*                       ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.GetDockedActor
+struct AFGBuildableTrainPlatformCargo_GetDockedActor_Params
+{
+	class AFGRailroadVehicle*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.Dock
+struct AFGBuildableTrainPlatformCargo_Dock_Params
+{
+	class AFGRailroadVehicle*                          Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -2735,6 +2804,12 @@ struct UFGBuildGunStateBuild_BeginClearanceOverlap_Params
 	struct FHitResult                                  SweepResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGBuildGunStateDismantle.Server_PeekAtDismantleRefund
+struct UFGBuildGunStateDismantle_Server_PeekAtDismantleRefund_Params
+{
+	class AActor*                                      selected;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function FactoryGame.FGBuildGunStateDismantle.Server_DismantleActor
 struct UFGBuildGunStateDismantle_Server_DismantleActor_Params
 {
@@ -2751,10 +2826,21 @@ struct UFGBuildGunStateDismantle_OnStartDismantle_Params
 {
 };
 
+// Function FactoryGame.FGBuildGunStateDismantle.OnRep_PeekDismantleRefund
+struct UFGBuildGunStateDismantle_OnRep_PeekDismantleRefund_Params
+{
+};
+
 // Function FactoryGame.FGBuildGunStateDismantle.GetSelectedActor
 struct UFGBuildGunStateDismantle_GetSelectedActor_Params
 {
 	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildGunStateDismantle.GetPeekDismantleRefund
+struct UFGBuildGunStateDismantle_GetPeekDismantleRefund_Params
+{
+	TArray<struct FInventoryStack>                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function FactoryGame.FGBuildGunStateDismantle.GetDismantleRefund
@@ -6015,10 +6101,10 @@ struct AFGRailroadVehicle_IsCoupledAt_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function FactoryGame.FGRailroadVehicle.GetTrainID
-struct AFGRailroadVehicle_GetTrainID_Params
+// Function FactoryGame.FGRailroadVehicle.GetTrain
+struct AFGRailroadVehicle_GetTrain_Params
 {
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	class AFGTrain*                                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadVehicle.GetTrackPosition
@@ -6734,6 +6820,12 @@ struct UFGGameUserSettings_IsMotionBlurDirty_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGGameUserSettings.GetRequireRestart
+struct UFGGameUserSettings_GetRequireRestart_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function FactoryGame.FGGameUserSettings.GetNeworkQuality
 struct UFGGameUserSettings_GetNeworkQuality_Params
 {
@@ -6806,6 +6898,11 @@ struct UFGGameUserSettings_GetArachnophobiaMode_Params
 struct UFGGameUserSettings_GetAnalyticsDisabled_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGGameUserSettings.ClearRequireRestart
+struct UFGGameUserSettings_ClearRequireRestart_Params
+{
 };
 
 // Function FactoryGame.FGGlobalSettings.GetSubsystemClassesCDO
@@ -10326,37 +10423,26 @@ struct UFGRailroadInterface_GetTrackGraphID_Params
 struct AFGRailroadSubsystem_GetTrainStations_Params
 {
 	int                                                trackID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FTrainStation>                       out_stations;                                             // (Parm, OutParm, ZeroConstructor)
+	TArray<class AFGTrainStationIdentifier*>           out_stations;                                             // (Parm, OutParm, ZeroConstructor)
 };
 
-// Function FactoryGame.FGRailroadSubsystem.GetTrainStation
-struct AFGRailroadSubsystem_GetTrainStation_Params
+// Function FactoryGame.FGRailroadSubsystem.GetTrains
+struct AFGRailroadSubsystem_GetTrains_Params
 {
-	int                                                StationID;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTrainStation                               out_station;                                              // (Parm, OutParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGRailroadSubsystem.GetTrainOrder
-struct AFGRailroadSubsystem_GetTrainOrder_Params
-{
-	int                                                TrainID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	class AFGRailroadVehicle*                          out_firstVehicle;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	class AFGRailroadVehicle*                          out_lastVehicle;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FactoryGame.FGRailroadSubsystem.GetTrainData
-struct AFGRailroadSubsystem_GetTrainData_Params
-{
-	int                                                TrainID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTrainData                                  out_trainData;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	int                                                trackID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class AFGTrain*>                            out_trains;                                               // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function FactoryGame.FGRailroadSubsystem.GetAllTrainStations
 struct AFGRailroadSubsystem_GetAllTrainStations_Params
 {
-	TArray<struct FTrainStation>                       out_stations;                                             // (Parm, OutParm, ZeroConstructor)
+	TArray<class AFGTrainStationIdentifier*>           out_stations;                                             // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function FactoryGame.FGRailroadSubsystem.GetAllTrains
+struct AFGRailroadSubsystem_GetAllTrains_Params
+{
+	TArray<class AFGTrain*>                            out_trains;                                               // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function FactoryGame.FGRailroadSubsystem.Get
@@ -10366,90 +10452,84 @@ struct AFGRailroadSubsystem_Get_Params
 	class AFGRailroadSubsystem*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function FactoryGame.FGRailroadSubsystem.FindTimeTable
-struct AFGRailroadSubsystem_FindTimeTable_Params
-{
-	int                                                TrainID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	class UFGRailroadTimeTable*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function FactoryGame.FGRailroadSubsystem.FindPathSync
 struct AFGRailroadSubsystem_FindPathSync_Params
 {
 	class AFGLocomotive*                               Locomotive;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                station;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class AFGTrainStationIdentifier*                   Station;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRailroadPathFindingResult                  ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function FactoryGame.FGRailroadSubsystem.FindOrAddTimeTable
-struct AFGRailroadSubsystem_FindOrAddTimeTable_Params
-{
-	int                                                TrainID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	class UFGRailroadTimeTable*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function FactoryGame.FGRailroadTimeTable.SetStops
-struct UFGRailroadTimeTable_SetStops_Params
+struct AFGRailroadTimeTable_SetStops_Params
 {
 	TArray<struct FTimeTableStop>                      stops;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.SetStopDuration
-struct UFGRailroadTimeTable_SetStopDuration_Params
+struct AFGRailroadTimeTable_SetStopDuration_Params
 {
 	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.SetCurrentStop
-struct UFGRailroadTimeTable_SetCurrentStop_Params
+struct AFGRailroadTimeTable_SetCurrentStop_Params
 {
 	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.RemoveStop
-struct UFGRailroadTimeTable_RemoveStop_Params
+struct AFGRailroadTimeTable_RemoveStop_Params
 {
 	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.IsValidStop
-struct UFGRailroadTimeTable_IsValidStop_Params
+struct AFGRailroadTimeTable_IsValidStop_Params
 {
 	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.GetStops
-struct UFGRailroadTimeTable_GetStops_Params
+struct AFGRailroadTimeTable_GetStops_Params
 {
 	TArray<struct FTimeTableStop>                      out_stops;                                                // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.GetStop
-struct UFGRailroadTimeTable_GetStop_Params
+struct AFGRailroadTimeTable_GetStop_Params
 {
 	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FTimeTableStop                              ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.GetNumStops
-struct UFGRailroadTimeTable_GetNumStops_Params
+struct AFGRailroadTimeTable_GetNumStops_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGRailroadTimeTable.GetMaxNumStops
+struct AFGRailroadTimeTable_GetMaxNumStops_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.GetCurrentStop
-struct UFGRailroadTimeTable_GetCurrentStop_Params
+struct AFGRailroadTimeTable_GetCurrentStop_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.AddStop
-struct UFGRailroadTimeTable_AddStop_Params
+struct AFGRailroadTimeTable_AddStop_Params
 {
 	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FTimeTableStop                              Stop;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTrackConnectionComponent.SetSwitchPosition
@@ -10475,11 +10555,6 @@ struct UFGRailroadTrackConnectionComponent_GetConnection_Params
 {
 	int                                                Position;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UFGRailroadTrackConnectionComponent*         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function FactoryGame.FGRailroadTrackHologram.OnRep_SplineData
-struct AFGRailroadTrackHologram_OnRep_SplineData_Params
-{
 };
 
 // Function FactoryGame.FGRailroadVehicleSoundComponent.UpdateRTPCs
@@ -12373,6 +12448,60 @@ struct AFGTimeOfDaySubsystem_Get_Params
 {
 	class UObject*                                     WorldContext;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	class AFGTimeOfDaySubsystem*                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.NewTimeTable
+struct AFGTrain_NewTimeTable_Params
+{
+	class AFGRailroadTimeTable*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.GetTrackGraphID
+struct AFGTrain_GetTrackGraphID_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.GetTimeTable
+struct AFGTrain_GetTimeTable_Params
+{
+	class AFGRailroadTimeTable*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.GetMaxAirBrakeDeceleration
+struct AFGTrain_GetMaxAirBrakeDeceleration_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.GetLastVehicle
+struct AFGTrain_GetLastVehicle_Params
+{
+	class AFGRailroadVehicle*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.GetFirstVehicle
+struct AFGTrain_GetFirstVehicle_Params
+{
+	class AFGRailroadVehicle*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrainStationIdentifier.GetTrackGraphID
+struct AFGTrainStationIdentifier_GetTrackGraphID_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrainStationIdentifier.GetStationName
+struct AFGTrainStationIdentifier_GetStationName_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function FactoryGame.FGTrainStationIdentifier.GetStation
+struct AFGTrainStationIdentifier_GetStation_Params
+{
+	class AFGBuildableRailroadStation*                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGTutorialIntroManager.UpdateTutorial

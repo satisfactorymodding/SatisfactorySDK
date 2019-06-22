@@ -40,10 +40,10 @@ public:
 
 
 	void UserConstructionScript();
-	void Timeline_0__FinishedFunc();
-	void Timeline_0__UpdateFunc();
 	void Timeline_1__FinishedFunc();
 	void Timeline_1__UpdateFunc();
+	void Timeline_0__FinishedFunc();
+	void Timeline_0__UpdateFunc();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_StingerGas(int EntryPoint);
 };

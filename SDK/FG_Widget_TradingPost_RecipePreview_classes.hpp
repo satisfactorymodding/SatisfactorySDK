@@ -49,7 +49,7 @@ public:
 	void GetSchematicContents(class UClass* mSchematic);
 	void Construct();
 	void AnimateRewards();
-	void AnimateCostslots();
+	void AnimateCostSlots();
 	void ExecuteUbergraph_Widget_TradingPost_RecipePreview(int EntryPoint);
 };
 

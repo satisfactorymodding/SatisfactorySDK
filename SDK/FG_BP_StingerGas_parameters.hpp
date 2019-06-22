@@ -19,16 +19,6 @@ struct ABP_StingerGas_C_UserConstructionScript_Params
 {
 };
 
-// Function BP_StingerGas.BP_StingerGas_C.Timeline_0__FinishedFunc
-struct ABP_StingerGas_C_Timeline_0__FinishedFunc_Params
-{
-};
-
-// Function BP_StingerGas.BP_StingerGas_C.Timeline_0__UpdateFunc
-struct ABP_StingerGas_C_Timeline_0__UpdateFunc_Params
-{
-};
-
 // Function BP_StingerGas.BP_StingerGas_C.Timeline_1__FinishedFunc
 struct ABP_StingerGas_C_Timeline_1__FinishedFunc_Params
 {
@@ -36,6 +26,16 @@ struct ABP_StingerGas_C_Timeline_1__FinishedFunc_Params
 
 // Function BP_StingerGas.BP_StingerGas_C.Timeline_1__UpdateFunc
 struct ABP_StingerGas_C_Timeline_1__UpdateFunc_Params
+{
+};
+
+// Function BP_StingerGas.BP_StingerGas_C.Timeline_0__FinishedFunc
+struct ABP_StingerGas_C_Timeline_0__FinishedFunc_Params
+{
+};
+
+// Function BP_StingerGas.BP_StingerGas_C.Timeline_0__UpdateFunc
+struct ABP_StingerGas_C_Timeline_0__UpdateFunc_Params
 {
 };
 

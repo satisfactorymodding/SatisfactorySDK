@@ -41,7 +41,7 @@ public:
 	void BindOnInventoryAddAndCacheChar();
 	void UnbindOnInventoryAdd(class AFGCharacterPlayer* FromCharacter);
 	void IsInventoryOpen(bool* IsOpen);
-	void OnItemAdded(class UClass* ItemClass, int numAdded);
+	void OnItemADded(class UClass* ItemClass, int numAdded);
 	void Construct();
 	void Destruct();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);

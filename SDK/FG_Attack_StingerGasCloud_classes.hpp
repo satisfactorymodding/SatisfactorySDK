@@ -6,7 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "FG_Attack_StingerJumpStrong_structs.hpp"
+#include "FG_Attack_StingerGasCloud_structs.hpp"
 
 namespace SDK
 {
@@ -14,15 +14,15 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass Attack_StingerJumpStrong.Attack_StingerJumpStrong_C
-// 0x0000 (0x0068 - 0x0068)
-class UAttack_StingerJumpStrong_C : public UFGAttackMeleeJump
+// BlueprintGeneratedClass Attack_StingerGasCloud.Attack_StingerGasCloud_C
+// 0x0000 (0x0050 - 0x0050)
+class UAttack_StingerGasCloud_C : public UFGAttackMelee
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Attack_StingerJumpStrong.Attack_StingerJumpStrong_C");
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Attack_StingerGasCloud.Attack_StingerGasCloud_C");
 		return ptr;
 	}
 

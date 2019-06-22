@@ -38,28 +38,6 @@ void UBP_RemoteCallObject_C::GetRemainingCostForSchematic(class UClass* Schemati
 }
 
 
-// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetBeaconTexture
-// ()
-// Parameters:
-// class UTexture2D*              Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class ABP_Beacon_C*            Beacon                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_RemoteCallObject_C::ServerSetBeaconTexture(class UTexture2D* Texture, class ABP_Beacon_C* Beacon)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetBeaconTexture");
-
-	UBP_RemoteCallObject_C_ServerSetBeaconTexture_Params params;
-	params.Texture = Texture;
-	params.Beacon = Beacon;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetWorkingAtBench
 // ()
 // Parameters:
@@ -73,6 +51,28 @@ void UBP_RemoteCallObject_C::ServerSetWorkingAtBench(class AFGPlayerController* 
 	UBP_RemoteCallObject_C_ServerSetWorkingAtBench_Params params;
 	params.PlayerWorking = PlayerWorking;
 	params.ResearchMachine = ResearchMachine;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetBeaconTexture
+// ()
+// Parameters:
+// class UTexture2D*              Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ABP_Beacon_C*            Beacon                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_RemoteCallObject_C::ServerSetBeaconTexture(class UTexture2D* Texture, class ABP_Beacon_C* Beacon)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetBeaconTexture");
+
+	UBP_RemoteCallObject_C_ServerSetBeaconTexture_Params params;
+	params.Texture = Texture;
+	params.Beacon = Beacon;
 
 	auto flags = fn->FunctionFlags;
 
@@ -178,26 +178,6 @@ void UBP_RemoteCallObject_C::Server_MoveItemIfSpace(class UFGInventoryComponent*
 }
 
 
-// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerDismantlePortableMiner
-// ()
-// Parameters:
-// class ABP_PortableMiner_C*     inPortableMiner                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_RemoteCallObject_C::ServerDismantlePortableMiner(class ABP_PortableMiner_C* inPortableMiner)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerDismantlePortableMiner");
-
-	UBP_RemoteCallObject_C_ServerDismantlePortableMiner_Params params;
-	params.inPortableMiner = inPortableMiner;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.PlayDismantlePortableMinerEffects
 // ()
 // Parameters:
@@ -233,6 +213,26 @@ void UBP_RemoteCallObject_C::ServerExtractResourceToPlayer(class AFGResourceNode
 	params.resourceNode = resourceNode;
 	params.Player = Player;
 	params.amount = amount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerDismantlePortableMiner
+// ()
+// Parameters:
+// class ABP_PortableMiner_C*     inPortableMiner                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_RemoteCallObject_C::ServerDismantlePortableMiner(class ABP_PortableMiner_C* inPortableMiner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerDismantlePortableMiner");
+
+	UBP_RemoteCallObject_C_ServerDismantlePortableMiner_Params params;
+	params.inPortableMiner = inPortableMiner;
 
 	auto flags = fn->FunctionFlags;
 
@@ -402,28 +402,6 @@ void UBP_RemoteCallObject_C::ServerSetPendingPotentialOnFactory(class AFGBuildab
 }
 
 
-// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetSpeedLimit
-// ()
-// Parameters:
-// class ABuild_SpeedRoadSign_C*  speedRoadSignProxy             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NewLimit                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_RemoteCallObject_C::ServerSetSpeedLimit(class ABuild_SpeedRoadSign_C* speedRoadSignProxy, int NewLimit)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetSpeedLimit");
-
-	UBP_RemoteCallObject_C_ServerSetSpeedLimit_Params params;
-	params.speedRoadSignProxy = speedRoadSignProxy;
-	params.NewLimit = NewLimit;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerOpenVehicleTrunk
 // ()
 // Parameters:
@@ -490,19 +468,19 @@ void UBP_RemoteCallObject_C::ServerUnregisterInteractingPlayerOnUseInterface(cla
 }
 
 
-// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerCloseVehicleTrunk
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetSpeedLimit
 // ()
 // Parameters:
-// class ABP_WheeledVehicle_C*    inVehicle                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AFGCharacterPlayer*      inPlayer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ABuild_SpeedRoadSign_C*  speedRoadSignProxy             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            NewLimit                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::ServerCloseVehicleTrunk(class ABP_WheeledVehicle_C* inVehicle, class AFGCharacterPlayer* inPlayer)
+void UBP_RemoteCallObject_C::ServerSetSpeedLimit(class ABuild_SpeedRoadSign_C* speedRoadSignProxy, int NewLimit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerCloseVehicleTrunk");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetSpeedLimit");
 
-	UBP_RemoteCallObject_C_ServerCloseVehicleTrunk_Params params;
-	params.inVehicle = inVehicle;
-	params.inPlayer = inPlayer;
+	UBP_RemoteCallObject_C_ServerSetSpeedLimit_Params params;
+	params.speedRoadSignProxy = speedRoadSignProxy;
+	params.NewLimit = NewLimit;
 
 	auto flags = fn->FunctionFlags;
 
@@ -560,19 +538,19 @@ void UBP_RemoteCallObject_C::Server_PayOffOnSchematic(class UClass* Schematic, c
 }
 
 
-// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_RemoveSortRule
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerCloseVehicleTrunk
 // ()
 // Parameters:
-// class AFGBuildableSplitterSmart* Splitter_Smart                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ABP_WheeledVehicle_C*    inVehicle                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer*      inPlayer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::Server_RemoveSortRule(class AFGBuildableSplitterSmart* Splitter_Smart, int Index)
+void UBP_RemoteCallObject_C::ServerCloseVehicleTrunk(class ABP_WheeledVehicle_C* inVehicle, class AFGCharacterPlayer* inPlayer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_RemoveSortRule");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerCloseVehicleTrunk");
 
-	UBP_RemoteCallObject_C_Server_RemoveSortRule_Params params;
-	params.Splitter_Smart = Splitter_Smart;
-	params.Index = Index;
+	UBP_RemoteCallObject_C_ServerCloseVehicleTrunk_Params params;
+	params.inVehicle = inVehicle;
+	params.inPlayer = inPlayer;
 
 	auto flags = fn->FunctionFlags;
 
@@ -599,21 +577,19 @@ void UBP_RemoteCallObject_C::Server_LaunchShip()
 }
 
 
-// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_UpdateSortRule
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_RemoveSortRule
 // ()
 // Parameters:
-// class AFGBuildableSplitterSmart* SplitterSmart                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGBuildableSplitterSmart* Splitter_Smart                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FSplitterSortRule       Rule                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_RemoteCallObject_C::Server_UpdateSortRule(class AFGBuildableSplitterSmart* SplitterSmart, int Index, const struct FSplitterSortRule& Rule)
+void UBP_RemoteCallObject_C::Server_RemoveSortRule(class AFGBuildableSplitterSmart* Splitter_Smart, int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_UpdateSortRule");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_RemoveSortRule");
 
-	UBP_RemoteCallObject_C_Server_UpdateSortRule_Params params;
-	params.SplitterSmart = SplitterSmart;
+	UBP_RemoteCallObject_C_Server_RemoveSortRule_Params params;
+	params.Splitter_Smart = Splitter_Smart;
 	params.Index = Index;
-	params.Rule = Rule;
 
 	auto flags = fn->FunctionFlags;
 
@@ -711,18 +687,20 @@ void UBP_RemoteCallObject_C::Server_PayOffTowTruckUpgrade(class AFGBuildableSpac
 }
 
 
-// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_AddSortRule
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_UpdateSortRule
 // ()
 // Parameters:
 // class AFGBuildableSplitterSmart* SplitterSmart                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FSplitterSortRule       Rule                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_RemoteCallObject_C::Server_AddSortRule(class AFGBuildableSplitterSmart* SplitterSmart, const struct FSplitterSortRule& Rule)
+void UBP_RemoteCallObject_C::Server_UpdateSortRule(class AFGBuildableSplitterSmart* SplitterSmart, int Index, const struct FSplitterSortRule& Rule)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_AddSortRule");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_UpdateSortRule");
 
-	UBP_RemoteCallObject_C_Server_AddSortRule_Params params;
+	UBP_RemoteCallObject_C_Server_UpdateSortRule_Params params;
 	params.SplitterSmart = SplitterSmart;
+	params.Index = Index;
 	params.Rule = Rule;
 
 	auto flags = fn->FunctionFlags;
@@ -736,15 +714,15 @@ void UBP_RemoteCallObject_C::Server_AddSortRule(class AFGBuildableSplitterSmart*
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetTrainStationName
 // ()
 // Parameters:
-// class AFGBuildableRailroadStation* station                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGBuildableRailroadStation* Station                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_RemoteCallObject_C::Server_SetTrainStationName(class AFGBuildableRailroadStation* station, const struct FText& Name)
+void UBP_RemoteCallObject_C::Server_SetTrainStationName(class AFGBuildableRailroadStation* Station, const struct FText& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetTrainStationName");
 
 	UBP_RemoteCallObject_C_Server_SetTrainStationName_Params params;
-	params.station = station;
+	params.Station = Station;
 	params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
@@ -755,17 +733,19 @@ void UBP_RemoteCallObject_C::Server_SetTrainStationName(class AFGBuildableRailro
 }
 
 
-// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetActiveSchematic
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_AddSortRule
 // ()
 // Parameters:
-// class UClass*                  newActiveSchematic             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGBuildableSplitterSmart* SplitterSmart                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FSplitterSortRule       Rule                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_RemoteCallObject_C::ServerSetActiveSchematic(class UClass* newActiveSchematic)
+void UBP_RemoteCallObject_C::Server_AddSortRule(class AFGBuildableSplitterSmart* SplitterSmart, const struct FSplitterSortRule& Rule)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetActiveSchematic");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_AddSortRule");
 
-	UBP_RemoteCallObject_C_ServerSetActiveSchematic_Params params;
-	params.newActiveSchematic = newActiveSchematic;
+	UBP_RemoteCallObject_C_Server_AddSortRule_Params params;
+	params.SplitterSmart = SplitterSmart;
+	params.Rule = Rule;
 
 	auto flags = fn->FunctionFlags;
 
@@ -812,6 +792,26 @@ void UBP_RemoteCallObject_C::Server_RepairDropPod(class ABP_DropPod_C* DropPod, 
 	UBP_RemoteCallObject_C_Server_RepairDropPod_Params params;
 	params.DropPod = DropPod;
 	params.byCharacter = byCharacter;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetActiveSchematic
+// ()
+// Parameters:
+// class UClass*                  newActiveSchematic             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_RemoteCallObject_C::ServerSetActiveSchematic(class UClass* newActiveSchematic)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.ServerSetActiveSchematic");
+
+	UBP_RemoteCallObject_C_ServerSetActiveSchematic_Params params;
+	params.newActiveSchematic = newActiveSchematic;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1211,6 +1211,28 @@ void UBP_RemoteCallObject_C::Server_DropItemIntoStack(class UFGInventoryComponen
 	params.sourceIdx = sourceIdx;
 	params.SpawnLocation = SpawnLocation;
 	params.spawnRotation = spawnRotation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetLoadModeOnTrainCargoPlatform
+// ()
+// Parameters:
+// class AFGBuildableTrainPlatformCargo* CargoPlatform                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           isInLoadMode                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_RemoteCallObject_C::Server_SetLoadModeOnTrainCargoPlatform(class AFGBuildableTrainPlatformCargo* CargoPlatform, bool isInLoadMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetLoadModeOnTrainCargoPlatform");
+
+	UBP_RemoteCallObject_C_Server_SetLoadModeOnTrainCargoPlatform_Params params;
+	params.CargoPlatform = CargoPlatform;
+	params.isInLoadMode = isInLoadMode;
 
 	auto flags = fn->FunctionFlags;
 

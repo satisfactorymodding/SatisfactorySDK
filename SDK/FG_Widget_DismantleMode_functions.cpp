@@ -123,6 +123,26 @@ void UWidget_DismantleMode_C::Construct()
 }
 
 
+// Function Widget_DismantleMode.Widget_DismantleMode_C.OnDismantleRefundChanged
+// ()
+// Parameters:
+// class UFGBuildGunStateDismantle* dismantleGun                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_DismantleMode_C::OnDismantleRefundChanged(class UFGBuildGunStateDismantle* dismantleGun)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.OnDismantleRefundChanged");
+
+	UWidget_DismantleMode_C_OnDismantleRefundChanged_Params params;
+	params.dismantleGun = dismantleGun;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_DismantleMode.Widget_DismantleMode_C.ExecuteUbergraph_Widget_DismantleMode
 // ()
 // Parameters:

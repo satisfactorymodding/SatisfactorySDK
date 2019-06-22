@@ -48,7 +48,7 @@ public:
 	void DropOntoInventorySlot(class UWidget_InventorySlot_C* InventorySlot, bool* Result);
 	struct FSlateBrush GetSlotBackgroundBrush();
 	struct FLinearColor GetDarkGrayColor();
-	float GetProgressbarPercent();
+	float GetProgressBarPercent();
 	void SetTextboxFormating();
 	class UWidget* GetCustomTooltip();
 	ESlateVisibility GetPaidOffSlotVisibility();

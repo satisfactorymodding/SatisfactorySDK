@@ -49,7 +49,7 @@ public:
 	struct FLinearColor GetHealthFillColor();
 	void IsValidHealthComponent(bool* Valid);
 	ESlateVisibility GetHealthbar();
-	float GetProgressbarPercent();
+	float GetProgressBarPercent();
 	void Construct();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void ResetAnimGate();

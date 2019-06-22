@@ -56,7 +56,7 @@ public:
 
 
 	void SetIconBrush(class UTexture* IconTexture);
-	float GetProgressbarPercent();
+	float GetProgressBarPercent();
 	struct FLinearColor GetOrange();
 	void SetTextboxFormating(bool HasItems);
 	struct FLinearColor GetDarkGray();

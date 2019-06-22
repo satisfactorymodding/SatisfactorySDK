@@ -47,6 +47,12 @@ struct UWidget_DismantleMode_C_Construct_Params
 {
 };
 
+// Function Widget_DismantleMode.Widget_DismantleMode_C.OnDismantleRefundChanged
+struct UWidget_DismantleMode_C_OnDismantleRefundChanged_Params
+{
+	class UFGBuildGunStateDismantle*                   dismantleGun;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_DismantleMode.Widget_DismantleMode_C.ExecuteUbergraph_Widget_DismantleMode
 struct UWidget_DismantleMode_C_ExecuteUbergraph_Widget_DismantleMode_Params
 {
