@@ -8,7 +8,7 @@
 
 #include "FG_ParticleMap_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

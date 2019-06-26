@@ -6,7 +6,7 @@
 
 #include "FG_SC_ConveyorConnections_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

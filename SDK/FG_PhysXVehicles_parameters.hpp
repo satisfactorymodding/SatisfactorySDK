@@ -8,7 +8,7 @@
 
 #include "FG_PhysXVehicles_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Area_GrassFields_4_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

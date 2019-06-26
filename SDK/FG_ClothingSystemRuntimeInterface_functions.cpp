@@ -6,7 +6,7 @@
 
 #include "FG_ClothingSystemRuntimeInterface_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

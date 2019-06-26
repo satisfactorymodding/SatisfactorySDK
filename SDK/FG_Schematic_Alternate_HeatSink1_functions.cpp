@@ -6,7 +6,7 @@
 
 #include "FG_Schematic_Alternate_HeatSink1_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

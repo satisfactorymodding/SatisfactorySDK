@@ -8,7 +8,7 @@
 
 #include "FG_Area_Savanna_3_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

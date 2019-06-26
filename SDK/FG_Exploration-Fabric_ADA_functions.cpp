@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-Fabric_ADA_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

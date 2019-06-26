@@ -10,7 +10,7 @@
 #include "FG_Engine_classes.hpp"
 #include "FG_InputCore_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Script Structs

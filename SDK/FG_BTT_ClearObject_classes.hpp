@@ -8,7 +8,7 @@
 
 #include "FG_BTT_ClearObject_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

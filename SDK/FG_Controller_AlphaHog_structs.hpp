@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_Controller_HogCharge_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

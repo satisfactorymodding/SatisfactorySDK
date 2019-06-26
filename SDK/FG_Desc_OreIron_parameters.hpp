@@ -8,7 +8,7 @@
 
 #include "FG_Desc_OreIron_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Widget_AutoScrollingContainer_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

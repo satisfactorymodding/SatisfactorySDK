@@ -8,7 +8,7 @@
 
 #include "FG_BP_SpitterProjectileBig_Alternative_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

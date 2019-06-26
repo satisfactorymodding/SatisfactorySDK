@@ -8,7 +8,7 @@
 
 #include "FG_Desc_ConveyorAttachmentSplitterProgrammable_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

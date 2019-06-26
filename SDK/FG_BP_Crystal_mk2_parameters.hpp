@@ -8,7 +8,7 @@
 
 #include "FG_BP_Crystal_mk2_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

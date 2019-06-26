@@ -6,7 +6,7 @@
 
 #include "FG_AmbientSettings_CaveWind_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

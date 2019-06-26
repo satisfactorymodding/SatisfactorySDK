@@ -8,7 +8,7 @@
 
 #include "FG_BTD_CheckLineOfSight_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

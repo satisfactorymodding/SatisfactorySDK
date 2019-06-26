@@ -6,7 +6,7 @@
 
 #include "FG_Attack_HogRoar_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

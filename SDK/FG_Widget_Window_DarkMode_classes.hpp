@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Window_DarkMode_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -60,7 +60,7 @@ public:
 
 
 	void InitTabs();
-	void SetInventoryVisibility(bool mShowInventory, bool animate);
+	void SetInventoryVisibility(bool mShowInventory, bool Animate);
 	ESlateVisibility GetDividerButtonSlotVisibility();
 	ESlateVisibility GetNavigationVisibiliy();
 	ESlateVisibility GetInventoryBodyVisibility();

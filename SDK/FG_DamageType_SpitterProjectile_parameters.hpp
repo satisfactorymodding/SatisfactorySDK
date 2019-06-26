@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_SpitterProjectile_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSettings_CaveWind_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_AS_World_SeaAtmos_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

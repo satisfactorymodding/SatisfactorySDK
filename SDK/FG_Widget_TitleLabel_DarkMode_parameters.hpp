@@ -8,7 +8,7 @@
 
 #include "FG_Widget_TitleLabel_DarkMode_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Char_Spitter_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

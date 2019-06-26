@@ -8,14 +8,14 @@
 
 #include "FG_Widget_TradingPost_LaunchButton_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.test
-struct UWidget_TradingPost_LaunchButton_C_test_Params
+// Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.Test
+struct UWidget_TradingPost_LaunchButton_C_Test_Params
 {
 	bool                                               NewParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

@@ -8,7 +8,7 @@
 
 #include "FG_BTT_AssignSplineKey_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

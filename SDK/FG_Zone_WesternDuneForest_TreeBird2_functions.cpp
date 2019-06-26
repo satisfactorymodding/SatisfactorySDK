@@ -6,7 +6,7 @@
 
 #include "FG_Zone_WesternDuneForest_TreeBird2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

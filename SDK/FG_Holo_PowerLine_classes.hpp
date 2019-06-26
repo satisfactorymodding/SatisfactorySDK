@@ -8,7 +8,7 @@
 
 #include "FG_Holo_PowerLine_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

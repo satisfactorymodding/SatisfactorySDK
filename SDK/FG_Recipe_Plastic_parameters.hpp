@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Plastic_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

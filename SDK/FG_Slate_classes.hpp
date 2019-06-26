@@ -8,7 +8,7 @@
 
 #include "FG_Slate_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

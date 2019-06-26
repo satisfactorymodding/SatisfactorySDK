@@ -8,7 +8,7 @@
 
 #include "FG_World_GeneralWinds_GrassRustle_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

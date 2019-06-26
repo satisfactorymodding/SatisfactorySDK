@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_FlowerPetal_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

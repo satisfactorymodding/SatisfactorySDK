@@ -8,7 +8,7 @@
 
 #include "FG_BTT_FindFoliageLocation_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

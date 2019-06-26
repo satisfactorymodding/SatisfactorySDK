@@ -6,7 +6,7 @@
 
 #include "FG_Build_ConveyorLiftMk2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -6,7 +6,7 @@
 
 #include "FG_Area_RockyDesert_2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

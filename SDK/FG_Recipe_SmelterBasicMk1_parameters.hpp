@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_SmelterBasicMk1_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

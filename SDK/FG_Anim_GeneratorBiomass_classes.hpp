@@ -8,7 +8,7 @@
 
 #include "FG_Anim_GeneratorBiomass_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

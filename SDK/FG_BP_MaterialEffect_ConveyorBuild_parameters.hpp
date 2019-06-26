@@ -8,7 +8,7 @@
 
 #include "FG_BP_MaterialEffect_ConveyorBuild_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

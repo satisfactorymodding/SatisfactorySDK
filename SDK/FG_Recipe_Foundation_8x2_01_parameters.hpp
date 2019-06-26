@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Foundation_8x2_01_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

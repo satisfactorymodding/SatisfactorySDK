@@ -8,7 +8,7 @@
 
 #include "FG_BTT_JumpAway_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

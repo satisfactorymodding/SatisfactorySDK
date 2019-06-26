@@ -8,7 +8,7 @@
 
 #include "FG_RawInput_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

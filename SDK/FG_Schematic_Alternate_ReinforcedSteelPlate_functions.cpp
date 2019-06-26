@@ -6,7 +6,7 @@
 
 #include "FG_Schematic_Alternate_ReinforcedSteelPlate_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

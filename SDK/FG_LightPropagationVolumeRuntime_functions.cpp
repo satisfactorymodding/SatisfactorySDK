@@ -6,7 +6,7 @@
 
 #include "FG_LightPropagationVolumeRuntime_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

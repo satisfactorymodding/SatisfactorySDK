@@ -8,7 +8,7 @@
 
 #include "FG_BTD_CloseEnoughToCharge_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

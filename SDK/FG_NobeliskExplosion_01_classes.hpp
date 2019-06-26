@@ -8,7 +8,7 @@
 
 #include "FG_NobeliskExplosion_01_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

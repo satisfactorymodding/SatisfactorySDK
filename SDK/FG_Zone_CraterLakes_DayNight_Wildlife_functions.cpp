@@ -6,7 +6,7 @@
 
 #include "FG_Zone_CraterLakes_DayNight_Wildlife_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

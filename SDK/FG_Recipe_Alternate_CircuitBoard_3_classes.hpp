@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Alternate_CircuitBoard_3_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

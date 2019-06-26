@@ -8,7 +8,7 @@
 
 #include "FG_SessionMessages_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

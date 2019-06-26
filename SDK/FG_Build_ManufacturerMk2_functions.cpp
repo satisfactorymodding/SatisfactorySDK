@@ -6,7 +6,7 @@
 
 #include "FG_Build_ManufacturerMk2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

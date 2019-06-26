@@ -8,7 +8,7 @@
 
 #include "FG_Widget_ChatWindow_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -43,7 +43,7 @@ public:
 	void OnPlayerBeginTypeMessage();
 	void UpdateVisibility();
 	void OnChatMessageReceived();
-	void SetInputWindowVisibility(bool visible);
+	void SetInputWindowVisibility(bool Visible);
 	bool GetInputWindowVisibility();
 	void CacheChatMessages();
 	void IsLastMessageFresh(bool* IsFresh);

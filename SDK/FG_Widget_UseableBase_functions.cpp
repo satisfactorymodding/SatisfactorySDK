@@ -6,7 +6,7 @@
 
 #include "FG_Widget_UseableBase_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions
@@ -105,14 +105,14 @@ void UWidget_UseableBase_C::DropInventorySlotStack(class UWidget_InventorySlot_C
 // Function Widget_UseableBase.Widget_UseableBase_C.SetInventoryVisibility
 // ()
 // Parameters:
-// bool                           visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_UseableBase_C::SetInventoryVisibility(bool visible)
+void UWidget_UseableBase_C::SetInventoryVisibility(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.SetInventoryVisibility");
 
 	UWidget_UseableBase_C_SetInventoryVisibility_Params params;
-	params.visible = visible;
+	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
 

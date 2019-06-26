@@ -8,7 +8,7 @@
 
 #include "FG_Tutorial_Equipment_Mail_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

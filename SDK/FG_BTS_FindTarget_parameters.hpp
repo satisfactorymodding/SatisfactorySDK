@@ -8,7 +8,7 @@
 
 #include "FG_BTS_FindTarget_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

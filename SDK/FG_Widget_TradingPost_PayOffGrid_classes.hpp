@@ -8,7 +8,7 @@
 
 #include "FG_Widget_TradingPost_PayOffGrid_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

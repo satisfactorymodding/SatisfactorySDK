@@ -6,7 +6,7 @@
 
 #include "FG_LinearTimecode_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

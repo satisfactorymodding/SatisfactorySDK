@@ -6,7 +6,7 @@
 
 #include "FG_Widget_InviteNotification_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

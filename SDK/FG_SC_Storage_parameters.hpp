@@ -8,7 +8,7 @@
 
 #include "FG_SC_Storage_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

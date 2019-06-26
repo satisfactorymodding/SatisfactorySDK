@@ -10,7 +10,7 @@
 #include "FG_Widget_UseableBase_classes.hpp"
 #include "FG_Engine_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

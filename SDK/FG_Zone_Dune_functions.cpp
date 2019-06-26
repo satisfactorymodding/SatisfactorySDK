@@ -6,7 +6,7 @@
 
 #include "FG_Zone_Dune_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

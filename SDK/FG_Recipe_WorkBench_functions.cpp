@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_WorkBench_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

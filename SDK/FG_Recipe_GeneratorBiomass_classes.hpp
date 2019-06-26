@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_GeneratorBiomass_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

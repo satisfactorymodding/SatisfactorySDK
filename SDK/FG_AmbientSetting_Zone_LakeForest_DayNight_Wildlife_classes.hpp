@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_LakeForest_DayNight_Wildlife_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

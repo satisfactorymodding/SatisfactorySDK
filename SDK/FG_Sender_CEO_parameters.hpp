@@ -8,7 +8,7 @@
 
 #include "FG_Sender_CEO_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

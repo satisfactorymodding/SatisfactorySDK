@@ -8,7 +8,7 @@
 
 #include "FG_BP_MenuBase_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -40,7 +40,7 @@ public:
 	void GatherBackgrounds();
 	void PlayBackgroundEnterAnimation();
 	void PlayEnterAnimation(class UWidget* prevMenu);
-	void ShouldAnimateBackground(class UWidget* prevMenu, bool* animate);
+	void ShouldAnimateBackground(class UWidget* prevMenu, bool* Animate);
 	void RestoreFocusOnPopupClosed(bool confirm);
 	struct FEventReply OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent);
 	void OnEscape();

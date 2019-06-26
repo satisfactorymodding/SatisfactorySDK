@@ -6,7 +6,7 @@
 
 #include "FG_UMG_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

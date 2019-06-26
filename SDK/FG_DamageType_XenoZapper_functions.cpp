@@ -6,7 +6,7 @@
 
 #include "FG_DamageType_XenoZapper_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Widget_DropPod_Repair_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

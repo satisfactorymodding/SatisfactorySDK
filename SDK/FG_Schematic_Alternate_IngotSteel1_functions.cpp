@@ -6,7 +6,7 @@
 
 #include "FG_Schematic_Alternate_IngotSteel1_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

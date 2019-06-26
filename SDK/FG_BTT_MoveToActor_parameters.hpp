@@ -8,7 +8,7 @@
 
 #include "FG_BTT_MoveToActor_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

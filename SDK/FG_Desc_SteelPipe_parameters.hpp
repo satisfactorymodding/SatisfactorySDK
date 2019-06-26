@@ -8,7 +8,7 @@
 
 #include "FG_Desc_SteelPipe_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

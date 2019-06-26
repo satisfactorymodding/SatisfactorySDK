@@ -6,7 +6,7 @@
 
 #include "FG_BP_WaterPostProcess_Lake_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

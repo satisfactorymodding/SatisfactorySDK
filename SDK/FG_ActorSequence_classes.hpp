@@ -8,7 +8,7 @@
 
 #include "FG_ActorSequence_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

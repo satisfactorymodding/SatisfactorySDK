@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Mushroom_ADA_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

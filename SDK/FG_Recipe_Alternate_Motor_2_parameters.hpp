@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Alternate_Motor_2_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

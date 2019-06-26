@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Generator_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

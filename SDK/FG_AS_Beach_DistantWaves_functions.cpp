@@ -6,7 +6,7 @@
 
 #include "FG_AS_Beach_DistantWaves_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

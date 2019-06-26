@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Cable_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

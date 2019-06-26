@@ -6,7 +6,7 @@
 
 #include "FG_Anim_Stinger_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

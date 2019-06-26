@@ -8,7 +8,7 @@
 
 #include "FG_Widget_ColorSquare_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

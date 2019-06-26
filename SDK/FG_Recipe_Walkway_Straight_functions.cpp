@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Walkway_Straight_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

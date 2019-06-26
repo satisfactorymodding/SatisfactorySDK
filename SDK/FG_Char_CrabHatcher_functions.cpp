@@ -6,7 +6,7 @@
 
 #include "FG_Char_CrabHatcher_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

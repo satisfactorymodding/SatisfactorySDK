@@ -8,7 +8,7 @@
 
 #include "FG_Area_LakeForest_3_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

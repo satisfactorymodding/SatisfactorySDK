@@ -8,7 +8,7 @@
 
 #include "FG_IntroTutorial_Complete_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

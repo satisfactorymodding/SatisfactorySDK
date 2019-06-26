@@ -8,7 +8,7 @@
 
 #include "FG_BTT_GroupPanic_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

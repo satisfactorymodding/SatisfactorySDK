@@ -8,7 +8,7 @@
 
 #include "FG_Controller_StingerChild_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

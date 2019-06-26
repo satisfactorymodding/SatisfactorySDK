@@ -8,7 +8,7 @@
 
 #include "FG_Anim_3pChainsaw_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

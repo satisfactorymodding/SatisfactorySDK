@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_BP_WheeledVehicle_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

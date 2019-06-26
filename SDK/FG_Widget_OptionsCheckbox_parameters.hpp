@@ -8,7 +8,7 @@
 
 #include "FG_Widget_OptionsCheckbox_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

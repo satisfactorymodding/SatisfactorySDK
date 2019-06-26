@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_LakeForest_Beach_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

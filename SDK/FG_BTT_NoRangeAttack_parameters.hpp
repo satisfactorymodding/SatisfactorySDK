@@ -8,7 +8,7 @@
 
 #include "FG_BTT_NoRangeAttack_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

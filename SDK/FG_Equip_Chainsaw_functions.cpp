@@ -6,7 +6,7 @@
 
 #include "FG_Equip_Chainsaw_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

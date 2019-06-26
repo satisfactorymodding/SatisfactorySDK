@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_AlienCarapace1_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

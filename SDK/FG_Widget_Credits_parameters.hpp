@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Credits_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

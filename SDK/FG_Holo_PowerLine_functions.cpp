@@ -6,7 +6,7 @@
 
 #include "FG_Holo_PowerLine_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

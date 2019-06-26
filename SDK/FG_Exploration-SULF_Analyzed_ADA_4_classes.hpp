@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-SULF_Analyzed_ADA_4_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

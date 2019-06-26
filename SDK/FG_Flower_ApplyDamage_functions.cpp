@@ -6,7 +6,7 @@
 
 #include "FG_Flower_ApplyDamage_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

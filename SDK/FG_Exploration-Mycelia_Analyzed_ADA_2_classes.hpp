@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Mycelia_Analyzed_ADA_2_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

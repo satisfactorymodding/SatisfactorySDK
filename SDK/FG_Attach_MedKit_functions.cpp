@@ -6,7 +6,7 @@
 
 #include "FG_Attach_MedKit_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

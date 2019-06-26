@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_MazeCanyons_Wildlife_TreeLarks_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

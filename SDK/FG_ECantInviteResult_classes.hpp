@@ -8,7 +8,7 @@
 
 #include "FG_ECantInviteResult_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

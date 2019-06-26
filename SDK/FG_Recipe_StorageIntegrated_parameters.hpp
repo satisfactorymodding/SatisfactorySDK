@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_StorageIntegrated_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

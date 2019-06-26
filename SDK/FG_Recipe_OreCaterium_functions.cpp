@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_OreCaterium_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_MazeCanyons_Atmos_Main_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

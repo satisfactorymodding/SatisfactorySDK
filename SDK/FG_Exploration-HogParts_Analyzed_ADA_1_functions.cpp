@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-HogParts_Analyzed_ADA_1_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

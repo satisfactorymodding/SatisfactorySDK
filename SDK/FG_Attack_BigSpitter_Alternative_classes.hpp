@@ -8,7 +8,7 @@
 
 #include "FG_Attack_BigSpitter_Alternative_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

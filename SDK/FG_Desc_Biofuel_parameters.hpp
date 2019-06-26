@@ -8,7 +8,7 @@
 
 #include "FG_Desc_Biofuel_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_IntroTutorialHubLvl4_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

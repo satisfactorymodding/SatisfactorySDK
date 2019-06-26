@@ -8,7 +8,7 @@
 
 #include "FG_Widget_SlidingTabs_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -43,7 +43,7 @@ public:
 
 	void SetActiveButton();
 	void SetupIndexOffset();
-	void SetActiveIndex(int Index, bool animate);
+	void SetActiveIndex(int Index, bool Animate);
 	void Construct();
 	void SlideLerp();
 	void PreConstruct(bool* IsDesignTime);

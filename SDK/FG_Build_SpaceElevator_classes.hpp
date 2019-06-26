@@ -8,7 +8,7 @@
 
 #include "FG_Build_SpaceElevator_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

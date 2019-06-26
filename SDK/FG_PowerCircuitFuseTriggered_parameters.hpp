@@ -8,7 +8,7 @@
 
 #include "FG_PowerCircuitFuseTriggered_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

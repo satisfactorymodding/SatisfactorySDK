@@ -8,7 +8,7 @@
 
 #include "FG_BP_CrystalBuildingTradingComponent_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

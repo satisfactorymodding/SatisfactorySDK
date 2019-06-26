@@ -6,7 +6,7 @@
 
 #include "FG_Controller_BabyCrab_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

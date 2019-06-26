@@ -8,7 +8,7 @@
 
 #include "FG_Desc_OreCopper_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

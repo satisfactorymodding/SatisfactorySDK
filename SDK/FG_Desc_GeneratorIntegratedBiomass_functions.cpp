@@ -6,7 +6,7 @@
 
 #include "FG_Desc_GeneratorIntegratedBiomass_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

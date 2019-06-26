@@ -6,7 +6,7 @@
 
 #include "FG_Area_NoMansLand_2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

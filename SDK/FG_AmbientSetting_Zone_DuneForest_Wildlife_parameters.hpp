@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_DuneForest_Wildlife_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

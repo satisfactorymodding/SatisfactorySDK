@@ -8,7 +8,7 @@
 
 #include "FG_SC_JumpPads_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

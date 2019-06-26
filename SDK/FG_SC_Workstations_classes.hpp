@@ -8,7 +8,7 @@
 
 #include "FG_SC_Workstations_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

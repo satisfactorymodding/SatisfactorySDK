@@ -8,7 +8,7 @@
 
 #include "FG_BC_Organization_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

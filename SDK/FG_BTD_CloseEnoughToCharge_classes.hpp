@@ -8,7 +8,7 @@
 
 #include "FG_BTD_CloseEnoughToCharge_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

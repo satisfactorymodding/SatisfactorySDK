@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Splitter_OutputList_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

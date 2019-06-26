@@ -6,7 +6,7 @@
 
 #include "FG_ECantInviteResult_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

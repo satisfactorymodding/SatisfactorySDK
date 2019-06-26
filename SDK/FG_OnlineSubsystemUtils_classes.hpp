@@ -8,7 +8,7 @@
 
 #include "FG_OnlineSubsystemUtils_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

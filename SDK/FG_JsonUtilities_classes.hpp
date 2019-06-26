@@ -8,7 +8,7 @@
 
 #include "FG_JsonUtilities_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_Area_DuneDesert_3_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_1-3_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

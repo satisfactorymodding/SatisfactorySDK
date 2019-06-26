@@ -8,7 +8,7 @@
 
 #include "FG_LandSoundMapStruct_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

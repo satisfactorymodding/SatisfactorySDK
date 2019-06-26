@@ -8,7 +8,7 @@
 
 #include "FG_EVehicleAnimations_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

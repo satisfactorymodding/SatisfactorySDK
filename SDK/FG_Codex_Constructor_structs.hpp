@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_Widget_CodexEntry_Buildings_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

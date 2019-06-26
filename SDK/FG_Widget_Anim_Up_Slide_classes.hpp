@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Anim_Up_Slide_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_BTS_TickStuff_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

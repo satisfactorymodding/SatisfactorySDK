@@ -6,7 +6,7 @@
 
 #include "FG_BP_MaterialEffect_WireBuild_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

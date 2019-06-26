@@ -8,7 +8,7 @@
 
 #include "FG_BTD_CanMove_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_BP_ItemPickup_Spawnable_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_DuneForest_DayNight_Atmos_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

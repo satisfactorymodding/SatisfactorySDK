@@ -8,7 +8,7 @@
 
 #include "FG_PacketHandler_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

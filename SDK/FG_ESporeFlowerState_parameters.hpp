@@ -8,7 +8,7 @@
 
 #include "FG_ESporeFlowerState_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

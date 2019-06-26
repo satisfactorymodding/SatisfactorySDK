@@ -8,7 +8,7 @@
 
 #include "FG_Basic.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Enums

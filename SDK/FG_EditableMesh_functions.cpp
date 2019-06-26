@@ -6,7 +6,7 @@
 
 #include "FG_EditableMesh_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

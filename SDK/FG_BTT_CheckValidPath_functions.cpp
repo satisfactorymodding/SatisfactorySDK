@@ -6,7 +6,7 @@
 
 #include "FG_BTT_CheckValidPath_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

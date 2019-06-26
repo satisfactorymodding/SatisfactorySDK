@@ -8,7 +8,7 @@
 
 #include "FG_Holo_ConveyorBelt_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

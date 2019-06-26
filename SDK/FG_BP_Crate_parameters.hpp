@@ -8,7 +8,7 @@
 
 #include "FG_BP_Crate_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Stairs_Left_01_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

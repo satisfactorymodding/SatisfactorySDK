@@ -6,7 +6,7 @@
 
 #include "FG_AmbientSetting_MazeCanyons_Wildlife_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

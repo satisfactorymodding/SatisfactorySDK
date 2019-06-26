@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Alternate_HeatSink_2_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

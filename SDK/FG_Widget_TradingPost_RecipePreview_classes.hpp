@@ -8,7 +8,7 @@
 
 #include "FG_Widget_TradingPost_RecipePreview_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -49,7 +49,7 @@ public:
 	void GetSchematicContents(class UClass* mSchematic);
 	void Construct();
 	void AnimateRewards();
-	void AnimateCostSlots();
+	void AnimateCostslots();
 	void ExecuteUbergraph_Widget_TradingPost_RecipePreview(int EntryPoint);
 };
 

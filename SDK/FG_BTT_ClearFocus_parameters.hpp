@@ -8,7 +8,7 @@
 
 #include "FG_BTT_ClearFocus_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

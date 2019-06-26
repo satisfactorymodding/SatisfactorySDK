@@ -6,7 +6,7 @@
 
 #include "FG_BTT_FindFoliageLocation_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Biomass_Leaves_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

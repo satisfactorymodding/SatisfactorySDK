@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_C4_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Biomass_Wood_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

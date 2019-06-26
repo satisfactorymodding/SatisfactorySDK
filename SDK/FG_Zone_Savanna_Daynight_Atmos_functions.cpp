@@ -6,7 +6,7 @@
 
 #include "FG_Zone_Savanna_Daynight_Atmos_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

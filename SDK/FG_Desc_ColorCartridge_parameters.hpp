@@ -8,7 +8,7 @@
 
 #include "FG_Desc_ColorCartridge_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_master_river_spline_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

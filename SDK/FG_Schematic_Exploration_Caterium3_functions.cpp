@@ -6,7 +6,7 @@
 
 #include "FG_Schematic_Exploration_Caterium3_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

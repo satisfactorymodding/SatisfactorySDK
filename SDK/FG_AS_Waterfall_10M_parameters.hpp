@@ -8,7 +8,7 @@
 
 #include "FG_AS_Waterfall_10M_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

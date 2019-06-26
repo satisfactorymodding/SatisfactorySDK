@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_FallDamage_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

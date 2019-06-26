@@ -8,7 +8,7 @@
 
 #include "FG_Landscape_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

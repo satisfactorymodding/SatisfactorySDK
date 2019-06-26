@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_MedicinalInhaler_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

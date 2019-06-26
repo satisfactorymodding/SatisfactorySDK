@@ -8,7 +8,7 @@
 
 #include "FG_BTT_FindNextSplinePoint_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

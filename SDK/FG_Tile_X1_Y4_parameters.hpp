@@ -8,7 +8,7 @@
 
 #include "FG_Tile_X1_Y4_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

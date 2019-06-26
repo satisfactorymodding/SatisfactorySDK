@@ -8,7 +8,7 @@
 
 #include "FG_Shared_ModulatedWilderness_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

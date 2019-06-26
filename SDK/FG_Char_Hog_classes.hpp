@@ -8,7 +8,7 @@
 
 #include "FG_Char_Hog_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

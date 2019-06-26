@@ -8,7 +8,7 @@
 
 #include "FG_Rejoin_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

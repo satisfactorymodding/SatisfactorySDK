@@ -8,7 +8,7 @@
 
 #include "FG_SC_Vehicles_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

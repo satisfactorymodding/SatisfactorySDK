@@ -12,7 +12,7 @@
 #include "FG_ESporeFlowerState_classes.hpp"
 #include "FG_ESporeFlowerGasState_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

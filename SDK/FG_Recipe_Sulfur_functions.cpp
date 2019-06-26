@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Sulfur_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

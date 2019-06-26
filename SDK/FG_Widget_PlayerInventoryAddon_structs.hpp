@@ -8,10 +8,10 @@
 
 #include "FG_Basic.hpp"
 #include "FG_FactoryGame_classes.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_InteractionDirection_classes.hpp"
+#include "FG_Engine_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

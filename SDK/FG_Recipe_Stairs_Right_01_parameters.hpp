@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Stairs_Right_01_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Wall_Door_8x4_02_Steel_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

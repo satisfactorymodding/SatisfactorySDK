@@ -8,7 +8,7 @@
 
 #include "FG_BP_DragNDropInventory_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

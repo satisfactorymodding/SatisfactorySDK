@@ -8,7 +8,7 @@
 
 #include "FG_Anim_MinerMk1_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

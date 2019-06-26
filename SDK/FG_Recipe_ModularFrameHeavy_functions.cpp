@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_ModularFrameHeavy_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

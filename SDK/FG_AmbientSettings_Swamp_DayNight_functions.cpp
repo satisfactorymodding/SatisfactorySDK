@@ -6,7 +6,7 @@
 
 #include "FG_AmbientSettings_Swamp_DayNight_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

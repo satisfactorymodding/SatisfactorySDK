@@ -8,7 +8,7 @@
 
 #include "FG_Tutorial_ResourceExtractors_Mail_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

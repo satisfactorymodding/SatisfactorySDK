@@ -8,7 +8,7 @@
 
 #include "FG_SC_OilProduction_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

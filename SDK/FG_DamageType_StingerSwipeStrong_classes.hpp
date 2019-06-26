@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_StingerSwipeStrong_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

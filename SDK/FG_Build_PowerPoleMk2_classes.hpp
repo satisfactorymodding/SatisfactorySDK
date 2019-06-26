@@ -8,7 +8,7 @@
 
 #include "FG_Build_PowerPoleMk2_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_Paper2D_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

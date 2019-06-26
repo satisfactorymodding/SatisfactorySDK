@@ -8,7 +8,7 @@
 
 #include "FG_Area_GrassFields_4_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

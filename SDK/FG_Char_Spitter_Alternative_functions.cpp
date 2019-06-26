@@ -6,7 +6,7 @@
 
 #include "FG_Char_Spitter_Alternative_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

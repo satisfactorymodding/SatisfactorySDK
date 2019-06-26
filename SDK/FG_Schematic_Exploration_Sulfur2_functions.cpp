@@ -6,7 +6,7 @@
 
 #include "FG_Schematic_Exploration_Sulfur2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

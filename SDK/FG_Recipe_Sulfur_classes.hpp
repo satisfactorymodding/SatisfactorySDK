@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Sulfur_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

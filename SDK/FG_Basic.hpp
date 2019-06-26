@@ -9,7 +9,7 @@
 #include <unordered_set>
 #include <string>
 
-namespace SDK
+namespace SDKEXP
 {
 template<typename Fn>
 inline Fn GetVFunction(const void *instance, std::size_t index)
@@ -511,6 +511,24 @@ template<typename ObjectType>
 class TLazyObjectPtr : FLazyObjectPtr
 {
 
+};
+
+class UClass;
+
+template<class TClass>
+class TSubclassOf
+{
+public:
+	TSubclassOf(UClass* Class) {
+		this->Class = Class;
+	}
+
+	inline UClass* GetClass()
+	{
+		return Class;
+	}
+private:
+	UClass* Class;
 };
 }
 

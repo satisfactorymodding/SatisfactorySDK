@@ -8,7 +8,7 @@
 
 #include "FG_Build_ConveyorAttachmentSplitterSmart_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

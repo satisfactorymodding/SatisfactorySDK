@@ -6,7 +6,7 @@
 
 #include "FG_Codex_Constructor_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

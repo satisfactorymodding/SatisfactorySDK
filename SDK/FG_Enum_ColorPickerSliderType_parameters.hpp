@@ -8,7 +8,7 @@
 
 #include "FG_Enum_ColorPickerSliderType_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

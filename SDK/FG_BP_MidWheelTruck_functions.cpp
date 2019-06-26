@@ -6,7 +6,7 @@
 
 #include "FG_BP_MidWheelTruck_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_BTS_CheckNearbyThreats_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

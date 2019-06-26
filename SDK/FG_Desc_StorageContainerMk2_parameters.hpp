@@ -8,7 +8,7 @@
 
 #include "FG_Desc_StorageContainerMk2_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

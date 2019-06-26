@@ -8,7 +8,7 @@
 
 #include "FG_Anim_Beacon_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

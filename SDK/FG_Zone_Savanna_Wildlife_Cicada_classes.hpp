@@ -8,7 +8,7 @@
 
 #include "FG_Zone_Savanna_Wildlife_Cicada_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

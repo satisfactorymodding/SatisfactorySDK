@@ -8,7 +8,7 @@
 
 #include "FG_AS_Waterfall_15M_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

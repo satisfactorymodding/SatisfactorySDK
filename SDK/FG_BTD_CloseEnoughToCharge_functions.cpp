@@ -6,7 +6,7 @@
 
 #include "FG_BTD_CloseEnoughToCharge_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

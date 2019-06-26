@@ -8,7 +8,7 @@
 
 #include "FG_Codex_Constructor_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

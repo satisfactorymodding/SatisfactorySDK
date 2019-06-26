@@ -6,7 +6,7 @@
 
 #include "FG_BP_RailroadVehicleSoundComponent_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

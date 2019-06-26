@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Berry_ADA_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

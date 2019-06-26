@@ -8,7 +8,7 @@
 
 #include "FG_GameplayTasks_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

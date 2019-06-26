@@ -8,7 +8,7 @@
 
 #include "FG_Widget_TradingPost_ActivateSchematicButton_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

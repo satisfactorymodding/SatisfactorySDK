@@ -8,7 +8,7 @@
 
 #include "FG_Widget_ManageSession_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -19,8 +19,8 @@ struct UWidget_ManageSession_C_ClearIngamePlayerList_Params
 {
 };
 
-// Function Widget_ManageSession.Widget_ManageSession_C.isHost
-struct UWidget_ManageSession_C_isHost_Params
+// Function Widget_ManageSession.Widget_ManageSession_C.IsHost
+struct UWidget_ManageSession_C_IsHost_Params
 {
 	class APlayerState*                                State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isOurself;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

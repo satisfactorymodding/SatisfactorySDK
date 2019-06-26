@@ -6,7 +6,7 @@
 
 #include "FG_Attack_StingerSwipeWeak_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Petals_Analyzed_ADA_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

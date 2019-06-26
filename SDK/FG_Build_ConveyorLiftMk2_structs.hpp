@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_Build_ConveyorLiftMk1_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

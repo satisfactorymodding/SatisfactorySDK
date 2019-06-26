@@ -8,7 +8,7 @@
 
 #include "FG_AS_World_CalmWater_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

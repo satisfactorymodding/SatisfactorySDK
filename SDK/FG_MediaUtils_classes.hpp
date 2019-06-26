@@ -8,7 +8,7 @@
 
 #include "FG_MediaUtils_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

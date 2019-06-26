@@ -6,7 +6,7 @@
 
 #include "FG_Sender_Checkit_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

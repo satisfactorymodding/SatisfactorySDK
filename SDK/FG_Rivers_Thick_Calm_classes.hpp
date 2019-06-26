@@ -8,7 +8,7 @@
 
 #include "FG_Rivers_Thick_Calm_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

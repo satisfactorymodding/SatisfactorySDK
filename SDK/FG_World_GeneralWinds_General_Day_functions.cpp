@@ -6,7 +6,7 @@
 
 #include "FG_World_GeneralWinds_General_Day_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

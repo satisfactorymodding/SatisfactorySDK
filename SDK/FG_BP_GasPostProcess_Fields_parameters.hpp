@@ -8,7 +8,7 @@
 
 #include "FG_BP_GasPostProcess_Fields_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

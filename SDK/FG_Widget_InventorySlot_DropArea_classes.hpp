@@ -8,7 +8,7 @@
 
 #include "FG_Widget_InventorySlot_DropArea_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Credit_Trademark_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

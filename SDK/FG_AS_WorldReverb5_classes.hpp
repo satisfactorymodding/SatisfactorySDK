@@ -8,7 +8,7 @@
 
 #include "FG_AS_WorldReverb5_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

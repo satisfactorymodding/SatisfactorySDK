@@ -6,7 +6,7 @@
 
 #include "FG_Persistent_Exploration_3_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

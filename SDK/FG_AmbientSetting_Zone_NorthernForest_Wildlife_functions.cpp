@@ -6,7 +6,7 @@
 
 #include "FG_AmbientSetting_Zone_NorthernForest_Wildlife_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

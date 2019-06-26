@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_LakeForest_Thin_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

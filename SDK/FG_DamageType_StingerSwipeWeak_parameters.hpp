@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_StingerSwipeWeak_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

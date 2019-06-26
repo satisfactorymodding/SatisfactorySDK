@@ -8,7 +8,7 @@
 
 #include "FG_SC_Smelters_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

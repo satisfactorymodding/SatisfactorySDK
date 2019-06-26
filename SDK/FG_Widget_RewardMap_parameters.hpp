@@ -8,7 +8,7 @@
 
 #include "FG_Widget_RewardMap_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

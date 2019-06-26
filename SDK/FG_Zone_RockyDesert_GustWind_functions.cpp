@@ -6,7 +6,7 @@
 
 #include "FG_Zone_RockyDesert_GustWind_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

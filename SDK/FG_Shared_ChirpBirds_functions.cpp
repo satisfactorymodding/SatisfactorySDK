@@ -6,7 +6,7 @@
 
 #include "FG_Shared_ChirpBirds_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Area_RedBambooFields_3_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

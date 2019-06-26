@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Wall_Window_8x4_03_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_SchematicCAT1_ADA-S17Message_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

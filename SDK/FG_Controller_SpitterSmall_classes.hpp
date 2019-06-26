@@ -8,7 +8,7 @@
 
 #include "FG_Controller_SpitterSmall_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

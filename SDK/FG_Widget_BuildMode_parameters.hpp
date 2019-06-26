@@ -8,7 +8,7 @@
 
 #include "FG_Widget_BuildMode_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

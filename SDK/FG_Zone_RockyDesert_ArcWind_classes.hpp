@@ -8,7 +8,7 @@
 
 #include "FG_Zone_RockyDesert_ArcWind_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

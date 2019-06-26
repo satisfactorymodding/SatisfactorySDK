@@ -6,7 +6,7 @@
 
 #include "FG_Widget_LoadSession_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

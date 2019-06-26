@@ -6,7 +6,7 @@
 
 #include "FG_Zone_RockyDesert_Wildlife_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

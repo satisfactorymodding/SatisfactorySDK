@@ -8,7 +8,7 @@
 
 #include "FG_BP_ConsumeableEquipment_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

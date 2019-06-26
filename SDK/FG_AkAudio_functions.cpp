@@ -6,7 +6,7 @@
 
 #include "FG_AkAudio_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_BP_SubsystemClasses_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

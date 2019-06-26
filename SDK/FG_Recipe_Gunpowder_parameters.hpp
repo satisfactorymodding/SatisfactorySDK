@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Gunpowder_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

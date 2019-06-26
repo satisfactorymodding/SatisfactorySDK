@@ -8,7 +8,7 @@
 
 #include "FG_Anim_Rebargun_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

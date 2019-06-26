@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_NobeliskDetonator_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Desc_AluminumPlate_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

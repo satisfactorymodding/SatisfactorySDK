@@ -8,7 +8,7 @@
 
 #include "FG_Widget_FrontEnd_Button_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

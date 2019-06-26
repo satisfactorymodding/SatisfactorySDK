@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_AluminumSheet_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

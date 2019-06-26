@@ -8,7 +8,7 @@
 
 #include "FG_AS_World_SeaAtmos_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

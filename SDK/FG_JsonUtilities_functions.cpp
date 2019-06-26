@@ -6,7 +6,7 @@
 
 #include "FG_JsonUtilities_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

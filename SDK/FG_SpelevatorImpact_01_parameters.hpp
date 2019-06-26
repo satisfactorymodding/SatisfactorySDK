@@ -8,7 +8,7 @@
 
 #include "FG_SpelevatorImpact_01_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

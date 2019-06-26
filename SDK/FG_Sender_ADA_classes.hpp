@@ -8,7 +8,7 @@
 
 #include "FG_Sender_ADA_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

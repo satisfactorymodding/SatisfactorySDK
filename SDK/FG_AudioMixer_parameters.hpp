@@ -8,7 +8,7 @@
 
 #include "FG_AudioMixer_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

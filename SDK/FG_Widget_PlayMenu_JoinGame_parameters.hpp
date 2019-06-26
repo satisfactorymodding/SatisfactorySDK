@@ -8,7 +8,7 @@
 
 #include "FG_Widget_PlayMenu_JoinGame_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

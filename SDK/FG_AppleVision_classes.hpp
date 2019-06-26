@@ -8,7 +8,7 @@
 
 #include "FG_AppleVision_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

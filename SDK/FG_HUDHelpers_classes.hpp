@@ -8,7 +8,7 @@
 
 #include "FG_HUDHelpers_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

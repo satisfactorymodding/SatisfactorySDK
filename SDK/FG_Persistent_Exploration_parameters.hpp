@@ -8,7 +8,7 @@
 
 #include "FG_Persistent_Exploration_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

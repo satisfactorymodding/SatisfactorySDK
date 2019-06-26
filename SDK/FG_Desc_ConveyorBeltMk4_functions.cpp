@@ -6,7 +6,7 @@
 
 #include "FG_Desc_ConveyorBeltMk4_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

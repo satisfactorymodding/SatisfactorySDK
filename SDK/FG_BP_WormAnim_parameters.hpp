@@ -8,7 +8,7 @@
 
 #include "FG_BP_WormAnim_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

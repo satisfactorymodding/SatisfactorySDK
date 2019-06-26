@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Alternate_Stator_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

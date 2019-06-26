@@ -6,7 +6,7 @@
 
 #include "FG_BP_GlobalSettings_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

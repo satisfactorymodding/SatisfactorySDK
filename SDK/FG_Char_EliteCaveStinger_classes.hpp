@@ -8,7 +8,7 @@
 
 #include "FG_Char_EliteCaveStinger_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

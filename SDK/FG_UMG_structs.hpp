@@ -8,15 +8,15 @@
 
 #include "FG_Basic.hpp"
 #include "FG_CoreUObject_classes.hpp"
-#include "FG_MovieSceneTracks_classes.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_SlateCore_classes.hpp"
-#include "FG_Slate_classes.hpp"
+#include "FG_Engine_classes.hpp"
 #include "FG_PropertyPath_classes.hpp"
+#include "FG_Slate_classes.hpp"
 #include "FG_InputCore_classes.hpp"
+#include "FG_MovieSceneTracks_classes.hpp"
 #include "FG_MovieScene_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Enums

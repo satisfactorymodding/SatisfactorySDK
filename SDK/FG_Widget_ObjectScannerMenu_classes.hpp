@@ -8,7 +8,7 @@
 
 #include "FG_Widget_ObjectScannerMenu_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_BP_EQSTestingPawn_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

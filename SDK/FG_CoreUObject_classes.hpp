@@ -8,7 +8,7 @@
 
 #include "FG_CoreUObject_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -876,18 +876,6 @@ public:
 		return ptr;
 	}
 
-};
-
-template<class TClass>
-class TSubclassOf
-{
-public:
-	inline UClass* GetClass()
-	{
-		return Class;
-	}
-private:
-	UClass* Class;
 };
 
 

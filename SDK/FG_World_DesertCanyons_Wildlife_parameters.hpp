@@ -8,7 +8,7 @@
 
 #include "FG_World_DesertCanyons_Wildlife_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

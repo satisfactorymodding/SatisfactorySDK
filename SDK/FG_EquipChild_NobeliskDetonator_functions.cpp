@@ -6,7 +6,7 @@
 
 #include "FG_EquipChild_NobeliskDetonator_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

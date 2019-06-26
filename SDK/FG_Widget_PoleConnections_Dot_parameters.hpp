@@ -8,7 +8,7 @@
 
 #include "FG_Widget_PoleConnections_Dot_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

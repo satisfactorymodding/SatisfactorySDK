@@ -6,7 +6,7 @@
 
 #include "FG_Context_KnownThreatLocations_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

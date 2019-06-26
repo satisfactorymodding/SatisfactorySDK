@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Build_IngredientInfo_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

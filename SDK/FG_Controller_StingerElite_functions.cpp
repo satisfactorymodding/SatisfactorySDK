@@ -6,7 +6,7 @@
 
 #include "FG_Controller_StingerElite_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

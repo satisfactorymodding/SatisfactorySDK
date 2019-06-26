@@ -6,7 +6,7 @@
 
 #include "FG_Build_Wall_Door_8x4_03_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

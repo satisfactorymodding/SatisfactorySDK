@@ -6,7 +6,7 @@
 
 #include "FG_UseState_WorkBench_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

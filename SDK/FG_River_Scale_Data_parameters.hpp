@@ -8,7 +8,7 @@
 
 #include "FG_River_Scale_Data_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_BP_AIControllerWalker_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

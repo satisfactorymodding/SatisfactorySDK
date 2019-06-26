@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-Cat2_Analyzed_ADA_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

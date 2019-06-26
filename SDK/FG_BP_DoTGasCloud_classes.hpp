@@ -8,7 +8,7 @@
 
 #include "FG_BP_DoTGasCloud_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

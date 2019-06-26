@@ -8,7 +8,7 @@
 
 #include "FG_Desc_TruckStation_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

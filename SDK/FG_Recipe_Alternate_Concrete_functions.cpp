@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Alternate_Concrete_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

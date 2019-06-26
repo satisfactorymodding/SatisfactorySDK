@@ -6,7 +6,7 @@
 
 #include "FG_Widget_TradingPost_LanuchButtonPlatform_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_BP_WaterPostProcess_Pond_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

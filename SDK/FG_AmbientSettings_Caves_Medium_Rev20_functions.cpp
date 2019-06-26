@@ -6,7 +6,7 @@
 
 #include "FG_AmbientSettings_Caves_Medium_Rev20_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

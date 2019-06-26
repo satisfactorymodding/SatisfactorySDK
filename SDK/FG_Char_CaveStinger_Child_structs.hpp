@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_Char_Stinger_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

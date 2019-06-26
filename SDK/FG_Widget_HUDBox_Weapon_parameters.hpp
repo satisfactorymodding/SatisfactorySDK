@@ -8,7 +8,7 @@
 
 #include "FG_Widget_HUDBox_Weapon_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

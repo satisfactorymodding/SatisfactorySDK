@@ -8,7 +8,7 @@
 
 #include "FG_AS_TitanForest_Wildlife_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

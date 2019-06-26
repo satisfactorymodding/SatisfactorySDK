@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_ConveyorBeltMk5_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

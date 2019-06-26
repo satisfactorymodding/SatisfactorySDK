@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-WAT2_ADA_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

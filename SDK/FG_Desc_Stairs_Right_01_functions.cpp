@@ -6,7 +6,7 @@
 
 #include "FG_Desc_Stairs_Right_01_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

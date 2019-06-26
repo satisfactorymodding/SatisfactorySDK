@@ -6,7 +6,7 @@
 
 #include "FG_BP_MaterialEffect_Build_Hub_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

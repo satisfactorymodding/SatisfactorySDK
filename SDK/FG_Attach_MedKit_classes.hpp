@@ -8,7 +8,7 @@
 
 #include "FG_Attach_MedKit_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

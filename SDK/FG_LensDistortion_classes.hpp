@@ -8,7 +8,7 @@
 
 #include "FG_LensDistortion_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

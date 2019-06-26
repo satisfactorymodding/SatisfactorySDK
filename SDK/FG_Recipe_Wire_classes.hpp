@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Wire_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

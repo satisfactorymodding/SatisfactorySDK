@@ -6,7 +6,7 @@
 
 #include "FG_Equip_Parachute_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_AlienOrgans1_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

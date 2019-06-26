@@ -8,7 +8,7 @@
 
 #include "FG_AudioCapture_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

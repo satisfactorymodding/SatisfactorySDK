@@ -6,7 +6,7 @@
 
 #include "FG_BP_GasPillar_01_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

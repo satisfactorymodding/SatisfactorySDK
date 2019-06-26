@@ -8,7 +8,7 @@
 
 #include "FG_Desc_StoragePlayer_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

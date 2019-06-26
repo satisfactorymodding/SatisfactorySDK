@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSettings_Caves_Small_Rev5_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

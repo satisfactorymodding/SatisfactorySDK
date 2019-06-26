@@ -6,7 +6,7 @@
 
 #include "FG_BP_RemoteCallObject_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions
@@ -714,10 +714,10 @@ void UBP_RemoteCallObject_C::Server_UpdateSortRule(class AFGBuildableSplitterSma
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetTrainStationName
 // ()
 // Parameters:
-// class AFGBuildableRailroadStation* Station                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGTrainStationIdentifier* Station                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_RemoteCallObject_C::Server_SetTrainStationName(class AFGBuildableRailroadStation* Station, const struct FText& Name)
+void UBP_RemoteCallObject_C::Server_SetTrainStationName(class AFGTrainStationIdentifier* Station, const struct FText& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetTrainStationName");
 

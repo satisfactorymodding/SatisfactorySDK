@@ -8,7 +8,7 @@
 
 #include "FG_BP_GameUI_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -138,6 +138,7 @@ public:
 	void OnReceiveRadiationStart();
 	void OnReceiveRadiationStop();
 	void OnRadiationIntensityUpdated(float* radiationIntensity, float* radiationImmunity);
+	void ForceStopRadiationUI();
 	void ExecuteUbergraph_BP_GameUI(int EntryPoint);
 };
 

@@ -8,7 +8,7 @@
 
 #include "FG_ClothingSystemRuntimeInterface_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Ramp_8x1_01_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

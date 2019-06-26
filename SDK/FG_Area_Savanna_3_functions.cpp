@@ -6,7 +6,7 @@
 
 #include "FG_Area_Savanna_3_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

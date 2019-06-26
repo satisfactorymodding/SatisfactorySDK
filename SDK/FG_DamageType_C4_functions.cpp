@@ -6,7 +6,7 @@
 
 #include "FG_DamageType_C4_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

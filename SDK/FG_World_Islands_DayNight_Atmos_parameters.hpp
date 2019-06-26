@@ -8,7 +8,7 @@
 
 #include "FG_World_Islands_DayNight_Atmos_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

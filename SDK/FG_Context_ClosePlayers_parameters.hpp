@@ -8,7 +8,7 @@
 
 #include "FG_Context_ClosePlayers_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

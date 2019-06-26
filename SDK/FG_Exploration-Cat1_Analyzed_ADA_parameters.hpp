@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Cat1_Analyzed_ADA_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

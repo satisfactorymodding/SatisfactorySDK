@@ -8,7 +8,7 @@
 
 #include "FG_Desc_QuantumOscillator_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

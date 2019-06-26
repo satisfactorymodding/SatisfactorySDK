@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Exploration_Caterium3_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_Char_Stinger_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

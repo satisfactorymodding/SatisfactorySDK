@@ -8,7 +8,7 @@
 
 #include "FG_BP_CrabEggParts_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

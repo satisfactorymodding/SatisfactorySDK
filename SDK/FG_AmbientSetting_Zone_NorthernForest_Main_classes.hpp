@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_NorthernForest_Main_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

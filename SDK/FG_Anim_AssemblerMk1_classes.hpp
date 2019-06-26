@@ -8,7 +8,7 @@
 
 #include "FG_Anim_AssemblerMk1_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

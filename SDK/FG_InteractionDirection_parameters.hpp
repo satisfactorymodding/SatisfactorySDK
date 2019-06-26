@@ -8,7 +8,7 @@
 
 #include "FG_InteractionDirection_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

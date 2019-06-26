@@ -6,7 +6,7 @@
 
 #include "FG_BTS_DistanceBetweenKeys_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

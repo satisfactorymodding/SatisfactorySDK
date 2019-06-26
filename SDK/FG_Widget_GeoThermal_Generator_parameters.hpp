@@ -8,7 +8,7 @@
 
 #include "FG_Widget_GeoThermal_Generator_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

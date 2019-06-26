@@ -6,7 +6,7 @@
 
 #include "FG_CustomMeshComponent_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

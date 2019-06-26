@@ -8,7 +8,7 @@
 
 #include "FG_BTT_SetSpeed_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

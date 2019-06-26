@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Codex_MessageNotification_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

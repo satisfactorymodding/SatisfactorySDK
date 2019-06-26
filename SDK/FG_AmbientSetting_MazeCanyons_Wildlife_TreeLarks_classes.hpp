@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_MazeCanyons_Wildlife_TreeLarks_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

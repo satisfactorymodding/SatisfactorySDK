@@ -8,7 +8,7 @@
 
 #include "FG_AS_River_Slow_Wide_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

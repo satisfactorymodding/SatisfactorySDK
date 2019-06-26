@@ -8,7 +8,7 @@
 
 #include "FG_Anim_FoundryMk1_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

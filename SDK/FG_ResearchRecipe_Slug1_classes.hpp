@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_Slug1_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

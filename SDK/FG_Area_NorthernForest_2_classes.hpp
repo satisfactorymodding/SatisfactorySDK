@@ -8,7 +8,7 @@
 
 #include "FG_Area_NorthernForest_2_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

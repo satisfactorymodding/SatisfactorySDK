@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Subtitle_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

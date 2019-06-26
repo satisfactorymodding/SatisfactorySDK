@@ -6,7 +6,7 @@
 
 #include "FG_Desc_HogParts_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

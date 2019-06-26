@@ -8,7 +8,7 @@
 
 #include "FG_AppleImageUtils_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

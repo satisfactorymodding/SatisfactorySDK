@@ -6,7 +6,7 @@
 
 #include "FG_Build_RadarTower_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_BP_Edible_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

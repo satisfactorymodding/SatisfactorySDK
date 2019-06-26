@@ -8,7 +8,7 @@
 
 #include "FG_Codex_Constructor_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_Widget_SaturationSlider_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

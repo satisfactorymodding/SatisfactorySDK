@@ -8,7 +8,7 @@
 
 #include "FG_BP_RemoteCallObject_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -242,7 +242,7 @@ struct UBP_RemoteCallObject_C_Server_UpdateSortRule_Params
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetTrainStationName
 struct UBP_RemoteCallObject_C_Server_SetTrainStationName_Params
 {
-	class AFGBuildableRailroadStation*                 Station;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGTrainStationIdentifier*                   Station;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 

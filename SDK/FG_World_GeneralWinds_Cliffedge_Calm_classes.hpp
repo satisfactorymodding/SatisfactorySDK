@@ -8,7 +8,7 @@
 
 #include "FG_World_GeneralWinds_Cliffedge_Calm_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

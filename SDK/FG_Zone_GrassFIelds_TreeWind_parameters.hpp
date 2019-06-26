@@ -8,7 +8,7 @@
 
 #include "FG_Zone_GrassFIelds_TreeWind_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

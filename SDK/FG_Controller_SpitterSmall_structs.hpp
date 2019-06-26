@@ -11,7 +11,7 @@
 #include "FG_Engine_classes.hpp"
 #include "FG_AIModule_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

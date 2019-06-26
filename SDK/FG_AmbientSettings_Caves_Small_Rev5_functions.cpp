@@ -6,7 +6,7 @@
 
 #include "FG_AmbientSettings_Caves_Small_Rev5_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

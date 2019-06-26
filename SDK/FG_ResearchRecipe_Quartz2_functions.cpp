@@ -6,7 +6,7 @@
 
 #include "FG_ResearchRecipe_Quartz2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

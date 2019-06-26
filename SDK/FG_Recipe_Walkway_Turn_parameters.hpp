@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Walkway_Turn_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

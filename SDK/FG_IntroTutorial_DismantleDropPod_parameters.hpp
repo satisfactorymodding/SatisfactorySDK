@@ -8,7 +8,7 @@
 
 #include "FG_IntroTutorial_DismantleDropPod_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_ClothingSystemRuntime_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

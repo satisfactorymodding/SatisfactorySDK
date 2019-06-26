@@ -8,7 +8,7 @@
 
 #include "FG_LandSoundMapStruct_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

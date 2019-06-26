@@ -6,7 +6,7 @@
 
 #include "FG_World_GeneralWinds_Field_Calm_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

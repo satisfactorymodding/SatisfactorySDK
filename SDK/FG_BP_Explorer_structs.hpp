@@ -12,7 +12,7 @@
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_InputCore_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

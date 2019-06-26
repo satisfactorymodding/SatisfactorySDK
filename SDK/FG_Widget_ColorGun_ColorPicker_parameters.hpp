@@ -8,7 +8,7 @@
 
 #include "FG_Widget_ColorGun_ColorPicker_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

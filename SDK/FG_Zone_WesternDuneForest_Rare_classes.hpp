@@ -8,7 +8,7 @@
 
 #include "FG_Zone_WesternDuneForest_Rare_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_UseState_TradingPostTerminal_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

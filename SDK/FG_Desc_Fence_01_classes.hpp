@@ -8,7 +8,7 @@
 
 #include "FG_Desc_Fence_01_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

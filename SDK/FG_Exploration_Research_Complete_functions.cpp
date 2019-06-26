@@ -6,7 +6,7 @@
 
 #include "FG_Exploration_Research_Complete_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

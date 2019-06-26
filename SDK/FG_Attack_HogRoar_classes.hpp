@@ -8,7 +8,7 @@
 
 #include "FG_Attack_HogRoar_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_Desc_Wall_Conveyor_8x4_03_Steel_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

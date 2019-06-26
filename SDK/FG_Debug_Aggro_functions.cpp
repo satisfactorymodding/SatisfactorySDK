@@ -6,7 +6,7 @@
 
 #include "FG_Debug_Aggro_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

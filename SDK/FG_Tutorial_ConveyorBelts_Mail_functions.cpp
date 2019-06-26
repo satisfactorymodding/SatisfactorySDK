@@ -6,7 +6,7 @@
 
 #include "FG_Tutorial_ConveyorBelts_Mail_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

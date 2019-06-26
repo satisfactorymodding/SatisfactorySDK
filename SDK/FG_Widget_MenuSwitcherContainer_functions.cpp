@@ -6,7 +6,7 @@
 
 #include "FG_Widget_MenuSwitcherContainer_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_ImageWriteQueue_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

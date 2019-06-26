@@ -6,7 +6,7 @@
 
 #include "FG_AS_TitanForest_Wildlife_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

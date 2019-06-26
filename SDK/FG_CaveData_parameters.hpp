@@ -8,7 +8,7 @@
 
 #include "FG_CaveData_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

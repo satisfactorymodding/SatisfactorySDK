@@ -8,7 +8,7 @@
 
 #include "FG_CharacterParticleFootstepStruct_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

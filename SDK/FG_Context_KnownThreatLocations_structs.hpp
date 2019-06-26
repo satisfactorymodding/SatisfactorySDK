@@ -10,7 +10,7 @@
 #include "FG_AIModule_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

@@ -8,7 +8,7 @@
 
 #include "FG_Attack_StingerGasCloud_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

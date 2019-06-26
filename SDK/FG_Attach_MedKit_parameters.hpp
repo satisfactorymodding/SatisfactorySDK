@@ -8,7 +8,7 @@
 
 #include "FG_Attach_MedKit_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

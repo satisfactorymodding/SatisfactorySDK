@@ -8,7 +8,7 @@
 
 #include "FG_BP_RemoteCallObject_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -60,7 +60,7 @@ public:
 	void Server_ResizeInventory(int newSize, class UFGInventoryComponent* inInventoryComp);
 	void Server_PayOffTowTruckUpgrade(class AFGBuildableSpaceElevator* SpaceElevator, class UFGInventoryComponent* inventory, int inventorySlotIndex);
 	void Server_UpdateSortRule(class AFGBuildableSplitterSmart* SplitterSmart, int Index, const struct FSplitterSortRule& Rule);
-	void Server_SetTrainStationName(class AFGBuildableRailroadStation* Station, const struct FText& Name);
+	void Server_SetTrainStationName(class AFGTrainStationIdentifier* Station, const struct FText& Name);
 	void Server_AddSortRule(class AFGBuildableSplitterSmart* SplitterSmart, const struct FSplitterSortRule& Rule);
 	void Server_GrabAllItemsFromInventory(class UFGInventoryComponent* SourceComponent, class UFGInventoryComponent* destinationComponent, class UClass* onlyGrabOfDesc);
 	void Server_RepairDropPod(class ABP_DropPod_C* DropPod, class AFGCharacterPlayer* byCharacter);

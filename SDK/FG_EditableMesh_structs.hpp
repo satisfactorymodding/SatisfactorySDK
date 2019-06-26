@@ -10,7 +10,7 @@
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_MeshDescription_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Enums

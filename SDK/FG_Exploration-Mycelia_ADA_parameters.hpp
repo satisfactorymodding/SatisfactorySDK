@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Mycelia_ADA_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

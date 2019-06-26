@@ -6,7 +6,7 @@
 
 #include "FG_GameplayTasks_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Compass_new_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

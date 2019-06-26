@@ -8,7 +8,7 @@
 
 #include "FG_Engine_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -573,17 +573,17 @@ public:
 	unsigned char                                      UnknownData06[0x25];                                      // 0x07EB(0x0025) MISSED OFFSET
 	struct FWorldPSCPool                               PSCPool;                                                  // 0x0810(0x0058)
 
+	static UWorld** GWorld;
+	static inline UWorld* GetWorld()
+	{
+		return *GWorld;
+	};
+
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Engine.World");
 		return ptr;
 	}
-
-	static UWorld* GWorld;
-	static inline UWorld* GetWorld()
-	{
-		return GWorld;
-	};
 
 
 	void HandleTimelineScrubbed();

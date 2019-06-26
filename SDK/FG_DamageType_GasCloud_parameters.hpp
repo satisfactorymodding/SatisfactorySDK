@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_GasCloud_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Graph_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

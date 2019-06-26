@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_ConveyorAttachmentSplitter_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

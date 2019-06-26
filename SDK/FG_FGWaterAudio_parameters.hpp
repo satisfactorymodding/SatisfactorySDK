@@ -8,7 +8,7 @@
 
 #include "FG_FGWaterAudio_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

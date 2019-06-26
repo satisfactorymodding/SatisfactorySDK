@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Codex_MessageButton_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

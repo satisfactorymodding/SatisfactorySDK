@@ -8,7 +8,7 @@
 
 #include "FG_BP_Sky_Sphere_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_AS_Stream_Medium_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

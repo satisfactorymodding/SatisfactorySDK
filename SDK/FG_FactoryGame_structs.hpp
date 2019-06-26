@@ -9,22 +9,22 @@
 #include "FG_Basic.hpp"
 #include "FG_UMG_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
-#include "FG_SlateCore_classes.hpp"
+#include "FG_PhysXVehicles_classes.hpp"
 #include "FG_Engine_classes.hpp"
-#include "FG_AIModule_classes.hpp"
-#include "FG_SignificanceManager_classes.hpp"
 #include "FG_ApexDestruction_classes.hpp"
 #include "FG_GameplayTasks_classes.hpp"
+#include "FG_AIModule_classes.hpp"
+#include "FG_SlateCore_classes.hpp"
 #include "FG_InputCore_classes.hpp"
 #include "FG_Slate_classes.hpp"
 #include "FG_NavigationSystem_classes.hpp"
 #include "FG_OnlineSubsystemUtils_classes.hpp"
 #include "FG_ReplicationGraph_classes.hpp"
 #include "FG_AssetRegistry_classes.hpp"
+#include "FG_SignificanceManager_classes.hpp"
 #include "FG_AkAudio_classes.hpp"
-#include "FG_PhysXVehicles_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Enums
@@ -1873,29 +1873,6 @@ struct FRadiationVisualization
 	float                                              DistanceForHighestIntensity;                              // 0x001C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	float                                              DistanceForNoticableIntensity;                            // 0x0020(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.Train
-// 0x0048
-struct FTrain
-{
-	int                                                TrainID;                                                  // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                TrackGraphID;                                             // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	class AFGRailroadVehicle*                          FirstVehicle;                                             // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AFGRailroadVehicle*                          LastVehicle;                                              // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AFGLocomotive*                               MultipleUnitMaster;                                       // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0020(0x0008) MISSED OFFSET
-	class AFGRailroadTimeTable*                        TimeTable;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0030(0x0018) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.TrainData
-// 0x000C
-struct FTrainData
-{
-	float                                              Mass;                                                     // 0x0000(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              Length;                                                   // 0x0004(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              BrakeDeceleration;                                        // 0x0008(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.ItemSettings

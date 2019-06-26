@@ -8,7 +8,7 @@
 
 #include "FG_BTT_CircleMove_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

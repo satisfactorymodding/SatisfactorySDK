@@ -8,7 +8,7 @@
 
 #include "FG_Desc_GeneratorBiomass_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

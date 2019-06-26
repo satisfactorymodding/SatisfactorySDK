@@ -6,7 +6,7 @@
 
 #include "FG_Attack_MeleeSpitter_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

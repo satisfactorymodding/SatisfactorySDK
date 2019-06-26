@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Ramp_8x4_01_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

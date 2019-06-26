@@ -6,7 +6,7 @@
 
 #include "FG_GeometryCache_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

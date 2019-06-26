@@ -8,7 +8,7 @@
 
 #include "FG_Foliage_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

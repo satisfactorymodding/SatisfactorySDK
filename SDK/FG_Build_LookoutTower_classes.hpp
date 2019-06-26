@@ -8,7 +8,7 @@
 
 #include "FG_Build_LookoutTower_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

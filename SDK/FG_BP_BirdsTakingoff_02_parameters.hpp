@@ -8,7 +8,7 @@
 
 #include "FG_BP_BirdsTakingoff_02_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

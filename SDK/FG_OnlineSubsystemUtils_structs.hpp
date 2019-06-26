@@ -7,12 +7,12 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_AudioMixer_classes.hpp"
 #include "FG_Engine_classes.hpp"
-#include "FG_OnlineSubsystem_classes.hpp"
+#include "FG_AudioMixer_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
+#include "FG_OnlineSubsystem_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Enums

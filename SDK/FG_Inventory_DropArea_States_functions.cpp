@@ -6,7 +6,7 @@
 
 #include "FG_Inventory_DropArea_States_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

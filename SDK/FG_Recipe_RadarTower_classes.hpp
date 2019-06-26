@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_RadarTower_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

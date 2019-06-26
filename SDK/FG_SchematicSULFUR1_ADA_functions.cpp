@@ -6,7 +6,7 @@
 
 #include "FG_SchematicSULFUR1_ADA_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

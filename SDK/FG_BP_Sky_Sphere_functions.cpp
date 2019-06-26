@@ -6,7 +6,7 @@
 
 #include "FG_BP_Sky_Sphere_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

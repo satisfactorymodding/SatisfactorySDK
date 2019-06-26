@@ -8,7 +8,7 @@
 
 #include "FG_Shared_NightWilderness_03_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

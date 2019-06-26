@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_OilRefinery_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

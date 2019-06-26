@@ -8,7 +8,7 @@
 
 #include "FG_BTT_GroupPanic_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

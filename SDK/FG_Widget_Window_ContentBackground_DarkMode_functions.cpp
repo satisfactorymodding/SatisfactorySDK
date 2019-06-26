@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Window_ContentBackground_DarkMode_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

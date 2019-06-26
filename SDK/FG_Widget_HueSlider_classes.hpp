@@ -8,7 +8,7 @@
 
 #include "FG_Widget_HueSlider_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

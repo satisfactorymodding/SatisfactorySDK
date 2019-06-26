@@ -8,7 +8,7 @@
 
 #include "FG_GameAnalyticsModule_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Wall_Conveyor_8x4_02_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

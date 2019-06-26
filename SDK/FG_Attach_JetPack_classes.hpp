@@ -8,7 +8,7 @@
 
 #include "FG_Attach_JetPack_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

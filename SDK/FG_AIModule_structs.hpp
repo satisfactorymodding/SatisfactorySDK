@@ -7,13 +7,13 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_GameplayTags_classes.hpp"
 #include "FG_Engine_classes.hpp"
-#include "FG_NavigationSystem_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_GameplayTasks_classes.hpp"
+#include "FG_GameplayTags_classes.hpp"
+#include "FG_NavigationSystem_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Enums

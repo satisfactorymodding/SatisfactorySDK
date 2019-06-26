@@ -8,7 +8,7 @@
 
 #include "FG_EDragNDropHoverState_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

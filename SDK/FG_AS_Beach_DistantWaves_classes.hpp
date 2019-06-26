@@ -8,7 +8,7 @@
 
 #include "FG_AS_Beach_DistantWaves_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

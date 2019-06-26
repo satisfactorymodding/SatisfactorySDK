@@ -6,7 +6,7 @@
 
 #include "FG_SC_Generators_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

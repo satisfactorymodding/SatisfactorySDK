@@ -8,7 +8,7 @@
 
 #include "FG_Context_FinalTarget_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Map_Filters_Container_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

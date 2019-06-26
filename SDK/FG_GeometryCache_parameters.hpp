@@ -8,7 +8,7 @@
 
 #include "FG_GeometryCache_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_NorthernForest_Wildlife_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

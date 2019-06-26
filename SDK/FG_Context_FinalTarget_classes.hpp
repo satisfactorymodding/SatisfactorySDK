@@ -8,7 +8,7 @@
 
 #include "FG_Context_FinalTarget_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

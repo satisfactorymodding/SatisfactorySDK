@@ -8,7 +8,7 @@
 
 #include "FG_AS_TitanForest_DayNight_Atmos_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

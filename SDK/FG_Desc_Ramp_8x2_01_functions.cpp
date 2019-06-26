@@ -6,7 +6,7 @@
 
 #include "FG_Desc_Ramp_8x2_01_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

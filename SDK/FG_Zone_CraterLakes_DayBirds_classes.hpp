@@ -8,7 +8,7 @@
 
 #include "FG_Zone_CraterLakes_DayBirds_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

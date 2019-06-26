@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Credit_Trademark_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_SC_Towers_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

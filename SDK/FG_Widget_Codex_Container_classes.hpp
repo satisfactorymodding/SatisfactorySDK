@@ -8,14 +8,14 @@
 
 #include "FG_Widget_Codex_Container_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_Codex_Container.Widget_Codex_Container_C
-// 0x01A8 (0x0400 - 0x0258)
+// 0x01B8 (0x0410 - 0x0258)
 class UWidget_Codex_Container_C : public UFGInteractWidget
 {
 public:
@@ -70,6 +70,7 @@ public:
 	unsigned char                                      UnknownData02[0x7];                                       // 0x03D9(0x0007) MISSED OFFSET
 	TArray<class UClass*>                              mEquipment;                                               // 0x03E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UClass*>                              mBuildings;                                               // 0x03F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              mCurrentList;                                             // 0x0400(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

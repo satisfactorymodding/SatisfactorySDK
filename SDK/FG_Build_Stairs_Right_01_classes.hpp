@@ -8,7 +8,7 @@
 
 #include "FG_Build_Stairs_Right_01_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

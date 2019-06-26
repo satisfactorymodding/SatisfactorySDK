@@ -6,7 +6,7 @@
 
 #include "FG_BC_Logistics_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

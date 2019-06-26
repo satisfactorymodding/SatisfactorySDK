@@ -6,7 +6,7 @@
 
 #include "FG_BP_BerryBush_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

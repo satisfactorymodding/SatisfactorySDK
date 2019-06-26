@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSettings_Caves_Small_Rev10_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

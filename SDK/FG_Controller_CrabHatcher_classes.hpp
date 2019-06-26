@@ -8,7 +8,7 @@
 
 #include "FG_Controller_CrabHatcher_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

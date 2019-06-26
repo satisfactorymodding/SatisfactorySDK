@@ -8,7 +8,7 @@
 
 #include "FG_BTT_MoveToTargetPoint_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

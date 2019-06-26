@@ -8,7 +8,7 @@
 
 #include "FG_Widget_BuildMenu_InfoBox_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -36,7 +36,7 @@ public:
 
 
 	ESlateVisibility GetStatsVisibility();
-	void AnimateCostSlots();
+	void AnimateCostslots();
 	void ExecuteUbergraph_Widget_BuildMenu_InfoBox(int EntryPoint);
 };
 

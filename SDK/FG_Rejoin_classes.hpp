@@ -8,7 +8,7 @@
 
 #include "FG_Rejoin_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

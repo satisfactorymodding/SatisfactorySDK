@@ -6,7 +6,7 @@
 
 #include "FG_ResearchRecipe_HardDrive_Repeatable_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

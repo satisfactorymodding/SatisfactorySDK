@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_ConveyorAttachmentSplitterProgrammable_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

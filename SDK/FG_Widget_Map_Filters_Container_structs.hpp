@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_UMG_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

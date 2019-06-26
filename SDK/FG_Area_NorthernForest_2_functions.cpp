@@ -6,7 +6,7 @@
 
 #include "FG_Area_NorthernForest_2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

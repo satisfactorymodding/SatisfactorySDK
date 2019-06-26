@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Plastic_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

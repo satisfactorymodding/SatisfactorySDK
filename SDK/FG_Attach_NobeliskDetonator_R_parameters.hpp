@@ -8,7 +8,7 @@
 
 #include "FG_Attach_NobeliskDetonator_R_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

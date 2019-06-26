@@ -8,7 +8,7 @@
 
 #include "FG_Waterfall_Large_Body_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

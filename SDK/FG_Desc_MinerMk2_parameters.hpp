@@ -8,7 +8,7 @@
 
 #include "FG_Desc_MinerMk2_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

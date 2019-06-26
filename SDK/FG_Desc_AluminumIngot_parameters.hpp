@@ -8,7 +8,7 @@
 
 #include "FG_Desc_AluminumIngot_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-SULF_Analyzed_ADA_2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

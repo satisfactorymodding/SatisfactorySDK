@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Exploration_Fabric_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

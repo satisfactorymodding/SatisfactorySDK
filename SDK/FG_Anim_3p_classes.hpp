@@ -8,7 +8,7 @@
 
 #include "FG_Anim_3p_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

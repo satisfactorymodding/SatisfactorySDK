@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-Crystal1_ADA_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

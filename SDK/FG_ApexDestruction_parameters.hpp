@@ -8,7 +8,7 @@
 
 #include "FG_ApexDestruction_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

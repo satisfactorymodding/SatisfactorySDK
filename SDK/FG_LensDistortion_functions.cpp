@@ -6,7 +6,7 @@
 
 #include "FG_LensDistortion_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

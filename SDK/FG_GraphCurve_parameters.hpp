@@ -8,7 +8,7 @@
 
 #include "FG_GraphCurve_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

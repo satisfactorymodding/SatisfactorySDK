@@ -8,7 +8,7 @@
 
 #include "FG_Attach_JumpingStilts_L_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

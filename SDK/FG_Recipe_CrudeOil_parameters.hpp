@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_CrudeOil_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

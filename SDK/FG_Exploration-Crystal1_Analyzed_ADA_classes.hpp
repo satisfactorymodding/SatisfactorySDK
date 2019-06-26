@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Crystal1_Analyzed_ADA_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

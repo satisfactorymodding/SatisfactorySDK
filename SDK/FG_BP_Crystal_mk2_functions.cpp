@@ -6,7 +6,7 @@
 
 #include "FG_BP_Crystal_mk2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

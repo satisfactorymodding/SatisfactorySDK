@@ -8,7 +8,7 @@
 
 #include "FG_BC_TradingPost_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

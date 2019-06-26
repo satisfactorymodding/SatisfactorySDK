@@ -8,7 +8,7 @@
 
 #include "FG_Waterfall_Huge_Body_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

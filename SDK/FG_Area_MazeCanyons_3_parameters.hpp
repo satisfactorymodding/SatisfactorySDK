@@ -8,7 +8,7 @@
 
 #include "FG_Area_MazeCanyons_3_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

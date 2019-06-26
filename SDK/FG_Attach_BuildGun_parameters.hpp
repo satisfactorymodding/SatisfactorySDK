@@ -8,7 +8,7 @@
 
 #include "FG_Attach_BuildGun_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

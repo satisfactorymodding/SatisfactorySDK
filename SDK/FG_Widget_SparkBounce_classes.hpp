@@ -8,7 +8,7 @@
 
 #include "FG_Widget_SparkBounce_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

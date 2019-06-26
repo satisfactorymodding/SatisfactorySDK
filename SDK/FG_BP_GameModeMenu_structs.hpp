@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_BP_GameModeBase_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

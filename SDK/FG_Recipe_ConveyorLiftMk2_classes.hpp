@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_ConveyorLiftMk2_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

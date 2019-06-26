@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_PowerPoleMk2_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

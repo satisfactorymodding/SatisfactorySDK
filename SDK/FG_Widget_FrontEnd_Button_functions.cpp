@@ -6,7 +6,7 @@
 
 #include "FG_Widget_FrontEnd_Button_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

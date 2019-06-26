@@ -6,7 +6,7 @@
 
 #include "FG_BP_SproutAnim_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

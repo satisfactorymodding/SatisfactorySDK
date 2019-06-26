@@ -8,7 +8,7 @@
 
 #include "FG_BTD_CanMove_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

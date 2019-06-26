@@ -8,7 +8,7 @@
 
 #include "FG_FacialAnimation_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

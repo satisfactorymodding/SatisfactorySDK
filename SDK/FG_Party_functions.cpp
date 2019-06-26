@@ -6,7 +6,7 @@
 
 #include "FG_Party_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

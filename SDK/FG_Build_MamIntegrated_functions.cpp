@@ -6,7 +6,7 @@
 
 #include "FG_Build_MamIntegrated_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

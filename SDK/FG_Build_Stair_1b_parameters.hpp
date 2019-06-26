@@ -8,7 +8,7 @@
 
 #include "FG_Build_Stair_1b_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_AS_Waterfall_10M_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

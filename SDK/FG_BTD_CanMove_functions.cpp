@@ -6,7 +6,7 @@
 
 #include "FG_BTD_CanMove_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

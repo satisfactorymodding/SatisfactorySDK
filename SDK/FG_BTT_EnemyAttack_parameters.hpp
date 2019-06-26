@@ -8,7 +8,7 @@
 
 #include "FG_BTT_EnemyAttack_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

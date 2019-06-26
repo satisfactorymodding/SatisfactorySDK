@@ -6,7 +6,7 @@
 
 #include "FG_BerryAlternatives_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

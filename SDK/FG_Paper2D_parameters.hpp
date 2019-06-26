@@ -8,7 +8,7 @@
 
 #include "FG_Paper2D_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

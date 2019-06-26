@@ -8,7 +8,7 @@
 
 #include "FG_Build_MamIntegrated_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

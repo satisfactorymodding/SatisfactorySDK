@@ -6,7 +6,7 @@
 
 #include "FG_Anim_LandingPad_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

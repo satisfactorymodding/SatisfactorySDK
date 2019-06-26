@@ -6,7 +6,7 @@
 
 #include "FG_Schematic7-1_ADA_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

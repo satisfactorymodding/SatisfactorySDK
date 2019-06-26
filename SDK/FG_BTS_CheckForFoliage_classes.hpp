@@ -8,7 +8,7 @@
 
 #include "FG_BTS_CheckForFoliage_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_Widget_TooltipInventorySlots_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

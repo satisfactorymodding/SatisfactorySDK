@@ -8,7 +8,7 @@
 
 #include "FG_Tutorial_ConveyorBelts_Mail_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

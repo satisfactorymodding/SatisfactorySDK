@@ -8,7 +8,7 @@
 
 #include "FG_BTD_TooCloseToActor_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_Attach_StunSpear_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

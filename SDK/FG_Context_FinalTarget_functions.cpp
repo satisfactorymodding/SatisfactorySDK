@@ -6,7 +6,7 @@
 
 #include "FG_Context_FinalTarget_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

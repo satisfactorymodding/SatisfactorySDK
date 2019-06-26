@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Cable_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

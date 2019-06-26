@@ -8,7 +8,7 @@
 
 #include "FG_LightPropagationVolumeRuntime_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

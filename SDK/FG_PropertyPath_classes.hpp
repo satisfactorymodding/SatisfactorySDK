@@ -8,7 +8,7 @@
 
 #include "FG_PropertyPath_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

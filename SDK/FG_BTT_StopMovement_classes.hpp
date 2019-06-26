@@ -8,7 +8,7 @@
 
 #include "FG_BTT_StopMovement_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

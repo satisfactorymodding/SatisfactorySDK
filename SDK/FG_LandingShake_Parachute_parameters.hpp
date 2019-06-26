@@ -8,7 +8,7 @@
 
 #include "FG_LandingShake_Parachute_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

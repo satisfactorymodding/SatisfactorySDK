@@ -8,7 +8,7 @@
 
 #include "FG_BP_DoTWorldBottom_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

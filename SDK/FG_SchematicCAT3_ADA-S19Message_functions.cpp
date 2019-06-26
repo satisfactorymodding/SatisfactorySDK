@@ -6,7 +6,7 @@
 
 #include "FG_SchematicCAT3_ADA-S19Message_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

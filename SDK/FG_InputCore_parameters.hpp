@@ -8,7 +8,7 @@
 
 #include "FG_InputCore_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

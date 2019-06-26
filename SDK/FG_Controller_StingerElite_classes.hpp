@@ -8,7 +8,7 @@
 
 #include "FG_Controller_StingerElite_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

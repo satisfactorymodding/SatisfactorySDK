@@ -6,7 +6,7 @@
 
 #include "FG_Build_WalkwayStraight_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

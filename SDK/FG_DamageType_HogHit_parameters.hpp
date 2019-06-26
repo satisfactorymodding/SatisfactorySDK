@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_HogHit_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

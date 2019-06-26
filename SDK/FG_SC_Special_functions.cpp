@@ -6,7 +6,7 @@
 
 #include "FG_SC_Special_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Qos_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

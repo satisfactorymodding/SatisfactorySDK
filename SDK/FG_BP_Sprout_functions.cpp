@@ -6,7 +6,7 @@
 
 #include "FG_BP_Sprout_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

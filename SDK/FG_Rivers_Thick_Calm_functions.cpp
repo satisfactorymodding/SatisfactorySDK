@@ -6,7 +6,7 @@
 
 #include "FG_Rivers_Thick_Calm_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

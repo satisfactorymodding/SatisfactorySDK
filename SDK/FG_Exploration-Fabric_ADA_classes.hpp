@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Fabric_ADA_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

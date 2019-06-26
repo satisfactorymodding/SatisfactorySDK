@@ -6,7 +6,7 @@
 
 #include "FG_Persistent_Level_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

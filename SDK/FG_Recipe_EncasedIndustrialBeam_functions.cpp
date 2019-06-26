@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_EncasedIndustrialBeam_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

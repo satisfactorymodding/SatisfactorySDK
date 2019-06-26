@@ -6,7 +6,7 @@
 
 #include "FG_Schematic_Exploration_Parachute_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

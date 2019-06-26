@@ -8,7 +8,7 @@
 
 #include "FG_BP_MaterialEffect_Dismantle_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

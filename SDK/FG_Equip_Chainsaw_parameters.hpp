@@ -8,7 +8,7 @@
 
 #include "FG_Equip_Chainsaw_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

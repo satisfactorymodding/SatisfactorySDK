@@ -8,7 +8,7 @@
 
 #include "FG_Desc_LookoutTower_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

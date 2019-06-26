@@ -6,7 +6,7 @@
 
 #include "FG_IntroTutorial_IronOre_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

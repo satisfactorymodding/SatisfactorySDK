@@ -8,7 +8,7 @@
 
 #include "FG_AS_Beach_DistantCrashingWaves_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

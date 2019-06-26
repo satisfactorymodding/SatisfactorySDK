@@ -8,7 +8,7 @@
 
 #include "FG_Desc_ConveyorPoleStackable_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Exploration_ColorGun_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

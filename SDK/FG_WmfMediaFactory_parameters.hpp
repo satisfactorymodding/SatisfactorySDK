@@ -8,7 +8,7 @@
 
 #include "FG_WmfMediaFactory_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

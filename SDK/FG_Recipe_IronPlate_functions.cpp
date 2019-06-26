@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_IronPlate_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

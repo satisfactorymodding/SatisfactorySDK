@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_PowerCrystalShard_4_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

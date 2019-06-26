@@ -6,7 +6,7 @@
 
 #include "FG_DamageType_NobeliskExplosiveImpact_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

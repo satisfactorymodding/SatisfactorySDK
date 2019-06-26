@@ -8,7 +8,7 @@
 
 #include "FG_Paper2D_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

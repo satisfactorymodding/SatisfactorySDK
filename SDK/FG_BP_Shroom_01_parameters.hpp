@@ -8,7 +8,7 @@
 
 #include "FG_BP_Shroom_01_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Shared_NightWilderness_01_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

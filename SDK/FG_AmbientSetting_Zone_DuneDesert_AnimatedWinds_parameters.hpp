@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_DuneDesert_AnimatedWinds_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

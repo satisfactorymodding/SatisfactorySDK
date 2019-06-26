@@ -8,7 +8,7 @@
 
 #include "FG_Attack_MeleeSpitter_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

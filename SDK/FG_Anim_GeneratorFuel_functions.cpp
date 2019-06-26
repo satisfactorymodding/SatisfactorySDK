@@ -6,7 +6,7 @@
 
 #include "FG_Anim_GeneratorFuel_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

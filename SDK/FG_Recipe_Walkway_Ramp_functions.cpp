@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Walkway_Ramp_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

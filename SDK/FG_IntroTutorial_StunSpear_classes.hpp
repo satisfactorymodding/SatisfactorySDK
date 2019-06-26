@@ -8,7 +8,7 @@
 
 #include "FG_IntroTutorial_StunSpear_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

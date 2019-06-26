@@ -8,7 +8,7 @@
 
 #include "FG_AnimationCore_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

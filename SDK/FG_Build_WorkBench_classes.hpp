@@ -8,7 +8,7 @@
 
 #include "FG_Build_WorkBench_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

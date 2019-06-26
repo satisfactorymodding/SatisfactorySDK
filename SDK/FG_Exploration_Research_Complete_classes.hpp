@@ -8,7 +8,7 @@
 
 #include "FG_Exploration_Research_Complete_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

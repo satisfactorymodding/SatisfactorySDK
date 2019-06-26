@@ -12,7 +12,7 @@
 #include "FG_MovieScene_classes.hpp"
 #include "FG_Engine_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Script Structs

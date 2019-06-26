@@ -6,7 +6,7 @@
 
 #include "FG_Desc_HighSpeedWire_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

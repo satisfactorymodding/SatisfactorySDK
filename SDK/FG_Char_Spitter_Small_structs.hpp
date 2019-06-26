@@ -7,10 +7,10 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_Char_Spitter_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_Char_Spitter_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

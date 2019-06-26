@@ -8,7 +8,7 @@
 
 #include "FG_BP_DebrisActor_03_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

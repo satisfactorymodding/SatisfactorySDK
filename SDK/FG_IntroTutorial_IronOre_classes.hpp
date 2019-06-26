@@ -8,7 +8,7 @@
 
 #include "FG_IntroTutorial_IronOre_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Classes

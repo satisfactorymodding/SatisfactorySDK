@@ -6,7 +6,7 @@
 
 #include "FG_RecipeAmountStruct_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

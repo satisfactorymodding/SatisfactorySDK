@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Coal_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -11,7 +11,7 @@
 #include "FG_SlateCore_classes.hpp"
 #include "FG_Inventory_DropArea_States_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

@@ -6,7 +6,7 @@
 
 #include "FG_Zone_WesternDuneForest_Rare_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

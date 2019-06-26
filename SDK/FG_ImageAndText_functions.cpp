@@ -6,7 +6,7 @@
 
 #include "FG_ImageAndText_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions

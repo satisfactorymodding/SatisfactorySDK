@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Mushroom_Analyzed_ADA_classes.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Parameters

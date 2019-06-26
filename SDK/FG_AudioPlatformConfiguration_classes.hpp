@@ -8,7 +8,7 @@
 
 #include "FG_AudioPlatformConfiguration_structs.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 }
 

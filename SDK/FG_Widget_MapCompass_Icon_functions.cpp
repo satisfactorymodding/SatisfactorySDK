@@ -6,7 +6,7 @@
 
 #include "FG_Widget_MapCompass_Icon_parameters.hpp"
 
-namespace SDK
+namespace SDKEXP
 {
 //---------------------------------------------------------------------------
 //Functions
