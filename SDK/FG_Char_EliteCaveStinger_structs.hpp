@@ -7,9 +7,9 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_CoreUObject_classes.hpp"
 #include "FG_Char_Stinger_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
 
 namespace SDKEXP
 {

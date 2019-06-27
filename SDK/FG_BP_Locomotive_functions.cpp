@@ -426,16 +426,16 @@ void ABP_Locomotive_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_I
 }
 
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadZero_K2Node_InputKeyEvent_2
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_6
 // ()
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Locomotive_C::InpActEvt_NumPadZero_K2Node_InputKeyEvent_2(const struct FKey& Key)
+void ABP_Locomotive_C::InpActEvt_NumPadOne_K2Node_InputKeyEvent_6(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadZero_K2Node_InputKeyEvent_2");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_6");
 
-	ABP_Locomotive_C_InpActEvt_NumPadZero_K2Node_InputKeyEvent_2_Params params;
+	ABP_Locomotive_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_6_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -446,16 +446,96 @@ void ABP_Locomotive_C::InpActEvt_NumPadZero_K2Node_InputKeyEvent_2(const struct 
 }
 
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_1
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5
 // ()
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Locomotive_C::InpActEvt_NumPadOne_K2Node_InputKeyEvent_1(const struct FKey& Key)
+void ABP_Locomotive_C::InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_1");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5");
 
-	ABP_Locomotive_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_1_Params params;
+	ABP_Locomotive_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4
+// ()
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_Locomotive_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4");
+
+	ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3
+// ()
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_Locomotive_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3");
+
+	ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadThree_K2Node_InputKeyEvent_2
+// ()
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_Locomotive_C::InpActEvt_NumPadThree_K2Node_InputKeyEvent_2(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadThree_K2Node_InputKeyEvent_2");
+
+	ABP_Locomotive_C_InpActEvt_NumPadThree_K2Node_InputKeyEvent_2_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadFour_K2Node_InputKeyEvent_1
+// ()
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_Locomotive_C::InpActEvt_NumPadFour_K2Node_InputKeyEvent_1(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadFour_K2Node_InputKeyEvent_1");
+
+	ABP_Locomotive_C_InpActEvt_NumPadFour_K2Node_InputKeyEvent_1_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;

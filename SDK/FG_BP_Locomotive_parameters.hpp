@@ -134,14 +134,38 @@ struct ABP_Locomotive_C_InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadZero_K2Node_InputKeyEvent_2
-struct ABP_Locomotive_C_InpActEvt_NumPadZero_K2Node_InputKeyEvent_2_Params
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_6
+struct ABP_Locomotive_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_6_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_1
-struct ABP_Locomotive_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_1_Params
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5
+struct ABP_Locomotive_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4
+struct ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3
+struct ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadThree_K2Node_InputKeyEvent_2
+struct ABP_Locomotive_C_InpActEvt_NumPadThree_K2Node_InputKeyEvent_2_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadFour_K2Node_InputKeyEvent_1
+struct ABP_Locomotive_C_InpActEvt_NumPadFour_K2Node_InputKeyEvent_1_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };

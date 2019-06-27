@@ -6151,6 +6151,11 @@ struct AFGFreightWagon_OnItemAddedToFreight_Params
 	int                                                numAdded;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function FactoryGame.FGFreightWagon.InitializeInventoryComponent
+struct AFGFreightWagon_InitializeInventoryComponent_Params
+{
+};
+
 // Function FactoryGame.FGFreightWagon.GetFreightInventoryFilledPercent
 struct AFGFreightWagon_GetFreightInventoryFilledPercent_Params
 {
@@ -12491,6 +12496,12 @@ struct AFGTrain_GetTrackGraphID_Params
 struct AFGTrain_GetTimeTable_Params
 {
 	class AFGRailroadTimeTable*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.GetSelfDrivingError
+struct AFGTrain_GetSelfDrivingError_Params
+{
+	ESelfDrivingLocomotiveError                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGTrain.GetMaxAirBrakeDeceleration

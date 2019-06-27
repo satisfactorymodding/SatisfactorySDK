@@ -15,7 +15,7 @@ namespace SDKEXP
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_FreightWagonAnim_Child.BP_FreightWagonAnim_Child_C
-// 0x0000 (0x2181 - 0x2181)
+// 0x0000 (0x28AB - 0x28AB)
 class UBP_FreightWagonAnim_Child_C : public UBP_LocomotiveAnim_C
 {
 public:

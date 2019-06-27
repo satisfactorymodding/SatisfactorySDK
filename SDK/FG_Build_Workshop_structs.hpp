@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_CoreUObject_classes.hpp"
 #include "FG_FactoryGame_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
 
 namespace SDKEXP
 {

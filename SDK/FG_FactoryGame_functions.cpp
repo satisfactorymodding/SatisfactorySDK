@@ -20555,6 +20555,23 @@ void AFGFreightWagon::OnItemAddedToFreight(class UClass* ItemClass, int numAdded
 }
 
 
+// Function FactoryGame.FGFreightWagon.InitializeInventoryComponent
+// ()
+
+void AFGFreightWagon::InitializeInventoryComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGFreightWagon.InitializeInventoryComponent");
+
+	AFGFreightWagon_InitializeInventoryComponent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function FactoryGame.FGFreightWagon.GetFreightInventoryFilledPercent
 // ()
 // Parameters:
@@ -41722,6 +41739,27 @@ class AFGRailroadTimeTable* AFGTrain::GetTimeTable()
 	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGTrain.GetTimeTable");
 
 	AFGTrain_GetTimeTable_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGTrain.GetSelfDrivingError
+// ()
+// Parameters:
+// ESelfDrivingLocomotiveError    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESelfDrivingLocomotiveError AFGTrain::GetSelfDrivingError()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGTrain.GetSelfDrivingError");
+
+	AFGTrain_GetSelfDrivingError_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -15,7 +15,7 @@ namespace SDKEXP
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_LocomotiveAnim.BP_LocomotiveAnim_C
-// 0x1E21 (0x2181 - 0x0360)
+// 0x254B (0x28AB - 0x0360)
 class UBP_LocomotiveAnim_C : public UAnimInstance
 {
 public:
@@ -70,47 +70,76 @@ public:
 	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_2B1FBD304C0F4F99BF9B5C826E340E65;// 0x1BB8(0x0040)
 	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_0A13A22F491546644F3E4CA6C2D90F81;// 0x1BF8(0x00A0)
 	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_A535BFC64C9615BCC4845C8BC0489F54;// 0x1C98(0x0040)
-	struct FAnimNode_SequenceEvaluator                 AnimGraphNode_SequenceEvaluator_62B9C5394082B1BE434744882451A60A;// 0x1CD8(0x0070)
-	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_3AB9CBE74A9565EBACDD1E88998955D9;// 0x1D48(0x0040)
-	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_4D8936274E6358BC1EB6049C819C5CD0;// 0x1D88(0x00A0)
-	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_E820481344213137B4CA21A592FB8518;// 0x1E28(0x0040)
-	struct FAnimNode_StateMachine                      AnimGraphNode_StateMachine_738A46C14C9EAE8BD01590BBD76A84D6;// 0x1E68(0x00E0)
-	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_AA9A8BDE49F4EE24A1714CB5522199DC;// 0x1F48(0x0040)
-	struct FAnimNode_StateMachine                      AnimGraphNode_StateMachine_F8FFA57540C56A3068ADB4886772D950;// 0x1F88(0x00E0)
-	struct FRotator                                    mFrontBogieRotation;                                      // 0x2068(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    mBackBogieRotation;                                       // 0x2074(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    mFrontConnectorRotation;                                  // 0x2080(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    mBackConnectorRotation;                                   // 0x208C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     mFrontConnectorTranslation;                               // 0x2098(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     mBackConnectorTranslation;                                // 0x20A4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mBrakeForce;                                              // 0x20B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mDeltaTime;                                               // 0x20B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 mBrakeCurve;                                              // 0x20B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mForwardSpeed;                                            // 0x20C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mAirBrakeForce;                                           // 0x20C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mHandBreak;                                               // 0x20C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    mTrackCurvature;                                          // 0x20CC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mThrottle;                                                // 0x20D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               mIsMoving;                                                // 0x20DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x20DD(0x0003) MISSED OFFSET
-	float                                              mTractiveForce;                                           // 0x20E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x20E4(0x0004) MISSED OFFSET
-	class UFGLocomotiveMovementComponent*              mLocomotiveMovement;                                      // 0x20E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    mHandBrake_01_VFX;                                        // 0x20F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    mFrontBrake_01_VFX;                                       // 0x20F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    mFrontBrake_02_VFX;                                       // 0x2100(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    mBackBrake_01_VFX;                                        // 0x2108(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    mBackBrake_02_VFX;                                        // 0x2110(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	TArray<class UParticleSystemComponent*>            mBrakeVfxArray;                                           // 0x2118(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FName>                               mBrakeSocketNameArray;                                    // 0x2128(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UFGRailroadVehicleMovementComponent*         mRailroadMovement;                                        // 0x2138(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	TArray<class UParticleSystemComponent*>            mSteamVfxArray;                                           // 0x2140(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FName>                               mSteamSocketNameArray;                                    // 0x2150(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UParticleSystemComponent*                    mFrontSteam_01_VFX;                                       // 0x2160(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    mFrontSteam_02_VFX;                                       // 0x2168(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    mBackSteam_01_VFX;                                        // 0x2170(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    mBackSteam_02_VFX;                                        // 0x2178(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	bool                                               mAG_ThrottleZero;                                         // 0x2180(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_401B752A4C10534556942D8CAF38A693;// 0x1CD8(0x00A0)
+	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_3AB9CBE74A9565EBACDD1E88998955D9;// 0x1D78(0x0040)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_4D8936274E6358BC1EB6049C819C5CD0;// 0x1DB8(0x00A0)
+	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_E820481344213137B4CA21A592FB8518;// 0x1E58(0x0040)
+	struct FAnimNode_StateMachine                      AnimGraphNode_StateMachine_738A46C14C9EAE8BD01590BBD76A84D6;// 0x1E98(0x00E0)
+	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_AA9A8BDE49F4EE24A1714CB5522199DC;// 0x1F78(0x0040)
+	struct FAnimNode_StateMachine                      AnimGraphNode_StateMachine_F8FFA57540C56A3068ADB4886772D950;// 0x1FB8(0x00E0)
+	struct FAnimNode_TransitionResult                  AnimGraphNode_TransitionResult_817F24634D3F037EFD80DFADEBB9D60A;// 0x2098(0x0048)
+	struct FAnimNode_TransitionResult                  AnimGraphNode_TransitionResult_F47003B84F97C965A1A437BC1047AD7F;// 0x20E0(0x0048)
+	struct FAnimNode_TransitionResult                  AnimGraphNode_TransitionResult_74021C9A4039AE85678B0DA767CD2FE5;// 0x2128(0x0048)
+	struct FAnimNode_TransitionResult                  AnimGraphNode_TransitionResult_C0B4C6A24DC35EED78E2438BFC01E3CB;// 0x2170(0x0048)
+	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_17FA3E9E45625C8BE20A75BF69F22684;// 0x21B8(0x0048)
+	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_6D04868344FE5452018228980D34C8B5;// 0x2200(0x0040)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_AB6E7290461C76E4DAE5F98508F4DCB2;// 0x2240(0x00A0)
+	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_607654A0473A1689F0504EA1D5B504AD;// 0x22E0(0x0040)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_6EBF262D441D131EC5F72A9045B9282E;// 0x2320(0x00A0)
+	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_E683940246D038DB7A9C9A89F837DD6F;// 0x23C0(0x0040)
+	struct FAnimNode_SequenceEvaluator                 AnimGraphNode_SequenceEvaluator_6EAD126144D8E7EE018D72A4A05BE763;// 0x2400(0x0070)
+	struct FAnimNode_StateResult                       AnimGraphNode_StateResult_09384E2C410798E542A004A94163BF3A;// 0x2470(0x0040)
+	struct FAnimNode_StateMachine                      AnimGraphNode_StateMachine_0E70334948BE9DD4994B7CA241B7BE76;// 0x24B0(0x00E0)
+	struct FAnimNode_SaveCachedPose                    AnimGraphNode_SaveCachedPose_51ABB0664F7077D2D7205EA5023D2A92;// 0x2590(0x00D8)
+	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_77A8D343494B806B2B4FEC888F806E7D;// 0x2668(0x00D0)
+	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_B0BD2FF0425C84B2A5D3EB9912B4178C;// 0x2738(0x0048)
+	struct FRotator                                    mFrontBogieRotation;                                      // 0x2780(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    mBackBogieRotation;                                       // 0x278C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    mFrontConnectorRotation;                                  // 0x2798(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    mBackConnectorRotation;                                   // 0x27A4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     mFrontConnectorTranslation;                               // 0x27B0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     mBackConnectorTranslation;                                // 0x27BC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mBrakeForce;                                              // 0x27C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mDeltaTime;                                               // 0x27CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 mBrakeCurve;                                              // 0x27D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mForwardSpeed;                                            // 0x27D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mAirBrakeForce;                                           // 0x27DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mHandBreak;                                               // 0x27E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    mTrackCurvature;                                          // 0x27E4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mThrottle;                                                // 0x27F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mIsMoving;                                                // 0x27F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x27F5(0x0003) MISSED OFFSET
+	float                                              mTractiveForce;                                           // 0x27F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x27FC(0x0004) MISSED OFFSET
+	class UFGLocomotiveMovementComponent*              mLocomotiveMovement;                                      // 0x2800(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    mHandBrake_01_VFX;                                        // 0x2808(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    mFrontBrake_01_VFX;                                       // 0x2810(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    mFrontBrake_02_VFX;                                       // 0x2818(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    mBackBrake_01_VFX;                                        // 0x2820(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    mBackBrake_02_VFX;                                        // 0x2828(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TArray<class UParticleSystemComponent*>            mBrakeVfxArray;                                           // 0x2830(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               mBrakeSocketNameArray;                                    // 0x2840(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UFGRailroadVehicleMovementComponent*         mRailroadMovement;                                        // 0x2850(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TArray<class UParticleSystemComponent*>            mSteamVfxArray;                                           // 0x2858(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               mSteamSocketNameArray;                                    // 0x2868(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UParticleSystemComponent*                    mFrontSteam_01_VFX;                                       // 0x2878(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    mFrontSteam_02_VFX;                                       // 0x2880(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    mBackSteam_01_VFX;                                        // 0x2888(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    mBackSteam_02_VFX;                                        // 0x2890(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               mAG_ThrottleZero;                                         // 0x2898(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mHasPower;                                                // 0x2899(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mIsLocomotive;                                            // 0x289A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_ThrottlePositive;                                     // 0x289B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_StartToRunningTransition;                             // 0x289C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x289D(0x0003) MISSED OFFSET
+	float                                              mAG_BrakePlayRate;                                        // 0x28A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_HandBrakeTransition_01;                               // 0x28A4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_HandBrakeTransition_02;                               // 0x28A5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_BrakeForcePositive;                                   // 0x28A6(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_BrakeToRunningTransition;                             // 0x28A7(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_HandBrakeReset_01;                                    // 0x28A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_HandBrakeReset_02;                                    // 0x28A9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mAG_HandBrakeStop;                                        // 0x28AA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -120,17 +149,6 @@ public:
 
 
 	void CalculateAnimGraphValues();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_529397FC4A88F612A00A378E05AEABE0();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_6110D25D4D15AEE3B203789951C41D41();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_F6B8D48A4D7D52237453198643EFAE5D();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_690F4FBF4BB0B2081030DB809CFCF8DF();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_9DB4B4CC4013628B6AD1419F67D35596();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_6366E78742771D5FBAC647B7F85D7292();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_C694F07F45EC38B3E8C5BB973D04A73D();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_CB4CC1BE4C618CD6146BE080CC7C5387();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_SequencePlayer_63F8D574438A51C0172CCE8F965909CB();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_3507BAB74535EAE4A4B81EA2BB5ACBD4();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_LocomotiveAnim_AnimGraphNode_TransitionResult_C862F8F84B8DF9675A2148AB7350EE69();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void AnimNotify_EnterHandBrake_01();
 	void AnimNotify_KillHandBrake_01();

@@ -2170,16 +2170,16 @@ public:
 	unsigned char                                      UnknownData01[0x6];                                       // 0x06A2(0x0006) MISSED OFFSET
 	class USkeletalMeshComponent*                      mMagicBoxSkelMeshComponent;                               // 0x06A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UStaticMeshComponent*                        mCargoMeshComponent;                                      // 0x06B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGInventoryComponent*                       mInventory;                                               // 0x06B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x06C0(0x0008) MISSED OFFSET
-	bool                                               mIsFullUnload;                                            // 0x06C8(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               mIsFullLoad;                                              // 0x06C9(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x06CA(0x0002) MISSED OFFSET
-	float                                              mTimeToCompleteLoad;                                      // 0x06CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mTimeToSwapLoadVisibility;                                // 0x06D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mTimeToCompleteUnload;                                    // 0x06D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mTimeToSwapUnloadVisibility;                              // 0x06D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x14];                                      // 0x06DC(0x0014) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x8];                                       // 0x06B8(0x0008) MISSED OFFSET
+	bool                                               mIsFullUnload;                                            // 0x06C0(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	bool                                               mIsFullLoad;                                              // 0x06C1(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x06C2(0x0002) MISSED OFFSET
+	float                                              mTimeToCompleteLoad;                                      // 0x06C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mTimeToSwapLoadVisibility;                                // 0x06C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mTimeToCompleteUnload;                                    // 0x06CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mTimeToSwapUnloadVisibility;                              // 0x06D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x14];                                      // 0x06D4(0x0014) MISSED OFFSET
+	class UFGInventoryComponent*                       mInventory;                                               // 0x06E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, SaveGame, IsPlainOldData)
 	unsigned char                                      mHasDockedActor : 1;                                      // 0x06F0(0x0001) (SaveGame)
 	bool                                               mIsInLoadMode;                                            // 0x06F1(0x0001) (Net, ZeroConstructor, SaveGame, IsPlainOldData)
 	bool                                               mIsLoadUnloading;                                         // 0x06F2(0x0001) (Net, ZeroConstructor, SaveGame, IsPlainOldData)
@@ -5808,7 +5808,7 @@ class AFGRailroadVehicle : public AFGVehicle
 public:
 	class AFGTrain*                                    mTrain;                                                   // 0x04D8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 	float                                              mLength;                                                  // 0x04E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               mIsDockedAtPlatform;                                      // 0x04E4(0x0001) (ZeroConstructor, SaveGame, IsPlainOldData)
+	bool                                               mIsDockedAtPlatform;                                      // 0x04E4(0x0001) (Net, ZeroConstructor, SaveGame, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x04E5(0x0003) MISSED OFFSET
 	TWeakObjectPtr<class AFGRailroadVehicle>           mCoupledVehicles[0x2];                                    // 0x04E8(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               mIsOrientationReversed;                                   // 0x04F8(0x0001) (ZeroConstructor, SaveGame, IsPlainOldData)
@@ -5854,6 +5854,7 @@ public:
 
 	void OnItemRemovedFromFreight(class UClass* ItemClass, int numRemoved);
 	void OnItemAddedToFreight(class UClass* ItemClass, int numAdded);
+	void InitializeInventoryComponent();
 	float GetFreightInventoryFilledPercent();
 	class UFGInventoryComponent* GetFreightInventory();
 };
@@ -7205,7 +7206,7 @@ public:
 
 
 // Class FactoryGame.FGLocomotive
-// 0x0090 (0x05A0 - 0x0510)
+// 0x0080 (0x0590 - 0x0510)
 class AFGLocomotive : public AFGRailroadVehicle
 {
 public:
@@ -7216,8 +7217,6 @@ public:
 	struct FTransform                                  mReplicatedMovementTransform;                             // 0x0530(0x0030) (Net, IsPlainOldData)
 	class UFGLocomotiveMovementComponent*              mVehicleMovement;                                         // 0x0560(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x28];                                      // 0x0568(0x0028) MISSED OFFSET
-	ESelfDrivingLocomotiveError                        mSelfDrivingError;                                        // 0x0590(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xF];                                       // 0x0591(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9040,7 +9039,7 @@ public:
 
 
 // Class FactoryGame.FGRailroadSubsystem
-// 0x00B0 (0x03D8 - 0x0328)
+// 0x00C0 (0x03E8 - 0x0328)
 class AFGRailroadSubsystem : public AFGSubsystem
 {
 public:
@@ -9049,12 +9048,12 @@ public:
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0334(0x0004) MISSED OFFSET
 	class UClass*                                      mSwitchControlClass;                                      // 0x0338(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UClass*                                      mVehicleSoundComponentClass;                              // 0x0340(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0348(0x0008) MISSED OFFSET
-	TArray<class FString>                              mStationNames;                                            // 0x0350(0x0010) (ZeroConstructor)
-	TMap<int, struct FTrackGraph>                      mTrackGraphs;                                             // 0x0360(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x03B0(0x0008) MISSED OFFSET
-	TArray<class AFGTrainStationIdentifier*>           mTrainStationIdentifiers;                                 // 0x03B8(0x0010) (Net, ZeroConstructor, SaveGame)
-	TArray<class AFGTrain*>                            mTrains;                                                  // 0x03C8(0x0010) (Net, ZeroConstructor, SaveGame)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x0348(0x0018) MISSED OFFSET
+	TArray<class FString>                              mStationNames;                                            // 0x0360(0x0010) (ZeroConstructor)
+	TMap<int, struct FTrackGraph>                      mTrackGraphs;                                             // 0x0370(0x0050) (ZeroConstructor)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x03C0(0x0008) MISSED OFFSET
+	TArray<class AFGTrainStationIdentifier*>           mTrainStationIdentifiers;                                 // 0x03C8(0x0010) (Net, ZeroConstructor, SaveGame)
+	TArray<class AFGTrain*>                            mTrains;                                                  // 0x03D8(0x0010) (Net, ZeroConstructor, SaveGame)
 
 	static UClass* StaticClass()
 	{
@@ -11044,21 +11043,23 @@ public:
 
 
 // Class FactoryGame.FGTrain
-// 0x0068 (0x0390 - 0x0328)
+// 0x00A8 (0x03D0 - 0x0328)
 class AFGTrain : public AInfo
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
-	struct FText                                       mTrainName;                                               // 0x0330(0x0028) (Net)
-	int                                                TrackGraphID;                                             // 0x0348(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x034C(0x0004) MISSED OFFSET
-	class AFGRailroadVehicle*                          FirstVehicle;                                             // 0x0350(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
-	class AFGRailroadVehicle*                          LastVehicle;                                              // 0x0358(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
-	class AFGLocomotive*                               MultipleUnitMaster;                                       // 0x0360(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               mIsSelfDrivingEnabled;                                    // 0x0368(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0369(0x0007) MISSED OFFSET
-	class AFGRailroadTimeTable*                        TimeTable;                                                // 0x0370(0x0008) (Net, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x18];                                      // 0x0378(0x0018) MISSED OFFSET
+	struct FTrainSimulationData                        mSimulationData;                                          // 0x0330(0x0050)
+	struct FText                                       mTrainName;                                               // 0x0380(0x0028) (Net)
+	int                                                TrackGraphID;                                             // 0x0398(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x039C(0x0004) MISSED OFFSET
+	class AFGRailroadVehicle*                          FirstVehicle;                                             // 0x03A0(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	class AFGRailroadVehicle*                          LastVehicle;                                              // 0x03A8(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	class AFGLocomotive*                               MultipleUnitMaster;                                       // 0x03B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               mIsSelfDrivingEnabled;                                    // 0x03B8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	ESelfDrivingLocomotiveError                        mSelfDrivingError;                                        // 0x03B9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x03BA(0x0006) MISSED OFFSET
+	class AFGRailroadTimeTable*                        TimeTable;                                                // 0x03C0(0x0008) (Net, ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x03C8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -11072,6 +11073,7 @@ public:
 	struct FText GetTrainName();
 	int GetTrackGraphID();
 	class AFGRailroadTimeTable* GetTimeTable();
+	ESelfDrivingLocomotiveError GetSelfDrivingError();
 	float GetMaxAirBrakeDeceleration();
 	class AFGRailroadVehicle* GetLastVehicle();
 	class AFGRailroadVehicle* GetFirstVehicle();

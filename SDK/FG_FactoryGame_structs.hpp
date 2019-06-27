@@ -7,22 +7,22 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_UMG_classes.hpp"
-#include "FG_CoreUObject_classes.hpp"
-#include "FG_PhysXVehicles_classes.hpp"
-#include "FG_Engine_classes.hpp"
-#include "FG_ApexDestruction_classes.hpp"
 #include "FG_GameplayTasks_classes.hpp"
 #include "FG_AIModule_classes.hpp"
-#include "FG_SlateCore_classes.hpp"
-#include "FG_InputCore_classes.hpp"
-#include "FG_Slate_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
+#include "FG_Engine_classes.hpp"
 #include "FG_NavigationSystem_classes.hpp"
+#include "FG_UMG_classes.hpp"
+#include "FG_SlateCore_classes.hpp"
+#include "FG_Slate_classes.hpp"
+#include "FG_ApexDestruction_classes.hpp"
+#include "FG_InputCore_classes.hpp"
 #include "FG_OnlineSubsystemUtils_classes.hpp"
 #include "FG_ReplicationGraph_classes.hpp"
 #include "FG_AssetRegistry_classes.hpp"
 #include "FG_SignificanceManager_classes.hpp"
 #include "FG_AkAudio_classes.hpp"
+#include "FG_PhysXVehicles_classes.hpp"
 
 namespace SDKEXP
 {
@@ -394,19 +394,6 @@ enum class EResourceForm : uint8_t
 };
 
 
-// Enum FactoryGame.ESelfDrivingLocomotiveError
-enum class ESelfDrivingLocomotiveError : uint8_t
-{
-	SDLE_NoError                   = 0,
-	SDLE_NoPower                   = 1,
-	SDLE_NoTimeTable               = 2,
-	SDLE_InvalidNextStop           = 3,
-	SDLE_InvalidLocomotivePlacement = 4,
-	SDLE_NoPath                    = 5,
-	SDLE_MAX                       = 6
-};
-
-
 // Enum FactoryGame.EMultipleUnitControl
 enum class EMultipleUnitControl : uint8_t
 {
@@ -556,6 +543,19 @@ enum class EHorizontalSignTextAlignment : uint8_t
 	EHSTA_Center                   = 1,
 	EHSTA_Right                    = 2,
 	EHSTA_MAX                      = 3
+};
+
+
+// Enum FactoryGame.ESelfDrivingLocomotiveError
+enum class ESelfDrivingLocomotiveError : uint8_t
+{
+	SDLE_NoError                   = 0,
+	SDLE_NoPower                   = 1,
+	SDLE_NoTimeTable               = 2,
+	SDLE_InvalidNextStop           = 3,
+	SDLE_InvalidLocomotivePlacement = 4,
+	SDLE_NoPath                    = 5,
+	SDLE_MAX                       = 6
 };
 
 
@@ -1596,6 +1596,17 @@ struct FMaterialAndSlotName
 {
 	struct FName                                       SlotName;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UMaterialInterface*                          Material;                                                 // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct FactoryGame.TrainSimulationData
+// 0x0050
+struct FTrainSimulationData
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	TArray<class AFGRailroadVehicle*>                  SimulatedVehicles;                                        // 0x0008(0x0010) (ZeroConstructor)
+	TArray<class UFGRailroadVehicleMovementComponent*> SimulatedMovements;                                       // 0x0018(0x0010) (ExportObject, ZeroConstructor)
+	class UFGLocomotiveMovementComponent*              MasterMovement;                                           // 0x0028(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0030(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.TutorialData

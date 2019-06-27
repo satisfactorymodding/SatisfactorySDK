@@ -29,10 +29,18 @@ public:
 	}
 
 
-	void OnStartedMoving();
+	void mSpeedKmH(float* Speed);
 	void OnStoppedMoving();
-	void ReceiveBeginPlay();
+	void OnStartedMoving();
 	void UpdateRTPCs();
+	void OnDynamicBrakesApplied();
+	void OnAirBrakesApplied();
+	void OnAirBrakesReleased();
+	void OnDynamicBrakesReleased();
+	void OnThrottleReleased();
+	void OnThrottleApplied();
+	void ReceiveBeginPlay();
+	void OnStoppedMovingRelay();
 	void ExecuteUbergraph_BP_RailroadVehicleSoundComponent(int EntryPoint);
 };
 
