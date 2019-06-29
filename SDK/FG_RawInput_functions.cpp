@@ -6,7 +6,7 @@
 
 #include "FG_RawInput_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

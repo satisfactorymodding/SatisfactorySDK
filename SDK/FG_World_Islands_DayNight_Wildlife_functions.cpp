@@ -6,7 +6,7 @@
 
 #include "FG_World_Islands_DayNight_Wildlife_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

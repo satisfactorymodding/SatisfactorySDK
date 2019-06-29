@@ -8,7 +8,7 @@
 
 #include "FG_Holo_Locomotive_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_BC_Foundations_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

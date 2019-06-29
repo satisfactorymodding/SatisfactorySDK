@@ -8,7 +8,7 @@
 
 #include "FG_BP_WormAnim_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_BP_GasPillar_01_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

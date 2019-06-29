@@ -8,7 +8,7 @@
 
 #include "FG_ImageAndText_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

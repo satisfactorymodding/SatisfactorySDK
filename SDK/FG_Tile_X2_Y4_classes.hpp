@@ -8,7 +8,7 @@
 
 #include "FG_Tile_X2_Y4_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

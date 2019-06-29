@@ -8,7 +8,7 @@
 
 #include "FG_Widget_TradingPost_ShipAwayFeedback_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -43,7 +43,7 @@ public:
 
 
 	ESlateVisibility GetProgressBarVisibility();
-	float GetProgressBarPercent();
+	float GetProgressbarPercent();
 	struct FText GetSchematicTitle();
 	struct FSlateBrush GetScematicIcon();
 	struct FText GetShipTimerText();

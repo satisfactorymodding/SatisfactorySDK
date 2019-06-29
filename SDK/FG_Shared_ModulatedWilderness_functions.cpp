@@ -6,7 +6,7 @@
 
 #include "FG_Shared_ModulatedWilderness_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -12,7 +12,7 @@
 #include "FG_SlateCore_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

@@ -12,7 +12,7 @@
 #include "FG_InputCore_classes.hpp"
 #include "FG_KeyBindData_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

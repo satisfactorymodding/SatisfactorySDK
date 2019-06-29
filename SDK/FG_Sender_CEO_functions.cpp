@@ -6,7 +6,7 @@
 
 #include "FG_Sender_CEO_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

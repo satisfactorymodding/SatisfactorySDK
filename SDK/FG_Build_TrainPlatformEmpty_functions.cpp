@@ -6,7 +6,7 @@
 
 #include "FG_Build_TrainPlatformEmpty_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

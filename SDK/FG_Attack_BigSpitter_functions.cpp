@@ -6,7 +6,7 @@
 
 #include "FG_Attack_BigSpitter_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

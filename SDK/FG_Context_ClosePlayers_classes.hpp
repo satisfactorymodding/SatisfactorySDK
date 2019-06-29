@@ -8,7 +8,7 @@
 
 #include "FG_Context_ClosePlayers_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

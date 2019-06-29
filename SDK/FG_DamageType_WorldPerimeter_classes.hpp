@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_WorldPerimeter_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_BerryAlternatives_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

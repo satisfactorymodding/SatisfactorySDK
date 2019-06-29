@@ -8,7 +8,7 @@
 
 #include "FG_Build_Ramp_8x4_01_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_BTT_FollowTrackPath_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -62,11 +62,6 @@ struct UBTT_FollowTrackPath_C_FinishStopping_Params
 
 // Function BTT_FollowTrackPath.BTT_FollowTrackPath_C.StopAllMovement
 struct UBTT_FollowTrackPath_C_StopAllMovement_Params
-{
-};
-
-// Function BTT_FollowTrackPath.BTT_FollowTrackPath_C.FinishAborting
-struct UBTT_FollowTrackPath_C_FinishAborting_Params
 {
 };
 

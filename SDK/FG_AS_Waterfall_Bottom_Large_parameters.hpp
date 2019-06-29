@@ -8,7 +8,7 @@
 
 #include "FG_AS_Waterfall_Bottom_Large_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

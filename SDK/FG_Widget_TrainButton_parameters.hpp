@@ -8,7 +8,7 @@
 
 #include "FG_Widget_TrainButton_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -28,6 +28,31 @@ struct UWidget_TrainButton_C_PreConstruct_Params
 
 // Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 struct UWidget_TrainButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_TrainButton.Widget_TrainButton_C.Construct
+struct UWidget_TrainButton_C_Construct_Params
+{
+};
+
+// Function Widget_TrainButton.Widget_TrainButton_C.CheckNextStop
+struct UWidget_TrainButton_C_CheckNextStop_Params
+{
+};
+
+// Function Widget_TrainButton.Widget_TrainButton_C.Destruct
+struct UWidget_TrainButton_C_Destruct_Params
+{
+};
+
+// Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+struct UWidget_TrainButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
+struct UWidget_TrainButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature_Params
 {
 };
 

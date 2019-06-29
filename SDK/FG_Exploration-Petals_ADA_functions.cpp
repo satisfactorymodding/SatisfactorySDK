@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-Petals_ADA_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

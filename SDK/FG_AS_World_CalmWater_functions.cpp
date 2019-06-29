@@ -6,7 +6,7 @@
 
 #include "FG_AS_World_CalmWater_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

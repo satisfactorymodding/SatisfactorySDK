@@ -6,7 +6,7 @@
 
 #include "FG_SchematicQUARTZ1_ADA_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

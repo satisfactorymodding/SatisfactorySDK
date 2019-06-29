@@ -8,7 +8,7 @@
 
 #include "FG_Char_Hog_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

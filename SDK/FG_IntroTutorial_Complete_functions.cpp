@@ -6,7 +6,7 @@
 
 #include "FG_IntroTutorial_Complete_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

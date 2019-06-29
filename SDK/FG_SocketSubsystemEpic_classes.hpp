@@ -8,7 +8,7 @@
 
 #include "FG_SocketSubsystemEpic_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

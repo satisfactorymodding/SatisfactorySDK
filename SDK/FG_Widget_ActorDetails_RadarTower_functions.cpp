@@ -6,7 +6,7 @@
 
 #include "FG_Widget_ActorDetails_RadarTower_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

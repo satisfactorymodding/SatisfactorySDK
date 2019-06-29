@@ -6,7 +6,7 @@
 
 #include "FG_BP_GamePhaseManager_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

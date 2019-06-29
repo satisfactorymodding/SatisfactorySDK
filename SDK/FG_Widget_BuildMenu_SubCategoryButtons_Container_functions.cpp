@@ -6,7 +6,7 @@
 
 #include "FG_Widget_BuildMenu_SubCategoryButtons_Container_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

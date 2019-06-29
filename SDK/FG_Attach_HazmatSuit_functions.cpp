@@ -6,7 +6,7 @@
 
 #include "FG_Attach_HazmatSuit_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_IngotCaterium_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

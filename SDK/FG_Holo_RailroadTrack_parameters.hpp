@@ -8,7 +8,7 @@
 
 #include "FG_Holo_RailroadTrack_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

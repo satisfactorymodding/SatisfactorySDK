@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-Mushroom_ADA_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,14 +8,14 @@
 
 #include "FG_BTT_FollowTrackPath_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BTT_FollowTrackPath.BTT_FollowTrackPath_C
-// 0x0059 (0x00F9 - 0x00A0)
+// 0x0058 (0x00F8 - 0x00A0)
 class UBTT_FollowTrackPath_C : public UBTTask_BlueprintBase
 {
 public:
@@ -29,7 +29,6 @@ public:
 	float                                              mSpeed;                                                   // 0x00EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              mDistance;                                                // 0x00F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              mTargetSpeed;                                             // 0x00F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	ESelfDrivingLocomotiveError                        mError;                                                   // 0x00F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -45,7 +44,6 @@ public:
 	void ReceiveAbortAI(class AAIController** OwnerController, class APawn** ControlledPawn);
 	void FinishStopping();
 	void StopAllMovement();
-	void FinishAborting();
 	void InvalidatePath();
 	void ExecuteUbergraph_BTT_FollowTrackPath(int EntryPoint);
 };

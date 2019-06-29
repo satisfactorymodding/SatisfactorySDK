@@ -8,7 +8,7 @@
 
 #include "FG_Ambient_Settings_Crater_DayNight_Wildlife_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

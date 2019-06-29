@@ -8,7 +8,7 @@
 
 #include "FG_Anim_AssemblerMk1_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

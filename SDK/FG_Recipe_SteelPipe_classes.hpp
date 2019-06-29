@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_SteelPipe_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

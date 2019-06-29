@@ -8,7 +8,7 @@
 
 #include "FG_Serialization_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Anim_Spitter_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

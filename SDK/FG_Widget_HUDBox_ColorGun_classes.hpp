@@ -8,7 +8,7 @@
 
 #include "FG_Widget_HUDBox_ColorGun_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

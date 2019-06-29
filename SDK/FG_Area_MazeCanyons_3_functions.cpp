@@ -6,7 +6,7 @@
 
 #include "FG_Area_MazeCanyons_3_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

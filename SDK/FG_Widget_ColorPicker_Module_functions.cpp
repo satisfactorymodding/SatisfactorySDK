@@ -6,7 +6,7 @@
 
 #include "FG_Widget_ColorPicker_Module_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

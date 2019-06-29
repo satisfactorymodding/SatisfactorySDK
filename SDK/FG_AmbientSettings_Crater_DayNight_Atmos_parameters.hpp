@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSettings_Crater_DayNight_Atmos_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_RecipeAmountStruct_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

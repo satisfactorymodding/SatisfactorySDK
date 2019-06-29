@@ -8,7 +8,7 @@
 
 #include "FG_Zone_Savanna_Wildlife_Cricket_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

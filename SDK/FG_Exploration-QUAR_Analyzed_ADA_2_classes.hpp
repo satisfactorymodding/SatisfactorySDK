@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-QUAR_Analyzed_ADA_2_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

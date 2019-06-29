@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_OilPump_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

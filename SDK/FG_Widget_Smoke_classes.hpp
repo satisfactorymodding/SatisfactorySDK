@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Smoke_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

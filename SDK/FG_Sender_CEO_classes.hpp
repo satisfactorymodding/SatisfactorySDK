@@ -8,7 +8,7 @@
 
 #include "FG_Sender_CEO_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

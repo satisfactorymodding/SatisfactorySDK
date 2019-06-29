@@ -8,7 +8,7 @@
 
 #include "FG_Build_Wall_Gate_8x4_01_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

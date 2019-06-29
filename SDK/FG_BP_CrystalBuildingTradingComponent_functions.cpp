@@ -6,7 +6,7 @@
 
 #include "FG_BP_CrystalBuildingTradingComponent_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_Quartz2_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

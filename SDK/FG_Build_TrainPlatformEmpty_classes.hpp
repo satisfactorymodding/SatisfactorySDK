@@ -8,19 +8,20 @@
 
 #include "FG_Build_TrainPlatformEmpty_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_TrainPlatformEmpty.Build_TrainPlatformEmpty_C
-// 0x0010 (0x06A8 - 0x0698)
+// 0x0018 (0x06B0 - 0x0698)
 class ABuild_TrainPlatformEmpty_C : public AFGBuildableTrainPlatformEmpty
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               Clearance;                                                // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGColoredInstanceMeshProxy*                 FGColoredInstanceMeshProxy;                               // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGFactoryLegsComponent*                     FGFactoryLegs;                                            // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBoxComponent*                               Clearance;                                                // 0x06A8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

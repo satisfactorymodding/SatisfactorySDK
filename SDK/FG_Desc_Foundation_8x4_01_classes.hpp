@@ -8,7 +8,7 @@
 
 #include "FG_Desc_Foundation_8x4_01_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

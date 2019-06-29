@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Inventory_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

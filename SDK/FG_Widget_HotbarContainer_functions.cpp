@@ -6,7 +6,7 @@
 
 #include "FG_Widget_HotbarContainer_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

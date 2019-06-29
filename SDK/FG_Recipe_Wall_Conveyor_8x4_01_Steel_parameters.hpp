@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Wall_Conveyor_8x4_01_Steel_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_BTT_EatItem_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

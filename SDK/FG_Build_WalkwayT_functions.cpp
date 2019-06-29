@@ -6,7 +6,7 @@
 
 #include "FG_Build_WalkwayT_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

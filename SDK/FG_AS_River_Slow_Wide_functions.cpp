@@ -6,7 +6,7 @@
 
 #include "FG_AS_River_Slow_Wide_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

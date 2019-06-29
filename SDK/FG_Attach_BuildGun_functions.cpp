@@ -6,7 +6,7 @@
 
 #include "FG_Attach_BuildGun_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

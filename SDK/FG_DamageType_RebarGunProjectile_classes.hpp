@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_RebarGunProjectile_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

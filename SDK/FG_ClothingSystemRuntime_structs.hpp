@@ -10,7 +10,7 @@
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_ClothingSystemRuntimeInterface_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Enums

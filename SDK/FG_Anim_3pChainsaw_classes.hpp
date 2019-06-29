@@ -8,7 +8,7 @@
 
 #include "FG_Anim_3pChainsaw_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

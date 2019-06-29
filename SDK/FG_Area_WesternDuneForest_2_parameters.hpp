@@ -8,7 +8,7 @@
 
 #include "FG_Area_WesternDuneForest_2_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

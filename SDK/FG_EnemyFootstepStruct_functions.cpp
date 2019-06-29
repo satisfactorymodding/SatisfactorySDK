@@ -6,7 +6,7 @@
 
 #include "FG_EnemyFootstepStruct_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

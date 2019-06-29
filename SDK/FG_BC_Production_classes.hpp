@@ -8,7 +8,7 @@
 
 #include "FG_BC_Production_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

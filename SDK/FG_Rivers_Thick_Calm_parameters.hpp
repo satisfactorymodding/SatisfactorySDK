@@ -8,7 +8,7 @@
 
 #include "FG_Rivers_Thick_Calm_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

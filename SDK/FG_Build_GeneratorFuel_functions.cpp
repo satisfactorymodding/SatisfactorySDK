@@ -6,7 +6,7 @@
 
 #include "FG_Build_GeneratorFuel_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_MovieSceneTracks_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

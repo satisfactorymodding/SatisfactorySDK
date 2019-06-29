@@ -8,7 +8,7 @@
 
 #include "FG_BP_VolumeFogSmall_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

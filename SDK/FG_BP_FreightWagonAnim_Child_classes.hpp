@@ -8,14 +8,14 @@
 
 #include "FG_BP_FreightWagonAnim_Child_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_FreightWagonAnim_Child.BP_FreightWagonAnim_Child_C
-// 0x0000 (0x28AB - 0x28AB)
+// 0x0000 (0x3278 - 0x3278)
 class UBP_FreightWagonAnim_Child_C : public UBP_LocomotiveAnim_C
 {
 public:

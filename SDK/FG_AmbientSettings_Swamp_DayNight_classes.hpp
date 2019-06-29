@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSettings_Swamp_DayNight_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

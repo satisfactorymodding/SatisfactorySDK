@@ -8,7 +8,7 @@
 
 #include "FG_EMinerState_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

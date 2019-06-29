@@ -8,7 +8,7 @@
 
 #include "FG_MeshDescription_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

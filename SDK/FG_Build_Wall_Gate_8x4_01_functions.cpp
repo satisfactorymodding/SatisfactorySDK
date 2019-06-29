@@ -6,7 +6,7 @@
 
 #include "FG_Build_Wall_Gate_8x4_01_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

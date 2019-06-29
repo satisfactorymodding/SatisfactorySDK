@@ -8,7 +8,7 @@
 
 #include "FG_UMG_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

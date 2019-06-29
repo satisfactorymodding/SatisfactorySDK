@@ -6,7 +6,7 @@
 
 #include "FG_CM_RestrictedLook_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

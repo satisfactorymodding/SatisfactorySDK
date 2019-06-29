@@ -8,7 +8,7 @@
 
 #include "FG_Equip_GasMask_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

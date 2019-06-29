@@ -8,11 +8,16 @@
 
 #include "FG_Widget_Locomotive_Menu_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.UpdatePowerStatus
+struct UWidget_Locomotive_Menu_C_UpdatePowerStatus_Params
+{
+};
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.GetLocomotiveSpeed
 struct UWidget_Locomotive_Menu_C_GetLocomotiveSpeed_Params

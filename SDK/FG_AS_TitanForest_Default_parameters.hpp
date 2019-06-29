@@ -8,7 +8,7 @@
 
 #include "FG_AS_TitanForest_Default_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

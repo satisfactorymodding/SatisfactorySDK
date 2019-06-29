@@ -8,7 +8,7 @@
 
 #include "FG_Desc_ModularFrame_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

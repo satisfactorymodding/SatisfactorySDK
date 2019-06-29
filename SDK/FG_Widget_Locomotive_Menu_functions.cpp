@@ -6,11 +6,28 @@
 
 #include "FG_Widget_Locomotive_Menu_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.UpdatePowerStatus
+// ()
+
+void UWidget_Locomotive_Menu_C::UpdatePowerStatus()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.UpdatePowerStatus");
+
+	UWidget_Locomotive_Menu_C_UpdatePowerStatus_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.GetLocomotiveSpeed
 // ()

@@ -8,7 +8,7 @@
 
 #include "FG_Area_RedBambooFields_2_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

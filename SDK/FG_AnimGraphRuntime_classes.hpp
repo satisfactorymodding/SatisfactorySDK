@@ -8,7 +8,7 @@
 
 #include "FG_AnimGraphRuntime_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

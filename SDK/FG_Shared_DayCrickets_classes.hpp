@@ -8,7 +8,7 @@
 
 #include "FG_Shared_DayCrickets_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

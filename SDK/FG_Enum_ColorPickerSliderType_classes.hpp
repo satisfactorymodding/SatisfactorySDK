@@ -8,7 +8,7 @@
 
 #include "FG_Enum_ColorPickerSliderType_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

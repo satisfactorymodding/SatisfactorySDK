@@ -8,7 +8,7 @@
 
 #include "FG_SC_Trains_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

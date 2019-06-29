@@ -12,7 +12,7 @@
 #include "FG_MediaUtils_classes.hpp"
 #include "FG_AudioMixer_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Enums

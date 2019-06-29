@@ -8,7 +8,7 @@
 
 #include "FG_ECreditType_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

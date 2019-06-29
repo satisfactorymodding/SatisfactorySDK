@@ -6,7 +6,7 @@
 
 #include "FG_BTT_SetNextStop_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

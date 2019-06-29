@@ -8,7 +8,7 @@
 
 #include "FG_BC_Walls_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

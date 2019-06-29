@@ -8,7 +8,7 @@
 
 #include "FG_EquipChild_NobeliskDetonator_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

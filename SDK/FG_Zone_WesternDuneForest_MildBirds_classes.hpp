@@ -8,7 +8,7 @@
 
 #include "FG_Zone_WesternDuneForest_MildBirds_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

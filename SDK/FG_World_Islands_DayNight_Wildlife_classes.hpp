@@ -8,7 +8,7 @@
 
 #include "FG_World_Islands_DayNight_Wildlife_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_AS_Stream_Medium_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

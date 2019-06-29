@@ -8,7 +8,7 @@
 
 #include "FG_SC_Generators_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

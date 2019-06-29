@@ -6,7 +6,7 @@
 
 #include "FG_Widget_PortableMiner_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

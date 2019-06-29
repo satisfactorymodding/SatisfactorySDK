@@ -6,7 +6,7 @@
 
 #include "FG_Attack_SpitterSingle_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -6,7 +6,7 @@
 
 #include "FG_BTT_WalkBackSlowly_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_DatasmithContent_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

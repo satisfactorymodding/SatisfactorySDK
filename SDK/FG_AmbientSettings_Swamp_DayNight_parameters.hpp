@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSettings_Swamp_DayNight_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

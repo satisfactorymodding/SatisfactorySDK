@@ -8,7 +8,7 @@
 
 #include "FG_BP_RailroadVehicleSoundComponent_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -65,13 +65,13 @@ struct UBP_RailroadVehicleSoundComponent_C_OnThrottleApplied_Params
 {
 };
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay
-struct UBP_RailroadVehicleSoundComponent_C_ReceiveBeginPlay_Params
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMovingRelay
+struct UBP_RailroadVehicleSoundComponent_C_OnStoppedMovingRelay_Params
 {
 };
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMovingRelay
-struct UBP_RailroadVehicleSoundComponent_C_OnStoppedMovingRelay_Params
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay
+struct UBP_RailroadVehicleSoundComponent_C_ReceiveBeginPlay_Params
 {
 };
 

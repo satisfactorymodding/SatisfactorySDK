@@ -6,7 +6,7 @@
 
 #include "FG_BC_Foundations_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

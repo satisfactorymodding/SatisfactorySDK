@@ -10,7 +10,7 @@
 #include "FG_Widget_Button_classes.hpp"
 #include "FG_Engine_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

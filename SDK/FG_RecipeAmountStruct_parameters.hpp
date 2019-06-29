@@ -8,7 +8,7 @@
 
 #include "FG_RecipeAmountStruct_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

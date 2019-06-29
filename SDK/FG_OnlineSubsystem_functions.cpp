@@ -6,7 +6,7 @@
 
 #include "FG_OnlineSubsystem_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

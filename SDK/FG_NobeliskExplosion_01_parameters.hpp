@@ -8,7 +8,7 @@
 
 #include "FG_NobeliskExplosion_01_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

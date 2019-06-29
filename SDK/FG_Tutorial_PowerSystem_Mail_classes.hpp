@@ -8,7 +8,7 @@
 
 #include "FG_Tutorial_PowerSystem_Mail_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

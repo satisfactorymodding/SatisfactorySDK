@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_Build_JumpPad_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

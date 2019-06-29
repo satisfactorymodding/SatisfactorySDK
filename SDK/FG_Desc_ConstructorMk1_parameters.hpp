@@ -8,7 +8,7 @@
 
 #include "FG_Desc_ConstructorMk1_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_SignificanceManager_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_BP_Locomotive_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -218,6 +218,46 @@ struct ABP_Locomotive_C_ReceiveUnpossessed_Params
 struct ABP_Locomotive_C_ReceivePossessed_Params
 {
 	class AController**                                NewController;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_01
+struct ABP_Locomotive_C_MultiCast_TrainHorn_01_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_01_Stop
+struct ABP_Locomotive_C_MultiCast_TrainHorn_01_Stop_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_02
+struct ABP_Locomotive_C_MultiCast_TrainHorn_02_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_02_Stop
+struct ABP_Locomotive_C_MultiCast_TrainHorn_02_Stop_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.Server_Horn_01
+struct ABP_Locomotive_C_Server_Horn_01_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.Server_Horn_01_Stop
+struct ABP_Locomotive_C_Server_Horn_01_Stop_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.Server_Horn_02
+struct ABP_Locomotive_C_Server_Horn_02_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.Server_Horn_02_Stop
+struct ABP_Locomotive_C_Server_Horn_02_Stop_Params
+{
 };
 
 // Function BP_Locomotive.BP_Locomotive_C.ExecuteUbergraph_BP_Locomotive

@@ -8,7 +8,7 @@
 
 #include "FG_Overlay_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

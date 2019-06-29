@@ -6,7 +6,7 @@
 
 #include "FG_AssetRegistry_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

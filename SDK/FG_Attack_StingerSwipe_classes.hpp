@@ -8,7 +8,7 @@
 
 #include "FG_Attack_StingerSwipe_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

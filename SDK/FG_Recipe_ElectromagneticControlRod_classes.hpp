@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_ElectromagneticControlRod_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

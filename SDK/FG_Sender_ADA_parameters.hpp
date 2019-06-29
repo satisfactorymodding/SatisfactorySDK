@@ -8,7 +8,7 @@
 
 #include "FG_Sender_ADA_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

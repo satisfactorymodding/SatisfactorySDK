@@ -8,7 +8,7 @@
 
 #include "FG_VariantManagerContent_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

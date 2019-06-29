@@ -8,7 +8,7 @@
 
 #include "FG_Area_NoMansLand_2_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Desc_SteelPlate_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

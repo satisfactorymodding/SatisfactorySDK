@@ -8,7 +8,7 @@
 
 #include "FG_BTT_StopRotation_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

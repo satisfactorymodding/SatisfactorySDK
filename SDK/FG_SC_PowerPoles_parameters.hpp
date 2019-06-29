@@ -8,7 +8,7 @@
 
 #include "FG_SC_PowerPoles_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

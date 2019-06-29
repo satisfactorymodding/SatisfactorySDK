@@ -8,7 +8,7 @@
 
 #include "FG_master_river_spline_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

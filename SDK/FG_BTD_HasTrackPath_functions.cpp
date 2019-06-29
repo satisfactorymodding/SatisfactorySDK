@@ -6,7 +6,7 @@
 
 #include "FG_BTD_HasTrackPath_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

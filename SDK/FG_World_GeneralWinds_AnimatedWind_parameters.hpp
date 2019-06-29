@@ -8,7 +8,7 @@
 
 #include "FG_World_GeneralWinds_AnimatedWind_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

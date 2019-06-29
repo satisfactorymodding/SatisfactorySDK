@@ -8,7 +8,7 @@
 
 #include "FG_Holo_TrainPlatformCargo_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

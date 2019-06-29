@@ -8,7 +8,7 @@
 
 #include "FG_Shared_DayCrickets_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

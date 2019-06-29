@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Compass_new_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

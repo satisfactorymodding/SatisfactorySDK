@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-HogParts_Analyzed_ADA_1_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

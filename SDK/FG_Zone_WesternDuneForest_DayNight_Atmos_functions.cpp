@@ -6,7 +6,7 @@
 
 #include "FG_Zone_WesternDuneForest_DayNight_Atmos_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

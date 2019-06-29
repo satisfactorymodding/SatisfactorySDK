@@ -6,7 +6,7 @@
 
 #include "FG_Holo_Locomotive_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

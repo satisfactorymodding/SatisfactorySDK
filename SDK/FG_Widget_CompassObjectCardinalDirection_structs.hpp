@@ -12,7 +12,7 @@
 #include "FG_UMG_classes.hpp"
 #include "FG_Slate_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

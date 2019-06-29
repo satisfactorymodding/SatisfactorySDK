@@ -6,7 +6,7 @@
 
 #include "FG_Schematic_Alternate_HeavyModularFrame_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

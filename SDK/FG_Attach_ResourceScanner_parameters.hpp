@@ -8,7 +8,7 @@
 
 #include "FG_Attach_ResourceScanner_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Widget_RadarTower_ScanLine_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

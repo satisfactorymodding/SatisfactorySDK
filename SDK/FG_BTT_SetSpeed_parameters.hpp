@@ -8,7 +8,7 @@
 
 #include "FG_BTT_SetSpeed_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

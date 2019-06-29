@@ -6,7 +6,7 @@
 
 #include "FG_Area_Swamp_3_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

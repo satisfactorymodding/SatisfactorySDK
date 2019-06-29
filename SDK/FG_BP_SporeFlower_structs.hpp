@@ -7,12 +7,12 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_ESporeFlowerGasState_classes.hpp"
 #include "FG_FactoryGame_classes.hpp"
 #include "FG_Engine_classes.hpp"
 #include "FG_ESporeFlowerState_classes.hpp"
+#include "FG_ESporeFlowerGasState_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

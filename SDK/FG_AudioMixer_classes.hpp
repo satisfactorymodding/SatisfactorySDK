@@ -8,7 +8,7 @@
 
 #include "FG_AudioMixer_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

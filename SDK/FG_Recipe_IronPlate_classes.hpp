@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_IronPlate_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

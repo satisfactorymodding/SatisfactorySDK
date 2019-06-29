@@ -6,7 +6,7 @@
 
 #include "FG_Build_RailroadTrackIntegrated_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

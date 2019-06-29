@@ -8,7 +8,7 @@
 
 #include "FG_Controller_BabyCrab_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

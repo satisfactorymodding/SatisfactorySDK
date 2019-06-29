@@ -8,7 +8,7 @@
 
 #include "FG_Build_Wall_Window_8x4_03_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

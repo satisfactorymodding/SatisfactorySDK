@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Stairs_Left_01_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

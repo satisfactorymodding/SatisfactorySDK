@@ -6,7 +6,7 @@
 
 #include "FG_Build_Stair_1b_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

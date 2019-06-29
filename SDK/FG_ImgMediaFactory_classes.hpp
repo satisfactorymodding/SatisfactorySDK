@@ -8,7 +8,7 @@
 
 #include "FG_ImgMediaFactory_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

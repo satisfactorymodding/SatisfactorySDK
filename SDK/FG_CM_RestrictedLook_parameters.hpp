@@ -8,7 +8,7 @@
 
 #include "FG_CM_RestrictedLook_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

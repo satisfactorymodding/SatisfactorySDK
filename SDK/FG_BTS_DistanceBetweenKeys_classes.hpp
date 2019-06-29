@@ -8,7 +8,7 @@
 
 #include "FG_BTS_DistanceBetweenKeys_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

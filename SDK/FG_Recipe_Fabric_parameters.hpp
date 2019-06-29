@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Fabric_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

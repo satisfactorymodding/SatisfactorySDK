@@ -8,7 +8,7 @@
 
 #include "FG_Attach_NobeliskDetonator_L_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

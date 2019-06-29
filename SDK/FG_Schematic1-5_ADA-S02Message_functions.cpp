@@ -6,7 +6,7 @@
 
 #include "FG_Schematic1-5_ADA-S02Message_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

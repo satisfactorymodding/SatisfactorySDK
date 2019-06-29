@@ -6,11 +6,48 @@
 
 #include "FG_Widget_Train_TimeTable_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.SetCurrentStop
+// ()
+// Parameters:
+// class UWidget_Train_TimeTable_Rule_C* RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Train_TimeTable_C::SetCurrentStop(class UWidget_Train_TimeTable_Rule_C* RuleWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.SetCurrentStop");
+
+	UWidget_Train_TimeTable_C_SetCurrentStop_Params params;
+	params.RuleWidget = RuleWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.ShowApplyChangesPrompt
+// ()
+
+void UWidget_Train_TimeTable_C::ShowApplyChangesPrompt()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.ShowApplyChangesPrompt");
+
+	UWidget_Train_TimeTable_C_ShowApplyChangesPrompt_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.CloseAvailableStationsWidget
 // ()
@@ -340,6 +377,23 @@ void UWidget_Train_TimeTable_C::OnRuleMoveDown(class UWidget_Train_TimeTable_Rul
 
 	UWidget_Train_TimeTable_C_OnRuleMoveDown_Params params;
 	params.RuleWidget = RuleWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.CheckCurrentStop
+// ()
+
+void UWidget_Train_TimeTable_C::CheckCurrentStop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.CheckCurrentStop");
+
+	UWidget_Train_TimeTable_C_CheckCurrentStop_Params params;
 
 	auto flags = fn->FunctionFlags;
 

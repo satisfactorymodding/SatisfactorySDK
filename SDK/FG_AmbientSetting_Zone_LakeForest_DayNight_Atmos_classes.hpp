@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_LakeForest_DayNight_Atmos_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

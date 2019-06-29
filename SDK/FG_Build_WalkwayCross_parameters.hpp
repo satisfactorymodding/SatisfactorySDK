@@ -8,7 +8,7 @@
 
 #include "FG_Build_WalkwayCross_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

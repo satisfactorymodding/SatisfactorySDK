@@ -8,7 +8,7 @@
 
 #include "FG_World_GrassFields_DayNight_Atmos_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

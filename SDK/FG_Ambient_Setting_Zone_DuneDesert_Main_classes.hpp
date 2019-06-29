@@ -8,7 +8,7 @@
 
 #include "FG_Ambient_Setting_Zone_DuneDesert_Main_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

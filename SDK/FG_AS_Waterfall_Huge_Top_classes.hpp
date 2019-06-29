@@ -8,7 +8,7 @@
 
 #include "FG_AS_Waterfall_Huge_Top_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

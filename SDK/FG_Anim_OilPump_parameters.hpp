@@ -8,7 +8,7 @@
 
 #include "FG_Anim_OilPump_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

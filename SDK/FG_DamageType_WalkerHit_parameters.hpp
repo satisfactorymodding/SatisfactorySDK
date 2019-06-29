@@ -8,7 +8,7 @@
 
 #include "FG_DamageType_WalkerHit_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

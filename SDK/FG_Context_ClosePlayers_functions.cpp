@@ -6,7 +6,7 @@
 
 #include "FG_Context_ClosePlayers_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

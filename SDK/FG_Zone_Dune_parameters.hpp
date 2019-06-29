@@ -8,7 +8,7 @@
 
 #include "FG_Zone_Dune_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

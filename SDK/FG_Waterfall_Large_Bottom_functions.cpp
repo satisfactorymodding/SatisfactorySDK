@@ -6,7 +6,7 @@
 
 #include "FG_Waterfall_Large_Bottom_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

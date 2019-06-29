@@ -8,7 +8,7 @@
 
 #include "FG_KeyBindData_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

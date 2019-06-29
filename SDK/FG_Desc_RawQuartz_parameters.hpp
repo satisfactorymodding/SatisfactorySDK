@@ -8,7 +8,7 @@
 
 #include "FG_Desc_RawQuartz_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

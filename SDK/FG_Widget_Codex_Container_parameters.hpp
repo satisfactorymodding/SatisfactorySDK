@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Codex_Container_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

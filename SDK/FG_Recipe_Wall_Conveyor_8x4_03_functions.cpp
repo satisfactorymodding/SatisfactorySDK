@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Wall_Conveyor_8x4_03_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

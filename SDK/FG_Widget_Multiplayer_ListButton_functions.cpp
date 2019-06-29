@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Multiplayer_ListButton_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
@@ -193,7 +193,7 @@ void UWidget_Multiplayer_ListButton_C::SetupForSendInvite(struct FFGOnlineFriend
 // Parameters:
 // struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           IsOnline                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   additionalInfo                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   AdditionalInfo                 (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            PlayersInSession               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           privateSession                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            TimePlayed                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -206,20 +206,20 @@ void UWidget_Multiplayer_ListButton_C::SetupForSendInvite(struct FFGOnlineFriend
 // struct FText                   actionButtonTooltip            (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           inAGame                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FBlueprintSessionResult session                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           isSelectable                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsSelectable                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsNonInteractable              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ECachedNATType                 natType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsHost                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           careAboutNAT                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Multiplayer_ListButton_C::Internal_UpdateButton(const struct FText& Title, bool IsOnline, const struct FText& additionalInfo, int PlayersInSession, bool privateSession, int TimePlayed, const struct FText& ActionButtonText, bool hideSessionInfo, bool isPlayingSatisfactory, bool hideActionButton, bool hideSecondaryActionButton, bool disableActionButton, const struct FText& actionButtonTooltip, bool inAGame, const struct FBlueprintSessionResult& session, bool isSelectable, bool IsNonInteractable, ECachedNATType natType, bool IsHost, bool careAboutNAT)
+void UWidget_Multiplayer_ListButton_C::Internal_UpdateButton(const struct FText& Title, bool IsOnline, const struct FText& AdditionalInfo, int PlayersInSession, bool privateSession, int TimePlayed, const struct FText& ActionButtonText, bool hideSessionInfo, bool isPlayingSatisfactory, bool hideActionButton, bool hideSecondaryActionButton, bool disableActionButton, const struct FText& actionButtonTooltip, bool inAGame, const struct FBlueprintSessionResult& session, bool IsSelectable, bool IsNonInteractable, ECachedNATType natType, bool IsHost, bool careAboutNAT)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.Internal_UpdateButton");
 
 	UWidget_Multiplayer_ListButton_C_Internal_UpdateButton_Params params;
 	params.Title = Title;
 	params.IsOnline = IsOnline;
-	params.additionalInfo = additionalInfo;
+	params.AdditionalInfo = AdditionalInfo;
 	params.PlayersInSession = PlayersInSession;
 	params.privateSession = privateSession;
 	params.TimePlayed = TimePlayed;
@@ -232,7 +232,7 @@ void UWidget_Multiplayer_ListButton_C::Internal_UpdateButton(const struct FText&
 	params.actionButtonTooltip = actionButtonTooltip;
 	params.inAGame = inAGame;
 	params.session = session;
-	params.isSelectable = isSelectable;
+	params.IsSelectable = IsSelectable;
 	params.IsNonInteractable = IsNonInteractable;
 	params.natType = natType;
 	params.IsHost = IsHost;

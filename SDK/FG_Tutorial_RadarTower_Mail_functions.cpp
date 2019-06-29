@@ -6,7 +6,7 @@
 
 #include "FG_Tutorial_RadarTower_Mail_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Char_SpaceRabbit_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

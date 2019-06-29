@@ -8,7 +8,7 @@
 
 #include "FG_FBrightnessAdjustment_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

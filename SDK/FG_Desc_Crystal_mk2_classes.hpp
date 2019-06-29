@@ -8,7 +8,7 @@
 
 #include "FG_Desc_Crystal_mk2_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

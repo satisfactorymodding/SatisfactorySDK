@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_JumpPadTilted_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

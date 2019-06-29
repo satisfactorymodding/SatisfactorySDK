@@ -8,7 +8,7 @@
 
 #include "FG_Build_WorkBenchIntegrated_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_AS_World_SeaAtmos_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

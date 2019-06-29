@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Wall_Window_8x4_03_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_SC_Floors_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

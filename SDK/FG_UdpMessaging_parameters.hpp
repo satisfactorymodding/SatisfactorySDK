@@ -8,7 +8,7 @@
 
 #include "FG_UdpMessaging_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

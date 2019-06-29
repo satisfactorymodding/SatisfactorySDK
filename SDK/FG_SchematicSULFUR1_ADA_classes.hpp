@@ -8,7 +8,7 @@
 
 #include "FG_SchematicSULFUR1_ADA_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,11 +6,35 @@
 
 #include "FG_Widget_Train_DockingStation_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Widget_Train_DockingStation.Widget_Train_DockingStation_C.DropInventorySlotStack
+// ()
+// Parameters:
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Train_DockingStation_C::DropInventorySlotStack(class UWidget_InventorySlot_C** InventorySlot, bool* WasStackMoved)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_DockingStation.Widget_Train_DockingStation_C.DropInventorySlotStack");
+
+	UWidget_Train_DockingStation_C_DropInventorySlotStack_Params params;
+	params.InventorySlot = InventorySlot;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (WasStackMoved != nullptr)
+		*WasStackMoved = params.WasStackMoved;
+}
+
 
 // Function Widget_Train_DockingStation.Widget_Train_DockingStation_C.SetHeaderText
 // ()

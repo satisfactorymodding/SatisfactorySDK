@@ -6,7 +6,7 @@
 
 #include "FG_Widget_TrainButton_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
@@ -60,6 +60,91 @@ void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButto
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
 	UWidget_TrainButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainButton.Widget_TrainButton_C.Construct
+// ()
+
+void UWidget_TrainButton_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.Construct");
+
+	UWidget_TrainButton_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainButton.Widget_TrainButton_C.CheckNextStop
+// ()
+
+void UWidget_TrainButton_C::CheckNextStop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.CheckNextStop");
+
+	UWidget_TrainButton_C_CheckNextStop_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainButton.Widget_TrainButton_C.Destruct
+// ()
+
+void UWidget_TrainButton_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.Destruct");
+
+	UWidget_TrainButton_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_TrainButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_TrainButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -8,7 +8,7 @@
 
 #include "FG_DmgTypeBP_Environmental_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

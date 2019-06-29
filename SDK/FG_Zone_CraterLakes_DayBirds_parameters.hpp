@@ -8,7 +8,7 @@
 
 #include "FG_Zone_CraterLakes_DayBirds_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

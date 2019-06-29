@@ -8,7 +8,7 @@
 
 #include "FG_Char_EliteStinger_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

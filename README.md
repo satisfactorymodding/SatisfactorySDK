@@ -1,1 +1,1 @@
-### Satisfactory Experimental SDK (v0.1.17 - Build 101256)
+### Satisfactory Experimental SDK (v0.1.19 - Build 101486)

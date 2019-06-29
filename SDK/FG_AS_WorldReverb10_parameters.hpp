@@ -8,7 +8,7 @@
 
 #include "FG_AS_WorldReverb10_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

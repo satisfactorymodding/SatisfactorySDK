@@ -6,7 +6,7 @@
 
 #include "FG_Anim_TrainDockingStation_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
@@ -29,40 +29,6 @@ void UAnim_TrainDockingStation_C::CalculateAnimGraphValues()
 }
 
 
-// Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TrainDockingStation_AnimGraphNode_TransitionResult_74ECF724409FAC11D74545B086B7B846
-// ()
-
-void UAnim_TrainDockingStation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TrainDockingStation_AnimGraphNode_TransitionResult_74ECF724409FAC11D74545B086B7B846()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TrainDockingStation_AnimGraphNode_TransitionResult_74ECF724409FAC11D74545B086B7B846");
-
-	UAnim_TrainDockingStation_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TrainDockingStation_AnimGraphNode_TransitionResult_74ECF724409FAC11D74545B086B7B846_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TrainDockingStation_AnimGraphNode_TransitionResult_8EAF874A442BF6966DA940AFA8A36562
-// ()
-
-void UAnim_TrainDockingStation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TrainDockingStation_AnimGraphNode_TransitionResult_8EAF874A442BF6966DA940AFA8A36562()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TrainDockingStation_AnimGraphNode_TransitionResult_8EAF874A442BF6966DA940AFA8A36562");
-
-	UAnim_TrainDockingStation_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TrainDockingStation_AnimGraphNode_TransitionResult_8EAF874A442BF6966DA940AFA8A36562_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.BlueprintUpdateAnimation
 // ()
 // Parameters:
@@ -74,6 +40,40 @@ void UAnim_TrainDockingStation_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 	UAnim_TrainDockingStation_C_BlueprintUpdateAnimation_Params params;
 	params.DeltaTimeX = DeltaTimeX;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.AnimNotify_StartOffset
+// ()
+
+void UAnim_TrainDockingStation_C::AnimNotify_StartOffset()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.AnimNotify_StartOffset");
+
+	UAnim_TrainDockingStation_C_AnimNotify_StartOffset_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.AnimNotify_EndOffset
+// ()
+
+void UAnim_TrainDockingStation_C::AnimNotify_EndOffset()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.AnimNotify_EndOffset");
+
+	UAnim_TrainDockingStation_C_AnimNotify_EndOffset_Params params;
 
 	auto flags = fn->FunctionFlags;
 

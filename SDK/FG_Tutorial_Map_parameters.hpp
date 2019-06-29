@@ -8,7 +8,7 @@
 
 #include "FG_Tutorial_Map_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

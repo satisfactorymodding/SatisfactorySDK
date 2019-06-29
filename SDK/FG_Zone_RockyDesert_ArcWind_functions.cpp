@@ -6,7 +6,7 @@
 
 #include "FG_Zone_RockyDesert_ArcWind_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

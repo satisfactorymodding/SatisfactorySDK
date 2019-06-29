@@ -8,7 +8,7 @@
 
 #include "FG_Widget_PlayerHealthBar_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -49,7 +49,7 @@ public:
 	struct FLinearColor GetHealthFillColor();
 	void IsValidHealthComponent(bool* Valid);
 	ESlateVisibility GetHealthbar();
-	float GetProgressBarPercent();
+	float GetProgressbarPercent();
 	void Construct();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void ResetAnimGate();

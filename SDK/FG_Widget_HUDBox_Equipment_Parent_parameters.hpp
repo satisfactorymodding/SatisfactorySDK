@@ -8,7 +8,7 @@
 
 #include "FG_Widget_HUDBox_Equipment_Parent_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

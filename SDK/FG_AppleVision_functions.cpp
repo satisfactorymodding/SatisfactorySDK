@@ -6,7 +6,7 @@
 
 #include "FG_AppleVision_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

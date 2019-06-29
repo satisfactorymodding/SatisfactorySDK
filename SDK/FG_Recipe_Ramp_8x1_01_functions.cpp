@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Ramp_8x1_01_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

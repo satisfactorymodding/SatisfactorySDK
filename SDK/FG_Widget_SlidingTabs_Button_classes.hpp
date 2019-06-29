@@ -8,7 +8,7 @@
 
 #include "FG_Widget_SlidingTabs_Button_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -49,7 +49,7 @@ public:
 	}
 
 
-	void SetBackgroundVisibility(bool Visible);
+	void SetBackgroundVisibility(bool visible);
 	void SetIcon(class UTexture* Texture);
 	void SetTitle(const struct FText& mTitle);
 	void SetActive(bool IsActive);

@@ -6,7 +6,7 @@
 
 #include "FG_BP_SpitterProjectile_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

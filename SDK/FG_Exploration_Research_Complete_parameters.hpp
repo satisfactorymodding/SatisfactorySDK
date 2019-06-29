@@ -8,7 +8,7 @@
 
 #include "FG_Exploration_Research_Complete_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

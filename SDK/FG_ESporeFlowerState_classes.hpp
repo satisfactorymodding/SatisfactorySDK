@@ -8,7 +8,7 @@
 
 #include "FG_ESporeFlowerState_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

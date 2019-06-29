@@ -8,7 +8,7 @@
 
 #include "FG_FootstepSoundMapStruct_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

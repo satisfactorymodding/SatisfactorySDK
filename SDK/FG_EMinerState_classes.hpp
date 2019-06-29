@@ -8,7 +8,7 @@
 
 #include "FG_EMinerState_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

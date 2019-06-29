@@ -8,7 +8,7 @@
 
 #include "FG_Area_NorthernForest_3_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

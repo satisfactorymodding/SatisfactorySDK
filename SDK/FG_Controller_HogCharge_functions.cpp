@@ -6,7 +6,7 @@
 
 #include "FG_Controller_HogCharge_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -6,7 +6,7 @@
 
 #include "FG_Widget_DockingStation_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

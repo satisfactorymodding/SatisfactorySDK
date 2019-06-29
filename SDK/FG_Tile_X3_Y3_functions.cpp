@@ -6,7 +6,7 @@
 
 #include "FG_Tile_X3_Y3_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

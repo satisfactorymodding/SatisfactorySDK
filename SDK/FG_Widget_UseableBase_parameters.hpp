@@ -8,7 +8,7 @@
 
 #include "FG_Widget_UseableBase_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -44,7 +44,7 @@ struct UWidget_UseableBase_C_DropInventorySlotStack_Params
 // Function Widget_UseableBase.Widget_UseableBase_C.SetInventoryVisibility
 struct UWidget_UseableBase_C_SetInventoryVisibility_Params
 {
-	bool                                               Visible;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               visible;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_UseableBase.Widget_UseableBase_C.GetDefaultRCO

@@ -8,7 +8,7 @@
 
 #include "FG_Desc_Foundation_8x1_01_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

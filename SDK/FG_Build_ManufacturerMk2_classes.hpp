@@ -8,7 +8,7 @@
 
 #include "FG_Build_ManufacturerMk2_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

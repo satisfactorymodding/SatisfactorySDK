@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-QUAR_Analyzed_ADA_3_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

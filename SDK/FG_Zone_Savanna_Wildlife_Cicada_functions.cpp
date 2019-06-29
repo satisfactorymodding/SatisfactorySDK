@@ -6,7 +6,7 @@
 
 #include "FG_Zone_Savanna_Wildlife_Cicada_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

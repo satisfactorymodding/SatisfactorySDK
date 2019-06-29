@@ -6,7 +6,7 @@
 
 #include "FG_Desc_Nut_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

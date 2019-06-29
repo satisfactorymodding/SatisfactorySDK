@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_FreightWagon_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

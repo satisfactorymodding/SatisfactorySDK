@@ -6,7 +6,7 @@
 
 #include "FG_Tutorial_ResourceExtractors_Mail_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_SignificanceManager_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_ResearchRecipe_Caterium1_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

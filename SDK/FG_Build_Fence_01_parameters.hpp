@@ -8,7 +8,7 @@
 
 #include "FG_Build_Fence_01_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

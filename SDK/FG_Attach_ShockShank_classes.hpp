@@ -8,7 +8,7 @@
 
 #include "FG_Attach_ShockShank_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

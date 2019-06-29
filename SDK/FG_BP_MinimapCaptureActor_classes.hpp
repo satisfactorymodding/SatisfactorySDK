@@ -8,7 +8,7 @@
 
 #include "FG_BP_MinimapCaptureActor_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

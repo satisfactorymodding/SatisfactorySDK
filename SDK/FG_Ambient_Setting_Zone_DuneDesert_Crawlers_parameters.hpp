@@ -8,7 +8,7 @@
 
 #include "FG_Ambient_Setting_Zone_DuneDesert_Crawlers_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

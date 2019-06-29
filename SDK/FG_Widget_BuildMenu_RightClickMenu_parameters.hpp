@@ -8,7 +8,7 @@
 
 #include "FG_Widget_BuildMenu_RightClickMenu_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

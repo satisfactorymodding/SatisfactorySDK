@@ -8,7 +8,7 @@
 
 #include "FG_BP_BuildingPreview_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

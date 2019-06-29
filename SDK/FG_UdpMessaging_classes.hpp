@@ -8,7 +8,7 @@
 
 #include "FG_UdpMessaging_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

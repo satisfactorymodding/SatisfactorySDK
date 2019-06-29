@@ -6,11 +6,28 @@
 
 #include "FG_Widget_Locomotive_HUD_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.CheckHasPower
+// ()
+
+void UWidget_Locomotive_HUD_C::CheckHasPower()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.CheckHasPower");
+
+	UWidget_Locomotive_HUD_C_CheckHasPower_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.SetSpeedometerPosition
 // ()
@@ -135,6 +152,57 @@ void UWidget_Locomotive_HUD_C::Construct()
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.Construct");
 
 	UWidget_Locomotive_HUD_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.CheckIsDocked
+// ()
+
+void UWidget_Locomotive_HUD_C::CheckIsDocked()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.CheckIsDocked");
+
+	UWidget_Locomotive_HUD_C_CheckIsDocked_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.Destruct
+// ()
+
+void UWidget_Locomotive_HUD_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.Destruct");
+
+	UWidget_Locomotive_HUD_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.UpdateStats
+// ()
+
+void UWidget_Locomotive_HUD_C::UpdateStats()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.UpdateStats");
+
+	UWidget_Locomotive_HUD_C_UpdateStats_Params params;
 
 	auto flags = fn->FunctionFlags;
 

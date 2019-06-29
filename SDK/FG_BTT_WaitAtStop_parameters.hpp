@@ -8,7 +8,7 @@
 
 #include "FG_BTT_WaitAtStop_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

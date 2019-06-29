@@ -6,7 +6,7 @@
 
 #include "FG_IntroTutorialHubLvl5_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

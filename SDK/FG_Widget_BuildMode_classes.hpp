@@ -8,7 +8,7 @@
 
 #include "FG_Widget_BuildMode_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

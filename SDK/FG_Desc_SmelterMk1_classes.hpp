@@ -8,7 +8,7 @@
 
 #include "FG_Desc_SmelterMk1_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

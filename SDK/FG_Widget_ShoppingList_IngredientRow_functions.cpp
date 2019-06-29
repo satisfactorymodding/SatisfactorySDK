@@ -6,7 +6,7 @@
 
 #include "FG_Widget_ShoppingList_IngredientRow_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

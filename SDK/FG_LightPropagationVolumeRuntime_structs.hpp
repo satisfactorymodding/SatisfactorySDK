@@ -10,7 +10,7 @@
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_Renderer_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

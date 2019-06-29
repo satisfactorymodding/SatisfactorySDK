@@ -6,7 +6,7 @@
 
 #include "FG_Build_Wall_Door_8x4_01_Steel_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

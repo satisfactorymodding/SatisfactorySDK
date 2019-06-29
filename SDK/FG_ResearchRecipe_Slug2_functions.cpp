@@ -6,7 +6,7 @@
 
 #include "FG_ResearchRecipe_Slug2_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

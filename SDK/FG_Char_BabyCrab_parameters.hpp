@@ -8,7 +8,7 @@
 
 #include "FG_Char_BabyCrab_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

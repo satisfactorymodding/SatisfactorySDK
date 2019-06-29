@@ -8,7 +8,7 @@
 
 #include "FG_BP_Beacon_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

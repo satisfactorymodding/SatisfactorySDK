@@ -8,7 +8,7 @@
 
 #include "FG_Schematic2-1_ADA-S03Message_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

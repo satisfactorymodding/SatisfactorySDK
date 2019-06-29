@@ -8,7 +8,7 @@
 
 #include "FG_Widget_ColorGunUI_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

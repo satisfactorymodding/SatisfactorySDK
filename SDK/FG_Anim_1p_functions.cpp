@@ -6,7 +6,7 @@
 
 #include "FG_Anim_1p_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

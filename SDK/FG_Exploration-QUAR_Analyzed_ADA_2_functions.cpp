@@ -6,7 +6,7 @@
 
 #include "FG_Exploration-QUAR_Analyzed_ADA_2_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_ActorSequence_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_SC_ConveyorAttachments_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

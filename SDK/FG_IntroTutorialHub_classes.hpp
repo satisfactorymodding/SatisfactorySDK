@@ -8,7 +8,7 @@
 
 #include "FG_IntroTutorialHub_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

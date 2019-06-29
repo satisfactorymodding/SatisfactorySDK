@@ -6,7 +6,7 @@
 
 #include "FG_Build_Foundation_8x1_01_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

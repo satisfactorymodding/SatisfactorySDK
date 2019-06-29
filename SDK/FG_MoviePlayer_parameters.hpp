@@ -8,7 +8,7 @@
 
 #include "FG_MoviePlayer_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

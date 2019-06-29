@@ -6,7 +6,7 @@
 
 #include "FG_BC_Walls_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

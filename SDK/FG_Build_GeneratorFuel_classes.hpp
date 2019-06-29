@@ -8,7 +8,7 @@
 
 #include "FG_Build_GeneratorFuel_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

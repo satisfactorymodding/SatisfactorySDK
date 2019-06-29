@@ -6,7 +6,7 @@
 
 #include "FG_Widget_PlayMenu_Alpha_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

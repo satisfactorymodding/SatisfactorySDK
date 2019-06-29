@@ -8,7 +8,7 @@
 
 #include "FG_Widget_MenuSwitcherContainer_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

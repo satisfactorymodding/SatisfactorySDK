@@ -6,11 +6,28 @@
 
 #include "FG_Widget_TrainStationNew_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Widget_TrainStationNew.Widget_TrainStationNew_C.UpdatePowerStatus
+// ()
+
+void UWidget_TrainStationNew_C::UpdatePowerStatus()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStationNew.Widget_TrainStationNew_C.UpdatePowerStatus");
+
+	UWidget_TrainStationNew_C_UpdatePowerStatus_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Widget_TrainStationNew.Widget_TrainStationNew_C.ShowLocomotiveMenu
 // ()
@@ -213,6 +230,26 @@ void UWidget_TrainStationNew_C::OnTrainNameChanged()
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStationNew.Widget_TrainStationNew_C.OnTrainNameChanged");
 
 	UWidget_TrainStationNew_C_OnTrainNameChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainStationNew.Widget_TrainStationNew_C.OnPowerChanged
+// ()
+// Parameters:
+// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_TrainStationNew_C::OnPowerChanged(bool State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStationNew.Widget_TrainStationNew_C.OnPowerChanged");
+
+	UWidget_TrainStationNew_C_OnPowerChanged_Params params;
+	params.State = State;
 
 	auto flags = fn->FunctionFlags;
 

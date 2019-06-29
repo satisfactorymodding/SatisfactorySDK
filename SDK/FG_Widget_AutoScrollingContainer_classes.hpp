@@ -8,7 +8,7 @@
 
 #include "FG_Widget_AutoScrollingContainer_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

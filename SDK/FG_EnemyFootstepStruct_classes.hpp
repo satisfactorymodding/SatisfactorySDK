@@ -8,7 +8,7 @@
 
 #include "FG_EnemyFootstepStruct_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

@@ -8,7 +8,7 @@
 
 #include "FG_Basic.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs

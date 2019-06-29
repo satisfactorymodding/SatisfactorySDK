@@ -8,7 +8,7 @@
 
 #include "FG_Equip_Parachute_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,11 +8,16 @@
 
 #include "FG_Widget_TrainStationNew_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Widget_TrainStationNew.Widget_TrainStationNew_C.UpdatePowerStatus
+struct UWidget_TrainStationNew_C_UpdatePowerStatus_Params
+{
+};
 
 // Function Widget_TrainStationNew.Widget_TrainStationNew_C.ShowLocomotiveMenu
 struct UWidget_TrainStationNew_C_ShowLocomotiveMenu_Params
@@ -74,6 +79,12 @@ struct UWidget_TrainStationNew_C_OnLocomotiveMenuClosed_Params
 // Function Widget_TrainStationNew.Widget_TrainStationNew_C.OnTrainNameChanged
 struct UWidget_TrainStationNew_C_OnTrainNameChanged_Params
 {
+};
+
+// Function Widget_TrainStationNew.Widget_TrainStationNew_C.OnPowerChanged
+struct UWidget_TrainStationNew_C_OnPowerChanged_Params
+{
+	bool                                               State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TrainStationNew.Widget_TrainStationNew_C.ExecuteUbergraph_Widget_TrainStationNew

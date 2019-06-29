@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Alternate_Quickwire_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_SocialMediaEnum_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

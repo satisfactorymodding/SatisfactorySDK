@@ -8,7 +8,7 @@
 
 #include "FG_Widget_HUDBox_Consumable_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

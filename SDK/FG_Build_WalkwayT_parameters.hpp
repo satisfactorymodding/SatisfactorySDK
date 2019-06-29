@@ -8,7 +8,7 @@
 
 #include "FG_Build_WalkwayT_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

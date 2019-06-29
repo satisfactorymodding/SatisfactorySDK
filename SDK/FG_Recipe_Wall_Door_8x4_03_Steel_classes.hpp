@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Wall_Door_8x4_03_Steel_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

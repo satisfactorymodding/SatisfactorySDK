@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Build_IngredientInfo_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

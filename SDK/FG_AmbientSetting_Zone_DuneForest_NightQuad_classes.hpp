@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_Zone_DuneForest_NightQuad_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

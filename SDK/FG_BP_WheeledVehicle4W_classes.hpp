@@ -8,7 +8,7 @@
 
 #include "FG_BP_WheeledVehicle4W_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

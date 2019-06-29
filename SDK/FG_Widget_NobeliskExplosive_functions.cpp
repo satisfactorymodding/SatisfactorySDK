@@ -6,7 +6,7 @@
 
 #include "FG_Widget_NobeliskExplosive_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

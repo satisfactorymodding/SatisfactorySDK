@@ -6,7 +6,7 @@
 
 #include "FG_Desc_Fence_01_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

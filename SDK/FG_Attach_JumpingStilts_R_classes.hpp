@@ -8,7 +8,7 @@
 
 #include "FG_Attach_JumpingStilts_R_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

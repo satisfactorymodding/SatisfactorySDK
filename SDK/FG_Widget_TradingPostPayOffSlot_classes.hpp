@@ -8,7 +8,7 @@
 
 #include "FG_Widget_TradingPostPayOffSlot_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -48,7 +48,7 @@ public:
 	void DropOntoInventorySlot(class UWidget_InventorySlot_C* InventorySlot, bool* Result);
 	struct FSlateBrush GetSlotBackgroundBrush();
 	struct FLinearColor GetDarkGrayColor();
-	float GetProgressBarPercent();
+	float GetProgressbarPercent();
 	void SetTextboxFormating();
 	class UWidget* GetCustomTooltip();
 	ESlateVisibility GetPaidOffSlotVisibility();

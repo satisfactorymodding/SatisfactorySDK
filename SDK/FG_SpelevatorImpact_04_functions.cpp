@@ -6,7 +6,7 @@
 
 #include "FG_SpelevatorImpact_04_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

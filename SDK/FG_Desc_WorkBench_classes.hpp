@@ -8,7 +8,7 @@
 
 #include "FG_Desc_WorkBench_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

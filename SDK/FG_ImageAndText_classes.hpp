@@ -8,7 +8,7 @@
 
 #include "FG_ImageAndText_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

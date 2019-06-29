@@ -8,7 +8,7 @@
 
 #include "FG_BP_Locomotive_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -82,6 +82,14 @@ public:
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2(float AxisValue);
 	void ReceiveUnpossessed(class AController** OldController);
 	void ReceivePossessed(class AController** NewController);
+	void MultiCast_TrainHorn_01();
+	void MultiCast_TrainHorn_01_Stop();
+	void MultiCast_TrainHorn_02();
+	void MultiCast_TrainHorn_02_Stop();
+	void Server_Horn_01();
+	void Server_Horn_01_Stop();
+	void Server_Horn_02();
+	void Server_Horn_02_Stop();
 	void ExecuteUbergraph_BP_Locomotive(int EntryPoint);
 };
 

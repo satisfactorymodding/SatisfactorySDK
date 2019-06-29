@@ -8,7 +8,7 @@
 
 #include "FG_Zone_GrassFields_TreeBirds_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

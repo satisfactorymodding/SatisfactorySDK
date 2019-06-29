@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_Nut_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

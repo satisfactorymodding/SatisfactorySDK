@@ -8,7 +8,7 @@
 
 #include "FG_NavQuery_WalkingAI_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_Widget_TabsContainer_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Desc_ColorCartridge_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

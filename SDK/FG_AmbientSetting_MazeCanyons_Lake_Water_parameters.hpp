@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSetting_MazeCanyons_Lake_Water_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

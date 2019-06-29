@@ -6,7 +6,7 @@
 
 #include "FG_DamageType_WorldPerimeter_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

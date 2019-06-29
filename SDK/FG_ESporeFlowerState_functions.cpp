@@ -6,7 +6,7 @@
 
 #include "FG_ESporeFlowerState_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

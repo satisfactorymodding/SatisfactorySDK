@@ -8,7 +8,7 @@
 
 #include "FG_Desc_TrainDockingStation_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Exploration_Caterium1_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

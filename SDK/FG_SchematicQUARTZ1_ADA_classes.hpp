@@ -8,7 +8,7 @@
 
 #include "FG_SchematicQUARTZ1_ADA_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

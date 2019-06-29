@@ -8,7 +8,7 @@
 
 #include "FG_Flower_ApplyDamage_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

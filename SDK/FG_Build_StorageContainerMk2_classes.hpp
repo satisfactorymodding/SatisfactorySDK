@@ -8,7 +8,7 @@
 
 #include "FG_Build_StorageContainerMk2_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -7,11 +7,11 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_BP_Edible_classes.hpp"
 #include "FG_BerryAlternatives_classes.hpp"
+#include "FG_BP_Edible_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

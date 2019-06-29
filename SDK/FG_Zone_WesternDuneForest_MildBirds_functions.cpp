@@ -6,7 +6,7 @@
 
 #include "FG_Zone_WesternDuneForest_MildBirds_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

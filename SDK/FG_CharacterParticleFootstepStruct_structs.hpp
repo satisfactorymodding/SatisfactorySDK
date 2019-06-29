@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_Engine_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs

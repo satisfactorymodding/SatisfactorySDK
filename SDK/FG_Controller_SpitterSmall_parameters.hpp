@@ -8,7 +8,7 @@
 
 #include "FG_Controller_SpitterSmall_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

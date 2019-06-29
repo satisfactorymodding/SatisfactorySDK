@@ -8,7 +8,7 @@
 
 #include "FG_AS_World_CalmWater_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

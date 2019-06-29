@@ -8,7 +8,7 @@
 
 #include "FG_Shared_ChirpBirds_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_BuildPatchServices_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

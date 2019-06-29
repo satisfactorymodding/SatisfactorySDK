@@ -8,7 +8,7 @@
 
 #include "FG_ECreditType_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

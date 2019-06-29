@@ -8,7 +8,7 @@
 
 #include "FG_SC_OilProduction_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

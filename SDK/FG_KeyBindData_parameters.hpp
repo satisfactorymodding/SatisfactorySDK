@@ -8,7 +8,7 @@
 
 #include "FG_KeyBindData_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

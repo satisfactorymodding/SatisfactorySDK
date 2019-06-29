@@ -8,7 +8,7 @@
 
 #include "FG_CustomMeshComponent_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

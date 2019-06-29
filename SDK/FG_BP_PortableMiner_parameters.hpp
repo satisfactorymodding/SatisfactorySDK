@@ -8,7 +8,7 @@
 
 #include "FG_BP_PortableMiner_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

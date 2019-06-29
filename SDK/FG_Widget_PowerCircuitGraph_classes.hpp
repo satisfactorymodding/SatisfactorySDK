@@ -8,7 +8,7 @@
 
 #include "FG_Widget_PowerCircuitGraph_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

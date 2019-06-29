@@ -8,7 +8,7 @@
 
 #include "FG_Desc_Wall_Door_8x4_01_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

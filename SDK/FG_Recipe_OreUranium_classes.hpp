@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_OreUranium_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

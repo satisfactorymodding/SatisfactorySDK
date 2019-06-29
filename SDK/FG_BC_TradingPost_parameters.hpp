@@ -8,7 +8,7 @@
 
 #include "FG_BC_TradingPost_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

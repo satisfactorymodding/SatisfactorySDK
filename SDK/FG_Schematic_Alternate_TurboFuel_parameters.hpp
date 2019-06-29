@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Alternate_TurboFuel_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

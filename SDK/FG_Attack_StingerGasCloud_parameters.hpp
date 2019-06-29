@@ -8,7 +8,7 @@
 
 #include "FG_Attack_StingerGasCloud_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

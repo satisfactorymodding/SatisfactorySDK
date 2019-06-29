@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Scrollbox_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

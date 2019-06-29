@@ -8,7 +8,7 @@
 
 #include "FG_Widget_CraftBench_Category_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

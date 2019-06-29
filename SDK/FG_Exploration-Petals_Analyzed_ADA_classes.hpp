@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Petals_Analyzed_ADA_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

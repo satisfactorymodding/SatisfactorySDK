@@ -8,7 +8,7 @@
 
 #include "FG_Desc_GeneratorGeoThermal_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

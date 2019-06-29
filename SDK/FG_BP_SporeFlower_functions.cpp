@@ -6,7 +6,7 @@
 
 #include "FG_BP_SporeFlower_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

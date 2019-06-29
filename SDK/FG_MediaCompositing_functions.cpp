@@ -6,7 +6,7 @@
 
 #include "FG_MediaCompositing_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -6,11 +6,65 @@
 
 #include "FG_Widget_Train_TimeTable_Rule_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.SetIsNextStop
+// ()
+// Parameters:
+// bool                           mIsNextStop                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Train_TimeTable_Rule_C::SetIsNextStop(bool mIsNextStop)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.SetIsNextStop");
+
+	UWidget_Train_TimeTable_Rule_C_SetIsNextStop_Params params;
+	params.mIsNextStop = mIsNextStop;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnUnhovered
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::OnUnhovered()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnUnhovered");
+
+	UWidget_Train_TimeTable_Rule_C_OnUnhovered_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnHovered
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::OnHovered()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnHovered");
+
+	UWidget_Train_TimeTable_Rule_C_OnHovered_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.PlayNewNameAnim
 // ()
@@ -42,23 +96,6 @@ void UWidget_Train_TimeTable_Rule_C::SetOrderButtonsVisibility(bool UpVisible, b
 	UWidget_Train_TimeTable_Rule_C_SetOrderButtonsVisibility_Params params;
 	params.UpVisible = UpVisible;
 	params.DownVisible = DownVisible;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.PlayFadeAnim
-// ()
-
-void UWidget_Train_TimeTable_Rule_C::PlayFadeAnim()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.PlayFadeAnim");
-
-	UWidget_Train_TimeTable_Rule_C_PlayFadeAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -165,23 +202,6 @@ void UWidget_Train_TimeTable_Rule_C::Construct()
 }
 
 
-// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// ()
-
-void UWidget_Train_TimeTable_Rule_C::BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
-
-	UWidget_Train_TimeTable_Rule_C_BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 // ()
 
@@ -233,6 +253,210 @@ void UWidget_Train_TimeTable_Rule_C::BndEvt__mMoveDown_K2Node_ComponentBoundEven
 }
 
 
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveUp_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mMoveUp_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveUp_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveUp_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveDown_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mMoveDown_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveDown_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveDown_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mButton_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mButton_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_10_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_10_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_10_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_10_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveUp_K2Node_ComponentBoundEvent_11_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mMoveUp_K2Node_ComponentBoundEvent_11_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveUp_K2Node_ComponentBoundEvent_11_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveUp_K2Node_ComponentBoundEvent_11_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveDown_K2Node_ComponentBoundEvent_12_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mMoveDown_K2Node_ComponentBoundEvent_12_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveDown_K2Node_ComponentBoundEvent_12_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveDown_K2Node_ComponentBoundEvent_12_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature
+// ()
+
+void UWidget_Train_TimeTable_Rule_C::BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.ExecuteUbergraph_Widget_Train_TimeTable_Rule
 // ()
 // Parameters:
@@ -244,6 +468,26 @@ void UWidget_Train_TimeTable_Rule_C::ExecuteUbergraph_Widget_Train_TimeTable_Rul
 
 	UWidget_Train_TimeTable_Rule_C_ExecuteUbergraph_Widget_Train_TimeTable_Rule_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnSetCurrentStopClicked__DelegateSignature
+// ()
+// Parameters:
+// class UWidget_Train_TimeTable_Rule_C* RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Train_TimeTable_Rule_C::OnSetCurrentStopClicked__DelegateSignature(class UWidget_Train_TimeTable_Rule_C* RuleWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnSetCurrentStopClicked__DelegateSignature");
+
+	UWidget_Train_TimeTable_Rule_C_OnSetCurrentStopClicked__DelegateSignature_Params params;
+	params.RuleWidget = RuleWidget;
 
 	auto flags = fn->FunctionFlags;
 

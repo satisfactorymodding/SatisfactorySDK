@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Popup_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

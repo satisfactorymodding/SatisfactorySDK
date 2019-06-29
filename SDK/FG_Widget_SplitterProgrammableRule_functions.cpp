@@ -6,7 +6,7 @@
 
 #include "FG_Widget_SplitterProgrammableRule_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

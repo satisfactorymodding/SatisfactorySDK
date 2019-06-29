@@ -8,7 +8,7 @@
 
 #include "FG_Build_AssemblerMk1_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

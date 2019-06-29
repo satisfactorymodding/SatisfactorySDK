@@ -8,7 +8,7 @@
 
 #include "FG_Widget_PlayerHealthBar_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -32,8 +32,8 @@ struct UWidget_PlayerHealthBar_C_GetHealthbar_Params
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.GetProgressBarPercent
-struct UWidget_PlayerHealthBar_C_GetProgressBarPercent_Params
+// Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.GetProgressbarPercent
+struct UWidget_PlayerHealthBar_C_GetProgressbarPercent_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

@@ -8,7 +8,7 @@
 
 #include "FG_Inventory_DropArea_States_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

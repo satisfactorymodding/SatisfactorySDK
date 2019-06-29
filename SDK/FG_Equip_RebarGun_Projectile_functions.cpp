@@ -6,7 +6,7 @@
 
 #include "FG_Equip_RebarGun_Projectile_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

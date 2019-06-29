@@ -6,7 +6,7 @@
 
 #include "FG_BTT_FollowTrackPath_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
@@ -163,23 +163,6 @@ void UBTT_FollowTrackPath_C::StopAllMovement()
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_FollowTrackPath.BTT_FollowTrackPath_C.StopAllMovement");
 
 	UBTT_FollowTrackPath_C_StopAllMovement_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BTT_FollowTrackPath.BTT_FollowTrackPath_C.FinishAborting
-// ()
-
-void UBTT_FollowTrackPath_C::FinishAborting()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BTT_FollowTrackPath.BTT_FollowTrackPath_C.FinishAborting");
-
-	UBTT_FollowTrackPath_C_FinishAborting_Params params;
 
 	auto flags = fn->FunctionFlags;
 

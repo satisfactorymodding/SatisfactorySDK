@@ -6,7 +6,7 @@
 
 #include "FG_BP_CreatureSpawner_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -12,7 +12,7 @@
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_River_Scale_Data_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

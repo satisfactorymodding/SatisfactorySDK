@@ -8,7 +8,7 @@
 
 #include "FG_SpelevatorImpact_04_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

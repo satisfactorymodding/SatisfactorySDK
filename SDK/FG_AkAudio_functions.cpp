@@ -6,7 +6,7 @@
 
 #include "FG_AkAudio_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
@@ -245,6 +245,28 @@ void UAkComponent::SetOutputBusVolume(float BusVolume)
 
 	UAkComponent_SetOutputBusVolume_Params params;
 	params.BusVolume = BusVolume;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AkAudio.AkComponent.SetMultiplePositions
+// ()
+// Parameters:
+// TArray<struct FVector>         Positions                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// EAkMultiPositionType           MultiPositionType              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAkComponent::SetMultiplePositions(TArray<struct FVector> Positions, EAkMultiPositionType MultiPositionType)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetMultiplePositions");
+
+	UAkComponent_SetMultiplePositions_Params params;
+	params.Positions = Positions;
+	params.MultiPositionType = MultiPositionType;
 
 	auto flags = fn->FunctionFlags;
 

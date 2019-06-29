@@ -8,7 +8,7 @@
 
 #include "FG_AudioPlatformConfiguration_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

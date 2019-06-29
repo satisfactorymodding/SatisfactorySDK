@@ -8,11 +8,16 @@
 
 #include "FG_Widget_Locomotive_HUD_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.CheckHasPower
+struct UWidget_Locomotive_HUD_C_CheckHasPower_Params
+{
+};
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.SetSpeedometerPosition
 struct UWidget_Locomotive_HUD_C_SetSpeedometerPosition_Params
@@ -50,6 +55,21 @@ struct UWidget_Locomotive_HUD_C_StopBrakeIndicatorAnim_Params
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.Construct
 struct UWidget_Locomotive_HUD_C_Construct_Params
+{
+};
+
+// Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.CheckIsDocked
+struct UWidget_Locomotive_HUD_C_CheckIsDocked_Params
+{
+};
+
+// Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.Destruct
+struct UWidget_Locomotive_HUD_C_Destruct_Params
+{
+};
+
+// Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.UpdateStats
+struct UWidget_Locomotive_HUD_C_UpdateStats_Params
 {
 };
 

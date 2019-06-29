@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Alternate_NuclearFuelRod1_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_Schematic7-2_ADA_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

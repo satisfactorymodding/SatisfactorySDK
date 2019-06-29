@@ -6,7 +6,7 @@
 
 #include "FG_Renderer_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

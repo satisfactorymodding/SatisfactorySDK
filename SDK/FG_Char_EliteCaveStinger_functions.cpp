@@ -6,7 +6,7 @@
 
 #include "FG_Char_EliteCaveStinger_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

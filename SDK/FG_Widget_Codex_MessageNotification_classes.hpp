@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Codex_MessageNotification_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

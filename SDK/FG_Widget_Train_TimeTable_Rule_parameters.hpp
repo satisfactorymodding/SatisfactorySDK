@@ -8,11 +8,27 @@
 
 #include "FG_Widget_Train_TimeTable_Rule_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.SetIsNextStop
+struct UWidget_Train_TimeTable_Rule_C_SetIsNextStop_Params
+{
+	bool                                               mIsNextStop;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnUnhovered
+struct UWidget_Train_TimeTable_Rule_C_OnUnhovered_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnHovered
+struct UWidget_Train_TimeTable_Rule_C_OnHovered_Params
+{
+};
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.PlayNewNameAnim
 struct UWidget_Train_TimeTable_Rule_C_PlayNewNameAnim_Params
@@ -24,11 +40,6 @@ struct UWidget_Train_TimeTable_Rule_C_SetOrderButtonsVisibility_Params
 {
 	bool                                               UpVisible;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               DownVisible;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.PlayFadeAnim
-struct UWidget_Train_TimeTable_Rule_C_PlayFadeAnim_Params
-{
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.UpdateRule
@@ -60,11 +71,6 @@ struct UWidget_Train_TimeTable_Rule_C_Construct_Params
 {
 };
 
-// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-struct UWidget_Train_TimeTable_Rule_C_BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 struct UWidget_Train_TimeTable_Rule_C_BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params
 {
@@ -80,10 +86,76 @@ struct UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveDown_K2Node_ComponentBoundEve
 {
 };
 
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveUp_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveUp_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveDown_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveDown_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mButton_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mButton_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_10_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_10_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveUp_K2Node_ComponentBoundEvent_11_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveUp_K2Node_ComponentBoundEvent_11_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mMoveDown_K2Node_ComponentBoundEvent_12_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mMoveDown_K2Node_ComponentBoundEvent_12_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_BndEvt__mSetCurrentStopButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.ExecuteUbergraph_Widget_Train_TimeTable_Rule
 struct UWidget_Train_TimeTable_Rule_C_ExecuteUbergraph_Widget_Train_TimeTable_Rule_Params
 {
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnSetCurrentStopClicked__DelegateSignature
+struct UWidget_Train_TimeTable_Rule_C_OnSetCurrentStopClicked__DelegateSignature_Params
+{
+	class UWidget_Train_TimeTable_Rule_C*              RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnMoveDownClicked__DelegateSignature

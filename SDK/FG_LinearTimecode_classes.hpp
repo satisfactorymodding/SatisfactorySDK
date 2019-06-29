@@ -8,7 +8,7 @@
 
 #include "FG_LinearTimecode_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

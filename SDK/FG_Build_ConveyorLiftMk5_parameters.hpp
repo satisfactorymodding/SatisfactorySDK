@@ -8,7 +8,7 @@
 
 #include "FG_Build_ConveyorLiftMk5_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

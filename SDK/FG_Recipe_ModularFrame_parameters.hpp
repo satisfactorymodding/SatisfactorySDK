@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_ModularFrame_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

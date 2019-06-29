@@ -8,7 +8,7 @@
 
 #include "FG_Attack_SpitterSingle_Big_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

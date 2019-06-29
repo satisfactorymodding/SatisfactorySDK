@@ -8,7 +8,7 @@
 
 #include "FG_Schematic4-1_ADA-S08Message_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

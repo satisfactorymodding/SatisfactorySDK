@@ -8,7 +8,7 @@
 
 #include "FG_World_DesertCanyons_DayNight_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_Anim_NonFlyingBird_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

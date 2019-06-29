@@ -6,7 +6,7 @@
 
 #include "FG_Widget_CodexEntry_Buildings_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

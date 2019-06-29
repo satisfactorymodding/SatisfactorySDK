@@ -8,7 +8,7 @@
 
 #include "FG_Widget_EmoteMenu_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

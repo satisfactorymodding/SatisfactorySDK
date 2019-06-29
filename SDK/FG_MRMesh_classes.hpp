@@ -8,7 +8,7 @@
 
 #include "FG_MRMesh_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

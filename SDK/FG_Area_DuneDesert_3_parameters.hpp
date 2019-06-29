@@ -8,7 +8,7 @@
 
 #include "FG_Area_DuneDesert_3_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Zone_CraterLakes_DayNight_Atmos_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

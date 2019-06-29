@@ -8,7 +8,7 @@
 
 #include "FG_Persistent_Level_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

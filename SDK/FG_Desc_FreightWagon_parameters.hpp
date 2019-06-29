@@ -8,7 +8,7 @@
 
 #include "FG_Desc_FreightWagon_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

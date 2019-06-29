@@ -8,7 +8,7 @@
 
 #include "FG_Ambient_Settings_Crater_Lake_Atmos_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

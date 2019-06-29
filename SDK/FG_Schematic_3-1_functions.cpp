@@ -6,7 +6,7 @@
 
 #include "FG_Schematic_3-1_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

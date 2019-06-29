@@ -6,7 +6,7 @@
 
 #include "FG_BP_Locomotive_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
@@ -705,6 +705,142 @@ void ABP_Locomotive_C::ReceivePossessed(class AController** NewController)
 
 	ABP_Locomotive_C_ReceivePossessed_Params params;
 	params.NewController = NewController;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_01
+// ()
+
+void ABP_Locomotive_C::MultiCast_TrainHorn_01()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_01");
+
+	ABP_Locomotive_C_MultiCast_TrainHorn_01_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_01_Stop
+// ()
+
+void ABP_Locomotive_C::MultiCast_TrainHorn_01_Stop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_01_Stop");
+
+	ABP_Locomotive_C_MultiCast_TrainHorn_01_Stop_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_02
+// ()
+
+void ABP_Locomotive_C::MultiCast_TrainHorn_02()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_02");
+
+	ABP_Locomotive_C_MultiCast_TrainHorn_02_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_02_Stop
+// ()
+
+void ABP_Locomotive_C::MultiCast_TrainHorn_02_Stop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_02_Stop");
+
+	ABP_Locomotive_C_MultiCast_TrainHorn_02_Stop_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.Server_Horn_01
+// ()
+
+void ABP_Locomotive_C::Server_Horn_01()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.Server_Horn_01");
+
+	ABP_Locomotive_C_Server_Horn_01_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.Server_Horn_01_Stop
+// ()
+
+void ABP_Locomotive_C::Server_Horn_01_Stop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.Server_Horn_01_Stop");
+
+	ABP_Locomotive_C_Server_Horn_01_Stop_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.Server_Horn_02
+// ()
+
+void ABP_Locomotive_C::Server_Horn_02()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.Server_Horn_02");
+
+	ABP_Locomotive_C_Server_Horn_02_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.Server_Horn_02_Stop
+// ()
+
+void ABP_Locomotive_C::Server_Horn_02_Stop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.Server_Horn_02_Stop");
+
+	ABP_Locomotive_C_Server_Horn_02_Stop_Params params;
 
 	auto flags = fn->FunctionFlags;
 

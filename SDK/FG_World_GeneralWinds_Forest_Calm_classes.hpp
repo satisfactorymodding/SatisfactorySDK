@@ -8,7 +8,7 @@
 
 #include "FG_World_GeneralWinds_Forest_Calm_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

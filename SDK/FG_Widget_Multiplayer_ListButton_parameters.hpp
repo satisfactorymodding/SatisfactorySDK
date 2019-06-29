@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Multiplayer_ListButton_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -71,7 +71,7 @@ struct UWidget_Multiplayer_ListButton_C_Internal_UpdateButton_Params
 {
 	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               IsOnline;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       additionalInfo;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       AdditionalInfo;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                PlayersInSession;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               privateSession;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                TimePlayed;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -84,7 +84,7 @@ struct UWidget_Multiplayer_ListButton_C_Internal_UpdateButton_Params
 	struct FText                                       actionButtonTooltip;                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               inAGame;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FBlueprintSessionResult                     session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               isSelectable;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsSelectable;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsNonInteractable;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	ECachedNATType                                     natType;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsHost;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

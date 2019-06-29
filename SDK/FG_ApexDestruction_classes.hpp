@@ -8,7 +8,7 @@
 
 #include "FG_ApexDestruction_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

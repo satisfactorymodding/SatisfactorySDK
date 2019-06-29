@@ -8,7 +8,7 @@
 
 #include "FG_Zone_WesternDuneForest_TreeBird2_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

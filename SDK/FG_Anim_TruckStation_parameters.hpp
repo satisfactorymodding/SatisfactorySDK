@@ -8,7 +8,7 @@
 
 #include "FG_Anim_TruckStation_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

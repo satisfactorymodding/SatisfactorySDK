@@ -6,7 +6,7 @@
 
 #include "FG_Ambient_Setting_Zone_DuneDesert_Main_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

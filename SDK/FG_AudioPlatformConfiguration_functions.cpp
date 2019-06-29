@@ -6,7 +6,7 @@
 
 #include "FG_AudioPlatformConfiguration_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

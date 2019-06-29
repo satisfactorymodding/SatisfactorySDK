@@ -8,7 +8,7 @@
 
 #include "FG_WalkerAnimBP_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

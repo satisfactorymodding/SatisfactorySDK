@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_GeneratorFuel_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

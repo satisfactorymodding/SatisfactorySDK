@@ -6,7 +6,7 @@
 
 #include "FG_BTT_EnemyAttack_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

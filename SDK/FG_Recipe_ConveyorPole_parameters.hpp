@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_ConveyorPole_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

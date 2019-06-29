@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_AlienOrgans1_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

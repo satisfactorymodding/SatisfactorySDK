@@ -8,7 +8,7 @@
 
 #include "FG_World_GeneralWinds_General_Day_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

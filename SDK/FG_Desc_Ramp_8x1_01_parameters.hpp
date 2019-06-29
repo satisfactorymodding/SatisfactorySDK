@@ -8,7 +8,7 @@
 
 #include "FG_Desc_Ramp_8x1_01_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

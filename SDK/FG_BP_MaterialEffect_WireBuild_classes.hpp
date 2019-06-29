@@ -8,7 +8,7 @@
 
 #include "FG_BP_MaterialEffect_WireBuild_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

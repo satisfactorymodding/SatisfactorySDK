@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Train_DockingStation_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -42,6 +42,7 @@ public:
 	}
 
 
+	void DropInventorySlotStack(class UWidget_InventorySlot_C** InventorySlot, bool* WasStackMoved);
 	void SetHeaderText();
 	void GetLoadingModeButton();
 	void DumpAllToInventory(class UFGInventoryComponent* SourceComponent);

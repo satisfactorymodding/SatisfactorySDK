@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_HardDrive_Repeatable_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

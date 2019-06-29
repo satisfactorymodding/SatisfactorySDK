@@ -6,7 +6,7 @@
 
 #include "FG_ImgMediaFactory_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

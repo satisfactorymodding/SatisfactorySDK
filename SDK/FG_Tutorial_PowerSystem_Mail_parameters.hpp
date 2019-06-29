@@ -8,7 +8,7 @@
 
 #include "FG_Tutorial_PowerSystem_Mail_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

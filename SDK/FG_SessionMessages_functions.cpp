@@ -6,7 +6,7 @@
 
 #include "FG_SessionMessages_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

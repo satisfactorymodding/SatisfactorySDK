@@ -8,7 +8,7 @@
 
 #include "FG_Area_RedJungle_3_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

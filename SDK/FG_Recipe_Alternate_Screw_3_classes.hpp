@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_Alternate_Screw_3_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

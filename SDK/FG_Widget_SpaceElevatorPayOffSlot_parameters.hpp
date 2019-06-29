@@ -8,7 +8,7 @@
 
 #include "FG_Widget_SpaceElevatorPayOffSlot_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -51,8 +51,8 @@ struct UWidget_SpaceElevatorPayOffSlot_C_GetPaidOffFeedbackImage_Params
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressBarPercent
-struct UWidget_SpaceElevatorPayOffSlot_C_GetProgressBarPercent_Params
+// Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressbarPercent
+struct UWidget_SpaceElevatorPayOffSlot_C_GetProgressbarPercent_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

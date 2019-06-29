@@ -6,7 +6,7 @@
 
 #include "FG_AmbientSetting_Zone_LakeForest_Thick_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_Zone_Savanna_Daynight_Atmos_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_ECreditType_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

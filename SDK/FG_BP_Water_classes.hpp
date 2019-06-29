@@ -8,7 +8,7 @@
 
 #include "FG_BP_Water_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

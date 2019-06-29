@@ -8,7 +8,7 @@
 
 #include "FG_Build_ConveyorBeltMk1_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_Widget_BuildMenu_SubCategoryButtons_Container_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

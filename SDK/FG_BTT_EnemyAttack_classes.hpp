@@ -8,7 +8,7 @@
 
 #include "FG_BTT_EnemyAttack_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

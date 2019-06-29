@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Alternate_IngotSteel2_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

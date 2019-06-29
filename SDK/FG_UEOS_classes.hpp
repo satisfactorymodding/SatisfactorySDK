@@ -8,7 +8,7 @@
 
 #include "FG_UEOS_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

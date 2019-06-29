@@ -8,7 +8,7 @@
 
 #include "FG_Debug_Aggro_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

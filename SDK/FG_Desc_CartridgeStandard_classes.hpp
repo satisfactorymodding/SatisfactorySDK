@@ -8,7 +8,7 @@
 
 #include "FG_Desc_CartridgeStandard_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_Widget_PopupContentImageButton_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

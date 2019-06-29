@@ -9,10 +9,10 @@
 #include "FG_Basic.hpp"
 #include "FG_FactoryGame_classes.hpp"
 #include "FG_Engine_classes.hpp"
-#include "FG_UMG_classes.hpp"
 #include "FG_SlateCore_classes.hpp"
+#include "FG_UMG_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

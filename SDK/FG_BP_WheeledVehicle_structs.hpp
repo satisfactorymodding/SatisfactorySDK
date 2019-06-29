@@ -13,7 +13,7 @@
 #include "FG_SlateCore_classes.hpp"
 #include "FG_InputCore_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

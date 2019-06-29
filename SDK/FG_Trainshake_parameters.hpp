@@ -8,7 +8,7 @@
 
 #include "FG_Trainshake_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

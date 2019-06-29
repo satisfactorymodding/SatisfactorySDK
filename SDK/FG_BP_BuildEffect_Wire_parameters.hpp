@@ -8,7 +8,7 @@
 
 #include "FG_BP_BuildEffect_Wire_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

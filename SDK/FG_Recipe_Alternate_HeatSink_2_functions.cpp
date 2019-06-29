@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Alternate_HeatSink_2_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

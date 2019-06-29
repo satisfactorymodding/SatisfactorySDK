@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_Slug1_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

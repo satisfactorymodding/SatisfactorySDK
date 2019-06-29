@@ -8,7 +8,7 @@
 
 #include "FG_Attach_GasMask_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

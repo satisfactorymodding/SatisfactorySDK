@@ -6,7 +6,7 @@
 
 #include "FG_Shared_NightWilderness_01_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -8,7 +8,7 @@
 
 #include "FG_AppleImageUtils_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -6,7 +6,7 @@
 
 #include "FG_World_DesertCanyons_DayNight_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

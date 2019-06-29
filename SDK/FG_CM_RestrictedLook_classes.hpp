@@ -8,7 +8,7 @@
 
 #include "FG_CM_RestrictedLook_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

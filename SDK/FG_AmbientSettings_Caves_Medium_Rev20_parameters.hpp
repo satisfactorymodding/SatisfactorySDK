@@ -8,7 +8,7 @@
 
 #include "FG_AmbientSettings_Caves_Medium_Rev20_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

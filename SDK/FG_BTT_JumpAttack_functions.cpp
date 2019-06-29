@@ -6,7 +6,7 @@
 
 #include "FG_BTT_JumpAttack_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

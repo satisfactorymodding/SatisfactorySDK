@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-Fabric_ADA_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

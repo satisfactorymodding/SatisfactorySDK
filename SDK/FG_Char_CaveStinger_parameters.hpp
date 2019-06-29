@@ -8,7 +8,7 @@
 
 #include "FG_Char_CaveStinger_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

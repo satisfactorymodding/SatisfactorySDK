@@ -8,7 +8,7 @@
 
 #include "FG_EngineMessages_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

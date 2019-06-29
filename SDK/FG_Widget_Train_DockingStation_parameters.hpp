@@ -8,11 +8,18 @@
 
 #include "FG_Widget_Train_DockingStation_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Widget_Train_DockingStation.Widget_Train_DockingStation_C.DropInventorySlotStack
+struct UWidget_Train_DockingStation_C_DropInventorySlotStack_Params
+{
+	class UWidget_InventorySlot_C**                    InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               WasStackMoved;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Widget_Train_DockingStation.Widget_Train_DockingStation_C.SetHeaderText
 struct UWidget_Train_DockingStation_C_SetHeaderText_Params

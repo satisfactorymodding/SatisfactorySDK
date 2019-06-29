@@ -8,7 +8,7 @@
 
 #include "FG_Renderer_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

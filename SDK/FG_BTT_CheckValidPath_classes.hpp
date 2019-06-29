@@ -8,7 +8,7 @@
 
 #include "FG_BTT_CheckValidPath_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

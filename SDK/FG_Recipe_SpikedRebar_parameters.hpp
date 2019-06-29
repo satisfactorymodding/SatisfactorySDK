@@ -8,7 +8,7 @@
 
 #include "FG_Recipe_SpikedRebar_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

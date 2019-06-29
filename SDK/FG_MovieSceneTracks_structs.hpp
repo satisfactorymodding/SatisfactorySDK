@@ -11,7 +11,7 @@
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Enums

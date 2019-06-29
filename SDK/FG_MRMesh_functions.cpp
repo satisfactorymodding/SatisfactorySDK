@@ -6,7 +6,7 @@
 
 #include "FG_MRMesh_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

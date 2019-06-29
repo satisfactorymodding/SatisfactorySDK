@@ -8,7 +8,7 @@
 
 #include "FG_Build_Wall_Conveyor_8x4_02_Steel_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

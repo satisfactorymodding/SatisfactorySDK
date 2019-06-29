@@ -8,7 +8,7 @@
 
 #include "FG_BP_SproutAnim_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

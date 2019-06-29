@@ -9,7 +9,7 @@
 #include "FG_Basic.hpp"
 #include "FG_BP_LocomotiveAnim_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

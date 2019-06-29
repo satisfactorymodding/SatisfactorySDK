@@ -8,7 +8,7 @@
 
 #include "FG_Equip_ColorGun_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

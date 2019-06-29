@@ -8,7 +8,7 @@
 
 #include "FG_Widget_ColorPicker_Module_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

@@ -8,7 +8,7 @@
 
 #include "FG_Char_NonFlyingBird_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

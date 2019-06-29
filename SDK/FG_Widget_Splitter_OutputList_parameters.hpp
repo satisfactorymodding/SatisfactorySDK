@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Splitter_OutputList_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

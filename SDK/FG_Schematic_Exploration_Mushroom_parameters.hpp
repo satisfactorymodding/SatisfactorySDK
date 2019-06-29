@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_Exploration_Mushroom_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

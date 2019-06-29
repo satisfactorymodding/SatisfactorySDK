@@ -6,7 +6,7 @@
 
 #include "FG_TcpMessaging_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

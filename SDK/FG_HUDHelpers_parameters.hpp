@@ -8,11 +8,19 @@
 
 #include "FG_HUDHelpers_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function HUDHelpers.HUDHelpers_C.GetDefaultRCO
+struct UHUDHelpers_C_GetDefaultRCO_Params
+{
+	class APlayerController*                           OwningPlayer;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UBP_RemoteCallObject_C*                      RCO;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function HUDHelpers.HUDHelpers_C.IsInMainMenu
 struct UHUDHelpers_C_IsInMainMenu_Params

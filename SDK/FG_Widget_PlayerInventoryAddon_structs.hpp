@@ -11,7 +11,7 @@
 #include "FG_Engine_classes.hpp"
 #include "FG_InteractionDirection_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

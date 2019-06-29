@@ -8,7 +8,7 @@
 
 #include "FG_Exploration-WAT1_ADA_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

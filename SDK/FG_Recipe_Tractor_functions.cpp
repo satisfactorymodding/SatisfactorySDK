@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_Tractor_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

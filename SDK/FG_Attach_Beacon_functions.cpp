@@ -6,7 +6,7 @@
 
 #include "FG_Attach_Beacon_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

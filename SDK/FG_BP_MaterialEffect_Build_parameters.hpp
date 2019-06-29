@@ -8,7 +8,7 @@
 
 #include "FG_BP_MaterialEffect_Build_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

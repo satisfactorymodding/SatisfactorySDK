@@ -6,7 +6,7 @@
 
 #include "FG_Widget_Subtitle_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

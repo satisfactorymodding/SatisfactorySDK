@@ -10,7 +10,7 @@
 #include "FG_BP_MenuBase_classes.hpp"
 #include "FG_Engine_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 }
 

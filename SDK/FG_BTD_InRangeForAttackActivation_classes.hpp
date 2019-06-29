@@ -8,7 +8,7 @@
 
 #include "FG_BTD_InRangeForAttackActivation_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

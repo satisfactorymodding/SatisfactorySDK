@@ -6,7 +6,7 @@
 
 #include "FG_River_Scale_Data_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

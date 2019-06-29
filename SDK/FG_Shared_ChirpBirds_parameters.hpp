@@ -8,7 +8,7 @@
 
 #include "FG_Shared_ChirpBirds_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

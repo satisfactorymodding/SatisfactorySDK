@@ -8,7 +8,7 @@
 
 #include "FG_Schematic_4-1_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

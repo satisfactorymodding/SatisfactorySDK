@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Multiplayer_ListButton_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes
@@ -83,7 +83,7 @@ public:
 	void SetupForManagePlayers(class AFGPlayerState* PlayerState);
 	void SetupForJoinInvite(struct FPendingInvite* invite);
 	void SetupForSendInvite(struct FFGOnlineFriend* _friend);
-	void Internal_UpdateButton(const struct FText& Title, bool IsOnline, const struct FText& additionalInfo, int PlayersInSession, bool privateSession, int TimePlayed, const struct FText& ActionButtonText, bool hideSessionInfo, bool isPlayingSatisfactory, bool hideActionButton, bool hideSecondaryActionButton, bool disableActionButton, const struct FText& actionButtonTooltip, bool inAGame, const struct FBlueprintSessionResult& session, bool isSelectable, bool IsNonInteractable, ECachedNATType natType, bool IsHost, bool careAboutNAT);
+	void Internal_UpdateButton(const struct FText& Title, bool IsOnline, const struct FText& AdditionalInfo, int PlayersInSession, bool privateSession, int TimePlayed, const struct FText& ActionButtonText, bool hideSessionInfo, bool isPlayingSatisfactory, bool hideActionButton, bool hideSecondaryActionButton, bool disableActionButton, const struct FText& actionButtonTooltip, bool inAGame, const struct FBlueprintSessionResult& session, bool IsSelectable, bool IsNonInteractable, ECachedNATType natType, bool IsHost, bool careAboutNAT);
 	void SetupForJoinGame(struct FFGOnlineFriend* _friend);
 	void SetButtonColor(const struct FLinearColor& Color);
 	void ClearListSelection();

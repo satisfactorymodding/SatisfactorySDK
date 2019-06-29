@@ -6,7 +6,7 @@
 
 #include "FG_BP_FrontWheelExplorer_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

@@ -6,7 +6,7 @@
 
 #include "FG_Equip_JetPack_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

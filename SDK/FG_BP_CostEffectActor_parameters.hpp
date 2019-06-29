@@ -8,7 +8,7 @@
 
 #include "FG_BP_CostEffectActor_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -6,7 +6,7 @@
 
 #include "FG_Recipe_ConstructorMk1_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

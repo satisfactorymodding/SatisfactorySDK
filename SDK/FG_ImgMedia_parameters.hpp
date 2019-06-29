@@ -8,7 +8,7 @@
 
 #include "FG_ImgMedia_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

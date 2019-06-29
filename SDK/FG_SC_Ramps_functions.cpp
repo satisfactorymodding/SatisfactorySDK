@@ -6,7 +6,7 @@
 
 #include "FG_SC_Ramps_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

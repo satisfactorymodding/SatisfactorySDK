@@ -8,7 +8,7 @@
 
 #include "FG_BC_Logistics_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

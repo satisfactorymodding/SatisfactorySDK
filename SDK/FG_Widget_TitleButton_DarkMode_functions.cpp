@@ -6,7 +6,7 @@
 
 #include "FG_Widget_TitleButton_DarkMode_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions

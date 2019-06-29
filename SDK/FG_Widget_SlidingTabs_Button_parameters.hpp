@@ -8,7 +8,7 @@
 
 #include "FG_Widget_SlidingTabs_Button_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -17,7 +17,7 @@ namespace SDKEXP
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.SetBackgroundVisibility
 struct UWidget_SlidingTabs_Button_C_SetBackgroundVisibility_Params
 {
-	bool                                               Visible;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               visible;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.SetIcon

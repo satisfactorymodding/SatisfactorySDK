@@ -8,7 +8,7 @@
 
 #include "FG_ParachuteMesh_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

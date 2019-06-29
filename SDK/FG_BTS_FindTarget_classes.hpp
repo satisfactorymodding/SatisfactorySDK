@@ -8,7 +8,7 @@
 
 #include "FG_BTS_FindTarget_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

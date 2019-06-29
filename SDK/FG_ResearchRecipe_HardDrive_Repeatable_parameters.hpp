@@ -8,7 +8,7 @@
 
 #include "FG_ResearchRecipe_HardDrive_Repeatable_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_FactoryGame_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters
@@ -1042,6 +1042,12 @@ struct UFGBlueprintFunctionLibrary_AddAmbientSoundSplineToSignificanceManager_Pa
 {
 	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     Obj;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBoundedTextRenderComponent.AssignBoundingBox
+struct UFGBoundedTextRenderComponent_AssignBoundingBox_Params
+{
+	class UBoxComponent*                               BoxComponent;                                             // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildable.ShowHighlightEffect
@@ -2154,6 +2160,12 @@ struct AFGBuildableTrainPlatformCargo_OnTransferComplete_Params
 {
 };
 
+// Function FactoryGame.FGBuildableTrainPlatformCargo.OnCargoPowerStateChanged
+struct AFGBuildableTrainPlatformCargo_OnCargoPowerStateChanged_Params
+{
+	bool                                               HasPower;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function FactoryGame.FGBuildableTrainPlatformCargo.OnBeginUnloadSequence
 struct AFGBuildableTrainPlatformCargo_OnBeginUnloadSequence_Params
 {
@@ -2180,6 +2192,12 @@ struct AFGBuildableTrainPlatformCargo_GetIsInLoadMode_Params
 struct AFGBuildableTrainPlatformCargo_GetInventory_Params
 {
 	class UFGInventoryComponent*                       ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildableTrainPlatformCargo.GetDockedVehicleOffset
+struct AFGBuildableTrainPlatformCargo_GetDockedVehicleOffset_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildableTrainPlatformCargo.GetDockedActor
@@ -8378,6 +8396,18 @@ struct UFGRailroadVehicleMovementComponent_GetWheelsetOffset_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGRailroadVehicleMovementComponent.GetWheelsetAngle
+struct UFGRailroadVehicleMovementComponent_GetWheelsetAngle_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGRailroadVehicleMovementComponent.GetWheelRotation
+struct UFGRailroadVehicleMovementComponent_GetWheelRotation_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function FactoryGame.FGRailroadVehicleMovementComponent.GetTractiveForce
 struct UFGRailroadVehicleMovementComponent_GetTractiveForce_Params
 {
@@ -12514,6 +12544,12 @@ struct AFGTrain_GetMaxAirBrakeDeceleration_Params
 struct AFGTrain_GetLastVehicle_Params
 {
 	class AFGRailroadVehicle*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.GetIsDocked
+struct AFGTrain_GetIsDocked_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGTrain.GetFirstVehicle

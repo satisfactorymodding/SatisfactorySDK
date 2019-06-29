@@ -8,7 +8,7 @@
 
 #include "FG_Widget_Train_TimeTable_AvilableStations_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

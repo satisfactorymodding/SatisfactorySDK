@@ -8,7 +8,7 @@
 
 #include "FG_Widget_ActorDetails_Hub_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

@@ -8,7 +8,7 @@
 
 #include "FG_AS_River_Rapid_PreFall_classes.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Parameters

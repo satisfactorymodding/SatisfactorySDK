@@ -8,7 +8,7 @@
 
 #include "FG_Desc_Wall_8x4_02_structs.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Classes

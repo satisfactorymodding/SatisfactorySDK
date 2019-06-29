@@ -6,7 +6,7 @@
 
 #include "FG_SC_Vehicles_parameters.hpp"
 
-namespace SDKEXP
+namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
