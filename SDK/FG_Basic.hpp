@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -511,6 +511,24 @@ template<typename ObjectType>
 class TLazyObjectPtr : FLazyObjectPtr
 {
 
+};
+
+class UClass;
+
+template<class TClass>
+class TSubclassOf
+{
+public:
+	TSubclassOf(UClass* Class) {
+		this->Class = Class;
+	}
+
+	inline UClass* GetClass()
+	{
+		return Class;
+	}
+private:
+	UClass* Class;
 };
 }
 

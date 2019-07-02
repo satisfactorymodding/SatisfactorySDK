@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct UBP_MenuBase_C_PlayEnterAnimation_Params
 struct UBP_MenuBase_C_ShouldAnimateBackground_Params
 {
 	class UWidget*                                     prevMenu;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               animate;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Animate;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MenuBase.BP_MenuBase_C.RestoreFocusOnPopupClosed

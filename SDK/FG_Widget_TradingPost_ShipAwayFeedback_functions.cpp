@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,16 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_TradingPost_ShipAwayFeedback.Widget_TradingPost_ShipAwayFeedback_C.GetProgressbarVisibility
+// Function Widget_TradingPost_ShipAwayFeedback.Widget_TradingPost_ShipAwayFeedback_C.GetProgressBarVisibility
 // ()
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UWidget_TradingPost_ShipAwayFeedback_C::GetProgressbarVisibility()
+ESlateVisibility UWidget_TradingPost_ShipAwayFeedback_C::GetProgressBarVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_ShipAwayFeedback.Widget_TradingPost_ShipAwayFeedback_C.GetProgressbarVisibility");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_ShipAwayFeedback.Widget_TradingPost_ShipAwayFeedback_C.GetProgressBarVisibility");
 
-	UWidget_TradingPost_ShipAwayFeedback_C_GetProgressbarVisibility_Params params;
+	UWidget_TradingPost_ShipAwayFeedback_C_GetProgressBarVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Widget_NewsFeed.Widget_NewsFeed_C.GetStringFromTag
+struct UWidget_NewsFeed_C_GetStringFromTag_Params
+{
+	class FString                                      TagName;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class FString                                      SourceString;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class FString                                      OutString;                                                // (Parm, OutParm, ZeroConstructor)
+	class FString                                      OutSource;                                                // (Parm, OutParm, ZeroConstructor)
+	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Widget_NewsFeed.Widget_NewsFeed_C.GetNewsHeaderText
 struct UWidget_NewsFeed_C_GetNewsHeaderText_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetTitle
+struct UWidget_FrontEnd_Button_C_SetTitle_Params
+{
+	struct FText                                       mDisplayName;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetActiveWidgetInSwitcher
 struct UWidget_FrontEnd_Button_C_SetActiveWidgetInSwitcher_Params
@@ -33,7 +39,7 @@ struct UWidget_FrontEnd_Button_C_GetButtonTextColor_Params
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.GetButtonColor
 struct UWidget_FrontEnd_Button_C_GetButtonColor_Params
 {
-	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetFocused

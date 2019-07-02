@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetTitle
+// ()
+// Parameters:
+// struct FText                   mDisplayName                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_FrontEnd_Button_C::SetTitle(const struct FText& mDisplayName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetTitle");
+
+	UWidget_FrontEnd_Button_C_SetTitle_Params params;
+	params.mDisplayName = mDisplayName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetActiveWidgetInSwitcher
 // ()
@@ -70,7 +90,7 @@ struct FSlateColor UWidget_FrontEnd_Button_C::GetButtonTextColor()
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.GetButtonColor
 // ()
 // Parameters:
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FLinearColor UWidget_FrontEnd_Button_C::GetButtonColor()
 {

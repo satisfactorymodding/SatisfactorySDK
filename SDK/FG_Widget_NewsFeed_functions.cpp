@@ -1,4 +1,4 @@
-// Satisfactory SDK (V0.1.13 - Build 99427)
+// Satisfactory SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,38 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Widget_NewsFeed.Widget_NewsFeed_C.GetStringFromTag
+// ()
+// Parameters:
+// class FString                  TagName                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString                  SourceString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString                  OutString                      (Parm, OutParm, ZeroConstructor)
+// class FString                  OutSource                      (Parm, OutParm, ZeroConstructor)
+// bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_NewsFeed_C::GetStringFromTag(const class FString& TagName, const class FString& SourceString, class FString* OutString, class FString* OutSource, bool* Success)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_NewsFeed.Widget_NewsFeed_C.GetStringFromTag");
+
+	UWidget_NewsFeed_C_GetStringFromTag_Params params;
+	params.TagName = TagName;
+	params.SourceString = SourceString;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutString != nullptr)
+		*OutString = params.OutString;
+	if (OutSource != nullptr)
+		*OutSource = params.OutSource;
+	if (Success != nullptr)
+		*Success = params.Success;
+}
+
 
 // Function Widget_NewsFeed.Widget_NewsFeed_C.GetNewsHeaderText
 // ()
