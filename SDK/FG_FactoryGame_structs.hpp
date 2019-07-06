@@ -8,11 +8,11 @@
 
 #include "FG_Basic.hpp"
 #include "FG_GameplayTasks_classes.hpp"
+#include "FG_UMG_classes.hpp"
 #include "FG_AIModule_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_InputCore_classes.hpp"
 #include "FG_Engine_classes.hpp"
-#include "FG_UMG_classes.hpp"
 #include "FG_SlateCore_classes.hpp"
 #include "FG_Slate_classes.hpp"
 #include "FG_ApexDestruction_classes.hpp"
@@ -733,10 +733,10 @@ struct FConnectionItemStruct
 };
 
 // ScriptStruct FactoryGame.ConveyorBeltItems
-// 0x0170
+// 0x0178
 struct FConveyorBeltItems
 {
-	unsigned char                                      UnknownData00[0x170];                                     // 0x0000(0x0170) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x178];                                     // 0x0000(0x0178) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.FoundationSideSelectionFlags
