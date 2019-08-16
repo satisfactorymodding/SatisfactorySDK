@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Char_Player.Char_Player_C
-// 0x01D8 (0x0CD8 - 0x0B00)
+// 0x01F4 (0x0CF4 - 0x0B00)
 class AChar_Player_C : public AFGCharacterPlayer
 {
 public:
@@ -89,6 +89,9 @@ public:
 	unsigned char                                      UnknownData03[0x7];                                       // 0x0CB1(0x0007) MISSED OFFSET
 	struct FText                                       mMapText;                                                 // 0x0CB8(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
 	class UMaterialInstanceDynamic*                    mRadiationNoise;                                          // 0x0CD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FTimerHandle                                mWarningPopupTimer;                                       // 0x0CD8(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FText>                               mPlaytimeWarningMessages;                                 // 0x0CE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                mPlaytimeWarningMessageIndex;                             // 0x0CF0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -97,6 +100,8 @@ public:
 	}
 
 
+	ECompassViewDistance GetActorCompassViewDistance();
+	ECompassViewDistance SetActorCompassViewDistance(ECompassViewDistance compassViewDistance);
 	struct FText SetActorRepresentationText(const struct FText& newText);
 	bool UpdateRepresentation();
 	struct FLinearColor GetActorRepresentationColor();
@@ -138,9 +143,9 @@ public:
 	void InpActEvt_Inventory_K2Node_InputActionEvent_3(const struct FKey& Key);
 	void InpActEvt_EmoteWheel_K2Node_InputActionEvent_2(const struct FKey& Key);
 	void InpActEvt_EmoteWheel_K2Node_InputActionEvent_1(const struct FKey& Key);
+	void CameraTick();
 	void SetFirstPersonMode();
 	void SetThirdPersonMode();
-	void CameraTick();
 	void StartFocusAim();
 	void StopFocusAim();
 	void StartFreeRotate3P();
@@ -152,13 +157,13 @@ public:
 	void PlayPickupEffects();
 	void SnapSpringArmToDesiredLocation();
 	void OnReviveComplete();
+	void ReceivePossessed(class AController** NewController);
 	void ClientSetupPlayerHUD(class AController* InController);
 	void ReceiveUnpossessed(class AController** OldController);
-	void ReceivePossessed(class AController** NewController);
 	void OnReceiveRadiationStart();
 	void OnReceiveRadiationStop();
 	void ReceiveDestroyed();
-	void TakeDamageEvent(class AActor* damagedActor, float damageAmount, class UDamageType* DamageType, class AController* instigatedBy, class AActor* damageCauser);
+	void TakeDamageEvent(class AActor* DamagedActor, float damageAmount, class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float* DeltaSeconds);
 	void Server_PlayClap();

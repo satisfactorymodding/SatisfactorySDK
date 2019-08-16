@@ -15,12 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ProfileSpline.BP_ProfileSpline_C
-// 0x003C (0x036C - 0x0330)
-class ABP_ProfileSpline_C : public AFGProfileSpline
+// 0x0034 (0x036C - 0x0338)
+class ABP_ProfileSpline_C : public ABP_ProfileSplineAbstract_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0330(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USplineComponent*                            Spline;                                                   // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0338(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 	bool                                               bInitialized;                                             // 0x0340(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0341(0x0007) MISSED OFFSET
 	struct FTimerHandle                                FindControllerTimer;                                      // 0x0348(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
@@ -36,6 +35,7 @@ public:
 	}
 
 
+	void GetConsoleVariableByName(const class FString& VariableName, class FString* VariableInput);
 	void CheckDoneRespawning(bool* bDoneSpawning);
 	void GetPlayerController(bool* bIsValid, class APlayerController** PlayerController);
 	void UserConstructionScript();

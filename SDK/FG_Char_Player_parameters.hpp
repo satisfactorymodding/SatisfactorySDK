@@ -14,6 +14,19 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Char_Player.Char_Player_C.GetActorCompassViewDistance
+struct AChar_Player_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.SetActorCompassViewDistance
+struct AChar_Player_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Char_Player.Char_Player_C.SetActorRepresentationText
 struct AChar_Player_C_SetActorRepresentationText_Params
 {
@@ -248,6 +261,11 @@ struct AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_1_Params
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
+// Function Char_Player.Char_Player_C.CameraTick
+struct AChar_Player_C_CameraTick_Params
+{
+};
+
 // Function Char_Player.Char_Player_C.SetFirstPersonMode
 struct AChar_Player_C_SetFirstPersonMode_Params
 {
@@ -255,11 +273,6 @@ struct AChar_Player_C_SetFirstPersonMode_Params
 
 // Function Char_Player.Char_Player_C.SetThirdPersonMode
 struct AChar_Player_C_SetThirdPersonMode_Params
-{
-};
-
-// Function Char_Player.Char_Player_C.CameraTick
-struct AChar_Player_C_CameraTick_Params
 {
 };
 
@@ -319,6 +332,12 @@ struct AChar_Player_C_OnReviveComplete_Params
 {
 };
 
+// Function Char_Player.Char_Player_C.ReceivePossessed
+struct AChar_Player_C_ReceivePossessed_Params
+{
+	class AController**                                NewController;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Char_Player.Char_Player_C.ClientSetupPlayerHUD
 struct AChar_Player_C_ClientSetupPlayerHUD_Params
 {
@@ -329,12 +348,6 @@ struct AChar_Player_C_ClientSetupPlayerHUD_Params
 struct AChar_Player_C_ReceiveUnpossessed_Params
 {
 	class AController**                                OldController;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Char_Player.Char_Player_C.ReceivePossessed
-struct AChar_Player_C_ReceivePossessed_Params
-{
-	class AController**                                NewController;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.OnReceiveRadiationStart
@@ -355,11 +368,11 @@ struct AChar_Player_C_ReceiveDestroyed_Params
 // Function Char_Player.Char_Player_C.TakeDamageEvent
 struct AChar_Player_C_TakeDamageEvent_Params
 {
-	class AActor*                                      damagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      DamagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              damageAmount;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UDamageType*                                 DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AController*                                 instigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      damageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AController*                                 InstigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      DamageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.ReceiveBeginPlay

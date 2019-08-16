@@ -66,11 +66,11 @@ struct AChar_Hog_C_ReceiveHit_Params
 // Function Char_Hog.Char_Hog_C.NotifyOnTakeDamage
 struct AChar_Hog_C_NotifyOnTakeDamage_Params
 {
-	class AActor**                                     damagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             damageAmount;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UDamageType**                                DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AController**                                instigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AActor**                                     damageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AController**                                InstigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Hog.Char_Hog_C.CheckTargetHeight
@@ -78,8 +78,8 @@ struct AChar_Hog_C_CheckTargetHeight_Params
 {
 };
 
-// Function Char_Hog.Char_Hog_C.circle
-struct AChar_Hog_C_circle_Params
+// Function Char_Hog.Char_Hog_C.Circle
+struct AChar_Hog_C_Circle_Params
 {
 };
 
@@ -97,6 +97,27 @@ struct AChar_Hog_C_StopCircling_Params
 // Function Char_Hog.Char_Hog_C.ReceiveDied
 struct AChar_Hog_C_ReceiveDied_Params
 {
+};
+
+// Function Char_Hog.Char_Hog_C.ReceiveBeginPlay
+struct AChar_Hog_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function Char_Hog.Char_Hog_C.GainedSignificance
+struct AChar_Hog_C_GainedSignificance_Params
+{
+};
+
+// Function Char_Hog.Char_Hog_C.LostSignificance
+struct AChar_Hog_C_LostSignificance_Params
+{
+};
+
+// Function Char_Hog.Char_Hog_C.ReceiveEndPlay
+struct AChar_Hog_C_ReceiveEndPlay_Params
+{
+	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Hog.Char_Hog_C.ExecuteUbergraph_Char_Hog

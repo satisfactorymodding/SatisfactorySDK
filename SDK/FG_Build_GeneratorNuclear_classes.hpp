@@ -52,9 +52,9 @@ public:
 
 
 	void UserConstructionScript();
-	void LostSignificance();
 	void ReceiveBeginPlay();
 	void GainedSignificance();
+	void LostSignificance();
 	void StartProductionLoopEffects();
 	void StopProductionLoopEffects();
 	void StartIdlingLoopEffects();

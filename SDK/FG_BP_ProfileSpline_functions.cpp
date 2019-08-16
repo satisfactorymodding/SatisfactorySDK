@@ -12,6 +12,30 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_ProfileSpline.BP_ProfileSpline_C.GetConsoleVariableByName
+// ()
+// Parameters:
+// class FString                  VariableName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString                  VariableInput                  (Parm, OutParm, ZeroConstructor)
+
+void ABP_ProfileSpline_C::GetConsoleVariableByName(const class FString& VariableName, class FString* VariableInput)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileSpline.BP_ProfileSpline_C.GetConsoleVariableByName");
+
+	ABP_ProfileSpline_C_GetConsoleVariableByName_Params params;
+	params.VariableName = VariableName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (VariableInput != nullptr)
+		*VariableInput = params.VariableInput;
+}
+
+
 // Function BP_ProfileSpline.BP_ProfileSpline_C.CheckDoneRespawning
 // ()
 // Parameters:

@@ -14,6 +14,13 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_ProfileSpline.BP_ProfileSpline_C.GetConsoleVariableByName
+struct ABP_ProfileSpline_C_GetConsoleVariableByName_Params
+{
+	class FString                                      VariableName;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class FString                                      VariableInput;                                            // (Parm, OutParm, ZeroConstructor)
+};
+
 // Function BP_ProfileSpline.BP_ProfileSpline_C.CheckDoneRespawning
 struct ABP_ProfileSpline_C_CheckDoneRespawning_Params
 {

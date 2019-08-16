@@ -30,8 +30,8 @@ public:
 
 
 	void GetRemainingCostForSchematic(class UClass* Schematic, class UClass* ForItem, int* Cost);
-	void ServerSetWorkingAtBench(class AFGPlayerController* PlayerWorking, class UFGWorkBench* ResearchMachine);
 	void Server_SetRecipeOnManufacturingProxy(class AFGBuildableManufacturer* Manufacturer, class UClass* Recipe);
+	void ServerSetWorkingAtBench(class AFGPlayerController* PlayerWorking, class UFGWorkBench* ResearchMachine);
 	void ServerSetBeaconTexture(class UTexture2D* Texture, class ABP_Beacon_C* Beacon);
 	void Server_SplitResource(class UFGInventoryComponent* inventoryComponent, int sourceIdx, int numResourceToMove);
 	void Server_MoveItem(class UFGInventoryComponent* SourceComponent, class UFGInventoryComponent* destinationComponent, int sourceIdx, int destinationIdx);
@@ -45,28 +45,28 @@ public:
 	void Server_DropItem(class UFGInventoryComponent* inventoryComponent, int sourceIdx, const struct FVector& SpawnLocation, const struct FRotator& spawnRotation);
 	void Server_RemoveIngredientsAndAwardRewards(class UFGWorkBench* Workbench, class UFGInventoryComponent* inventory, class UClass* Recipe);
 	void ServerSetPendingPotentialOnFactory(class AFGBuildableFactory* FACTORY, float newPotential);
-	void ServerDismantlePortableMiner(class ABP_PortableMiner_C* inPortableMiner);
 	void ServerOpenVehicleTrunk(class ABP_WheeledVehicle_C* inVehicle, class AFGCharacterPlayer* inPlayer);
 	void ServerRegisterInteractingPlayerOnUseInterface(class UObject* interactObject, class AFGCharacterPlayer* Player);
 	void ServerUnregisterInteractingPlayerOnUseInterface(class UObject* interactObject, class AFGCharacterPlayer* Player);
+	void ServerDismantlePortableMiner(class ABP_PortableMiner_C* inPortableMiner);
 	void Server_RemoveNumFromIndex(class UFGInventoryComponent* SourceComponent, int sourceIdx, int NumToRemove);
 	void Server_PayOffOnSchematic(class UClass* Schematic, class UFGInventoryComponent* FromInventoryComponent, int idx);
-	void ServerSetSpeedLimit(class ABuild_SpeedRoadSign_C* speedRoadSignProxy, int NewLimit);
 	void Server_LaunchShip();
-	void ServerCloseVehicleTrunk(class ABP_WheeledVehicle_C* inVehicle, class AFGCharacterPlayer* inPlayer);
+	void ServerSetSpeedLimit(class ABuild_SpeedRoadSign_C* speedRoadSignProxy, int NewLimit);
 	void Server_ResetFuse(int circuitID);
 	void ServerRemoveTargetPoint(class AFGTargetPoint* inTargetPoint, class AFGWheeledVehicle* inVehicle);
 	void Server_ResizeInventory(int newSize, class UFGInventoryComponent* inInventoryComp);
 	void Server_PayOffTowTruckUpgrade(class AFGBuildableSpaceElevator* SpaceElevator, class UFGInventoryComponent* inventory, int inventorySlotIndex);
-	void Server_RemoveSortRule(class AFGBuildableSplitterSmart* Splitter_Smart, int Index);
+	void ServerCloseVehicleTrunk(class ABP_WheeledVehicle_C* inVehicle, class AFGCharacterPlayer* inPlayer);
 	void Server_SetTrainStationName(class AFGTrainStationIdentifier* Station, const struct FText& Name);
-	void Server_UpdateSortRule(class AFGBuildableSplitterSmart* SplitterSmart, int Index, const struct FSplitterSortRule& Rule);
+	void Server_RemoveSortRule(class AFGBuildableSplitterSmart* Splitter_Smart, int Index);
 	void Server_GrabAllItemsFromInventory(class UFGInventoryComponent* SourceComponent, class UFGInventoryComponent* destinationComponent, class UClass* onlyGrabOfDesc);
 	void Server_RepairDropPod(class ABP_DropPod_C* DropPod, class AFGCharacterPlayer* byCharacter);
-	void Server_AddSortRule(class AFGBuildableSplitterSmart* SplitterSmart, const struct FSplitterSortRule& Rule);
+	void Server_UpdateSortRule(class AFGBuildableSplitterSmart* SplitterSmart, int Index, const struct FSplitterSortRule& Rule);
 	void Server_SetLoadModeOnDockingStation(class AFGBuildableDockingStation* DockingStation, bool isInLoadMode);
-	void ServerSetActiveSchematic(class UClass* newActiveSchematic);
+	void Server_AddSortRule(class AFGBuildableSplitterSmart* SplitterSmart, const struct FSplitterSortRule& Rule);
 	void Server_SetIsProductionPausedOnFactory(class AFGBuildableFactory* FACTORY, bool IsProductionPaused);
+	void ServerSetActiveSchematic(class UClass* newActiveSchematic);
 	void Client_RemovePawnHUD();
 	void Client_AddPawnHUD(class UClass* HUDClass, class APawn* Pawn);
 	void Server_SpaceElevatorUpgradePressed(class AFGBuildableSpaceElevator* SpaceElevator);
@@ -86,6 +86,9 @@ public:
 	void Server_SetLoadModeOnTrainCargoPlatform(class AFGBuildableTrainPlatformCargo* CargoPlatform, bool isInLoadMode);
 	void Server_SetTimeTableStops(class AFGRailroadTimeTable* TimeTable, TArray<struct FTimeTableStop> stops);
 	void Server_SetTimeTableCurrentStop(class AFGRailroadTimeTable* TimeTable, int Index);
+	void Server_SetActorCompassViewDistance(class AActor* Actor, ECompassViewDistance compassViewDistance);
+	void Internal_Server_SetActorRepresentationCompassViewDistance(class UFGActorRepresentation* actorRepresentation, ECompassViewDistance compassViewDistance);
+	void SetActorRepresentationCompassViewDistance(class UFGActorRepresentation* actorRepresentation, ECompassViewDistance compassViewDistance);
 	void ExecuteUbergraph_BP_RemoteCallObject(int EntryPoint);
 };
 

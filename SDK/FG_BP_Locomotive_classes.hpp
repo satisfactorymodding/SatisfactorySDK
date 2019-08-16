@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Locomotive.BP_Locomotive_C
-// 0x008A (0x061A - 0x0590)
+// 0x00A8 (0x0638 - 0x0590)
 class ABP_Locomotive_C : public AFGLocomotive
 {
 public:
@@ -39,6 +39,8 @@ public:
 	class UCurveFloat*                                 mEngineCurve;                                             // 0x0610(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mAllowEndHonk;                                            // 0x0618(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               mPlayHonkAlternative;                                     // 0x0619(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x061A(0x0006) MISSED OFFSET
+	struct FText                                       mCachedName;                                              // 0x0620(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -47,6 +49,8 @@ public:
 	}
 
 
+	ECompassViewDistance GetActorCompassViewDistance();
+	ECompassViewDistance SetActorCompassViewDistance(ECompassViewDistance compassViewDistance);
 	struct FText SetActorRepresentationText(const struct FText& newText);
 	bool UpdateRepresentation();
 	float GetActorFogOfWarRevealRadius();
@@ -90,6 +94,8 @@ public:
 	void Server_Horn_01_Stop();
 	void Server_Horn_02();
 	void Server_Horn_02_Stop();
+	void OnNameChanged();
+	void UpdateTrainName();
 	void ExecuteUbergraph_BP_Locomotive(int EntryPoint);
 };
 
