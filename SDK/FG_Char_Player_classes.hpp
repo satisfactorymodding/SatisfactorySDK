@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Char_Player.Char_Player_C
-// 0x01F4 (0x0CF4 - 0x0B00)
+// 0x01E4 (0x0CE4 - 0x0B00)
 class AChar_Player_C : public AFGCharacterPlayer
 {
 public:
@@ -78,20 +78,18 @@ public:
 	class ABP_InteractablesMarker_C*                   mInteractableMarker;                                      // 0x0C68(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	struct FName                                       mMineSection;                                             // 0x0C70(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UFGCameraModifierLimitLook*                  mLookModifier;                                            // 0x0C78(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                mSavedCompassColor;                                       // 0x0C80(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               mDidGetCompassColor;                                      // 0x0C90(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0C91(0x0003) MISSED OFFSET
-	struct FDisabledInputGate                          mLandingInputGate;                                        // 0x0C94(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USkeletalMeshComponent*                      mEmoteBuildgun;                                           // 0x0C98(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FTimerHandle                                mEmoteTimer;                                              // 0x0CA0(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWidget_EmoteMenu_C*                         mEmoteMenu;                                               // 0x0CA8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	bool                                               mPossessed;                                               // 0x0CB0(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0CB1(0x0007) MISSED OFFSET
-	struct FText                                       mMapText;                                                 // 0x0CB8(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UMaterialInstanceDynamic*                    mRadiationNoise;                                          // 0x0CD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FTimerHandle                                mWarningPopupTimer;                                       // 0x0CD8(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FText>                               mPlaytimeWarningMessages;                                 // 0x0CE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int                                                mPlaytimeWarningMessageIndex;                             // 0x0CF0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FDisabledInputGate                          mLandingInputGate;                                        // 0x0C80(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0C84(0x0004) MISSED OFFSET
+	class USkeletalMeshComponent*                      mEmoteBuildgun;                                           // 0x0C88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FTimerHandle                                mEmoteTimer;                                              // 0x0C90(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWidget_EmoteMenu_C*                         mEmoteMenu;                                               // 0x0C98(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               mPossessed;                                               // 0x0CA0(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0CA1(0x0007) MISSED OFFSET
+	struct FText                                       mMapText;                                                 // 0x0CA8(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UMaterialInstanceDynamic*                    mRadiationNoise;                                          // 0x0CC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FTimerHandle                                mWarningPopupTimer;                                       // 0x0CC8(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FText>                               mPlaytimeWarningMessages;                                 // 0x0CD0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                mPlaytimeWarningMessageIndex;                             // 0x0CE0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

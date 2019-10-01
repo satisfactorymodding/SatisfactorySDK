@@ -7,20 +7,20 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_InputCore_classes.hpp"
-#include "FG_CoreUObject_classes.hpp"
-#include "FG_Slate_classes.hpp"
-#include "FG_SlateCore_classes.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_GameplayTasks_classes.hpp"
-#include "FG_AIModule_classes.hpp"
 #include "FG_UMG_classes.hpp"
-#include "FG_SignificanceManager_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
+#include "FG_InputCore_classes.hpp"
+#include "FG_Engine_classes.hpp"
+#include "FG_AIModule_classes.hpp"
+#include "FG_SlateCore_classes.hpp"
+#include "FG_Slate_classes.hpp"
 #include "FG_ApexDestruction_classes.hpp"
 #include "FG_NavigationSystem_classes.hpp"
 #include "FG_OnlineSubsystemUtils_classes.hpp"
 #include "FG_ReplicationGraph_classes.hpp"
 #include "FG_AssetRegistry_classes.hpp"
+#include "FG_SignificanceManager_classes.hpp"
 #include "FG_AkAudio_classes.hpp"
 #include "FG_PhysXVehicles_classes.hpp"
 
@@ -662,6 +662,15 @@ enum class EUndefinedBool : uint8_t
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct FactoryGame.ItemView
+// 0x0014
+struct FItemView
+{
+	float                                              Distance;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     FocalOffset;                                              // 0x0004(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraPitch;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct FactoryGame.AudioSubtitlePair
 // 0x0028
 struct FAudioSubtitlePair
@@ -825,15 +834,6 @@ struct FDistanceBasedTickRate
 {
 	float                                              Distance;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TickRate;                                                 // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-};
-
-// ScriptStruct FactoryGame.ItemView
-// 0x0014
-struct FItemView
-{
-	float                                              Distance;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     FocalOffset;                                              // 0x0004(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CameraPitch;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.ConnectionRepresentation

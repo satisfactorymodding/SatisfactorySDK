@@ -78,8 +78,8 @@ struct AChar_Hog_C_CheckTargetHeight_Params
 {
 };
 
-// Function Char_Hog.Char_Hog_C.Circle
-struct AChar_Hog_C_Circle_Params
+// Function Char_Hog.Char_Hog_C.circle
+struct AChar_Hog_C_circle_Params
 {
 };
 

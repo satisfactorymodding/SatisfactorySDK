@@ -527,6 +527,104 @@ struct UFGCharacterAnimInstance_GetAccelerationVectorLength_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGItemDescriptor.GetStackSize
+struct UFGItemDescriptor_GetStackSize_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetSmallIcon
+struct UFGItemDescriptor_GetSmallIcon_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetRadioactiveDecay
+struct UFGItemDescriptor_GetRadioactiveDecay_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetPreviewView
+struct UFGItemDescriptor_GetPreviewView_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FItemView                                   out_previewView;                                          // (Parm, OutParm)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetItemName
+struct UFGItemDescriptor_GetItemName_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetItemMesh
+struct UFGItemDescriptor_GetItemMesh_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetItemIcon
+struct UFGItemDescriptor_GetItemIcon_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FSlateBrush                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetItemDescription
+struct UFGItemDescriptor_GetItemDescription_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetItemCategory
+struct UFGItemDescriptor_GetItemCategory_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetIconView
+struct UFGItemDescriptor_GetIconView_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FItemView                                   out_itemView;                                             // (Parm, OutParm)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetForm
+struct UFGItemDescriptor_GetForm_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	EResourceForm                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetEnergyValue
+struct UFGItemDescriptor_GetEnergyValue_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGItemDescriptor.GetBigIcon
+struct UFGItemDescriptor_GetBigIcon_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGItemDescriptor.CanBeDiscarded
+struct UFGItemDescriptor_CanBeDiscarded_Params
+{
+	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function FactoryGame.FGHologram.Server_SetSnapToGuideLines
 struct AFGHologram_Server_SetSnapToGuideLines_Params
 {
@@ -672,15 +770,15 @@ struct AFGAttentionPingActor_SpawnAttentionPingEffects_Params
 {
 };
 
-// Function FactoryGame.FGAttentionPingActor.OnRep_PlayerSlotIdx
-struct AFGAttentionPingActor_OnRep_PlayerSlotIdx_Params
+// Function FactoryGame.FGAttentionPingActor.OnRep_OwningPlayerState
+struct AFGAttentionPingActor_OnRep_OwningPlayerState_Params
 {
 };
 
-// Function FactoryGame.FGAttentionPingActor.GetPlayerSlotIdx
-struct AFGAttentionPingActor_GetPlayerSlotIdx_Params
+// Function FactoryGame.FGAttentionPingActor.GetOwningPlayerState
+struct AFGAttentionPingActor_GetOwningPlayerState_Params
 {
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	class AFGPlayerState*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGMessageBase.GetMessageDefaultObject
@@ -2313,104 +2411,6 @@ struct UFGBuildCategory_GetCategoryIcon_Params
 {
 	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FSlateBrush                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetStackSize
-struct UFGItemDescriptor_GetStackSize_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetSmallIcon
-struct UFGItemDescriptor_GetSmallIcon_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetRadioactiveDecay
-struct UFGItemDescriptor_GetRadioactiveDecay_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetPreviewView
-struct UFGItemDescriptor_GetPreviewView_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FItemView                                   out_previewView;                                          // (Parm, OutParm)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetItemName
-struct UFGItemDescriptor_GetItemName_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetItemMesh
-struct UFGItemDescriptor_GetItemMesh_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetItemIcon
-struct UFGItemDescriptor_GetItemIcon_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FSlateBrush                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetItemDescription
-struct UFGItemDescriptor_GetItemDescription_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetItemCategory
-struct UFGItemDescriptor_GetItemCategory_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetIconView
-struct UFGItemDescriptor_GetIconView_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FItemView                                   out_itemView;                                             // (Parm, OutParm)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetForm
-struct UFGItemDescriptor_GetForm_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	EResourceForm                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetEnergyValue
-struct UFGItemDescriptor_GetEnergyValue_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGItemDescriptor.GetBigIcon
-struct UFGItemDescriptor_GetBigIcon_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGItemDescriptor.CanBeDiscarded
-struct UFGItemDescriptor_CanBeDiscarded_Params
-{
-	class UClass*                                      inClass;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildDescriptor.GetSubCategories
@@ -4216,6 +4216,18 @@ struct UFGCheatManager_PrintStatichMeshesHirarchy_Params
 {
 };
 
+// Function FactoryGame.FGCheatManager.PlayerNoClipModeOnFly_Get
+struct UFGCheatManager_PlayerNoClipModeOnFly_Get_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGCheatManager.PlayerNoClipModeOnFly
+struct UFGCheatManager_PlayerNoClipModeOnFly_Params
+{
+	bool                                               gohstMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function FactoryGame.FGCheatManager.PlayerFly_Get
 struct UFGCheatManager_PlayerFly_Get_Params
 {
@@ -4470,6 +4482,11 @@ struct UFGCheatManager_EnableAudioDebug_Params
 struct UFGCheatManager_DumpTicking_Params
 {
 	bool                                               detailed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FactoryGame.FGCheatManager.DumpSignificanceManagedObjects
+struct UFGCheatManager_DumpSignificanceManagedObjects_Params
+{
 };
 
 // Function FactoryGame.FGCheatManager.DumpSchematics
@@ -10429,10 +10446,10 @@ struct AFGPlayerState_GetSlotNum_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function FactoryGame.FGPlayerState.GetSlotData
-struct AFGPlayerState_GetSlotData_Params
+// Function FactoryGame.FGPlayerState.GetPingColor
+struct AFGPlayerState_GetPingColor_Params
 {
-	TArray<struct FSlotData>                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGPlayerState.GetOnlyShowAffordableRecipes
@@ -10445,6 +10462,12 @@ struct AFGPlayerState_GetOnlyShowAffordableRecipes_Params
 struct AFGPlayerState_GetNumArmSlots_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGPlayerState.GetNametagColor
+struct AFGPlayerState_GetNametagColor_Params
+{
+	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGPlayerState.GetCollapsedItemCategories

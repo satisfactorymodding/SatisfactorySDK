@@ -1746,6 +1746,330 @@ float UFGCharacterAnimInstance::GetAccelerationVectorLength()
 }
 
 
+// Function FactoryGame.FGItemDescriptor.GetStackSize
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UFGItemDescriptor::GetStackSize(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetStackSize");
+
+	UFGItemDescriptor_GetStackSize_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetSmallIcon
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture2D* UFGItemDescriptor::GetSmallIcon(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetSmallIcon");
+
+	UFGItemDescriptor_GetSmallIcon_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetRadioactiveDecay
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UFGItemDescriptor::GetRadioactiveDecay(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetRadioactiveDecay");
+
+	UFGItemDescriptor_GetRadioactiveDecay_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetPreviewView
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemView               out_previewView                (Parm, OutParm)
+
+void UFGItemDescriptor::GetPreviewView(class UClass* inClass, struct FItemView* out_previewView)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetPreviewView");
+
+	UFGItemDescriptor_GetPreviewView_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (out_previewView != nullptr)
+		*out_previewView = params.out_previewView;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetItemName
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UFGItemDescriptor::GetItemName(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemName");
+
+	UFGItemDescriptor_GetItemName_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetItemMesh
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UStaticMesh* UFGItemDescriptor::GetItemMesh(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemMesh");
+
+	UFGItemDescriptor_GetItemMesh_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetItemIcon
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateBrush UFGItemDescriptor::GetItemIcon(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemIcon");
+
+	UFGItemDescriptor_GetItemIcon_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetItemDescription
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UFGItemDescriptor::GetItemDescription(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemDescription");
+
+	UFGItemDescriptor_GetItemDescription_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetItemCategory
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UClass* UFGItemDescriptor::GetItemCategory(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemCategory");
+
+	UFGItemDescriptor_GetItemCategory_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetIconView
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemView               out_itemView                   (Parm, OutParm)
+
+void UFGItemDescriptor::GetIconView(class UClass* inClass, struct FItemView* out_itemView)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetIconView");
+
+	UFGItemDescriptor_GetIconView_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (out_itemView != nullptr)
+		*out_itemView = params.out_itemView;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetForm
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// EResourceForm                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+EResourceForm UFGItemDescriptor::GetForm(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetForm");
+
+	UFGItemDescriptor_GetForm_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetEnergyValue
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UFGItemDescriptor::GetEnergyValue(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetEnergyValue");
+
+	UFGItemDescriptor_GetEnergyValue_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.GetBigIcon
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture2D* UFGItemDescriptor::GetBigIcon(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetBigIcon");
+
+	UFGItemDescriptor_GetBigIcon_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGItemDescriptor.CanBeDiscarded
+// ()
+// Parameters:
+// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UFGItemDescriptor::CanBeDiscarded(class UClass* inClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.CanBeDiscarded");
+
+	UFGItemDescriptor_CanBeDiscarded_Params params;
+	params.inClass = inClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function FactoryGame.FGHologram.Server_SetSnapToGuideLines
 // ()
 // Parameters:
@@ -2231,14 +2555,14 @@ void AFGAttentionPingActor::SpawnAttentionPingEffects()
 }
 
 
-// Function FactoryGame.FGAttentionPingActor.OnRep_PlayerSlotIdx
+// Function FactoryGame.FGAttentionPingActor.OnRep_OwningPlayerState
 // ()
 
-void AFGAttentionPingActor::OnRep_PlayerSlotIdx()
+void AFGAttentionPingActor::OnRep_OwningPlayerState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGAttentionPingActor.OnRep_PlayerSlotIdx");
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGAttentionPingActor.OnRep_OwningPlayerState");
 
-	AFGAttentionPingActor_OnRep_PlayerSlotIdx_Params params;
+	AFGAttentionPingActor_OnRep_OwningPlayerState_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2248,16 +2572,16 @@ void AFGAttentionPingActor::OnRep_PlayerSlotIdx()
 }
 
 
-// Function FactoryGame.FGAttentionPingActor.GetPlayerSlotIdx
+// Function FactoryGame.FGAttentionPingActor.GetOwningPlayerState
 // ()
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AFGPlayerState*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int AFGAttentionPingActor::GetPlayerSlotIdx()
+class AFGPlayerState* AFGAttentionPingActor::GetOwningPlayerState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGAttentionPingActor.GetPlayerSlotIdx");
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGAttentionPingActor.GetOwningPlayerState");
 
-	AFGAttentionPingActor_GetPlayerSlotIdx_Params params;
+	AFGAttentionPingActor_GetOwningPlayerState_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -7715,330 +8039,6 @@ struct FSlateBrush UFGBuildCategory::GetCategoryIcon(class UClass* inClass)
 	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGBuildCategory.GetCategoryIcon");
 
 	UFGBuildCategory_GetCategoryIcon_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetStackSize
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UFGItemDescriptor::GetStackSize(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetStackSize");
-
-	UFGItemDescriptor_GetStackSize_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetSmallIcon
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UTexture2D* UFGItemDescriptor::GetSmallIcon(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetSmallIcon");
-
-	UFGItemDescriptor_GetSmallIcon_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetRadioactiveDecay
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UFGItemDescriptor::GetRadioactiveDecay(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetRadioactiveDecay");
-
-	UFGItemDescriptor_GetRadioactiveDecay_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetPreviewView
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemView               out_previewView                (Parm, OutParm)
-
-void UFGItemDescriptor::GetPreviewView(class UClass* inClass, struct FItemView* out_previewView)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetPreviewView");
-
-	UFGItemDescriptor_GetPreviewView_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (out_previewView != nullptr)
-		*out_previewView = params.out_previewView;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetItemName
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UFGItemDescriptor::GetItemName(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemName");
-
-	UFGItemDescriptor_GetItemName_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetItemMesh
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UStaticMesh*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UStaticMesh* UFGItemDescriptor::GetItemMesh(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemMesh");
-
-	UFGItemDescriptor_GetItemMesh_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetItemIcon
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FSlateBrush UFGItemDescriptor::GetItemIcon(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemIcon");
-
-	UFGItemDescriptor_GetItemIcon_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetItemDescription
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UFGItemDescriptor::GetItemDescription(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemDescription");
-
-	UFGItemDescriptor_GetItemDescription_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetItemCategory
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UClass* UFGItemDescriptor::GetItemCategory(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetItemCategory");
-
-	UFGItemDescriptor_GetItemCategory_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetIconView
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemView               out_itemView                   (Parm, OutParm)
-
-void UFGItemDescriptor::GetIconView(class UClass* inClass, struct FItemView* out_itemView)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetIconView");
-
-	UFGItemDescriptor_GetIconView_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (out_itemView != nullptr)
-		*out_itemView = params.out_itemView;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetForm
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// EResourceForm                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-EResourceForm UFGItemDescriptor::GetForm(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetForm");
-
-	UFGItemDescriptor_GetForm_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetEnergyValue
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UFGItemDescriptor::GetEnergyValue(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetEnergyValue");
-
-	UFGItemDescriptor_GetEnergyValue_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.GetBigIcon
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UTexture2D* UFGItemDescriptor::GetBigIcon(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.GetBigIcon");
-
-	UFGItemDescriptor_GetBigIcon_Params params;
-	params.inClass = inClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FactoryGame.FGItemDescriptor.CanBeDiscarded
-// ()
-// Parameters:
-// class UClass*                  inClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UFGItemDescriptor::CanBeDiscarded(class UClass* inClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGItemDescriptor.CanBeDiscarded");
-
-	UFGItemDescriptor_CanBeDiscarded_Params params;
 	params.inClass = inClass;
 
 	auto flags = fn->FunctionFlags;
@@ -14103,6 +14103,47 @@ void UFGCheatManager::PrintStatichMeshesHirarchy()
 }
 
 
+// Function FactoryGame.FGCheatManager.PlayerNoClipModeOnFly_Get
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UFGCheatManager::PlayerNoClipModeOnFly_Get()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGCheatManager.PlayerNoClipModeOnFly_Get");
+
+	UFGCheatManager_PlayerNoClipModeOnFly_Get_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGCheatManager.PlayerNoClipModeOnFly
+// ()
+// Parameters:
+// bool                           gohstMode                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UFGCheatManager::PlayerNoClipModeOnFly(bool gohstMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGCheatManager.PlayerNoClipModeOnFly");
+
+	UFGCheatManager_PlayerNoClipModeOnFly_Params params;
+	params.gohstMode = gohstMode;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function FactoryGame.FGCheatManager.PlayerFly_Get
 // ()
 // Parameters:
@@ -14956,6 +14997,23 @@ void UFGCheatManager::DumpTicking(bool detailed)
 
 	UFGCheatManager_DumpTicking_Params params;
 	params.detailed = detailed;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function FactoryGame.FGCheatManager.DumpSignificanceManagedObjects
+// ()
+
+void UFGCheatManager::DumpSignificanceManagedObjects()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGCheatManager.DumpSignificanceManagedObjects");
+
+	UFGCheatManager_DumpSignificanceManagedObjects_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -34763,16 +34821,16 @@ int AFGPlayerState::GetSlotNum()
 }
 
 
-// Function FactoryGame.FGPlayerState.GetSlotData
+// Function FactoryGame.FGPlayerState.GetPingColor
 // ()
 // Parameters:
-// TArray<struct FSlotData>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TArray<struct FSlotData> AFGPlayerState::GetSlotData()
+struct FLinearColor AFGPlayerState::GetPingColor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGPlayerState.GetSlotData");
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGPlayerState.GetPingColor");
 
-	AFGPlayerState_GetSlotData_Params params;
+	AFGPlayerState_GetPingColor_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -34815,6 +34873,27 @@ int AFGPlayerState::GetNumArmSlots()
 	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGPlayerState.GetNumArmSlots");
 
 	AFGPlayerState_GetNumArmSlots_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FactoryGame.FGPlayerState.GetNametagColor
+// ()
+// Parameters:
+// struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FLinearColor AFGPlayerState::GetNametagColor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FactoryGame.FGPlayerState.GetNametagColor");
+
+	AFGPlayerState_GetNametagColor_Params params;
 
 	auto flags = fn->FunctionFlags;
 

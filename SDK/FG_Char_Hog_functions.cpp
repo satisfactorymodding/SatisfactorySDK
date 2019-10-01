@@ -213,14 +213,14 @@ void AChar_Hog_C::CheckTargetHeight()
 }
 
 
-// Function Char_Hog.Char_Hog_C.Circle
+// Function Char_Hog.Char_Hog_C.circle
 // ()
 
-void AChar_Hog_C::Circle()
+void AChar_Hog_C::circle()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Hog.Char_Hog_C.Circle");
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Hog.Char_Hog_C.circle");
 
-	AChar_Hog_C_Circle_Params params;
+	AChar_Hog_C_circle_Params params;
 
 	auto flags = fn->FunctionFlags;
 

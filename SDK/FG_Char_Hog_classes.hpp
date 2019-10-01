@@ -67,7 +67,7 @@ public:
 	void ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit);
 	void NotifyOnTakeDamage(class AActor** DamagedActor, float* damageAmount, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
 	void CheckTargetHeight();
-	void Circle();
+	void circle();
 	void StartCircling(class UBTT_CircleMove_C* BTTCircleMove);
 	void StopCircling();
 	void ReceiveDied();
