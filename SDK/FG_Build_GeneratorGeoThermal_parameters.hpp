@@ -32,11 +32,13 @@ struct ABuild_GeneratorGeoThermal_C_LostSignificance_Params
 // Function Build_GeneratorGeoThermal.Build_GeneratorGeoThermal_C.StartProductionLoopEffects
 struct ABuild_GeneratorGeoThermal_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorGeoThermal.Build_GeneratorGeoThermal_C.StopProductionLoopEffects
 struct ABuild_GeneratorGeoThermal_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorGeoThermal.Build_GeneratorGeoThermal_C.ExecuteUbergraph_Build_GeneratorGeoThermal

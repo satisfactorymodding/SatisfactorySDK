@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FreightWagon.BP_FreightWagon_C
-// 0x0030 (0x0588 - 0x0558)
+// 0x0030 (0x0590 - 0x0560)
 class ABP_FreightWagon_C : public AFGFreightWagon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0558(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        SM_Freight_Cargo;                                         // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UClass*                                      mWidget;                                                  // 0x0568(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FText                                       mMapText;                                                 // 0x0570(0x0028) (Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0560(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        SM_Freight_Cargo;                                         // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass*                                      mWidget;                                                  // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FText                                       mMapText;                                                 // 0x0578(0x0028) (Edit, BlueprintVisible, Net, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

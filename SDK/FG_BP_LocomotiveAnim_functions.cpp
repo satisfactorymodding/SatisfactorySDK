@@ -12,43 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.CalculateAnimGraphValues
-// ()
-
-void UBP_LocomotiveAnim_C::CalculateAnimGraphValues()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.CalculateAnimGraphValues");
-
-	UBP_LocomotiveAnim_C_CalculateAnimGraphValues_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.BlueprintUpdateAnimation
-// ()
-// Parameters:
-// float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_LocomotiveAnim_C::BlueprintUpdateAnimation(float* DeltaTimeX)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.BlueprintUpdateAnimation");
-
-	UBP_LocomotiveAnim_C_BlueprintUpdateAnimation_Params params;
-	params.DeltaTimeX = DeltaTimeX;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.AnimNotify_EnterHandBrake_01
 // ()
 
@@ -125,23 +88,6 @@ void UBP_LocomotiveAnim_C::AnimNotify_TriggerhandbrakeVFX()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.AnimNotify_TriggerhandbrakeVFX");
 
 	UBP_LocomotiveAnim_C_AnimNotify_TriggerhandbrakeVFX_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.BlueprintInitializeAnimation
-// ()
-
-void UBP_LocomotiveAnim_C::BlueprintInitializeAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.BlueprintInitializeAnimation");
-
-	UBP_LocomotiveAnim_C_BlueprintInitializeAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
 

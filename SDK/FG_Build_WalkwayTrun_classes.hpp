@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_WalkwayTrun.Build_WalkwayTrun_C
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x0588 - 0x0588)
 class ABuild_WalkwayTrun_C : public AFGBuildableWalkway
 {
 public:

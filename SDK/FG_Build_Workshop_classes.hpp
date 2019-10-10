@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_Workshop.Build_Workshop_C
-// 0x0038 (0x05A0 - 0x0568)
+// 0x0038 (0x05A8 - 0x0570)
 class ABuild_Workshop_C : public AFGBuildable
 {
 public:
-	class UFGFactoryLegsComponent*                     FGFactoryLegs;                                            // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGColoredInstanceMeshProxy*                 FGColoredInstanceMeshProxy;                               // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBP_WorkshopComponent_C*                     WorkshopComponent;                                        // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               Clearance;                                                // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FText                                       mOccupiedText;                                            // 0x0588(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UFGFactoryLegsComponent*                     FGFactoryLegs;                                            // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGColoredInstanceMeshProxy*                 FGColoredInstanceMeshProxy;                               // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBP_WorkshopComponent_C*                     WorkshopComponent;                                        // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBoxComponent*                               Clearance;                                                // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FText                                       mOccupiedText;                                            // 0x0590(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

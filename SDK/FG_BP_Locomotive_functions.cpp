@@ -928,6 +928,40 @@ void ABP_Locomotive_C::UpdateTrainName()
 }
 
 
+// Function BP_Locomotive.BP_Locomotive_C.GainedSignificance
+// ()
+
+void ABP_Locomotive_C::GainedSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.GainedSignificance");
+
+	ABP_Locomotive_C_GainedSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.LostSignificance
+// ()
+
+void ABP_Locomotive_C::LostSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.LostSignificance");
+
+	ABP_Locomotive_C_LostSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_Locomotive.BP_Locomotive_C.ExecuteUbergraph_BP_Locomotive
 // ()
 // Parameters:

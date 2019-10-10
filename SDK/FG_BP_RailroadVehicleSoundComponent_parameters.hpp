@@ -20,13 +20,13 @@ struct UBP_RailroadVehicleSoundComponent_C_mSpeedKmH_Params
 	float                                              Speed;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMoving
-struct UBP_RailroadVehicleSoundComponent_C_OnStoppedMoving_Params
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStartedMoving
+struct UBP_RailroadVehicleSoundComponent_C_OnStartedMoving_Params
 {
 };
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStartedMoving
-struct UBP_RailroadVehicleSoundComponent_C_OnStartedMoving_Params
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMoving
+struct UBP_RailroadVehicleSoundComponent_C_OnStoppedMoving_Params
 {
 };
 
@@ -65,13 +65,18 @@ struct UBP_RailroadVehicleSoundComponent_C_OnThrottleApplied_Params
 {
 };
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay
-struct UBP_RailroadVehicleSoundComponent_C_ReceiveBeginPlay_Params
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMovingRelay
+struct UBP_RailroadVehicleSoundComponent_C_OnStoppedMovingRelay_Params
 {
 };
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMovingRelay
-struct UBP_RailroadVehicleSoundComponent_C_OnStoppedMovingRelay_Params
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.StartIdleSounds
+struct UBP_RailroadVehicleSoundComponent_C_StartIdleSounds_Params
+{
+};
+
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.StopAllSounds
+struct UBP_RailroadVehicleSoundComponent_C_StopAllSounds_Params
 {
 };
 

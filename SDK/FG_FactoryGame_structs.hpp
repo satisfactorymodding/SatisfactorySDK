@@ -8,14 +8,14 @@
 
 #include "FG_Basic.hpp"
 #include "FG_GameplayTasks_classes.hpp"
-#include "FG_UMG_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
-#include "FG_InputCore_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_UMG_classes.hpp"
 #include "FG_AIModule_classes.hpp"
-#include "FG_SlateCore_classes.hpp"
 #include "FG_Slate_classes.hpp"
 #include "FG_ApexDestruction_classes.hpp"
+#include "FG_SlateCore_classes.hpp"
+#include "FG_InputCore_classes.hpp"
 #include "FG_NavigationSystem_classes.hpp"
 #include "FG_OnlineSubsystemUtils_classes.hpp"
 #include "FG_ReplicationGraph_classes.hpp"
@@ -97,6 +97,16 @@ enum class ELoginState : uint8_t
 };
 
 
+// Enum FactoryGame.ETrainDockingState
+enum class ETrainDockingState : uint8_t
+{
+	TDS_None                       = 0,
+	TDS_ReadyToDock                = 1,
+	TDS_Docked                     = 2,
+	TDS_MAX                        = 3
+};
+
+
 // Enum FactoryGame.EBackEquipment
 enum class EBackEquipment : uint8_t
 {
@@ -171,16 +181,6 @@ enum class EProductionStatus : uint8_t
 	IS_STANDBY                     = 3,
 	IS_ERROR                       = 4,
 	IS_MAX                         = 5
-};
-
-
-// Enum FactoryGame.EStationDockingStatus
-enum class EStationDockingStatus : uint8_t
-{
-	ESDS_NotDocked                 = 0,
-	ESDS_DockInProcess             = 1,
-	ESDS_DockComplete              = 2,
-	ESDS_MAX                       = 3
 };
 
 
@@ -561,6 +561,29 @@ enum class EHorizontalSignTextAlignment : uint8_t
 };
 
 
+// Enum FactoryGame.ESelfDrivingLocomotiveState
+enum class ESelfDrivingLocomotiveState : uint8_t
+{
+	SDLS_Idle                      = 0,
+	SDLS_FollowPath                = 1,
+	SDLS_Docking                   = 2,
+	SDLS_DockingCompleted          = 3,
+	SDLS_MAX                       = 4
+};
+
+
+// Enum FactoryGame.ERailroadSignalAspect
+enum class ERailroadSignalAspect : uint8_t
+{
+	RSA_None                       = 0,
+	RSA_Clear                      = 1,
+	RSA_ClearThenStop              = 2,
+	RSA_Stop                       = 3,
+	RSA_Dock                       = 4,
+	RSA_MAX                        = 5
+};
+
+
 // Enum FactoryGame.ESelfDrivingLocomotiveError
 enum class ESelfDrivingLocomotiveError : uint8_t
 {
@@ -774,15 +797,6 @@ struct FFoundationSideSelectionFlags
 	unsigned char                                      Bottom : 1;                                               // 0x0000(0x0001) (Edit, DisableEditOnInstance)
 };
 
-// ScriptStruct FactoryGame.RailroadTrackPosition
-// 0x0010
-struct FRailroadTrackPosition
-{
-	TWeakObjectPtr<class AFGBuildableRailroadTrack>    Track;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              Offset;                                                   // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              Forward;                                                  // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct FactoryGame.SignWallData
 // 0x0018
 struct FSignWallData
@@ -857,7 +871,8 @@ struct FFactoryClearanceData
 // 0x0018
 struct FDismantleRefunds
 {
-	class AActor*                                      SelectedActor;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           NumPendingActors;                                         // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	TArray<struct FInventoryStack>                     PeekDismantleRefund;                                      // 0x0008(0x0010) (ZeroConstructor)
 };
 
@@ -938,7 +953,7 @@ struct FMoveSpeedPair
 };
 
 // ScriptStruct FactoryGame.SpawnData
-// 0x0020
+// 0x0028
 struct FSpawnData
 {
 	struct FVector                                     SpawnLocation;                                            // 0x0000(0x000C) (ZeroConstructor, SaveGame, IsPlainOldData)
@@ -947,6 +962,7 @@ struct FSpawnData
 	bool                                               WasKilled;                                                // 0x0018(0x0001) (ZeroConstructor, SaveGame, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
 	int                                                KilledOnDayNr;                                            // 0x001C(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
+	class UClass*                                      CreatureClassOverride;                                    // 0x0020(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.ProjectileData
@@ -1078,6 +1094,15 @@ struct FVehiclePhysicsData
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
 };
 
+// ScriptStruct FactoryGame.RailroadTrackPosition
+// 0x0010
+struct FRailroadTrackPosition
+{
+	TWeakObjectPtr<class AFGBuildableRailroadTrack>    Track;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              Offset;                                                   // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              Forward;                                                  // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct FactoryGame.FGEngineCommon
 // 0x0020
 struct FFGEngineCommon
@@ -1197,24 +1222,6 @@ struct FResearchRecipeReward
 struct FFGOnlineFriend
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.RailroadPathFindingResult
-// 0x0018
-struct FRailroadPathFindingResult
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	ERailroadPathFindingResult                         Result;                                                   // 0x0010(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.RailroadPathPoint
-// 0x0010
-struct FRailroadPathPoint
-{
-	class UObject*                                     Object;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              Distance;                                                 // 0x0008(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.WheelsetSetup
@@ -1456,6 +1463,45 @@ struct FTimeTableStop
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct FactoryGame.AnimInstanceProxyRailRoadVehicle
+// 0x0090 (0x0670 - 0x05E0)
+struct FAnimInstanceProxyRailRoadVehicle : public FAnimInstanceProxy
+{
+	float                                              mDeltaTime;                                               // 0x05E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mFrontBogieRotation;                                      // 0x05E4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mBackBogieRotation;                                       // 0x05F0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mWheelRotation;                                           // 0x05FC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mFrontConnectorRotation;                                  // 0x0608(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     mFrontConnectorTranslation;                               // 0x0614(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mBackConnectorRotation;                                   // 0x0620(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     mBackConnectorTranslation;                                // 0x062C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mTrackCurvature;                                          // 0x0638(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mForwardSpeed;                                            // 0x0644(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mTractiveForce;                                           // 0x0648(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mHandBrakeForce;                                          // 0x064C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mThrottle;                                                // 0x0650(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mBrakeForce;                                              // 0x0654(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mHandBrakeForceSpeed;                                     // 0x0658(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mHandBrakeGlow;                                           // 0x065C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mHandBrakeVfxSpawn;                                       // 0x0660(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mAGBrakePlayRate;                                         // 0x0664(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      mIsMoving : 1;                                            // 0x0668(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mIsUsingHandBrake : 1;                                    // 0x0668(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mIsLocomotive : 1;                                        // 0x0668(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mHasPower : 1;                                            // 0x0668(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGThrottleZero : 1;                                      // 0x0668(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGThrottlePositive : 1;                                  // 0x0668(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGStartToRunningTransition : 1;                          // 0x0668(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeTransition01 : 1;                             // 0x0668(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeTransition02 : 1;                             // 0x0669(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGBrakeForcePositive : 1;                                // 0x0669(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGBrakeToRunningTransition : 1;                          // 0x0669(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeReset01 : 1;                                  // 0x0669(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeReset02 : 1;                                  // 0x0669(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeStop : 1;                                     // 0x0669(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x066A(0x0006) MISSED OFFSET
+};
+
 // ScriptStruct FactoryGame.ConnectionAlwaysRelevant_NodePair
 // 0x0010
 struct FConnectionAlwaysRelevant_NodePair
@@ -1620,6 +1666,24 @@ struct FMaterialAndSlotName
 	class UMaterialInterface*                          Material;                                                 // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct FactoryGame.TrainConsist
+// 0x0030
+struct FTrainConsist
+{
+	TArray<class UClass*>                              Vehicles;                                                 // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	float                                              Length;                                                   // 0x0010(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              Mass;                                                     // 0x0014(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxSpeed;                                                 // 0x0018(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x14];                                      // 0x001C(0x0014) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.TrainAtcData
+// 0x0058
+struct FTrainAtcData
+{
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0000(0x0058) MISSED OFFSET
+};
+
 // ScriptStruct FactoryGame.TrainSimulationData
 // 0x0050
 struct FTrainSimulationData
@@ -1627,8 +1691,10 @@ struct FTrainSimulationData
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	TArray<class AFGRailroadVehicle*>                  SimulatedVehicles;                                        // 0x0008(0x0010) (ZeroConstructor)
 	TArray<class UFGRailroadVehicleMovementComponent*> SimulatedMovements;                                       // 0x0018(0x0010) (ExportObject, ZeroConstructor)
-	class UFGLocomotiveMovementComponent*              MasterMovement;                                           // 0x0028(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0030(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class UFGLocomotiveMovementComponent*              MasterMovement;                                           // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x14];                                      // 0x0038(0x0014) MISSED OFFSET
+	float                                              Velocity;                                                 // 0x004C(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.TutorialData
@@ -1941,11 +2007,19 @@ struct FMapAreaVisitedData
 	TSoftObjectPtr<class UClass>                       SchematicClass;                                           // 0x0018(0x0028) (Edit, DisableEditOnInstance)
 };
 
-// ScriptStruct FactoryGame.TrainConsist
-// 0x0001
-struct FTrainConsist
+// ScriptStruct FactoryGame.TrainSelfDrivingData
+// 0x0010
+struct FTrainSelfDrivingData
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.TrainAtcPoint
+// 0x0020
+struct FTrainAtcPoint
+{
+	class UFGRailroadTrackConnectionComponent*         TrackConnection;                                          // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.VehicleSeat

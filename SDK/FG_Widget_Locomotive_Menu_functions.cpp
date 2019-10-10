@@ -174,6 +174,63 @@ void UWidget_Locomotive_Menu_C::OnNameChanged(const struct FText& mName)
 }
 
 
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature
+// ()
+// Parameters:
+// bool                           SelfDrivingEnabled             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Locomotive_Menu_C::BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature(bool SelfDrivingEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature");
+
+	UWidget_Locomotive_Menu_C_BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature_Params params;
+	params.SelfDrivingEnabled = SelfDrivingEnabled;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature
+// ()
+
+void UWidget_Locomotive_Menu_C::BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature");
+
+	UWidget_Locomotive_Menu_C_BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnDockingStateChanged
+// ()
+// Parameters:
+// ETrainDockingState             State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Locomotive_Menu_C::OnDockingStateChanged(ETrainDockingState State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnDockingStateChanged");
+
+	UWidget_Locomotive_Menu_C_OnDockingStateChanged_Params params;
+	params.State = State;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.ExecuteUbergraph_Widget_Locomotive_Menu
 // ()
 // Parameters:

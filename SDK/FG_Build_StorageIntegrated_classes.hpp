@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_StorageIntegrated.Build_StorageIntegrated_C
-// 0x0008 (0x0698 - 0x0690)
+// 0x0008 (0x06A0 - 0x0698)
 class ABuild_StorageIntegrated_C : public AFGBuildableStorage
 {
 public:
-	class UStaticMeshComponent*                        MainMesh;                                                 // 0x0690(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        MainMesh;                                                 // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

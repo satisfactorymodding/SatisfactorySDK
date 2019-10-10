@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_PowerPoleMk3.Build_PowerPoleMk3_C
-// 0x0000 (0x0598 - 0x0598)
+// 0x0000 (0x05A0 - 0x05A0)
 class ABuild_PowerPoleMk3_C : public ABuild_PowerPoleMk1_C
 {
 public:

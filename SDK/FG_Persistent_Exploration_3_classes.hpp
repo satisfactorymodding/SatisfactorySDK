@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass Persistent_Exploration_3.Persistent_Exploration_C
 // 0x0000 (0x0330 - 0x0330)
-class APersistent_Exploration_3_C : public ALevelScriptActor
+	class APersistent_Exploration_3_C : public ALevelScriptActor
 {
 public:
 

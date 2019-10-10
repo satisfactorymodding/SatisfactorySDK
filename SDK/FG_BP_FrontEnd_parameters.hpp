@@ -48,7 +48,7 @@ struct UBP_FrontEnd_C_ShouldShutdownAfterThisError_Params
 // Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowLogin
 struct UBP_FrontEnd_C_Internal_ShouldShowLogin_Params
 {
-	bool                                               ShouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               shouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_FrontEnd.BP_FrontEnd_C.ShouldShowLogin
@@ -72,19 +72,19 @@ struct UBP_FrontEnd_C_GetNextErrorMessage_Params
 // Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShowErrorMessage
 struct UBP_FrontEnd_C_Internal_ShowErrorMessage_Params
 {
-	bool                                               ShouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               shouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowMainMenu
 struct UBP_FrontEnd_C_Internal_ShouldShowMainMenu_Params
 {
-	bool                                               ShouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               shouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowAlphaInfo
 struct UBP_FrontEnd_C_Internal_ShouldShowAlphaInfo_Params
 {
-	bool                                               ShouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               shouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_FrontEnd.BP_FrontEnd_C.ShouldShowErrorPopup
@@ -110,11 +110,6 @@ struct UBP_FrontEnd_C_SetupMainMenu_Params
 {
 };
 
-// Function BP_FrontEnd.BP_FrontEnd_C.Construct
-struct UBP_FrontEnd_C_Construct_Params
-{
-};
-
 // Function BP_FrontEnd.BP_FrontEnd_C.BndEvt__Widget_ErrorMessage_K2Node_ComponentBoundEvent_0_mOnClicked__DelegateSignature
 struct UBP_FrontEnd_C_BndEvt__Widget_ErrorMessage_K2Node_ComponentBoundEvent_0_mOnClicked__DelegateSignature_Params
 {
@@ -122,6 +117,11 @@ struct UBP_FrontEnd_C_BndEvt__Widget_ErrorMessage_K2Node_ComponentBoundEvent_0_m
 
 // Function BP_FrontEnd.BP_FrontEnd_C.GetAndSetNewError
 struct UBP_FrontEnd_C_GetAndSetNewError_Params
+{
+};
+
+// Function BP_FrontEnd.BP_FrontEnd_C.Construct
+struct UBP_FrontEnd_C_Construct_Params
 {
 };
 
@@ -137,6 +137,11 @@ struct UBP_FrontEnd_C_Destruct_Params
 
 // Function BP_FrontEnd.BP_FrontEnd_C.ClosePopup
 struct UBP_FrontEnd_C_ClosePopup_Params
+{
+};
+
+// Function BP_FrontEnd.BP_FrontEnd_C.CreateCloudSavesWidget
+struct UBP_FrontEnd_C_CreateCloudSavesWidget_Params
 {
 };
 

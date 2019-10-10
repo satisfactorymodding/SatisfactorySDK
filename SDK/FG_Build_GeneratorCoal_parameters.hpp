@@ -19,23 +19,25 @@ struct ABuild_GeneratorCoal_C_UserConstructionScript_Params
 {
 };
 
-// Function Build_GeneratorCoal.Build_GeneratorCoal_C.GainedSignificance
-struct ABuild_GeneratorCoal_C_GainedSignificance_Params
-{
-};
-
 // Function Build_GeneratorCoal.Build_GeneratorCoal_C.StartProductionLoopEffects
 struct ABuild_GeneratorCoal_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorCoal.Build_GeneratorCoal_C.StopProductionLoopEffects
 struct ABuild_GeneratorCoal_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorCoal.Build_GeneratorCoal_C.LostSignificance
 struct ABuild_GeneratorCoal_C_LostSignificance_Params
+{
+};
+
+// Function Build_GeneratorCoal.Build_GeneratorCoal_C.GainedSignificance
+struct ABuild_GeneratorCoal_C_GainedSignificance_Params
 {
 };
 

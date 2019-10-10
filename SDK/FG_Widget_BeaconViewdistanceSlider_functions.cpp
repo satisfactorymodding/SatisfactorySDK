@@ -95,16 +95,16 @@ void UWidget_BeaconViewdistanceSlider_C::GetButtonFromIndex(int Index, class UBu
 // ()
 // Parameters:
 // class UButton*                 Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Hovered                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BeaconViewdistanceSlider_C::SetButtonStyle(class UButton* Button, bool selected, bool Hovered)
+void UWidget_BeaconViewdistanceSlider_C::SetButtonStyle(class UButton* Button, bool Selected, bool Hovered)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BeaconViewdistanceSlider.Widget_BeaconViewdistanceSlider_C.SetButtonStyle");
 
 	UWidget_BeaconViewdistanceSlider_C_SetButtonStyle_Params params;
 	params.Button = Button;
-	params.selected = selected;
+	params.Selected = Selected;
 	params.Hovered = Hovered;
 
 	auto flags = fn->FunctionFlags;

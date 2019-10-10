@@ -451,6 +451,19 @@ struct UBP_RemoteCallObject_C_Server_SetTrainName_Params
 	struct FText                                       Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetTrainSelfDrivingEnabled
+struct UBP_RemoteCallObject_C_Server_SetTrainSelfDrivingEnabled_Params
+{
+	class AFGTrain*                                    Train;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsSelfDriving;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DockTrain
+struct UBP_RemoteCallObject_C_Server_DockTrain_Params
+{
+	class AFGTrain*                                    Train;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.ExecuteUbergraph_BP_RemoteCallObject
 struct UBP_RemoteCallObject_C_ExecuteUbergraph_BP_RemoteCallObject_Params
 {

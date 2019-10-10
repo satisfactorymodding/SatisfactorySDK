@@ -12,43 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.BlueprintUpdateAnimation
-// ()
-// Parameters:
-// float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnim_ManufacturerMk1_C::BlueprintUpdateAnimation(float* DeltaTimeX)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.BlueprintUpdateAnimation");
-
-	UAnim_ManufacturerMk1_C_BlueprintUpdateAnimation_Params params;
-	params.DeltaTimeX = DeltaTimeX;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.BlueprintInitializeAnimation
-// ()
-
-void UAnim_ManufacturerMk1_C::BlueprintInitializeAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.BlueprintInitializeAnimation");
-
-	UAnim_ManufacturerMk1_C_BlueprintInitializeAnimation_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.AnimNotify_ConstructorComplexEnteredProducing
 // ()
 
@@ -108,26 +71,6 @@ void UAnim_ManufacturerMk1_C::AnimNotify_ConstructorAdvEnteredOffline()
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.AnimNotify_ConstructorAdvEnteredOffline");
 
 	UAnim_ManufacturerMk1_C_AnimNotify_ConstructorAdvEnteredOffline_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.HasPowerChanged
-// ()
-// Parameters:
-// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnim_ManufacturerMk1_C::HasPowerChanged(bool State)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.HasPowerChanged");
-
-	UAnim_ManufacturerMk1_C_HasPowerChanged_Params params;
-	params.State = State;
 
 	auto flags = fn->FunctionFlags;
 

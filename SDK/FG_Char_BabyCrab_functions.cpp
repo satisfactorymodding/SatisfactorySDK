@@ -111,6 +111,23 @@ void AChar_BabyCrab_C::ReceiveBeginPlay()
 }
 
 
+// Function Char_BabyCrab.Char_BabyCrab_C.KillOrphanCrabs
+// ()
+
+void AChar_BabyCrab_C::KillOrphanCrabs()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.KillOrphanCrabs");
+
+	AChar_BabyCrab_C_KillOrphanCrabs_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Char_BabyCrab.Char_BabyCrab_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 // ()
 // Parameters:

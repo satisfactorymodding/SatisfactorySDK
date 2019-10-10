@@ -283,6 +283,16 @@ struct ABP_Locomotive_C_UpdateTrainName_Params
 {
 };
 
+// Function BP_Locomotive.BP_Locomotive_C.GainedSignificance
+struct ABP_Locomotive_C_GainedSignificance_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.LostSignificance
+struct ABP_Locomotive_C_LostSignificance_Params
+{
+};
+
 // Function BP_Locomotive.BP_Locomotive_C.ExecuteUbergraph_BP_Locomotive
 struct ABP_Locomotive_C_ExecuteUbergraph_BP_Locomotive_Params
 {

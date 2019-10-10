@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_TrainStats.Widget_TrainStats_C.UpdateDockingButton
+// ()
+// Parameters:
+// ETrainDockingState             State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_TrainStats_C::UpdateDockingButton(ETrainDockingState State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStats.Widget_TrainStats_C.UpdateDockingButton");
+
+	UWidget_TrainStats_C_UpdateDockingButton_Params params;
+	params.State = State;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_TrainStats.Widget_TrainStats_C.SetTitle
 // ()
 // Parameters:
@@ -91,6 +111,65 @@ void UWidget_TrainStats_C::Destruct()
 }
 
 
+// Function Widget_TrainStats.Widget_TrainStats_C.Init
+// ()
+// Parameters:
+// bool                           SelfDrivingEnabled             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ETrainDockingState             DockingState                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_TrainStats_C::Init(bool SelfDrivingEnabled, ETrainDockingState DockingState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStats.Widget_TrainStats_C.Init");
+
+	UWidget_TrainStats_C_Init_Params params;
+	params.SelfDrivingEnabled = SelfDrivingEnabled;
+	params.DockingState = DockingState;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainStats.Widget_TrainStats_C.BndEvt__Widget_StandardButton_Togglable_K2Node_ComponentBoundEvent_2_OnStateChanged__DelegateSignature
+// ()
+// Parameters:
+// bool                           IsTrue                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_TrainStats_C::BndEvt__Widget_StandardButton_Togglable_K2Node_ComponentBoundEvent_2_OnStateChanged__DelegateSignature(bool IsTrue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStats.Widget_TrainStats_C.BndEvt__Widget_StandardButton_Togglable_K2Node_ComponentBoundEvent_2_OnStateChanged__DelegateSignature");
+
+	UWidget_TrainStats_C_BndEvt__Widget_StandardButton_Togglable_K2Node_ComponentBoundEvent_2_OnStateChanged__DelegateSignature_Params params;
+	params.IsTrue = IsTrue;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainStats.Widget_TrainStats_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature
+// ()
+
+void UWidget_TrainStats_C::BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStats.Widget_TrainStats_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature");
+
+	UWidget_TrainStats_C_BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_TrainStats.Widget_TrainStats_C.ExecuteUbergraph_Widget_TrainStats
 // ()
 // Parameters:
@@ -102,6 +181,43 @@ void UWidget_TrainStats_C::ExecuteUbergraph_Widget_TrainStats(int EntryPoint)
 
 	UWidget_TrainStats_C_ExecuteUbergraph_Widget_TrainStats_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainStats.Widget_TrainStats_C.OnDockClicked__DelegateSignature
+// ()
+
+void UWidget_TrainStats_C::OnDockClicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStats.Widget_TrainStats_C.OnDockClicked__DelegateSignature");
+
+	UWidget_TrainStats_C_OnDockClicked__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_TrainStats.Widget_TrainStats_C.OnAutopilotChanged__DelegateSignature
+// ()
+// Parameters:
+// bool                           SelfDrivingEnabled             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_TrainStats_C::OnAutopilotChanged__DelegateSignature(bool SelfDrivingEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainStats.Widget_TrainStats_C.OnAutopilotChanged__DelegateSignature");
+
+	UWidget_TrainStats_C_OnAutopilotChanged__DelegateSignature_Params params;
+	params.SelfDrivingEnabled = SelfDrivingEnabled;
 
 	auto flags = fn->FunctionFlags;
 

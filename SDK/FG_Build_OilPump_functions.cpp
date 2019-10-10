@@ -90,12 +90,15 @@ void ABuild_OilPump_C::StopIdlingLoopEffects()
 
 // Function Build_OilPump.Build_OilPump_C.StopProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_OilPump_C::StopProductionLoopEffects()
+void ABuild_OilPump_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.StopProductionLoopEffects");
 
 	ABuild_OilPump_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -158,12 +161,15 @@ void ABuild_OilPump_C::StartIdlingLoopEffects()
 
 // Function Build_OilPump.Build_OilPump_C.StartProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_OilPump_C::StartProductionLoopEffects()
+void ABuild_OilPump_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.StartProductionLoopEffects");
 
 	ABuild_OilPump_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 

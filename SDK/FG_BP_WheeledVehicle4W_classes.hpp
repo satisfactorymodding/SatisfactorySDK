@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WheeledVehicle4W.BP_WheeledVehicle4W_C
-// 0x0008 (0x0860 - 0x0858)
+// 0x0008 (0x0878 - 0x0870)
 class ABP_WheeledVehicle4W_C : public ABP_WheeledVehicle_C
 {
 public:
-	class UFGWheeledVehicleMovementComponent4W*        FGWheeledVehicleMovementComponent4W;                      // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGWheeledVehicleMovementComponent4W*        FGWheeledVehicleMovementComponent4W;                      // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

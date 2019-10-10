@@ -129,9 +129,9 @@ ESlateVisibility UWidget_ActiveSchematicContainer_C::ShowSchematicWidget()
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ShouldShowSchematic
 // ()
 // Parameters:
-// bool                           ShouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActiveSchematicContainer_C::ShouldShowSchematic(bool* ShouldShow)
+void UWidget_ActiveSchematicContainer_C::ShouldShowSchematic(bool* shouldShow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ShouldShowSchematic");
 
@@ -143,8 +143,8 @@ void UWidget_ActiveSchematicContainer_C::ShouldShowSchematic(bool* ShouldShow)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldShow != nullptr)
-		*ShouldShow = params.ShouldShow;
+	if (shouldShow != nullptr)
+		*shouldShow = params.shouldShow;
 }
 
 

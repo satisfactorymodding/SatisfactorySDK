@@ -42,7 +42,7 @@ public:
 	void AddSchematicCostWidget();
 	void MatchWidgetWithSchematicCost();
 	ESlateVisibility ShowSchematicWidget();
-	void ShouldShowSchematic(bool* ShouldShow);
+	void ShouldShowSchematic(bool* shouldShow);
 	void GetSchematicName();
 	void Construct();
 	void UpdateSchematic(class UClass* activeSchematic);

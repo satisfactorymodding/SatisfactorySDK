@@ -29,26 +29,6 @@ void ABuild_GeneratorFuel_C::UserConstructionScript()
 }
 
 
-// Function Build_GeneratorFuel.Build_GeneratorFuel_C.ReceiveUpdateEffects
-// ()
-// Parameters:
-// float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABuild_GeneratorFuel_C::ReceiveUpdateEffects(float* DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorFuel.Build_GeneratorFuel_C.ReceiveUpdateEffects");
-
-	ABuild_GeneratorFuel_C_ReceiveUpdateEffects_Params params;
-	params.DeltaSeconds = DeltaSeconds;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_GeneratorFuel.Build_GeneratorFuel_C.GainedSignificance
 // ()
 
@@ -68,12 +48,15 @@ void ABuild_GeneratorFuel_C::GainedSignificance()
 
 // Function Build_GeneratorFuel.Build_GeneratorFuel_C.StartProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_GeneratorFuel_C::StartProductionLoopEffects()
+void ABuild_GeneratorFuel_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorFuel.Build_GeneratorFuel_C.StartProductionLoopEffects");
 
 	ABuild_GeneratorFuel_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -85,12 +68,15 @@ void ABuild_GeneratorFuel_C::StartProductionLoopEffects()
 
 // Function Build_GeneratorFuel.Build_GeneratorFuel_C.StopProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_GeneratorFuel_C::StopProductionLoopEffects()
+void ABuild_GeneratorFuel_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorFuel.Build_GeneratorFuel_C.StopProductionLoopEffects");
 
 	ABuild_GeneratorFuel_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -108,6 +94,26 @@ void ABuild_GeneratorFuel_C::LostSignificance()
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorFuel.Build_GeneratorFuel_C.LostSignificance");
 
 	ABuild_GeneratorFuel_C_LostSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Build_GeneratorFuel.Build_GeneratorFuel_C.ReceiveUpdateEffects
+// ()
+// Parameters:
+// float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuild_GeneratorFuel_C::ReceiveUpdateEffects(float* DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorFuel.Build_GeneratorFuel_C.ReceiveUpdateEffects");
+
+	ABuild_GeneratorFuel_C_ReceiveUpdateEffects_Params params;
+	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 

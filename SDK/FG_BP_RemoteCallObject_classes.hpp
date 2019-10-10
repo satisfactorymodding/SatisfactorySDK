@@ -90,6 +90,8 @@ public:
 	void Internal_Server_SetActorRepresentationCompassViewDistance(class UFGActorRepresentation* actorRepresentation, ECompassViewDistance compassViewDistance);
 	void SetActorRepresentationCompassViewDistance(class UFGActorRepresentation* actorRepresentation, ECompassViewDistance compassViewDistance);
 	void Server_SetTrainName(class AFGTrain* Train, const struct FText& Name);
+	void Server_SetTrainSelfDrivingEnabled(class AFGTrain* Train, bool IsSelfDriving);
+	void Server_DockTrain(class AFGTrain* Train);
 	void ExecuteUbergraph_BP_RemoteCallObject(int EntryPoint);
 };
 

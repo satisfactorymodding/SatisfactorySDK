@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_Wall_Conveyor_8x4_01_Steel.Build_Wall_Conveyor_8x4_01_Steel_C
-// 0x0018 (0x0590 - 0x0578)
+// 0x0018 (0x0598 - 0x0580)
 class ABuild_Wall_Conveyor_8x4_01_Steel_C : public AFGBuildableWall
 {
 public:
-	class UFGFactoryConnectionComponent*               SnapOnly2;                                                // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGFactoryConnectionComponent*               SnapOnly1;                                                // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGFactoryConnectionComponent*               SnapOnly0;                                                // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGFactoryConnectionComponent*               SnapOnly2;                                                // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGFactoryConnectionComponent*               SnapOnly1;                                                // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGFactoryConnectionComponent*               SnapOnly0;                                                // 0x0590(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

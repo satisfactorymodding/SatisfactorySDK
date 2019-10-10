@@ -32,16 +32,16 @@ void UWidget_Multiplayer_ListButton_C::UpdateNATWarningForClient()
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetHostingNATIsse
 // ()
 // Parameters:
-// ECachedNATType                 HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECachedNATType                 hostNat                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ECachedNATType                 clientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ToolTip                        (Parm, OutParm)
 
-void UWidget_Multiplayer_ListButton_C::GetHostingNATIsse(ECachedNATType HostNAT, ECachedNATType clientNat, struct FText* ToolTip)
+void UWidget_Multiplayer_ListButton_C::GetHostingNATIsse(ECachedNATType hostNat, ECachedNATType clientNat, struct FText* ToolTip)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetHostingNATIsse");
 
 	UWidget_Multiplayer_ListButton_C_GetHostingNATIsse_Params params;
-	params.HostNAT = HostNAT;
+	params.hostNat = hostNat;
 	params.clientNat = clientNat;
 
 	auto flags = fn->FunctionFlags;
@@ -58,16 +58,16 @@ void UWidget_Multiplayer_ListButton_C::GetHostingNATIsse(ECachedNATType HostNAT,
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetConnectingNATIsse
 // ()
 // Parameters:
-// ECachedNATType                 HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECachedNATType                 hostNat                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ECachedNATType                 clientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ToolTip                        (Parm, OutParm)
 
-void UWidget_Multiplayer_ListButton_C::GetConnectingNATIsse(ECachedNATType HostNAT, ECachedNATType clientNat, struct FText* ToolTip)
+void UWidget_Multiplayer_ListButton_C::GetConnectingNATIsse(ECachedNATType hostNat, ECachedNATType clientNat, struct FText* ToolTip)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetConnectingNATIsse");
 
 	UWidget_Multiplayer_ListButton_C_GetConnectingNATIsse_Params params;
-	params.HostNAT = HostNAT;
+	params.hostNat = hostNat;
 	params.clientNat = clientNat;
 
 	auto flags = fn->FunctionFlags;
@@ -84,16 +84,16 @@ void UWidget_Multiplayer_ListButton_C::GetConnectingNATIsse(ECachedNATType HostN
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.IsNATIssue
 // ()
 // Parameters:
-// ECachedNATType                 HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECachedNATType                 hostNat                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ECachedNATType                 clientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isIssue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Multiplayer_ListButton_C::IsNATIssue(ECachedNATType HostNAT, ECachedNATType clientNat, bool* isIssue)
+void UWidget_Multiplayer_ListButton_C::IsNATIssue(ECachedNATType hostNat, ECachedNATType clientNat, bool* isIssue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.IsNATIssue");
 
 	UWidget_Multiplayer_ListButton_C_IsNATIssue_Params params;
-	params.HostNAT = HostNAT;
+	params.hostNat = hostNat;
 	params.clientNat = clientNat;
 
 	auto flags = fn->FunctionFlags;

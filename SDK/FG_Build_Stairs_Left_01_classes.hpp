@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_Stairs_Left_01.Build_Stairs_Left_01_C
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x0588 - 0x0588)
 class ABuild_Stairs_Left_01_C : public AFGBuildableStair
 {
 public:

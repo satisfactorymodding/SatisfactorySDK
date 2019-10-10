@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_FreightWagonAnim_Child.BP_FreightWagonAnim_Child_C
-// 0x0000 (0x3290 - 0x3290)
+// 0x0000 (0x3830 - 0x3830)
 class UBP_FreightWagonAnim_Child_C : public UBP_LocomotiveAnim_C
 {
 public:

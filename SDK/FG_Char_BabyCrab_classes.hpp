@@ -49,6 +49,7 @@ public:
 	void ReceiveTick(float* DeltaSeconds);
 	void ReceiveDied();
 	void ReceiveBeginPlay();
+	void KillOrphanCrabs();
 	void BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void ResetMovement();
 	void ChargingMovement();

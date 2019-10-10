@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_WalkwayStraight.Build_WalkwayStraight_C
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x0588 - 0x0588)
 class ABuild_WalkwayStraight_C : public AFGBuildableWalkway
 {
 public:

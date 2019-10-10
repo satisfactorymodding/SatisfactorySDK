@@ -45,6 +45,11 @@ struct AChar_BabyCrab_C_ReceiveBeginPlay_Params
 {
 };
 
+// Function Char_BabyCrab.Char_BabyCrab_C.KillOrphanCrabs
+struct AChar_BabyCrab_C_KillOrphanCrabs_Params
+{
+};
+
 // Function Char_BabyCrab.Char_BabyCrab_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 struct AChar_BabyCrab_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature_Params
 {

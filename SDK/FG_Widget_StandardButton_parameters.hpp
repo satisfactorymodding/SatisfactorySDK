@@ -14,6 +14,18 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_StandardButton.Widget_StandardButton_C.SetIconBrush
+struct UWidget_StandardButton_C_SetIconBrush_Params
+{
+	struct FSlateBrush                                 mIconBrush;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function Widget_StandardButton.Widget_StandardButton_C.SetText
+struct UWidget_StandardButton_C_SetText_Params
+{
+	struct FText                                       mText;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
 // Function Widget_StandardButton.Widget_StandardButton_C.SetFocused
 struct UWidget_StandardButton_C_SetFocused_Params
 {

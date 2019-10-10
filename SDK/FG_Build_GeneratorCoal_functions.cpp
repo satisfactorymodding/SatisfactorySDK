@@ -29,31 +29,17 @@ void ABuild_GeneratorCoal_C::UserConstructionScript()
 }
 
 
-// Function Build_GeneratorCoal.Build_GeneratorCoal_C.GainedSignificance
-// ()
-
-void ABuild_GeneratorCoal_C::GainedSignificance()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorCoal.Build_GeneratorCoal_C.GainedSignificance");
-
-	ABuild_GeneratorCoal_C_GainedSignificance_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_GeneratorCoal.Build_GeneratorCoal_C.StartProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_GeneratorCoal_C::StartProductionLoopEffects()
+void ABuild_GeneratorCoal_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorCoal.Build_GeneratorCoal_C.StartProductionLoopEffects");
 
 	ABuild_GeneratorCoal_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -65,12 +51,15 @@ void ABuild_GeneratorCoal_C::StartProductionLoopEffects()
 
 // Function Build_GeneratorCoal.Build_GeneratorCoal_C.StopProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_GeneratorCoal_C::StopProductionLoopEffects()
+void ABuild_GeneratorCoal_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorCoal.Build_GeneratorCoal_C.StopProductionLoopEffects");
 
 	ABuild_GeneratorCoal_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -88,6 +77,23 @@ void ABuild_GeneratorCoal_C::LostSignificance()
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorCoal.Build_GeneratorCoal_C.LostSignificance");
 
 	ABuild_GeneratorCoal_C_LostSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Build_GeneratorCoal.Build_GeneratorCoal_C.GainedSignificance
+// ()
+
+void ABuild_GeneratorCoal_C::GainedSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorCoal.Build_GeneratorCoal_C.GainedSignificance");
+
+	ABuild_GeneratorCoal_C_GainedSignificance_Params params;
 
 	auto flags = fn->FunctionFlags;
 

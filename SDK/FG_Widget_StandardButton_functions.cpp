@@ -12,6 +12,46 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_StandardButton.Widget_StandardButton_C.SetIconBrush
+// ()
+// Parameters:
+// struct FSlateBrush             mIconBrush                     (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_StandardButton_C::SetIconBrush(const struct FSlateBrush& mIconBrush)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_StandardButton.Widget_StandardButton_C.SetIconBrush");
+
+	UWidget_StandardButton_C_SetIconBrush_Params params;
+	params.mIconBrush = mIconBrush;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_StandardButton.Widget_StandardButton_C.SetText
+// ()
+// Parameters:
+// struct FText                   mText                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_StandardButton_C::SetText(const struct FText& mText)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_StandardButton.Widget_StandardButton_C.SetText");
+
+	UWidget_StandardButton_C_SetText_Params params;
+	params.mText = mText;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_StandardButton.Widget_StandardButton_C.SetFocused
 // ()
 

@@ -48,6 +48,9 @@ public:
 	void UpdateLocomotiveStats();
 	void OnEscapePressed();
 	void OnNameChanged(const struct FText& mName);
+	void BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature(bool SelfDrivingEnabled);
+	void BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature();
+	void OnDockingStateChanged(ETrainDockingState State);
 	void ExecuteUbergraph_Widget_Locomotive_Menu(int EntryPoint);
 	void OnTrainNameChanged__DelegateSignature();
 	void OnClose__DelegateSignature();

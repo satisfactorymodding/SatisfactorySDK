@@ -69,12 +69,15 @@ void ABuild_GeneratorIntegratedBiomass_C::GainedSignificance()
 
 // Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.StartProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_GeneratorIntegratedBiomass_C::StartProductionLoopEffects()
+void ABuild_GeneratorIntegratedBiomass_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.StartProductionLoopEffects");
 
 	ABuild_GeneratorIntegratedBiomass_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -86,12 +89,15 @@ void ABuild_GeneratorIntegratedBiomass_C::StartProductionLoopEffects()
 
 // Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.StopProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_GeneratorIntegratedBiomass_C::StopProductionLoopEffects()
+void ABuild_GeneratorIntegratedBiomass_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.StopProductionLoopEffects");
 
 	ABuild_GeneratorIntegratedBiomass_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 

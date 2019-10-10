@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_Fence_01.Build_Fence_01_C
-// 0x0000 (0x0578 - 0x0578)
+// 0x0000 (0x0580 - 0x0580)
 class ABuild_Fence_01_C : public AFGBuildableWall
 {
 public:

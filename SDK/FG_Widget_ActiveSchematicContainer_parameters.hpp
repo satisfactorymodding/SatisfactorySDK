@@ -50,7 +50,7 @@ struct UWidget_ActiveSchematicContainer_C_ShowSchematicWidget_Params
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ShouldShowSchematic
 struct UWidget_ActiveSchematicContainer_C_ShouldShowSchematic_Params
 {
-	bool                                               ShouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               shouldShow;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.GetSchematicName

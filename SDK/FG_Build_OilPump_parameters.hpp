@@ -39,6 +39,7 @@ struct ABuild_OilPump_C_StopIdlingLoopEffects_Params
 // Function Build_OilPump.Build_OilPump_C.StopProductionLoopEffects
 struct ABuild_OilPump_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_OilPump.Build_OilPump_C.LostSignificance
@@ -59,6 +60,7 @@ struct ABuild_OilPump_C_StartIdlingLoopEffects_Params
 // Function Build_OilPump.Build_OilPump_C.StartProductionLoopEffects
 struct ABuild_OilPump_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_OilPump.Build_OilPump_C.ExecuteUbergraph_Build_OilPump

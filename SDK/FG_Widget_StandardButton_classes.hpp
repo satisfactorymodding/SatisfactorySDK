@@ -37,6 +37,8 @@ public:
 	}
 
 
+	void SetIconBrush(const struct FSlateBrush& mIconBrush);
+	void SetText(const struct FText& mText);
 	void SetFocused();
 	void PreConstruct(bool* IsDesignTime);
 	void BndEvt__MarkAsReadButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();

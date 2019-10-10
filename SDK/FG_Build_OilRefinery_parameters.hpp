@@ -32,11 +32,13 @@ struct ABuild_OilRefinery_C_StopIdlingLoopEffects_Params
 // Function Build_OilRefinery.Build_OilRefinery_C.StartProductionLoopEffects
 struct ABuild_OilRefinery_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_OilRefinery.Build_OilRefinery_C.StopProductionLoopEffects
 struct ABuild_OilRefinery_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_OilRefinery.Build_OilRefinery_C.GainedSignificance

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_Wall_Gate_8x4_01.Build_Wall_Gate_8x4_01_C
-// 0x0000 (0x0578 - 0x0578)
+// 0x0000 (0x0580 - 0x0580)
 class ABuild_Wall_Gate_8x4_01_C : public AFGBuildableWall
 {
 public:

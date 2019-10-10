@@ -41,11 +41,13 @@ struct ABuild_MinerMk1_C_GainedSignificance_Params
 // Function Build_MinerMk1.Build_MinerMk1_C.StartProductionLoopEffects
 struct ABuild_MinerMk1_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_MinerMk1.Build_MinerMk1_C.StopProductionLoopEffects
 struct ABuild_MinerMk1_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_MinerMk1.Build_MinerMk1_C.LostSignificance

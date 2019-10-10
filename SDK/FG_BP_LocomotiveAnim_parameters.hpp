@@ -14,17 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.CalculateAnimGraphValues
-struct UBP_LocomotiveAnim_C_CalculateAnimGraphValues_Params
-{
-};
-
-// Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.BlueprintUpdateAnimation
-struct UBP_LocomotiveAnim_C_BlueprintUpdateAnimation_Params
-{
-	float*                                             DeltaTimeX;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.AnimNotify_EnterHandBrake_01
 struct UBP_LocomotiveAnim_C_AnimNotify_EnterHandBrake_01_Params
 {
@@ -47,11 +36,6 @@ struct UBP_LocomotiveAnim_C_AnimNotify_KillHandBrake_02_Params
 
 // Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.AnimNotify_TriggerhandbrakeVFX
 struct UBP_LocomotiveAnim_C_AnimNotify_TriggerhandbrakeVFX_Params
-{
-};
-
-// Function BP_LocomotiveAnim.BP_LocomotiveAnim_C.BlueprintInitializeAnimation
-struct UBP_LocomotiveAnim_C_BlueprintInitializeAnimation_Params
 {
 };
 

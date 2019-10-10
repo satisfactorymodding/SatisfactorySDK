@@ -32,6 +32,7 @@ struct ABuild_SmelterMk1_C_LostSignificance_Params
 // Function Build_SmelterMk1.Build_SmelterMk1_C.StartProductionLoopEffects
 struct ABuild_SmelterMk1_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_SmelterMk1.Build_SmelterMk1_C.StartIdlingLoopEffects
@@ -47,6 +48,7 @@ struct ABuild_SmelterMk1_C_StopIdlingLoopEffects_Params
 // Function Build_SmelterMk1.Build_SmelterMk1_C.StopProductionLoopEffects
 struct ABuild_SmelterMk1_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_SmelterMk1.Build_SmelterMk1_C.GainedSignificance

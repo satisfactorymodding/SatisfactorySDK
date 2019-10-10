@@ -77,9 +77,9 @@ public:
 
 
 	void UpdateNATWarningForClient();
-	void GetHostingNATIsse(ECachedNATType HostNAT, ECachedNATType clientNat, struct FText* ToolTip);
-	void GetConnectingNATIsse(ECachedNATType HostNAT, ECachedNATType clientNat, struct FText* ToolTip);
-	void IsNATIssue(ECachedNATType HostNAT, ECachedNATType clientNat, bool* isIssue);
+	void GetHostingNATIsse(ECachedNATType hostNat, ECachedNATType clientNat, struct FText* ToolTip);
+	void GetConnectingNATIsse(ECachedNATType hostNat, ECachedNATType clientNat, struct FText* ToolTip);
+	void IsNATIssue(ECachedNATType hostNat, ECachedNATType clientNat, bool* isIssue);
 	void UpdateNATWarningForHost();
 	void SetupForManagePlayers(class AFGPlayerState* PlayerState);
 	void SetupForJoinInvite(struct FPendingInvite* invite);

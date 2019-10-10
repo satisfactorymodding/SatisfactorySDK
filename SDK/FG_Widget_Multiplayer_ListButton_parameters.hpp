@@ -22,7 +22,7 @@ struct UWidget_Multiplayer_ListButton_C_UpdateNATWarningForClient_Params
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetHostingNATIsse
 struct UWidget_Multiplayer_ListButton_C_GetHostingNATIsse_Params
 {
-	ECachedNATType                                     HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECachedNATType                                     hostNat;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	ECachedNATType                                     clientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       ToolTip;                                                  // (Parm, OutParm)
 };
@@ -30,7 +30,7 @@ struct UWidget_Multiplayer_ListButton_C_GetHostingNATIsse_Params
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetConnectingNATIsse
 struct UWidget_Multiplayer_ListButton_C_GetConnectingNATIsse_Params
 {
-	ECachedNATType                                     HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECachedNATType                                     hostNat;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	ECachedNATType                                     clientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       ToolTip;                                                  // (Parm, OutParm)
 };
@@ -38,7 +38,7 @@ struct UWidget_Multiplayer_ListButton_C_GetConnectingNATIsse_Params
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.IsNATIssue
 struct UWidget_Multiplayer_ListButton_C_IsNATIssue_Params
 {
-	ECachedNATType                                     HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECachedNATType                                     hostNat;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	ECachedNATType                                     clientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isIssue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

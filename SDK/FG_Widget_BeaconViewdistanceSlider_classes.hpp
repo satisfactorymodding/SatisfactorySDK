@@ -58,7 +58,7 @@ public:
 	void GetTextFromIndex(int Index, class UTextBlock** Text, bool* Success);
 	struct FEventReply OnMouseMove(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
 	void GetButtonFromIndex(int Index, class UButton** Button, bool* Success);
-	void SetButtonStyle(class UButton* Button, bool selected, bool Hovered);
+	void SetButtonStyle(class UButton* Button, bool Selected, bool Hovered);
 	void OnMouseLeave(struct FPointerEvent* MouseEvent);
 	void Construct();
 	void OnButtonClicked();

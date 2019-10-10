@@ -27,11 +27,13 @@ struct ABuild_GeneratorBiomass_C_GainedSignificance_Params
 // Function Build_GeneratorBiomass.Build_GeneratorBiomass_C.StartProductionLoopEffects
 struct ABuild_GeneratorBiomass_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorBiomass.Build_GeneratorBiomass_C.StopProductionLoopEffects
 struct ABuild_GeneratorBiomass_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorBiomass.Build_GeneratorBiomass_C.LostSignificance

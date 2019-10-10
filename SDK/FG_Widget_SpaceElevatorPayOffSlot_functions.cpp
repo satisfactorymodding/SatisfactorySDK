@@ -78,16 +78,16 @@ ESlateVisibility UWidget_SpaceElevatorPayOffSlot_C::GetPaidOffSlotVisibility()
 }
 
 
-// Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressbarVisibility
+// Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressBarVisibility
 // ()
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UWidget_SpaceElevatorPayOffSlot_C::GetProgressbarVisibility()
+ESlateVisibility UWidget_SpaceElevatorPayOffSlot_C::GetProgressBarVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressbarVisibility");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceElevatorPayOffSlot.Widget_SpaceElevatorPayOffSlot_C.GetProgressBarVisibility");
 
-	UWidget_SpaceElevatorPayOffSlot_C_GetProgressbarVisibility_Params params;
+	UWidget_SpaceElevatorPayOffSlot_C_GetProgressBarVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -19,12 +19,6 @@ struct ABuild_GeneratorFuel_C_UserConstructionScript_Params
 {
 };
 
-// Function Build_GeneratorFuel.Build_GeneratorFuel_C.ReceiveUpdateEffects
-struct ABuild_GeneratorFuel_C_ReceiveUpdateEffects_Params
-{
-	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Build_GeneratorFuel.Build_GeneratorFuel_C.GainedSignificance
 struct ABuild_GeneratorFuel_C_GainedSignificance_Params
 {
@@ -33,16 +27,24 @@ struct ABuild_GeneratorFuel_C_GainedSignificance_Params
 // Function Build_GeneratorFuel.Build_GeneratorFuel_C.StartProductionLoopEffects
 struct ABuild_GeneratorFuel_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorFuel.Build_GeneratorFuel_C.StopProductionLoopEffects
 struct ABuild_GeneratorFuel_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorFuel.Build_GeneratorFuel_C.LostSignificance
 struct ABuild_GeneratorFuel_C_LostSignificance_Params
 {
+};
+
+// Function Build_GeneratorFuel.Build_GeneratorFuel_C.ReceiveUpdateEffects
+struct ABuild_GeneratorFuel_C_ReceiveUpdateEffects_Params
+{
+	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorFuel.Build_GeneratorFuel_C.ExecuteUbergraph_Build_GeneratorFuel

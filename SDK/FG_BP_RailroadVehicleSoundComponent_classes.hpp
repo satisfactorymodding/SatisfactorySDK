@@ -15,12 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C
-// 0x0009 (0x0279 - 0x0270)
+// 0x0008 (0x0278 - 0x0270)
 class UBP_RailroadVehicleSoundComponent_C : public UFGRailroadVehicleSoundComponent
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0270(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	bool                                               mIdleSoundWasNotValid;                                    // 0x0278(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,8 +29,8 @@ public:
 
 
 	void mSpeedKmH(float* Speed);
-	void OnStoppedMoving();
 	void OnStartedMoving();
+	void OnStoppedMoving();
 	void UpdateRTPCs();
 	void OnDynamicBrakesApplied();
 	void OnAirBrakesApplied();
@@ -39,8 +38,9 @@ public:
 	void OnDynamicBrakesReleased();
 	void OnThrottleReleased();
 	void OnThrottleApplied();
-	void ReceiveBeginPlay();
 	void OnStoppedMovingRelay();
+	void StartIdleSounds();
+	void StopAllSounds();
 	void ExecuteUbergraph_BP_RailroadVehicleSoundComponent(int EntryPoint);
 };
 

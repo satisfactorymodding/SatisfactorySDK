@@ -1374,6 +1374,48 @@ void UBP_RemoteCallObject_C::Server_SetTrainName(class AFGTrain* Train, const st
 }
 
 
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetTrainSelfDrivingEnabled
+// ()
+// Parameters:
+// class AFGTrain*                Train                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsSelfDriving                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_RemoteCallObject_C::Server_SetTrainSelfDrivingEnabled(class AFGTrain* Train, bool IsSelfDriving)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SetTrainSelfDrivingEnabled");
+
+	UBP_RemoteCallObject_C_Server_SetTrainSelfDrivingEnabled_Params params;
+	params.Train = Train;
+	params.IsSelfDriving = IsSelfDriving;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DockTrain
+// ()
+// Parameters:
+// class AFGTrain*                Train                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_RemoteCallObject_C::Server_DockTrain(class AFGTrain* Train)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DockTrain");
+
+	UBP_RemoteCallObject_C_Server_DockTrain_Params params;
+	params.Train = Train;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.ExecuteUbergraph_BP_RemoteCallObject
 // ()
 // Parameters:

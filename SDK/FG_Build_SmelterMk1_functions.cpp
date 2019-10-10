@@ -65,12 +65,15 @@ void ABuild_SmelterMk1_C::LostSignificance()
 
 // Function Build_SmelterMk1.Build_SmelterMk1_C.StartProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_SmelterMk1_C::StartProductionLoopEffects()
+void ABuild_SmelterMk1_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_SmelterMk1.Build_SmelterMk1_C.StartProductionLoopEffects");
 
 	ABuild_SmelterMk1_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -116,12 +119,15 @@ void ABuild_SmelterMk1_C::StopIdlingLoopEffects()
 
 // Function Build_SmelterMk1.Build_SmelterMk1_C.StopProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_SmelterMk1_C::StopProductionLoopEffects()
+void ABuild_SmelterMk1_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_SmelterMk1.Build_SmelterMk1_C.StopProductionLoopEffects");
 
 	ABuild_SmelterMk1_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 

@@ -135,12 +135,15 @@ void ABuild_MinerMk2_C::LostSignificance()
 
 // Function Build_MinerMk2.Build_MinerMk2_C.StartProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_MinerMk2_C::StartProductionLoopEffects()
+void ABuild_MinerMk2_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_MinerMk2.Build_MinerMk2_C.StartProductionLoopEffects");
 
 	ABuild_MinerMk2_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -152,12 +155,15 @@ void ABuild_MinerMk2_C::StartProductionLoopEffects()
 
 // Function Build_MinerMk2.Build_MinerMk2_C.StopProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_MinerMk2_C::StopProductionLoopEffects()
+void ABuild_MinerMk2_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_MinerMk2.Build_MinerMk2_C.StopProductionLoopEffects");
 
 	ABuild_MinerMk2_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 

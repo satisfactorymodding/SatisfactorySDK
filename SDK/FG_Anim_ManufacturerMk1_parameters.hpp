@@ -14,17 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.BlueprintUpdateAnimation
-struct UAnim_ManufacturerMk1_C_BlueprintUpdateAnimation_Params
-{
-	float*                                             DeltaTimeX;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.BlueprintInitializeAnimation
-struct UAnim_ManufacturerMk1_C_BlueprintInitializeAnimation_Params
-{
-};
-
 // Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.AnimNotify_ConstructorComplexEnteredProducing
 struct UAnim_ManufacturerMk1_C_AnimNotify_ConstructorComplexEnteredProducing_Params
 {
@@ -43,12 +32,6 @@ struct UAnim_ManufacturerMk1_C_AnimNotify_ConstructorComplexLeftOffline_Params
 // Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.AnimNotify_ConstructorAdvEnteredOffline
 struct UAnim_ManufacturerMk1_C_AnimNotify_ConstructorAdvEnteredOffline_Params
 {
-};
-
-// Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.HasPowerChanged
-struct UAnim_ManufacturerMk1_C_HasPowerChanged_Params
-{
-	bool                                               State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Anim_ManufacturerMk1.Anim_ManufacturerMk1_C.ExecuteUbergraph_Anim_ManufacturerMk1

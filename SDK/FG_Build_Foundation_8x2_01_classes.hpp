@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_Foundation_8x2_01.Build_Foundation_8x2_01_C
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x0588 - 0x0588)
 class ABuild_Foundation_8x2_01_C : public AFGBuildableFoundation
 {
 public:

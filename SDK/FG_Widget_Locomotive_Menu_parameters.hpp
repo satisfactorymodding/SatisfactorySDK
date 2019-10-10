@@ -62,6 +62,23 @@ struct UWidget_Locomotive_Menu_C_OnNameChanged_Params
 	struct FText                                       mName;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature
+struct UWidget_Locomotive_Menu_C_BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature_Params
+{
+	bool                                               SelfDrivingEnabled;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature
+struct UWidget_Locomotive_Menu_C_BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature_Params
+{
+};
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnDockingStateChanged
+struct UWidget_Locomotive_Menu_C_OnDockingStateChanged_Params
+{
+	ETrainDockingState                                 State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.ExecuteUbergraph_Widget_Locomotive_Menu
 struct UWidget_Locomotive_Menu_C_ExecuteUbergraph_Widget_Locomotive_Menu_Params
 {

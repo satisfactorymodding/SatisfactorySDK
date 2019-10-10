@@ -65,12 +65,15 @@ void ABuild_GeneratorGeoThermal_C::LostSignificance()
 
 // Function Build_GeneratorGeoThermal.Build_GeneratorGeoThermal_C.StartProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_GeneratorGeoThermal_C::StartProductionLoopEffects()
+void ABuild_GeneratorGeoThermal_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorGeoThermal.Build_GeneratorGeoThermal_C.StartProductionLoopEffects");
 
 	ABuild_GeneratorGeoThermal_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -82,12 +85,15 @@ void ABuild_GeneratorGeoThermal_C::StartProductionLoopEffects()
 
 // Function Build_GeneratorGeoThermal.Build_GeneratorGeoThermal_C.StopProductionLoopEffects
 // ()
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_GeneratorGeoThermal_C::StopProductionLoopEffects()
+void ABuild_GeneratorGeoThermal_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_GeneratorGeoThermal.Build_GeneratorGeoThermal_C.StopProductionLoopEffects");
 
 	ABuild_GeneratorGeoThermal_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 

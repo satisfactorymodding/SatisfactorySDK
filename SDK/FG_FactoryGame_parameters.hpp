@@ -887,6 +887,13 @@ struct UFGBlueprintFunctionLibrary_RoundFloatWithPrecision_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGBlueprintFunctionLibrary.RemoveTrainFromSignificanceManager
+struct UFGBlueprintFunctionLibrary_RemoveTrainFromSignificanceManager_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     Obj;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function FactoryGame.FGBlueprintFunctionLibrary.RemoveGenericTickObjectFromSignificanceManager
 struct UFGBlueprintFunctionLibrary_RemoveGenericTickObjectFromSignificanceManager_Params
 {
@@ -1144,6 +1151,13 @@ struct UFGBlueprintFunctionLibrary_CanBeOnConveyor_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGBlueprintFunctionLibrary.AddTrainToSignificanceManager
+struct UFGBlueprintFunctionLibrary_AddTrainToSignificanceManager_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     Obj;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function FactoryGame.FGBlueprintFunctionLibrary.AddPopupWithCloseDelegate
 struct UFGBlueprintFunctionLibrary_AddPopupWithCloseDelegate_Params
 {
@@ -1331,6 +1345,7 @@ struct AFGBuildable_Factory_GrabOutput_Params
 // Function FactoryGame.FGBuildableFactory.StopProductionLoopEffects
 struct AFGBuildableFactory_StopProductionLoopEffects_Params
 {
+	bool                                               didStopProducing;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildableFactory.StopIdlingLoopEffects
@@ -1341,6 +1356,7 @@ struct AFGBuildableFactory_StopIdlingLoopEffects_Params
 // Function FactoryGame.FGBuildableFactory.StartProductionLoopEffects
 struct AFGBuildableFactory_StartProductionLoopEffects_Params
 {
+	bool                                               didStartProducing;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildableFactory.StartIdlingLoopEffects
@@ -1983,39 +1999,9 @@ struct AFGBuildableTrainPlatform_GetDockingStatus_Params
 	ETrainPlatformDockingStatus                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function FactoryGame.FGBuildableRailroadStation.PerformIsDockedCheck
-struct AFGBuildableRailroadStation_PerformIsDockedCheck_Params
-{
-};
-
 // Function FactoryGame.FGBuildableRailroadStation.OnNameChanged
 struct AFGBuildableRailroadStation_OnNameChanged_Params
 {
-};
-
-// Function FactoryGame.FGBuildableRailroadStation.OnLocomotiveDocked
-struct AFGBuildableRailroadStation_OnLocomotiveDocked_Params
-{
-};
-
-// Function FactoryGame.FGBuildableRailroadStation.OnDockingColliderEndOverlap
-struct AFGBuildableRailroadStation_OnDockingColliderEndOverlap_Params
-{
-	class UPrimitiveComponent*                         OverlappedComponent;                                      // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FactoryGame.FGBuildableRailroadStation.OnDockingColliderBeginOverlap
-struct AFGBuildableRailroadStation_OnDockingColliderBeginOverlap_Params
-{
-	class UPrimitiveComponent*                         OverlappedComp;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bFromSweep;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FHitResult                                  SweepResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildableRailroadStation.GetStationIdentifier
@@ -2898,10 +2884,22 @@ struct UFGBuildGunStateBuild_BeginClearanceOverlap_Params
 	struct FHitResult                                  SweepResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGBuildGunStateDismantle.SetMultiDismantleState
+struct UFGBuildGunStateDismantle_SetMultiDismantleState_Params
+{
+	bool                                               IsActive;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function FactoryGame.FGBuildGunStateDismantle.Server_PeekAtDismantleRefund
 struct UFGBuildGunStateDismantle_Server_PeekAtDismantleRefund_Params
 {
-	class AActor*                                      selected;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class AActor*>                              selectedActors;                                           // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+};
+
+// Function FactoryGame.FGBuildGunStateDismantle.Server_DismantleActors
+struct UFGBuildGunStateDismantle_Server_DismantleActors_Params
+{
+	TArray<class AActor*>                              selectedActors;                                           // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 };
 
 // Function FactoryGame.FGBuildGunStateDismantle.Server_DismantleActor
@@ -2925,6 +2923,12 @@ struct UFGBuildGunStateDismantle_OnRep_PeekDismantleRefund_Params
 {
 };
 
+// Function FactoryGame.FGBuildGunStateDismantle.HasReachedMaxNumPendingDismantleActors
+struct UFGBuildGunStateDismantle_HasReachedMaxNumPendingDismantleActors_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function FactoryGame.FGBuildGunStateDismantle.GetSelectedActor
 struct UFGBuildGunStateDismantle_GetSelectedActor_Params
 {
@@ -2935,6 +2939,19 @@ struct UFGBuildGunStateDismantle_GetSelectedActor_Params
 struct UFGBuildGunStateDismantle_GetPeekDismantleRefund_Params
 {
 	TArray<struct FInventoryStack>                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function FactoryGame.FGBuildGunStateDismantle.GetNumPendingDismantleActors
+struct UFGBuildGunStateDismantle_GetNumPendingDismantleActors_Params
+{
+	bool                                               includeAimedAtActor;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGBuildGunStateDismantle.GetMaxNumPendingDismantleActors
+struct UFGBuildGunStateDismantle_GetMaxNumPendingDismantleActors_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGBuildGunStateDismantle.GetDismantleRefund
@@ -5181,6 +5198,12 @@ struct AFGCreature_GetSplinePath_Params
 	class AFGSplinePath*                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGCreature.GetSpawner
+struct AFGCreature_GetSpawner_Params
+{
+	class AFGCreatureSpawner*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function FactoryGame.FGCreature.GetIsEnabled
 struct AFGCreature_GetIsEnabled_Params
 {
@@ -5486,6 +5509,12 @@ struct AFGCreatureSpawner_CreatureDied_Params
 struct AFGCreatureSpawner_CalculateSpawningLocations_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGCreatureSpawner.AddCreature
+struct AFGCreatureSpawner_AddCreature_Params
+{
+	class AFGCreature*                                 newCreature;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FactoryGame.FGDamageOverTime.ShouldBeAppliedToActor
@@ -6317,6 +6346,12 @@ struct AFGVehicle_HasAnyPassengerSeatAvailable_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGVehicle.GetIsSignificant
+struct AFGVehicle_GetIsSignificant_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function FactoryGame.FGVehicle.GetHealthComponent
 struct AFGVehicle_GetHealthComponent_Params
 {
@@ -6435,6 +6470,12 @@ struct UFGGameInstance_SetHasSeenAlphaInfoScreen_Params
 	bool                                               hasSeen;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function FactoryGame.FGGameInstance.SetHasPlayerSeenCloudSaveInfoScreen
+struct UFGGameInstance_SetHasPlayerSeenCloudSaveInfoScreen_Params
+{
+	bool                                               hasSeen;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function FactoryGame.FGGameInstance.PushError
 struct UFGGameInstance_PushError_Params
 {
@@ -6453,6 +6494,12 @@ struct UFGGameInstance_PeekNextError_Params
 {
 	class UObject*                                     WorldContext;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	class UFGErrorMessage*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGGameInstance.HasPlayerSeenCloudSaveInfoScreen
+struct UFGGameInstance_HasPlayerSeenCloudSaveInfoScreen_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGGameInstance.HasPlayerSeenAlphaInfoScreen
@@ -8551,42 +8598,11 @@ struct UFGLocalPlayer_AutoLogin_Params
 {
 };
 
-// Function FactoryGame.FGLocomotive.UpdateTargetPoints
-struct AFGLocomotive_UpdateTargetPoints_Params
-{
-	float                                              MaxDistance;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotive.UpdatePathSegment
-struct AFGLocomotive_UpdatePathSegment_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotive.SetSelfDrivingEnabled
-struct AFGLocomotive_SetSelfDrivingEnabled_Params
-{
-	bool                                               IsEnabled;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotive.SetPath
-struct AFGLocomotive_SetPath_Params
-{
-	struct FRailroadPathFindingResult                  Result;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function FactoryGame.FGLocomotive.SetMultipleUnitControlMaster
 struct AFGLocomotive_SetMultipleUnitControlMaster_Params
 {
 	bool                                               Force;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotive.ReportSelfDrivingError
-struct AFGLocomotive_ReportSelfDrivingError_Params
-{
-	ESelfDrivingLocomotiveError                        Error;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FactoryGame.FGLocomotive.OnRep_ReplicatedMovementTransform
@@ -8599,40 +8615,10 @@ struct AFGLocomotive_OnNameChanged_Params
 {
 };
 
-// Function FactoryGame.FGLocomotive.IsSelfDrivingEnabled
-struct AFGLocomotive_IsSelfDrivingEnabled_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotive.HasPath
-struct AFGLocomotive_HasPath_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotive.GetTargetPoints
-struct AFGLocomotive_GetTargetPoints_Params
-{
-	TArray<struct FRailroadPathPoint>                  out_points;                                               // (Parm, OutParm, ZeroConstructor)
-};
-
-// Function FactoryGame.FGLocomotive.GetSelfDrivingError
-struct AFGLocomotive_GetSelfDrivingError_Params
-{
-	ESelfDrivingLocomotiveError                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function FactoryGame.FGLocomotive.GetPowerInfo
 struct AFGLocomotive_GetPowerInfo_Params
 {
 	class UFGPowerInfoComponent*                       ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotive.GetPath
-struct AFGLocomotive_GetPath_Params
-{
-	TArray<struct FRailroadPathPoint>                  out_points;                                               // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function FactoryGame.FGLocomotive.GetMultipleUnitRole
@@ -8645,16 +8631,6 @@ struct AFGLocomotive_GetMultipleUnitRole_Params
 struct AFGLocomotive_GetLocomotiveMovementComponent_Params
 {
 	class UFGLocomotiveMovementComponent*              ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotive.ClearSelfDrivingError
-struct AFGLocomotive_ClearSelfDrivingError_Params
-{
-};
-
-// Function FactoryGame.FGLocomotive.ClearPath
-struct AFGLocomotive_ClearPath_Params
-{
 };
 
 // Function FactoryGame.FGLocomotive.ClearMultipleUnitControlMaster
@@ -8724,6 +8700,12 @@ struct UFGRailroadVehicleMovementComponent_GetTrackCurvature_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGRailroadVehicleMovementComponent.GetTareMass
+struct UFGRailroadVehicleMovementComponent_GetTareMass_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function FactoryGame.FGRailroadVehicleMovementComponent.GetRelativeForwardSpeed
 struct UFGRailroadVehicleMovementComponent_GetRelativeForwardSpeed_Params
 {
@@ -8742,8 +8724,20 @@ struct UFGRailroadVehicleMovementComponent_GetNumWheelsets_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function FactoryGame.FGRailroadVehicleMovementComponent.GetMaxTractiveEffort
+struct UFGRailroadVehicleMovementComponent_GetMaxTractiveEffort_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function FactoryGame.FGRailroadVehicleMovementComponent.GetMaxForwardSpeed
 struct UFGRailroadVehicleMovementComponent_GetMaxForwardSpeed_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGRailroadVehicleMovementComponent.GetMaxDynamicBrakingEffort
+struct UFGRailroadVehicleMovementComponent_GetMaxDynamicBrakingEffort_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -8846,18 +8840,6 @@ struct UFGLocomotiveMovementComponent_GetThrottle_Params
 struct UFGLocomotiveMovementComponent_GetReverser_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotiveMovementComponent.GetMaxTractiveEffort
-struct UFGLocomotiveMovementComponent_GetMaxTractiveEffort_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGLocomotiveMovementComponent.GetMaxDynamicBrakingEffort
-struct UFGLocomotiveMovementComponent_GetMaxDynamicBrakingEffort_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGLocomotiveMovementComponent.GetDynamicBrake
@@ -10819,37 +10801,6 @@ struct UFGRailroadFunctionLibrary_DrawDebugTrackPosition_Params
 	bool                                               isPersistentLines;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function FactoryGame.FGRailroadFunctionLibrary.DrawDebugRailroadPathResult
-struct UFGRailroadFunctionLibrary_DrawDebugRailroadPathResult_Params
-{
-	struct FRailroadTrackPosition                      Start;                                                    // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FRailroadPathFindingResult                  Result;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               isPersistentLines;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FactoryGame.FGRailroadInterface.UnregisteredFromTrack
-struct UFGRailroadInterface_UnregisteredFromTrack_Params
-{
-};
-
-// Function FactoryGame.FGRailroadInterface.RegisteredOnTrack
-struct UFGRailroadInterface_RegisteredOnTrack_Params
-{
-	struct FRailroadTrackPosition                      Position;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function FactoryGame.FGRailroadInterface.GetTrackPosition
-struct UFGRailroadInterface_GetTrackPosition_Params
-{
-	struct FRailroadTrackPosition                      ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function FactoryGame.FGRailroadInterface.GetTrackGraphID
-struct UFGRailroadInterface_GetTrackGraphID_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function FactoryGame.FGRailroadSubsystem.GetTrainStations
 struct AFGRailroadSubsystem_GetTrainStations_Params
 {
@@ -10883,26 +10834,11 @@ struct AFGRailroadSubsystem_Get_Params
 	class AFGRailroadSubsystem*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function FactoryGame.FGRailroadSubsystem.FindPathSync
-struct AFGRailroadSubsystem_FindPathSync_Params
-{
-	class AFGLocomotive*                               Locomotive;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	class AFGTrainStationIdentifier*                   Station;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRailroadPathFindingResult                  ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
 // Function FactoryGame.FGRailroadTimeTable.SetStops
 struct AFGRailroadTimeTable_SetStops_Params
 {
 	TArray<struct FTimeTableStop>                      stops;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function FactoryGame.FGRailroadTimeTable.SetStopDuration
-struct AFGRailroadTimeTable_SetStopDuration_Params
-{
-	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FactoryGame.FGRailroadTimeTable.SetCurrentStop
@@ -10922,6 +10858,11 @@ struct AFGRailroadTimeTable_IsValidStop_Params
 {
 	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGRailroadTimeTable.IncrementCurrentStop
+struct AFGRailroadTimeTable_IncrementCurrentStop_Params
+{
 };
 
 // Function FactoryGame.FGRailroadTimeTable.GetStops
@@ -10988,8 +10929,49 @@ struct UFGRailroadTrackConnectionComponent_GetConnection_Params
 	class UFGRailroadTrackConnectionComponent*         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function FactoryGame.FGRailRoadVehicleAnim.TriggerHandBrakeVfx
+struct UFGRailRoadVehicleAnim_TriggerHandBrakeVfx_Params
+{
+};
+
+// Function FactoryGame.FGRailRoadVehicleAnim.SetUsingHandBrake
+struct UFGRailRoadVehicleAnim_SetUsingHandBrake_Params
+{
+	bool                                               InValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FactoryGame.FGRailRoadVehicleAnim.SetupHandBrakeEffects
+struct UFGRailRoadVehicleAnim_SetupHandBrakeEffects_Params
+{
+};
+
+// Function FactoryGame.FGRailRoadVehicleAnim.RemoveHandBrakeEffects
+struct UFGRailRoadVehicleAnim_RemoveHandBrakeEffects_Params
+{
+};
+
+// Function FactoryGame.FGRailRoadVehicleAnim.RemoveBrakeEffects
+struct UFGRailRoadVehicleAnim_RemoveBrakeEffects_Params
+{
+};
+
 // Function FactoryGame.FGRailroadVehicleSoundComponent.UpdateRTPCs
 struct UFGRailroadVehicleSoundComponent_UpdateRTPCs_Params
+{
+};
+
+// Function FactoryGame.FGRailroadVehicleSoundComponent.StopAllSounds
+struct UFGRailroadVehicleSoundComponent_StopAllSounds_Params
+{
+};
+
+// Function FactoryGame.FGRailroadVehicleSoundComponent.StartIdleSounds
+struct UFGRailroadVehicleSoundComponent_StartIdleSounds_Params
+{
+};
+
+// Function FactoryGame.FGRailroadVehicleSoundComponent.RestartSounds
+struct UFGRailroadVehicleSoundComponent_RestartSounds_Params
 {
 };
 
@@ -12903,10 +12885,50 @@ struct AFGTrain_SetTrainName_Params
 	struct FText                                       Name;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
+// Function FactoryGame.FGTrain.SetSelfDrivingEnabled
+struct AFGTrain_SetSelfDrivingEnabled_Params
+{
+	bool                                               IsEnabled;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.OnRep_IsSelfDrivingEnabled
+struct AFGTrain_OnRep_IsSelfDrivingEnabled_Params
+{
+};
+
+// Function FactoryGame.FGTrain.OnRep_DockingState
+struct AFGTrain_OnRep_DockingState_Params
+{
+};
+
 // Function FactoryGame.FGTrain.NewTimeTable
 struct AFGTrain_NewTimeTable_Params
 {
 	class AFGRailroadTimeTable*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.IsSelfDrivingEnabled
+struct AFGTrain_IsSelfDrivingEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.IsInputDisabled
+struct AFGTrain_IsInputDisabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.IsDocked
+struct AFGTrain_IsDocked_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.HasTimeTable
+struct AFGTrain_HasTimeTable_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function FactoryGame.FGTrain.GetTrainName
@@ -12933,28 +12955,27 @@ struct AFGTrain_GetSelfDrivingError_Params
 	ESelfDrivingLocomotiveError                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function FactoryGame.FGTrain.GetMaxAirBrakeDeceleration
-struct AFGTrain_GetMaxAirBrakeDeceleration_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function FactoryGame.FGTrain.GetLastVehicle
 struct AFGTrain_GetLastVehicle_Params
 {
 	class AFGRailroadVehicle*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function FactoryGame.FGTrain.GetIsDocked
-struct AFGTrain_GetIsDocked_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function FactoryGame.FGTrain.GetFirstVehicle
 struct AFGTrain_GetFirstVehicle_Params
 {
 	class AFGRailroadVehicle*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.GetDockingState
+struct AFGTrain_GetDockingState_Params
+{
+	ETrainDockingState                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FactoryGame.FGTrain.Dock
+struct AFGTrain_Dock_Params
+{
 };
 
 // Function FactoryGame.FGTrainStationIdentifier.SetStationName

@@ -126,9 +126,9 @@ void UBP_FrontEnd_C::ShouldShutdownAfterThisError(bool* Shutdown)
 // Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowLogin
 // ()
 // Parameters:
-// bool                           ShouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_FrontEnd_C::Internal_ShouldShowLogin(bool* ShouldShow)
+void UBP_FrontEnd_C::Internal_ShouldShowLogin(bool* shouldShow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowLogin");
 
@@ -140,8 +140,8 @@ void UBP_FrontEnd_C::Internal_ShouldShowLogin(bool* ShouldShow)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldShow != nullptr)
-		*ShouldShow = params.ShouldShow;
+	if (shouldShow != nullptr)
+		*shouldShow = params.shouldShow;
 }
 
 
@@ -211,9 +211,9 @@ void UBP_FrontEnd_C::GetNextErrorMessage(class UFGErrorMessage** errorMessage)
 // Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShowErrorMessage
 // ()
 // Parameters:
-// bool                           ShouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_FrontEnd_C::Internal_ShowErrorMessage(bool* ShouldShow)
+void UBP_FrontEnd_C::Internal_ShowErrorMessage(bool* shouldShow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShowErrorMessage");
 
@@ -225,17 +225,17 @@ void UBP_FrontEnd_C::Internal_ShowErrorMessage(bool* ShouldShow)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldShow != nullptr)
-		*ShouldShow = params.ShouldShow;
+	if (shouldShow != nullptr)
+		*shouldShow = params.shouldShow;
 }
 
 
 // Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowMainMenu
 // ()
 // Parameters:
-// bool                           ShouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_FrontEnd_C::Internal_ShouldShowMainMenu(bool* ShouldShow)
+void UBP_FrontEnd_C::Internal_ShouldShowMainMenu(bool* shouldShow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowMainMenu");
 
@@ -247,17 +247,17 @@ void UBP_FrontEnd_C::Internal_ShouldShowMainMenu(bool* ShouldShow)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldShow != nullptr)
-		*ShouldShow = params.ShouldShow;
+	if (shouldShow != nullptr)
+		*shouldShow = params.shouldShow;
 }
 
 
 // Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowAlphaInfo
 // ()
 // Parameters:
-// bool                           ShouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_FrontEnd_C::Internal_ShouldShowAlphaInfo(bool* ShouldShow)
+void UBP_FrontEnd_C::Internal_ShouldShowAlphaInfo(bool* shouldShow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.Internal_ShouldShowAlphaInfo");
 
@@ -269,8 +269,8 @@ void UBP_FrontEnd_C::Internal_ShouldShowAlphaInfo(bool* ShouldShow)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldShow != nullptr)
-		*ShouldShow = params.ShouldShow;
+	if (shouldShow != nullptr)
+		*shouldShow = params.shouldShow;
 }
 
 
@@ -354,23 +354,6 @@ void UBP_FrontEnd_C::SetupMainMenu()
 }
 
 
-// Function BP_FrontEnd.BP_FrontEnd_C.Construct
-// ()
-
-void UBP_FrontEnd_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.Construct");
-
-	UBP_FrontEnd_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_FrontEnd.BP_FrontEnd_C.BndEvt__Widget_ErrorMessage_K2Node_ComponentBoundEvent_0_mOnClicked__DelegateSignature
 // ()
 
@@ -396,6 +379,23 @@ void UBP_FrontEnd_C::GetAndSetNewError()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.GetAndSetNewError");
 
 	UBP_FrontEnd_C_GetAndSetNewError_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FrontEnd.BP_FrontEnd_C.Construct
+// ()
+
+void UBP_FrontEnd_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.Construct");
+
+	UBP_FrontEnd_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -447,6 +447,23 @@ void UBP_FrontEnd_C::ClosePopup()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.ClosePopup");
 
 	UBP_FrontEnd_C_ClosePopup_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FrontEnd.BP_FrontEnd_C.CreateCloudSavesWidget
+// ()
+
+void UBP_FrontEnd_C::CreateCloudSavesWidget()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontEnd.BP_FrontEnd_C.CreateCloudSavesWidget");
+
+	UBP_FrontEnd_C_CreateCloudSavesWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
 
