@@ -31,11 +31,6 @@ struct ABP_HUD_C_SetupFrontEnd_Params
 {
 };
 
-// Function BP_HUD.BP_HUD_C.UserConstructionScript
-struct ABP_HUD_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_HUD.BP_HUD_C.ToggleInventoryUI
 struct ABP_HUD_C_ToggleInventoryUI_Params
 {
@@ -79,7 +74,7 @@ struct ABP_HUD_C_CloseInteractUIIfOpen_Params
 // Function BP_HUD.BP_HUD_C.ExecuteUbergraph_BP_HUD
 struct ABP_HUD_C_ExecuteUbergraph_BP_HUD_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

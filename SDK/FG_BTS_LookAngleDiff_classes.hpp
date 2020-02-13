@@ -32,7 +32,7 @@ public:
 
 
 	void ReceiveTick(class AActor** OwnerActor, float* DeltaSeconds);
-	void ExecuteUbergraph_BTS_LookAngleDiff(int EntryPoint);
+	void ExecuteUbergraph_BTS_LookAngleDiff(int* EntryPoint);
 };
 
 

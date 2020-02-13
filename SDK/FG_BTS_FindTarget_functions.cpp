@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_FindTarget.BTS_FindTarget_C.ReceiveTickAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -37,11 +37,11 @@ void UBTS_FindTarget_C::ReceiveTickAI(class AAIController** OwnerController, cla
 
 
 // Function BTS_FindTarget.BTS_FindTarget_C.ExecuteUbergraph_BTS_FindTarget
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_FindTarget_C::ExecuteUbergraph_BTS_FindTarget(int EntryPoint)
+void UBTS_FindTarget_C::ExecuteUbergraph_BTS_FindTarget(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_FindTarget.BTS_FindTarget_C.ExecuteUbergraph_BTS_FindTarget");
 

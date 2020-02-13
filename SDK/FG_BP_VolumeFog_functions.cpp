@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_VolumeFog.BP_VolumeFog_C.UpdateBrightness
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_VolumeFog_C::UpdateBrightness()
 {
@@ -30,7 +30,7 @@ void ABP_VolumeFog_C::UpdateBrightness()
 
 
 // Function BP_VolumeFog.BP_VolumeFog_C.UserConstructionScript
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_VolumeFog_C::UserConstructionScript()
 {
@@ -47,7 +47,7 @@ void ABP_VolumeFog_C::UserConstructionScript()
 
 
 // Function BP_VolumeFog.BP_VolumeFog_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_VolumeFog_C::LostSignificance()
 {
@@ -64,7 +64,7 @@ void ABP_VolumeFog_C::LostSignificance()
 
 
 // Function BP_VolumeFog.BP_VolumeFog_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_VolumeFog_C::GainedSignificance()
 {
@@ -81,7 +81,7 @@ void ABP_VolumeFog_C::GainedSignificance()
 
 
 // Function BP_VolumeFog.BP_VolumeFog_C.ReceiveEndPlay
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -101,7 +101,7 @@ void ABP_VolumeFog_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
 
 
 // Function BP_VolumeFog.BP_VolumeFog_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,7 +121,7 @@ void ABP_VolumeFog_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_VolumeFog.BP_VolumeFog_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_VolumeFog_C::ReceiveBeginPlay()
 {
@@ -138,11 +138,11 @@ void ABP_VolumeFog_C::ReceiveBeginPlay()
 
 
 // Function BP_VolumeFog.BP_VolumeFog_C.ExecuteUbergraph_BP_VolumeFog
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_VolumeFog_C::ExecuteUbergraph_BP_VolumeFog(int EntryPoint)
+void ABP_VolumeFog_C::ExecuteUbergraph_BP_VolumeFog(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VolumeFog.BP_VolumeFog_C.ExecuteUbergraph_BP_VolumeFog");
 

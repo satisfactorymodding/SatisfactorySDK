@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Medkit.Anim_Medkit_C.ExecuteUbergraph_Anim_Medkit
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Medkit_C::ExecuteUbergraph_Anim_Medkit(int EntryPoint)
+void UAnim_Medkit_C::ExecuteUbergraph_Anim_Medkit(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Medkit.Anim_Medkit_C.ExecuteUbergraph_Anim_Medkit");
 

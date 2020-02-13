@@ -22,7 +22,7 @@ struct UWidget_TitleLabel_C_SetFicsItDriverText_Params
 // Function Widget_TitleLabel.Widget_TitleLabel_C.SetTitle
 struct UWidget_TitleLabel_C_SetTitle_Params
 {
-	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 }

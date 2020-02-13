@@ -28,7 +28,7 @@ struct UWidget_BuildMenu_PowerProduction_C_PreConstruct_Params
 // Function Widget_BuildMenu_PowerProduction.Widget_BuildMenu_PowerProduction_C.ExecuteUbergraph_Widget_BuildMenu_PowerProduction
 struct UWidget_BuildMenu_PowerProduction_C_ExecuteUbergraph_Widget_BuildMenu_PowerProduction_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

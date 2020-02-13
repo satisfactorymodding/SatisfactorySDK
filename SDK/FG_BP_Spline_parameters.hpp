@@ -17,13 +17,8 @@ namespace SDK
 // Function BP_Spline.BP_Spline_C.GetNextSplineIndex
 struct ABP_Spline_C_GetNextSplineIndex_Params
 {
-	int                                                currentIndex;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               currentIndex;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                nextIndex;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_Spline.BP_Spline_C.UserConstructionScript
-struct ABP_Spline_C_UserConstructionScript_Params
-{
 };
 
 }

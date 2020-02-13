@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_NoRangeAttack.BTT_NoRangeAttack_C.mOnAttackFailed_116612B142195CF8862D28AC809559CE
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_NoRangeAttack_C::mOnAttackFailed_116612B142195CF8862D28AC809559CE()
 {
@@ -30,7 +30,7 @@ void UBTT_NoRangeAttack_C::mOnAttackFailed_116612B142195CF8862D28AC809559CE()
 
 
 // Function BTT_NoRangeAttack.BTT_NoRangeAttack_C.mOnAttackFinished_116612B142195CF8862D28AC809559CE
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_NoRangeAttack_C::mOnAttackFinished_116612B142195CF8862D28AC809559CE()
 {
@@ -47,7 +47,7 @@ void UBTT_NoRangeAttack_C::mOnAttackFinished_116612B142195CF8862D28AC809559CE()
 
 
 // Function BTT_NoRangeAttack.BTT_NoRangeAttack_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -69,11 +69,11 @@ void UBTT_NoRangeAttack_C::ReceiveExecuteAI(class AAIController** OwnerControlle
 
 
 // Function BTT_NoRangeAttack.BTT_NoRangeAttack_C.ExecuteUbergraph_BTT_NoRangeAttack
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_NoRangeAttack_C::ExecuteUbergraph_BTT_NoRangeAttack(int EntryPoint)
+void UBTT_NoRangeAttack_C::ExecuteUbergraph_BTT_NoRangeAttack(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_NoRangeAttack.BTT_NoRangeAttack_C.ExecuteUbergraph_BTT_NoRangeAttack");
 

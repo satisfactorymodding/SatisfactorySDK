@@ -13,17 +13,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function RawInput.RawInputFunctionLibrary.GetRegisteredDevices
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<struct FRegisteredDeviceInfo> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FRegisteredDeviceInfo> URawInputFunctionLibrary::GetRegisteredDevices()
+TArray<struct FRegisteredDeviceInfo> URawInputFunctionLibrary::STATIC_GetRegisteredDevices()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RawInput.RawInputFunctionLibrary.GetRegisteredDevices");
 
 	URawInputFunctionLibrary_GetRegisteredDevices_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_StopRotation.BTT_StopRotation_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_StopRotation_C::ReceiveExecuteAI(class AAIController** OwnerController
 
 
 // Function BTT_StopRotation.BTT_StopRotation_C.ExecuteUbergraph_BTT_StopRotation
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_StopRotation_C::ExecuteUbergraph_BTT_StopRotation(int EntryPoint)
+void UBTT_StopRotation_C::ExecuteUbergraph_BTT_StopRotation(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_StopRotation.BTT_StopRotation_C.ExecuteUbergraph_BTT_StopRotation");
 

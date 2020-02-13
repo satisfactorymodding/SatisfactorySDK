@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Inventory.Widget_Inventory_C.GetAllInventorySlots
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UWidget_InventorySlot_C*> InventorySlots                 (Parm, OutParm, ZeroConstructor)
 
@@ -35,7 +35,7 @@ void UWidget_Inventory_C::GetAllInventorySlots(TArray<class UWidget_InventorySlo
 
 
 // Function Widget_Inventory.Widget_Inventory_C.GetSqrtOfLinearSize
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -56,7 +56,7 @@ int UWidget_Inventory_C::GetSqrtOfLinearSize()
 
 
 // Function Widget_Inventory.Widget_Inventory_C.GetWidth
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -77,7 +77,7 @@ int UWidget_Inventory_C::GetWidth()
 
 
 // Function Widget_Inventory.Widget_Inventory_C.CreateAllSlots
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Inventory_C::CreateAllSlots()
 {
@@ -94,7 +94,7 @@ void UWidget_Inventory_C::CreateAllSlots()
 
 
 // Function Widget_Inventory.Widget_Inventory_C.ClearAllSlots
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Inventory_C::ClearAllSlots()
 {
@@ -111,14 +111,14 @@ void UWidget_Inventory_C::ClearAllSlots()
 
 
 // Function Widget_Inventory.Widget_Inventory_C.CalcIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            X                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Y                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Width                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           X                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Y                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Width                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            idx                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Inventory_C::CalcIndex(int X, int Y, int Width, int* idx)
+void UWidget_Inventory_C::CalcIndex(int* X, int* Y, int* Width, int* idx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Inventory.Widget_Inventory_C.CalcIndex");
 
@@ -139,14 +139,14 @@ void UWidget_Inventory_C::CalcIndex(int X, int Y, int Width, int* idx)
 
 
 // Function Widget_Inventory.Widget_Inventory_C.CreateSlot
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Row                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Column                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Row                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Column                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UWidget_InventorySlot_C* Result                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Inventory_C::CreateSlot(int Index, int Row, int Column, class UWidget_InventorySlot_C** Result)
+void UWidget_Inventory_C::CreateSlot(int* Index, int* Row, int* Column, class UWidget_InventorySlot_C** Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Inventory.Widget_Inventory_C.CreateSlot");
 
@@ -167,11 +167,11 @@ void UWidget_Inventory_C::CreateSlot(int Index, int Row, int Column, class UWidg
 
 
 // Function Widget_Inventory.Widget_Inventory_C.Init
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent*   component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Inventory_C::Init(class UFGInventoryComponent* component)
+void UWidget_Inventory_C::Init(class UFGInventoryComponent** component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Inventory.Widget_Inventory_C.Init");
 
@@ -187,12 +187,12 @@ void UWidget_Inventory_C::Init(class UFGInventoryComponent* component)
 
 
 // Function Widget_Inventory.Widget_Inventory_C.OnInventoryResized
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            oldSize                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            newSize                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           oldSize                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           newSize                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Inventory_C::OnInventoryResized(int oldSize, int newSize)
+void UWidget_Inventory_C::OnInventoryResized(int* oldSize, int* newSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Inventory.Widget_Inventory_C.OnInventoryResized");
 
@@ -209,7 +209,7 @@ void UWidget_Inventory_C::OnInventoryResized(int oldSize, int newSize)
 
 
 // Function Widget_Inventory.Widget_Inventory_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Inventory_C::Destruct()
 {
@@ -225,12 +225,29 @@ void UWidget_Inventory_C::Destruct()
 }
 
 
-// Function Widget_Inventory.Widget_Inventory_C.ExecuteUbergraph_Widget_Inventory
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_Inventory.Widget_Inventory_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_Inventory_C::ExecuteUbergraph_Widget_Inventory(int EntryPoint)
+void UWidget_Inventory_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Inventory.Widget_Inventory_C.Construct");
+
+	UWidget_Inventory_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Inventory.Widget_Inventory_C.ExecuteUbergraph_Widget_Inventory
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Inventory_C::ExecuteUbergraph_Widget_Inventory(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Inventory.Widget_Inventory_C.ExecuteUbergraph_Widget_Inventory");
 

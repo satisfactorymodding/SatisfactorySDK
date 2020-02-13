@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_Storage.Widget_Storage_C.SetInventoryComp
 struct UWidget_Storage_C_SetInventoryComp_Params
 {
-	class UFGInventoryComponent*                       InventoryComp;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      InventoryComp;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Storage.Widget_Storage_C.OnSortClicked
@@ -85,13 +85,13 @@ struct UWidget_Storage_C_BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClic
 // Function Widget_Storage.Widget_Storage_C.OnInventoryComponentReplicated
 struct UWidget_Storage_C_OnInventoryComponentReplicated_Params
 {
-	class AActor*                                      replicationDetailActorOwner;                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     replicationDetailActorOwner;                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Storage.Widget_Storage_C.ExecuteUbergraph_Widget_Storage
 struct UWidget_Storage_C_ExecuteUbergraph_Widget_Storage_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

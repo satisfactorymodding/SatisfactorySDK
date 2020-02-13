@@ -12,33 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.UserConstructionScript
-// ()
-
-void AController_NonFlyingBird_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.UserConstructionScript");
-
-	AController_NonFlyingBird_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.OnPossess
-// ()
+// Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.ReceivePossess
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class APawn**                  PossessedPawn                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_NonFlyingBird_C::OnPossess(class APawn** PossessedPawn)
+void AController_NonFlyingBird_C::ReceivePossess(class APawn** PossessedPawn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.OnPossess");
+	static auto fn = UObject::FindObject<UFunction>("Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.ReceivePossess");
 
-	AController_NonFlyingBird_C_OnPossess_Params params;
+	AController_NonFlyingBird_C_ReceivePossess_Params params;
 	params.PossessedPawn = PossessedPawn;
 
 	auto flags = fn->FunctionFlags;
@@ -50,7 +33,7 @@ void AController_NonFlyingBird_C::OnPossess(class APawn** PossessedPawn)
 
 
 // Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.TryToJump
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AController_NonFlyingBird_C::TryToJump()
 {
@@ -67,12 +50,12 @@ void AController_NonFlyingBird_C::TryToJump()
 
 
 // Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIStimulus             Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class AActor**                 Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIStimulus*            Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AController_NonFlyingBird_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus)
+void AController_NonFlyingBird_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature");
 
@@ -89,7 +72,7 @@ void AController_NonFlyingBird_C::BndEvt__PerceptionComponent_K2Node_ComponentBo
 
 
 // Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.StartPanic
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AController_NonFlyingBird_C::StartPanic()
 {
@@ -106,11 +89,11 @@ void AController_NonFlyingBird_C::StartPanic()
 
 
 // Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.ExecuteUbergraph_Controller_NonFlyingBird
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_NonFlyingBird_C::ExecuteUbergraph_Controller_NonFlyingBird(int EntryPoint)
+void AController_NonFlyingBird_C::ExecuteUbergraph_Controller_NonFlyingBird(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.ExecuteUbergraph_Controller_NonFlyingBird");
 

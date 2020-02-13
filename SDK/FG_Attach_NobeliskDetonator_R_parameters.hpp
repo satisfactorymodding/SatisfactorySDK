@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.UserConstructionScript
-struct AAttach_NobeliskDetonator_R_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.OnIsLoadedSet
 struct AAttach_NobeliskDetonator_R_C_OnIsLoadedSet_Params
 {
@@ -49,7 +44,7 @@ struct AAttach_NobeliskDetonator_R_C_OnAttach_Params
 // Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.ExecuteUbergraph_Attach_NobeliskDetonator_R
 struct AAttach_NobeliskDetonator_R_C_ExecuteUbergraph_Attach_NobeliskDetonator_R_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

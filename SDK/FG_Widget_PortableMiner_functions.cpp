@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -37,7 +37,7 @@ void UWidget_PortableMiner_C::DropInventorySlotStack(class UWidget_InventorySlot
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.InitCallbacks
-// ()
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PortableMiner_C::InitCallbacks()
 {
@@ -54,7 +54,7 @@ void UWidget_PortableMiner_C::InitCallbacks()
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.UpdateMinerInfo
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PortableMiner_C::UpdateMinerInfo()
 {
@@ -71,7 +71,7 @@ void UWidget_PortableMiner_C::UpdateMinerInfo()
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.UpdateMinerProgress
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PortableMiner_C::UpdateMinerProgress()
 {
@@ -88,7 +88,7 @@ void UWidget_PortableMiner_C::UpdateMinerProgress()
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_PortableMiner_C::Init()
 {
@@ -105,7 +105,7 @@ void UWidget_PortableMiner_C::Init()
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -127,7 +127,7 @@ void UWidget_PortableMiner_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PortableMiner_C::Construct()
 {
@@ -144,7 +144,7 @@ void UWidget_PortableMiner_C::Construct()
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.BndEvt__mButtonTakeAllItems_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_PortableMiner_C::BndEvt__mButtonTakeAllItems_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -161,7 +161,7 @@ void UWidget_PortableMiner_C::BndEvt__mButtonTakeAllItems_K2Node_ComponentBoundE
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.BndEvt__mButtonPickUpMiner_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_PortableMiner_C::BndEvt__mButtonPickUpMiner_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -178,11 +178,11 @@ void UWidget_PortableMiner_C::BndEvt__mButtonPickUpMiner_K2Node_ComponentBoundEv
 
 
 // Function Widget_PortableMiner.Widget_PortableMiner_C.ExecuteUbergraph_Widget_PortableMiner
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PortableMiner_C::ExecuteUbergraph_Widget_PortableMiner(int EntryPoint)
+void UWidget_PortableMiner_C::ExecuteUbergraph_Widget_PortableMiner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PortableMiner.Widget_PortableMiner_C.ExecuteUbergraph_Widget_PortableMiner");
 

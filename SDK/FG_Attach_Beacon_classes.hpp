@@ -30,9 +30,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void PlayAttachEffects3P();
-	void ExecuteUbergraph_Attach_Beacon(int EntryPoint);
+	void ExecuteUbergraph_Attach_Beacon(int* EntryPoint);
 };
 
 

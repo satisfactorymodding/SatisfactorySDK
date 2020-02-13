@@ -22,13 +22,13 @@ struct UWidget_Locomotive_Menu_C_UpdatePowerStatus_Params
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.GetLocomotiveSpeed
 struct UWidget_Locomotive_Menu_C_GetLocomotiveSpeed_Params
 {
-	class AFGLocomotive*                               Locomotive;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGLocomotive**                              Locomotive;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.GetPowerConsumption
 struct UWidget_Locomotive_Menu_C_GetPowerConsumption_Params
 {
-	class AFGLocomotive*                               Locomotive;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGLocomotive**                              Locomotive;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.Construct
@@ -59,13 +59,30 @@ struct UWidget_Locomotive_Menu_C_OnEscapePressed_Params
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnNameChanged
 struct UWidget_Locomotive_Menu_C_OnNameChanged_Params
 {
-	struct FText                                       mName;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      mName;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature
+struct UWidget_Locomotive_Menu_C_BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature_Params
+{
+	bool*                                              SelfDrivingEnabled;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature
+struct UWidget_Locomotive_Menu_C_BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature_Params
+{
+};
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnDockingStateChanged
+struct UWidget_Locomotive_Menu_C_OnDockingStateChanged_Params
+{
+	ETrainDockingState*                                State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.ExecuteUbergraph_Widget_Locomotive_Menu
 struct UWidget_Locomotive_Menu_C_ExecuteUbergraph_Widget_Locomotive_Menu_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnTrainNameChanged__DelegateSignature

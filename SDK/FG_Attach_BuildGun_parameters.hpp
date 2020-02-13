@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_BuildGun.Attach_BuildGun_C.UserConstructionScript
-struct AAttach_BuildGun_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_BuildGun.Attach_BuildGun_C.PlayAttachEffects3P
 struct AAttach_BuildGun_C_PlayAttachEffects3P_Params
 {
@@ -27,7 +22,7 @@ struct AAttach_BuildGun_C_PlayAttachEffects3P_Params
 // Function Attach_BuildGun.Attach_BuildGun_C.ExecuteUbergraph_Attach_BuildGun
 struct AAttach_BuildGun_C_ExecuteUbergraph_Attach_BuildGun_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

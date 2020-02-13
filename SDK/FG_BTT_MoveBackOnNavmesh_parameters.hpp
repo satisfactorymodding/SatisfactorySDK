@@ -24,7 +24,7 @@ struct UBTT_MoveBackOnNavmesh_C_ReceiveExecuteAI_Params
 // Function BTT_MoveBackOnNavmesh.BTT_MoveBackOnNavmesh_C.ExecuteUbergraph_BTT_MoveBackOnNavmesh
 struct UBTT_MoveBackOnNavmesh_C_ExecuteUbergraph_BTT_MoveBackOnNavmesh_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

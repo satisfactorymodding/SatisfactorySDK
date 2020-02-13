@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_WalkBackSlowly.BTT_WalkBackSlowly_C.ReceiveExecute
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UBTT_WalkBackSlowly_C::ReceiveExecute(class AActor** OwnerActor)
 
 
 // Function BTT_WalkBackSlowly.BTT_WalkBackSlowly_C.WalkBackComplete
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_WalkBackSlowly_C::WalkBackComplete()
 {
@@ -50,7 +50,7 @@ void UBTT_WalkBackSlowly_C::WalkBackComplete()
 
 
 // Function BTT_WalkBackSlowly.BTT_WalkBackSlowly_C.ReceiveAbort
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,11 +70,11 @@ void UBTT_WalkBackSlowly_C::ReceiveAbort(class AActor** OwnerActor)
 
 
 // Function BTT_WalkBackSlowly.BTT_WalkBackSlowly_C.ExecuteUbergraph_BTT_WalkBackSlowly
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_WalkBackSlowly_C::ExecuteUbergraph_BTT_WalkBackSlowly(int EntryPoint)
+void UBTT_WalkBackSlowly_C::ExecuteUbergraph_BTT_WalkBackSlowly(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_WalkBackSlowly.BTT_WalkBackSlowly_C.ExecuteUbergraph_BTT_WalkBackSlowly");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTD_CheckNextAttackInPattern.BTD_CheckNextAttackInPattern_C.PerformConditionCheckAI
-// ()
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ bool UBTD_CheckNextAttackInPattern_C::PerformConditionCheckAI(class AAIControlle
 
 
 // Function BTD_CheckNextAttackInPattern.BTD_CheckNextAttackInPattern_C.ReceiveExecutionStartAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -60,11 +60,11 @@ void UBTD_CheckNextAttackInPattern_C::ReceiveExecutionStartAI(class AAIControlle
 
 
 // Function BTD_CheckNextAttackInPattern.BTD_CheckNextAttackInPattern_C.ExecuteUbergraph_BTD_CheckNextAttackInPattern
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTD_CheckNextAttackInPattern_C::ExecuteUbergraph_BTD_CheckNextAttackInPattern(int EntryPoint)
+void UBTD_CheckNextAttackInPattern_C::ExecuteUbergraph_BTD_CheckNextAttackInPattern(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTD_CheckNextAttackInPattern.BTD_CheckNextAttackInPattern_C.ExecuteUbergraph_BTD_CheckNextAttackInPattern");
 

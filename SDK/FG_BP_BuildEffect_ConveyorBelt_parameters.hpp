@@ -22,17 +22,12 @@ struct ABP_BuildEffect_ConveyorBelt_C_GetSplineData_Params
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.SpawnSplineSegment
 struct ABP_BuildEffect_ConveyorBelt_C_SpawnSplineSegment_Params
 {
-	int                                                LoopIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                SplineLength;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               LoopIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               SplineLength;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.InitiateSpline
 struct ABP_BuildEffect_ConveyorBelt_C_InitiateSpline_Params
-{
-};
-
-// Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.UserConstructionScript
-struct ABP_BuildEffect_ConveyorBelt_C_UserConstructionScript_Params
 {
 };
 
@@ -65,7 +60,7 @@ struct ABP_BuildEffect_ConveyorBelt_C_ReceiveTick_Params
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.ExecuteUbergraph_BP_BuildEffect_ConveyorBelt
 struct ABP_BuildEffect_ConveyorBelt_C_ExecuteUbergraph_BP_BuildEffect_ConveyorBelt_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

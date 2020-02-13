@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_Wall_Door_8x4_01.Recipe_Wall_Door_8x4_01_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_Wall_Door_8x4_01_C : public UFGRecipe
 {
 public:

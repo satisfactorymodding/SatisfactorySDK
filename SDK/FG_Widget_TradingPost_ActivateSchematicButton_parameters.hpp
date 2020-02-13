@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.SetSelectedSchematic
+struct UWidget_TradingPost_ActivateSchematicButton_C_SetSelectedSchematic_Params
+{
+	class UClass**                                     SelectedSchematic;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.GetClickable
 struct UWidget_TradingPost_ActivateSchematicButton_C_GetClickable_Params
 {
@@ -50,7 +56,7 @@ struct UWidget_TradingPost_ActivateSchematicButton_C_BndEvt__mButton_K2Node_Comp
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.ExecuteUbergraph_Widget_TradingPost_ActivateSchematicButton
 struct UWidget_TradingPost_ActivateSchematicButton_C_ExecuteUbergraph_Widget_TradingPost_ActivateSchematicButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.onSchematicActivateButtonClicked__DelegateSignature

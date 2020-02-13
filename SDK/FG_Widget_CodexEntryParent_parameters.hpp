@@ -27,7 +27,7 @@ struct UWidget_CodexEntryParent_C_Construct_Params
 // Function Widget_CodexEntryParent.Widget_CodexEntryParent_C.ExecuteUbergraph_Widget_CodexEntryParent
 struct UWidget_CodexEntryParent_C_ExecuteUbergraph_Widget_CodexEntryParent_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

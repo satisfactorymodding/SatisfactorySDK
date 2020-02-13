@@ -20,11 +20,6 @@ struct ABuild_StorageIntegrated_C_CanDismantle_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Build_StorageIntegrated.Build_StorageIntegrated_C.UserConstructionScript
-struct ABuild_StorageIntegrated_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

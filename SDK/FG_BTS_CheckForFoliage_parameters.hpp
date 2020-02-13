@@ -25,7 +25,7 @@ struct UBTS_CheckForFoliage_C_ReceiveTickAI_Params
 // Function BTS_CheckForFoliage.BTS_CheckForFoliage_C.ExecuteUbergraph_BTS_CheckForFoliage
 struct UBTS_CheckForFoliage_C_ExecuteUbergraph_BTS_CheckForFoliage_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

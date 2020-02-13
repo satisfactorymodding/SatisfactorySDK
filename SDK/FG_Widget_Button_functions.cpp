@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Button.Widget_Button_C.GetAccordionFeedbackVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_Button_C::GetAccordionFeedbackVisibility()
 
 
 // Function Widget_Button.Widget_Button_C.GetButtonEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ bool UWidget_Button_C::GetButtonEnabled()
 
 
 // Function Widget_Button.Widget_Button_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Button_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature()
 {
@@ -72,7 +72,7 @@ void UWidget_Button_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButton
 
 
 // Function Widget_Button.Widget_Button_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_597_OnButtonPressedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Button_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_597_OnButtonPressedEvent__DelegateSignature()
 {
@@ -89,7 +89,7 @@ void UWidget_Button_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_597_OnButton
 
 
 // Function Widget_Button.Widget_Button_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_642_OnButtonReleasedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Button_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_642_OnButtonReleasedEvent__DelegateSignature()
 {
@@ -106,7 +106,7 @@ void UWidget_Button_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_642_OnButton
 
 
 // Function Widget_Button.Widget_Button_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Button_C::Construct()
 {
@@ -123,7 +123,7 @@ void UWidget_Button_C::Construct()
 
 
 // Function Widget_Button.Widget_Button_C.BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Button_C::BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 {
@@ -140,7 +140,7 @@ void UWidget_Button_C::BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHove
 
 
 // Function Widget_Button.Widget_Button_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Button_C::Destruct()
 {
@@ -157,11 +157,11 @@ void UWidget_Button_C::Destruct()
 
 
 // Function Widget_Button.Widget_Button_C.ExecuteUbergraph_Widget_Button
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Button_C::ExecuteUbergraph_Widget_Button(int EntryPoint)
+void UWidget_Button_C::ExecuteUbergraph_Widget_Button(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Button.Widget_Button_C.ExecuteUbergraph_Widget_Button");
 
@@ -177,11 +177,11 @@ void UWidget_Button_C::ExecuteUbergraph_Widget_Button(int EntryPoint)
 
 
 // Function Widget_Button.Widget_Button_C.OnClickedWithRef__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Button_C*        ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Button_C**       ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Button_C::OnClickedWithRef__DelegateSignature(class UWidget_Button_C* ClickedButton)
+void UWidget_Button_C::OnClickedWithRef__DelegateSignature(class UWidget_Button_C** ClickedButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Button.Widget_Button_C.OnClickedWithRef__DelegateSignature");
 
@@ -197,7 +197,7 @@ void UWidget_Button_C::OnClickedWithRef__DelegateSignature(class UWidget_Button_
 
 
 // Function Widget_Button.Widget_Button_C.OnReleased__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Button_C::OnReleased__DelegateSignature()
 {
@@ -214,7 +214,7 @@ void UWidget_Button_C::OnReleased__DelegateSignature()
 
 
 // Function Widget_Button.Widget_Button_C.OnPressed__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Button_C::OnPressed__DelegateSignature()
 {
@@ -231,7 +231,7 @@ void UWidget_Button_C::OnPressed__DelegateSignature()
 
 
 // Function Widget_Button.Widget_Button_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Button_C::OnClicked__DelegateSignature()
 {

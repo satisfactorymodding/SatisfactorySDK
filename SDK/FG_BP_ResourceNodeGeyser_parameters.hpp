@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.UserConstructionScript
-struct ABP_ResourceNodeGeyser_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.OnIsOccupiedChanged
 struct ABP_ResourceNodeGeyser_C_OnIsOccupiedChanged_Params
 {
@@ -43,7 +38,7 @@ struct ABP_ResourceNodeGeyser_C_EruptLoop_Params
 // Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.ExecuteUbergraph_BP_ResourceNodeGeyser
 struct ABP_ResourceNodeGeyser_C_ExecuteUbergraph_BP_ResourceNodeGeyser_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

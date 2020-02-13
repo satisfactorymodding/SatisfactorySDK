@@ -12,29 +12,12 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_PassengerSeat.BP_PassengerSeat_C.UserConstructionScript
-// ()
-
-void ABP_PassengerSeat_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PassengerSeat.BP_PassengerSeat_C.UserConstructionScript");
-
-	ABP_PassengerSeat_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_PassengerSeat.BP_PassengerSeat_C.InpActEvt_Use_K2Node_InputActionEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PassengerSeat_C::InpActEvt_Use_K2Node_InputActionEvent_1(const struct FKey& Key)
+void ABP_PassengerSeat_C::InpActEvt_Use_K2Node_InputActionEvent_1(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PassengerSeat.BP_PassengerSeat_C.InpActEvt_Use_K2Node_InputActionEvent_1");
 
@@ -50,7 +33,7 @@ void ABP_PassengerSeat_C::InpActEvt_Use_K2Node_InputActionEvent_1(const struct F
 
 
 // Function BP_PassengerSeat.BP_PassengerSeat_C.UpdateCamera
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_PassengerSeat_C::UpdateCamera()
 {
@@ -67,7 +50,7 @@ void ABP_PassengerSeat_C::UpdateCamera()
 
 
 // Function BP_PassengerSeat.BP_PassengerSeat_C.ReceivePossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            NewController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -87,7 +70,7 @@ void ABP_PassengerSeat_C::ReceivePossessed(class AController** NewController)
 
 
 // Function BP_PassengerSeat.BP_PassengerSeat_C.ReceiveUnpossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            OldController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -107,7 +90,7 @@ void ABP_PassengerSeat_C::ReceiveUnpossessed(class AController** OldController)
 
 
 // Function BP_PassengerSeat.BP_PassengerSeat_C.Server_Leave
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_PassengerSeat_C::Server_Leave()
 {
@@ -124,11 +107,11 @@ void ABP_PassengerSeat_C::Server_Leave()
 
 
 // Function BP_PassengerSeat.BP_PassengerSeat_C.ExecuteUbergraph_BP_PassengerSeat
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PassengerSeat_C::ExecuteUbergraph_BP_PassengerSeat(int EntryPoint)
+void ABP_PassengerSeat_C::ExecuteUbergraph_BP_PassengerSeat(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PassengerSeat.BP_PassengerSeat_C.ExecuteUbergraph_BP_PassengerSeat");
 

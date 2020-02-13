@@ -83,9 +83,9 @@ public:
 	}
 
 
-	void SetAnimDriveSpringStiffness(float InStiffness);
-	void SetAnimDriveDamperStiffness(float InStiffness);
-	void EnableGravityOverride(const struct FVector& InVector);
+	void SetAnimDriveSpringStiffness(float* InStiffness);
+	void SetAnimDriveDamperStiffness(float* InStiffness);
+	void EnableGravityOverride(struct FVector* InVector);
 	void DisableGravityOverride();
 };
 

@@ -12,14 +12,14 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_BuildMenu.Widget_BuildMenu_C.HideSearchbar
-// ()
+// Function Widget_BuildMenu.Widget_BuildMenu_C.SaveCategories
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_BuildMenu_C::HideSearchbar()
+void UWidget_BuildMenu_C::SaveCategories()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.HideSearchbar");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.SaveCategories");
 
-	UWidget_BuildMenu_C_HideSearchbar_Params params;
+	UWidget_BuildMenu_C_SaveCategories_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,51 @@ void UWidget_BuildMenu_C::HideSearchbar()
 }
 
 
-// Function Widget_BuildMenu.Widget_BuildMenu_C.ShowSearchbar
-// ()
+// Function Widget_BuildMenu.Widget_BuildMenu_C.OnCategoryClicked
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_C::ShowSearchbar()
+void UWidget_BuildMenu_C::OnCategoryClicked(int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.ShowSearchbar");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.OnCategoryClicked");
 
-	UWidget_BuildMenu_C_ShowSearchbar_Params params;
+	UWidget_BuildMenu_C_OnCategoryClicked_Params params;
+	params.Index = Index;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_BuildMenu.Widget_BuildMenu_C.SetSearchbarUnfocused
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_BuildMenu_C::SetSearchbarUnfocused()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.SetSearchbarUnfocused");
+
+	UWidget_BuildMenu_C_SetSearchbarUnfocused_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_BuildMenu.Widget_BuildMenu_C.SetSearchbarFocused
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_BuildMenu_C::SetSearchbarFocused()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.SetSearchbarFocused");
+
+	UWidget_BuildMenu_C_SetSearchbarFocused_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -47,7 +84,7 @@ void UWidget_BuildMenu_C::ShowSearchbar()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.IsShortcutSettingAllowed
-// ()
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -68,7 +105,7 @@ bool UWidget_BuildMenu_C::IsShortcutSettingAllowed()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.ClearAndHideSearchResults
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::ClearAndHideSearchResults()
 {
@@ -85,11 +122,11 @@ void UWidget_BuildMenu_C::ClearAndHideSearchResults()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnSearchCreateResults
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   mText                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  mText                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_BuildMenu_C::OnSearchCreateResults(const struct FText& mText)
+void UWidget_BuildMenu_C::OnSearchCreateResults(struct FText* mText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.OnSearchCreateResults");
 
@@ -105,7 +142,7 @@ void UWidget_BuildMenu_C::OnSearchCreateResults(const struct FText& mText)
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnKeyDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -129,25 +166,8 @@ struct FEventReply UWidget_BuildMenu_C::OnKeyDown(struct FGeometry* MyGeometry, 
 }
 
 
-// Function Widget_BuildMenu.Widget_BuildMenu_C.SetVisibilityForSpecialCategory
-// ()
-
-void UWidget_BuildMenu_C::SetVisibilityForSpecialCategory()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.SetVisibilityForSpecialCategory");
-
-	UWidget_BuildMenu_C_SetVisibilityForSpecialCategory_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_BuildMenu.Widget_BuildMenu_C.PopulateBuildings
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::PopulateBuildings()
 {
@@ -164,7 +184,7 @@ void UWidget_BuildMenu_C::PopulateBuildings()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.UpdateShortcuts
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::UpdateShortcuts()
 {
@@ -181,12 +201,12 @@ void UWidget_BuildMenu_C::UpdateShortcuts()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.HandleShortcutPressed
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            shortcutIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           shortcutIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           setupNewShortcut               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_C::HandleShortcutPressed(int shortcutIndex, bool* setupNewShortcut)
+void UWidget_BuildMenu_C::HandleShortcutPressed(int* shortcutIndex, bool* setupNewShortcut)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.HandleShortcutPressed");
 
@@ -205,12 +225,12 @@ void UWidget_BuildMenu_C::HandleShortcutPressed(int shortcutIndex, bool* setupNe
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnStopHoveringRecipe
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_BuildMenuRecipeButton_C* RecipeButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_BuildMenuRecipeButton_C** RecipeButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_BuildMenu_C::OnStopHoveringRecipe(class UClass* Recipe, class UWidget_BuildMenuRecipeButton_C* RecipeButton)
+void UWidget_BuildMenu_C::OnStopHoveringRecipe(class UClass** Recipe, class UWidget_BuildMenuRecipeButton_C** RecipeButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.OnStopHoveringRecipe");
 
@@ -227,12 +247,12 @@ void UWidget_BuildMenu_C::OnStopHoveringRecipe(class UClass* Recipe, class UWidg
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnRecipeHovered
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_BuildMenuRecipeButton_C* RecipeButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_BuildMenuRecipeButton_C** RecipeButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_BuildMenu_C::OnRecipeHovered(class UClass* Recipe, class UWidget_BuildMenuRecipeButton_C* RecipeButton)
+void UWidget_BuildMenu_C::OnRecipeHovered(class UClass** Recipe, class UWidget_BuildMenuRecipeButton_C** RecipeButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.OnRecipeHovered");
 
@@ -249,7 +269,7 @@ void UWidget_BuildMenu_C::OnRecipeHovered(class UClass* Recipe, class UWidget_Bu
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnKeyUp
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -274,7 +294,7 @@ struct FEventReply UWidget_BuildMenu_C::OnKeyUp(struct FGeometry* MyGeometry, st
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.IsCentralStorageBuilt
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsBuilt                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -296,7 +316,7 @@ void UWidget_BuildMenu_C::IsCentralStorageBuilt(bool* IsBuilt)
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.IsSpaceElevatorBuilt
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsBuilt                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -318,7 +338,7 @@ void UWidget_BuildMenu_C::IsSpaceElevatorBuilt(bool* IsBuilt)
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.IsTradingPostBuilt
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsBuilt                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -339,25 +359,8 @@ void UWidget_BuildMenu_C::IsTradingPostBuilt(bool* IsBuilt)
 }
 
 
-// Function Widget_BuildMenu.Widget_BuildMenu_C.PonderAddingSpecialCategory
-// ()
-
-void UWidget_BuildMenu_C::PonderAddingSpecialCategory()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.PonderAddingSpecialCategory");
-
-	UWidget_BuildMenu_C_PonderAddingSpecialCategory_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_BuildMenu.Widget_BuildMenu_C.GetInfoboxVisiblity
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::GetInfoboxVisiblity()
 {
@@ -373,45 +376,8 @@ void UWidget_BuildMenu_C::GetInfoboxVisiblity()
 }
 
 
-// Function Widget_BuildMenu.Widget_BuildMenu_C.SaveCategories
-// ()
-
-void UWidget_BuildMenu_C::SaveCategories()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.SaveCategories");
-
-	UWidget_BuildMenu_C_SaveCategories_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_BuildMenu.Widget_BuildMenu_C.OnBuildCategoryClicked
-// ()
-// Parameters:
-// class UClass*                  buildCategory                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_BuildMenu_C::OnBuildCategoryClicked(class UClass* buildCategory)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.OnBuildCategoryClicked");
-
-	UWidget_BuildMenu_C_OnBuildCategoryClicked_Params params;
-	params.buildCategory = buildCategory;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_BuildMenu.Widget_BuildMenu_C.InitBuildMenu
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::InitBuildMenu()
 {
@@ -428,11 +394,11 @@ void UWidget_BuildMenu_C::InitBuildMenu()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnRecipeClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_C::OnRecipeClicked(class UClass* InputPin)
+void UWidget_BuildMenu_C::OnRecipeClicked(class UClass** InputPin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.OnRecipeClicked");
 
@@ -448,11 +414,11 @@ void UWidget_BuildMenu_C::OnRecipeClicked(class UClass* InputPin)
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.CreateInfoBox
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_C::CreateInfoBox(class UClass* Recipe)
+void UWidget_BuildMenu_C::CreateInfoBox(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.CreateInfoBox");
 
@@ -468,7 +434,7 @@ void UWidget_BuildMenu_C::CreateInfoBox(class UClass* Recipe)
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.CreateCategoryButtons
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::CreateCategoryButtons()
 {
@@ -485,12 +451,12 @@ void UWidget_BuildMenu_C::CreateCategoryButtons()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.CanAffordRecipe
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CanAfford                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_C::CanAffordRecipe(class UClass* Recipe, bool* CanAfford)
+void UWidget_BuildMenu_C::CanAffordRecipe(class UClass** Recipe, bool* CanAfford)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.CanAffordRecipe");
 
@@ -509,11 +475,11 @@ void UWidget_BuildMenu_C::CanAffordRecipe(class UClass* Recipe, bool* CanAfford)
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnScroll
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          ScrollPos                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         ScrollPos                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_C::OnScroll(float ScrollPos)
+void UWidget_BuildMenu_C::OnScroll(float* ScrollPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.OnScroll");
 
@@ -529,7 +495,7 @@ void UWidget_BuildMenu_C::OnScroll(float ScrollPos)
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.RemoveHotbarUpdateListener
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::RemoveHotbarUpdateListener()
 {
@@ -546,7 +512,7 @@ void UWidget_BuildMenu_C::RemoveHotbarUpdateListener()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.ListenForHotbarUpdate
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::ListenForHotbarUpdate()
 {
@@ -563,7 +529,7 @@ void UWidget_BuildMenu_C::ListenForHotbarUpdate()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_BuildMenu_C::Destruct()
 {
@@ -580,7 +546,7 @@ void UWidget_BuildMenu_C::Destruct()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_BuildMenu_C::Construct()
 {
@@ -597,7 +563,7 @@ void UWidget_BuildMenu_C::Construct()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnEscapePressed
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::OnEscapePressed()
 {
@@ -614,11 +580,11 @@ void UWidget_BuildMenu_C::OnEscapePressed()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_BuildMenu_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature(const struct FText& Text)
+void UWidget_BuildMenu_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature");
 
@@ -634,12 +600,12 @@ void UWidget_BuildMenu_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnText
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_2_OnTextComitted__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_2_OnTextComitted__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_BuildMenu_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_2_OnTextComitted__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_2_OnTextComitted__DelegateSignature");
 
@@ -656,7 +622,7 @@ void UWidget_BuildMenu_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_2_OnText
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.CheckSearchResultHover
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::CheckSearchResultHover()
 {
@@ -673,7 +639,7 @@ void UWidget_BuildMenu_C::CheckSearchResultHover()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.UnBlockMouse
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::UnBlockMouse()
 {
@@ -690,7 +656,7 @@ void UWidget_BuildMenu_C::UnBlockMouse()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.BndEvt__Widget_MouseMoveChecker_K2Node_ComponentBoundEvent_0_OnMouseMoved__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenu_C::BndEvt__Widget_MouseMoveChecker_K2Node_ComponentBoundEvent_0_OnMouseMoved__DelegateSignature()
 {
@@ -707,7 +673,7 @@ void UWidget_BuildMenu_C::BndEvt__Widget_MouseMoveChecker_K2Node_ComponentBoundE
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.BlockMouse
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::BlockMouse()
 {
@@ -724,11 +690,11 @@ void UWidget_BuildMenu_C::BlockMouse()
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.ExecuteUbergraph_Widget_BuildMenu
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_C::ExecuteUbergraph_Widget_BuildMenu(int EntryPoint)
+void UWidget_BuildMenu_C::ExecuteUbergraph_Widget_BuildMenu(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu.Widget_BuildMenu_C.ExecuteUbergraph_Widget_BuildMenu");
 
@@ -744,7 +710,7 @@ void UWidget_BuildMenu_C::ExecuteUbergraph_Widget_BuildMenu(int EntryPoint)
 
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_C::OnClicked__DelegateSignature()
 {

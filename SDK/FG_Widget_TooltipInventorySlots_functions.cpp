@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TooltipInventorySlots.Widget_TooltipInventorySlots_C.GetExtraInventorySlotText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   NewParam                       (Parm, OutParm)
 
@@ -35,7 +35,7 @@ void UWidget_TooltipInventorySlots_C::GetExtraInventorySlotText(struct FText* Ne
 
 
 // Function Widget_TooltipInventorySlots.Widget_TooltipInventorySlots_C.GetExtraArmsSlotText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   NewParam                       (Parm, OutParm)
 
@@ -57,7 +57,7 @@ void UWidget_TooltipInventorySlots_C::GetExtraArmsSlotText(struct FText* NewPara
 
 
 // Function Widget_TooltipInventorySlots.Widget_TooltipInventorySlots_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TooltipInventorySlots_C::Construct()
 {
@@ -74,11 +74,11 @@ void UWidget_TooltipInventorySlots_C::Construct()
 
 
 // Function Widget_TooltipInventorySlots.Widget_TooltipInventorySlots_C.ExecuteUbergraph_Widget_TooltipInventorySlots
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TooltipInventorySlots_C::ExecuteUbergraph_Widget_TooltipInventorySlots(int EntryPoint)
+void UWidget_TooltipInventorySlots_C::ExecuteUbergraph_Widget_TooltipInventorySlots(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TooltipInventorySlots.Widget_TooltipInventorySlots_C.ExecuteUbergraph_Widget_TooltipInventorySlots");
 

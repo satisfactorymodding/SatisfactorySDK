@@ -20,11 +20,6 @@ struct ABuild_GeneratorIntegratedBiomass_C_CanDismantle_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.UserConstructionScript
-struct ABuild_GeneratorIntegratedBiomass_C_UserConstructionScript_Params
-{
-};
-
 // Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.GainedSignificance
 struct ABuild_GeneratorIntegratedBiomass_C_GainedSignificance_Params
 {
@@ -33,11 +28,13 @@ struct ABuild_GeneratorIntegratedBiomass_C_GainedSignificance_Params
 // Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.StartProductionLoopEffects
 struct ABuild_GeneratorIntegratedBiomass_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.StopProductionLoopEffects
 struct ABuild_GeneratorIntegratedBiomass_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.LostSignificance
@@ -54,7 +51,7 @@ struct ABuild_GeneratorIntegratedBiomass_C_ReceiveUpdateEffects_Params
 // Function Build_GeneratorIntegratedBiomass.Build_GeneratorIntegratedBiomass_C.ExecuteUbergraph_Build_GeneratorIntegratedBiomass
 struct ABuild_GeneratorIntegratedBiomass_C_ExecuteUbergraph_Build_GeneratorIntegratedBiomass_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

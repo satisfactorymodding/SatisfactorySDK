@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Desc_Wire.Desc_Wire_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0148 - 0x0148)
 class UDesc_Wire_C : public UFGItemDescriptor
 {
 public:

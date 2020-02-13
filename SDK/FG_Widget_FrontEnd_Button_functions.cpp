@@ -12,8 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetTitle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  mDisplayName                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_FrontEnd_Button_C::SetTitle(struct FText* mDisplayName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetTitle");
+
+	UWidget_FrontEnd_Button_C_SetTitle_Params params;
+	params.mDisplayName = mDisplayName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetActiveWidgetInSwitcher
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::SetActiveWidgetInSwitcher()
 {
@@ -30,7 +50,7 @@ void UWidget_FrontEnd_Button_C::SetActiveWidgetInSwitcher()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.ClearListOfSelections
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::ClearListOfSelections()
 {
@@ -47,7 +67,7 @@ void UWidget_FrontEnd_Button_C::ClearListOfSelections()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.GetButtonTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -68,7 +88,7 @@ struct FSlateColor UWidget_FrontEnd_Button_C::GetButtonTextColor()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.GetButtonColor
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -89,7 +109,7 @@ struct FLinearColor UWidget_FrontEnd_Button_C::GetButtonColor()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetFocused
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::SetFocused()
 {
@@ -106,7 +126,7 @@ void UWidget_FrontEnd_Button_C::SetFocused()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.OnFocusReceived
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FFocusEvent*            InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -131,7 +151,7 @@ struct FEventReply UWidget_FrontEnd_Button_C::OnFocusReceived(struct FGeometry* 
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.ShowButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::ShowButton()
 {
@@ -148,7 +168,7 @@ void UWidget_FrontEnd_Button_C::ShowButton()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.HideButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::HideButton()
 {
@@ -165,7 +185,7 @@ void UWidget_FrontEnd_Button_C::HideButton()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.GetButtonText
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -186,7 +206,7 @@ struct FText UWidget_FrontEnd_Button_C::GetButtonText()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::Construct()
 {
@@ -203,7 +223,7 @@ void UWidget_FrontEnd_Button_C::Construct()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::Destruct()
 {
@@ -220,7 +240,7 @@ void UWidget_FrontEnd_Button_C::Destruct()
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -237,7 +257,7 @@ void UWidget_FrontEnd_Button_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_On
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.BndEvt__PauseMenuButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::BndEvt__PauseMenuButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -254,7 +274,7 @@ void UWidget_FrontEnd_Button_C::BndEvt__PauseMenuButton_K2Node_ComponentBoundEve
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -274,11 +294,11 @@ void UWidget_FrontEnd_Button_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetSelected
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           isSelected                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          isSelected                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_FrontEnd_Button_C::SetSelected(bool isSelected)
+void UWidget_FrontEnd_Button_C::SetSelected(bool* isSelected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.SetSelected");
 
@@ -293,12 +313,29 @@ void UWidget_FrontEnd_Button_C::SetSelected(bool isSelected)
 }
 
 
-// Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.ExecuteUbergraph_Widget_FrontEnd_Button
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.BndEvt__mFrontEndButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_FrontEnd_Button_C::ExecuteUbergraph_Widget_FrontEnd_Button(int EntryPoint)
+void UWidget_FrontEnd_Button_C::BndEvt__mFrontEndButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.BndEvt__mFrontEndButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_FrontEnd_Button_C_BndEvt__mFrontEndButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.ExecuteUbergraph_Widget_FrontEnd_Button
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_FrontEnd_Button_C::ExecuteUbergraph_Widget_FrontEnd_Button(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.ExecuteUbergraph_Widget_FrontEnd_Button");
 
@@ -313,8 +350,42 @@ void UWidget_FrontEnd_Button_C::ExecuteUbergraph_Widget_FrontEnd_Button(int Entr
 }
 
 
+// Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.OnUnhovered__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UWidget_FrontEnd_Button_C::OnUnhovered__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.OnUnhovered__DelegateSignature");
+
+	UWidget_FrontEnd_Button_C_OnUnhovered__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.OnHovered__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UWidget_FrontEnd_Button_C::OnHovered__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.OnHovered__DelegateSignature");
+
+	UWidget_FrontEnd_Button_C_OnHovered__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_FrontEnd_Button.Widget_FrontEnd_Button_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FrontEnd_Button_C::OnClicked__DelegateSignature()
 {

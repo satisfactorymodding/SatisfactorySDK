@@ -22,7 +22,7 @@ struct UWidget_TradingPostPayOffSlot_C_StopEmptyAnim_Params
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.DropOntoInventorySlot
 struct UWidget_TradingPostPayOffSlot_C_DropOntoInventorySlot_Params
 {
-	class UWidget_InventorySlot_C*                     InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_InventorySlot_C**                    InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -114,7 +114,7 @@ struct UWidget_TradingPostPayOffSlot_C_Construct_Params
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.OnSchematicPaidOff
 struct UWidget_TradingPostPayOffSlot_C_OnSchematicPaidOff_Params
 {
-	class AFGSchematicManager*                         schematicManager;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGSchematicManager**                        schematicManager;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.Destruct
@@ -139,7 +139,7 @@ struct UWidget_TradingPostPayOffSlot_C_OnMouseEnter_Params
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.ExecuteUbergraph_Widget_TradingPostPayOffSlot
 struct UWidget_TradingPostPayOffSlot_C_ExecuteUbergraph_Widget_TradingPostPayOffSlot_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

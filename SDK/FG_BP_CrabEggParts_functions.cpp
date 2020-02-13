@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CrabEggParts.BP_CrabEggParts_C.UserConstructionScript
-// ()
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_CrabEggParts_C::UserConstructionScript()
 {
@@ -30,7 +30,7 @@ void ABP_CrabEggParts_C::UserConstructionScript()
 
 
 // Function BP_CrabEggParts.BP_CrabEggParts_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_CrabEggParts_C::ReceiveBeginPlay()
 {
@@ -47,11 +47,11 @@ void ABP_CrabEggParts_C::ReceiveBeginPlay()
 
 
 // Function BP_CrabEggParts.BP_CrabEggParts_C.ExecuteUbergraph_BP_CrabEggParts
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CrabEggParts_C::ExecuteUbergraph_BP_CrabEggParts(int EntryPoint)
+void ABP_CrabEggParts_C::ExecuteUbergraph_BP_CrabEggParts(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CrabEggParts.BP_CrabEggParts_C.ExecuteUbergraph_BP_CrabEggParts");
 

@@ -14,15 +14,10 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_PassengerSeat.BP_PassengerSeat_C.UserConstructionScript
-struct ABP_PassengerSeat_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_PassengerSeat.BP_PassengerSeat_C.InpActEvt_Use_K2Node_InputActionEvent_1
 struct ABP_PassengerSeat_C_InpActEvt_Use_K2Node_InputActionEvent_1_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_PassengerSeat.BP_PassengerSeat_C.UpdateCamera
@@ -50,7 +45,7 @@ struct ABP_PassengerSeat_C_Server_Leave_Params
 // Function BP_PassengerSeat.BP_PassengerSeat_C.ExecuteUbergraph_BP_PassengerSeat
 struct ABP_PassengerSeat_C_ExecuteUbergraph_BP_PassengerSeat_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

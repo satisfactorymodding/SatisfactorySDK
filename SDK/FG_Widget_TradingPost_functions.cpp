@@ -12,8 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_TradingPost.Widget_TradingPost_C.SetSelectedSchematic
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass**                 mSelectedSchematic             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_TradingPost_C::SetSelectedSchematic(class UClass** mSelectedSchematic)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.SetSelectedSchematic");
+
+	UWidget_TradingPost_C_SetSelectedSchematic_Params params;
+	params.mSelectedSchematic = mSelectedSchematic;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_TradingPost.Widget_TradingPost_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -37,7 +57,7 @@ void UWidget_TradingPost_C::DropInventorySlotStack(class UWidget_InventorySlot_C
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetLowestNonFullyResearchedTier
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            tier                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           FoundTier                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -62,12 +82,12 @@ void UWidget_TradingPost_C::GetLowestNonFullyResearchedTier(int* tier, bool* Fou
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.CheckIfTierIsFullyResearched
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            tier                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           tier                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsResearched                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_C::CheckIfTierIsFullyResearched(int tier, bool* IsResearched)
+void UWidget_TradingPost_C::CheckIfTierIsFullyResearched(int* tier, bool* IsResearched)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.CheckIfTierIsFullyResearched");
 
@@ -86,11 +106,11 @@ void UWidget_TradingPost_C::CheckIfTierIsFullyResearched(int tier, bool* IsResea
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.SetTierAndDeafultSchematic
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            tier                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           tier                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_C::SetTierAndDeafultSchematic(int tier)
+void UWidget_TradingPost_C::SetTierAndDeafultSchematic(int* tier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.SetTierAndDeafultSchematic");
 
@@ -106,7 +126,7 @@ void UWidget_TradingPost_C::SetTierAndDeafultSchematic(int tier)
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetSchematicHintTextVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -127,7 +147,7 @@ ESlateVisibility UWidget_TradingPost_C::GetSchematicHintTextVisibility()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetSchematicHintVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -148,7 +168,7 @@ ESlateVisibility UWidget_TradingPost_C::GetSchematicHintVisibility()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetTierHintVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -169,7 +189,7 @@ ESlateVisibility UWidget_TradingPost_C::GetTierHintVisibility()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GenerateTierList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_C::GenerateTierList()
 {
@@ -186,7 +206,7 @@ void UWidget_TradingPost_C::GenerateTierList()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.UpdateInventoryVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_C::UpdateInventoryVisibility()
 {
@@ -203,7 +223,7 @@ void UWidget_TradingPost_C::UpdateInventoryVisibility()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetRewardVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -224,7 +244,7 @@ ESlateVisibility UWidget_TradingPost_C::GetRewardVisibility()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetShipAwayFeedback
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -245,13 +265,13 @@ ESlateVisibility UWidget_TradingPost_C::GetShipAwayFeedback()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.SetRewardInformation
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   inTitle                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   inDesc                         (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FSlateBrush             inIcon                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  inTitle                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  inDesc                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSlateBrush*            inIcon                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TradingPost_C::SetRewardInformation(const struct FText& inTitle, const struct FText& inDesc, const struct FSlateBrush& inIcon)
+void UWidget_TradingPost_C::SetRewardInformation(struct FText* inTitle, struct FText* inDesc, struct FSlateBrush* inIcon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.SetRewardInformation");
 
@@ -269,7 +289,7 @@ void UWidget_TradingPost_C::SetRewardInformation(const struct FText& inTitle, co
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetActiveSchematicTabEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -290,7 +310,7 @@ bool UWidget_TradingPost_C::GetActiveSchematicTabEnabled()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.SetActiveTab
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_C::SetActiveTab()
 {
@@ -307,7 +327,7 @@ void UWidget_TradingPost_C::SetActiveTab()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetShipInventoryVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -328,7 +348,7 @@ ESlateVisibility UWidget_TradingPost_C::GetShipInventoryVisibility()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.ActivateSelectedSchematic
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_C::ActivateSelectedSchematic()
 {
@@ -345,7 +365,7 @@ void UWidget_TradingPost_C::ActivateSelectedSchematic()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetSelectedRecipeBoxVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -366,11 +386,11 @@ ESlateVisibility UWidget_TradingPost_C::GetSelectedRecipeBoxVisibility()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.SetDefaultDescriptionText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  mSchematicClass                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 mSchematicClass                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_C::SetDefaultDescriptionText(class UClass* mSchematicClass)
+void UWidget_TradingPost_C::SetDefaultDescriptionText(class UClass** mSchematicClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.SetDefaultDescriptionText");
 
@@ -386,11 +406,11 @@ void UWidget_TradingPost_C::SetDefaultDescriptionText(class UClass* mSchematicCl
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.UpdateRewardInfoFromProduct
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SchematicRewardItem_C* Reward_Widget                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SchematicRewardItem_C** Reward_Widget                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_TradingPost_C::UpdateRewardInfoFromProduct(class UWidget_SchematicRewardItem_C* Reward_Widget)
+void UWidget_TradingPost_C::UpdateRewardInfoFromProduct(class UWidget_SchematicRewardItem_C** Reward_Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.UpdateRewardInfoFromProduct");
 
@@ -406,7 +426,7 @@ void UWidget_TradingPost_C::UpdateRewardInfoFromProduct(class UWidget_SchematicR
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetTabFeedback
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_C::GetTabFeedback()
 {
@@ -423,16 +443,16 @@ void UWidget_TradingPost_C::GetTabFeedback()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.OnSchematicClicked
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Schematic                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 schematic                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_C::OnSchematicClicked(class UClass* Schematic)
+void UWidget_TradingPost_C::OnSchematicClicked(class UClass** schematic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.OnSchematicClicked");
 
 	UWidget_TradingPost_C_OnSchematicClicked_Params params;
-	params.Schematic = Schematic;
+	params.schematic = schematic;
 
 	auto flags = fn->FunctionFlags;
 
@@ -443,7 +463,7 @@ void UWidget_TradingPost_C::OnSchematicClicked(class UClass* Schematic)
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetActiveSchematicInfoVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -464,7 +484,7 @@ ESlateVisibility UWidget_TradingPost_C::GetActiveSchematicInfoVisibility()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.SetActiveSchematicInfo
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -485,7 +505,7 @@ struct FText UWidget_TradingPost_C::SetActiveSchematicInfo()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_C::Cleanup()
 {
@@ -501,8 +521,25 @@ void UWidget_TradingPost_C::Cleanup()
 }
 
 
+// Function Widget_TradingPost.Widget_TradingPost_C.CloseTradepost
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_TradingPost_C::CloseTradepost()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.CloseTradepost");
+
+	UWidget_TradingPost_C_CloseTradepost_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_TradingPost.Widget_TradingPost_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPost_C::Destruct()
 {
@@ -519,7 +556,7 @@ void UWidget_TradingPost_C::Destruct()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_TradingPost_C::Init()
 {
@@ -536,7 +573,7 @@ void UWidget_TradingPost_C::Init()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -557,34 +594,17 @@ void UWidget_TradingPost_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTim
 }
 
 
-// Function Widget_TradingPost.Widget_TradingPost_C.CloseTradepost
-// ()
-
-void UWidget_TradingPost_C::CloseTradepost()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.CloseTradepost");
-
-	UWidget_TradingPost_C_CloseTradepost_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_TradingPost.Widget_TradingPost_C.OnActiveSchematicChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Schematic                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 schematic                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_C::OnActiveSchematicChanged(class UClass* Schematic)
+void UWidget_TradingPost_C::OnActiveSchematicChanged(class UClass** schematic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.OnActiveSchematicChanged");
 
 	UWidget_TradingPost_C_OnActiveSchematicChanged_Params params;
-	params.Schematic = Schematic;
+	params.schematic = schematic;
 
 	auto flags = fn->FunctionFlags;
 
@@ -595,7 +615,7 @@ void UWidget_TradingPost_C::OnActiveSchematicChanged(class UClass* Schematic)
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPost_C::Construct()
 {
@@ -612,11 +632,11 @@ void UWidget_TradingPost_C::Construct()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.purchasedSchematic
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  purchasedSchematic             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 purchasedSchematic             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_C::purchasedSchematic(class UClass* purchasedSchematic)
+void UWidget_TradingPost_C::purchasedSchematic(class UClass** purchasedSchematic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.purchasedSchematic");
 
@@ -632,7 +652,7 @@ void UWidget_TradingPost_C::purchasedSchematic(class UClass* purchasedSchematic)
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.mShakeWindow
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_C::mShakeWindow()
 {
@@ -649,7 +669,7 @@ void UWidget_TradingPost_C::mShakeWindow()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.BndEvt__mWindow_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_C::BndEvt__mWindow_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature()
 {
@@ -666,7 +686,7 @@ void UWidget_TradingPost_C::BndEvt__mWindow_K2Node_ComponentBoundEvent_0_OnClose
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.CreateSmoke
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_C::CreateSmoke()
 {
@@ -683,11 +703,11 @@ void UWidget_TradingPost_C::CreateSmoke()
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.BndEvt__mWindow_K2Node_ComponentBoundEvent_3_OnTabButtonClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_C::BndEvt__mWindow_K2Node_ComponentBoundEvent_3_OnTabButtonClicked__DelegateSignature(int ButtonIndex)
+void UWidget_TradingPost_C::BndEvt__mWindow_K2Node_ComponentBoundEvent_3_OnTabButtonClicked__DelegateSignature(int* ButtonIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.BndEvt__mWindow_K2Node_ComponentBoundEvent_3_OnTabButtonClicked__DelegateSignature");
 
@@ -703,11 +723,11 @@ void UWidget_TradingPost_C::BndEvt__mWindow_K2Node_ComponentBoundEvent_3_OnTabBu
 
 
 // Function Widget_TradingPost.Widget_TradingPost_C.ExecuteUbergraph_Widget_TradingPost
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_C::ExecuteUbergraph_Widget_TradingPost(int EntryPoint)
+void UWidget_TradingPost_C::ExecuteUbergraph_Widget_TradingPost(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost.Widget_TradingPost_C.ExecuteUbergraph_Widget_TradingPost");
 

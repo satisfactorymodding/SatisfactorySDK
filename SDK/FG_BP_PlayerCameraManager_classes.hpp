@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PlayerCameraManager.BP_PlayerCameraManager_C
-// 0x0000 (0x2470 - 0x2470)
+// 0x0000 (0x2660 - 0x2660)
 class ABP_PlayerCameraManager_C : public APlayerCameraManager
 {
 public:

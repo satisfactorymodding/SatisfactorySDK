@@ -24,7 +24,7 @@ struct UBTT_FindNextSplinePoint_C_ReceiveExecuteAI_Params
 // Function BTT_FindNextSplinePoint.BTT_FindNextSplinePoint_C.ExecuteUbergraph_BTT_FindNextSplinePoint
 struct UBTT_FindNextSplinePoint_C_ExecuteUbergraph_BTT_FindNextSplinePoint_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

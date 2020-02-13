@@ -28,11 +28,6 @@ struct ABuild_MinerMk1_C_GetMiningParticles_Params
 	bool                                               foundParticle;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Build_MinerMk1.Build_MinerMk1_C.UserConstructionScript
-struct ABuild_MinerMk1_C_UserConstructionScript_Params
-{
-};
-
 // Function Build_MinerMk1.Build_MinerMk1_C.GainedSignificance
 struct ABuild_MinerMk1_C_GainedSignificance_Params
 {
@@ -41,11 +36,13 @@ struct ABuild_MinerMk1_C_GainedSignificance_Params
 // Function Build_MinerMk1.Build_MinerMk1_C.StartProductionLoopEffects
 struct ABuild_MinerMk1_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_MinerMk1.Build_MinerMk1_C.StopProductionLoopEffects
 struct ABuild_MinerMk1_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_MinerMk1.Build_MinerMk1_C.LostSignificance
@@ -61,7 +58,7 @@ struct ABuild_MinerMk1_C_ReceiveDestroyed_Params
 // Function Build_MinerMk1.Build_MinerMk1_C.ExecuteUbergraph_Build_MinerMk1
 struct ABuild_MinerMk1_C_ExecuteUbergraph_Build_MinerMk1_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

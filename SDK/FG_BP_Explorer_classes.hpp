@@ -15,24 +15,24 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Explorer.BP_Explorer_C
-// 0x0050 (0x08B0 - 0x0860)
+// 0x0050 (0x0980 - 0x0930)
 class ABP_Explorer_C : public ABP_WheeledVehicle4W_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0860(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                      Workbench;                                                // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USpotLightComponent*                         SpotLight;                                                // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBP_WorkBenchComponent_C*                    BP_WorkBenchComponent;                                    // 0x0878(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UPostProcessComponent*                       PostProcess;                                              // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UCameraComponent*                            Camera;                                                   // 0x0888(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USpringArmComponent*                         SpringArm;                                                // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              throttleval;                                              // 0x0898(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               mFlashlightOn;                                            // 0x089C(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x089D(0x0003) MISSED OFFSET
-	float                                              mSuspensionLoadTimer;                                     // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mSuspensionLoadTimerDefault;                              // 0x08A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mSuspensionTick;                                          // 0x08A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mSuspensionTickDefault;                                   // 0x08AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0930(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                      Workbench;                                                // 0x0938(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USpotLightComponent*                         SpotLight;                                                // 0x0940(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBP_WorkBenchComponent_C*                    BP_WorkBenchComponent;                                    // 0x0948(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPostProcessComponent*                       PostProcess;                                              // 0x0950(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCameraComponent*                            Camera;                                                   // 0x0958(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USpringArmComponent*                         SpringArm;                                                // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              throttleval;                                              // 0x0968(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               mFlashlightOn;                                            // 0x096C(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x096D(0x0003) MISSED OFFSET
+	float                                              mSuspensionLoadTimer;                                     // 0x0970(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mSuspensionLoadTimerDefault;                              // 0x0974(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mSuspensionTick;                                          // 0x0978(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mSuspensionTickDefault;                                   // 0x097C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -41,24 +41,23 @@ public:
 	}
 
 
+	void UpdateOutline(bool* aimingAtWorkbench);
 	struct FText GetActorRepresentationText();
 	class UTexture2D* GetActorRepresentationTexture();
-	void CheckSuspension(float InDeltaTime);
+	void CheckSuspension(float* InDeltaTime);
 	void OnRep_mFlashlightOn();
 	struct FVector GetAttackLocation();
 	float GetEnemyTargetDesirability(class AFGEnemyController** forController);
 	bool ShouldAutoregisterAsTargetable();
-	void UserConstructionScript();
-	void InpActEvt_Flashlight_K2Node_InputActionEvent_1(const struct FKey& Key);
-	void InpActEvt_Y_K2Node_InputKeyEvent_3(const struct FKey& Key);
-	void InpActEvt_NumPadZero_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_NumPadOne_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_Flashlight_K2Node_InputActionEvent_1(struct FKey* Key);
 	void ReceiveTick(float* DeltaSeconds);
-	void CloseTrunk();
-	void OpenTrunk();
-	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue);
-	void Server_SetFlashlightOn(bool FlashlightOn);
-	void ExecuteUbergraph_BP_Explorer(int EntryPoint);
+	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float* AxisValue);
+	void Server_SetFlashlightOn(bool* FlashlightOn);
+	void GainedSignificance();
+	void LostSignificance();
+	void Multicast_OpenTrunk();
+	void Multicast_CloseTrunk();
+	void ExecuteUbergraph_BP_Explorer(int* EntryPoint);
 };
 
 

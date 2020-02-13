@@ -45,6 +45,22 @@ public:
 };
 
 
+// Class PacketHandler.PacketHandlerProfileConfig
+// 0x0010 (0x0038 - 0x0028)
+class UPacketHandlerProfileConfig : public UObject
+{
+public:
+	TArray<class FString>                              Components;                                               // 0x0028(0x0010) (ZeroConstructor, Config)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class PacketHandler.PacketHandlerProfileConfig");
+		return ptr;
+	}
+
+};
+
+
 }
 
 #ifdef _MSC_VER

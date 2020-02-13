@@ -30,13 +30,12 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void OnIsLoadedSet();
 	void PlayFireEffect(struct FVector* flashLocation);
 	void OnBeginFireEffect(struct FVector* Location);
 	void ClientPlayReloadEffect();
 	void OnAttach();
-	void ExecuteUbergraph_Attach_NobeliskDetonator_R(int EntryPoint);
+	void ExecuteUbergraph_Attach_NobeliskDetonator_R(int* EntryPoint);
 };
 
 

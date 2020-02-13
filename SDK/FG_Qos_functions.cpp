@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Qos.QosBeaconClient.ServerQosRequest
-// ()
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// class FString                  InSessionId                    (Parm, ZeroConstructor)
+// class FString*                 InSessionId                    (Parm, ZeroConstructor)
 
-void AQosBeaconClient::ServerQosRequest(const class FString& InSessionId)
+void AQosBeaconClient::ServerQosRequest(class FString* InSessionId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Qos.QosBeaconClient.ServerQosRequest");
 
@@ -25,6 +25,7 @@ void AQosBeaconClient::ServerQosRequest(const class FString& InSessionId)
 	params.InSessionId = InSessionId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33,11 +34,11 @@ void AQosBeaconClient::ServerQosRequest(const class FString& InSessionId)
 
 
 // Function Qos.QosBeaconClient.ClientQosResponse
-// ()
+// (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// EQosResponseType               Response                       (Parm, ZeroConstructor, IsPlainOldData)
+// EQosResponseType*              Response                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AQosBeaconClient::ClientQosResponse(EQosResponseType Response)
+void AQosBeaconClient::ClientQosResponse(EQosResponseType* Response)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Qos.QosBeaconClient.ClientQosResponse");
 
@@ -45,6 +46,7 @@ void AQosBeaconClient::ClientQosResponse(EQosResponseType Response)
 	params.Response = Response;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

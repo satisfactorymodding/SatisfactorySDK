@@ -15,15 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GasPillar_03.BP_GasPillar_03_C
-// 0x0028 (0x0360 - 0x0338)
+// 0x0018 (0x0388 - 0x0370)
 class ABP_GasPillar_03_C : public ABP_GasPillar_C
 {
 public:
-	class UParticleSystemComponent*                    GasPuff_04;                                               // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    GasPuff_03;                                               // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    GasPuff_02;                                               // 0x0348(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    DroppingGas_02;                                           // 0x0350(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        GasPillar_01;                                             // 0x0358(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0370(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*                    DroppingGas_02;                                           // 0x0378(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    GasPuff_03;                                               // 0x0380(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32,7 +30,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void ReceiveDestroyed();
+	void ExecuteUbergraph_BP_GasPillar_03(int* EntryPoint);
 };
 
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function FGWaterAudio.FGWaterAudio_C.OnCameraExitedWater
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AFGWaterVolume**         waterVolume                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                exitLocation                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -37,7 +37,7 @@ void UFGWaterAudio_C::OnCameraExitedWater(class AFGWaterVolume** waterVolume, st
 
 
 // Function FGWaterAudio.FGWaterAudio_C.OnCameraEnteredWater
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AFGWaterVolume**         waterVolume                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                enterLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.SetIsNextStop
 struct UWidget_Train_TimeTable_Rule_C_SetIsNextStop_Params
 {
-	bool                                               mIsNextStop;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              mIsNextStop;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnUnhovered
@@ -38,26 +38,26 @@ struct UWidget_Train_TimeTable_Rule_C_PlayNewNameAnim_Params
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.SetOrderButtonsVisibility
 struct UWidget_Train_TimeTable_Rule_C_SetOrderButtonsVisibility_Params
 {
-	bool                                               UpVisible;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               DownVisible;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              UpVisible;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              DownVisible;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.UpdateRule
 struct UWidget_Train_TimeTable_Rule_C_UpdateRule_Params
 {
-	class AFGTrainStationIdentifier*                   mStation;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGTrainStationIdentifier**                  mStation;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.SetIsSelected
 struct UWidget_Train_TimeTable_Rule_C_SetIsSelected_Params
 {
-	bool                                               mIsSelected;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              mIsSelected;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.SetTitle
 struct UWidget_Train_TimeTable_Rule_C_SetTitle_Params
 {
-	struct FText                                       mTitle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      mTitle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.PreConstruct
@@ -149,37 +149,37 @@ struct UWidget_Train_TimeTable_Rule_C_BndEvt__mSetCurrentStopButton_K2Node_Compo
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.ExecuteUbergraph_Widget_Train_TimeTable_Rule
 struct UWidget_Train_TimeTable_Rule_C_ExecuteUbergraph_Widget_Train_TimeTable_Rule_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnSetCurrentStopClicked__DelegateSignature
 struct UWidget_Train_TimeTable_Rule_C_OnSetCurrentStopClicked__DelegateSignature_Params
 {
-	class UWidget_Train_TimeTable_Rule_C*              RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Train_TimeTable_Rule_C**             RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnMoveDownClicked__DelegateSignature
 struct UWidget_Train_TimeTable_Rule_C_OnMoveDownClicked__DelegateSignature_Params
 {
-	class UWidget_Train_TimeTable_Rule_C*              RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Train_TimeTable_Rule_C**             RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnMoveUpClicked__DelegateSignature
 struct UWidget_Train_TimeTable_Rule_C_OnMoveUpClicked__DelegateSignature_Params
 {
-	class UWidget_Train_TimeTable_Rule_C*              RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Train_TimeTable_Rule_C**             RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnDeleted__DelegateSignature
 struct UWidget_Train_TimeTable_Rule_C_OnDeleted__DelegateSignature_Params
 {
-	class UWidget_Train_TimeTable_Rule_C*              RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Train_TimeTable_Rule_C**             RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Train_TimeTable_Rule.Widget_Train_TimeTable_Rule_C.OnClicked__DelegateSignature
 struct UWidget_Train_TimeTable_Rule_C_OnClicked__DelegateSignature_Params
 {
-	class UWidget_Train_TimeTable_Rule_C*              RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Train_TimeTable_Rule_C**             RuleWidget;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 }

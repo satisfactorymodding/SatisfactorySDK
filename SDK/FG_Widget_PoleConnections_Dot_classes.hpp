@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_PoleConnections_Dot.Widget_PoleConnections_Dot_C
-// 0x0000 (0x0208 - 0x0208)
+// 0x0000 (0x0230 - 0x0230)
 class UWidget_PoleConnections_Dot_C : public UUserWidget
 {
 public:

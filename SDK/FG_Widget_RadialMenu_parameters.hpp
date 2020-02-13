@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Update Button Angles
 struct UWidget_RadialMenu_C_Update_Button_Angles_Params
 {
-	float                                              MenuAngle;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             MenuAngle;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Set Angle
@@ -60,7 +60,7 @@ struct UWidget_RadialMenu_C_Create_Radial_Menu_Params
 // Function Widget_RadialMenu.Widget_RadialMenu_C.ExecuteUbergraph_Widget_RadialMenu
 struct UWidget_RadialMenu_C_ExecuteUbergraph_Widget_RadialMenu_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

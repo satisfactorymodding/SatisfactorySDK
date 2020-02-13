@@ -32,7 +32,7 @@ struct UWidget_MouseMoveChecker_C_StartCheckMouse_Params
 // Function Widget_MouseMoveChecker.Widget_MouseMoveChecker_C.ExecuteUbergraph_Widget_MouseMoveChecker
 struct UWidget_MouseMoveChecker_C_ExecuteUbergraph_Widget_MouseMoveChecker_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_MouseMoveChecker.Widget_MouseMoveChecker_C.OnMouseMoved__DelegateSignature

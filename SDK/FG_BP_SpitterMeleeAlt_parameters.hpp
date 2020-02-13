@@ -19,11 +19,6 @@ struct ABP_SpitterMeleeAlt_C_GetNewTarget_Params
 {
 };
 
-// Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.UserConstructionScript
-struct ABP_SpitterMeleeAlt_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.ReceiveBeginPlay
 struct ABP_SpitterMeleeAlt_C_ReceiveBeginPlay_Params
 {
@@ -38,13 +33,13 @@ struct ABP_SpitterMeleeAlt_C_ReceiveActorBeginOverlap_Params
 // Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.DestroyOnParticleDone
 struct ABP_SpitterMeleeAlt_C_DestroyOnParticleDone_Params
 {
-	class UParticleSystemComponent*                    PSystem;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent**                   PSystem;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.ExecuteUbergraph_BP_SpitterMeleeAlt
 struct ABP_SpitterMeleeAlt_C_ExecuteUbergraph_BP_SpitterMeleeAlt_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

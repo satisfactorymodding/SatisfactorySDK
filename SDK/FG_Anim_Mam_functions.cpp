@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Mam.Anim_Mam_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Mam_AnimGraphNode_TransitionResult_7B42FA4D4C5AE3B0E0A785B67992E8C9
-// ()
+// (BlueprintEvent)
 
 void UAnim_Mam_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Mam_AnimGraphNode_TransitionResult_7B42FA4D4C5AE3B0E0A785B67992E8C9()
 {
@@ -30,7 +30,7 @@ void UAnim_Mam_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Mam_AnimGraph
 
 
 // Function Anim_Mam.Anim_Mam_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Mam_AnimGraphNode_TransitionResult_8CA4CF194793432BEFBFA48EC6C1D6B4
-// ()
+// (BlueprintEvent)
 
 void UAnim_Mam_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Mam_AnimGraphNode_TransitionResult_8CA4CF194793432BEFBFA48EC6C1D6B4()
 {
@@ -47,7 +47,7 @@ void UAnim_Mam_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Mam_AnimGraph
 
 
 // Function Anim_Mam.Anim_Mam_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,7 +67,7 @@ void UAnim_Mam_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_Mam.Anim_Mam_C.BlueprintInitializeAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UAnim_Mam_C::BlueprintInitializeAnimation()
 {
@@ -84,11 +84,11 @@ void UAnim_Mam_C::BlueprintInitializeAnimation()
 
 
 // Function Anim_Mam.Anim_Mam_C.HasPowerChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Mam_C::HasPowerChanged(bool State)
+void UAnim_Mam_C::HasPowerChanged(bool* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Mam.Anim_Mam_C.HasPowerChanged");
 
@@ -104,7 +104,7 @@ void UAnim_Mam_C::HasPowerChanged(bool State)
 
 
 // Function Anim_Mam.Anim_Mam_C.AnimNotify_MamEnteredProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Mam_C::AnimNotify_MamEnteredProducing()
 {
@@ -121,7 +121,7 @@ void UAnim_Mam_C::AnimNotify_MamEnteredProducing()
 
 
 // Function Anim_Mam.Anim_Mam_C.AnimNotify_MamLeftProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Mam_C::AnimNotify_MamLeftProducing()
 {
@@ -138,7 +138,7 @@ void UAnim_Mam_C::AnimNotify_MamLeftProducing()
 
 
 // Function Anim_Mam.Anim_Mam_C.BlueprintBeginPlay
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UAnim_Mam_C::BlueprintBeginPlay()
 {
@@ -155,11 +155,11 @@ void UAnim_Mam_C::BlueprintBeginPlay()
 
 
 // Function Anim_Mam.Anim_Mam_C.ExecuteUbergraph_Anim_Mam
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Mam_C::ExecuteUbergraph_Anim_Mam(int EntryPoint)
+void UAnim_Mam_C::ExecuteUbergraph_Anim_Mam(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Mam.Anim_Mam_C.ExecuteUbergraph_Anim_Mam");
 

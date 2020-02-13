@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PortableMiner.BP_PortableMiner_C
-// 0x0030 (0x0398 - 0x0368)
+// 0x0030 (0x03A0 - 0x0370)
 class ABP_PortableMiner_C : public AFGPortableMiner
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0368(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                               Box;                                                      // 0x0370(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USkeletalMeshComponent*                      Portable_Miner_01;                                        // 0x0378(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0380(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAkAudioEvent*                               mAmbientLoop;                                             // 0x0388(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAkAudioEvent*                               mAmbientStop;                                             // 0x0390(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0370(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                               Box;                                                      // 0x0378(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      Portable_Miner_01;                                        // 0x0380(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0388(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAkAudioEvent*                               mAmbientLoop;                                             // 0x0390(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAkAudioEvent*                               mAmbientStop;                                             // 0x0398(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33,12 +33,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void ReceiveDestroyed();
-	void StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State);
 	void StopIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_PortableMiner(int EntryPoint);
+	void StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State);
+	void ReceiveDestroyed();
+	void ExecuteUbergraph_BP_PortableMiner(int* EntryPoint);
 };
 
 

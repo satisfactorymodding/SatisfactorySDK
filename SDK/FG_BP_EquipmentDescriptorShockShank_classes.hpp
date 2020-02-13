@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EquipmentDescriptorShockShank.BP_EquipmentDescriptorShockShank_C
-// 0x0000 (0x0130 - 0x0130)
+// 0x0000 (0x0150 - 0x0150)
 class UBP_EquipmentDescriptorShockShank_C : public UFGEquipmentDescriptor
 {
 public:

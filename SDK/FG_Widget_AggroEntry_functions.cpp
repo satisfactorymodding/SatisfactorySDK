@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_AggroEntry.Widget_AggroEntry_C.GetSortedAggroEntries
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FAggroEntry>     allEntries                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FAggroEntry>     sortedEntries                  (Parm, OutParm, ZeroConstructor)
@@ -38,7 +38,7 @@ void UWidget_AggroEntry_C::GetSortedAggroEntries(TArray<struct FAggroEntry>* all
 
 
 // Function Widget_AggroEntry.Widget_AggroEntry_C.UpdateAggroList
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_AggroEntry_C::UpdateAggroList()
 {
@@ -55,7 +55,7 @@ void UWidget_AggroEntry_C::UpdateAggroList()
 
 
 // Function Widget_AggroEntry.Widget_AggroEntry_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_AggroEntry_C::Construct()
 {
@@ -72,7 +72,7 @@ void UWidget_AggroEntry_C::Construct()
 
 
 // Function Widget_AggroEntry.Widget_AggroEntry_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -94,11 +94,11 @@ void UWidget_AggroEntry_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime
 
 
 // Function Widget_AggroEntry.Widget_AggroEntry_C.ExecuteUbergraph_Widget_AggroEntry
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_AggroEntry_C::ExecuteUbergraph_Widget_AggroEntry(int EntryPoint)
+void UWidget_AggroEntry_C::ExecuteUbergraph_Widget_AggroEntry(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_AggroEntry.Widget_AggroEntry_C.ExecuteUbergraph_Widget_AggroEntry");
 

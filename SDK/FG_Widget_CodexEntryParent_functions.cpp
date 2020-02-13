@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CodexEntryParent.Widget_CodexEntryParent_C.GetStats
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_CodexEntryParent_C::GetStats()
 {
@@ -30,7 +30,7 @@ void UWidget_CodexEntryParent_C::GetStats()
 
 
 // Function Widget_CodexEntryParent.Widget_CodexEntryParent_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_CodexEntryParent_C::Construct()
 {
@@ -47,11 +47,11 @@ void UWidget_CodexEntryParent_C::Construct()
 
 
 // Function Widget_CodexEntryParent.Widget_CodexEntryParent_C.ExecuteUbergraph_Widget_CodexEntryParent
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CodexEntryParent_C::ExecuteUbergraph_Widget_CodexEntryParent(int EntryPoint)
+void UWidget_CodexEntryParent_C::ExecuteUbergraph_Widget_CodexEntryParent(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CodexEntryParent.Widget_CodexEntryParent_C.ExecuteUbergraph_Widget_CodexEntryParent");
 

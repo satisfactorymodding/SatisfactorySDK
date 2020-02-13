@@ -38,7 +38,7 @@ struct UWidget_TooltipRecipe_C_PreConstruct_Params
 // Function Widget_TooltipRecipe.Widget_TooltipRecipe_C.ExecuteUbergraph_Widget_TooltipRecipe
 struct UWidget_TooltipRecipe_C_ExecuteUbergraph_Widget_TooltipRecipe_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

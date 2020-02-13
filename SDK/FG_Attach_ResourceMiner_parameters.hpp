@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_ResourceMiner.Attach_ResourceMiner_C.UserConstructionScript
-struct AAttach_ResourceMiner_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

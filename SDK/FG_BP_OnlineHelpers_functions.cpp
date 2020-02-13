@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.InsertionAddButton
-// ()
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*            NewParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPanelWidget**           NewParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_OnlineHelpers_C::InsertionAddButton(class UPanelWidget* NewParam, class UObject* __WorldContext)
+void UBP_OnlineHelpers_C::STATIC_InsertionAddButton(class UPanelWidget** NewParam, class UObject** __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.InsertionAddButton");
 
@@ -35,14 +35,14 @@ void UBP_OnlineHelpers_C::InsertionAddButton(class UPanelWidget* NewParam, class
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetSessionFromFriendNetId
-// ()
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUniqueNetIdRepl        friendNetId                    (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUniqueNetIdRepl*       friendNetId                    (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FBlueprintSessionResult session                        (Parm, OutParm)
 
-void UBP_OnlineHelpers_C::GetSessionFromFriendNetId(class UObject* WorldContext, const struct FUniqueNetIdRepl& friendNetId, class UObject* __WorldContext, struct FBlueprintSessionResult* session)
+void UBP_OnlineHelpers_C::STATIC_GetSessionFromFriendNetId(class UObject** WorldContext, struct FUniqueNetIdRepl* friendNetId, class UObject** __WorldContext, struct FBlueprintSessionResult* session)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetSessionFromFriendNetId");
 
@@ -63,14 +63,14 @@ void UBP_OnlineHelpers_C::GetSessionFromFriendNetId(class UObject* WorldContext,
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.IsHost
-// ()
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class APlayerState*            PlayerState                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       OwningPlayer                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerState**           PlayerState                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController**      OwningPlayer                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isOurself                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_OnlineHelpers_C::IsHost(class APlayerState* PlayerState, class APlayerController* OwningPlayer, class UObject* __WorldContext, bool* isOurself)
+void UBP_OnlineHelpers_C::STATIC_IsHost(class APlayerState** PlayerState, class APlayerController** OwningPlayer, class UObject** __WorldContext, bool* isOurself)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.IsHost");
 
@@ -91,14 +91,14 @@ void UBP_OnlineHelpers_C::IsHost(class APlayerState* PlayerState, class APlayerC
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.CanJoinInvite
-// ()
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FPendingInvite          invite                         (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPendingInvite*         invite                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ECanJoinInviteResult> Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_OnlineHelpers_C::CanJoinInvite(class UObject* WorldContext, const struct FPendingInvite& invite, class UObject* __WorldContext, TEnumAsByte<ECanJoinInviteResult>* Result)
+void UBP_OnlineHelpers_C::STATIC_CanJoinInvite(class UObject** WorldContext, struct FPendingInvite* invite, class UObject** __WorldContext, TEnumAsByte<ECanJoinInviteResult>* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.CanJoinInvite");
 
@@ -119,14 +119,14 @@ void UBP_OnlineHelpers_C::CanJoinInvite(class UObject* WorldContext, const struc
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.IsInThisGame
-// ()
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FFGOnlineFriend         onlineFriend                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UObject*                 WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           inThisGame                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_OnlineHelpers_C::IsInThisGame(class UObject* WorldContext, class UObject* __WorldContext, struct FFGOnlineFriend* onlineFriend, bool* inThisGame)
+void UBP_OnlineHelpers_C::STATIC_IsInThisGame(class UObject** WorldContext, class UObject** __WorldContext, struct FFGOnlineFriend* onlineFriend, bool* inThisGame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.IsInThisGame");
 
@@ -148,14 +148,14 @@ void UBP_OnlineHelpers_C::IsInThisGame(class UObject* WorldContext, class UObjec
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.CanSendInvite
-// ()
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FFGOnlineFriend         _friend                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FFGOnlineFriend*        _friend                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ECantInviteResult> canSend                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_OnlineHelpers_C::CanSendInvite(class UObject* WorldContext, const struct FFGOnlineFriend& _friend, class UObject* __WorldContext, TEnumAsByte<ECantInviteResult>* canSend)
+void UBP_OnlineHelpers_C::STATIC_CanSendInvite(class UObject** WorldContext, struct FFGOnlineFriend* _friend, class UObject** __WorldContext, TEnumAsByte<ECantInviteResult>* canSend)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.CanSendInvite");
 
@@ -176,14 +176,14 @@ void UBP_OnlineHelpers_C::CanSendInvite(class UObject* WorldContext, const struc
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.IsFriendInOnlineSession
-// ()
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FFGOnlineFriend         frriend                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           inSession                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_OnlineHelpers_C::IsFriendInOnlineSession(class UObject* WorldContext, class UObject* __WorldContext, struct FFGOnlineFriend* frriend, bool* inSession)
+void UBP_OnlineHelpers_C::STATIC_IsFriendInOnlineSession(class UObject** WorldContext, class UObject** __WorldContext, struct FFGOnlineFriend* frriend, bool* inSession)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.IsFriendInOnlineSession");
 
@@ -205,13 +205,13 @@ void UBP_OnlineHelpers_C::IsFriendInOnlineSession(class UObject* WorldContext, c
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetCompactPresence
-// ()
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FOnlinePresence         presence                       (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FOnlinePresence*        presence                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FFCompactPresence       compactPresence                (Parm, OutParm, ZeroConstructor)
 
-void UBP_OnlineHelpers_C::GetCompactPresence(const struct FOnlinePresence& presence, class UObject* __WorldContext, struct FFCompactPresence* compactPresence)
+void UBP_OnlineHelpers_C::STATIC_GetCompactPresence(struct FOnlinePresence* presence, class UObject** __WorldContext, struct FFCompactPresence* compactPresence)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetCompactPresence");
 
@@ -231,14 +231,14 @@ void UBP_OnlineHelpers_C::GetCompactPresence(const struct FOnlinePresence& prese
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetFriendSession
-// ()
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FFGOnlineFriend         _friend                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UObject*                 WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FFGOnlineFriend*        _friend                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject**                WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FBlueprintSessionResult session                        (Parm, OutParm)
 
-void UBP_OnlineHelpers_C::GetFriendSession(const struct FFGOnlineFriend& _friend, class UObject* WorldContext, class UObject* __WorldContext, struct FBlueprintSessionResult* session)
+void UBP_OnlineHelpers_C::STATIC_GetFriendSession(struct FFGOnlineFriend* _friend, class UObject** WorldContext, class UObject** __WorldContext, struct FBlueprintSessionResult* session)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetFriendSession");
 
@@ -259,14 +259,14 @@ void UBP_OnlineHelpers_C::GetFriendSession(const struct FFGOnlineFriend& _friend
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetInvitePresence
-// ()
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FPendingInvite          invite                         (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPendingInvite*         invite                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FOnlinePresence         presence                       (Parm, OutParm)
 
-void UBP_OnlineHelpers_C::GetInvitePresence(class UObject* WorldContext, const struct FPendingInvite& invite, class UObject* __WorldContext, struct FOnlinePresence* presence)
+void UBP_OnlineHelpers_C::STATIC_GetInvitePresence(class UObject** WorldContext, struct FPendingInvite* invite, class UObject** __WorldContext, struct FOnlinePresence* presence)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetInvitePresence");
 
@@ -287,14 +287,14 @@ void UBP_OnlineHelpers_C::GetInvitePresence(class UObject* WorldContext, const s
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetFriendPresence
-// ()
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FFGOnlineFriend         onlineFriend                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UObject*                 WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FFGOnlineFriend*        onlineFriend                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UObject**                WorldContext                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FOnlinePresence         ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FOnlinePresence UBP_OnlineHelpers_C::GetFriendPresence(const struct FFGOnlineFriend& onlineFriend, class UObject* WorldContext, class UObject* __WorldContext)
+struct FOnlinePresence UBP_OnlineHelpers_C::STATIC_GetFriendPresence(struct FFGOnlineFriend* onlineFriend, class UObject** WorldContext, class UObject** __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.GetFriendPresence");
 
@@ -314,13 +314,13 @@ struct FOnlinePresence UBP_OnlineHelpers_C::GetFriendPresence(const struct FFGOn
 
 
 // Function BP_OnlineHelpers.BP_OnlineHelpers_C.SessionVisibilityStringToEnum
-// ()
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FString                  String                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class FString*                 String                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class UObject**                __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ESessionVisibility> Enum                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_OnlineHelpers_C::SessionVisibilityStringToEnum(const class FString& String, class UObject* __WorldContext, TEnumAsByte<ESessionVisibility>* Enum)
+void UBP_OnlineHelpers_C::STATIC_SessionVisibilityStringToEnum(class FString* String, class UObject** __WorldContext, TEnumAsByte<ESessionVisibility>* Enum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OnlineHelpers.BP_OnlineHelpers_C.SessionVisibilityStringToEnum");
 

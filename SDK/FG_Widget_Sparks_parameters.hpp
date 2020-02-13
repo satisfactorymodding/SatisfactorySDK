@@ -30,14 +30,14 @@ struct UWidget_Sparks_C_PreConstruct_Params
 // Function Widget_Sparks.Widget_Sparks_C.ExecuteUbergraph_Widget_Sparks
 struct UWidget_Sparks_C_ExecuteUbergraph_Widget_Sparks_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Sparks.Widget_Sparks_C.OnParticleBounce__DelegateSignature
 struct UWidget_Sparks_C_OnParticleBounce__DelegateSignature_Params
 {
-	struct FVector2D                                   Position;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   Scale;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D*                                  Position;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D*                                  Scale;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

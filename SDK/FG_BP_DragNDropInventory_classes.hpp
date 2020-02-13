@@ -31,7 +31,7 @@ public:
 	void Dragged(struct FPointerEvent* PointerEvent);
 	void DragCancelled(struct FPointerEvent* PointerEvent);
 	void Drop(struct FPointerEvent* PointerEvent);
-	void ExecuteUbergraph_BP_DragNDropInventory(int EntryPoint);
+	void ExecuteUbergraph_BP_DragNDropInventory(int* EntryPoint);
 };
 
 

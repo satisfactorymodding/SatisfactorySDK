@@ -20,11 +20,6 @@ struct UWidget_PlayerInteraction_C_GetInteractionText_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.Construct
-struct UWidget_PlayerInteraction_C_Construct_Params
-{
-};
-
 // Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.Tick
 struct UWidget_PlayerInteraction_C_Tick_Params
 {
@@ -35,7 +30,7 @@ struct UWidget_PlayerInteraction_C_Tick_Params
 // Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.ExecuteUbergraph_Widget_PlayerInteraction
 struct UWidget_PlayerInteraction_C_ExecuteUbergraph_Widget_PlayerInteraction_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

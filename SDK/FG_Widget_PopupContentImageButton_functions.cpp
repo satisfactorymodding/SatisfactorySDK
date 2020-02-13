@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.CacheDataFromReward
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PopupContentImageButton_C::CacheDataFromReward()
 {
@@ -30,12 +30,12 @@ void UWidget_PopupContentImageButton_C::CacheDataFromReward()
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.GetIsSmeltable
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UClass*                  inClass                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 inClass                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSmeltable                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PopupContentImageButton_C::GetIsSmeltable(class UClass* inClass, bool* IsSmeltable)
+void UWidget_PopupContentImageButton_C::GetIsSmeltable(class UClass** inClass, bool* IsSmeltable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.GetIsSmeltable");
 
@@ -54,7 +54,7 @@ void UWidget_PopupContentImageButton_C::GetIsSmeltable(class UClass* inClass, bo
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.ClearSelectionList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PopupContentImageButton_C::ClearSelectionList()
 {
@@ -71,7 +71,7 @@ void UWidget_PopupContentImageButton_C::ClearSelectionList()
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.GetIndexInList
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -93,7 +93,7 @@ void UWidget_PopupContentImageButton_C::GetIndexInList(int* Index)
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.GetTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -114,7 +114,7 @@ struct FSlateColor UWidget_PopupContentImageButton_C::GetTextColor()
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.GetBackgroundColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -135,7 +135,7 @@ struct FLinearColor UWidget_PopupContentImageButton_C::GetBackgroundColor()
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -155,7 +155,7 @@ void UWidget_PopupContentImageButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PopupContentImageButton_C::Construct()
 {
@@ -172,12 +172,12 @@ void UWidget_PopupContentImageButton_C::Construct()
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.UpdateButton
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FSlateBrush             ImageBrush                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSlateBrush*            ImageBrush                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_PopupContentImageButton_C::UpdateButton(const struct FText& Title, const struct FSlateBrush& ImageBrush)
+void UWidget_PopupContentImageButton_C::UpdateButton(struct FText* Title, struct FSlateBrush* ImageBrush)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.UpdateButton");
 
@@ -194,7 +194,7 @@ void UWidget_PopupContentImageButton_C::UpdateButton(const struct FText& Title, 
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.BndEvt__mPopupContentButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_PopupContentImageButton_C::BndEvt__mPopupContentButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -211,7 +211,7 @@ void UWidget_PopupContentImageButton_C::BndEvt__mPopupContentButton_K2Node_Compo
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.BndEvt__mPopupContentButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_PopupContentImageButton_C::BndEvt__mPopupContentButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -228,7 +228,7 @@ void UWidget_PopupContentImageButton_C::BndEvt__mPopupContentButton_K2Node_Compo
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.BndEvt__mPopupContentButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_PopupContentImageButton_C::BndEvt__mPopupContentButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -245,11 +245,11 @@ void UWidget_PopupContentImageButton_C::BndEvt__mPopupContentButton_K2Node_Compo
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.ExecuteUbergraph_Widget_PopupContentImageButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PopupContentImageButton_C::ExecuteUbergraph_Widget_PopupContentImageButton(int EntryPoint)
+void UWidget_PopupContentImageButton_C::ExecuteUbergraph_Widget_PopupContentImageButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.ExecuteUbergraph_Widget_PopupContentImageButton");
 
@@ -265,11 +265,11 @@ void UWidget_PopupContentImageButton_C::ExecuteUbergraph_Widget_PopupContentImag
 
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.NotifyPopupContentIndexSelect__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            ChildIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ChildIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PopupContentImageButton_C::NotifyPopupContentIndexSelect__DelegateSignature(int ChildIndex)
+void UWidget_PopupContentImageButton_C::NotifyPopupContentIndexSelect__DelegateSignature(int* ChildIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.NotifyPopupContentIndexSelect__DelegateSignature");
 

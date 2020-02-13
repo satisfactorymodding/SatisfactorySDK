@@ -29,7 +29,7 @@ struct UWidget_HUDBox_Consumable_C_Tick_Params
 // Function Widget_HUDBox_Consumable.Widget_HUDBox_Consumable_C.ExecuteUbergraph_Widget_HUDBox_Consumable
 struct UWidget_HUDBox_Consumable_C_ExecuteUbergraph_Widget_HUDBox_Consumable_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

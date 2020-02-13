@@ -22,7 +22,7 @@ struct UWidget_FicsitLogoSplash_C_ShowLogo_Params
 // Function Widget_FicsitLogoSplash.Widget_FicsitLogoSplash_C.ExecuteUbergraph_Widget_FicsitLogoSplash
 struct UWidget_FicsitLogoSplash_C_ExecuteUbergraph_Widget_FicsitLogoSplash_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

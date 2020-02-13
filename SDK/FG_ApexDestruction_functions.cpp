@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ApexDestruction.DestructibleComponent.SetDestructibleMesh
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UDestructibleMesh*       NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UDestructibleMesh**      NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh* NewMesh)
+void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh** NewMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ApexDestruction.DestructibleComponent.SetDestructibleMesh");
 
@@ -25,6 +25,7 @@ void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh* NewMes
 	params.NewMesh = NewMesh;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33,7 +34,7 @@ void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh* NewMes
 
 
 // Function ApexDestruction.DestructibleComponent.GetDestructibleMesh
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDestructibleMesh*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -44,6 +45,7 @@ class UDestructibleMesh* UDestructibleComponent::GetDestructibleMesh()
 	UDestructibleComponent_GetDestructibleMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,15 +56,15 @@ class UDestructibleMesh* UDestructibleComponent::GetDestructibleMesh()
 
 
 // Function ApexDestruction.DestructibleComponent.ApplyRadiusDamage
-// ()
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// float                          BaseDamage                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HurtOrigin                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          DamageRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ImpulseStrength                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFullDamage                    (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         BaseDamage                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                HurtOrigin                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float*                         DamageRadius                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         ImpulseStrength                (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bFullDamage                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FVector& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage)
+void UDestructibleComponent::ApplyRadiusDamage(float* BaseDamage, struct FVector* HurtOrigin, float* DamageRadius, float* ImpulseStrength, bool* bFullDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ApexDestruction.DestructibleComponent.ApplyRadiusDamage");
 
@@ -74,6 +76,7 @@ void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FV
 	params.bFullDamage = bFullDamage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,14 +85,14 @@ void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FV
 
 
 // Function ApexDestruction.DestructibleComponent.ApplyDamage
-// ()
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// float                          damageAmount                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HitLocation                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 ImpulseDir                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ImpulseStrength                (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         damageAmount                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                HitLocation                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                ImpulseDir                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float*                         ImpulseStrength                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDestructibleComponent::ApplyDamage(float damageAmount, const struct FVector& HitLocation, const struct FVector& ImpulseDir, float ImpulseStrength)
+void UDestructibleComponent::ApplyDamage(float* damageAmount, struct FVector* HitLocation, struct FVector* ImpulseDir, float* ImpulseStrength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ApexDestruction.DestructibleComponent.ApplyDamage");
 
@@ -100,6 +103,7 @@ void UDestructibleComponent::ApplyDamage(float damageAmount, const struct FVecto
 	params.ImpulseStrength = ImpulseStrength;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

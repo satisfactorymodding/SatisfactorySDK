@@ -33,7 +33,7 @@ struct UBP_MaterialEffect_Dismantle_C_PreStarted_Params
 // Function BP_MaterialEffect_Dismantle.BP_MaterialEffect_Dismantle_C.ExecuteUbergraph_BP_MaterialEffect_Dismantle
 struct UBP_MaterialEffect_Dismantle_C_ExecuteUbergraph_BP_MaterialEffect_Dismantle_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

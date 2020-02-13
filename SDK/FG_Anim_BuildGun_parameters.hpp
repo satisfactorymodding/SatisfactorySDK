@@ -83,7 +83,7 @@ struct UAnim_BuildGun_C_BlueprintUpdateAnimation_Params
 // Function Anim_BuildGun.Anim_BuildGun_C.ExecuteUbergraph_Anim_BuildGun
 struct UAnim_BuildGun_C_ExecuteUbergraph_Anim_BuildGun_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

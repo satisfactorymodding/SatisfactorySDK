@@ -31,7 +31,7 @@ public:
 
 
 	void ReceiveExecute(class AActor** OwnerActor);
-	void ExecuteUbergraph_BTT_UpdateTarget(int EntryPoint);
+	void ExecuteUbergraph_BTT_UpdateTarget(int* EntryPoint);
 };
 
 

@@ -14,10 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorCompassViewDistance
+struct ABP_WheeledVehicle_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorCompassViewDistance
+struct ABP_WheeledVehicle_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorRepresentationText
 struct ABP_WheeledVehicle_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -105,6 +118,23 @@ struct ABP_WheeledVehicle_C_IsActorStatic_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateOutline
+struct ABP_WheeledVehicle_C_UpdateOutline_Params
+{
+	bool*                                              aimingAtWorkbench;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateTireSound
+struct ABP_WheeledVehicle_C_UpdateTireSound_Params
+{
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.BurnOutSound
+struct ABP_WheeledVehicle_C_BurnOutSound_Params
+{
+	float*                                             ForwardInputInput;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetDriftForceOffset
 struct ABP_WheeledVehicle_C_GetDriftForceOffset_Params
 {
@@ -125,7 +155,7 @@ struct ABP_WheeledVehicle_C_TurnOverVehicle_Params
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.AdjustThrottle
 struct ABP_WheeledVehicle_C_AdjustThrottle_Params
 {
-	float                                              Throttle;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Throttle;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              adjustedThrottle;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -168,7 +198,7 @@ struct ABP_WheeledVehicle_C_CanMove_Params
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateEngineLoadSound
 struct ABP_WheeledVehicle_C_UpdateEngineLoadSound_Params
 {
-	float                                              dt;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             dt;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateAccelerationSound
@@ -219,22 +249,16 @@ struct ABP_WheeledVehicle_C_GetLookAtDecription_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseVehicleUI
-struct ABP_WheeledVehicle_C_CloseVehicleUI_Params
-{
-	class AFGCharacterPlayer*                          inCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenVehicleUI
 struct ABP_WheeledVehicle_C_OpenVehicleUI_Params
 {
-	class AFGCharacterPlayer*                          inCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGCharacterPlayer**                         inCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.PonderOpeningTrunk
 struct ABP_WheeledVehicle_C_PonderOpeningTrunk_Params
 {
-	class AFGCharacterPlayer*                          inCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGCharacterPlayer**                         inCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateUseState
@@ -254,7 +278,7 @@ struct ABP_WheeledVehicle_C_OnRep_mIsFollowingPath_Params
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateSpeedLimit
 struct ABP_WheeledVehicle_C_UpdateSpeedLimit_Params
 {
-	class ABP_VehicleTargetPoint_C*                    TargetPoint;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class ABP_VehicleTargetPoint_C**                   TargetPoint;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.DoReverseToFreedom
@@ -285,7 +309,7 @@ struct ABP_WheeledVehicle_C_MoveToLocation_Params
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickRecording
 struct ABP_WheeledVehicle_C_TickRecording_Params
 {
-	float                                              dt;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             dt;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateVehicleMovement
@@ -345,51 +369,63 @@ struct ABP_WheeledVehicle_C_UpdateSteering_Params
 {
 };
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.UserConstructionScript
-struct ABP_WheeledVehicle_C_UserConstructionScript_Params
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Use_K2Node_InputActionEvent_7
+struct ABP_WheeledVehicle_C_InpActEvt_Use_K2Node_InputActionEvent_7_Params
 {
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Reload_K2Node_InputActionEvent_7
-struct ABP_WheeledVehicle_C_InpActEvt_Reload_K2Node_InputActionEvent_7_Params
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Reload_K2Node_InputActionEvent_6
+struct ABP_WheeledVehicle_C_InpActEvt_Reload_K2Node_InputActionEvent_6_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Use_K2Node_InputActionEvent_6
-struct ABP_WheeledVehicle_C_InpActEvt_Use_K2Node_InputActionEvent_6_Params
-{
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_5
 struct ABP_WheeledVehicle_C_InpActEvt_Jump_Drift_K2Node_InputActionEvent_5_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_4
 struct ABP_WheeledVehicle_C_InpActEvt_Jump_Drift_K2Node_InputActionEvent_4_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_3
 struct ABP_WheeledVehicle_C_InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_3_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_2
 struct ABP_WheeledVehicle_C_InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_2_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_1
 struct ABP_WheeledVehicle_C_InpActEvt_PrimaryFire_K2Node_InputActionEvent_1_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveBeginPlay
+struct ABP_WheeledVehicle_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveTick
+struct ABP_WheeledVehicle_C_ReceiveTick_Params
+{
+	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickVehicleSound
+struct ABP_WheeledVehicle_C_TickVehicleSound_Params
+{
+	float*                                             dt;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerToggleRecording
@@ -433,24 +469,8 @@ struct ABP_WheeledVehicle_C_OnUse_Params
 	struct FUseState*                                  State;                                                    // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerSetTrunkUser
-struct ABP_WheeledVehicle_C_ServerSetTrunkUser_Params
-{
-	class AFGCharacterPlayer*                          inCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenTrunk
-struct ABP_WheeledVehicle_C_OpenTrunk_Params
-{
-};
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.Multicast_OpenTrunk
 struct ABP_WheeledVehicle_C_Multicast_OpenTrunk_Params
-{
-};
-
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseTrunk
-struct ABP_WheeledVehicle_C_CloseTrunk_Params
 {
 };
 
@@ -480,25 +500,8 @@ struct ABP_WheeledVehicle_C_StopAccelerating_Params
 {
 };
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickVehicleSound
-struct ABP_WheeledVehicle_C_TickVehicleSound_Params
-{
-	float                                              dt;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveTick
-struct ABP_WheeledVehicle_C_ReceiveTick_Params
-{
-	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateCamera
 struct ABP_WheeledVehicle_C_UpdateCamera_Params
-{
-};
-
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveBeginPlay
-struct ABP_WheeledVehicle_C_ReceiveBeginPlay_Params
 {
 };
 
@@ -511,7 +514,7 @@ struct ABP_WheeledVehicle_C_WasDocked_Params
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerSetMenuOpen
 struct ABP_WheeledVehicle_C_ServerSetMenuOpen_Params
 {
-	bool                                               menuOpen;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              menuOpen;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerClearPathRecording
@@ -564,24 +567,16 @@ struct ABP_WheeledVehicle_C_ReceiveOnDriverLeave_Params
 {
 };
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.PlayFoliageDestroyedEffect
-struct ABP_WheeledVehicle_C_PlayFoliageDestroyedEffect_Params
-{
-	class UParticleSystem**                            destroyEffect;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent**                              destroyAudioEvent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector*                                    Location;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2
 struct ABP_WheeledVehicle_C_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2_Params
 {
-	float                                              AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3
 struct ABP_WheeledVehicle_C_InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3_Params
 {
-	float                                              AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.Server_Honk
@@ -594,10 +589,36 @@ struct ABP_WheeledVehicle_C_Multicast_Honk_Params
 {
 };
 
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.Client_PlayFoliageDestroyedEffect
+struct ABP_WheeledVehicle_C_Client_PlayFoliageDestroyedEffect_Params
+{
+	class UParticleSystem**                            destroyEffect;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent**                              destroyAudioEvent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector*                                    Location;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenVehicleTrunk
+struct ABP_WheeledVehicle_C_OpenVehicleTrunk_Params
+{
+	class AFGCharacterPlayer**                         Player;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseVehicleTrunk
+struct ABP_WheeledVehicle_C_CloseVehicleTrunk_Params
+{
+	class AFGCharacterPlayer**                         Player;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorRepresentationColor
+struct ABP_WheeledVehicle_C_SetActorRepresentationColor_Params
+{
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ExecuteUbergraph_BP_WheeledVehicle
 struct ABP_WheeledVehicle_C_ExecuteUbergraph_BP_WheeledVehicle_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.OnStartRecording__DelegateSignature

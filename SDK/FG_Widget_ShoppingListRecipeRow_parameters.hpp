@@ -87,7 +87,7 @@ struct UWidget_ShoppingListRecipeRow_C_BndEvt__mButtonRemove_K2Node_ComponentBou
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.ExecuteUbergraph_Widget_ShoppingListRecipeRow
 struct UWidget_ShoppingListRecipeRow_C_ExecuteUbergraph_Widget_ShoppingListRecipeRow_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

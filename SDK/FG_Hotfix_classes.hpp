@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Hotfix.OnlineHotfixManager
-// 0x0208 (0x0230 - 0x0028)
+// 0x01F8 (0x0220 - 0x0028)
 class UOnlineHotfixManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1C8];                                     // 0x0028(0x01C8) MISSED OFFSET
-	class FString                                      OSSName;                                                  // 0x01F0(0x0010) (ZeroConstructor, Config)
-	class FString                                      HotfixManagerClassName;                                   // 0x0200(0x0010) (ZeroConstructor, Config)
-	class FString                                      DebugPrefix;                                              // 0x0210(0x0010) (ZeroConstructor, Config)
-	TArray<class UObject*>                             AssetsHotfixedFromIniFiles;                               // 0x0220(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData00[0x1B8];                                     // 0x0028(0x01B8) MISSED OFFSET
+	class FString                                      OssName;                                                  // 0x01E0(0x0010) (ZeroConstructor, Config)
+	class FString                                      HotfixManagerClassName;                                   // 0x01F0(0x0010) (ZeroConstructor, Config)
+	class FString                                      DebugPrefix;                                              // 0x0200(0x0010) (ZeroConstructor, Config)
+	TArray<class UObject*>                             AssetsHotfixedFromIniFiles;                               // 0x0210(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{

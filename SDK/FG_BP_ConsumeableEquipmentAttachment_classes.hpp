@@ -15,13 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C
-// 0x0018 (0x0378 - 0x0360)
+// 0x0010 (0x0370 - 0x0360)
 class ABP_ConsumeableEquipmentAttachment_C : public AFGEquipmentAttachment
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0360(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0368(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0370(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,11 +30,10 @@ public:
 
 
 	void GetHandsItem(class UClass** Item);
-	void UserConstructionScript();
 	void ReceiveTick(float* DeltaSeconds);
 	void PlayUseEffect(struct FVector* UseLocation);
 	void OnAttach();
-	void ExecuteUbergraph_BP_ConsumeableEquipmentAttachment(int EntryPoint);
+	void ExecuteUbergraph_BP_ConsumeableEquipmentAttachment(int* EntryPoint);
 };
 
 

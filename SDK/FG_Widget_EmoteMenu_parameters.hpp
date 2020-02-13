@@ -34,13 +34,13 @@ struct UWidget_EmoteMenu_C_Tick_Params
 // Function Widget_EmoteMenu.Widget_EmoteMenu_C.ExecuteUbergraph_Widget_EmoteMenu
 struct UWidget_EmoteMenu_C_ExecuteUbergraph_Widget_EmoteMenu_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_EmoteMenu.Widget_EmoteMenu_C.ShowEmote__DelegateSignature
 struct UWidget_EmoteMenu_C_ShowEmote__DelegateSignature_Params
 {
-	int                                                EmoteIndex;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EmoteIndex;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

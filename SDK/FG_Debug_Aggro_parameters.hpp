@@ -22,7 +22,7 @@ struct UDebug_Aggro_C_Construct_Params
 // Function Debug_Aggro.Debug_Aggro_C.ExecuteUbergraph_Debug_Aggro
 struct UDebug_Aggro_C_ExecuteUbergraph_Debug_Aggro_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

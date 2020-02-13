@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_StunSpear.Equip_StunSpear_C.UserConstructionScript
-// ()
-
-void AEquip_StunSpear_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_StunSpear.Equip_StunSpear_C.UserConstructionScript");
-
-	AEquip_StunSpear_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_StunSpear.Equip_StunSpear_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +33,7 @@ void AEquip_StunSpear_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Equip_StunSpear.Equip_StunSpear_C.SwordAttack
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AEquip_StunSpear_C::SwordAttack()
 {
@@ -67,7 +50,7 @@ void AEquip_StunSpear_C::SwordAttack()
 
 
 // Function Equip_StunSpear.Equip_StunSpear_C.PlayStunEffects
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_StunSpear_C::PlayStunEffects()
 {
@@ -84,16 +67,16 @@ void AEquip_StunSpear_C::PlayStunEffects()
 
 
 // Function Equip_StunSpear.Equip_StunSpear_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent**    OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor**                 OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent**    OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult*             SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void AEquip_StunSpear_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void AEquip_StunSpear_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent** OverlappedComponent, class AActor** OtherActor, class UPrimitiveComponent** OtherComp, int* OtherBodyIndex, bool* bFromSweep, struct FHitResult* SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_StunSpear.Equip_StunSpear_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -114,7 +97,7 @@ void AEquip_StunSpear_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentB
 
 
 // Function Equip_StunSpear.Equip_StunSpear_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_StunSpear_C::WasUnEquipped()
 {
@@ -131,7 +114,7 @@ void AEquip_StunSpear_C::WasUnEquipped()
 
 
 // Function Equip_StunSpear.Equip_StunSpear_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_StunSpear_C::WasEquipped()
 {
@@ -148,7 +131,7 @@ void AEquip_StunSpear_C::WasEquipped()
 
 
 // Function Equip_StunSpear.Equip_StunSpear_C.OnHitTarget
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_StunSpear_C::OnHitTarget()
 {
@@ -165,11 +148,11 @@ void AEquip_StunSpear_C::OnHitTarget()
 
 
 // Function Equip_StunSpear.Equip_StunSpear_C.ExecuteUbergraph_Equip_StunSpear
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_StunSpear_C::ExecuteUbergraph_Equip_StunSpear(int EntryPoint)
+void AEquip_StunSpear_C::ExecuteUbergraph_Equip_StunSpear(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_StunSpear.Equip_StunSpear_C.ExecuteUbergraph_Equip_StunSpear");
 

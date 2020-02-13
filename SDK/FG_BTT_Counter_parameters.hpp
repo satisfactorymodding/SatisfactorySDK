@@ -23,7 +23,7 @@ struct UBTT_Counter_C_ReceiveExecute_Params
 // Function BTT_Counter.BTT_Counter_C.ExecuteUbergraph_BTT_Counter
 struct UBTT_Counter_C_ExecuteUbergraph_BTT_Counter_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

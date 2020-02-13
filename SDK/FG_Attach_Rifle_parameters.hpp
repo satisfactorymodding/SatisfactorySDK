@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_Rifle.Attach_Rifle_C.UserConstructionScript
-struct AAttach_Rifle_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_Rifle.Attach_Rifle_C.ClientPlayReloadEffect
 struct AAttach_Rifle_C_ClientPlayReloadEffect_Params
 {
@@ -38,7 +33,7 @@ struct AAttach_Rifle_C_PlayFireEffect_Params
 // Function Attach_Rifle.Attach_Rifle_C.ExecuteUbergraph_Attach_Rifle
 struct AAttach_Rifle_C_ExecuteUbergraph_Attach_Rifle_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

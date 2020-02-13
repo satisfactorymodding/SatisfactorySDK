@@ -23,7 +23,7 @@ struct UWidget_SpaceElevator_TierInfo_C_PreConstruct_Params
 // Function Widget_SpaceElevator_TierInfo.Widget_SpaceElevator_TierInfo_C.ExecuteUbergraph_Widget_SpaceElevator_TierInfo
 struct UWidget_SpaceElevator_TierInfo_C_ExecuteUbergraph_Widget_SpaceElevator_TierInfo_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

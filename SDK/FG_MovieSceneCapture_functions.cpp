@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function MovieSceneCapture.MovieSceneCaptureProtocolBase.IsCapturing
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -24,6 +24,7 @@ bool UMovieSceneCaptureProtocolBase::IsCapturing()
 	UMovieSceneCaptureProtocolBase_IsCapturing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ bool UMovieSceneCaptureProtocolBase::IsCapturing()
 
 
 // Function MovieSceneCapture.MovieSceneCaptureProtocolBase.GetState
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMovieSceneCaptureProtocolState ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -45,6 +46,7 @@ EMovieSceneCaptureProtocolState UMovieSceneCaptureProtocolBase::GetState()
 	UMovieSceneCaptureProtocolBase_GetState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,11 +57,11 @@ EMovieSceneCaptureProtocolState UMovieSceneCaptureProtocolBase::GetState()
 
 
 // Function MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  ProtocolType                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 ProtocolType                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMovieSceneCapture::SetImageCaptureProtocolType(class UClass* ProtocolType)
+void UMovieSceneCapture::SetImageCaptureProtocolType(class UClass** ProtocolType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType");
 
@@ -67,6 +69,7 @@ void UMovieSceneCapture::SetImageCaptureProtocolType(class UClass* ProtocolType)
 	params.ProtocolType = ProtocolType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,11 +78,11 @@ void UMovieSceneCapture::SetImageCaptureProtocolType(class UClass* ProtocolType)
 
 
 // Function MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  ProtocolType                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 ProtocolType                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMovieSceneCapture::SetAudioCaptureProtocolType(class UClass* ProtocolType)
+void UMovieSceneCapture::SetAudioCaptureProtocolType(class UClass** ProtocolType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType");
 
@@ -87,6 +90,7 @@ void UMovieSceneCapture::SetAudioCaptureProtocolType(class UClass* ProtocolType)
 	params.ProtocolType = ProtocolType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +99,7 @@ void UMovieSceneCapture::SetAudioCaptureProtocolType(class UClass* ProtocolType)
 
 
 // Function MovieSceneCapture.MovieSceneCapture.GetImageCaptureProtocol
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMovieSceneCaptureProtocolBase* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -106,6 +110,7 @@ class UMovieSceneCaptureProtocolBase* UMovieSceneCapture::GetImageCaptureProtoco
 	UMovieSceneCapture_GetImageCaptureProtocol_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +121,7 @@ class UMovieSceneCaptureProtocolBase* UMovieSceneCapture::GetImageCaptureProtoco
 
 
 // Function MovieSceneCapture.MovieSceneCapture.GetAudioCaptureProtocol
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMovieSceneCaptureProtocolBase* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -127,6 +132,7 @@ class UMovieSceneCaptureProtocolBase* UMovieSceneCapture::GetAudioCaptureProtoco
 	UMovieSceneCapture_GetAudioCaptureProtocol_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,17 +143,18 @@ class UMovieSceneCaptureProtocolBase* UMovieSceneCapture::GetAudioCaptureProtoco
 
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMovieSceneCaptureEnvironment::IsCaptureInProgress()
+bool UMovieSceneCaptureEnvironment::STATIC_IsCaptureInProgress()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress");
 
 	UMovieSceneCaptureEnvironment_IsCaptureInProgress_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,17 +165,18 @@ bool UMovieSceneCaptureEnvironment::IsCaptureInProgress()
 
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UMovieSceneCaptureEnvironment::GetCaptureFrameNumber()
+int UMovieSceneCaptureEnvironment::STATIC_GetCaptureFrameNumber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber");
 
 	UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,17 +187,18 @@ int UMovieSceneCaptureEnvironment::GetCaptureFrameNumber()
 
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UMovieSceneCaptureEnvironment::GetCaptureElapsedTime()
+float UMovieSceneCaptureEnvironment::STATIC_GetCaptureElapsedTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime");
 
 	UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,17 +209,18 @@ float UMovieSceneCaptureEnvironment::GetCaptureElapsedTime()
 
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UMovieSceneImageCaptureProtocolBase* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UMovieSceneImageCaptureProtocolBase* UMovieSceneCaptureEnvironment::FindImageCaptureProtocol()
+class UMovieSceneImageCaptureProtocolBase* UMovieSceneCaptureEnvironment::STATIC_FindImageCaptureProtocol()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol");
 
 	UMovieSceneCaptureEnvironment_FindImageCaptureProtocol_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,17 +231,18 @@ class UMovieSceneImageCaptureProtocolBase* UMovieSceneCaptureEnvironment::FindIm
 
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UMovieSceneAudioCaptureProtocolBase* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UMovieSceneAudioCaptureProtocolBase* UMovieSceneCaptureEnvironment::FindAudioCaptureProtocol()
+class UMovieSceneAudioCaptureProtocolBase* UMovieSceneCaptureEnvironment::STATIC_FindAudioCaptureProtocol()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol");
 
 	UMovieSceneCaptureEnvironment_FindAudioCaptureProtocol_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,7 +253,7 @@ class UMovieSceneAudioCaptureProtocolBase* UMovieSceneCaptureEnvironment::FindAu
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.StopCapturingFinalPixels
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UUserDefinedCaptureProtocol::StopCapturingFinalPixels()
 {
@@ -251,6 +262,7 @@ void UUserDefinedCaptureProtocol::StopCapturingFinalPixels()
 	UUserDefinedCaptureProtocol_StopCapturingFinalPixels_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,18 +271,19 @@ void UUserDefinedCaptureProtocol::StopCapturingFinalPixels()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.StartCapturingFinalPixels
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   StreamName                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCapturedPixelsID*      StreamID                       (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(const struct FName& StreamName)
+void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(struct FCapturedPixelsID* StreamID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.StartCapturingFinalPixels");
 
 	UUserDefinedCaptureProtocol_StartCapturingFinalPixels_Params params;
-	params.StreamName = StreamName;
+	params.StreamID = StreamID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -279,44 +292,21 @@ void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(const struct FName& 
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UTexture*                Buffer                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   BufferName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FScriptDelegate         Handler                        (Parm, ZeroConstructor)
+// class UTexture**               Buffer                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCapturedPixelsID*      BufferID                       (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UUserDefinedCaptureProtocol::ResolveBuffer(class UTexture* Buffer, const struct FName& BufferName, const struct FScriptDelegate& Handler)
+void UUserDefinedCaptureProtocol::ResolveBuffer(class UTexture** Buffer, struct FCapturedPixelsID* BufferID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer");
 
 	UUserDefinedCaptureProtocol_ResolveBuffer_Params params;
 	params.Buffer = Buffer;
-	params.BufferName = BufferName;
-	params.Handler = Handler;
+	params.BufferID = BufferID;
 
 	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function MovieSceneCapture.UserDefinedCaptureProtocol.PushBufferToStream
-// ()
-// Parameters:
-// class UTexture*                Buffer                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StreamName                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUserDefinedCaptureProtocol::PushBufferToStream(class UTexture* Buffer, const struct FName& StreamName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.PushBufferToStream");
-
-	UUserDefinedCaptureProtocol_PushBufferToStream_Params params;
-	params.Buffer = Buffer;
-	params.StreamName = StreamName;
-
-	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -325,7 +315,7 @@ void UUserDefinedCaptureProtocol::PushBufferToStream(class UTexture* Buffer, con
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnWarmUp
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UUserDefinedCaptureProtocol::OnWarmUp()
 {
@@ -342,7 +332,7 @@ void UUserDefinedCaptureProtocol::OnWarmUp()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnTick
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UUserDefinedCaptureProtocol::OnTick()
 {
@@ -359,7 +349,7 @@ void UUserDefinedCaptureProtocol::OnTick()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnStartCapture
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UUserDefinedCaptureProtocol::OnStartCapture()
 {
@@ -376,7 +366,7 @@ void UUserDefinedCaptureProtocol::OnStartCapture()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnSetup
-// ()
+// (Native, Event, Protected, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -387,6 +377,7 @@ bool UUserDefinedCaptureProtocol::OnSetup()
 	UUserDefinedCaptureProtocol_OnSetup_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -397,7 +388,7 @@ bool UUserDefinedCaptureProtocol::OnSetup()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPreTick
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UUserDefinedCaptureProtocol::OnPreTick()
 {
@@ -413,8 +404,32 @@ void UUserDefinedCaptureProtocol::OnPreTick()
 }
 
 
+// Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPixelsReceived
+// (Event, Protected, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FCapturedPixels*        Pixels                         (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCapturedPixelsID*      ID                             (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FFrameMetrics*          FrameMetrics                   (Parm)
+
+void UUserDefinedCaptureProtocol::OnPixelsReceived(struct FCapturedPixels* Pixels, struct FCapturedPixelsID* ID, struct FFrameMetrics* FrameMetrics)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPixelsReceived");
+
+	UUserDefinedCaptureProtocol_OnPixelsReceived_Params params;
+	params.Pixels = Pixels;
+	params.ID = ID;
+	params.FrameMetrics = FrameMetrics;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPauseCapture
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UUserDefinedCaptureProtocol::OnPauseCapture()
 {
@@ -431,7 +446,7 @@ void UUserDefinedCaptureProtocol::OnPauseCapture()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnFinalize
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UUserDefinedCaptureProtocol::OnFinalize()
 {
@@ -448,7 +463,7 @@ void UUserDefinedCaptureProtocol::OnFinalize()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnCaptureFrame
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UUserDefinedCaptureProtocol::OnCaptureFrame()
 {
@@ -465,7 +480,7 @@ void UUserDefinedCaptureProtocol::OnCaptureFrame()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnCanFinalize
-// ()
+// (Native, Event, Protected, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -476,6 +491,7 @@ bool UUserDefinedCaptureProtocol::OnCanFinalize()
 	UUserDefinedCaptureProtocol_OnCanFinalize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -486,7 +502,7 @@ bool UUserDefinedCaptureProtocol::OnCanFinalize()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnBeginFinalize
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UUserDefinedCaptureProtocol::OnBeginFinalize()
 {
@@ -503,7 +519,7 @@ void UUserDefinedCaptureProtocol::OnBeginFinalize()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.GetCurrentFrameMetrics
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FFrameMetrics           ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -514,6 +530,7 @@ struct FFrameMetrics UUserDefinedCaptureProtocol::GetCurrentFrameMetrics()
 	UUserDefinedCaptureProtocol_GetCurrentFrameMetrics_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -524,12 +541,12 @@ struct FFrameMetrics UUserDefinedCaptureProtocol::GetCurrentFrameMetrics()
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.GenerateFilename
-// ()
+// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FFrameMetrics           InFrameMetrics                 (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FFrameMetrics*          InFrameMetrics                 (ConstParm, Parm, OutParm, ReferenceParm)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UUserDefinedCaptureProtocol::GenerateFilename(const struct FFrameMetrics& InFrameMetrics)
+class FString UUserDefinedCaptureProtocol::GenerateFilename(struct FFrameMetrics* InFrameMetrics)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.GenerateFilename");
 
@@ -537,6 +554,7 @@ class FString UUserDefinedCaptureProtocol::GenerateFilename(const struct FFrameM
 	params.InFrameMetrics = InFrameMetrics;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -546,47 +564,26 @@ class FString UUserDefinedCaptureProtocol::GenerateFilename(const struct FFrameM
 }
 
 
-// Function MovieSceneCapture.UserDefinedCaptureProtocol.BindToStream
-// ()
-// Parameters:
-// struct FName                   StreamName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FScriptDelegate         Handler                        (Parm, ZeroConstructor)
-
-void UUserDefinedCaptureProtocol::BindToStream(const struct FName& StreamName, const struct FScriptDelegate& Handler)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.BindToStream");
-
-	UUserDefinedCaptureProtocol_BindToStream_Params params;
-	params.StreamName = StreamName;
-	params.Handler = Handler;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.WriteImageToDisk
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCapturedPixels         PixelData                      (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FName                   StreamName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FFrameMetrics           FrameMetrics                   (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bCopyImageData                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCapturedPixels*        PixelData                      (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCapturedPixelsID*      StreamID                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FFrameMetrics*          FrameMetrics                   (ConstParm, Parm, OutParm, ReferenceParm)
+// bool*                          bCopyImageData                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const struct FCapturedPixels& PixelData, const struct FName& StreamName, const struct FFrameMetrics& FrameMetrics, bool bCopyImageData)
+void UUserDefinedImageCaptureProtocol::WriteImageToDisk(struct FCapturedPixels* PixelData, struct FCapturedPixelsID* StreamID, struct FFrameMetrics* FrameMetrics, bool* bCopyImageData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedImageCaptureProtocol.WriteImageToDisk");
 
 	UUserDefinedImageCaptureProtocol_WriteImageToDisk_Params params;
 	params.PixelData = PixelData;
-	params.StreamName = StreamName;
+	params.StreamID = StreamID;
 	params.FrameMetrics = FrameMetrics;
 	params.bCopyImageData = bCopyImageData;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -595,7 +592,7 @@ void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const struct FCapturedPi
 
 
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForCurrentFrame
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -606,6 +603,7 @@ class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForCurrentFrame(
 	UUserDefinedImageCaptureProtocol_GenerateFilenameForCurrentFrame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -616,21 +614,22 @@ class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForCurrentFrame(
 
 
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UTexture*                Buffer                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StreamName                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture**               Buffer                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCapturedPixelsID*      StreamID                       (ConstParm, Parm, OutParm, ReferenceParm)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(class UTexture* Buffer, const struct FName& StreamName)
+class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(class UTexture** Buffer, struct FCapturedPixelsID* StreamID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer");
 
 	UUserDefinedImageCaptureProtocol_GenerateFilenameForBuffer_Params params;
 	params.Buffer = Buffer;
-	params.StreamName = StreamName;
+	params.StreamID = StreamID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

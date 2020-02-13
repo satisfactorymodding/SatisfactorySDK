@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_CheckValidPath.BTT_CheckValidPath_C.ReceiveExecute
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UBTT_CheckValidPath_C::ReceiveExecute(class AActor** OwnerActor)
 
 
 // Function BTT_CheckValidPath.BTT_CheckValidPath_C.ExecuteUbergraph_BTT_CheckValidPath
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_CheckValidPath_C::ExecuteUbergraph_BTT_CheckValidPath(int EntryPoint)
+void UBTT_CheckValidPath_C::ExecuteUbergraph_BTT_CheckValidPath(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_CheckValidPath.BTT_CheckValidPath_C.ExecuteUbergraph_BTT_CheckValidPath");
 

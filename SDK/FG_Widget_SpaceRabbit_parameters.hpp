@@ -44,7 +44,7 @@ struct UWidget_SpaceRabbit_C_Destruct_Params
 // Function Widget_SpaceRabbit.Widget_SpaceRabbit_C.ExecuteUbergraph_Widget_SpaceRabbit
 struct UWidget_SpaceRabbit_C_ExecuteUbergraph_Widget_SpaceRabbit_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

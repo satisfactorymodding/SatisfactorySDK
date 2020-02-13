@@ -12,12 +12,46 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_Generator.Widget_Generator_C.OnReplicationDetailActorCreated
-// ()
-// Parameters:
-// class AActor*                  ReplicationDetailActor         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_Generator.Widget_Generator_C.UpdateFluidStats
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_Generator_C::OnReplicationDetailActorCreated(class AActor* ReplicationDetailActor)
+void UWidget_Generator_C::UpdateFluidStats()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Generator.Widget_Generator_C.UpdateFluidStats");
+
+	UWidget_Generator_C_UpdateFluidStats_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Generator.Widget_Generator_C.SetupInputs
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Generator_C::SetupInputs()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Generator.Widget_Generator_C.SetupInputs");
+
+	UWidget_Generator_C_SetupInputs_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Generator.Widget_Generator_C.OnReplicationDetailActorCreated
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor**                 ReplicationDetailActor         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Generator_C::OnReplicationDetailActorCreated(class AActor** ReplicationDetailActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Generator.Widget_Generator_C.OnReplicationDetailActorCreated");
 
@@ -33,7 +67,7 @@ void UWidget_Generator_C::OnReplicationDetailActorCreated(class AActor* Replicat
 
 
 // Function Widget_Generator.Widget_Generator_C.InitModule
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::InitModule()
 {
@@ -49,28 +83,8 @@ void UWidget_Generator_C::InitModule()
 }
 
 
-// Function Widget_Generator.Widget_Generator_C.InitNuclearGenerator
-// ()
-// Parameters:
-// class AFGBuildableGeneratorNuclear* NuclearGenerator               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_Generator_C::InitNuclearGenerator(class AFGBuildableGeneratorNuclear* NuclearGenerator)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Generator.Widget_Generator_C.InitNuclearGenerator");
-
-	UWidget_Generator_C_InitNuclearGenerator_Params params;
-	params.NuclearGenerator = NuclearGenerator;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Generator.Widget_Generator_C.UpdateHeaderText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::UpdateHeaderText()
 {
@@ -87,7 +101,7 @@ void UWidget_Generator_C::UpdateHeaderText()
 
 
 // Function Widget_Generator.Widget_Generator_C.UpdateWarningWidget
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::UpdateWarningWidget()
 {
@@ -104,7 +118,7 @@ void UWidget_Generator_C::UpdateWarningWidget()
 
 
 // Function Widget_Generator.Widget_Generator_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -128,7 +142,7 @@ void UWidget_Generator_C::DropInventorySlotStack(class UWidget_InventorySlot_C**
 
 
 // Function Widget_Generator.Widget_Generator_C.UpdateSlotStats
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::UpdateSlotStats()
 {
@@ -145,7 +159,7 @@ void UWidget_Generator_C::UpdateSlotStats()
 
 
 // Function Widget_Generator.Widget_Generator_C.GetFuseVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -166,7 +180,7 @@ ESlateVisibility UWidget_Generator_C::GetFuseVisibility()
 
 
 // Function Widget_Generator.Widget_Generator_C.UpdateSlotInfo
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::UpdateSlotInfo()
 {
@@ -183,7 +197,7 @@ void UWidget_Generator_C::UpdateSlotInfo()
 
 
 // Function Widget_Generator.Widget_Generator_C.OnGetPowerCircuit
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFGPowerCircuit*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +218,7 @@ class UFGPowerCircuit* UWidget_Generator_C::OnGetPowerCircuit()
 
 
 // Function Widget_Generator.Widget_Generator_C.IsConnected
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsConnected                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -226,7 +240,7 @@ void UWidget_Generator_C::IsConnected(bool* IsConnected)
 
 
 // Function Widget_Generator.Widget_Generator_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::Cleanup()
 {
@@ -243,7 +257,7 @@ void UWidget_Generator_C::Cleanup()
 
 
 // Function Widget_Generator.Widget_Generator_C.GetBurnProgressPercent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -264,7 +278,7 @@ float UWidget_Generator_C::GetBurnProgressPercent()
 
 
 // Function Widget_Generator.Widget_Generator_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_Generator_C::Init()
 {
@@ -281,7 +295,7 @@ void UWidget_Generator_C::Init()
 
 
 // Function Widget_Generator.Widget_Generator_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Generator_C::Construct()
 {
@@ -298,7 +312,7 @@ void UWidget_Generator_C::Construct()
 
 
 // Function Widget_Generator.Widget_Generator_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Generator_C::Destruct()
 {
@@ -314,30 +328,8 @@ void UWidget_Generator_C::Destruct()
 }
 
 
-// Function Widget_Generator.Widget_Generator_C.Tick
-// ()
-// Parameters:
-// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_Generator_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Generator.Widget_Generator_C.Tick");
-
-	UWidget_Generator_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Generator.Widget_Generator_C.BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_1_OnStandbyClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Generator_C::BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_1_OnStandbyClicked__DelegateSignature()
 {
@@ -354,7 +346,7 @@ void UWidget_Generator_C::BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEven
 
 
 // Function Widget_Generator.Widget_Generator_C.ResetFuse
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::ResetFuse()
 {
@@ -371,7 +363,7 @@ void UWidget_Generator_C::ResetFuse()
 
 
 // Function Widget_Generator.Widget_Generator_C.WarningMessageCheck
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::WarningMessageCheck()
 {
@@ -388,7 +380,7 @@ void UWidget_Generator_C::WarningMessageCheck()
 
 
 // Function Widget_Generator.Widget_Generator_C.SpawnSmoke
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Generator_C::SpawnSmoke()
 {
@@ -405,11 +397,11 @@ void UWidget_Generator_C::SpawnSmoke()
 
 
 // Function Widget_Generator.Widget_Generator_C.OnProductionChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Generator_C::OnProductionChanged(bool State)
+void UWidget_Generator_C::OnProductionChanged(bool* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Generator.Widget_Generator_C.OnProductionChanged");
 
@@ -424,12 +416,32 @@ void UWidget_Generator_C::OnProductionChanged(bool State)
 }
 
 
-// Function Widget_Generator.Widget_Generator_C.ExecuteUbergraph_Widget_Generator
-// ()
+// Function Widget_Generator.Widget_Generator_C.OnCustomTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         UpdateTime                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Generator_C::ExecuteUbergraph_Widget_Generator(int EntryPoint)
+void UWidget_Generator_C::OnCustomTick(float* UpdateTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Generator.Widget_Generator_C.OnCustomTick");
+
+	UWidget_Generator_C_OnCustomTick_Params params;
+	params.UpdateTime = UpdateTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Generator.Widget_Generator_C.ExecuteUbergraph_Widget_Generator
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Generator_C::ExecuteUbergraph_Widget_Generator(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Generator.Widget_Generator_C.ExecuteUbergraph_Widget_Generator");
 

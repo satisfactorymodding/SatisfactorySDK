@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Jetpack.Anim_Jetpack_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Jetpack_AnimGraphNode_TransitionResult_4BE4DAB24DFBF4B7874053932CFC86FF
-// ()
+// (BlueprintEvent)
 
 void UAnim_Jetpack_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Jetpack_AnimGraphNode_TransitionResult_4BE4DAB24DFBF4B7874053932CFC86FF()
 {
@@ -30,7 +30,7 @@ void UAnim_Jetpack_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Jetpack_A
 
 
 // Function Anim_Jetpack.Anim_Jetpack_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Jetpack_AnimGraphNode_TransitionResult_BB0735394DCC5B947AF456B82D2E797A
-// ()
+// (BlueprintEvent)
 
 void UAnim_Jetpack_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Jetpack_AnimGraphNode_TransitionResult_BB0735394DCC5B947AF456B82D2E797A()
 {
@@ -47,7 +47,7 @@ void UAnim_Jetpack_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Jetpack_A
 
 
 // Function Anim_Jetpack.Anim_Jetpack_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,11 +67,11 @@ void UAnim_Jetpack_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_Jetpack.Anim_Jetpack_C.ExecuteUbergraph_Anim_Jetpack
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Jetpack_C::ExecuteUbergraph_Anim_Jetpack(int EntryPoint)
+void UAnim_Jetpack_C::ExecuteUbergraph_Anim_Jetpack(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Jetpack.Anim_Jetpack_C.ExecuteUbergraph_Anim_Jetpack");
 

@@ -36,7 +36,7 @@ public:
 
 	void ReceiveExecute(class AActor** OwnerActor);
 	void FinishCircleMove();
-	void ExecuteUbergraph_BTT_CircleMove(int EntryPoint);
+	void ExecuteUbergraph_BTT_CircleMove(int* EntryPoint);
 };
 
 

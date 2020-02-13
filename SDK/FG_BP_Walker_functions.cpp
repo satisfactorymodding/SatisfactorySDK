@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Walker.BP_Walker_C.UserConstructionScript
-// ()
-
-void ABP_Walker_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Walker.BP_Walker_C.UserConstructionScript");
-
-	ABP_Walker_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Walker.BP_Walker_C.PlayConsumeItemEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UClass**                 itemDescriptor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int*                           amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,11 +35,11 @@ void ABP_Walker_C::PlayConsumeItemEffect(class UClass** itemDescriptor, int* amo
 
 
 // Function BP_Walker.BP_Walker_C.ExecuteUbergraph_BP_Walker
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Walker_C::ExecuteUbergraph_BP_Walker(int EntryPoint)
+void ABP_Walker_C::ExecuteUbergraph_BP_Walker(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Walker.BP_Walker_C.ExecuteUbergraph_BP_Walker");
 

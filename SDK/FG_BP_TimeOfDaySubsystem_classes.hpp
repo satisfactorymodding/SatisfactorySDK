@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TimeOfDaySubsystem.BP_TimeOfDaySubsystem_C
-// 0x0000 (0x0378 - 0x0378)
+// 0x0000 (0x0380 - 0x0380)
 class ABP_TimeOfDaySubsystem_C : public AFGTimeOfDaySubsystem
 {
 public:

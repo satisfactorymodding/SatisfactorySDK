@@ -15,11 +15,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_Wall_Window_8x4_03.Build_Wall_Window_8x4_03_C
-// 0x0008 (0x0580 - 0x0578)
+// 0x0000 (0x0578 - 0x0578)
 class ABuild_Wall_Window_8x4_03_C : public AFGBuildableWall
 {
 public:
-	class UFGColoredInstanceMeshProxy*                 FGColoredInstanceMeshProxy;                               // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,8 +26,6 @@ public:
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
 };
 
 

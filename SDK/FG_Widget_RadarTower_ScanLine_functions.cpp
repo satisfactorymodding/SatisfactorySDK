@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RadarTower_ScanLine.Widget_RadarTower_ScanLine_C.SetupScanline
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          MaxSize                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          NormalizedRadius               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         MaxSize                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         NormalizedRadius               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadarTower_ScanLine_C::SetupScanline(float MaxSize, float NormalizedRadius)
+void UWidget_RadarTower_ScanLine_C::SetupScanline(float* MaxSize, float* NormalizedRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower_ScanLine.Widget_RadarTower_ScanLine_C.SetupScanline");
 
@@ -35,7 +35,7 @@ void UWidget_RadarTower_ScanLine_C::SetupScanline(float MaxSize, float Normalize
 
 
 // Function Widget_RadarTower_ScanLine.Widget_RadarTower_ScanLine_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -55,11 +55,11 @@ void UWidget_RadarTower_ScanLine_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_RadarTower_ScanLine.Widget_RadarTower_ScanLine_C.ExecuteUbergraph_Widget_RadarTower_ScanLine
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadarTower_ScanLine_C::ExecuteUbergraph_Widget_RadarTower_ScanLine(int EntryPoint)
+void UWidget_RadarTower_ScanLine_C::ExecuteUbergraph_Widget_RadarTower_ScanLine(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower_ScanLine.Widget_RadarTower_ScanLine_C.ExecuteUbergraph_Widget_RadarTower_ScanLine");
 

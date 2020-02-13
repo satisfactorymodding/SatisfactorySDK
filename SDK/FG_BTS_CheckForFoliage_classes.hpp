@@ -30,7 +30,7 @@ public:
 
 
 	void ReceiveTickAI(class AAIController** OwnerController, class APawn** ControlledPawn, float* DeltaSeconds);
-	void ExecuteUbergraph_BTS_CheckForFoliage(int EntryPoint);
+	void ExecuteUbergraph_BTS_CheckForFoliage(int* EntryPoint);
 };
 
 

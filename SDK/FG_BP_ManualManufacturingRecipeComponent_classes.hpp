@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ManualManufacturingRecipeComponent.BP_ManualManufacturingRecipeComponent_C
-// 0x0000 (0x0288 - 0x0288)
+// 0x0000 (0x02E8 - 0x02E8)
 class UBP_ManualManufacturingRecipeComponent_C : public UBP_ManualManufacturingComponent_C
 {
 public:

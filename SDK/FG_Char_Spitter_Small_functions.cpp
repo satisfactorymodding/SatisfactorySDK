@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Char_Spitter_Small.Char_Spitter_Small_C.UserConstructionScript
-// ()
-
-void AChar_Spitter_Small_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter_Small.Char_Spitter_Small_C.UserConstructionScript");
-
-	AChar_Spitter_Small_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_Spitter_Small.Char_Spitter_Small_C.OnCurrentAggroTargetReplicated
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Spitter_Small_C::OnCurrentAggroTargetReplicated()
 {
@@ -47,11 +30,11 @@ void AChar_Spitter_Small_C::OnCurrentAggroTargetReplicated()
 
 
 // Function Char_Spitter_Small.Char_Spitter_Small_C.ExecuteUbergraph_Char_Spitter_Small
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_Spitter_Small_C::ExecuteUbergraph_Char_Spitter_Small(int EntryPoint)
+void AChar_Spitter_Small_C::ExecuteUbergraph_Char_Spitter_Small(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter_Small.Char_Spitter_Small_C.ExecuteUbergraph_Char_Spitter_Small");
 

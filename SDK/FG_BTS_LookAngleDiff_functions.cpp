@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_LookAngleDiff.BTS_LookAngleDiff_C.ReceiveTick
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTS_LookAngleDiff_C::ReceiveTick(class AActor** OwnerActor, float* DeltaSe
 
 
 // Function BTS_LookAngleDiff.BTS_LookAngleDiff_C.ExecuteUbergraph_BTS_LookAngleDiff
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_LookAngleDiff_C::ExecuteUbergraph_BTS_LookAngleDiff(int EntryPoint)
+void UBTS_LookAngleDiff_C::ExecuteUbergraph_BTS_LookAngleDiff(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_LookAngleDiff.BTS_LookAngleDiff_C.ExecuteUbergraph_BTS_LookAngleDiff");
 

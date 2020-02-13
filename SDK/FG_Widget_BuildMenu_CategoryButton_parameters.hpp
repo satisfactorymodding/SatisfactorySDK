@@ -63,7 +63,12 @@ struct UWidget_BuildMenu_CategoryButton_C_Destruct_Params
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.ExecuteUbergraph_Widget_BuildMenu_CategoryButton
 struct UWidget_BuildMenu_CategoryButton_C_ExecuteUbergraph_Widget_BuildMenu_CategoryButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.OnCategoryButtonClicked__DelegateSignature
+struct UWidget_BuildMenu_CategoryButton_C_OnCategoryButtonClicked__DelegateSignature_Params
+{
 };
 
 }

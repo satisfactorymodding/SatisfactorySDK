@@ -33,7 +33,7 @@ public:
 	void mOnAttackFailed_116612B142195CF8862D28AC809559CE();
 	void mOnAttackFinished_116612B142195CF8862D28AC809559CE();
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_NoRangeAttack(int EntryPoint);
+	void ExecuteUbergraph_BTT_NoRangeAttack(int* EntryPoint);
 };
 
 

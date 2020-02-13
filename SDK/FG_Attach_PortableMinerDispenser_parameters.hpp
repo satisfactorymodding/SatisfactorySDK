@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.UserConstructionScript
-struct AAttach_PortableMinerDispenser_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.PlayAttachEffects3P
 struct AAttach_PortableMinerDispenser_C_PlayAttachEffects3P_Params
 {
@@ -32,7 +27,7 @@ struct AAttach_PortableMinerDispenser_C_PlayDetachEffects3P_Params
 // Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.ExecuteUbergraph_Attach_PortableMinerDispenser
 struct AAttach_PortableMinerDispenser_C_ExecuteUbergraph_Attach_PortableMinerDispenser_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

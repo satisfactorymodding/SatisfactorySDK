@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AttentionPingActor.BP_AttentionPingActor_C
-// 0x0010 (0x0340 - 0x0330)
+// 0x0010 (0x0348 - 0x0338)
 class ABP_AttentionPingActor_C : public AFGAttentionPingActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0330(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0338(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,9 +29,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void SpawnAttentionPingEffects();
-	void ExecuteUbergraph_BP_AttentionPingActor(int EntryPoint);
+	void ExecuteUbergraph_BP_AttentionPingActor(int* EntryPoint);
 };
 
 

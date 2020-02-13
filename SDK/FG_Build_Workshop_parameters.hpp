@@ -37,11 +37,6 @@ struct ABuild_Workshop_C_UpdateUseState_Params
 	struct FUseState                                   out_useState;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
-// Function Build_Workshop.Build_Workshop_C.UserConstructionScript
-struct ABuild_Workshop_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

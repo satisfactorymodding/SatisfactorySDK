@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_AudioMessage.Widget_AudioMessage_C.SetSenderInfo
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  inSender                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 inSender                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_AudioMessage_C::SetSenderInfo(class UClass* inSender)
+void UWidget_AudioMessage_C::SetSenderInfo(class UClass** inSender)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_AudioMessage.Widget_AudioMessage_C.SetSenderInfo");
 
@@ -33,7 +33,7 @@ void UWidget_AudioMessage_C::SetSenderInfo(class UClass* inSender)
 
 
 // Function Widget_AudioMessage.Widget_AudioMessage_C.GetDarkGray
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -54,7 +54,7 @@ struct FLinearColor UWidget_AudioMessage_C::GetDarkGray()
 
 
 // Function Widget_AudioMessage.Widget_AudioMessage_C.PlayNextDialogue
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_AudioMessage_C::PlayNextDialogue()
 {
@@ -71,7 +71,7 @@ void UWidget_AudioMessage_C::PlayNextDialogue()
 
 
 // Function Widget_AudioMessage.Widget_AudioMessage_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_AudioMessage_C::Construct()
 {
@@ -88,7 +88,7 @@ void UWidget_AudioMessage_C::Construct()
 
 
 // Function Widget_AudioMessage.Widget_AudioMessage_C.ShowContent
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_AudioMessage_C::ShowContent()
 {
@@ -105,7 +105,7 @@ void UWidget_AudioMessage_C::ShowContent()
 
 
 // Function Widget_AudioMessage.Widget_AudioMessage_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_AudioMessage_C::Destruct()
 {
@@ -122,11 +122,11 @@ void UWidget_AudioMessage_C::Destruct()
 
 
 // Function Widget_AudioMessage.Widget_AudioMessage_C.ExecuteUbergraph_Widget_AudioMessage
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_AudioMessage_C::ExecuteUbergraph_Widget_AudioMessage(int EntryPoint)
+void UWidget_AudioMessage_C::ExecuteUbergraph_Widget_AudioMessage(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_AudioMessage.Widget_AudioMessage_C.ExecuteUbergraph_Widget_AudioMessage");
 

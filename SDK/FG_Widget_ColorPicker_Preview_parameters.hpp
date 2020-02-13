@@ -17,8 +17,8 @@ namespace SDK
 // Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.SetColors
 struct UWidget_ColorPicker_Preview_C_SetColors_Params
 {
-	struct FLinearColor                                PrimaryColor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                SecondaryColor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               PrimaryColor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               SecondaryColor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.SetTextures
@@ -35,7 +35,7 @@ struct UWidget_ColorPicker_Preview_C_PreConstruct_Params
 // Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.ExecuteUbergraph_Widget_ColorPicker_Preview
 struct UWidget_ColorPicker_Preview_C_ExecuteUbergraph_Widget_ColorPicker_Preview_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

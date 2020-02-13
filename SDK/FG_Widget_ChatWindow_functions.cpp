@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.ExitChat
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatWindow_C::ExitChat()
 {
@@ -30,7 +30,7 @@ void UWidget_ChatWindow_C::ExitChat()
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.OnPlayerBeginTypeMessage
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatWindow_C::OnPlayerBeginTypeMessage()
 {
@@ -47,7 +47,7 @@ void UWidget_ChatWindow_C::OnPlayerBeginTypeMessage()
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.UpdateVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatWindow_C::UpdateVisibility()
 {
@@ -64,7 +64,7 @@ void UWidget_ChatWindow_C::UpdateVisibility()
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.OnChatMessageReceived
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatWindow_C::OnChatMessageReceived()
 {
@@ -81,16 +81,16 @@ void UWidget_ChatWindow_C::OnChatMessageReceived()
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.SetInputWindowVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ChatWindow_C::SetInputWindowVisibility(bool Visible)
+void UWidget_ChatWindow_C::SetInputWindowVisibility(bool* visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ChatWindow.Widget_ChatWindow_C.SetInputWindowVisibility");
 
 	UWidget_ChatWindow_C_SetInputWindowVisibility_Params params;
-	params.Visible = Visible;
+	params.visible = visible;
 
 	auto flags = fn->FunctionFlags;
 
@@ -101,7 +101,7 @@ void UWidget_ChatWindow_C::SetInputWindowVisibility(bool Visible)
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.GetInputWindowVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -122,7 +122,7 @@ bool UWidget_ChatWindow_C::GetInputWindowVisibility()
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.CacheChatMessages
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatWindow_C::CacheChatMessages()
 {
@@ -139,7 +139,7 @@ void UWidget_ChatWindow_C::CacheChatMessages()
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.IsLastMessageFresh
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsFresh                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -161,7 +161,7 @@ void UWidget_ChatWindow_C::IsLastMessageFresh(bool* IsFresh)
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.RemoveMessageWidget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatWindow_C::RemoveMessageWidget()
 {
@@ -178,7 +178,7 @@ void UWidget_ChatWindow_C::RemoveMessageWidget()
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.AddMessageWidget
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatWindow_C::AddMessageWidget()
 {
@@ -195,7 +195,7 @@ void UWidget_ChatWindow_C::AddMessageWidget()
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.MatchWidgetsAndMessages
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatWindow_C::MatchWidgetsAndMessages()
 {
@@ -211,25 +211,8 @@ void UWidget_ChatWindow_C::MatchWidgetsAndMessages()
 }
 
 
-// Function Widget_ChatWindow.Widget_ChatWindow_C.Construct
-// ()
-
-void UWidget_ChatWindow_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_ChatWindow.Widget_ChatWindow_C.Construct");
-
-	UWidget_ChatWindow_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_ChatWindow.Widget_ChatWindow_C.OnRemovedFromFocusPath
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FFocusEvent*            InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -249,7 +232,7 @@ void UWidget_ChatWindow_C::OnRemovedFromFocusPath(struct FFocusEvent* InFocusEve
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.OnMouseEnter
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -271,7 +254,7 @@ void UWidget_ChatWindow_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPo
 
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.OnMouseLeave
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -290,12 +273,29 @@ void UWidget_ChatWindow_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 }
 
 
-// Function Widget_ChatWindow.Widget_ChatWindow_C.ExecuteUbergraph_Widget_ChatWindow
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_ChatWindow.Widget_ChatWindow_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_ChatWindow_C::ExecuteUbergraph_Widget_ChatWindow(int EntryPoint)
+void UWidget_ChatWindow_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ChatWindow.Widget_ChatWindow_C.Construct");
+
+	UWidget_ChatWindow_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ChatWindow.Widget_ChatWindow_C.ExecuteUbergraph_Widget_ChatWindow
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ChatWindow_C::ExecuteUbergraph_Widget_ChatWindow(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ChatWindow.Widget_ChatWindow_C.ExecuteUbergraph_Widget_ChatWindow");
 

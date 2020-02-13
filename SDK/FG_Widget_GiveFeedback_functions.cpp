@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.PopulateTypeFeedbackOptions
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_GiveFeedback_C::PopulateTypeFeedbackOptions()
 {
@@ -30,7 +30,7 @@ void UWidget_GiveFeedback_C::PopulateTypeFeedbackOptions()
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.PopulateSatisfactorySelectOptions
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_GiveFeedback_C::PopulateSatisfactorySelectOptions()
 {
@@ -47,7 +47,7 @@ void UWidget_GiveFeedback_C::PopulateSatisfactorySelectOptions()
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.OnKeyDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -72,7 +72,7 @@ struct FEventReply UWidget_GiveFeedback_C::OnKeyDown(struct FGeometry* MyGeometr
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_GiveFeedback_C::Construct()
 {
@@ -89,7 +89,7 @@ void UWidget_GiveFeedback_C::Construct()
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GiveFeedback_C::BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature()
 {
@@ -106,7 +106,7 @@ void UWidget_GiveFeedback_C::BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.CloseFeedback
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_GiveFeedback_C::CloseFeedback()
 {
@@ -123,7 +123,7 @@ void UWidget_GiveFeedback_C::CloseFeedback()
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__THANKSDUDE_K2Node_ComponentBoundEvent_147_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GiveFeedback_C::BndEvt__THANKSDUDE_K2Node_ComponentBoundEvent_147_OnClicked__DelegateSignature()
 {
@@ -140,11 +140,11 @@ void UWidget_GiveFeedback_C::BndEvt__THANKSDUDE_K2Node_ComponentBoundEvent_147_O
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__mTypeFeedbackSelect_K2Node_ComponentBoundEvent_1_onSelectionChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class FString                  SelectedOption                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString*                 SelectedOption                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UWidget_GiveFeedback_C::BndEvt__mTypeFeedbackSelect_K2Node_ComponentBoundEvent_1_onSelectionChanged__DelegateSignature(const class FString& SelectedOption)
+void UWidget_GiveFeedback_C::BndEvt__mTypeFeedbackSelect_K2Node_ComponentBoundEvent_1_onSelectionChanged__DelegateSignature(class FString* SelectedOption)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__mTypeFeedbackSelect_K2Node_ComponentBoundEvent_1_onSelectionChanged__DelegateSignature");
 
@@ -160,11 +160,11 @@ void UWidget_GiveFeedback_C::BndEvt__mTypeFeedbackSelect_K2Node_ComponentBoundEv
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Details_text_K2Node_ComponentBoundEvent_4_OnMultiLineEditableTextChangedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_GiveFeedback_C::BndEvt__Details_text_K2Node_ComponentBoundEvent_4_OnMultiLineEditableTextChangedEvent__DelegateSignature(const struct FText& Text)
+void UWidget_GiveFeedback_C::BndEvt__Details_text_K2Node_ComponentBoundEvent_4_OnMultiLineEditableTextChangedEvent__DelegateSignature(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Details_text_K2Node_ComponentBoundEvent_4_OnMultiLineEditableTextChangedEvent__DelegateSignature");
 
@@ -180,7 +180,7 @@ void UWidget_GiveFeedback_C::BndEvt__Details_text_K2Node_ComponentBoundEvent_4_O
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GiveFeedback_C::BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature()
 {
@@ -197,7 +197,7 @@ void UWidget_GiveFeedback_C::BndEvt__Widget_StandardButton_K2Node_ComponentBound
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GiveFeedback_C::BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature()
 {
@@ -214,11 +214,11 @@ void UWidget_GiveFeedback_C::BndEvt__Widget_StandardButton_K2Node_ComponentBound
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.SendFeedbackAfterConfirm
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           mConfirmBool                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          mConfirmBool                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_GiveFeedback_C::SendFeedbackAfterConfirm(bool mConfirmBool)
+void UWidget_GiveFeedback_C::SendFeedbackAfterConfirm(bool* mConfirmBool)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_GiveFeedback.Widget_GiveFeedback_C.SendFeedbackAfterConfirm");
 
@@ -234,7 +234,7 @@ void UWidget_GiveFeedback_C::SendFeedbackAfterConfirm(bool mConfirmBool)
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GiveFeedback_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
@@ -251,11 +251,11 @@ void UWidget_GiveFeedback_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnBut
 
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.ExecuteUbergraph_Widget_GiveFeedback
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_GiveFeedback_C::ExecuteUbergraph_Widget_GiveFeedback(int EntryPoint)
+void UWidget_GiveFeedback_C::ExecuteUbergraph_Widget_GiveFeedback(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_GiveFeedback.Widget_GiveFeedback_C.ExecuteUbergraph_Widget_GiveFeedback");
 

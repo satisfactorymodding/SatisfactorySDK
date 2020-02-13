@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_OilPump.Anim_OilPump_C.AnimNotify_BurnerFlareNotify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilPump_C::AnimNotify_BurnerFlareNotify()
 {
@@ -30,7 +30,7 @@ void UAnim_OilPump_C::AnimNotify_BurnerFlareNotify()
 
 
 // Function Anim_OilPump.Anim_OilPump_C.AnimNotify_OilpumpEnteredProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilPump_C::AnimNotify_OilpumpEnteredProducingState()
 {
@@ -47,7 +47,7 @@ void UAnim_OilPump_C::AnimNotify_OilpumpEnteredProducingState()
 
 
 // Function Anim_OilPump.Anim_OilPump_C.AnimNotify_OilpumpLeftProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilPump_C::AnimNotify_OilpumpLeftProducingState()
 {
@@ -64,7 +64,7 @@ void UAnim_OilPump_C::AnimNotify_OilpumpLeftProducingState()
 
 
 // Function Anim_OilPump.Anim_OilPump_C.AnimNotify_OilpumpEnteredOfflineState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilPump_C::AnimNotify_OilpumpEnteredOfflineState()
 {
@@ -81,7 +81,7 @@ void UAnim_OilPump_C::AnimNotify_OilpumpEnteredOfflineState()
 
 
 // Function Anim_OilPump.Anim_OilPump_C.AnimNotify_OilpumpLeftOfflineState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilPump_C::AnimNotify_OilpumpLeftOfflineState()
 {
@@ -98,11 +98,11 @@ void UAnim_OilPump_C::AnimNotify_OilpumpLeftOfflineState()
 
 
 // Function Anim_OilPump.Anim_OilPump_C.ExecuteUbergraph_Anim_OilPump
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_OilPump_C::ExecuteUbergraph_Anim_OilPump(int EntryPoint)
+void UAnim_OilPump_C::ExecuteUbergraph_Anim_OilPump(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_OilPump.Anim_OilPump_C.ExecuteUbergraph_Anim_OilPump");
 

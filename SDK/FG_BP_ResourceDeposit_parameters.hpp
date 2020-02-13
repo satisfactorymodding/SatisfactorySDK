@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_ResourceDeposit.BP_ResourceDeposit_C.UserConstructionScript
-struct ABP_ResourceDeposit_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_ResourceDeposit.BP_ResourceDeposit_C.ReceiveBeginPlay
 struct ABP_ResourceDeposit_C_ReceiveBeginPlay_Params
 {
@@ -33,7 +28,7 @@ struct ABP_ResourceDeposit_C_PlayDepletedEffect_Params
 // Function BP_ResourceDeposit.BP_ResourceDeposit_C.ExecuteUbergraph_BP_ResourceDeposit
 struct ABP_ResourceDeposit_C_ExecuteUbergraph_BP_ResourceDeposit_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

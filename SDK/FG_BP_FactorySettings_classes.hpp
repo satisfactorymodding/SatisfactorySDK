@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FactorySettings.BP_FactorySettings_C
-// 0x0000 (0x0138 - 0x0138)
+// 0x0000 (0x0170 - 0x0170)
 class UBP_FactorySettings_C : public UFGFactorySettings
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.SetTextMessage
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatMessageRow_C::SetTextMessage()
 {
@@ -30,7 +30,7 @@ void UWidget_ChatMessageRow_C::SetTextMessage()
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.SetPlayerNameColor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatMessageRow_C::SetPlayerNameColor()
 {
@@ -47,7 +47,7 @@ void UWidget_ChatMessageRow_C::SetPlayerNameColor()
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.SetPlayerIconColor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatMessageRow_C::SetPlayerIconColor()
 {
@@ -64,7 +64,7 @@ void UWidget_ChatMessageRow_C::SetPlayerIconColor()
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.SetPlayerName
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ChatMessageRow_C::SetPlayerName()
 {
@@ -81,7 +81,7 @@ void UWidget_ChatMessageRow_C::SetPlayerName()
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.GetPlayerNameColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -102,7 +102,7 @@ struct FSlateColor UWidget_ChatMessageRow_C::GetPlayerNameColor()
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.GetPlayerName
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -123,7 +123,7 @@ struct FText UWidget_ChatMessageRow_C::GetPlayerName()
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.GetChatText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -144,7 +144,7 @@ struct FText UWidget_ChatMessageRow_C::GetChatText()
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ChatMessageRow_C::Construct()
 {
@@ -161,11 +161,11 @@ void UWidget_ChatMessageRow_C::Construct()
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.RemoveWidgetAfterDelay
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Delay                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Delay                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ChatMessageRow_C::RemoveWidgetAfterDelay(float Delay)
+void UWidget_ChatMessageRow_C::RemoveWidgetAfterDelay(float* Delay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.RemoveWidgetAfterDelay");
 
@@ -181,11 +181,11 @@ void UWidget_ChatMessageRow_C::RemoveWidgetAfterDelay(float Delay)
 
 
 // Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.ExecuteUbergraph_Widget_ChatMessageRow
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ChatMessageRow_C::ExecuteUbergraph_Widget_ChatMessageRow(int EntryPoint)
+void UWidget_ChatMessageRow_C::ExecuteUbergraph_Widget_ChatMessageRow(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ChatMessageRow.Widget_ChatMessageRow_C.ExecuteUbergraph_Widget_ChatMessageRow");
 

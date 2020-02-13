@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Desc_Medkit.Desc_Medkit_C
-// 0x0000 (0x016C - 0x016C)
+// 0x0000 (0x018C - 0x018C)
 class UDesc_Medkit_C : public UBP_HealthGainDescriptor_C
 {
 public:

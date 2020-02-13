@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Spline.BP_Spline_C
-// 0x000C (0x033C - 0x0330)
+// 0x000C (0x0344 - 0x0338)
 class ABP_Spline_C : public AFGSplinePath
 {
 public:
-	int                                                mIndex;                                                   // 0x0330(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               mIsYoyoing;                                               // 0x0334(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0335(0x0003) MISSED OFFSET
-	int                                                mIncrementSign;                                           // 0x0338(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                mIndex;                                                   // 0x0338(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               mIsYoyoing;                                               // 0x033C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x033D(0x0003) MISSED OFFSET
+	int                                                mIncrementSign;                                           // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,8 +31,7 @@ public:
 	}
 
 
-	void GetNextSplineIndex(int currentIndex, int* nextIndex);
-	void UserConstructionScript();
+	void GetNextSplineIndex(int* currentIndex, int* nextIndex);
 };
 
 

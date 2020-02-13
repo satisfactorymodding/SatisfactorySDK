@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.SetActiveButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SlidingTabs_C::SetActiveButton()
 {
@@ -30,7 +30,7 @@ void UWidget_SlidingTabs_C::SetActiveButton()
 
 
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.SetupIndexOffset
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SlidingTabs_C::SetupIndexOffset()
 {
@@ -47,12 +47,12 @@ void UWidget_SlidingTabs_C::SetupIndexOffset()
 
 
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.SetActiveIndex
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Animate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          Animate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SlidingTabs_C::SetActiveIndex(int Index, bool Animate)
+void UWidget_SlidingTabs_C::SetActiveIndex(int* Index, bool* Animate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SlidingTabs.Widget_SlidingTabs_C.SetActiveIndex");
 
@@ -69,7 +69,7 @@ void UWidget_SlidingTabs_C::SetActiveIndex(int Index, bool Animate)
 
 
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SlidingTabs_C::Construct()
 {
@@ -86,7 +86,7 @@ void UWidget_SlidingTabs_C::Construct()
 
 
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.SlideLerp
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SlidingTabs_C::SlideLerp()
 {
@@ -103,7 +103,7 @@ void UWidget_SlidingTabs_C::SlideLerp()
 
 
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -123,11 +123,11 @@ void UWidget_SlidingTabs_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.ExecuteUbergraph_Widget_SlidingTabs
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SlidingTabs_C::ExecuteUbergraph_Widget_SlidingTabs(int EntryPoint)
+void UWidget_SlidingTabs_C::ExecuteUbergraph_Widget_SlidingTabs(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SlidingTabs.Widget_SlidingTabs_C.ExecuteUbergraph_Widget_SlidingTabs");
 

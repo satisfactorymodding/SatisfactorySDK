@@ -14,13 +14,8 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.UserConstructionScript
-struct AController_NonFlyingBird_C_UserConstructionScript_Params
-{
-};
-
-// Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.OnPossess
-struct AController_NonFlyingBird_C_OnPossess_Params
+// Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.ReceivePossess
+struct AController_NonFlyingBird_C_ReceivePossess_Params
 {
 	class APawn**                                      PossessedPawn;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -33,8 +28,8 @@ struct AController_NonFlyingBird_C_TryToJump_Params
 // Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature
 struct AController_NonFlyingBird_C_BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature_Params
 {
-	class AActor*                                      Actor;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FAIStimulus                                 Stimulus;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+	class AActor**                                     Actor;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FAIStimulus*                                Stimulus;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.StartPanic
@@ -45,7 +40,7 @@ struct AController_NonFlyingBird_C_StartPanic_Params
 // Function Controller_NonFlyingBird.Controller_NonFlyingBird_C.ExecuteUbergraph_Controller_NonFlyingBird
 struct AController_NonFlyingBird_C_ExecuteUbergraph_Controller_NonFlyingBird_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -52,7 +52,7 @@ struct UWidget_CompassObjectResource_C_OnObjectCentered_Params
 // Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.ExecuteUbergraph_Widget_CompassObjectResource
 struct UWidget_CompassObjectResource_C_ExecuteUbergraph_Widget_CompassObjectResource_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

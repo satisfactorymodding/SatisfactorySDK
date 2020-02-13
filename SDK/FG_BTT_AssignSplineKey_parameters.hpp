@@ -24,7 +24,7 @@ struct UBTT_AssignSplineKey_C_ReceiveExecuteAI_Params
 // Function BTT_AssignSplineKey.BTT_AssignSplineKey_C.ExecuteUbergraph_BTT_AssignSplineKey
 struct UBTT_AssignSplineKey_C_ExecuteUbergraph_BTT_AssignSplineKey_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

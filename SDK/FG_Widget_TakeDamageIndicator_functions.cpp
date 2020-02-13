@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TakeDamageIndicator.Widget_TakeDamageIndicator_C.SetRotation
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TakeDamageIndicator_C::SetRotation()
 {
@@ -30,7 +30,7 @@ void UWidget_TakeDamageIndicator_C::SetRotation()
 
 
 // Function Widget_TakeDamageIndicator.Widget_TakeDamageIndicator_C.DestroySelf
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TakeDamageIndicator_C::DestroySelf()
 {
@@ -47,7 +47,7 @@ void UWidget_TakeDamageIndicator_C::DestroySelf()
 
 
 // Function Widget_TakeDamageIndicator.Widget_TakeDamageIndicator_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TakeDamageIndicator_C::Construct()
 {
@@ -64,7 +64,7 @@ void UWidget_TakeDamageIndicator_C::Construct()
 
 
 // Function Widget_TakeDamageIndicator.Widget_TakeDamageIndicator_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -86,11 +86,11 @@ void UWidget_TakeDamageIndicator_C::Tick(struct FGeometry* MyGeometry, float* In
 
 
 // Function Widget_TakeDamageIndicator.Widget_TakeDamageIndicator_C.ExecuteUbergraph_Widget_TakeDamageIndicator
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TakeDamageIndicator_C::ExecuteUbergraph_Widget_TakeDamageIndicator(int EntryPoint)
+void UWidget_TakeDamageIndicator_C::ExecuteUbergraph_Widget_TakeDamageIndicator(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TakeDamageIndicator.Widget_TakeDamageIndicator_C.ExecuteUbergraph_Widget_TakeDamageIndicator");
 

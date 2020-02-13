@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CompassObjectBuildable.Widget_CompassObjectBuildable_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_CompassObjectBuildable_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_CompassObjectBuildable_C::Construct()
 
 
 // Function Widget_CompassObjectBuildable.Widget_CompassObjectBuildable_C.OnCompassObjectUpdated
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_CompassObjectBuildable_C::OnCompassObjectUpdated()
 {
@@ -47,7 +47,7 @@ void UWidget_CompassObjectBuildable_C::OnCompassObjectUpdated()
 
 
 // Function Widget_CompassObjectBuildable.Widget_CompassObjectBuildable_C.OnObjectCentered
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          centered                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,11 +67,11 @@ void UWidget_CompassObjectBuildable_C::OnObjectCentered(bool* centered)
 
 
 // Function Widget_CompassObjectBuildable.Widget_CompassObjectBuildable_C.ExecuteUbergraph_Widget_CompassObjectBuildable
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CompassObjectBuildable_C::ExecuteUbergraph_Widget_CompassObjectBuildable(int EntryPoint)
+void UWidget_CompassObjectBuildable_C::ExecuteUbergraph_Widget_CompassObjectBuildable(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CompassObjectBuildable.Widget_CompassObjectBuildable_C.ExecuteUbergraph_Widget_CompassObjectBuildable");
 

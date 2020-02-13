@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_BuildGunDelay.Widget_BuildGunDelay_C.GetWidgetVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_BuildGunDelay_C::GetWidgetVisibility()
 
 
 // Function Widget_BuildGunDelay.Widget_BuildGunDelay_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -56,7 +56,7 @@ void UWidget_BuildGunDelay_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 
 
 // Function Widget_BuildGunDelay.Widget_BuildGunDelay_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_BuildGunDelay_C::Construct()
 {
@@ -73,11 +73,11 @@ void UWidget_BuildGunDelay_C::Construct()
 
 
 // Function Widget_BuildGunDelay.Widget_BuildGunDelay_C.ExecuteUbergraph_Widget_BuildGunDelay
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildGunDelay_C::ExecuteUbergraph_Widget_BuildGunDelay(int EntryPoint)
+void UWidget_BuildGunDelay_C::ExecuteUbergraph_Widget_BuildGunDelay(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildGunDelay.Widget_BuildGunDelay_C.ExecuteUbergraph_Widget_BuildGunDelay");
 

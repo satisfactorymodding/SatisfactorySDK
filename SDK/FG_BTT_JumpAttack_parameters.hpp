@@ -41,7 +41,7 @@ struct UBTT_JumpAttack_C_ReceiveAbortAI_Params
 // Function BTT_JumpAttack.BTT_JumpAttack_C.ExecuteUbergraph_BTT_JumpAttack
 struct UBTT_JumpAttack_C_ExecuteUbergraph_BTT_JumpAttack_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

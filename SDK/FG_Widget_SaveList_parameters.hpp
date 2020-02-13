@@ -14,17 +14,30 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_SaveList.Widget_SaveList_C.OnSaveFileDeleted
+struct UWidget_SaveList_C_OnSaveFileDeleted_Params
+{
+	bool*                                              success;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_SaveList.Widget_SaveList_C.OnSavesUpdated
+struct UWidget_SaveList_C_OnSavesUpdated_Params
+{
+	bool*                                              success;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FSaveHeader>                         saves;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function Widget_SaveList.Widget_SaveList_C.GetSaveErrorMessage
 struct UWidget_SaveList_C_GetSaveErrorMessage_Params
 {
-	ESaveExists                                        saveFileExists;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ESaveExists*                                       saveFileExists;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       errorMessage;                                             // (Parm, OutParm)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.ConvertIntToTwoDidgitText
 struct UWidget_SaveList_C_ConvertIntToTwoDidgitText_Params
 {
-	int                                                Int;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               Int;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -41,7 +54,7 @@ struct UWidget_SaveList_C_PopulateSessions_Params
 // Function Widget_SaveList.Widget_SaveList_C.DeleteSaveGame
 struct UWidget_SaveList_C_DeleteSaveGame_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.GetDeleteButtonVisibility
@@ -53,7 +66,7 @@ struct UWidget_SaveList_C_GetDeleteButtonVisibility_Params
 // Function Widget_SaveList.Widget_SaveList_C.SaveGame
 struct UWidget_SaveList_C_SaveGame_Params
 {
-	bool                                               Confrim;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              Confrim;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.GetSaveButtonVisibility
@@ -81,14 +94,14 @@ struct UWidget_SaveList_C_RefreshSaveList_Params
 // Function Widget_SaveList.Widget_SaveList_C.InternalSetupSaveGame
 struct UWidget_SaveList_C_InternalSetupSaveGame_Params
 {
-	class UWidget_SaveListRow_C*                       saveRow;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SaveListRow_C**                      saveRow;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.InternalAddSaveGame
 struct UWidget_SaveList_C_InternalAddSaveGame_Params
 {
-	struct FSaveHeader                                 Header;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               isNewGame;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FSaveHeader*                                Header;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              isNewGame;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UWidget_SaveListRow_C*                       saveRow;                                                  // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
@@ -101,13 +114,13 @@ struct UWidget_SaveList_C_AddNewSaveGame_Params
 // Function Widget_SaveList.Widget_SaveList_C.OnSaveClickedEvent
 struct UWidget_SaveList_C_OnSaveClickedEvent_Params
 {
-	class UWidget_SaveListRow_C*                       clickedSave;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SaveListRow_C**                      clickedSave;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.AddSaveGame
 struct UWidget_SaveList_C_AddSaveGame_Params
 {
-	struct FSaveHeader                                 SaveHeader;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSaveHeader*                                SaveHeader;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	class UWidget_SaveListRow_C*                       rowWidget;                                                // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
@@ -134,26 +147,21 @@ struct UWidget_SaveList_C_ConfirmOverwriteSavePopup_Params
 // Function Widget_SaveList.Widget_SaveList_C.OnWorldSave
 struct UWidget_SaveList_C_OnWorldSave_Params
 {
-	bool                                               wasSuccessful;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       errorMessage;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function Widget_SaveList.Widget_SaveList_C.Destruct
-struct UWidget_SaveList_C_Destruct_Params
-{
+	bool*                                              WasSuccessful;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      errorMessage;                                             // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.BndEvt__Widget_SaveInputBox_K2Node_ComponentBoundEvent_7_OnTextCommited__DelegateSignature
 struct UWidget_SaveList_C_BndEvt__Widget_SaveInputBox_K2Node_ComponentBoundEvent_7_OnTextCommited__DelegateSignature_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	TEnumAsByte<ETextCommit>                           CommitMethod;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	TEnumAsByte<ETextCommit>*                          CommitMethod;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.BndEvt__Widget_SaveInputBox_K2Node_ComponentBoundEvent_9_OnTextChanged__DelegateSignature
 struct UWidget_SaveList_C_BndEvt__Widget_SaveInputBox_K2Node_ComponentBoundEvent_9_OnTextChanged__DelegateSignature_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.BndEvt__Widget_FrontEnd_Button_K2Node_ComponentBoundEvent_11_OnClicked__DelegateSignature
@@ -180,7 +188,7 @@ struct UWidget_SaveList_C_OnMenuEnter_Params
 // Function Widget_SaveList.Widget_SaveList_C.ExecuteUbergraph_Widget_SaveList
 struct UWidget_SaveList_C_ExecuteUbergraph_Widget_SaveList_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SaveList.Widget_SaveList_C.OnBackClicked__DelegateSignature

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Desc_Nut.Desc_Nut_C
-// 0x0000 (0x016C - 0x016C)
+// 0x0000 (0x018C - 0x018C)
 class UDesc_Nut_C : public UBP_HealthGainDescriptor_C
 {
 public:

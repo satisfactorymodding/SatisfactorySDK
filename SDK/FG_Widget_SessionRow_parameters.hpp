@@ -53,7 +53,7 @@ struct UWidget_SessionRow_C_GetLastSaveName_Params
 // Function Widget_SessionRow.Widget_SessionRow_C.PopulateSavesFromSession
 struct UWidget_SessionRow_C_PopulateSavesFromSession_Params
 {
-	struct FSessionSaveStruct                          session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSessionSaveStruct*                         session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_SessionRow.Widget_SessionRow_C.OnFocusReceived
@@ -121,6 +121,7 @@ struct UWidget_SessionRow_C_ConfirmDeleteSessionPopUp_Params
 // Function Widget_SessionRow.Widget_SessionRow_C.Event DeleteSession
 struct UWidget_SessionRow_C_Event_DeleteSession_Params
 {
+	bool*                                              confirmed;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SessionRow.Widget_SessionRow_C.BndEvt__mSessionRowButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
@@ -128,10 +129,16 @@ struct UWidget_SessionRow_C_BndEvt__mSessionRowButton_K2Node_ComponentBoundEvent
 {
 };
 
+// Function Widget_SessionRow.Widget_SessionRow_C.OnDeleteSessionDone
+struct UWidget_SessionRow_C_OnDeleteSessionDone_Params
+{
+	bool*                                              success;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_SessionRow.Widget_SessionRow_C.ExecuteUbergraph_Widget_SessionRow
 struct UWidget_SessionRow_C_ExecuteUbergraph_Widget_SessionRow_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

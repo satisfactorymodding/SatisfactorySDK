@@ -48,7 +48,7 @@ struct UWidget_JetPack_C_Tick_Params
 // Function Widget_JetPack.Widget_JetPack_C.ExecuteUbergraph_Widget_JetPack
 struct UWidget_JetPack_C_ExecuteUbergraph_Widget_JetPack_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_ShockShank.Attach_ShockShank_C.UserConstructionScript
-// ()
-
-void AAttach_ShockShank_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_ShockShank.Attach_ShockShank_C.UserConstructionScript");
-
-	AAttach_ShockShank_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_ShockShank.Attach_ShockShank_C.PlayUseEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector*                UseLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +33,7 @@ void AAttach_ShockShank_C::PlayUseEffect(struct FVector* UseLocation)
 
 
 // Function Attach_ShockShank.Attach_ShockShank_C.PlayAttachEffects3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_ShockShank_C::PlayAttachEffects3P()
 {
@@ -67,11 +50,11 @@ void AAttach_ShockShank_C::PlayAttachEffects3P()
 
 
 // Function Attach_ShockShank.Attach_ShockShank_C.ExecuteUbergraph_Attach_ShockShank
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_ShockShank_C::ExecuteUbergraph_Attach_ShockShank(int EntryPoint)
+void AAttach_ShockShank_C::ExecuteUbergraph_Attach_ShockShank(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_ShockShank.Attach_ShockShank_C.ExecuteUbergraph_Attach_ShockShank");
 

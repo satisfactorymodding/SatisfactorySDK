@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.OnDumpAllClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::OnDumpAllClicked()
 {
@@ -30,7 +30,7 @@ void UWidget_FreightWagon_C::OnDumpAllClicked()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.OnGrabAllClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::OnGrabAllClicked()
 {
@@ -47,7 +47,7 @@ void UWidget_FreightWagon_C::OnGrabAllClicked()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.OnSortButtonClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::OnSortButtonClicked()
 {
@@ -64,7 +64,7 @@ void UWidget_FreightWagon_C::OnSortButtonClicked()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.SetFreightWagonInventoryComponent
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::SetFreightWagonInventoryComponent()
 {
@@ -81,7 +81,7 @@ void UWidget_FreightWagon_C::SetFreightWagonInventoryComponent()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.BindStorageButtons
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::BindStorageButtons()
 {
@@ -98,7 +98,7 @@ void UWidget_FreightWagon_C::BindStorageButtons()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -122,7 +122,7 @@ void UWidget_FreightWagon_C::DropInventorySlotStack(class UWidget_InventorySlot_
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.UpdateHeaderText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::UpdateHeaderText()
 {
@@ -139,7 +139,7 @@ void UWidget_FreightWagon_C::UpdateHeaderText()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_FreightWagon_C::Init()
 {
@@ -156,7 +156,7 @@ void UWidget_FreightWagon_C::Init()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.CloseStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::CloseStorage()
 {
@@ -173,7 +173,7 @@ void UWidget_FreightWagon_C::CloseStorage()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_FreightWagon_C::Construct()
 {
@@ -190,7 +190,7 @@ void UWidget_FreightWagon_C::Construct()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.DumpAllInStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::DumpAllInStorage()
 {
@@ -207,7 +207,7 @@ void UWidget_FreightWagon_C::DumpAllInStorage()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.GrabAllFromStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_FreightWagon_C::GrabAllFromStorage()
 {
@@ -224,7 +224,7 @@ void UWidget_FreightWagon_C::GrabAllFromStorage()
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_FreightWagon_C::BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -241,11 +241,11 @@ void UWidget_FreightWagon_C::BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_On
 
 
 // Function Widget_FreightWagon.Widget_FreightWagon_C.ExecuteUbergraph_Widget_FreightWagon
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_FreightWagon_C::ExecuteUbergraph_Widget_FreightWagon(int EntryPoint)
+void UWidget_FreightWagon_C::ExecuteUbergraph_Widget_FreightWagon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_FreightWagon.Widget_FreightWagon_C.ExecuteUbergraph_Widget_FreightWagon");
 

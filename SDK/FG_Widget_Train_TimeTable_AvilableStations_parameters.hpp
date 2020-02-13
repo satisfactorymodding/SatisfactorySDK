@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_Train_TimeTable_AvilableStations.Widget_Train_TimeTable_AvilableStations_C.SetIsVisible
 struct UWidget_Train_TimeTable_AvilableStations_C_SetIsVisible_Params
 {
-	bool                                               mIsVisible;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              mIsVisible;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

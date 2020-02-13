@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.UpdateExternalTrackingHMDPosition
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform              ExternalTrackingTransform      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform*             ExternalTrackingTransform      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::UpdateExternalTrackingHMDPosition(const struct FTransform& ExternalTrackingTransform)
+void UHeadMountedDisplayFunctionLibrary::STATIC_UpdateExternalTrackingHMDPosition(struct FTransform* ExternalTrackingTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.UpdateExternalTrackingHMDPosition");
 
@@ -25,6 +25,7 @@ void UHeadMountedDisplayFunctionLibrary::UpdateExternalTrackingHMDPosition(const
 	params.ExternalTrackingTransform = ExternalTrackingTransform;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33,12 +34,12 @@ void UHeadMountedDisplayFunctionLibrary::UpdateExternalTrackingHMDPosition(const
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewScale                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         NewScale                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::SetWorldToMetersScale(class UObject* WorldContext, float NewScale)
+void UHeadMountedDisplayFunctionLibrary::STATIC_SetWorldToMetersScale(class UObject** WorldContext, float* NewScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale");
 
@@ -47,6 +48,7 @@ void UHeadMountedDisplayFunctionLibrary::SetWorldToMetersScale(class UObject* Wo
 	params.NewScale = NewScale;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,11 +57,11 @@ void UHeadMountedDisplayFunctionLibrary::SetWorldToMetersScale(class UObject* Wo
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetTrackingOrigin
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<EHMDTrackingOrigin> Origin                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EHMDTrackingOrigin>* Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::SetTrackingOrigin(TEnumAsByte<EHMDTrackingOrigin> Origin)
+void UHeadMountedDisplayFunctionLibrary::STATIC_SetTrackingOrigin(TEnumAsByte<EHMDTrackingOrigin>* Origin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetTrackingOrigin");
 
@@ -67,6 +69,7 @@ void UHeadMountedDisplayFunctionLibrary::SetTrackingOrigin(TEnumAsByte<EHMDTrack
 	params.Origin = Origin;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,11 +78,11 @@ void UHeadMountedDisplayFunctionLibrary::SetTrackingOrigin(TEnumAsByte<EHMDTrack
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenTexture
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UTexture*                InTexture                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture**               InTexture                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenTexture(class UTexture* InTexture)
+void UHeadMountedDisplayFunctionLibrary::STATIC_SetSpectatorScreenTexture(class UTexture** InTexture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenTexture");
 
@@ -87,6 +90,7 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenTexture(class UTextur
 	params.InTexture = InTexture;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,17 +99,17 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenTexture(class UTextur
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenModeTexturePlusEyeLayout
-// ()
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               EyeRectMin                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               EyeRectMax                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               TextureRectMin                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               TextureRectMax                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDrawEyeFirst                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bClearBlack                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseAlpha                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              EyeRectMin                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              EyeRectMax                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              TextureRectMin                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              TextureRectMax                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDrawEyeFirst                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bClearBlack                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bUseAlpha                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenModeTexturePlusEyeLayout(const struct FVector2D& EyeRectMin, const struct FVector2D& EyeRectMax, const struct FVector2D& TextureRectMin, const struct FVector2D& TextureRectMax, bool bDrawEyeFirst, bool bClearBlack, bool bUseAlpha)
+void UHeadMountedDisplayFunctionLibrary::STATIC_SetSpectatorScreenModeTexturePlusEyeLayout(struct FVector2D* EyeRectMin, struct FVector2D* EyeRectMax, struct FVector2D* TextureRectMin, struct FVector2D* TextureRectMax, bool* bDrawEyeFirst, bool* bClearBlack, bool* bUseAlpha)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenModeTexturePlusEyeLayout");
 
@@ -119,6 +123,7 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenModeTexturePlusEyeLay
 	params.bUseAlpha = bUseAlpha;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,11 +132,11 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenModeTexturePlusEyeLay
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenMode
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// ESpectatorScreenMode           Mode                           (Parm, ZeroConstructor, IsPlainOldData)
+// ESpectatorScreenMode*          Mode                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenMode(ESpectatorScreenMode Mode)
+void UHeadMountedDisplayFunctionLibrary::STATIC_SetSpectatorScreenMode(ESpectatorScreenMode* Mode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenMode");
 
@@ -139,6 +144,7 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenMode(ESpectatorScreen
 	params.Mode = Mode;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,12 +153,12 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenMode(ESpectatorScreen
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetClippingPlanes
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          Near                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Far                            (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Near                           (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Far                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::SetClippingPlanes(float Near, float Far)
+void UHeadMountedDisplayFunctionLibrary::STATIC_SetClippingPlanes(float* Near, float* Far)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetClippingPlanes");
 
@@ -161,6 +167,7 @@ void UHeadMountedDisplayFunctionLibrary::SetClippingPlanes(float Near, float Far
 	params.Far = Far;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,12 +176,12 @@ void UHeadMountedDisplayFunctionLibrary::SetClippingPlanes(float Near, float Far
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ResetOrientationAndPosition
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          Yaw                            (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EOrientPositionSelector> options                        (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Yaw                            (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EOrientPositionSelector>* options                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition(float Yaw, TEnumAsByte<EOrientPositionSelector> options)
+void UHeadMountedDisplayFunctionLibrary::STATIC_ResetOrientationAndPosition(float* Yaw, TEnumAsByte<EOrientPositionSelector>* options)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ResetOrientationAndPosition");
 
@@ -183,6 +190,7 @@ void UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition(float Yaw, 
 	params.options = options;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,17 +199,18 @@ void UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition(float Yaw, 
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsSpectatorScreenModeControllable
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UHeadMountedDisplayFunctionLibrary::IsSpectatorScreenModeControllable()
+bool UHeadMountedDisplayFunctionLibrary::STATIC_IsSpectatorScreenModeControllable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsSpectatorScreenModeControllable");
 
 	UHeadMountedDisplayFunctionLibrary_IsSpectatorScreenModeControllable_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,17 +221,18 @@ bool UHeadMountedDisplayFunctionLibrary::IsSpectatorScreenModeControllable()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsInLowPersistenceMode
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UHeadMountedDisplayFunctionLibrary::IsInLowPersistenceMode()
+bool UHeadMountedDisplayFunctionLibrary::STATIC_IsInLowPersistenceMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsInLowPersistenceMode");
 
 	UHeadMountedDisplayFunctionLibrary_IsInLowPersistenceMode_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,17 +243,18 @@ bool UHeadMountedDisplayFunctionLibrary::IsInLowPersistenceMode()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayEnabled
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled()
+bool UHeadMountedDisplayFunctionLibrary::STATIC_IsHeadMountedDisplayEnabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayEnabled");
 
 	UHeadMountedDisplayFunctionLibrary_IsHeadMountedDisplayEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,17 +265,18 @@ bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayConnected
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayConnected()
+bool UHeadMountedDisplayFunctionLibrary::STATIC_IsHeadMountedDisplayConnected()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayConnected");
 
 	UHeadMountedDisplayFunctionLibrary_IsHeadMountedDisplayConnected_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,12 +287,12 @@ bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayConnected()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsDeviceTracking
-// ()
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FXRDeviceId             XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FXRDeviceId*            XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UHeadMountedDisplayFunctionLibrary::IsDeviceTracking(const struct FXRDeviceId& XRDeviceId)
+bool UHeadMountedDisplayFunctionLibrary::STATIC_IsDeviceTracking(struct FXRDeviceId* XRDeviceId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsDeviceTracking");
 
@@ -288,6 +300,7 @@ bool UHeadMountedDisplayFunctionLibrary::IsDeviceTracking(const struct FXRDevice
 	params.XRDeviceId = XRDeviceId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,17 +311,18 @@ bool UHeadMountedDisplayFunctionLibrary::IsDeviceTracking(const struct FXRDevice
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.HasValidTrackingPosition
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UHeadMountedDisplayFunctionLibrary::HasValidTrackingPosition()
+bool UHeadMountedDisplayFunctionLibrary::STATIC_HasValidTrackingPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.HasValidTrackingPosition");
 
 	UHeadMountedDisplayFunctionLibrary_HasValidTrackingPosition_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -319,12 +333,12 @@ bool UHeadMountedDisplayFunctionLibrary::HasValidTrackingPosition()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetWorldToMetersScale
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UHeadMountedDisplayFunctionLibrary::GetWorldToMetersScale(class UObject* WorldContext)
+float UHeadMountedDisplayFunctionLibrary::STATIC_GetWorldToMetersScale(class UObject** WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetWorldToMetersScale");
 
@@ -332,6 +346,7 @@ float UHeadMountedDisplayFunctionLibrary::GetWorldToMetersScale(class UObject* W
 	params.WorldContext = WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -342,18 +357,19 @@ float UHeadMountedDisplayFunctionLibrary::GetWorldToMetersScale(class UObject* W
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVRFocusState
-// ()
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           bUseFocus                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bHasFocus                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::GetVRFocusState(bool* bUseFocus, bool* bHasFocus)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetVRFocusState(bool* bUseFocus, bool* bHasFocus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVRFocusState");
 
 	UHeadMountedDisplayFunctionLibrary_GetVRFocusState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -367,12 +383,12 @@ void UHeadMountedDisplayFunctionLibrary::GetVRFocusState(bool* bUseFocus, bool* 
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingToWorldTransform
-// ()
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FTransform UHeadMountedDisplayFunctionLibrary::GetTrackingToWorldTransform(class UObject* WorldContext)
+struct FTransform UHeadMountedDisplayFunctionLibrary::STATIC_GetTrackingToWorldTransform(class UObject** WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingToWorldTransform");
 
@@ -380,6 +396,7 @@ struct FTransform UHeadMountedDisplayFunctionLibrary::GetTrackingToWorldTransfor
 	params.WorldContext = WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -390,7 +407,7 @@ struct FTransform UHeadMountedDisplayFunctionLibrary::GetTrackingToWorldTransfor
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingSensorParameters
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 Origin                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -402,9 +419,9 @@ struct FTransform UHeadMountedDisplayFunctionLibrary::GetTrackingToWorldTransfor
 // float                          NearPlane                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          FarPlane                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsActive                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::GetTrackingSensorParameters(int Index, struct FVector* Origin, struct FRotator* Rotation, float* LeftFOV, float* RightFOV, float* TopFOV, float* BottomFOV, float* Distance, float* NearPlane, float* FarPlane, bool* IsActive)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetTrackingSensorParameters(int* Index, struct FVector* Origin, struct FRotator* Rotation, float* LeftFOV, float* RightFOV, float* TopFOV, float* BottomFOV, float* Distance, float* NearPlane, float* FarPlane, bool* IsActive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingSensorParameters");
 
@@ -412,6 +429,7 @@ void UHeadMountedDisplayFunctionLibrary::GetTrackingSensorParameters(int Index, 
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -441,17 +459,18 @@ void UHeadMountedDisplayFunctionLibrary::GetTrackingSensorParameters(int Index, 
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingOrigin
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EHMDTrackingOrigin> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EHMDTrackingOrigin> UHeadMountedDisplayFunctionLibrary::GetTrackingOrigin()
+TEnumAsByte<EHMDTrackingOrigin> UHeadMountedDisplayFunctionLibrary::STATIC_GetTrackingOrigin()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingOrigin");
 
 	UHeadMountedDisplayFunctionLibrary_GetTrackingOrigin_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -462,17 +481,18 @@ TEnumAsByte<EHMDTrackingOrigin> UHeadMountedDisplayFunctionLibrary::GetTrackingO
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetScreenPercentage
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UHeadMountedDisplayFunctionLibrary::GetScreenPercentage()
+float UHeadMountedDisplayFunctionLibrary::STATIC_GetScreenPercentage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetScreenPercentage");
 
 	UHeadMountedDisplayFunctionLibrary_GetScreenPercentage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -483,7 +503,7 @@ float UHeadMountedDisplayFunctionLibrary::GetScreenPercentage()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 CameraOrigin                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                CameraRotation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -493,13 +513,14 @@ float UHeadMountedDisplayFunctionLibrary::GetScreenPercentage()
 // float                          NearPlane                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          FarPlane                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::GetPositionalTrackingCameraParameters(struct FVector* CameraOrigin, struct FRotator* CameraRotation, float* HFOV, float* VFOV, float* CameraDistance, float* NearPlane, float* FarPlane)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetPositionalTrackingCameraParameters(struct FVector* CameraOrigin, struct FRotator* CameraRotation, float* HFOV, float* VFOV, float* CameraDistance, float* NearPlane, float* FarPlane)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters");
 
 	UHeadMountedDisplayFunctionLibrary_GetPositionalTrackingCameraParameters_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -523,17 +544,18 @@ void UHeadMountedDisplayFunctionLibrary::GetPositionalTrackingCameraParameters(s
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPixelDensity
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UHeadMountedDisplayFunctionLibrary::GetPixelDensity()
+float UHeadMountedDisplayFunctionLibrary::STATIC_GetPixelDensity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPixelDensity");
 
 	UHeadMountedDisplayFunctionLibrary_GetPixelDensity_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -544,18 +566,19 @@ float UHeadMountedDisplayFunctionLibrary::GetPixelDensity()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FRotator                DeviceRotation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 DevicePosition                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::GetOrientationAndPosition(struct FRotator* DeviceRotation, struct FVector* DevicePosition)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetOrientationAndPosition(struct FRotator* DeviceRotation, struct FVector* DevicePosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition");
 
 	UHeadMountedDisplayFunctionLibrary_GetOrientationAndPosition_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -569,17 +592,18 @@ void UHeadMountedDisplayFunctionLibrary::GetOrientationAndPosition(struct FRotat
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetNumOfTrackingSensors
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UHeadMountedDisplayFunctionLibrary::GetNumOfTrackingSensors()
+int UHeadMountedDisplayFunctionLibrary::STATIC_GetNumOfTrackingSensors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetNumOfTrackingSensors");
 
 	UHeadMountedDisplayFunctionLibrary_GetNumOfTrackingSensors_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -590,17 +614,18 @@ int UHeadMountedDisplayFunctionLibrary::GetNumOfTrackingSensors()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDWornState
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EHMDWornState>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EHMDWornState> UHeadMountedDisplayFunctionLibrary::GetHMDWornState()
+TEnumAsByte<EHMDWornState> UHeadMountedDisplayFunctionLibrary::STATIC_GetHMDWornState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDWornState");
 
 	UHeadMountedDisplayFunctionLibrary_GetHMDWornState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -611,17 +636,18 @@ TEnumAsByte<EHMDWornState> UHeadMountedDisplayFunctionLibrary::GetHMDWornState()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDDeviceName
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName UHeadMountedDisplayFunctionLibrary::GetHMDDeviceName()
+struct FName UHeadMountedDisplayFunctionLibrary::STATIC_GetHMDDeviceName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDDeviceName");
 
 	UHeadMountedDisplayFunctionLibrary_GetHMDDeviceName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -632,16 +658,16 @@ struct FName UHeadMountedDisplayFunctionLibrary::GetHMDDeviceName()
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDeviceWorldPose
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FXRDeviceId             XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
+// class UObject**                WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FXRDeviceId*            XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           bIsTracked                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Orientation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bHasPositionalTracking         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Position                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::GetDeviceWorldPose(class UObject* WorldContext, const struct FXRDeviceId& XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetDeviceWorldPose(class UObject** WorldContext, struct FXRDeviceId* XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDeviceWorldPose");
 
@@ -650,6 +676,7 @@ void UHeadMountedDisplayFunctionLibrary::GetDeviceWorldPose(class UObject* World
 	params.XRDeviceId = XRDeviceId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -667,15 +694,15 @@ void UHeadMountedDisplayFunctionLibrary::GetDeviceWorldPose(class UObject* World
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDevicePose
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FXRDeviceId             XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FXRDeviceId*            XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           bIsTracked                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Orientation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bHasPositionalTracking         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Position                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::GetDevicePose(const struct FXRDeviceId& XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetDevicePose(struct FXRDeviceId* XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDevicePose");
 
@@ -683,6 +710,7 @@ void UHeadMountedDisplayFunctionLibrary::GetDevicePose(const struct FXRDeviceId&
 	params.XRDeviceId = XRDeviceId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -700,13 +728,13 @@ void UHeadMountedDisplayFunctionLibrary::GetDevicePose(const struct FXRDeviceId&
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnumerateTrackedDevices
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   SystemId                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// EXRTrackedDeviceType           DeviceType                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SystemId                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EXRTrackedDeviceType*          DeviceType                     (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FXRDeviceId>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::EnumerateTrackedDevices(const struct FName& SystemId, EXRTrackedDeviceType DeviceType)
+TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::STATIC_EnumerateTrackedDevices(struct FName* SystemId, EXRTrackedDeviceType* DeviceType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnumerateTrackedDevices");
 
@@ -715,6 +743,7 @@ TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::EnumerateTrackedD
 	params.DeviceType = DeviceType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -725,11 +754,11 @@ TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::EnumerateTrackedD
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableLowPersistenceMode
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::EnableLowPersistenceMode(bool bEnable)
+void UHeadMountedDisplayFunctionLibrary::STATIC_EnableLowPersistenceMode(bool* bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableLowPersistenceMode");
 
@@ -737,6 +766,7 @@ void UHeadMountedDisplayFunctionLibrary::EnableLowPersistenceMode(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -745,12 +775,12 @@ void UHeadMountedDisplayFunctionLibrary::EnableLowPersistenceMode(bool bEnable)
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableHMD
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UHeadMountedDisplayFunctionLibrary::EnableHMD(bool bEnable)
+bool UHeadMountedDisplayFunctionLibrary::STATIC_EnableHMD(bool* bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableHMD");
 
@@ -758,6 +788,7 @@ bool UHeadMountedDisplayFunctionLibrary::EnableHMD(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -768,11 +799,11 @@ bool UHeadMountedDisplayFunctionLibrary::EnableHMD(bool bEnable)
 
 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.CalibrateExternalTrackingToHMD
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform              ExternalTrackingTransform      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform*             ExternalTrackingTransform      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::CalibrateExternalTrackingToHMD(const struct FTransform& ExternalTrackingTransform)
+void UHeadMountedDisplayFunctionLibrary::STATIC_CalibrateExternalTrackingToHMD(struct FTransform* ExternalTrackingTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.CalibrateExternalTrackingToHMD");
 
@@ -780,6 +811,7 @@ void UHeadMountedDisplayFunctionLibrary::CalibrateExternalTrackingToHMD(const st
 	params.ExternalTrackingTransform = ExternalTrackingTransform;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -788,11 +820,11 @@ void UHeadMountedDisplayFunctionLibrary::CalibrateExternalTrackingToHMD(const st
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetTrackingSource
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EControllerHand                NewSource                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EControllerHand*               NewSource                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionControllerComponent::SetTrackingSource(EControllerHand NewSource)
+void UMotionControllerComponent::SetTrackingSource(EControllerHand* NewSource)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetTrackingSource");
 
@@ -800,6 +832,7 @@ void UMotionControllerComponent::SetTrackingSource(EControllerHand NewSource)
 	params.NewSource = NewSource;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -808,11 +841,11 @@ void UMotionControllerComponent::SetTrackingSource(EControllerHand NewSource)
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetTrackingMotionSource
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   NewSource                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  NewSource                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionControllerComponent::SetTrackingMotionSource(const struct FName& NewSource)
+void UMotionControllerComponent::SetTrackingMotionSource(struct FName* NewSource)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetTrackingMotionSource");
 
@@ -820,6 +853,7 @@ void UMotionControllerComponent::SetTrackingMotionSource(const struct FName& New
 	params.NewSource = NewSource;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -828,11 +862,11 @@ void UMotionControllerComponent::SetTrackingMotionSource(const struct FName& New
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetShowDeviceModel
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bShowControllerModel           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bShowControllerModel           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionControllerComponent::SetShowDeviceModel(bool bShowControllerModel)
+void UMotionControllerComponent::SetShowDeviceModel(bool* bShowControllerModel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetShowDeviceModel");
 
@@ -840,6 +874,7 @@ void UMotionControllerComponent::SetShowDeviceModel(bool bShowControllerModel)
 	params.bShowControllerModel = bShowControllerModel;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -848,11 +883,11 @@ void UMotionControllerComponent::SetShowDeviceModel(bool bShowControllerModel)
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetDisplayModelSource
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   NewDisplayModelSource          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  NewDisplayModelSource          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionControllerComponent::SetDisplayModelSource(const struct FName& NewDisplayModelSource)
+void UMotionControllerComponent::SetDisplayModelSource(struct FName* NewDisplayModelSource)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetDisplayModelSource");
 
@@ -860,6 +895,7 @@ void UMotionControllerComponent::SetDisplayModelSource(const struct FName& NewDi
 	params.NewDisplayModelSource = NewDisplayModelSource;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -868,11 +904,11 @@ void UMotionControllerComponent::SetDisplayModelSource(const struct FName& NewDi
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetCustomDisplayMesh
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UStaticMesh*             NewDisplayMesh                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh**            NewDisplayMesh                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionControllerComponent::SetCustomDisplayMesh(class UStaticMesh* NewDisplayMesh)
+void UMotionControllerComponent::SetCustomDisplayMesh(class UStaticMesh** NewDisplayMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetCustomDisplayMesh");
 
@@ -880,6 +916,7 @@ void UMotionControllerComponent::SetCustomDisplayMesh(class UStaticMesh* NewDisp
 	params.NewDisplayMesh = NewDisplayMesh;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -888,11 +925,11 @@ void UMotionControllerComponent::SetCustomDisplayMesh(class UStaticMesh* NewDisp
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetAssociatedPlayerIndex
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NewPlayer                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NewPlayer                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionControllerComponent::SetAssociatedPlayerIndex(int NewPlayer)
+void UMotionControllerComponent::SetAssociatedPlayerIndex(int* NewPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetAssociatedPlayerIndex");
 
@@ -900,6 +937,7 @@ void UMotionControllerComponent::SetAssociatedPlayerIndex(int NewPlayer)
 	params.NewPlayer = NewPlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -908,7 +946,7 @@ void UMotionControllerComponent::SetAssociatedPlayerIndex(int NewPlayer)
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.OnMotionControllerUpdated
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UMotionControllerComponent::OnMotionControllerUpdated()
 {
@@ -925,7 +963,7 @@ void UMotionControllerComponent::OnMotionControllerUpdated()
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.IsTracked
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -936,6 +974,7 @@ bool UMotionControllerComponent::IsTracked()
 	UMotionControllerComponent_IsTracked_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -946,7 +985,7 @@ bool UMotionControllerComponent::IsTracked()
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.GetTrackingSource
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EControllerHand                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -957,6 +996,7 @@ EControllerHand UMotionControllerComponent::GetTrackingSource()
 	UMotionControllerComponent_GetTrackingSource_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -967,13 +1007,13 @@ EControllerHand UMotionControllerComponent::GetTrackingSource()
 
 
 // Function HeadMountedDisplay.MotionControllerComponent.GetParameterValue
-// ()
+// (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   InName                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  InName                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bValueFound                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UMotionControllerComponent::GetParameterValue(const struct FName& InName, bool* bValueFound)
+float UMotionControllerComponent::GetParameterValue(struct FName* InName, bool* bValueFound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.GetParameterValue");
 
@@ -981,6 +1021,7 @@ float UMotionControllerComponent::GetParameterValue(const struct FName& InName, 
 	params.InName = InName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -994,11 +1035,11 @@ float UMotionControllerComponent::GetParameterValue(const struct FName& InName, 
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.SetIsControllerMotionTrackingEnabledByDefault
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          enable                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionTrackedDeviceFunctionLibrary::SetIsControllerMotionTrackingEnabledByDefault(bool enable)
+void UMotionTrackedDeviceFunctionLibrary::STATIC_SetIsControllerMotionTrackingEnabledByDefault(bool* enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.SetIsControllerMotionTrackingEnabledByDefault");
 
@@ -1006,6 +1047,7 @@ void UMotionTrackedDeviceFunctionLibrary::SetIsControllerMotionTrackingEnabledBy
 	params.enable = enable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1014,13 +1056,13 @@ void UMotionTrackedDeviceFunctionLibrary::SetIsControllerMotionTrackingEnabledBy
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForSource
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SourceName                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SourceName                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForSource(int PlayerIndex, const struct FName& SourceName)
+bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionTrackingEnabledForSource(int* PlayerIndex, struct FName* SourceName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForSource");
 
@@ -1029,6 +1071,7 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForSource(int P
 	params.SourceName = SourceName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1039,13 +1082,13 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForSource(int P
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForDevice
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// EControllerHand                Hand                           (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// EControllerHand*               Hand                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForDevice(int PlayerIndex, EControllerHand Hand)
+bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionTrackingEnabledForDevice(int* PlayerIndex, EControllerHand* Hand)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForDevice");
 
@@ -1054,6 +1097,7 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForDevice(int P
 	params.Hand = Hand;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1064,12 +1108,12 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForDevice(int P
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForComponent
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UMotionControllerComponent* MotionControllerComponent      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UMotionControllerComponent** MotionControllerComponent      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForComponent(class UMotionControllerComponent* MotionControllerComponent)
+bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionTrackingEnabledForComponent(class UMotionControllerComponent** MotionControllerComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForComponent");
 
@@ -1077,6 +1121,7 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForComponent(cl
 	params.MotionControllerComponent = MotionControllerComponent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1087,17 +1132,18 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForComponent(cl
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackedDeviceCountManagementNecessary
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackedDeviceCountManagementNecessary()
+bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionTrackedDeviceCountManagementNecessary()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackedDeviceCountManagementNecessary");
 
 	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackedDeviceCountManagementNecessary_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1108,13 +1154,13 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackedDeviceCountManagementNe
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionSourceTracking
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SourceName                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SourceName                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMotionTrackedDeviceFunctionLibrary::IsMotionSourceTracking(int PlayerIndex, const struct FName& SourceName)
+bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionSourceTracking(int* PlayerIndex, struct FName* SourceName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionSourceTracking");
 
@@ -1123,6 +1169,7 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionSourceTracking(int PlayerIndex
 	params.SourceName = SourceName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1133,17 +1180,18 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionSourceTracking(int PlayerIndex
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMotionTrackingEnabledControllerCount
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UMotionTrackedDeviceFunctionLibrary::GetMotionTrackingEnabledControllerCount()
+int UMotionTrackedDeviceFunctionLibrary::STATIC_GetMotionTrackingEnabledControllerCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMotionTrackingEnabledControllerCount");
 
 	UMotionTrackedDeviceFunctionLibrary_GetMotionTrackingEnabledControllerCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1154,17 +1202,18 @@ int UMotionTrackedDeviceFunctionLibrary::GetMotionTrackingEnabledControllerCount
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMaximumMotionTrackedControllerCount
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UMotionTrackedDeviceFunctionLibrary::GetMaximumMotionTrackedControllerCount()
+int UMotionTrackedDeviceFunctionLibrary::STATIC_GetMaximumMotionTrackedControllerCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMaximumMotionTrackedControllerCount");
 
 	UMotionTrackedDeviceFunctionLibrary_GetMaximumMotionTrackedControllerCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1175,17 +1224,18 @@ int UMotionTrackedDeviceFunctionLibrary::GetMaximumMotionTrackedControllerCount(
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetActiveTrackingSystemName
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName UMotionTrackedDeviceFunctionLibrary::GetActiveTrackingSystemName()
+struct FName UMotionTrackedDeviceFunctionLibrary::STATIC_GetActiveTrackingSystemName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetActiveTrackingSystemName");
 
 	UMotionTrackedDeviceFunctionLibrary_GetActiveTrackingSystemName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1196,17 +1246,18 @@ struct FName UMotionTrackedDeviceFunctionLibrary::GetActiveTrackingSystemName()
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FName> UMotionTrackedDeviceFunctionLibrary::EnumerateMotionSources()
+TArray<struct FName> UMotionTrackedDeviceFunctionLibrary::STATIC_EnumerateMotionSources()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources");
 
 	UMotionTrackedDeviceFunctionLibrary_EnumerateMotionSources_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1217,13 +1268,13 @@ TArray<struct FName> UMotionTrackedDeviceFunctionLibrary::EnumerateMotionSources
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfSource
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SourceName                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SourceName                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfSource(int PlayerIndex, const struct FName& SourceName)
+bool UMotionTrackedDeviceFunctionLibrary::STATIC_EnableMotionTrackingOfSource(int* PlayerIndex, struct FName* SourceName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfSource");
 
@@ -1232,6 +1283,7 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfSource(int Playe
 	params.SourceName = SourceName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1242,13 +1294,13 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfSource(int Playe
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfDevice
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// EControllerHand                Hand                           (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// EControllerHand*               Hand                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfDevice(int PlayerIndex, EControllerHand Hand)
+bool UMotionTrackedDeviceFunctionLibrary::STATIC_EnableMotionTrackingOfDevice(int* PlayerIndex, EControllerHand* Hand)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfDevice");
 
@@ -1257,6 +1309,7 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfDevice(int Playe
 	params.Hand = Hand;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1267,12 +1320,12 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfDevice(int Playe
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingForComponent
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UMotionControllerComponent* MotionControllerComponent      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UMotionControllerComponent** MotionControllerComponent      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingForComponent(class UMotionControllerComponent* MotionControllerComponent)
+bool UMotionTrackedDeviceFunctionLibrary::STATIC_EnableMotionTrackingForComponent(class UMotionControllerComponent** MotionControllerComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingForComponent");
 
@@ -1280,6 +1333,7 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingForComponent(class
 	params.MotionControllerComponent = MotionControllerComponent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1290,12 +1344,12 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingForComponent(class
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfSource
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SourceName                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SourceName                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfSource(int PlayerIndex, const struct FName& SourceName)
+void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingOfSource(int* PlayerIndex, struct FName* SourceName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfSource");
 
@@ -1304,6 +1358,7 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfSource(int Play
 	params.SourceName = SourceName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1312,12 +1367,12 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfSource(int Play
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfDevice
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// EControllerHand                Hand                           (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// EControllerHand*               Hand                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfDevice(int PlayerIndex, EControllerHand Hand)
+void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingOfDevice(int* PlayerIndex, EControllerHand* Hand)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfDevice");
 
@@ -1326,6 +1381,7 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfDevice(int Play
 	params.Hand = Hand;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1334,11 +1390,11 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfDevice(int Play
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfControllersForPlayer
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PlayerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfControllersForPlayer(int PlayerIndex)
+void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingOfControllersForPlayer(int* PlayerIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfControllersForPlayer");
 
@@ -1346,6 +1402,7 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfControllersForP
 	params.PlayerIndex = PlayerIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1354,15 +1411,16 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfControllersForP
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfAllControllers
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 
-void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfAllControllers()
+void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingOfAllControllers()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfAllControllers");
 
 	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfAllControllers_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1371,11 +1429,11 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfAllControllers(
 
 
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingForComponent
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UMotionControllerComponent* MotionControllerComponent      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UMotionControllerComponent** MotionControllerComponent      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingForComponent(class UMotionControllerComponent* MotionControllerComponent)
+void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingForComponent(class UMotionControllerComponent** MotionControllerComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingForComponent");
 
@@ -1383,6 +1441,7 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingForComponent(clas
 	params.MotionControllerComponent = MotionControllerComponent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1391,17 +1450,17 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingForComponent(clas
 
 
 // Function HeadMountedDisplay.XRAssetFunctionLibrary.AddNamedDeviceVisualizationComponentBlocking
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SystemName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   DeviceName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bManualAttachment              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              RelativeTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor**                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SystemName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  DeviceName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bManualAttachment              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform*             RelativeTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FXRDeviceId             XRDeviceId                     (Parm, OutParm)
 // class UPrimitiveComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UPrimitiveComponent* UXRAssetFunctionLibrary::AddNamedDeviceVisualizationComponentBlocking(class AActor* Target, const struct FName& SystemName, const struct FName& DeviceName, bool bManualAttachment, const struct FTransform& RelativeTransform, struct FXRDeviceId* XRDeviceId)
+class UPrimitiveComponent* UXRAssetFunctionLibrary::STATIC_AddNamedDeviceVisualizationComponentBlocking(class AActor** Target, struct FName* SystemName, struct FName* DeviceName, bool* bManualAttachment, struct FTransform* RelativeTransform, struct FXRDeviceId* XRDeviceId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.XRAssetFunctionLibrary.AddNamedDeviceVisualizationComponentBlocking");
 
@@ -1413,6 +1472,7 @@ class UPrimitiveComponent* UXRAssetFunctionLibrary::AddNamedDeviceVisualizationC
 	params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1426,15 +1486,15 @@ class UPrimitiveComponent* UXRAssetFunctionLibrary::AddNamedDeviceVisualizationC
 
 
 // Function HeadMountedDisplay.XRAssetFunctionLibrary.AddDeviceVisualizationComponentBlocking
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FXRDeviceId             XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bManualAttachment              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              RelativeTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor**                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FXRDeviceId*            XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
+// bool*                          bManualAttachment              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform*             RelativeTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // class UPrimitiveComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UPrimitiveComponent* UXRAssetFunctionLibrary::AddDeviceVisualizationComponentBlocking(class AActor* Target, const struct FXRDeviceId& XRDeviceId, bool bManualAttachment, const struct FTransform& RelativeTransform)
+class UPrimitiveComponent* UXRAssetFunctionLibrary::STATIC_AddDeviceVisualizationComponentBlocking(class AActor** Target, struct FXRDeviceId* XRDeviceId, bool* bManualAttachment, struct FTransform* RelativeTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.XRAssetFunctionLibrary.AddDeviceVisualizationComponentBlocking");
 
@@ -1445,6 +1505,7 @@ class UPrimitiveComponent* UXRAssetFunctionLibrary::AddDeviceVisualizationCompon
 	params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1455,18 +1516,18 @@ class UPrimitiveComponent* UXRAssetFunctionLibrary::AddDeviceVisualizationCompon
 
 
 // Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddNamedDeviceVisualizationComponentAsync
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SystemName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   DeviceName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bManualAttachment              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              RelativeTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor**                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SystemName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  DeviceName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bManualAttachment              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform*             RelativeTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FXRDeviceId             XRDeviceId                     (Parm, OutParm)
 // class UPrimitiveComponent*     NewComponent                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAsyncTask_LoadXRDeviceVisComponent* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::AddNamedDeviceVisualizationComponentAsync(class AActor* Target, const struct FName& SystemName, const struct FName& DeviceName, bool bManualAttachment, const struct FTransform& RelativeTransform, struct FXRDeviceId* XRDeviceId, class UPrimitiveComponent** NewComponent)
+class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::STATIC_AddNamedDeviceVisualizationComponentAsync(class AActor** Target, struct FName* SystemName, struct FName* DeviceName, bool* bManualAttachment, struct FTransform* RelativeTransform, struct FXRDeviceId* XRDeviceId, class UPrimitiveComponent** NewComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddNamedDeviceVisualizationComponentAsync");
 
@@ -1478,6 +1539,7 @@ class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::
 	params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1493,16 +1555,16 @@ class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::
 
 
 // Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddDeviceVisualizationComponentAsync
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FXRDeviceId             XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bManualAttachment              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              RelativeTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor**                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FXRDeviceId*            XRDeviceId                     (ConstParm, Parm, OutParm, ReferenceParm)
+// bool*                          bManualAttachment              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform*             RelativeTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // class UPrimitiveComponent*     NewComponent                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAsyncTask_LoadXRDeviceVisComponent* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::AddDeviceVisualizationComponentAsync(class AActor* Target, const struct FXRDeviceId& XRDeviceId, bool bManualAttachment, const struct FTransform& RelativeTransform, class UPrimitiveComponent** NewComponent)
+class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::STATIC_AddDeviceVisualizationComponentAsync(class AActor** Target, struct FXRDeviceId* XRDeviceId, bool* bManualAttachment, struct FTransform* RelativeTransform, class UPrimitiveComponent** NewComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddDeviceVisualizationComponentAsync");
 
@@ -1513,6 +1575,7 @@ class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::
 	params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

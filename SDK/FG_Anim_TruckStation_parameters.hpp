@@ -43,13 +43,13 @@ struct UAnim_TruckStation_C_BlueprintInitializeAnimation_Params
 // Function Anim_TruckStation.Anim_TruckStation_C.HasPowerChanged
 struct UAnim_TruckStation_C_HasPowerChanged_Params
 {
-	bool                                               State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Anim_TruckStation.Anim_TruckStation_C.ExecuteUbergraph_Anim_TruckStation
 struct UAnim_TruckStation_C_ExecuteUbergraph_Anim_TruckStation_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

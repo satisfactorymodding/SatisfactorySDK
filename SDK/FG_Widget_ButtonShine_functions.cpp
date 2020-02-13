@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ButtonShine.Widget_ButtonShine_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ButtonShine_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_ButtonShine_C::Construct()
 
 
 // Function Widget_ButtonShine.Widget_ButtonShine_C.HoverCheck
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ButtonShine_C::HoverCheck()
 {
@@ -47,7 +47,7 @@ void UWidget_ButtonShine_C::HoverCheck()
 
 
 // Function Widget_ButtonShine.Widget_ButtonShine_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ButtonShine_C::Destruct()
 {
@@ -64,7 +64,7 @@ void UWidget_ButtonShine_C::Destruct()
 
 
 // Function Widget_ButtonShine.Widget_ButtonShine_C.PlayShineAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ButtonShine_C::PlayShineAnim()
 {
@@ -81,11 +81,11 @@ void UWidget_ButtonShine_C::PlayShineAnim()
 
 
 // Function Widget_ButtonShine.Widget_ButtonShine_C.ExecuteUbergraph_Widget_ButtonShine
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ButtonShine_C::ExecuteUbergraph_Widget_ButtonShine(int EntryPoint)
+void UWidget_ButtonShine_C::ExecuteUbergraph_Widget_ButtonShine(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ButtonShine.Widget_ButtonShine_C.ExecuteUbergraph_Widget_ButtonShine");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_UpdateAttackPattern.BTT_UpdateAttackPattern_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_UpdateAttackPattern_C::ReceiveExecuteAI(class AAIController** OwnerCon
 
 
 // Function BTT_UpdateAttackPattern.BTT_UpdateAttackPattern_C.ExecuteUbergraph_BTT_UpdateAttackPattern
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_UpdateAttackPattern_C::ExecuteUbergraph_BTT_UpdateAttackPattern(int EntryPoint)
+void UBTT_UpdateAttackPattern_C::ExecuteUbergraph_BTT_UpdateAttackPattern(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_UpdateAttackPattern.BTT_UpdateAttackPattern_C.ExecuteUbergraph_BTT_UpdateAttackPattern");
 

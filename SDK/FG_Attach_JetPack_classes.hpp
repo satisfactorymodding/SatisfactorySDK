@@ -33,11 +33,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void OnStopThrusting();
 	void OnStartThrusting();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_Attach_JetPack(int EntryPoint);
+	void ExecuteUbergraph_Attach_JetPack(int* EntryPoint);
 };
 
 

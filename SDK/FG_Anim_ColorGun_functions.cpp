@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_ColorGun.Anim_ColorGun_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun_AnimGraphNode_TransitionResult_4B344B1E4821A1BCC5B0A18790FC2036
-// ()
+// (BlueprintEvent)
 
 void UAnim_ColorGun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun_AnimGraphNode_TransitionResult_4B344B1E4821A1BCC5B0A18790FC2036()
 {
@@ -30,7 +30,7 @@ void UAnim_ColorGun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun
 
 
 // Function Anim_ColorGun.Anim_ColorGun_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun_AnimGraphNode_TransitionResult_6687313246ECAA6943C95AA89D3AF8AD
-// ()
+// (BlueprintEvent)
 
 void UAnim_ColorGun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun_AnimGraphNode_TransitionResult_6687313246ECAA6943C95AA89D3AF8AD()
 {
@@ -47,7 +47,7 @@ void UAnim_ColorGun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun
 
 
 // Function Anim_ColorGun.Anim_ColorGun_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun_AnimGraphNode_TransitionResult_661D43734BC356176DB5B5B47B93C0EA
-// ()
+// (BlueprintEvent)
 
 void UAnim_ColorGun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun_AnimGraphNode_TransitionResult_661D43734BC356176DB5B5B47B93C0EA()
 {
@@ -64,7 +64,7 @@ void UAnim_ColorGun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun
 
 
 // Function Anim_ColorGun.Anim_ColorGun_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun_AnimGraphNode_TransitionResult_A12C331148FC48EA84995FAD20060B47
-// ()
+// (BlueprintEvent)
 
 void UAnim_ColorGun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun_AnimGraphNode_TransitionResult_A12C331148FC48EA84995FAD20060B47()
 {
@@ -81,7 +81,7 @@ void UAnim_ColorGun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_ColorGun
 
 
 // Function Anim_ColorGun.Anim_ColorGun_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -101,11 +101,11 @@ void UAnim_ColorGun_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_ColorGun.Anim_ColorGun_C.ExecuteUbergraph_Anim_ColorGun
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_ColorGun_C::ExecuteUbergraph_Anim_ColorGun(int EntryPoint)
+void UAnim_ColorGun_C::ExecuteUbergraph_Anim_ColorGun(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_ColorGun.Anim_ColorGun_C.ExecuteUbergraph_Anim_ColorGun");
 

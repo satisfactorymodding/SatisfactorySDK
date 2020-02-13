@@ -39,11 +39,6 @@ struct AEquip_JetPack_C_CanThrust_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Equip_JetPack.Equip_JetPack_C.UserConstructionScript
-struct AEquip_JetPack_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_JetPack.Equip_JetPack_C.OnStartThrusting
 struct AEquip_JetPack_C_OnStartThrusting_Params
 {
@@ -63,13 +58,13 @@ struct AEquip_JetPack_C_ReceiveTick_Params
 // Function Equip_JetPack.Equip_JetPack_C.ConsumeFuel
 struct AEquip_JetPack_C_ConsumeFuel_Params
 {
-	float                                              Delta;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Delta;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Equip_JetPack.Equip_JetPack_C.RegenerateFuel
 struct AEquip_JetPack_C_RegenerateFuel_Params
 {
-	float                                              Delta;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Delta;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Equip_JetPack.Equip_JetPack_C.ReceiveBeginPlay
@@ -90,7 +85,7 @@ struct AEquip_JetPack_C_WasUnEquipped_Params
 // Function Equip_JetPack.Equip_JetPack_C.ExecuteUbergraph_Equip_JetPack
 struct AEquip_JetPack_C_ExecuteUbergraph_Equip_JetPack_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -24,7 +24,7 @@ struct UBTT_SetSpeed_C_ReceiveExecuteAI_Params
 // Function BTT_SetSpeed.BTT_SetSpeed_C.ExecuteUbergraph_BTT_SetSpeed
 struct UBTT_SetSpeed_C_ExecuteUbergraph_BTT_SetSpeed_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

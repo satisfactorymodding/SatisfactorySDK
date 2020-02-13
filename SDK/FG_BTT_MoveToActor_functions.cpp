@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_MoveToActor.BTT_MoveToActor_C.OnFail_A86C15A64D326131272CCA93E74F5421
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPathFollowingResult>* MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveToActor_C::OnFail_A86C15A64D326131272CCA93E74F5421(TEnumAsByte<EPathFollowingResult> MovementResult)
+void UBTT_MoveToActor_C::OnFail_A86C15A64D326131272CCA93E74F5421(TEnumAsByte<EPathFollowingResult>* MovementResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveToActor.BTT_MoveToActor_C.OnFail_A86C15A64D326131272CCA93E74F5421");
 
@@ -33,11 +33,11 @@ void UBTT_MoveToActor_C::OnFail_A86C15A64D326131272CCA93E74F5421(TEnumAsByte<EPa
 
 
 // Function BTT_MoveToActor.BTT_MoveToActor_C.OnSuccess_A86C15A64D326131272CCA93E74F5421
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPathFollowingResult>* MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveToActor_C::OnSuccess_A86C15A64D326131272CCA93E74F5421(TEnumAsByte<EPathFollowingResult> MovementResult)
+void UBTT_MoveToActor_C::OnSuccess_A86C15A64D326131272CCA93E74F5421(TEnumAsByte<EPathFollowingResult>* MovementResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveToActor.BTT_MoveToActor_C.OnSuccess_A86C15A64D326131272CCA93E74F5421");
 
@@ -53,7 +53,7 @@ void UBTT_MoveToActor_C::OnSuccess_A86C15A64D326131272CCA93E74F5421(TEnumAsByte<
 
 
 // Function BTT_MoveToActor.BTT_MoveToActor_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -75,11 +75,11 @@ void UBTT_MoveToActor_C::ReceiveExecuteAI(class AAIController** OwnerController,
 
 
 // Function BTT_MoveToActor.BTT_MoveToActor_C.ExecuteUbergraph_BTT_MoveToActor
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveToActor_C::ExecuteUbergraph_BTT_MoveToActor(int EntryPoint)
+void UBTT_MoveToActor_C::ExecuteUbergraph_BTT_MoveToActor(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveToActor.BTT_MoveToActor_C.ExecuteUbergraph_BTT_MoveToActor");
 

@@ -57,7 +57,7 @@ struct UAnim_MinerMk2_C_AnimNotify_StartEngineLoop_Params
 // Function Anim_MinerMk2.Anim_MinerMk2_C.ExecuteUbergraph_Anim_MinerMk2
 struct UAnim_MinerMk2_C_ExecuteUbergraph_Anim_MinerMk2_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

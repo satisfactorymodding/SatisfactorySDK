@@ -64,11 +64,11 @@ bool UObject::IsA(UClass* cmp) const
 }
 
 // Function CoreUObject.Object.ExecuteUbergraph
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UObject::ExecuteUbergraph(int EntryPoint)
+void UObject::ExecuteUbergraph(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoreUObject.Object.ExecuteUbergraph");
 

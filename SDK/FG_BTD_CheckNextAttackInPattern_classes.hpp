@@ -31,7 +31,7 @@ public:
 
 	bool PerformConditionCheckAI(class AAIController** OwnerController, class APawn** ControlledPawn);
 	void ReceiveExecutionStartAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTD_CheckNextAttackInPattern(int EntryPoint);
+	void ExecuteUbergraph_BTD_CheckNextAttackInPattern(int* EntryPoint);
 };
 
 

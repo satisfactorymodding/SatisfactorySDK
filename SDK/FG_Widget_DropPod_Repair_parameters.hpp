@@ -81,7 +81,7 @@ struct UWidget_DropPod_Repair_C_SpawnSmoke_Params
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.ExecuteUbergraph_Widget_DropPod_Repair
 struct UWidget_DropPod_Repair_C_ExecuteUbergraph_Widget_DropPod_Repair_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

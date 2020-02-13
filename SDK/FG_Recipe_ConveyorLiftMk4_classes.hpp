@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_ConveyorLiftMk4.Recipe_ConveyorLiftMk4_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_ConveyorLiftMk4_C : public UFGRecipe
 {
 public:

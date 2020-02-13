@@ -21,7 +21,8 @@ enum class EVehicleAnimations : uint8_t
 	NewEnumerator0                 = 1,
 	NewEnumerator1                 = 2,
 	NewEnumerator3                 = 3,
-	EVehicleAnimations_MAX         = 4
+	NewEnumerator4                 = 4,
+	EVehicleAnimations_MAX         = 5
 };
 
 

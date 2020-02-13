@@ -47,7 +47,7 @@ struct UWidget_Respawn_C_MoveProgressbar_Params
 // Function Widget_Respawn.Widget_Respawn_C.ExecuteUbergraph_Widget_Respawn
 struct UWidget_Respawn_C_ExecuteUbergraph_Widget_Respawn_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_FicsitLogoSplash.Widget_FicsitLogoSplash_C.ShowLogo
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_FicsitLogoSplash_C::ShowLogo()
 {
@@ -30,11 +30,11 @@ void UWidget_FicsitLogoSplash_C::ShowLogo()
 
 
 // Function Widget_FicsitLogoSplash.Widget_FicsitLogoSplash_C.ExecuteUbergraph_Widget_FicsitLogoSplash
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_FicsitLogoSplash_C::ExecuteUbergraph_Widget_FicsitLogoSplash(int EntryPoint)
+void UWidget_FicsitLogoSplash_C::ExecuteUbergraph_Widget_FicsitLogoSplash(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_FicsitLogoSplash.Widget_FicsitLogoSplash_C.ExecuteUbergraph_Widget_FicsitLogoSplash");
 

@@ -12,8 +12,45 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_DismantleMode.Widget_DismantleMode_C.UpdateMassDismantleFeedback
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_DismantleMode_C::UpdateMassDismantleFeedback()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.UpdateMassDismantleFeedback");
+
+	UWidget_DismantleMode_C_UpdateMassDismantleFeedback_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_DismantleMode.Widget_DismantleMode_C.SetDismantleFeedbackVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_DismantleMode_C::SetDismantleFeedbackVisibility(bool* Condition)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.SetDismantleFeedbackVisibility");
+
+	UWidget_DismantleMode_C_SetDismantleFeedbackVisibility_Params params;
+	params.Condition = Condition;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_DismantleMode.Widget_DismantleMode_C.GetReticleVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +71,7 @@ ESlateVisibility UWidget_DismantleMode_C::GetReticleVisibility()
 
 
 // Function Widget_DismantleMode.Widget_DismantleMode_C.SetDismantleRefunds
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DismantleMode_C::SetDismantleRefunds()
 {
@@ -51,7 +88,7 @@ void UWidget_DismantleMode_C::SetDismantleRefunds()
 
 
 // Function Widget_DismantleMode.Widget_DismantleMode_C.OnEscapePressed
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DismantleMode_C::OnEscapePressed()
 {
@@ -68,7 +105,7 @@ void UWidget_DismantleMode_C::OnEscapePressed()
 
 
 // Function Widget_DismantleMode.Widget_DismantleMode_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_DismantleMode_C::Init()
 {
@@ -84,30 +121,8 @@ void UWidget_DismantleMode_C::Init()
 }
 
 
-// Function Widget_DismantleMode.Widget_DismantleMode_C.Tick
-// ()
-// Parameters:
-// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_DismantleMode_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.Tick");
-
-	UWidget_DismantleMode_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_DismantleMode.Widget_DismantleMode_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_DismantleMode_C::Construct()
 {
@@ -124,11 +139,11 @@ void UWidget_DismantleMode_C::Construct()
 
 
 // Function Widget_DismantleMode.Widget_DismantleMode_C.OnDismantleRefundChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGBuildGunStateDismantle* dismantleGun                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UFGBuildGunStateDismantle** dismantleGun                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_DismantleMode_C::OnDismantleRefundChanged(class UFGBuildGunStateDismantle* dismantleGun)
+void UWidget_DismantleMode_C::OnDismantleRefundChanged(class UFGBuildGunStateDismantle** dismantleGun)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.OnDismantleRefundChanged");
 
@@ -143,12 +158,66 @@ void UWidget_DismantleMode_C::OnDismantleRefundChanged(class UFGBuildGunStateDis
 }
 
 
-// Function Widget_DismantleMode.Widget_DismantleMode_C.ExecuteUbergraph_Widget_DismantleMode
-// ()
+// Function Widget_DismantleMode.Widget_DismantleMode_C.Event OnMultiDismantleStateChanged
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          newState                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_DismantleMode_C::ExecuteUbergraph_Widget_DismantleMode(int EntryPoint)
+void UWidget_DismantleMode_C::Event_OnMultiDismantleStateChanged(bool* newState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.Event OnMultiDismantleStateChanged");
+
+	UWidget_DismantleMode_C_Event_OnMultiDismantleStateChanged_Params params;
+	params.newState = newState;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_DismantleMode.Widget_DismantleMode_C.Event OnPendingDismantleActorsChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_DismantleMode_C::Event_OnPendingDismantleActorsChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.Event OnPendingDismantleActorsChanged");
+
+	UWidget_DismantleMode_C_Event_OnPendingDismantleActorsChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_DismantleMode.Widget_DismantleMode_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_DismantleMode_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.Destruct");
+
+	UWidget_DismantleMode_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_DismantleMode.Widget_DismantleMode_C.ExecuteUbergraph_Widget_DismantleMode
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_DismantleMode_C::ExecuteUbergraph_Widget_DismantleMode(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DismantleMode.Widget_DismantleMode_C.ExecuteUbergraph_Widget_DismantleMode");
 

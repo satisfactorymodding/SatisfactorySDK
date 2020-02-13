@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.GetScannableIcon
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FScannableDetails       ScannableDetails               (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FScannableDetails*      ScannableDetails               (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UTexture*                Texture                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ObjectScannerMenu_C::GetScannableIcon(const struct FScannableDetails& ScannableDetails, class UTexture** Texture)
+void UWidget_ObjectScannerMenu_C::GetScannableIcon(struct FScannableDetails* ScannableDetails, class UTexture** Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.GetScannableIcon");
 
@@ -37,7 +37,7 @@ void UWidget_ObjectScannerMenu_C::GetScannableIcon(const struct FScannableDetail
 
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.Get_RingHighlighter_Visibility_1
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -58,12 +58,12 @@ ESlateVisibility UWidget_ObjectScannerMenu_C::Get_RingHighlighter_Visibility_1()
 
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.GetPositionInCircle
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Translation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ObjectScannerMenu_C::GetPositionInCircle(int Index, struct FVector2D* Translation)
+void UWidget_ObjectScannerMenu_C::GetPositionInCircle(int* Index, struct FVector2D* Translation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.GetPositionInCircle");
 
@@ -82,9 +82,9 @@ void UWidget_ObjectScannerMenu_C::GetPositionInCircle(int Index, struct FVector2
 
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.OnAnimationFinished
-// ()
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 // Parameters:
-// class UWidgetAnimation**       Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidgetAnimation**       Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
 void UWidget_ObjectScannerMenu_C::OnAnimationFinished(class UWidgetAnimation** Animation)
 {
@@ -102,11 +102,11 @@ void UWidget_ObjectScannerMenu_C::OnAnimationFinished(class UWidgetAnimation** A
 
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.OnItemSelected
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  scannedActorClass              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 scannedActorClass              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ObjectScannerMenu_C::OnItemSelected(class UClass* scannedActorClass)
+void UWidget_ObjectScannerMenu_C::OnItemSelected(class UClass** scannedActorClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.OnItemSelected");
 
@@ -122,7 +122,7 @@ void UWidget_ObjectScannerMenu_C::OnItemSelected(class UClass* scannedActorClass
 
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ObjectScannerMenu_C::Destruct()
 {
@@ -139,7 +139,7 @@ void UWidget_ObjectScannerMenu_C::Destruct()
 
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ObjectScannerMenu_C::Construct()
 {
@@ -156,7 +156,7 @@ void UWidget_ObjectScannerMenu_C::Construct()
 
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -178,11 +178,11 @@ void UWidget_ObjectScannerMenu_C::Tick(struct FGeometry* MyGeometry, float* InDe
 
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.ExecuteUbergraph_Widget_ObjectScannerMenu
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ObjectScannerMenu_C::ExecuteUbergraph_Widget_ObjectScannerMenu(int EntryPoint)
+void UWidget_ObjectScannerMenu_C::ExecuteUbergraph_Widget_ObjectScannerMenu(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.ExecuteUbergraph_Widget_ObjectScannerMenu");
 

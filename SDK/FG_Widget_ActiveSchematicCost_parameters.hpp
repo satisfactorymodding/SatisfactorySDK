@@ -44,7 +44,7 @@ struct UWidget_ActiveSchematicCost_C_Destruct_Params
 // Function Widget_ActiveSchematicCost.Widget_ActiveSchematicCost_C.ExecuteUbergraph_Widget_ActiveSchematicCost
 struct UWidget_ActiveSchematicCost_C_ExecuteUbergraph_Widget_ActiveSchematicCost_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

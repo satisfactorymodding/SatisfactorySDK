@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.CalculateAnimGraphVariables
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_SmallSpitter_C::CalculateAnimGraphVariables()
 {
@@ -30,7 +30,7 @@ void UAnim_SmallSpitter_C::CalculateAnimGraphVariables()
 
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SmallSpitter_AnimGraphNode_TransitionResult_109183044A7B4E46670A2D8C69D1789E
-// ()
+// (BlueprintEvent)
 
 void UAnim_SmallSpitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SmallSpitter_AnimGraphNode_TransitionResult_109183044A7B4E46670A2D8C69D1789E()
 {
@@ -47,7 +47,7 @@ void UAnim_SmallSpitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Smal
 
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SmallSpitter_AnimGraphNode_TransitionResult_03EBA1B14615160DFD1DFEBCC1D6D217
-// ()
+// (BlueprintEvent)
 
 void UAnim_SmallSpitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SmallSpitter_AnimGraphNode_TransitionResult_03EBA1B14615160DFD1DFEBCC1D6D217()
 {
@@ -64,7 +64,7 @@ void UAnim_SmallSpitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Smal
 
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SmallSpitter_AnimGraphNode_TransitionResult_6F7C35D64C630E211DF61988112FB6A4
-// ()
+// (BlueprintEvent)
 
 void UAnim_SmallSpitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SmallSpitter_AnimGraphNode_TransitionResult_6F7C35D64C630E211DF61988112FB6A4()
 {
@@ -81,7 +81,7 @@ void UAnim_SmallSpitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Smal
 
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.AnimNotify_SpitterWalkToRunNotify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_SmallSpitter_C::AnimNotify_SpitterWalkToRunNotify()
 {
@@ -98,7 +98,7 @@ void UAnim_SmallSpitter_C::AnimNotify_SpitterWalkToRunNotify()
 
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.OnRadialDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_SmallSpitter_C::OnRadialDamageTaken()
 {
@@ -115,7 +115,7 @@ void UAnim_SmallSpitter_C::OnRadialDamageTaken()
 
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.OnPointDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector*                shootDIrection                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -135,7 +135,7 @@ void UAnim_SmallSpitter_C::OnPointDamageTaken(struct FVector* shootDIrection)
 
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -155,11 +155,11 @@ void UAnim_SmallSpitter_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.ExecuteUbergraph_Anim_SmallSpitter
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_SmallSpitter_C::ExecuteUbergraph_Anim_SmallSpitter(int EntryPoint)
+void UAnim_SmallSpitter_C::ExecuteUbergraph_Anim_SmallSpitter(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_SmallSpitter.Anim_SmallSpitter_C.ExecuteUbergraph_Anim_SmallSpitter");
 

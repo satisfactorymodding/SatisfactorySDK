@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function ParachuteMesh.ParachuteMesh_C.UserConstructionScript
-struct AParachuteMesh_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

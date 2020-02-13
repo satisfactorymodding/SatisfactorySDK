@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DragNDropInventory.BP_DragNDropInventory_C.Dragged
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          PointerEvent                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -33,7 +33,7 @@ void UBP_DragNDropInventory_C::Dragged(struct FPointerEvent* PointerEvent)
 
 
 // Function BP_DragNDropInventory.BP_DragNDropInventory_C.DragCancelled
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          PointerEvent                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -53,7 +53,7 @@ void UBP_DragNDropInventory_C::DragCancelled(struct FPointerEvent* PointerEvent)
 
 
 // Function BP_DragNDropInventory.BP_DragNDropInventory_C.Drop
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          PointerEvent                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -73,11 +73,11 @@ void UBP_DragNDropInventory_C::Drop(struct FPointerEvent* PointerEvent)
 
 
 // Function BP_DragNDropInventory.BP_DragNDropInventory_C.ExecuteUbergraph_BP_DragNDropInventory
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_DragNDropInventory_C::ExecuteUbergraph_BP_DragNDropInventory(int EntryPoint)
+void UBP_DragNDropInventory_C::ExecuteUbergraph_BP_DragNDropInventory(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DragNDropInventory.BP_DragNDropInventory_C.ExecuteUbergraph_BP_DragNDropInventory");
 

@@ -49,7 +49,7 @@ struct UAnim_Hog_C_BlueprintUpdateAnimation_Params
 // Function Anim_Hog.Anim_Hog_C.ExecuteUbergraph_Anim_Hog
 struct UAnim_Hog_C_ExecuteUbergraph_Anim_Hog_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

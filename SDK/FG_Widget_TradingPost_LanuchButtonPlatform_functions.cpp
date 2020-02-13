@@ -12,8 +12,33 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.OnMouseButtonDown
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_TradingPost_LanuchButtonPlatform_C::OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.OnMouseButtonDown");
+
+	UWidget_TradingPost_LanuchButtonPlatform_C_OnMouseButtonDown_Params params;
+	params.MyGeometry = MyGeometry;
+	params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.GetVisibility_1
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +59,7 @@ ESlateVisibility UWidget_TradingPost_LanuchButtonPlatform_C::GetVisibility_1()
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.mShowLaunchButton
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_LanuchButtonPlatform_C::mShowLaunchButton()
 {
@@ -51,7 +76,7 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::mShowLaunchButton()
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -73,7 +98,7 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::Tick(struct FGeometry* MyGeomet
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_63_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_LanuchButtonPlatform_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_63_OnButtonHoverEvent__DelegateSignature()
 {
@@ -90,7 +115,7 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::BndEvt__Button_0_K2Node_Compone
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_92_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_LanuchButtonPlatform_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_92_OnButtonHoverEvent__DelegateSignature()
 {
@@ -107,7 +132,7 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::BndEvt__Button_0_K2Node_Compone
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_LanuchButtonPlatform_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature()
 {
@@ -124,7 +149,7 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::BndEvt__Button_0_K2Node_Compone
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.OnUpgradeHub
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_LanuchButtonPlatform_C::OnUpgradeHub()
 {
@@ -141,7 +166,7 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::OnUpgradeHub()
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPost_LanuchButtonPlatform_C::Construct()
 {
@@ -158,7 +183,7 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::Construct()
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPost_LanuchButtonPlatform_C::Destruct()
 {
@@ -175,7 +200,7 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::Destruct()
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.CreateSmoke
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_LanuchButtonPlatform_C::CreateSmoke()
 {
@@ -192,11 +217,11 @@ void UWidget_TradingPost_LanuchButtonPlatform_C::CreateSmoke()
 
 
 // Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.ExecuteUbergraph_Widget_TradingPost_LanuchButtonPlatform
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_LanuchButtonPlatform_C::ExecuteUbergraph_Widget_TradingPost_LanuchButtonPlatform(int EntryPoint)
+void UWidget_TradingPost_LanuchButtonPlatform_C::ExecuteUbergraph_Widget_TradingPost_LanuchButtonPlatform(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_LanuchButtonPlatform.Widget_TradingPost_LanuchButtonPlatform_C.ExecuteUbergraph_Widget_TradingPost_LanuchButtonPlatform");
 

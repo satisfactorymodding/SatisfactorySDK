@@ -14,15 +14,10 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_ConstructorMk1.Build_ConstructorMk1_C.UserConstructionScript
-struct ABuild_ConstructorMk1_C_UserConstructionScript_Params
-{
-};
-
 // Function Build_ConstructorMk1.Build_ConstructorMk1_C.ExecuteUbergraph_Build_ConstructorMk1
 struct ABuild_ConstructorMk1_C_ExecuteUbergraph_Build_ConstructorMk1_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

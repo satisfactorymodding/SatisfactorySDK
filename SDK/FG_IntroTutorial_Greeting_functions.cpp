@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function IntroTutorial_Greeting.IntroTutorial_Greeting_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UIntroTutorial_Greeting_C::Destruct()
 {
@@ -30,11 +30,11 @@ void UIntroTutorial_Greeting_C::Destruct()
 
 
 // Function IntroTutorial_Greeting.IntroTutorial_Greeting_C.ExecuteUbergraph_IntroTutorial_Greeting
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UIntroTutorial_Greeting_C::ExecuteUbergraph_IntroTutorial_Greeting(int EntryPoint)
+void UIntroTutorial_Greeting_C::ExecuteUbergraph_IntroTutorial_Greeting(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IntroTutorial_Greeting.IntroTutorial_Greeting_C.ExecuteUbergraph_IntroTutorial_Greeting");
 

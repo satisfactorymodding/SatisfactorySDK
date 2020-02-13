@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Equip_Parachute.Equip_Parachute_C
-// 0x0018 (0x03E8 - 0x03D0)
+// 0x0018 (0x0408 - 0x03F0)
 class AEquip_Parachute_C : public AFGParachute
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UChildActorComponent*                        ParachuteMesh;                                            // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UChildActorComponent*                        ParachuteMesh;                                            // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0400(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,10 +30,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void OnDeployed();
 	void OnDeployStop();
-	void ExecuteUbergraph_Equip_Parachute(int EntryPoint);
+	void ExecuteUbergraph_Equip_Parachute(int* EntryPoint);
 };
 
 

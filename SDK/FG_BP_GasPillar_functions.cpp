@@ -12,85 +12,14 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_GasPillar.BP_GasPillar_C.UserConstructionScript
-// ()
+// Function BP_GasPillar.BP_GasPillar_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
 
-void ABP_GasPillar_C::UserConstructionScript()
+void ABP_GasPillar_C::ReceiveDestroyed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar.BP_GasPillar_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar.BP_GasPillar_C.ReceiveDestroyed");
 
-	ABP_GasPillar_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_GasPillar.BP_GasPillar_C.ReceiveBeginPlay
-// ()
-
-void ABP_GasPillar_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar.BP_GasPillar_C.ReceiveBeginPlay");
-
-	ABP_GasPillar_C_ReceiveBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_GasPillar.BP_GasPillar_C.GainedSignificance
-// ()
-
-void ABP_GasPillar_C::GainedSignificance()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar.BP_GasPillar_C.GainedSignificance");
-
-	ABP_GasPillar_C_GainedSignificance_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_GasPillar.BP_GasPillar_C.LostSignificance
-// ()
-
-void ABP_GasPillar_C::LostSignificance()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar.BP_GasPillar_C.LostSignificance");
-
-	ABP_GasPillar_C_LostSignificance_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_GasPillar.BP_GasPillar_C.ReceiveEndPlay
-// ()
-// Parameters:
-// TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_GasPillar_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar.BP_GasPillar_C.ReceiveEndPlay");
-
-	ABP_GasPillar_C_ReceiveEndPlay_Params params;
-	params.EndPlayReason = EndPlayReason;
+	ABP_GasPillar_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -101,11 +30,11 @@ void ABP_GasPillar_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
 
 
 // Function BP_GasPillar.BP_GasPillar_C.ExecuteUbergraph_BP_GasPillar
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GasPillar_C::ExecuteUbergraph_BP_GasPillar(int EntryPoint)
+void ABP_GasPillar_C::ExecuteUbergraph_BP_GasPillar(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar.BP_GasPillar_C.ExecuteUbergraph_BP_GasPillar");
 

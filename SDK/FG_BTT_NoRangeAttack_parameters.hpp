@@ -34,7 +34,7 @@ struct UBTT_NoRangeAttack_C_ReceiveExecuteAI_Params
 // Function BTT_NoRangeAttack.BTT_NoRangeAttack_C.ExecuteUbergraph_BTT_NoRangeAttack
 struct UBTT_NoRangeAttack_C_ExecuteUbergraph_BTT_NoRangeAttack_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

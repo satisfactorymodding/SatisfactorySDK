@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.CalculateAnimGraphVariables
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::CalculateAnimGraphVariables()
 {
@@ -30,7 +30,7 @@ void UAnim_MinerMk3_C::CalculateAnimGraphVariables()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.ReloadTimer
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::ReloadTimer()
 {
@@ -47,7 +47,7 @@ void UAnim_MinerMk3_C::ReloadTimer()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.SetupReloadTimer
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::SetupReloadTimer()
 {
@@ -64,7 +64,7 @@ void UAnim_MinerMk3_C::SetupReloadTimer()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,7 +84,7 @@ void UAnim_MinerMk3_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_StartDrillVFX
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_StartDrillVFX()
 {
@@ -101,7 +101,7 @@ void UAnim_MinerMk3_C::AnimNotify_StartDrillVFX()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_StopDrillVfx
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_StopDrillVfx()
 {
@@ -118,7 +118,7 @@ void UAnim_MinerMk3_C::AnimNotify_StopDrillVfx()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.BlueprintInitializeAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UAnim_MinerMk3_C::BlueprintInitializeAnimation()
 {
@@ -135,7 +135,7 @@ void UAnim_MinerMk3_C::BlueprintInitializeAnimation()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_MinerIndustrialEnteredReloadState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialEnteredReloadState()
 {
@@ -152,7 +152,7 @@ void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialEnteredReloadState()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_MinerIndustrialEnteredOutputFullState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialEnteredOutputFullState()
 {
@@ -169,7 +169,7 @@ void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialEnteredOutputFullState()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_MinerIndustrialLeftOutputFullState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialLeftOutputFullState()
 {
@@ -186,7 +186,7 @@ void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialLeftOutputFullState()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_MinerIndustrialAudioStartSpin
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioStartSpin()
 {
@@ -203,7 +203,7 @@ void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioStartSpin()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_MinerIndustrialAudioDrillDown
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioDrillDown()
 {
@@ -220,7 +220,7 @@ void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioDrillDown()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_MinerIndustrialAudioStopDrill
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioStopDrill()
 {
@@ -237,7 +237,7 @@ void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioStopDrill()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_MinerIndustrialAudioLowpassOn
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioLowpassOn()
 {
@@ -254,7 +254,7 @@ void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioLowpassOn()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.AnimNotify_MinerIndustrialAudioLowpassOff
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioLowpassOff()
 {
@@ -271,11 +271,11 @@ void UAnim_MinerMk3_C::AnimNotify_MinerIndustrialAudioLowpassOff()
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.HasPowerChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_MinerMk3_C::HasPowerChanged(bool State)
+void UAnim_MinerMk3_C::HasPowerChanged(bool* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_MinerMk3.Anim_MinerMk3_C.HasPowerChanged");
 
@@ -291,11 +291,11 @@ void UAnim_MinerMk3_C::HasPowerChanged(bool State)
 
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.ExecuteUbergraph_Anim_MinerMk3
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_MinerMk3_C::ExecuteUbergraph_Anim_MinerMk3(int EntryPoint)
+void UAnim_MinerMk3_C::ExecuteUbergraph_Anim_MinerMk3(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_MinerMk3.Anim_MinerMk3_C.ExecuteUbergraph_Anim_MinerMk3");
 

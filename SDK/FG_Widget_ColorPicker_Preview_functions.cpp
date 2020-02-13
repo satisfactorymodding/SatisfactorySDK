@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.SetColors
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            PrimaryColor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            SecondaryColor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           PrimaryColor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           SecondaryColor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Preview_C::SetColors(const struct FLinearColor& PrimaryColor, const struct FLinearColor& SecondaryColor)
+void UWidget_ColorPicker_Preview_C::SetColors(struct FLinearColor* PrimaryColor, struct FLinearColor* SecondaryColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.SetColors");
 
@@ -35,7 +35,7 @@ void UWidget_ColorPicker_Preview_C::SetColors(const struct FLinearColor& Primary
 
 
 // Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.SetTextures
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorPicker_Preview_C::SetTextures()
 {
@@ -52,7 +52,7 @@ void UWidget_ColorPicker_Preview_C::SetTextures()
 
 
 // Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -72,11 +72,11 @@ void UWidget_ColorPicker_Preview_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.ExecuteUbergraph_Widget_ColorPicker_Preview
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Preview_C::ExecuteUbergraph_Widget_ColorPicker_Preview(int EntryPoint)
+void UWidget_ColorPicker_Preview_C::ExecuteUbergraph_Widget_ColorPicker_Preview(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Preview.Widget_ColorPicker_Preview_C.ExecuteUbergraph_Widget_ColorPicker_Preview");
 

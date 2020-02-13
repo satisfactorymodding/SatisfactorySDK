@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_DockingStation.Widget_DockingStation_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -37,7 +37,7 @@ void UWidget_DockingStation_C::DropInventorySlotStack(class UWidget_InventorySlo
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.SetHeaderText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DockingStation_C::SetHeaderText()
 {
@@ -54,7 +54,7 @@ void UWidget_DockingStation_C::SetHeaderText()
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.GetLoadingModeButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DockingStation_C::GetLoadingModeButton()
 {
@@ -71,11 +71,11 @@ void UWidget_DockingStation_C::GetLoadingModeButton()
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.DumpAllToInventory
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent*   SourceComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  SourceComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_DockingStation_C::DumpAllToInventory(class UFGInventoryComponent* SourceComponent)
+void UWidget_DockingStation_C::DumpAllToInventory(class UFGInventoryComponent** SourceComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DockingStation.Widget_DockingStation_C.DumpAllToInventory");
 
@@ -91,11 +91,11 @@ void UWidget_DockingStation_C::DumpAllToInventory(class UFGInventoryComponent* S
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.GrabAllFromInventory
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent*   SourceComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  SourceComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_DockingStation_C::GrabAllFromInventory(class UFGInventoryComponent* SourceComponent)
+void UWidget_DockingStation_C::GrabAllFromInventory(class UFGInventoryComponent** SourceComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DockingStation.Widget_DockingStation_C.GrabAllFromInventory");
 
@@ -111,7 +111,7 @@ void UWidget_DockingStation_C::GrabAllFromInventory(class UFGInventoryComponent*
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_DockingStation_C::Init()
 {
@@ -128,7 +128,7 @@ void UWidget_DockingStation_C::Init()
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_DockingStation_C::Construct()
 {
@@ -145,7 +145,7 @@ void UWidget_DockingStation_C::Construct()
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.GrabAllFromStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_DockingStation_C::GrabAllFromStorage()
 {
@@ -162,7 +162,7 @@ void UWidget_DockingStation_C::GrabAllFromStorage()
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.DumpAllInStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_DockingStation_C::DumpAllInStorage()
 {
@@ -179,7 +179,7 @@ void UWidget_DockingStation_C::DumpAllInStorage()
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.BndEvt__Widget_SwitchButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_DockingStation_C::BndEvt__Widget_SwitchButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -196,7 +196,7 @@ void UWidget_DockingStation_C::BndEvt__Widget_SwitchButton_K2Node_ComponentBound
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -218,7 +218,7 @@ void UWidget_DockingStation_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_2_OnClose__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_DockingStation_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_2_OnClose__DelegateSignature()
 {
@@ -235,7 +235,7 @@ void UWidget_DockingStation_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBo
 
 
 // Function Widget_DockingStation.Widget_DockingStation_C.BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_DockingStation_C::BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -251,12 +251,32 @@ void UWidget_DockingStation_C::BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_
 }
 
 
-// Function Widget_DockingStation.Widget_DockingStation_C.ExecuteUbergraph_Widget_DockingStation
-// ()
+// Function Widget_DockingStation.Widget_DockingStation_C.OnReplicationDetailActorReplicated
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 ReplicationDetailOwner         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_DockingStation_C::ExecuteUbergraph_Widget_DockingStation(int EntryPoint)
+void UWidget_DockingStation_C::OnReplicationDetailActorReplicated(class AActor** ReplicationDetailOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_DockingStation.Widget_DockingStation_C.OnReplicationDetailActorReplicated");
+
+	UWidget_DockingStation_C_OnReplicationDetailActorReplicated_Params params;
+	params.ReplicationDetailOwner = ReplicationDetailOwner;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_DockingStation.Widget_DockingStation_C.ExecuteUbergraph_Widget_DockingStation
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_DockingStation_C::ExecuteUbergraph_Widget_DockingStation(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DockingStation.Widget_DockingStation_C.ExecuteUbergraph_Widget_DockingStation");
 

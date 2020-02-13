@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_SmelterBasicMk1.Recipe_SmelterBasicMk1_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_SmelterBasicMk1_C : public UFGRecipe
 {
 public:

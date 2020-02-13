@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.FromSecondsToText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          Seconds                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Seconds                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Result                         (Parm, OutParm)
 
-void UWidget_ActorDetails_Hub_C::FromSecondsToText(float Seconds, struct FText* Result)
+void UWidget_ActorDetails_Hub_C::FromSecondsToText(float* Seconds, struct FText* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.FromSecondsToText");
 
@@ -37,7 +37,7 @@ void UWidget_ActorDetails_Hub_C::FromSecondsToText(float Seconds, struct FText* 
 
 
 // Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.UpdateInfo
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActorDetails_Hub_C::UpdateInfo()
 {
@@ -54,7 +54,7 @@ void UWidget_ActorDetails_Hub_C::UpdateInfo()
 
 
 // Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActorDetails_Hub_C::Construct()
 {
@@ -71,7 +71,7 @@ void UWidget_ActorDetails_Hub_C::Construct()
 
 
 // Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.UpdateInfoEvent
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActorDetails_Hub_C::UpdateInfoEvent()
 {
@@ -88,7 +88,7 @@ void UWidget_ActorDetails_Hub_C::UpdateInfoEvent()
 
 
 // Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.UpdateMAMInfo
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActorDetails_Hub_C::UpdateMAMInfo()
 {
@@ -105,11 +105,11 @@ void UWidget_ActorDetails_Hub_C::UpdateMAMInfo()
 
 
 // Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.ExecuteUbergraph_Widget_ActorDetails_Hub
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActorDetails_Hub_C::ExecuteUbergraph_Widget_ActorDetails_Hub(int EntryPoint)
+void UWidget_ActorDetails_Hub_C::ExecuteUbergraph_Widget_ActorDetails_Hub(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.ExecuteUbergraph_Widget_ActorDetails_Hub");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.GetText_1
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -34,7 +34,7 @@ struct FText UWidget_CompassObjectResource_C::GetText_1()
 
 
 // Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.OnCompassObjectAddedToPanel
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UCanvasPanelSlot**       parentSlot                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -54,7 +54,7 @@ void UWidget_CompassObjectResource_C::OnCompassObjectAddedToPanel(class UCanvasP
 
 
 // Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_CompassObjectResource_C::Construct()
 {
@@ -71,7 +71,7 @@ void UWidget_CompassObjectResource_C::Construct()
 
 
 // Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.OnCompassObjectUpdated
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_CompassObjectResource_C::OnCompassObjectUpdated()
 {
@@ -88,7 +88,7 @@ void UWidget_CompassObjectResource_C::OnCompassObjectUpdated()
 
 
 // Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -110,7 +110,7 @@ void UWidget_CompassObjectResource_C::Tick(struct FGeometry* MyGeometry, float* 
 
 
 // Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.OnObjectCentered
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          centered                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -130,11 +130,11 @@ void UWidget_CompassObjectResource_C::OnObjectCentered(bool* centered)
 
 
 // Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.ExecuteUbergraph_Widget_CompassObjectResource
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CompassObjectResource_C::ExecuteUbergraph_Widget_CompassObjectResource(int EntryPoint)
+void UWidget_CompassObjectResource_C::ExecuteUbergraph_Widget_CompassObjectResource(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CompassObjectResource.Widget_CompassObjectResource_C.ExecuteUbergraph_Widget_CompassObjectResource");
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ChatManager.BP_ChatManager_C
-// 0x0000 (0x0350 - 0x0350)
+// 0x0000 (0x0358 - 0x0358)
 class ABP_ChatManager_C : public AFGChatManager
 {
 public:

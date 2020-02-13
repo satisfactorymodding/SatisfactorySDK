@@ -17,13 +17,13 @@ namespace SDK
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.SetShowPointer
 struct UWidget_ActorDetails_Container_C_SetShowPointer_Params
 {
-	bool                                               ShowPointer;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              ShowPointer;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.SetTitle
 struct UWidget_ActorDetails_Container_C_SetTitle_Params
 {
-	struct FText                                       mTitle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      mTitle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.PreConstruct
@@ -40,7 +40,7 @@ struct UWidget_ActorDetails_Container_C_Construct_Params
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.ExecuteUbergraph_Widget_ActorDetails_Container
 struct UWidget_ActorDetails_Container_C_ExecuteUbergraph_Widget_ActorDetails_Container_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BerryBush.BP_BerryBush_C.GetDestroyAudioEvent
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAkAudioEvent*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ class UAkAudioEvent* ABP_BerryBush_C::GetDestroyAudioEvent()
 
 
 // Function BP_BerryBush.BP_BerryBush_C.GetDestroyEffect
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UParticleSystem*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ class UParticleSystem* ABP_BerryBush_C::GetDestroyEffect()
 
 
 // Function BP_BerryBush.BP_BerryBush_C.GetForceThreshold
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ float ABP_BerryBush_C::GetForceThreshold()
 
 
 // Function BP_BerryBush.BP_BerryBush_C.GetMeshComponent
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMeshComponent*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -97,7 +97,7 @@ class UStaticMeshComponent* ABP_BerryBush_C::GetMeshComponent()
 
 
 // Function BP_BerryBush.BP_BerryBush_C.IsChainsawable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -118,7 +118,7 @@ bool ABP_BerryBush_C::IsChainsawable()
 
 
 // Function BP_BerryBush.BP_BerryBush_C.UserConstructionScript
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BerryBush_C::UserConstructionScript()
 {

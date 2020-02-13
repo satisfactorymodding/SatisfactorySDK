@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C.UserConstructionScript
-// ()
-
-void ABuild_ConveyorAttachmentMerger_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C.UserConstructionScript");
-
-	ABuild_ConveyorAttachmentMerger_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C.PlayConstructSound
-// ()
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
 void ABuild_ConveyorAttachmentMerger_C::PlayConstructSound()
 {
@@ -47,11 +30,11 @@ void ABuild_ConveyorAttachmentMerger_C::PlayConstructSound()
 
 
 // Function Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C.ExecuteUbergraph_Build_ConveyorAttachmentMerger
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_ConveyorAttachmentMerger_C::ExecuteUbergraph_Build_ConveyorAttachmentMerger(int EntryPoint)
+void ABuild_ConveyorAttachmentMerger_C::ExecuteUbergraph_Build_ConveyorAttachmentMerger(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C.ExecuteUbergraph_Build_ConveyorAttachmentMerger");
 

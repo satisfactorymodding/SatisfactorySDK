@@ -44,33 +44,28 @@ struct ABP_PlayerState_C_SortShoppingList_Params
 // Function BP_PlayerState.BP_PlayerState_C.SetNumRecipeInShoppingList
 struct ABP_PlayerState_C_SetNumRecipeInShoppingList_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.PonderUpdatingShoppingList
 struct ABP_PlayerState_C_PonderUpdatingShoppingList_Params
 {
-	class UClass*                                      InputPin;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     InputPin;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.AddRecipeToShoppingList
 struct ABP_PlayerState_C_AddRecipeToShoppingList_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.RemoveRecipeFromShoppingList
 struct ABP_PlayerState_C_RemoveRecipeFromShoppingList_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_PlayerState.BP_PlayerState_C.UserConstructionScript
-struct ABP_PlayerState_C_UserConstructionScript_Params
-{
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.ReceiveBeginPlay
@@ -81,41 +76,41 @@ struct ABP_PlayerState_C_ReceiveBeginPlay_Params
 // Function BP_PlayerState.BP_PlayerState_C.BroadcastChatMessage
 struct ABP_PlayerState_C_BroadcastChatMessage_Params
 {
-	struct FText                                       ChatMessageIn;                                            // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      ChatMessageIn;                                            // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.ReceiveChatMessage
 struct ABP_PlayerState_C_ReceiveChatMessage_Params
 {
-	struct FText                                       ChatMessageIn;                                            // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       ChatSender;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      ChatMessageIn;                                            // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      ChatSender;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.OnBuildableConstructed
 struct ABP_PlayerState_C_OnBuildableConstructed_Params
 {
-	class UClass*                                      itemDescriptor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     itemDescriptor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.Server_AddRecipeToShoppingList
 struct ABP_PlayerState_C_Server_AddRecipeToShoppingList_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.Server_SetNumRecipesInShoppingList
 struct ABP_PlayerState_C_Server_SetNumRecipesInShoppingList_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.Server_RemoveRecupeFromShoppingList
 struct ABP_PlayerState_C_Server_RemoveRecupeFromShoppingList_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               NumRecipes;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.ReceiveTick
@@ -132,7 +127,7 @@ struct ABP_PlayerState_C_Server_ClearShoppingList_Params
 // Function BP_PlayerState.BP_PlayerState_C.ExecuteUbergraph_BP_PlayerState
 struct ABP_PlayerState_C_ExecuteUbergraph_BP_PlayerState_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PlayerState.BP_PlayerState_C.OnShoppingListUpdated__DelegateSignature
@@ -143,8 +138,8 @@ struct ABP_PlayerState_C_OnShoppingListUpdated__DelegateSignature_Params
 // Function BP_PlayerState.BP_PlayerState_C.ReceivedChatMessage__DelegateSignature
 struct ABP_PlayerState_C_ReceivedChatMessage__DelegateSignature_Params
 {
-	struct FText                                       ChatSender;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       ChatMessage;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      ChatSender;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      ChatMessage;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 }

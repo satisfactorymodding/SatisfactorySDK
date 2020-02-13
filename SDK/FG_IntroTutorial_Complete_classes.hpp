@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass IntroTutorial_Complete.IntroTutorial_Complete_C
-// 0x0008 (0x02F8 - 0x02F0)
+// 0x0008 (0x0330 - 0x0328)
 class UIntroTutorial_Complete_C : public UWidget_AudioMessage_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x02F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +29,7 @@ public:
 
 
 	void Destruct();
-	void ExecuteUbergraph_IntroTutorial_Complete(int EntryPoint);
+	void ExecuteUbergraph_IntroTutorial_Complete(int* EntryPoint);
 };
 
 

@@ -33,7 +33,7 @@ struct UWidget_SplitterSmart_C_PreConstruct_Params
 // Function Widget_SplitterSmart.Widget_SplitterSmart_C.ExecuteUbergraph_Widget_SplitterSmart
 struct UWidget_SplitterSmart_C_ExecuteUbergraph_Widget_SplitterSmart_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

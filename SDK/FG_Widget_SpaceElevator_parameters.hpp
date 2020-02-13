@@ -27,8 +27,8 @@ struct UWidget_SpaceElevator_C_UpdateHeaderText_Params
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.SetStatusText
 struct UWidget_SpaceElevator_C_SetStatusText_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               Pulsing;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              Pulsing;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.UpdatePhaseInfo
@@ -46,7 +46,7 @@ struct UWidget_SpaceElevator_C_SetUnlockTiers_Params
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.ClearInactiveLeverSelections
 struct UWidget_SpaceElevator_C_ClearInactiveLeverSelections_Params
 {
-	class UWidgetAnimation*                            ActiveAnimation;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidgetAnimation**                           ActiveAnimation;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.DropInventorySlotStack
@@ -85,13 +85,13 @@ struct UWidget_SpaceElevator_C_PollAndSetupInventory_Params
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.OnGamePhaseChanged
 struct UWidget_SpaceElevator_C_OnGamePhaseChanged_Params
 {
-	TEnumAsByte<EGamePhase>                            NewGamePhase;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EGamePhase>*                           NewGamePhase;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.On Lever Select
 struct UWidget_SpaceElevator_C_On_Lever_Select_Params
 {
-	int                                                SelectionIndex;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               SelectionIndex;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.OnUpgrade
@@ -154,7 +154,7 @@ struct UWidget_SpaceElevator_C_AnimNotify_Chime_Params
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.ExecuteUbergraph_Widget_SpaceElevator
 struct UWidget_SpaceElevator_C_ExecuteUbergraph_Widget_SpaceElevator_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -29,7 +29,7 @@ struct UBTT_ReverseToFreedom_C_ReceiveExecuteAI_Params
 // Function BTT_ReverseToFreedom.BTT_ReverseToFreedom_C.ExecuteUbergraph_BTT_ReverseToFreedom
 struct UBTT_ReverseToFreedom_C_ExecuteUbergraph_BTT_ReverseToFreedom_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

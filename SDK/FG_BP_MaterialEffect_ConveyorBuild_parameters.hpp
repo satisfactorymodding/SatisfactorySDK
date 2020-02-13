@@ -27,7 +27,7 @@ struct UBP_MaterialEffect_ConveyorBuild_C_OnStarted_Params
 // Function BP_MaterialEffect_ConveyorBuild.BP_MaterialEffect_ConveyorBuild_C.ExecuteUbergraph_BP_MaterialEffect_ConveyorBuild
 struct UBP_MaterialEffect_ConveyorBuild_C_ExecuteUbergraph_BP_MaterialEffect_ConveyorBuild_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

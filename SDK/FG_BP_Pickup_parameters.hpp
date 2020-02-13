@@ -14,8 +14,8 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_Pickup.BP_Pickup_C.UserConstructionScript
-struct ABP_Pickup_C_UserConstructionScript_Params
+// Function BP_Pickup.BP_Pickup_C.PlayPickupEffect
+struct ABP_Pickup_C_PlayPickupEffect_Params
 {
 };
 
@@ -48,21 +48,21 @@ struct ABP_Pickup_C_LostSignificance_Params
 {
 };
 
-// Function BP_Pickup.BP_Pickup_C.PlayPickupEffect
-struct ABP_Pickup_C_PlayPickupEffect_Params
-{
-};
-
 // Function BP_Pickup.BP_Pickup_C.ReceiveEndPlay
 struct ABP_Pickup_C_ReceiveEndPlay_Params
 {
 	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BP_Pickup.BP_Pickup_C.Event Check Subtitle Distance
+struct ABP_Pickup_C_Event_Check_Subtitle_Distance_Params
+{
+};
+
 // Function BP_Pickup.BP_Pickup_C.ExecuteUbergraph_BP_Pickup
 struct ABP_Pickup_C_ExecuteUbergraph_BP_Pickup_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.UserConstructionScript
-struct ABP_SpitterProjectileSplitAlt_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.ReceiveBeginPlay
 struct ABP_SpitterProjectileSplitAlt_C_ReceiveBeginPlay_Params
 {
@@ -32,7 +27,7 @@ struct ABP_SpitterProjectileSplitAlt_C_PlayExplosionEffects_Params
 // Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.ExecuteUbergraph_BP_SpitterProjectileSplitAlt
 struct ABP_SpitterProjectileSplitAlt_C_ExecuteUbergraph_BP_SpitterProjectileSplitAlt_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

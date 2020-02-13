@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Controller_AlphaHog.Controller_AlphaHog_C
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x053C - 0x053C)
 class AController_AlphaHog_C : public AController_HogCharge_C
 {
 public:

@@ -40,7 +40,7 @@ struct UWidget_Popup_C_OnKeyUp_Params
 // Function Widget_Popup.Widget_Popup_C.DoClosePopup
 struct UWidget_Popup_C_DoClosePopup_Params
 {
-	bool                                               ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Popup.Widget_Popup_C.Init
@@ -68,7 +68,7 @@ struct UWidget_Popup_C_BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_
 // Function Widget_Popup.Widget_Popup_C.ExecuteUbergraph_Widget_Popup
 struct UWidget_Popup_C_ExecuteUbergraph_Widget_Popup_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

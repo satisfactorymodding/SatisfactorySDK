@@ -12,33 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.UserConstructionScript
-// ()
-
-void AController_SpaceGiraffe_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.UserConstructionScript");
-
-	AController_SpaceGiraffe_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.OnPossess
-// ()
+// Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.ReceivePossess
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class APawn**                  PossessedPawn                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_SpaceGiraffe_C::OnPossess(class APawn** PossessedPawn)
+void AController_SpaceGiraffe_C::ReceivePossess(class APawn** PossessedPawn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.OnPossess");
+	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.ReceivePossess");
 
-	AController_SpaceGiraffe_C_OnPossess_Params params;
+	AController_SpaceGiraffe_C_ReceivePossess_Params params;
 	params.PossessedPawn = PossessedPawn;
 
 	auto flags = fn->FunctionFlags;
@@ -50,7 +33,7 @@ void AController_SpaceGiraffe_C::OnPossess(class APawn** PossessedPawn)
 
 
 // Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AController_SpaceGiraffe_C::ReceiveBeginPlay()
 {
@@ -67,7 +50,7 @@ void AController_SpaceGiraffe_C::ReceiveBeginPlay()
 
 
 // Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.StartPanic
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AController_SpaceGiraffe_C::StartPanic()
 {
@@ -84,7 +67,7 @@ void AController_SpaceGiraffe_C::StartPanic()
 
 
 // Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.StopPanic
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AController_SpaceGiraffe_C::StopPanic()
 {
@@ -101,12 +84,12 @@ void AController_SpaceGiraffe_C::StopPanic()
 
 
 // Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_2_ActorPerceptionUpdatedDelegate__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIStimulus             Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class AActor**                 Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIStimulus*            Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AController_SpaceGiraffe_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_2_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus)
+void AController_SpaceGiraffe_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_2_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_2_ActorPerceptionUpdatedDelegate__DelegateSignature");
 
@@ -123,11 +106,11 @@ void AController_SpaceGiraffe_C::BndEvt__PerceptionComponent_K2Node_ComponentBou
 
 
 // Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.ExecuteUbergraph_Controller_SpaceGiraffe
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_SpaceGiraffe_C::ExecuteUbergraph_Controller_SpaceGiraffe(int EntryPoint)
+void AController_SpaceGiraffe_C::ExecuteUbergraph_Controller_SpaceGiraffe(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceGiraffe.Controller_SpaceGiraffe_C.ExecuteUbergraph_Controller_SpaceGiraffe");
 

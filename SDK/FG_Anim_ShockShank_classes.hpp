@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass Anim_ShockShank.Anim_ShockShank_C
-// 0x0120 (0x0480 - 0x0360)
+// 0x00B8 (0x0328 - 0x0270)
 class UAnim_ShockShank_C : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0360(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                              AnimGraphNode_Root_1EDC61494EA421D23288EA8843728A1E;      // 0x0368(0x0040)
-	struct FAnimNode_Slot                              AnimGraphNode_Slot_0C3946424C8F87A1D23B44860DFC1C55;      // 0x03A8(0x0068)
-	struct FAnimNode_SequenceEvaluator                 AnimGraphNode_SequenceEvaluator_42674141471884B6E6E5AEB7CB79E673;// 0x0410(0x0070)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0270(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                              AnimGraphNode_Root_1EDC61494EA421D23288EA8843728A1E;      // 0x0278(0x0020)
+	struct FAnimNode_Slot                              AnimGraphNode_Slot_0C3946424C8F87A1D23B44860DFC1C55;      // 0x0298(0x0048)
+	struct FAnimNode_SequenceEvaluator                 AnimGraphNode_SequenceEvaluator_42674141471884B6E6E5AEB7CB79E673;// 0x02E0(0x0048)
 
 	static UClass* StaticClass()
 	{
@@ -32,7 +32,7 @@ public:
 
 
 	void AnimNotify_Notify_ShockShankAttack();
-	void ExecuteUbergraph_Anim_ShockShank(int EntryPoint);
+	void ExecuteUbergraph_Anim_ShockShank(int* EntryPoint);
 };
 
 

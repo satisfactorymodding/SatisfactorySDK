@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Stinger.Widget_Stinger_C.ShowSmallIcons
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Stinger_C::ShowSmallIcons()
 {
@@ -30,11 +30,11 @@ void UWidget_Stinger_C::ShowSmallIcons()
 
 
 // Function Widget_Stinger.Widget_Stinger_C.ExecuteUbergraph_Widget_Stinger
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Stinger_C::ExecuteUbergraph_Widget_Stinger(int EntryPoint)
+void UWidget_Stinger_C::ExecuteUbergraph_Widget_Stinger(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Stinger.Widget_Stinger_C.ExecuteUbergraph_Widget_Stinger");
 

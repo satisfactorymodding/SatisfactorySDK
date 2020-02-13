@@ -34,7 +34,7 @@ public:
 
 
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_FindFoliageLocation(int EntryPoint);
+	void ExecuteUbergraph_BTT_FindFoliageLocation(int* EntryPoint);
 };
 
 

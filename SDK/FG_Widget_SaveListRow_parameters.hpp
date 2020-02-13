@@ -17,8 +17,8 @@ namespace SDK
 // Function Widget_SaveListRow.Widget_SaveListRow_C.SetColorForImage
 struct UWidget_SaveListRow_C_SetColorForImage_Params
 {
-	class UImage*                                      ImageBG;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UImage**                                     ImageBG;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FLinearColor*                               Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetNewSaveGameVisibility
@@ -112,6 +112,11 @@ struct UWidget_SaveListRow_C_GetSaveVersion_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
+// Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
+struct UWidget_SaveListRow_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
 // Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
 struct UWidget_SaveListRow_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params
 {
@@ -130,8 +135,8 @@ struct UWidget_SaveListRow_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnBut
 // Function Widget_SaveListRow.Widget_SaveListRow_C.OnWorldSave
 struct UWidget_SaveListRow_C_OnWorldSave_Params
 {
-	bool                                               wasSuccessful;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       errorMessage;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              WasSuccessful;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      errorMessage;                                             // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.ConfirmDeleteSessionPopUp
@@ -139,14 +144,10 @@ struct UWidget_SaveListRow_C_ConfirmDeleteSessionPopUp_Params
 {
 };
 
-// Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-struct UWidget_SaveListRow_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature_Params
-{
-};
-
 // Function Widget_SaveListRow.Widget_SaveListRow_C.DeleteSave
 struct UWidget_SaveListRow_C_DeleteSave_Params
 {
+	bool*                                              confirmed;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature
@@ -159,16 +160,22 @@ struct UWidget_SaveListRow_C_Construct_Params
 {
 };
 
+// Function Widget_SaveListRow.Widget_SaveListRow_C.OnDeleteSaveDone
+struct UWidget_SaveListRow_C_OnDeleteSaveDone_Params
+{
+	bool*                                              success;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_SaveListRow.Widget_SaveListRow_C.ExecuteUbergraph_Widget_SaveListRow
 struct UWidget_SaveListRow_C_ExecuteUbergraph_Widget_SaveListRow_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.OnClicked__DelegateSignature
 struct UWidget_SaveListRow_C_OnClicked__DelegateSignature_Params
 {
-	class UWidget_SaveListRow_C*                       clickedRow;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SaveListRow_C**                      clickedRow;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 }

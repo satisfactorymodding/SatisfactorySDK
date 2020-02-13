@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.CalculateAnimGraphVariables
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::CalculateAnimGraphVariables()
 {
@@ -30,7 +30,7 @@ void UAnim_NonFlyingBird_C::CalculateAnimGraphVariables()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_NonFlyingBird_AnimGraphNode_TransitionResult_60BE805E4E0C482A65AABD803219B2BD
-// ()
+// (BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_NonFlyingBird_AnimGraphNode_TransitionResult_60BE805E4E0C482A65AABD803219B2BD()
 {
@@ -47,7 +47,7 @@ void UAnim_NonFlyingBird_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Non
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_NonFlyingBird_AnimGraphNode_TransitionResult_93F56C3644CD506A5E44A9B89733CE4D
-// ()
+// (BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_NonFlyingBird_AnimGraphNode_TransitionResult_93F56C3644CD506A5E44A9B89733CE4D()
 {
@@ -64,7 +64,7 @@ void UAnim_NonFlyingBird_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Non
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.OnRadialDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::OnRadialDamageTaken()
 {
@@ -81,7 +81,7 @@ void UAnim_NonFlyingBird_C::OnRadialDamageTaken()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.OnPointDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector*                shootDIrection                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -101,7 +101,7 @@ void UAnim_NonFlyingBird_C::OnPointDamageTaken(struct FVector* shootDIrection)
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.AnimNotify_NFBEnteredIdleLuringState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::AnimNotify_NFBEnteredIdleLuringState()
 {
@@ -118,7 +118,7 @@ void UAnim_NonFlyingBird_C::AnimNotify_NFBEnteredIdleLuringState()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.AnimNotify_AnimNotify_NFB_Jump
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::AnimNotify_AnimNotify_NFB_Jump()
 {
@@ -135,7 +135,7 @@ void UAnim_NonFlyingBird_C::AnimNotify_AnimNotify_NFB_Jump()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.AnimNotify_AnimNotify_NFB_Land
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::AnimNotify_AnimNotify_NFB_Land()
 {
@@ -152,7 +152,7 @@ void UAnim_NonFlyingBird_C::AnimNotify_AnimNotify_NFB_Land()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.AnimNotify_NFB_EnteredMoving
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::AnimNotify_NFB_EnteredMoving()
 {
@@ -169,7 +169,7 @@ void UAnim_NonFlyingBird_C::AnimNotify_NFB_EnteredMoving()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.AnimNotify_NFBLeftLuringState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::AnimNotify_NFBLeftLuringState()
 {
@@ -186,7 +186,7 @@ void UAnim_NonFlyingBird_C::AnimNotify_NFBLeftLuringState()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.AnimNotify_NFB_LeftMoving
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::AnimNotify_NFB_LeftMoving()
 {
@@ -203,7 +203,7 @@ void UAnim_NonFlyingBird_C::AnimNotify_NFB_LeftMoving()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.AnimNotify_AnimNotify_NFB_VO_Long
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::AnimNotify_AnimNotify_NFB_VO_Long()
 {
@@ -220,7 +220,7 @@ void UAnim_NonFlyingBird_C::AnimNotify_AnimNotify_NFB_VO_Long()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -240,7 +240,7 @@ void UAnim_NonFlyingBird_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.AnimNotify_AnimNotify_NFB_JumpLoop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NonFlyingBird_C::AnimNotify_AnimNotify_NFB_JumpLoop()
 {
@@ -257,11 +257,11 @@ void UAnim_NonFlyingBird_C::AnimNotify_AnimNotify_NFB_JumpLoop()
 
 
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.ExecuteUbergraph_Anim_NonFlyingBird
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_NonFlyingBird_C::ExecuteUbergraph_Anim_NonFlyingBird(int EntryPoint)
+void UAnim_NonFlyingBird_C::ExecuteUbergraph_Anim_NonFlyingBird(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.ExecuteUbergraph_Anim_NonFlyingBird");
 

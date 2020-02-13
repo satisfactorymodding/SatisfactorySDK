@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.GetLightGrayColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FLinearColor UWidget_TradingPost_RecipeInfoBox_C::GetLightGrayColor()
 
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.GetLightGrayText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +55,7 @@ struct FSlateColor UWidget_TradingPost_RecipeInfoBox_C::GetLightGrayText()
 
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.GetCategoryIcon
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -76,7 +76,7 @@ struct FSlateBrush UWidget_TradingPost_RecipeInfoBox_C::GetCategoryIcon()
 
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.Get_Divider_Visibility_1
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,7 +97,7 @@ ESlateVisibility UWidget_TradingPost_RecipeInfoBox_C::Get_Divider_Visibility_1()
 
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.Get_mIcon_Visibility_1
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -118,11 +118,11 @@ ESlateVisibility UWidget_TradingPost_RecipeInfoBox_C::Get_mIcon_Visibility_1()
 
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.SetItemTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TradingPost_RecipeInfoBox_C::SetItemTitle(const struct FText& Title)
+void UWidget_TradingPost_RecipeInfoBox_C::SetItemTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.SetItemTitle");
 
@@ -138,11 +138,11 @@ void UWidget_TradingPost_RecipeInfoBox_C::SetItemTitle(const struct FText& Title
 
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.SetItemDescriptionText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Description                    (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Description                    (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TradingPost_RecipeInfoBox_C::SetItemDescriptionText(const struct FText& Description)
+void UWidget_TradingPost_RecipeInfoBox_C::SetItemDescriptionText(struct FText* Description)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.SetItemDescriptionText");
 
@@ -158,7 +158,7 @@ void UWidget_TradingPost_RecipeInfoBox_C::SetItemDescriptionText(const struct FT
 
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPost_RecipeInfoBox_C::Construct()
 {
@@ -175,11 +175,11 @@ void UWidget_TradingPost_RecipeInfoBox_C::Construct()
 
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.ExecuteUbergraph_Widget_TradingPost_RecipeInfoBox
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_RecipeInfoBox_C::ExecuteUbergraph_Widget_TradingPost_RecipeInfoBox(int EntryPoint)
+void UWidget_TradingPost_RecipeInfoBox_C::ExecuteUbergraph_Widget_TradingPost_RecipeInfoBox(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.ExecuteUbergraph_Widget_TradingPost_RecipeInfoBox");
 

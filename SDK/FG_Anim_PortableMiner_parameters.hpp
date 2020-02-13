@@ -48,7 +48,7 @@ struct UAnim_PortableMiner_C_AnimNotify_StartBurnerVfxNotify_Params
 // Function Anim_PortableMiner.Anim_PortableMiner_C.ExecuteUbergraph_Anim_PortableMiner
 struct UAnim_PortableMiner_C_ExecuteUbergraph_Anim_PortableMiner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

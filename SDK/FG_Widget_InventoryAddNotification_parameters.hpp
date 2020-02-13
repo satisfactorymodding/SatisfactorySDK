@@ -22,11 +22,11 @@ struct UWidget_InventoryAddNotification_C_BindOnInventoryAddAndCacheChar_Params
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.UnbindOnInventoryAdd
 struct UWidget_InventoryAddNotification_C_UnbindOnInventoryAdd_Params
 {
-	class AFGCharacterPlayer*                          FromCharacter;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGCharacterPlayer**                         FromCharacter;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.IsInventoryOpen
-struct UWidget_InventoryAddNotification_C_IsInventoryOpen_Params
+// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.IsInteractWidgetOpen
+struct UWidget_InventoryAddNotification_C_IsInteractWidgetOpen_Params
 {
 	bool                                               IsOpen;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -34,8 +34,8 @@ struct UWidget_InventoryAddNotification_C_IsInventoryOpen_Params
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemADded
 struct UWidget_InventoryAddNotification_C_OnItemADded_Params
 {
-	class UClass*                                      ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                numAdded;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               numAdded;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.Construct
@@ -58,7 +58,7 @@ struct UWidget_InventoryAddNotification_C_Tick_Params
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.ExecuteUbergraph_Widget_InventoryAddNotification
 struct UWidget_InventoryAddNotification_C_ExecuteUbergraph_Widget_InventoryAddNotification_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_MamIntegrated.Build_MamIntegrated_C.CanDismantle
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ bool ABuild_MamIntegrated_C::CanDismantle()
 
 
 // Function Build_MamIntegrated.Build_MamIntegrated_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -59,7 +59,7 @@ struct FText ABuild_MamIntegrated_C::GetLookAtDecription(class AFGCharacterPlaye
 
 
 // Function Build_MamIntegrated.Build_MamIntegrated_C.IsUseable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -80,7 +80,7 @@ bool ABuild_MamIntegrated_C::IsUseable()
 
 
 // Function Build_MamIntegrated.Build_MamIntegrated_C.UpdateUseState
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -108,7 +108,7 @@ void ABuild_MamIntegrated_C::UpdateUseState(class AFGCharacterPlayer** byCharact
 
 
 // Function Build_MamIntegrated.Build_MamIntegrated_C.UserConstructionScript
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABuild_MamIntegrated_C::UserConstructionScript()
 {

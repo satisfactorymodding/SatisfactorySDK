@@ -24,7 +24,7 @@ struct UBTT_UseDebugLocation_C_ReceiveExecuteAI_Params
 // Function BTT_UseDebugLocation.BTT_UseDebugLocation_C.ExecuteUbergraph_BTT_UseDebugLocation
 struct UBTT_UseDebugLocation_C_ExecuteUbergraph_BTT_UseDebugLocation_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

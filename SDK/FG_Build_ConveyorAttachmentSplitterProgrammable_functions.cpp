@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_ConveyorAttachmentSplitterProgrammable.Build_ConveyorAttachmentSplitterProgrammable_C.UserConstructionScript
-// ()
-
-void ABuild_ConveyorAttachmentSplitterProgrammable_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_ConveyorAttachmentSplitterProgrammable.Build_ConveyorAttachmentSplitterProgrammable_C.UserConstructionScript");
-
-	ABuild_ConveyorAttachmentSplitterProgrammable_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_ConveyorAttachmentSplitterProgrammable.Build_ConveyorAttachmentSplitterProgrammable_C.PlayConstructSound
-// ()
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
 void ABuild_ConveyorAttachmentSplitterProgrammable_C::PlayConstructSound()
 {
@@ -47,11 +30,11 @@ void ABuild_ConveyorAttachmentSplitterProgrammable_C::PlayConstructSound()
 
 
 // Function Build_ConveyorAttachmentSplitterProgrammable.Build_ConveyorAttachmentSplitterProgrammable_C.ExecuteUbergraph_Build_ConveyorAttachmentSplitterProgrammable
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_ConveyorAttachmentSplitterProgrammable_C::ExecuteUbergraph_Build_ConveyorAttachmentSplitterProgrammable(int EntryPoint)
+void ABuild_ConveyorAttachmentSplitterProgrammable_C::ExecuteUbergraph_Build_ConveyorAttachmentSplitterProgrammable(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_ConveyorAttachmentSplitterProgrammable.Build_ConveyorAttachmentSplitterProgrammable_C.ExecuteUbergraph_Build_ConveyorAttachmentSplitterProgrammable");
 

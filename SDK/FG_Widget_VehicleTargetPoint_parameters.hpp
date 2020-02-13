@@ -52,13 +52,13 @@ struct UWidget_VehicleTargetPoint_C_BndEvt__mWaitButton_K2Node_ComponentBoundEve
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.SetWaitTimePopup
 struct UWidget_VehicleTargetPoint_C_SetWaitTimePopup_Params
 {
-	bool                                               mPopUpConfirm;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              mPopUpConfirm;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.DoDeleteNode
 struct UWidget_VehicleTargetPoint_C_DoDeleteNode_Params
 {
-	bool                                               ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.Construct
@@ -69,8 +69,8 @@ struct UWidget_VehicleTargetPoint_C_Construct_Params
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_6_OnTextComitted__DelegateSignature
 struct UWidget_VehicleTargetPoint_C_BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_6_OnTextComitted__DelegateSignature_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	TEnumAsByte<ETextCommit>                           CommitMethod;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	TEnumAsByte<ETextCommit>*                          CommitMethod;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.PreConstruct
@@ -82,7 +82,7 @@ struct UWidget_VehicleTargetPoint_C_PreConstruct_Params
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.ExecuteUbergraph_Widget_VehicleTargetPoint
 struct UWidget_VehicleTargetPoint_C_ExecuteUbergraph_Widget_VehicleTargetPoint_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -24,7 +24,7 @@ struct UBTT_FindFoliageLocation_C_ReceiveExecuteAI_Params
 // Function BTT_FindFoliageLocation.BTT_FindFoliageLocation_C.ExecuteUbergraph_BTT_FindFoliageLocation
 struct UBTT_FindFoliageLocation_C_ExecuteUbergraph_BTT_FindFoliageLocation_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

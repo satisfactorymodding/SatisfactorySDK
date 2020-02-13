@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_ConveyorPole.Recipe_ConveyorPole_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_ConveyorPole_C : public UFGRecipe
 {
 public:

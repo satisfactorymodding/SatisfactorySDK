@@ -12,42 +12,25 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Char_BabyCrab.Char_BabyCrab_C.UserConstructionScript
-// ()
-
-void AChar_BabyCrab_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.UserConstructionScript");
-
-	AChar_BabyCrab_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_BabyCrab.Char_BabyCrab_C.Got Damaged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UDamageType*             DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_BabyCrab_C::Got_Damaged(class AActor* damagedActor, float Damage, class UDamageType* DamageType, class AController* instigatedBy, class AActor* damageCauser)
+void AChar_BabyCrab_C::Got_Damaged(class AActor** DamagedActor, float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.Got Damaged");
 
 	AChar_BabyCrab_C_Got_Damaged_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.Damage = Damage;
 	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -58,7 +41,7 @@ void AChar_BabyCrab_C::Got_Damaged(class AActor* damagedActor, float Damage, cla
 
 
 // Function Char_BabyCrab.Char_BabyCrab_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -78,7 +61,7 @@ void AChar_BabyCrab_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Char_BabyCrab.Char_BabyCrab_C.ReceiveDied
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_BabyCrab_C::ReceiveDied()
 {
@@ -95,7 +78,7 @@ void AChar_BabyCrab_C::ReceiveDied()
 
 
 // Function Char_BabyCrab.Char_BabyCrab_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AChar_BabyCrab_C::ReceiveBeginPlay()
 {
@@ -111,17 +94,88 @@ void AChar_BabyCrab_C::ReceiveBeginPlay()
 }
 
 
-// Function Char_BabyCrab.Char_BabyCrab_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// ()
-// Parameters:
-// class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// Function Char_BabyCrab.Char_BabyCrab_C.KillOrphanCrabs
+// (BlueprintCallable, BlueprintEvent)
 
-void AChar_BabyCrab_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void AChar_BabyCrab_C::KillOrphanCrabs()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.KillOrphanCrabs");
+
+	AChar_BabyCrab_C_KillOrphanCrabs_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_BabyCrab.Char_BabyCrab_C.Event Check Subtitle Distance
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_BabyCrab_C::Event_Check_Subtitle_Distance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.Event Check Subtitle Distance");
+
+	AChar_BabyCrab_C_Event_Check_Subtitle_Distance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_BabyCrab.Char_BabyCrab_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_BabyCrab_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.ReceiveEndPlay");
+
+	AChar_BabyCrab_C_ReceiveEndPlay_Params params;
+	params.EndPlayReason = EndPlayReason;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_BabyCrab.Char_BabyCrab_C.ChargingMovement
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_BabyCrab_C::ChargingMovement()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.ChargingMovement");
+
+	AChar_BabyCrab_C_ChargingMovement_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_BabyCrab.Char_BabyCrab_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+// (HasOutParms, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent**    OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor**                 OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent**    OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult*             SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+
+void AChar_BabyCrab_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent** OverlappedComponent, class AActor** OtherActor, class UPrimitiveComponent** OtherComp, int* OtherBodyIndex, bool* bFromSweep, struct FHitResult* SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -142,7 +196,7 @@ void AChar_BabyCrab_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBegi
 
 
 // Function Char_BabyCrab.Char_BabyCrab_C.ResetMovement
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_BabyCrab_C::ResetMovement()
 {
@@ -158,25 +212,8 @@ void AChar_BabyCrab_C::ResetMovement()
 }
 
 
-// Function Char_BabyCrab.Char_BabyCrab_C.ChargingMovement
-// ()
-
-void AChar_BabyCrab_C::ChargingMovement()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.ChargingMovement");
-
-	AChar_BabyCrab_C_ChargingMovement_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_BabyCrab.Char_BabyCrab_C.ReceiveHit
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent**    MyComp                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor**                 Other                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -210,11 +247,11 @@ void AChar_BabyCrab_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AAct
 
 
 // Function Char_BabyCrab.Char_BabyCrab_C.ExecuteUbergraph_Char_BabyCrab
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_BabyCrab_C::ExecuteUbergraph_Char_BabyCrab(int EntryPoint)
+void AChar_BabyCrab_C::ExecuteUbergraph_Char_BabyCrab(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_BabyCrab.Char_BabyCrab_C.ExecuteUbergraph_Char_BabyCrab");
 

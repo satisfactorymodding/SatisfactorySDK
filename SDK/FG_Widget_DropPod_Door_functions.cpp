@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.SetHasBeenOpened
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           HasBeenOpened                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          HasBeenOpened                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_DropPod_Door_C::SetHasBeenOpened(bool HasBeenOpened)
+void UWidget_DropPod_Door_C::SetHasBeenOpened(bool* HasBeenOpened)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DropPod_Door.Widget_DropPod_Door_C.SetHasBeenOpened");
 
@@ -33,7 +33,7 @@ void UWidget_DropPod_Door_C::SetHasBeenOpened(bool HasBeenOpened)
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.SetLEDVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Door_C::SetLEDVisibility()
 {
@@ -50,11 +50,11 @@ void UWidget_DropPod_Door_C::SetLEDVisibility()
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.SetHandleAngle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Angle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Angle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_DropPod_Door_C::SetHandleAngle(float Angle)
+void UWidget_DropPod_Door_C::SetHandleAngle(float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DropPod_Door.Widget_DropPod_Door_C.SetHandleAngle");
 
@@ -70,7 +70,7 @@ void UWidget_DropPod_Door_C::SetHandleAngle(float Angle)
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_DropPod_Door_C::Construct()
 {
@@ -87,7 +87,7 @@ void UWidget_DropPod_Door_C::Construct()
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -109,11 +109,11 @@ void UWidget_DropPod_Door_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTi
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_DropPod_Door_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWidget_DropPod_Door_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DropPod_Door.Widget_DropPod_Door_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
 
@@ -129,7 +129,7 @@ void UWidget_DropPod_Door_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_0_OnFlo
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.BndEvt__HandleSlider_K2Node_ComponentBoundEvent_1_OnMouseCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_DropPod_Door_C::BndEvt__HandleSlider_K2Node_ComponentBoundEvent_1_OnMouseCaptureEndEvent__DelegateSignature()
 {
@@ -146,7 +146,7 @@ void UWidget_DropPod_Door_C::BndEvt__HandleSlider_K2Node_ComponentBoundEvent_1_O
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.BndEvt__HandleSlider_K2Node_ComponentBoundEvent_2_OnControllerCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_DropPod_Door_C::BndEvt__HandleSlider_K2Node_ComponentBoundEvent_2_OnControllerCaptureEndEvent__DelegateSignature()
 {
@@ -163,7 +163,7 @@ void UWidget_DropPod_Door_C::BndEvt__HandleSlider_K2Node_ComponentBoundEvent_2_O
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.OnDoorOpen_Event
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Door_C::OnDoorOpen_Event()
 {
@@ -180,7 +180,7 @@ void UWidget_DropPod_Door_C::OnDoorOpen_Event()
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_DropPod_Door_C::Destruct()
 {
@@ -197,11 +197,11 @@ void UWidget_DropPod_Door_C::Destruct()
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.ExecuteUbergraph_Widget_DropPod_Door
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_DropPod_Door_C::ExecuteUbergraph_Widget_DropPod_Door(int EntryPoint)
+void UWidget_DropPod_Door_C::ExecuteUbergraph_Widget_DropPod_Door(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DropPod_Door.Widget_DropPod_Door_C.ExecuteUbergraph_Widget_DropPod_Door");
 
@@ -217,7 +217,7 @@ void UWidget_DropPod_Door_C::ExecuteUbergraph_Widget_DropPod_Door(int EntryPoint
 
 
 // Function Widget_DropPod_Door.Widget_DropPod_Door_C.OnDoorOpen__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Door_C::OnDoorOpen__DelegateSignature()
 {

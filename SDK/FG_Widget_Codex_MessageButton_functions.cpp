@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.CheckIsSelected
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           mIsSelected                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +35,7 @@ void UWidget_Codex_MessageButton_C::CheckIsSelected(bool* mIsSelected)
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.WasMessageReadColorFeedback
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -56,7 +56,7 @@ struct FLinearColor UWidget_Codex_MessageButton_C::WasMessageReadColorFeedback()
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.WasMessageReadFeedbackVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -77,7 +77,7 @@ ESlateVisibility UWidget_Codex_MessageButton_C::WasMessageReadFeedbackVisibility
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.GetSelectedMessageFeedbackVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -98,7 +98,7 @@ ESlateVisibility UWidget_Codex_MessageButton_C::GetSelectedMessageFeedbackVisibi
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.MessageWasClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_MessageButton_C::MessageWasClicked()
 {
@@ -115,7 +115,7 @@ void UWidget_Codex_MessageButton_C::MessageWasClicked()
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.GetMessageName
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_MessageButton_C::GetMessageName()
 {
@@ -132,7 +132,7 @@ void UWidget_Codex_MessageButton_C::GetMessageName()
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -152,7 +152,7 @@ void UWidget_Codex_MessageButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.BndEvt__mMessageButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Codex_MessageButton_C::BndEvt__mMessageButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -169,7 +169,7 @@ void UWidget_Codex_MessageButton_C::BndEvt__mMessageButton_K2Node_ComponentBound
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.BndEvt__mMessageButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Codex_MessageButton_C::BndEvt__mMessageButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -186,11 +186,11 @@ void UWidget_Codex_MessageButton_C::BndEvt__mMessageButton_K2Node_ComponentBound
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.ExecuteUbergraph_Widget_Codex_MessageButton
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Codex_MessageButton_C::ExecuteUbergraph_Widget_Codex_MessageButton(int EntryPoint)
+void UWidget_Codex_MessageButton_C::ExecuteUbergraph_Widget_Codex_MessageButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.ExecuteUbergraph_Widget_Codex_MessageButton");
 
@@ -206,7 +206,7 @@ void UWidget_Codex_MessageButton_C::ExecuteUbergraph_Widget_Codex_MessageButton(
 
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_MessageButton_C::OnClicked__DelegateSignature()
 {

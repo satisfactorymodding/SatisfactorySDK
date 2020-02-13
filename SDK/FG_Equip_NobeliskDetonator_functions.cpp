@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.UserConstructionScript
-// ()
-
-void AEquip_NobeliskDetonator_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.UserConstructionScript");
-
-	AEquip_NobeliskDetonator_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.PlayReloadEffects
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_NobeliskDetonator_C::PlayReloadEffects()
 {
@@ -47,7 +30,7 @@ void AEquip_NobeliskDetonator_C::PlayReloadEffects()
 
 
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.PlayFireEffect
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_NobeliskDetonator_C::PlayFireEffect()
 {
@@ -64,7 +47,7 @@ void AEquip_NobeliskDetonator_C::PlayFireEffect()
 
 
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_NobeliskDetonator_C::WasUnEquipped()
 {
@@ -81,7 +64,7 @@ void AEquip_NobeliskDetonator_C::WasUnEquipped()
 
 
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_NobeliskDetonator_C::WasEquipped()
 {
@@ -98,7 +81,7 @@ void AEquip_NobeliskDetonator_C::WasEquipped()
 
 
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.OnSecondaryFirePressed
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_NobeliskDetonator_C::OnSecondaryFirePressed()
 {
@@ -115,7 +98,7 @@ void AEquip_NobeliskDetonator_C::OnSecondaryFirePressed()
 
 
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.PlayFireReleasedEffects
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_NobeliskDetonator_C::PlayFireReleasedEffects()
 {
@@ -132,11 +115,11 @@ void AEquip_NobeliskDetonator_C::PlayFireReleasedEffects()
 
 
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.ExecuteUbergraph_Equip_NobeliskDetonator
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_NobeliskDetonator_C::ExecuteUbergraph_Equip_NobeliskDetonator(int EntryPoint)
+void AEquip_NobeliskDetonator_C::ExecuteUbergraph_Equip_NobeliskDetonator(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.ExecuteUbergraph_Equip_NobeliskDetonator");
 

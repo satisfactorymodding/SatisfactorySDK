@@ -35,7 +35,7 @@ struct UWidget_SequenceHelper_C_Destruct_Params
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.OnClickedWithRef_Event_1
 struct UWidget_SequenceHelper_C_OnClickedWithRef_Event_1_Params
 {
-	class UWidget_Button_C*                            ClickedButton;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Button_C**                           ClickedButton;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.CustomEvent_1
@@ -46,7 +46,7 @@ struct UWidget_SequenceHelper_C_CustomEvent_1_Params
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.ExecuteUbergraph_Widget_SequenceHelper
 struct UWidget_SequenceHelper_C_ExecuteUbergraph_Widget_SequenceHelper_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

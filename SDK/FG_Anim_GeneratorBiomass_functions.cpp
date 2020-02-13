@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_SteamFxNotify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify()
 {
@@ -30,7 +30,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_SteamFxNotify_02
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_02()
 {
@@ -47,7 +47,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_02()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_SteamFxNotify_03
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_03()
 {
@@ -64,7 +64,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_03()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_SteamFxNotify_04
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_04()
 {
@@ -81,7 +81,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_04()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_SteamFxNotify_05
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_05()
 {
@@ -98,7 +98,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_05()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_SteamFxNotify_06
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_06()
 {
@@ -115,7 +115,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_SteamFxNotify_06()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_BioGenEnteredProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_BioGenEnteredProducingState()
 {
@@ -132,7 +132,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_BioGenEnteredProducingState()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_BioGenLeftProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_BioGenLeftProducingState()
 {
@@ -149,7 +149,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_BioGenLeftProducingState()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_BioGenEnteredFunnelPoweredState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_BioGenEnteredFunnelPoweredState()
 {
@@ -166,7 +166,7 @@ void UAnim_GeneratorBiomass_C::AnimNotify_BioGenEnteredFunnelPoweredState()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.AnimNotify_BioGenEnteredFunnelShutdownState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorBiomass_C::AnimNotify_BioGenEnteredFunnelShutdownState()
 {
@@ -183,11 +183,11 @@ void UAnim_GeneratorBiomass_C::AnimNotify_BioGenEnteredFunnelShutdownState()
 
 
 // Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.ExecuteUbergraph_Anim_GeneratorBiomass
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_GeneratorBiomass_C::ExecuteUbergraph_Anim_GeneratorBiomass(int EntryPoint)
+void UAnim_GeneratorBiomass_C::ExecuteUbergraph_Anim_GeneratorBiomass(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_GeneratorBiomass.Anim_GeneratorBiomass_C.ExecuteUbergraph_Anim_GeneratorBiomass");
 

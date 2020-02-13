@@ -34,7 +34,7 @@ public:
 	void mOnJumpAttackFinished_2B6962824822751FCAD482A8789ABE88();
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
 	void ReceiveAbortAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_JumpAttack(int EntryPoint);
+	void ExecuteUbergraph_BTT_JumpAttack(int* EntryPoint);
 };
 
 

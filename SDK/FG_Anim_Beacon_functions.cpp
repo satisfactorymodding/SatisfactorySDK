@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Beacon.Anim_Beacon_C.ExecuteUbergraph_Anim_Beacon
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Beacon_C::ExecuteUbergraph_Anim_Beacon(int EntryPoint)
+void UAnim_Beacon_C::ExecuteUbergraph_Anim_Beacon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Beacon.Anim_Beacon_C.ExecuteUbergraph_Anim_Beacon");
 

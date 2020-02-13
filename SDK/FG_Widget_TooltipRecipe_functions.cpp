@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TooltipRecipe.Widget_TooltipRecipe_C.OnUnhovered
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TooltipRecipe_C::OnUnhovered()
 {
@@ -30,7 +30,7 @@ void UWidget_TooltipRecipe_C::OnUnhovered()
 
 
 // Function Widget_TooltipRecipe.Widget_TooltipRecipe_C.OnHovered
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TooltipRecipe_C::OnHovered()
 {
@@ -47,7 +47,7 @@ void UWidget_TooltipRecipe_C::OnHovered()
 
 
 // Function Widget_TooltipRecipe.Widget_TooltipRecipe_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TooltipRecipe_C::Construct()
 {
@@ -64,7 +64,7 @@ void UWidget_TooltipRecipe_C::Construct()
 
 
 // Function Widget_TooltipRecipe.Widget_TooltipRecipe_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,11 +84,11 @@ void UWidget_TooltipRecipe_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_TooltipRecipe.Widget_TooltipRecipe_C.ExecuteUbergraph_Widget_TooltipRecipe
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TooltipRecipe_C::ExecuteUbergraph_Widget_TooltipRecipe(int EntryPoint)
+void UWidget_TooltipRecipe_C::ExecuteUbergraph_Widget_TooltipRecipe(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TooltipRecipe.Widget_TooltipRecipe_C.ExecuteUbergraph_Widget_TooltipRecipe");
 

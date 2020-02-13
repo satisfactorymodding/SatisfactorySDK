@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Char_Spitter.Char_Spitter_C.GetAttackLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FVector AChar_Spitter_C::GetAttackLocation()
 
 
 // Function Char_Spitter.Char_Spitter_C.UpdateStrafeDirection
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Spitter_C::UpdateStrafeDirection()
 {
@@ -51,7 +51,7 @@ void AChar_Spitter_C::UpdateStrafeDirection()
 
 
 // Function Char_Spitter.Char_Spitter_C.StopStrafe
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Spitter_C::StopStrafe()
 {
@@ -68,7 +68,7 @@ void AChar_Spitter_C::StopStrafe()
 
 
 // Function Char_Spitter.Char_Spitter_C.DoStrafe
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Spitter_C::DoStrafe()
 {
@@ -85,7 +85,7 @@ void AChar_Spitter_C::DoStrafe()
 
 
 // Function Char_Spitter.Char_Spitter_C.StartStrafe
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AChar_Spitter_C::StartStrafe()
 {
@@ -101,25 +101,8 @@ void AChar_Spitter_C::StartStrafe()
 }
 
 
-// Function Char_Spitter.Char_Spitter_C.UserConstructionScript
-// ()
-
-void AChar_Spitter_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter.Char_Spitter_C.UserConstructionScript");
-
-	AChar_Spitter_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_Spitter.Char_Spitter_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -139,7 +122,7 @@ void AChar_Spitter_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Char_Spitter.Char_Spitter_C.OnCurrentAggroTargetReplicated
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Spitter_C::OnCurrentAggroTargetReplicated()
 {
@@ -156,16 +139,16 @@ void AChar_Spitter_C::OnCurrentAggroTargetReplicated()
 
 
 // Function Char_Spitter.Char_Spitter_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent**    OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor**                 OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent**    OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult*             SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void AChar_Spitter_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void AChar_Spitter_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent** OverlappedComponent, class AActor** OtherActor, class UPrimitiveComponent** OtherComp, int* OtherBodyIndex, bool* bFromSweep, struct FHitResult* SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter.Char_Spitter_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -185,12 +168,83 @@ void AChar_Spitter_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBegi
 }
 
 
-// Function Char_Spitter.Char_Spitter_C.ExecuteUbergraph_Char_Spitter
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Char_Spitter.Char_Spitter_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AChar_Spitter_C::ExecuteUbergraph_Char_Spitter(int EntryPoint)
+void AChar_Spitter_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter.Char_Spitter_C.ReceiveBeginPlay");
+
+	AChar_Spitter_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Spitter.Char_Spitter_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Spitter_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter.Char_Spitter_C.ReceiveEndPlay");
+
+	AChar_Spitter_C_ReceiveEndPlay_Params params;
+	params.EndPlayReason = EndPlayReason;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Spitter.Char_Spitter_C.GainedSignificance
+// (Event, Public, BlueprintEvent)
+
+void AChar_Spitter_C::GainedSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter.Char_Spitter_C.GainedSignificance");
+
+	AChar_Spitter_C_GainedSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Spitter.Char_Spitter_C.LostSignificance
+// (Event, Public, BlueprintEvent)
+
+void AChar_Spitter_C::LostSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter.Char_Spitter_C.LostSignificance");
+
+	AChar_Spitter_C_LostSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Spitter.Char_Spitter_C.ExecuteUbergraph_Char_Spitter
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Spitter_C::ExecuteUbergraph_Char_Spitter(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter.Char_Spitter_C.ExecuteUbergraph_Char_Spitter");
 
@@ -206,7 +260,7 @@ void AChar_Spitter_C::ExecuteUbergraph_Char_Spitter(int EntryPoint)
 
 
 // Function Char_Spitter.Char_Spitter_C.OnStrafeEnded__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void AChar_Spitter_C::OnStrafeEnded__DelegateSignature()
 {

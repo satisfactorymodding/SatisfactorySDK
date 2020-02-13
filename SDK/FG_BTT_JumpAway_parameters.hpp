@@ -24,13 +24,13 @@ struct UBTT_JumpAway_C_ReceiveExecuteAI_Params
 // Function BTT_JumpAway.BTT_JumpAway_C.BirdHasLanded
 struct UBTT_JumpAway_C_BirdHasLanded_Params
 {
-	class AChar_NonFlyingBird_C*                       birdLanded;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AChar_NonFlyingBird_C**                      birdLanded;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BTT_JumpAway.BTT_JumpAway_C.ExecuteUbergraph_BTT_JumpAway
 struct UBTT_JumpAway_C_ExecuteUbergraph_BTT_JumpAway_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

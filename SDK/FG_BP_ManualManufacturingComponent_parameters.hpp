@@ -27,7 +27,7 @@ struct UBP_ManualManufacturingComponent_C_CraftComplete_Params
 // Function BP_ManualManufacturingComponent.BP_ManualManufacturingComponent_C.ExecuteUbergraph_BP_ManualManufacturingComponent
 struct UBP_ManualManufacturingComponent_C_ExecuteUbergraph_BP_ManualManufacturingComponent_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_ManualManufacturingComponent.BP_ManualManufacturingComponent_C.OnCraftCompleted__DelegateSignature

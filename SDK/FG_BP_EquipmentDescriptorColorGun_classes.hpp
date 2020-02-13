@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EquipmentDescriptorColorGun.BP_EquipmentDescriptorColorGun_C
-// 0x0000 (0x0130 - 0x0130)
+// 0x0000 (0x0150 - 0x0150)
 class UBP_EquipmentDescriptorColorGun_C : public UFGEquipmentDescriptor
 {
 public:

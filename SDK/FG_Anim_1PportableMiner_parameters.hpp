@@ -68,7 +68,7 @@ struct UAnim_1PportableMiner_C_BlueprintUpdateAnimation_Params
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.ExecuteUbergraph_Anim_1PportableMiner
 struct UAnim_1PportableMiner_C_ExecuteUbergraph_Anim_1PportableMiner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

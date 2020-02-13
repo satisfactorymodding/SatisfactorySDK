@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_GroupPanic.BTT_GroupPanic_C.ReceiveExecute
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UBTT_GroupPanic_C::ReceiveExecute(class AActor** OwnerActor)
 
 
 // Function BTT_GroupPanic.BTT_GroupPanic_C.ExecuteUbergraph_BTT_GroupPanic
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_GroupPanic_C::ExecuteUbergraph_BTT_GroupPanic(int EntryPoint)
+void UBTT_GroupPanic_C::ExecuteUbergraph_BTT_GroupPanic(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_GroupPanic.BTT_GroupPanic_C.ExecuteUbergraph_BTT_GroupPanic");
 

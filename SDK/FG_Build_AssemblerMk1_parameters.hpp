@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_AssemblerMk1.Build_AssemblerMk1_C.UserConstructionScript
-struct ABuild_AssemblerMk1_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

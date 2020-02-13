@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function master_river_spline.master_river_spline_C.ModifyTerrain
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void Amaster_river_spline_C::ModifyTerrain()
 {
@@ -30,7 +30,7 @@ void Amaster_river_spline_C::ModifyTerrain()
 
 
 // Function master_river_spline.master_river_spline_C.CheckPointsHeight
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Amaster_river_spline_C::CheckPointsHeight()
 {
@@ -47,7 +47,7 @@ void Amaster_river_spline_C::CheckPointsHeight()
 
 
 // Function master_river_spline.master_river_spline_C.SnapToTerrain
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void Amaster_river_spline_C::SnapToTerrain()
 {
@@ -64,7 +64,7 @@ void Amaster_river_spline_C::SnapToTerrain()
 
 
 // Function master_river_spline.master_river_spline_C.UserConstructionScript
-// ()
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void Amaster_river_spline_C::UserConstructionScript()
 {
@@ -81,7 +81,7 @@ void Amaster_river_spline_C::UserConstructionScript()
 
 
 // Function master_river_spline.master_river_spline_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void Amaster_river_spline_C::ReceiveBeginPlay()
 {
@@ -98,11 +98,11 @@ void Amaster_river_spline_C::ReceiveBeginPlay()
 
 
 // Function master_river_spline.master_river_spline_C.ExecuteUbergraph_master_river_spline
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Amaster_river_spline_C::ExecuteUbergraph_master_river_spline(int EntryPoint)
+void Amaster_river_spline_C::ExecuteUbergraph_master_river_spline(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function master_river_spline.master_river_spline_C.ExecuteUbergraph_master_river_spline");
 

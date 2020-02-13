@@ -34,29 +34,28 @@ struct ABuild_FoundryMk1_C_SetupIdleEffects_Params
 {
 };
 
-// Function Build_FoundryMk1.Build_FoundryMk1_C.UserConstructionScript
-struct ABuild_FoundryMk1_C_UserConstructionScript_Params
-{
-};
-
 // Function Build_FoundryMk1.Build_FoundryMk1_C.StartProductionLoopEffects
 struct ABuild_FoundryMk1_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.StopProductionLoopEffects
 struct ABuild_FoundryMk1_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.StartIdlingLoopEffects
 struct ABuild_FoundryMk1_C_StartIdlingLoopEffects_Params
 {
+	bool*                                              didGainPower;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.StopIdlingLoopEffects
 struct ABuild_FoundryMk1_C_StopIdlingLoopEffects_Params
 {
+	bool*                                              didLosePower;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.LostSignificance
@@ -72,7 +71,7 @@ struct ABuild_FoundryMk1_C_GainedSignificance_Params
 // Function Build_FoundryMk1.Build_FoundryMk1_C.ExecuteUbergraph_Build_FoundryMk1
 struct ABuild_FoundryMk1_C_ExecuteUbergraph_Build_FoundryMk1_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

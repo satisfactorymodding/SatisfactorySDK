@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_InventoryAddNotificationIcon.Widget_InventoryAddNotificationIcon_C.Animate Icon
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_InventoryAddNotificationIcon_C::Animate_Icon()
 {
@@ -30,11 +30,11 @@ void UWidget_InventoryAddNotificationIcon_C::Animate_Icon()
 
 
 // Function Widget_InventoryAddNotificationIcon.Widget_InventoryAddNotificationIcon_C.ExecuteUbergraph_Widget_InventoryAddNotificationIcon
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventoryAddNotificationIcon_C::ExecuteUbergraph_Widget_InventoryAddNotificationIcon(int EntryPoint)
+void UWidget_InventoryAddNotificationIcon_C::ExecuteUbergraph_Widget_InventoryAddNotificationIcon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotificationIcon.Widget_InventoryAddNotificationIcon_C.ExecuteUbergraph_Widget_InventoryAddNotificationIcon");
 

@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.PopulateSearchResults
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Codex_Container_C::PopulateSearchResults(const struct FText& InText)
+void UWidget_Codex_Container_C::PopulateSearchResults(struct FText* InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.PopulateSearchResults");
 
@@ -33,11 +33,11 @@ void UWidget_Codex_Container_C::PopulateSearchResults(const struct FText& InText
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateItemInfo
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  product                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 product                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Codex_Container_C::UpdateItemInfo(class UClass* product)
+void UWidget_Codex_Container_C::UpdateItemInfo(class UClass** product)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateItemInfo");
 
@@ -53,7 +53,7 @@ void UWidget_Codex_Container_C::UpdateItemInfo(class UClass* product)
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.SetAllItemsAndBuildings
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_Container_C::SetAllItemsAndBuildings()
 {
@@ -70,7 +70,7 @@ void UWidget_Codex_Container_C::SetAllItemsAndBuildings()
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.GenerateReceipes
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UClass*>          InRecipes                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -92,11 +92,11 @@ void UWidget_Codex_Container_C::GenerateReceipes(TArray<class UClass*>* InRecipe
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateNotifications
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_CodexButton_C*   forButton                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_CodexButton_C**  forButton                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Codex_Container_C::UpdateNotifications(class UWidget_CodexButton_C* forButton)
+void UWidget_Codex_Container_C::UpdateNotifications(class UWidget_CodexButton_C** forButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateNotifications");
 
@@ -112,11 +112,11 @@ void UWidget_Codex_Container_C::UpdateNotifications(class UWidget_CodexButton_C*
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.OnFilterButtonPressed
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_CodexButton_C*   ButtonPressed                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_CodexButton_C**  ButtonPressed                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Codex_Container_C::OnFilterButtonPressed(class UWidget_CodexButton_C* ButtonPressed)
+void UWidget_Codex_Container_C::OnFilterButtonPressed(class UWidget_CodexButton_C** ButtonPressed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.OnFilterButtonPressed");
 
@@ -132,11 +132,11 @@ void UWidget_Codex_Container_C::OnFilterButtonPressed(class UWidget_CodexButton_
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.SelectButtonWithMessage
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  inMessage                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 inMessage                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Codex_Container_C::SelectButtonWithMessage(class UClass* inMessage)
+void UWidget_Codex_Container_C::SelectButtonWithMessage(class UClass** inMessage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.SelectButtonWithMessage");
 
@@ -152,7 +152,7 @@ void UWidget_Codex_Container_C::SelectButtonWithMessage(class UClass* inMessage)
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.CheckShouldOpenMessage
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_Container_C::CheckShouldOpenMessage()
 {
@@ -169,13 +169,13 @@ void UWidget_Codex_Container_C::CheckShouldOpenMessage()
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateMessageText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   senderMail                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   Sender                         (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  senderMail                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Sender                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Codex_Container_C::UpdateMessageText(const struct FText& senderMail, const struct FText& Sender, const struct FText& Title)
+void UWidget_Codex_Container_C::UpdateMessageText(struct FText* senderMail, struct FText* Sender, struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateMessageText");
 
@@ -193,7 +193,7 @@ void UWidget_Codex_Container_C::UpdateMessageText(const struct FText& senderMail
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.PopulateList
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_Container_C::PopulateList()
 {
@@ -210,7 +210,7 @@ void UWidget_Codex_Container_C::PopulateList()
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.GetActiveTabFeedback
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_Container_C::GetActiveTabFeedback()
 {
@@ -227,7 +227,7 @@ void UWidget_Codex_Container_C::GetActiveTabFeedback()
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.GetMessageVisiblity
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -248,7 +248,7 @@ ESlateVisibility UWidget_Codex_Container_C::GetMessageVisiblity()
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Codex_Container_C::Construct()
 {
@@ -265,7 +265,7 @@ void UWidget_Codex_Container_C::Construct()
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.CloseCodex
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_Container_C::CloseCodex()
 {
@@ -282,7 +282,7 @@ void UWidget_Codex_Container_C::CloseCodex()
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -304,7 +304,7 @@ void UWidget_Codex_Container_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.MarkAllAsRead
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_Container_C::MarkAllAsRead()
 {
@@ -321,11 +321,11 @@ void UWidget_Codex_Container_C::MarkAllAsRead()
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_0_OnTabButtonClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Codex_Container_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_0_OnTabButtonClicked__DelegateSignature(int ButtonIndex)
+void UWidget_Codex_Container_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_0_OnTabButtonClicked__DelegateSignature(int* ButtonIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_0_OnTabButtonClicked__DelegateSignature");
 
@@ -341,12 +341,12 @@ void UWidget_Codex_Container_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentB
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.OnRecipeButtonClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Codex_Container_C::OnRecipeButtonClicked(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_Codex_Container_C::OnRecipeButtonClicked(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.OnRecipeButtonClicked");
 
@@ -363,11 +363,11 @@ void UWidget_Codex_Container_C::OnRecipeButtonClicked(int Index, class UWidget_L
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Codex_Container_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature(const struct FText& Text)
+void UWidget_Codex_Container_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature");
 
@@ -383,12 +383,12 @@ void UWidget_Codex_Container_C::BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.OnSearchResultClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Codex_Container_C::OnSearchResultClicked(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_Codex_Container_C::OnSearchResultClicked(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.OnSearchResultClicked");
 
@@ -405,12 +405,12 @@ void UWidget_Codex_Container_C::OnSearchResultClicked(int Index, class UWidget_L
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature");
 
@@ -427,12 +427,12 @@ void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_K2Node_ComponentBoundE
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_C_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_C_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_C_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_C_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature");
 
@@ -449,12 +449,12 @@ void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_C_0_K2Node_ComponentBo
 
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_C_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_C_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_C_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_C_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature");
 
@@ -470,12 +470,34 @@ void UWidget_Codex_Container_C::BndEvt__Widget_ListButton_C_1_K2Node_ComponentBo
 }
 
 
-// Function Widget_Codex_Container.Widget_Codex_Container_C.ExecuteUbergraph_Widget_Codex_Container
-// ()
+// Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__mCategoryVehicles_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Codex_Container_C::ExecuteUbergraph_Widget_Codex_Container(int EntryPoint)
+void UWidget_Codex_Container_C::BndEvt__mCategoryVehicles_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__mCategoryVehicles_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature");
+
+	UWidget_Codex_Container_C_BndEvt__mCategoryVehicles_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature_Params params;
+	params.Index = Index;
+	params.ListButton = ListButton;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Codex_Container.Widget_Codex_Container_C.ExecuteUbergraph_Widget_Codex_Container
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Codex_Container_C::ExecuteUbergraph_Widget_Codex_Container(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Container.Widget_Codex_Container_C.ExecuteUbergraph_Widget_Codex_Container");
 

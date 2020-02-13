@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_ClearObject.BTT_ClearObject_C.ReceiveExecute
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UBTT_ClearObject_C::ReceiveExecute(class AActor** OwnerActor)
 
 
 // Function BTT_ClearObject.BTT_ClearObject_C.ExecuteUbergraph_BTT_ClearObject
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_ClearObject_C::ExecuteUbergraph_BTT_ClearObject(int EntryPoint)
+void UBTT_ClearObject_C::ExecuteUbergraph_BTT_ClearObject(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_ClearObject.BTT_ClearObject_C.ExecuteUbergraph_BTT_ClearObject");
 

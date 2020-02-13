@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.HideWarning
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_Warning_C::HideWarning()
 {
@@ -30,11 +30,11 @@ void UWidget_Manufacturing_Warning_C::HideWarning()
 
 
 // Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.UpdateWarning
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Manufacturing_Warning_C::UpdateWarning(const struct FText& Text)
+void UWidget_Manufacturing_Warning_C::UpdateWarning(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.UpdateWarning");
 
@@ -50,11 +50,11 @@ void UWidget_Manufacturing_Warning_C::UpdateWarning(const struct FText& Text)
 
 
 // Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.SetText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Manufacturing_Warning_C::SetText(const struct FText& InText)
+void UWidget_Manufacturing_Warning_C::SetText(struct FText* InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.SetText");
 
@@ -70,7 +70,7 @@ void UWidget_Manufacturing_Warning_C::SetText(const struct FText& InText)
 
 
 // Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.GetWarningText
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -91,7 +91,7 @@ struct FText UWidget_Manufacturing_Warning_C::GetWarningText()
 
 
 // Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Manufacturing_Warning_C::Construct()
 {
@@ -108,7 +108,7 @@ void UWidget_Manufacturing_Warning_C::Construct()
 
 
 // Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -128,11 +128,11 @@ void UWidget_Manufacturing_Warning_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.ExecuteUbergraph_Widget_Manufacturing_Warning
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_Warning_C::ExecuteUbergraph_Widget_Manufacturing_Warning(int EntryPoint)
+void UWidget_Manufacturing_Warning_C::ExecuteUbergraph_Widget_Manufacturing_Warning(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing_Warning.Widget_Manufacturing_Warning_C.ExecuteUbergraph_Widget_Manufacturing_Warning");
 

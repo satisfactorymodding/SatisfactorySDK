@@ -14,12 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Widget_CodexContent.Widget_CodexContent_C.Habada
-struct UWidget_CodexContent_C_Habada_Params
-{
-	bool                                               NewParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
 }
 
 #ifdef _MSC_VER

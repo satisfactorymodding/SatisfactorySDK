@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.SetButtonColor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateColor             Color                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSlateColor*            Color                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SaveInputBox_C::SetButtonColor(const struct FSlateColor& Color)
+void UWidget_SaveInputBox_C::SetButtonColor(struct FSlateColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveInputBox.Widget_SaveInputBox_C.SetButtonColor");
 
@@ -33,7 +33,7 @@ void UWidget_SaveInputBox_C::SetButtonColor(const struct FSlateColor& Color)
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SaveInputBox_C::Construct()
 {
@@ -50,7 +50,7 @@ void UWidget_SaveInputBox_C::Construct()
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SaveInputBox_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -67,11 +67,11 @@ void UWidget_SaveInputBox_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnBut
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_SaveInputBox_C::BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature(const struct FText& Text)
+void UWidget_SaveInputBox_C::BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveInputBox.Widget_SaveInputBox_C.BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature");
 
@@ -87,12 +87,12 @@ void UWidget_SaveInputBox_C::BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_1_
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaveInputBox_C::BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_SaveInputBox_C::BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveInputBox.Widget_SaveInputBox_C.BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
@@ -109,7 +109,7 @@ void UWidget_SaveInputBox_C::BndEvt__mSaveInputBox_K2Node_ComponentBoundEvent_2_
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.CheckUserFocus
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SaveInputBox_C::CheckUserFocus()
 {
@@ -126,7 +126,7 @@ void UWidget_SaveInputBox_C::CheckUserFocus()
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SaveInputBox_C::Destruct()
 {
@@ -143,11 +143,11 @@ void UWidget_SaveInputBox_C::Destruct()
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.ExecuteUbergraph_Widget_SaveInputBox
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaveInputBox_C::ExecuteUbergraph_Widget_SaveInputBox(int EntryPoint)
+void UWidget_SaveInputBox_C::ExecuteUbergraph_Widget_SaveInputBox(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveInputBox.Widget_SaveInputBox_C.ExecuteUbergraph_Widget_SaveInputBox");
 
@@ -163,7 +163,7 @@ void UWidget_SaveInputBox_C::ExecuteUbergraph_Widget_SaveInputBox(int EntryPoint
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.OnUnfocused__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SaveInputBox_C::OnUnfocused__DelegateSignature()
 {
@@ -180,7 +180,7 @@ void UWidget_SaveInputBox_C::OnUnfocused__DelegateSignature()
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.OnFocused__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SaveInputBox_C::OnFocused__DelegateSignature()
 {
@@ -197,12 +197,12 @@ void UWidget_SaveInputBox_C::OnFocused__DelegateSignature()
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.OnTextCommited__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaveInputBox_C::OnTextCommited__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_SaveInputBox_C::OnTextCommited__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveInputBox.Widget_SaveInputBox_C.OnTextCommited__DelegateSignature");
 
@@ -219,11 +219,11 @@ void UWidget_SaveInputBox_C::OnTextCommited__DelegateSignature(const struct FTex
 
 
 // Function Widget_SaveInputBox.Widget_SaveInputBox_C.OnTextChanged__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SaveInputBox_C::OnTextChanged__DelegateSignature(const struct FText& Text)
+void UWidget_SaveInputBox_C::OnTextChanged__DelegateSignature(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveInputBox.Widget_SaveInputBox_C.OnTextChanged__DelegateSignature");
 

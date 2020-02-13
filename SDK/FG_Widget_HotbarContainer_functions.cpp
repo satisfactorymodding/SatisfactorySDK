@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HotbarContainer_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_HotbarContainer_C::Construct()
 
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HotbarContainer_C::Destruct()
 {
@@ -47,7 +47,7 @@ void UWidget_HotbarContainer_C::Destruct()
 
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.OnHotbarUpdated
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HotbarContainer_C::OnHotbarUpdated()
 {
@@ -64,7 +64,7 @@ void UWidget_HotbarContainer_C::OnHotbarUpdated()
 
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.OnHotbarLayoutUpdated
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HotbarContainer_C::OnHotbarLayoutUpdated()
 {
@@ -81,11 +81,11 @@ void UWidget_HotbarContainer_C::OnHotbarLayoutUpdated()
 
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.ShowNotification
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HotbarContainer_C::ShowNotification(int Index)
+void UWidget_HotbarContainer_C::ShowNotification(int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarContainer.Widget_HotbarContainer_C.ShowNotification");
 
@@ -101,7 +101,7 @@ void UWidget_HotbarContainer_C::ShowNotification(int Index)
 
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.ListenForPurchasedSchematics
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HotbarContainer_C::ListenForPurchasedSchematics()
 {
@@ -118,11 +118,11 @@ void UWidget_HotbarContainer_C::ListenForPurchasedSchematics()
 
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.OnPurchasedSchematic
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  purchasedSchematic             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 purchasedSchematic             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HotbarContainer_C::OnPurchasedSchematic(class UClass* purchasedSchematic)
+void UWidget_HotbarContainer_C::OnPurchasedSchematic(class UClass** purchasedSchematic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarContainer.Widget_HotbarContainer_C.OnPurchasedSchematic");
 
@@ -138,7 +138,7 @@ void UWidget_HotbarContainer_C::OnPurchasedSchematic(class UClass* purchasedSche
 
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.StopListenForPurchasedSchematics
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HotbarContainer_C::StopListenForPurchasedSchematics()
 {
@@ -155,11 +155,11 @@ void UWidget_HotbarContainer_C::StopListenForPurchasedSchematics()
 
 
 // Function Widget_HotbarContainer.Widget_HotbarContainer_C.ExecuteUbergraph_Widget_HotbarContainer
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HotbarContainer_C::ExecuteUbergraph_Widget_HotbarContainer(int EntryPoint)
+void UWidget_HotbarContainer_C::ExecuteUbergraph_Widget_HotbarContainer(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarContainer.Widget_HotbarContainer_C.ExecuteUbergraph_Widget_HotbarContainer");
 

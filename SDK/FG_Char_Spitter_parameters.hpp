@@ -40,11 +40,6 @@ struct AChar_Spitter_C_StartStrafe_Params
 {
 };
 
-// Function Char_Spitter.Char_Spitter_C.UserConstructionScript
-struct AChar_Spitter_C_UserConstructionScript_Params
-{
-};
-
 // Function Char_Spitter.Char_Spitter_C.ReceiveTick
 struct AChar_Spitter_C_ReceiveTick_Params
 {
@@ -59,18 +54,39 @@ struct AChar_Spitter_C_OnCurrentAggroTargetReplicated_Params
 // Function Char_Spitter.Char_Spitter_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 struct AChar_Spitter_C_BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature_Params
 {
-	class UPrimitiveComponent*                         OverlappedComponent;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AActor*                                      OtherActor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         OtherComp;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                OtherBodyIndex;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bFromSweep;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FHitResult                                  SweepResult;                                              // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	class UPrimitiveComponent**                        OverlappedComponent;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AActor**                                     OtherActor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent**                        OtherComp;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int*                                               OtherBodyIndex;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bFromSweep;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FHitResult*                                 SweepResult;                                              // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function Char_Spitter.Char_Spitter_C.ReceiveBeginPlay
+struct AChar_Spitter_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function Char_Spitter.Char_Spitter_C.ReceiveEndPlay
+struct AChar_Spitter_C_ReceiveEndPlay_Params
+{
+	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_Spitter.Char_Spitter_C.GainedSignificance
+struct AChar_Spitter_C_GainedSignificance_Params
+{
+};
+
+// Function Char_Spitter.Char_Spitter_C.LostSignificance
+struct AChar_Spitter_C_LostSignificance_Params
+{
 };
 
 // Function Char_Spitter.Char_Spitter_C.ExecuteUbergraph_Char_Spitter
 struct AChar_Spitter_C_ExecuteUbergraph_Char_Spitter_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Spitter.Char_Spitter_C.OnStrafeEnded__DelegateSignature

@@ -25,7 +25,7 @@ struct UBTS_TickStuff_C_ReceiveTickAI_Params
 // Function BTS_TickStuff.BTS_TickStuff_C.ExecuteUbergraph_BTS_TickStuff
 struct UBTS_TickStuff_C_ExecuteUbergraph_BTS_TickStuff_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

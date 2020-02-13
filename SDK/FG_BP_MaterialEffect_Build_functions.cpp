@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.PlayThumpSound
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::PlayThumpSound()
 {
@@ -30,7 +30,7 @@ void UBP_MaterialEffect_Build_C::PlayThumpSound()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.InitMaterialParameters
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::InitMaterialParameters()
 {
@@ -47,7 +47,7 @@ void UBP_MaterialEffect_Build_C::InitMaterialParameters()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.SetupBounds
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::SetupBounds()
 {
@@ -64,7 +64,7 @@ void UBP_MaterialEffect_Build_C::SetupBounds()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.GotoNextStep
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::GotoNextStep()
 {
@@ -81,7 +81,7 @@ void UBP_MaterialEffect_Build_C::GotoNextStep()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.CalcCostQueueNewLength
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            NewLength                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -103,7 +103,7 @@ void UBP_MaterialEffect_Build_C::CalcCostQueueNewLength(int* NewLength)
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.DebugFillCostQueue
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::DebugFillCostQueue()
 {
@@ -120,7 +120,7 @@ void UBP_MaterialEffect_Build_C::DebugFillCostQueue()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.CalcDisplacementAmount
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          amount                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -142,7 +142,7 @@ void UBP_MaterialEffect_Build_C::CalcDisplacementAmount(float* amount)
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.UpdateCostQueue
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::UpdateCostQueue()
 {
@@ -159,7 +159,7 @@ void UBP_MaterialEffect_Build_C::UpdateCostQueue()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.SetupCostQueue
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::SetupCostQueue()
 {
@@ -176,7 +176,7 @@ void UBP_MaterialEffect_Build_C::SetupCostQueue()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.SetupDuration
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::SetupDuration()
 {
@@ -193,7 +193,7 @@ void UBP_MaterialEffect_Build_C::SetupDuration()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.SetupMeshes
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::SetupMeshes()
 {
@@ -210,7 +210,7 @@ void UBP_MaterialEffect_Build_C::SetupMeshes()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.SpawnFootEmitters
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::SpawnFootEmitters()
 {
@@ -227,7 +227,7 @@ void UBP_MaterialEffect_Build_C::SpawnFootEmitters()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.OnUpdate
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -247,7 +247,7 @@ void UBP_MaterialEffect_Build_C::OnUpdate(float* DeltaTime)
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.OnEnded
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::OnEnded()
 {
@@ -264,7 +264,7 @@ void UBP_MaterialEffect_Build_C::OnEnded()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.PreStarted
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::PreStarted()
 {
@@ -281,7 +281,7 @@ void UBP_MaterialEffect_Build_C::PreStarted()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.OnStarted
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::OnStarted()
 {
@@ -298,7 +298,7 @@ void UBP_MaterialEffect_Build_C::OnStarted()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.OnCostActorReachedTarget
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_C::OnCostActorReachedTarget()
 {
@@ -315,11 +315,11 @@ void UBP_MaterialEffect_Build_C::OnCostActorReachedTarget()
 
 
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.ExecuteUbergraph_BP_MaterialEffect_Build
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MaterialEffect_Build_C::ExecuteUbergraph_BP_MaterialEffect_Build(int EntryPoint)
+void UBP_MaterialEffect_Build_C::ExecuteUbergraph_BP_MaterialEffect_Build(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.ExecuteUbergraph_BP_MaterialEffect_Build");
 

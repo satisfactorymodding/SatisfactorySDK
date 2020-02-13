@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.IsValidRewardItem
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -34,45 +34,8 @@ void UWidget_RewardBuildingProductivity_C::IsValidRewardItem(bool* IsValid)
 }
 
 
-// Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.UpdateVisibility
-// ()
-
-void UWidget_RewardBuildingProductivity_C::UpdateVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.UpdateVisibility");
-
-	UWidget_RewardBuildingProductivity_C_UpdateVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.PreConstruct
-// ()
-// Parameters:
-// bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_RewardBuildingProductivity_C::PreConstruct(bool* IsDesignTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.PreConstruct");
-
-	UWidget_RewardBuildingProductivity_C_PreConstruct_Params params;
-	params.IsDesignTime = IsDesignTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RewardBuildingProductivity_C::Construct()
 {
@@ -88,29 +51,12 @@ void UWidget_RewardBuildingProductivity_C::Construct()
 }
 
 
-// Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.OnRewardClicked
-// ()
-
-void UWidget_RewardBuildingProductivity_C::OnRewardClicked()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.OnRewardClicked");
-
-	UWidget_RewardBuildingProductivity_C_OnRewardClicked_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.ExecuteUbergraph_Widget_RewardBuildingProductivity
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RewardBuildingProductivity_C::ExecuteUbergraph_Widget_RewardBuildingProductivity(int EntryPoint)
+void UWidget_RewardBuildingProductivity_C::ExecuteUbergraph_Widget_RewardBuildingProductivity(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingProductivity.Widget_RewardBuildingProductivity_C.ExecuteUbergraph_Widget_RewardBuildingProductivity");
 

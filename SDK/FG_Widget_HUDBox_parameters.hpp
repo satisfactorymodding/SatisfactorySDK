@@ -53,7 +53,7 @@ struct UWidget_HUDBox_C_PreConstruct_Params
 // Function Widget_HUDBox.Widget_HUDBox_C.ExecuteUbergraph_Widget_HUDBox
 struct UWidget_HUDBox_C_ExecuteUbergraph_Widget_HUDBox_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

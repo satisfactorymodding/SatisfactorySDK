@@ -22,7 +22,7 @@ struct UWidget_KeyShortcuts_C_UpdateShortcutText_Params
 // Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.GetKeyForAction
 struct UWidget_KeyShortcuts_C_GetKeyForAction_Params
 {
-	struct FName                                       ActionName;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      ActionName;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       keyText;                                                  // (Parm, OutParm)
 };
 
@@ -34,13 +34,13 @@ struct UWidget_KeyShortcuts_C_Construct_Params
 // Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.UpdateShortcutAvilability
 struct UWidget_KeyShortcuts_C_UpdateShortcutAvilability_Params
 {
-	class UClass*                                      Unused;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Unused;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.ExecuteUbergraph_Widget_KeyShortcuts
 struct UWidget_KeyShortcuts_C_ExecuteUbergraph_Widget_KeyShortcuts_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

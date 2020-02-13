@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ImgMedia.ImgMediaSource.SetSequencePath
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                  Path                           (Parm, ZeroConstructor)
+// class FString*                 Path                           (Parm, ZeroConstructor)
 
-void UImgMediaSource::SetSequencePath(const class FString& Path)
+void UImgMediaSource::SetSequencePath(class FString* Path)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.SetSequencePath");
 
@@ -25,6 +25,7 @@ void UImgMediaSource::SetSequencePath(const class FString& Path)
 	params.Path = Path;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33,7 +34,7 @@ void UImgMediaSource::SetSequencePath(const class FString& Path)
 
 
 // Function ImgMedia.ImgMediaSource.GetSequencePath
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                  ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -44,6 +45,7 @@ class FString UImgMediaSource::GetSequencePath()
 	UImgMediaSource_GetSequencePath_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +56,7 @@ class FString UImgMediaSource::GetSequencePath()
 
 
 // Function ImgMedia.ImgMediaSource.GetProxies
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>          OutProxies                     (Parm, OutParm, ZeroConstructor)
 
@@ -65,6 +67,7 @@ void UImgMediaSource::GetProxies(TArray<class FString>* OutProxies)
 	UImgMediaSource_GetProxies_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

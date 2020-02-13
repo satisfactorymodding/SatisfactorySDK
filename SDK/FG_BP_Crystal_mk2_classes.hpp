@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Crystal_mk2.BP_Crystal_mk2_C
-// 0x0000 (0x03B0 - 0x03B0)
+// 0x0000 (0x03E8 - 0x03E8)
 class ABP_Crystal_mk2_C : public ABP_Crystal_C
 {
 public:

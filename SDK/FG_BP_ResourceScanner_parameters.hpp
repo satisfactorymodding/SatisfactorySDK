@@ -20,11 +20,6 @@ struct ABP_ResourceScanner_C_IsScannerWheelVisible_Params
 	bool                                               IsVisible;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_ResourceScanner.BP_ResourceScanner_C.UserConstructionScript
-struct ABP_ResourceScanner_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_ResourceScanner.BP_ResourceScanner_C.Timeline_0__FinishedFunc
 struct ABP_ResourceScanner_C_Timeline_0__FinishedFunc_Params
 {
@@ -64,7 +59,7 @@ struct ABP_ResourceScanner_C_CustomEvent_1_Params
 // Function BP_ResourceScanner.BP_ResourceScanner_C.ExecuteUbergraph_BP_ResourceScanner
 struct ABP_ResourceScanner_C_ExecuteUbergraph_BP_ResourceScanner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.OnClustersFound__DelegateSignature

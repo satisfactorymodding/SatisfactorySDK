@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HotbarEntry.Widget_HotbarEntry_C.GetIconVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_HotbarEntry_C::GetIconVisibility()
 
 
 // Function Widget_HotbarEntry.Widget_HotbarEntry_C.GetSlotTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +55,7 @@ struct FSlateColor UWidget_HotbarEntry_C::GetSlotTextColor()
 
 
 // Function Widget_HotbarEntry.Widget_HotbarEntry_C.GetSlotBrush
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -76,7 +76,7 @@ struct FSlateBrush UWidget_HotbarEntry_C::GetSlotBrush()
 
 
 // Function Widget_HotbarEntry.Widget_HotbarEntry_C.GetSlotText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -97,7 +97,7 @@ struct FText UWidget_HotbarEntry_C::GetSlotText()
 
 
 // Function Widget_HotbarEntry.Widget_HotbarEntry_C.GetIcon
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -118,7 +118,7 @@ struct FSlateBrush UWidget_HotbarEntry_C::GetIcon()
 
 
 // Function Widget_HotbarEntry.Widget_HotbarEntry_C.OnHotbarUpdated
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HotbarEntry_C::OnHotbarUpdated()
 {
@@ -135,11 +135,11 @@ void UWidget_HotbarEntry_C::OnHotbarUpdated()
 
 
 // Function Widget_HotbarEntry.Widget_HotbarEntry_C.ExecuteUbergraph_Widget_HotbarEntry
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HotbarEntry_C::ExecuteUbergraph_Widget_HotbarEntry(int EntryPoint)
+void UWidget_HotbarEntry_C::ExecuteUbergraph_Widget_HotbarEntry(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarEntry.Widget_HotbarEntry_C.ExecuteUbergraph_Widget_HotbarEntry");
 

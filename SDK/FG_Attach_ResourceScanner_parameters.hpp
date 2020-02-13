@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_ResourceScanner.Attach_ResourceScanner_C.UserConstructionScript
-struct AAttach_ResourceScanner_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_ResourceScanner.Attach_ResourceScanner_C.CustomEvent_1
 struct AAttach_ResourceScanner_C_CustomEvent_1_Params
 {
@@ -33,7 +28,7 @@ struct AAttach_ResourceScanner_C_PlayUseEffect_Params
 // Function Attach_ResourceScanner.Attach_ResourceScanner_C.ExecuteUbergraph_Attach_ResourceScanner
 struct AAttach_ResourceScanner_C_ExecuteUbergraph_Attach_ResourceScanner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

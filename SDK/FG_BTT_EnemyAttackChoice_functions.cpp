@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_EnemyAttackChoice.BTT_EnemyAttackChoice_C.mOnAttackFailed_5A0EFF09427D5915F9D3B18E5D81C9BC
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_EnemyAttackChoice_C::mOnAttackFailed_5A0EFF09427D5915F9D3B18E5D81C9BC()
 {
@@ -30,7 +30,7 @@ void UBTT_EnemyAttackChoice_C::mOnAttackFailed_5A0EFF09427D5915F9D3B18E5D81C9BC(
 
 
 // Function BTT_EnemyAttackChoice.BTT_EnemyAttackChoice_C.mOnAttackFinished_5A0EFF09427D5915F9D3B18E5D81C9BC
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_EnemyAttackChoice_C::mOnAttackFinished_5A0EFF09427D5915F9D3B18E5D81C9BC()
 {
@@ -47,7 +47,7 @@ void UBTT_EnemyAttackChoice_C::mOnAttackFinished_5A0EFF09427D5915F9D3B18E5D81C9B
 
 
 // Function BTT_EnemyAttackChoice.BTT_EnemyAttackChoice_C.ReceiveAbort
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,7 +67,7 @@ void UBTT_EnemyAttackChoice_C::ReceiveAbort(class AActor** OwnerActor)
 
 
 // Function BTT_EnemyAttackChoice.BTT_EnemyAttackChoice_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -89,7 +89,7 @@ void UBTT_EnemyAttackChoice_C::ReceiveExecuteAI(class AAIController** OwnerContr
 
 
 // Function BTT_EnemyAttackChoice.BTT_EnemyAttackChoice_C.ReceiveAbortAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -111,11 +111,11 @@ void UBTT_EnemyAttackChoice_C::ReceiveAbortAI(class AAIController** OwnerControl
 
 
 // Function BTT_EnemyAttackChoice.BTT_EnemyAttackChoice_C.ExecuteUbergraph_BTT_EnemyAttackChoice
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_EnemyAttackChoice_C::ExecuteUbergraph_BTT_EnemyAttackChoice(int EntryPoint)
+void UBTT_EnemyAttackChoice_C::ExecuteUbergraph_BTT_EnemyAttackChoice(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_EnemyAttackChoice.BTT_EnemyAttackChoice_C.ExecuteUbergraph_BTT_EnemyAttackChoice");
 

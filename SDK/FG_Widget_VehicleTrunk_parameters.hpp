@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.UpdateRelevantClasses
+struct UWidget_VehicleTrunk_C_UpdateRelevantClasses_Params
+{
+};
+
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.OnPreviewKeyDown
 struct UWidget_VehicleTrunk_C_OnPreviewKeyDown_Params
 {
@@ -84,10 +89,22 @@ struct UWidget_VehicleTrunk_C_BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_O
 {
 };
 
+// Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature
+struct UWidget_VehicleTrunk_C_BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature_Params
+{
+	int*                                               ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.BndEvt__mManualManufacturerWidget_K2Node_ComponentBoundEvent_2_OnRelevantClassesUpdated__DelegateSignature
+struct UWidget_VehicleTrunk_C_BndEvt__mManualManufacturerWidget_K2Node_ComponentBoundEvent_2_OnRelevantClassesUpdated__DelegateSignature_Params
+{
+	TArray<class UClass*>                              relevantClasses;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.ExecuteUbergraph_Widget_VehicleTrunk
 struct UWidget_VehicleTrunk_C_ExecuteUbergraph_Widget_VehicleTrunk_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

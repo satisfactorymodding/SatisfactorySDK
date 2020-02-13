@@ -7,9 +7,9 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_InputCore_classes.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
+#include "FG_Engine_classes.hpp"
+#include "FG_InputCore_classes.hpp"
 
 namespace SDK
 {
@@ -90,12 +90,11 @@ enum class ETrackingStatus : uint8_t
 //---------------------------------------------------------------------------
 
 // ScriptStruct HeadMountedDisplay.XRDeviceId
-// 0x0010
+// 0x000C
 struct FXRDeviceId
 {
 	struct FName                                       SystemName;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                DeviceID;                                                 // 0x0008(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 }

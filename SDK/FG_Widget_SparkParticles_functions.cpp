@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SparkParticles.Widget_SparkParticles_C.CreateSparks
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            NumberOfSparks                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumberOfSparks                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SparkParticles_C::CreateSparks(int NumberOfSparks)
+void UWidget_SparkParticles_C::CreateSparks(int* NumberOfSparks)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SparkParticles.Widget_SparkParticles_C.CreateSparks");
 
@@ -33,12 +33,12 @@ void UWidget_SparkParticles_C::CreateSparks(int NumberOfSparks)
 
 
 // Function Widget_SparkParticles.Widget_SparkParticles_C.OnSparkBounce
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D               Position                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              Position                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SparkParticles_C::OnSparkBounce(const struct FVector2D& Position, const struct FVector2D& Scale)
+void UWidget_SparkParticles_C::OnSparkBounce(struct FVector2D* Position, struct FVector2D* Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SparkParticles.Widget_SparkParticles_C.OnSparkBounce");
 
@@ -55,11 +55,11 @@ void UWidget_SparkParticles_C::OnSparkBounce(const struct FVector2D& Position, c
 
 
 // Function Widget_SparkParticles.Widget_SparkParticles_C.ExecuteUbergraph_Widget_SparkParticles
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SparkParticles_C::ExecuteUbergraph_Widget_SparkParticles(int EntryPoint)
+void UWidget_SparkParticles_C::ExecuteUbergraph_Widget_SparkParticles(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SparkParticles.Widget_SparkParticles_C.ExecuteUbergraph_Widget_SparkParticles");
 

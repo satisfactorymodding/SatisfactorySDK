@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TrainButton.Widget_TrainButton_C.SetTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   mTitle                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  mTitle                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TrainButton_C::SetTitle(const struct FText& mTitle)
+void UWidget_TrainButton_C::SetTitle(struct FText* mTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.SetTitle");
 
@@ -33,7 +33,7 @@ void UWidget_TrainButton_C::SetTitle(const struct FText& mTitle)
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -53,7 +53,7 @@ void UWidget_TrainButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -70,7 +70,7 @@ void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButto
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TrainButton_C::Construct()
 {
@@ -87,7 +87,7 @@ void UWidget_TrainButton_C::Construct()
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.CheckNextStop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TrainButton_C::CheckNextStop()
 {
@@ -104,7 +104,7 @@ void UWidget_TrainButton_C::CheckNextStop()
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TrainButton_C::Destruct()
 {
@@ -121,7 +121,7 @@ void UWidget_TrainButton_C::Destruct()
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -138,7 +138,7 @@ void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButto
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -155,11 +155,11 @@ void UWidget_TrainButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButto
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.ExecuteUbergraph_Widget_TrainButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TrainButton_C::ExecuteUbergraph_Widget_TrainButton(int EntryPoint)
+void UWidget_TrainButton_C::ExecuteUbergraph_Widget_TrainButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.ExecuteUbergraph_Widget_TrainButton");
 
@@ -175,11 +175,11 @@ void UWidget_TrainButton_C::ExecuteUbergraph_Widget_TrainButton(int EntryPoint)
 
 
 // Function Widget_TrainButton.Widget_TrainButton_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_TrainButton_C*   Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_TrainButton_C**  Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_TrainButton_C::OnClicked__DelegateSignature(class UWidget_TrainButton_C* Button)
+void UWidget_TrainButton_C::OnClicked__DelegateSignature(class UWidget_TrainButton_C** Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainButton.Widget_TrainButton_C.OnClicked__DelegateSignature");
 

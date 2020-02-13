@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function EditableMesh.EditableMesh.WeldVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexID>       VertexIDs                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVertexID>*      VertexIDs                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FVertexID               OutNewVertexID                 (Parm, OutParm)
 
-void UEditableMesh::WeldVertices(TArray<struct FVertexID> VertexIDs, struct FVertexID* OutNewVertexID)
+void UEditableMesh::WeldVertices(TArray<struct FVertexID>* VertexIDs, struct FVertexID* OutNewVertexID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.WeldVertices");
 
@@ -26,6 +26,7 @@ void UEditableMesh::WeldVertices(TArray<struct FVertexID> VertexIDs, struct FVer
 	params.VertexIDs = VertexIDs;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,13 +38,13 @@ void UEditableMesh::WeldVertices(TArray<struct FVertexID> VertexIDs, struct FVer
 
 
 // Function EditableMesh.EditableMesh.TryToRemoveVertex
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
 // bool                           bOutWasVertexRemoved           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FEdgeID                 OutNewEdgeID                   (Parm, OutParm)
 
-void UEditableMesh::TryToRemoveVertex(const struct FVertexID& VertexID, bool* bOutWasVertexRemoved, struct FEdgeID* OutNewEdgeID)
+void UEditableMesh::TryToRemoveVertex(struct FVertexID* VertexID, bool* bOutWasVertexRemoved, struct FEdgeID* OutNewEdgeID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TryToRemoveVertex");
 
@@ -51,6 +52,7 @@ void UEditableMesh::TryToRemoveVertex(const struct FVertexID& VertexID, bool* bO
 	params.VertexID = VertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,13 +66,13 @@ void UEditableMesh::TryToRemoveVertex(const struct FVertexID& VertexID, bool* bO
 
 
 // Function EditableMesh.EditableMesh.TryToRemovePolygonEdge
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
 // bool                           bOutWasEdgeRemoved             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FPolygonID              OutNewPolygonID                (Parm, OutParm)
 
-void UEditableMesh::TryToRemovePolygonEdge(const struct FEdgeID& EdgeID, bool* bOutWasEdgeRemoved, struct FPolygonID* OutNewPolygonID)
+void UEditableMesh::TryToRemovePolygonEdge(struct FEdgeID* EdgeID, bool* bOutWasEdgeRemoved, struct FPolygonID* OutNewPolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TryToRemovePolygonEdge");
 
@@ -78,6 +80,7 @@ void UEditableMesh::TryToRemovePolygonEdge(const struct FEdgeID& EdgeID, bool* b
 	params.EdgeID = EdgeID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,12 +94,12 @@ void UEditableMesh::TryToRemovePolygonEdge(const struct FEdgeID& EdgeID, bool* b
 
 
 // Function EditableMesh.EditableMesh.TriangulatePolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonID>      PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPolygonID>*     PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FPolygonID>      OutNewTrianglePolygons         (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::TriangulatePolygons(TArray<struct FPolygonID> PolygonIDs, TArray<struct FPolygonID>* OutNewTrianglePolygons)
+void UEditableMesh::TriangulatePolygons(TArray<struct FPolygonID>* PolygonIDs, TArray<struct FPolygonID>* OutNewTrianglePolygons)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TriangulatePolygons");
 
@@ -104,6 +107,7 @@ void UEditableMesh::TriangulatePolygons(TArray<struct FPolygonID> PolygonIDs, TA
 	params.PolygonIDs = PolygonIDs;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,13 +119,13 @@ void UEditableMesh::TriangulatePolygons(TArray<struct FPolygonID> PolygonIDs, TA
 
 
 // Function EditableMesh.EditableMesh.TessellatePolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonID>      PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// ETriangleTessellationMode      TriangleTessellationMode       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPolygonID>*     PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// ETriangleTessellationMode*     TriangleTessellationMode       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FPolygonID>      OutNewPolygonIDs               (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::TessellatePolygons(TArray<struct FPolygonID> PolygonIDs, ETriangleTessellationMode TriangleTessellationMode, TArray<struct FPolygonID>* OutNewPolygonIDs)
+void UEditableMesh::TessellatePolygons(TArray<struct FPolygonID>* PolygonIDs, ETriangleTessellationMode* TriangleTessellationMode, TArray<struct FPolygonID>* OutNewPolygonIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TessellatePolygons");
 
@@ -130,6 +134,7 @@ void UEditableMesh::TessellatePolygons(TArray<struct FPolygonID> PolygonIDs, ETr
 	params.TriangleTessellationMode = TriangleTessellationMode;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,12 +146,12 @@ void UEditableMesh::TessellatePolygons(TArray<struct FPolygonID> PolygonIDs, ETr
 
 
 // Function EditableMesh.EditableMesh.StartModification
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EMeshModificationType          MeshModificationType           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// EMeshTopologyChange            MeshTopologyChange             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EMeshModificationType*         MeshModificationType           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EMeshTopologyChange*           MeshTopologyChange             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::StartModification(EMeshModificationType MeshModificationType, EMeshTopologyChange MeshTopologyChange)
+void UEditableMesh::StartModification(EMeshModificationType* MeshModificationType, EMeshTopologyChange* MeshTopologyChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.StartModification");
 
@@ -155,6 +160,7 @@ void UEditableMesh::StartModification(EMeshModificationType MeshModificationType
 	params.MeshTopologyChange = MeshTopologyChange;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -163,12 +169,12 @@ void UEditableMesh::StartModification(EMeshModificationType MeshModificationType
 
 
 // Function EditableMesh.EditableMesh.SplitPolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonToSplit> PolygonsToSplit                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPolygonToSplit>* PolygonsToSplit                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FEdgeID>         OutNewEdgeIDs                  (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::SplitPolygons(TArray<struct FPolygonToSplit> PolygonsToSplit, TArray<struct FEdgeID>* OutNewEdgeIDs)
+void UEditableMesh::SplitPolygons(TArray<struct FPolygonToSplit>* PolygonsToSplit, TArray<struct FEdgeID>* OutNewEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitPolygons");
 
@@ -176,6 +182,7 @@ void UEditableMesh::SplitPolygons(TArray<struct FPolygonToSplit> PolygonsToSplit
 	params.PolygonsToSplit = PolygonsToSplit;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,14 +193,45 @@ void UEditableMesh::SplitPolygons(TArray<struct FPolygonToSplit> PolygonsToSplit
 }
 
 
-// Function EditableMesh.EditableMesh.SplitEdge
-// ()
+// Function EditableMesh.EditableMesh.SplitPolygonalMesh
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
-// TArray<float>                  Splits                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FPlane*                 InPlane                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TArray<struct FPolygonID>      PolygonIDs1                    (Parm, OutParm, ZeroConstructor)
+// TArray<struct FPolygonID>      PolygonIDs2                    (Parm, OutParm, ZeroConstructor)
+// TArray<struct FEdgeID>         BoundaryIDs                    (Parm, OutParm, ZeroConstructor)
+
+void UEditableMesh::SplitPolygonalMesh(struct FPlane* InPlane, TArray<struct FPolygonID>* PolygonIDs1, TArray<struct FPolygonID>* PolygonIDs2, TArray<struct FEdgeID>* BoundaryIDs)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitPolygonalMesh");
+
+	UEditableMesh_SplitPolygonalMesh_Params params;
+	params.InPlane = InPlane;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (PolygonIDs1 != nullptr)
+		*PolygonIDs1 = params.PolygonIDs1;
+	if (PolygonIDs2 != nullptr)
+		*PolygonIDs2 = params.PolygonIDs2;
+	if (BoundaryIDs != nullptr)
+		*BoundaryIDs = params.BoundaryIDs;
+}
+
+
+// Function EditableMesh.EditableMesh.SplitEdge
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
+// TArray<float>*                 Splits                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FVertexID>       OutNewVertexIDs                (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::SplitEdge(const struct FEdgeID& EdgeID, TArray<float> Splits, TArray<struct FVertexID>* OutNewVertexIDs)
+void UEditableMesh::SplitEdge(struct FEdgeID* EdgeID, TArray<float>* Splits, TArray<struct FVertexID>* OutNewVertexIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitEdge");
 
@@ -202,6 +240,7 @@ void UEditableMesh::SplitEdge(const struct FEdgeID& EdgeID, TArray<float> Splits
 	params.Splits = Splits;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,12 +252,12 @@ void UEditableMesh::SplitEdge(const struct FEdgeID& EdgeID, TArray<float> Splits
 
 
 // Function EditableMesh.EditableMesh.SetVerticesCornerSharpness
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexID>       VertexIDs                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<float>                  VerticesNewCornerSharpness     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVertexID>*      VertexIDs                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<float>*                 VerticesNewCornerSharpness     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::SetVerticesCornerSharpness(TArray<struct FVertexID> VertexIDs, TArray<float> VerticesNewCornerSharpness)
+void UEditableMesh::SetVerticesCornerSharpness(TArray<struct FVertexID>* VertexIDs, TArray<float>* VerticesNewCornerSharpness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVerticesCornerSharpness");
 
@@ -227,6 +266,7 @@ void UEditableMesh::SetVerticesCornerSharpness(TArray<struct FVertexID> VertexID
 	params.VerticesNewCornerSharpness = VerticesNewCornerSharpness;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,11 +275,11 @@ void UEditableMesh::SetVerticesCornerSharpness(TArray<struct FVertexID> VertexID
 
 
 // Function EditableMesh.EditableMesh.SetVerticesAttributes
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FAttributesForVertex> AttributesForVertices          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FAttributesForVertex>* AttributesForVertices          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::SetVerticesAttributes(TArray<struct FAttributesForVertex> AttributesForVertices)
+void UEditableMesh::SetVerticesAttributes(TArray<struct FAttributesForVertex>* AttributesForVertices)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVerticesAttributes");
 
@@ -247,6 +287,7 @@ void UEditableMesh::SetVerticesAttributes(TArray<struct FAttributesForVertex> At
 	params.AttributesForVertices = AttributesForVertices;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -255,11 +296,11 @@ void UEditableMesh::SetVerticesAttributes(TArray<struct FAttributesForVertex> At
 
 
 // Function EditableMesh.EditableMesh.SetVertexInstancesAttributes
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FAttributesForVertexInstance> AttributesForVertexInstances   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FAttributesForVertexInstance>* AttributesForVertexInstances   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::SetVertexInstancesAttributes(TArray<struct FAttributesForVertexInstance> AttributesForVertexInstances)
+void UEditableMesh::SetVertexInstancesAttributes(TArray<struct FAttributesForVertexInstance>* AttributesForVertexInstances)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVertexInstancesAttributes");
 
@@ -267,6 +308,7 @@ void UEditableMesh::SetVertexInstancesAttributes(TArray<struct FAttributesForVer
 	params.AttributesForVertexInstances = AttributesForVertexInstances;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,11 +317,11 @@ void UEditableMesh::SetVertexInstancesAttributes(TArray<struct FAttributesForVer
 
 
 // Function EditableMesh.EditableMesh.SetTextureCoordinateCount
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NumTexCoords                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumTexCoords                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::SetTextureCoordinateCount(int NumTexCoords)
+void UEditableMesh::SetTextureCoordinateCount(int* NumTexCoords)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetTextureCoordinateCount");
 
@@ -287,6 +329,7 @@ void UEditableMesh::SetTextureCoordinateCount(int NumTexCoords)
 	params.NumTexCoords = NumTexCoords;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -295,11 +338,11 @@ void UEditableMesh::SetTextureCoordinateCount(int NumTexCoords)
 
 
 // Function EditableMesh.EditableMesh.SetSubdivisionCount
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NewSubdivisionCount            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NewSubdivisionCount            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::SetSubdivisionCount(int NewSubdivisionCount)
+void UEditableMesh::SetSubdivisionCount(int* NewSubdivisionCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetSubdivisionCount");
 
@@ -307,6 +350,7 @@ void UEditableMesh::SetSubdivisionCount(int NewSubdivisionCount)
 	params.NewSubdivisionCount = NewSubdivisionCount;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -315,11 +359,11 @@ void UEditableMesh::SetSubdivisionCount(int NewSubdivisionCount)
 
 
 // Function EditableMesh.EditableMesh.SetPolygonsVertexAttributes
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexAttributesForPolygon> VertexAttributesForPolygons    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVertexAttributesForPolygon>* VertexAttributesForPolygons    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::SetPolygonsVertexAttributes(TArray<struct FVertexAttributesForPolygon> VertexAttributesForPolygons)
+void UEditableMesh::SetPolygonsVertexAttributes(TArray<struct FVertexAttributesForPolygon>* VertexAttributesForPolygons)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetPolygonsVertexAttributes");
 
@@ -327,6 +371,7 @@ void UEditableMesh::SetPolygonsVertexAttributes(TArray<struct FVertexAttributesF
 	params.VertexAttributesForPolygons = VertexAttributesForPolygons;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -335,11 +380,11 @@ void UEditableMesh::SetPolygonsVertexAttributes(TArray<struct FVertexAttributesF
 
 
 // Function EditableMesh.EditableMesh.SetEdgesVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVerticesForEdge> VerticesForEdges               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVerticesForEdge>* VerticesForEdges               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::SetEdgesVertices(TArray<struct FVerticesForEdge> VerticesForEdges)
+void UEditableMesh::SetEdgesVertices(TArray<struct FVerticesForEdge>* VerticesForEdges)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesVertices");
 
@@ -347,6 +392,7 @@ void UEditableMesh::SetEdgesVertices(TArray<struct FVerticesForEdge> VerticesFor
 	params.VerticesForEdges = VerticesForEdges;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -355,12 +401,12 @@ void UEditableMesh::SetEdgesVertices(TArray<struct FVerticesForEdge> VerticesFor
 
 
 // Function EditableMesh.EditableMesh.SetEdgesHardnessAutomatically
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FEdgeID>         EdgeIDs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          MaxDotProductForSoftEdge       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FEdgeID>*        EdgeIDs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float*                         MaxDotProductForSoftEdge       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::SetEdgesHardnessAutomatically(TArray<struct FEdgeID> EdgeIDs, float MaxDotProductForSoftEdge)
+void UEditableMesh::SetEdgesHardnessAutomatically(TArray<struct FEdgeID>* EdgeIDs, float* MaxDotProductForSoftEdge)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesHardnessAutomatically");
 
@@ -369,6 +415,7 @@ void UEditableMesh::SetEdgesHardnessAutomatically(TArray<struct FEdgeID> EdgeIDs
 	params.MaxDotProductForSoftEdge = MaxDotProductForSoftEdge;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -377,12 +424,12 @@ void UEditableMesh::SetEdgesHardnessAutomatically(TArray<struct FEdgeID> EdgeIDs
 
 
 // Function EditableMesh.EditableMesh.SetEdgesHardness
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FEdgeID>         EdgeIDs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<bool>                   EdgesNewIsHard                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FEdgeID>*        EdgeIDs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<bool>*                  EdgesNewIsHard                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::SetEdgesHardness(TArray<struct FEdgeID> EdgeIDs, TArray<bool> EdgesNewIsHard)
+void UEditableMesh::SetEdgesHardness(TArray<struct FEdgeID>* EdgeIDs, TArray<bool>* EdgesNewIsHard)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesHardness");
 
@@ -391,6 +438,7 @@ void UEditableMesh::SetEdgesHardness(TArray<struct FEdgeID> EdgeIDs, TArray<bool
 	params.EdgesNewIsHard = EdgesNewIsHard;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -399,12 +447,12 @@ void UEditableMesh::SetEdgesHardness(TArray<struct FEdgeID> EdgeIDs, TArray<bool
 
 
 // Function EditableMesh.EditableMesh.SetEdgesCreaseSharpness
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FEdgeID>         EdgeIDs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<float>                  EdgesNewCreaseSharpness        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FEdgeID>*        EdgeIDs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<float>*                 EdgesNewCreaseSharpness        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::SetEdgesCreaseSharpness(TArray<struct FEdgeID> EdgeIDs, TArray<float> EdgesNewCreaseSharpness)
+void UEditableMesh::SetEdgesCreaseSharpness(TArray<struct FEdgeID>* EdgeIDs, TArray<float>* EdgesNewCreaseSharpness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesCreaseSharpness");
 
@@ -413,6 +461,7 @@ void UEditableMesh::SetEdgesCreaseSharpness(TArray<struct FEdgeID> EdgeIDs, TArr
 	params.EdgesNewCreaseSharpness = EdgesNewCreaseSharpness;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -421,11 +470,11 @@ void UEditableMesh::SetEdgesCreaseSharpness(TArray<struct FEdgeID> EdgeIDs, TArr
 
 
 // Function EditableMesh.EditableMesh.SetEdgesAttributes
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FAttributesForEdge> AttributesForEdges             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FAttributesForEdge>* AttributesForEdges             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::SetEdgesAttributes(TArray<struct FAttributesForEdge> AttributesForEdges)
+void UEditableMesh::SetEdgesAttributes(TArray<struct FAttributesForEdge>* AttributesForEdges)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesAttributes");
 
@@ -433,6 +482,7 @@ void UEditableMesh::SetEdgesAttributes(TArray<struct FAttributesForEdge> Attribu
 	params.AttributesForEdges = AttributesForEdges;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -441,11 +491,11 @@ void UEditableMesh::SetEdgesAttributes(TArray<struct FAttributesForEdge> Attribu
 
 
 // Function EditableMesh.EditableMesh.SetAllowUndo
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInAllowUndo                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bInAllowUndo                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::SetAllowUndo(bool bInAllowUndo)
+void UEditableMesh::SetAllowUndo(bool* bInAllowUndo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowUndo");
 
@@ -453,6 +503,7 @@ void UEditableMesh::SetAllowUndo(bool bInAllowUndo)
 	params.bInAllowUndo = bInAllowUndo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -461,11 +512,11 @@ void UEditableMesh::SetAllowUndo(bool bInAllowUndo)
 
 
 // Function EditableMesh.EditableMesh.SetAllowSpatialDatabase
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInAllowSpatialDatabase        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bInAllowSpatialDatabase        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::SetAllowSpatialDatabase(bool bInAllowSpatialDatabase)
+void UEditableMesh::SetAllowSpatialDatabase(bool* bInAllowSpatialDatabase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowSpatialDatabase");
 
@@ -473,6 +524,7 @@ void UEditableMesh::SetAllowSpatialDatabase(bool bInAllowSpatialDatabase)
 	params.bInAllowSpatialDatabase = bInAllowSpatialDatabase;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -481,11 +533,11 @@ void UEditableMesh::SetAllowSpatialDatabase(bool bInAllowSpatialDatabase)
 
 
 // Function EditableMesh.EditableMesh.SetAllowCompact
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInAllowCompact                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bInAllowCompact                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::SetAllowCompact(bool bInAllowCompact)
+void UEditableMesh::SetAllowCompact(bool* bInAllowCompact)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowCompact");
 
@@ -493,6 +545,7 @@ void UEditableMesh::SetAllowCompact(bool bInAllowCompact)
 	params.bInAllowCompact = bInAllowCompact;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -500,14 +553,39 @@ void UEditableMesh::SetAllowCompact(bool bInAllowCompact)
 }
 
 
-// Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment
-// ()
+// Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 LineSegmentStart               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 LineSegmentEnd                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPlane*                 InPlane                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // TArray<struct FPolygonID>      OutPolygons                    (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment(const struct FVector& LineSegmentStart, const struct FVector& LineSegmentEnd, TArray<struct FPolygonID>* OutPolygons)
+void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane(struct FPlane* InPlane, TArray<struct FPolygonID>* OutPolygons)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane");
+
+	UEditableMesh_SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane_Params params;
+	params.InPlane = InPlane;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutPolygons != nullptr)
+		*OutPolygons = params.OutPolygons;
+}
+
+
+// Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector*                LineSegmentStart               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                LineSegmentEnd                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPolygonID>      OutPolygons                    (Parm, OutParm, ZeroConstructor)
+
+void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment(struct FVector* LineSegmentStart, struct FVector* LineSegmentEnd, TArray<struct FPolygonID>* OutPolygons)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment");
 
@@ -516,6 +594,7 @@ void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineS
 	params.LineSegmentEnd = LineSegmentEnd;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -527,12 +606,12 @@ void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineS
 
 
 // Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsInVolume
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FPlane>          Planes                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPlane>*         Planes                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FPolygonID>      OutPolygons                    (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::SearchSpatialDatabaseForPolygonsInVolume(TArray<struct FPlane> Planes, TArray<struct FPolygonID>* OutPolygons)
+void UEditableMesh::SearchSpatialDatabaseForPolygonsInVolume(TArray<struct FPlane>* Planes, TArray<struct FPolygonID>* OutPolygons)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsInVolume");
 
@@ -540,6 +619,7 @@ void UEditableMesh::SearchSpatialDatabaseForPolygonsInVolume(TArray<struct FPlan
 	params.Planes = Planes;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -551,7 +631,7 @@ void UEditableMesh::SearchSpatialDatabaseForPolygonsInVolume(TArray<struct FPlan
 
 
 // Function EditableMesh.EditableMesh.RevertInstance
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UEditableMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -562,6 +642,7 @@ class UEditableMesh* UEditableMesh::RevertInstance()
 	UEditableMesh_RevertInstance_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -572,7 +653,7 @@ class UEditableMesh* UEditableMesh::RevertInstance()
 
 
 // Function EditableMesh.EditableMesh.Revert
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UEditableMesh::Revert()
 {
@@ -581,6 +662,7 @@ void UEditableMesh::Revert()
 	UEditableMesh_Revert_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -589,14 +671,14 @@ void UEditableMesh::Revert()
 
 
 // Function EditableMesh.EditableMesh.RemovePolygonPerimeterVertices
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            FirstVertexNumberToRemove      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumVerticesToRemove            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteOrphanedVertexInstances (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// int*                           FirstVertexNumberToRemove      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumVerticesToRemove            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteOrphanedVertexInstances (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::RemovePolygonPerimeterVertices(const struct FPolygonID& PolygonID, int FirstVertexNumberToRemove, int NumVerticesToRemove, bool bDeleteOrphanedVertexInstances)
+void UEditableMesh::RemovePolygonPerimeterVertices(struct FPolygonID* PolygonID, int* FirstVertexNumberToRemove, int* NumVerticesToRemove, bool* bDeleteOrphanedVertexInstances)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.RemovePolygonPerimeterVertices");
 
@@ -607,6 +689,7 @@ void UEditableMesh::RemovePolygonPerimeterVertices(const struct FPolygonID& Poly
 	params.bDeleteOrphanedVertexInstances = bDeleteOrphanedVertexInstances;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -615,7 +698,7 @@ void UEditableMesh::RemovePolygonPerimeterVertices(const struct FPolygonID& Poly
 
 
 // Function EditableMesh.EditableMesh.RebuildRenderMesh
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UEditableMesh::RebuildRenderMesh()
 {
@@ -624,6 +707,7 @@ void UEditableMesh::RebuildRenderMesh()
 	UEditableMesh_RebuildRenderMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -632,7 +716,7 @@ void UEditableMesh::RebuildRenderMesh()
 
 
 // Function EditableMesh.EditableMesh.QuadrangulateMesh
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // TArray<struct FPolygonID>      OutNewPolygonIDs               (Parm, OutParm, ZeroConstructor)
 
@@ -643,6 +727,7 @@ void UEditableMesh::QuadrangulateMesh(TArray<struct FPolygonID>* OutNewPolygonID
 	UEditableMesh_QuadrangulateMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -654,7 +739,7 @@ void UEditableMesh::QuadrangulateMesh(TArray<struct FPolygonID>* OutNewPolygonID
 
 
 // Function EditableMesh.EditableMesh.PropagateInstanceChanges
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UEditableMesh::PropagateInstanceChanges()
 {
@@ -663,6 +748,7 @@ void UEditableMesh::PropagateInstanceChanges()
 	UEditableMesh_PropagateInstanceChanges_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -671,11 +757,11 @@ void UEditableMesh::PropagateInstanceChanges()
 
 
 // Function EditableMesh.EditableMesh.MoveVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexToMove>   VerticesToMove                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVertexToMove>*  VerticesToMove                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::MoveVertices(TArray<struct FVertexToMove> VerticesToMove)
+void UEditableMesh::MoveVertices(TArray<struct FVertexToMove>* VerticesToMove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MoveVertices");
 
@@ -683,6 +769,7 @@ void UEditableMesh::MoveVertices(TArray<struct FVertexToMove> VerticesToMove)
 	params.VerticesToMove = VerticesToMove;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -691,12 +778,12 @@ void UEditableMesh::MoveVertices(TArray<struct FVertexToMove> VerticesToMove)
 
 
 // Function EditableMesh.EditableMesh.MakeVertexID
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            VertexIndex                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           VertexIndex                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVertexID               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FVertexID UEditableMesh::MakeVertexID(int VertexIndex)
+struct FVertexID UEditableMesh::STATIC_MakeVertexID(int* VertexIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakeVertexID");
 
@@ -704,6 +791,7 @@ struct FVertexID UEditableMesh::MakeVertexID(int VertexIndex)
 	params.VertexIndex = VertexIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -714,12 +802,12 @@ struct FVertexID UEditableMesh::MakeVertexID(int VertexIndex)
 
 
 // Function EditableMesh.EditableMesh.MakePolygonID
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            PolygonIndex                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PolygonIndex                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FPolygonID              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPolygonID UEditableMesh::MakePolygonID(int PolygonIndex)
+struct FPolygonID UEditableMesh::STATIC_MakePolygonID(int* PolygonIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakePolygonID");
 
@@ -727,6 +815,7 @@ struct FPolygonID UEditableMesh::MakePolygonID(int PolygonIndex)
 	params.PolygonIndex = PolygonIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -737,12 +826,12 @@ struct FPolygonID UEditableMesh::MakePolygonID(int PolygonIndex)
 
 
 // Function EditableMesh.EditableMesh.MakePolygonGroupID
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            PolygonGroupIndex              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PolygonGroupIndex              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FPolygonGroupID         ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPolygonGroupID UEditableMesh::MakePolygonGroupID(int PolygonGroupIndex)
+struct FPolygonGroupID UEditableMesh::STATIC_MakePolygonGroupID(int* PolygonGroupIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakePolygonGroupID");
 
@@ -750,6 +839,7 @@ struct FPolygonGroupID UEditableMesh::MakePolygonGroupID(int PolygonGroupIndex)
 	params.PolygonGroupIndex = PolygonGroupIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -760,12 +850,12 @@ struct FPolygonGroupID UEditableMesh::MakePolygonGroupID(int PolygonGroupIndex)
 
 
 // Function EditableMesh.EditableMesh.MakeEdgeID
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            EdgeIndex                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EdgeIndex                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FEdgeID                 ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEdgeID UEditableMesh::MakeEdgeID(int EdgeIndex)
+struct FEdgeID UEditableMesh::STATIC_MakeEdgeID(int* EdgeIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakeEdgeID");
 
@@ -773,6 +863,7 @@ struct FEdgeID UEditableMesh::MakeEdgeID(int EdgeIndex)
 	params.EdgeIndex = EdgeIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -783,12 +874,12 @@ struct FEdgeID UEditableMesh::MakeEdgeID(int EdgeIndex)
 
 
 // Function EditableMesh.EditableMesh.IsValidVertex
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEditableMesh::IsValidVertex(const struct FVertexID& VertexID)
+bool UEditableMesh::IsValidVertex(struct FVertexID* VertexID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidVertex");
 
@@ -796,6 +887,7 @@ bool UEditableMesh::IsValidVertex(const struct FVertexID& VertexID)
 	params.VertexID = VertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -806,12 +898,12 @@ bool UEditableMesh::IsValidVertex(const struct FVertexID& VertexID)
 
 
 // Function EditableMesh.EditableMesh.IsValidPolygonGroup
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonGroupID         PolygonGroupID                 (ConstParm, Parm)
+// struct FPolygonGroupID*        PolygonGroupID                 (ConstParm, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEditableMesh::IsValidPolygonGroup(const struct FPolygonGroupID& PolygonGroupID)
+bool UEditableMesh::IsValidPolygonGroup(struct FPolygonGroupID* PolygonGroupID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidPolygonGroup");
 
@@ -819,6 +911,7 @@ bool UEditableMesh::IsValidPolygonGroup(const struct FPolygonGroupID& PolygonGro
 	params.PolygonGroupID = PolygonGroupID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -829,12 +922,12 @@ bool UEditableMesh::IsValidPolygonGroup(const struct FPolygonGroupID& PolygonGro
 
 
 // Function EditableMesh.EditableMesh.IsValidPolygon
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEditableMesh::IsValidPolygon(const struct FPolygonID& PolygonID)
+bool UEditableMesh::IsValidPolygon(struct FPolygonID* PolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidPolygon");
 
@@ -842,6 +935,7 @@ bool UEditableMesh::IsValidPolygon(const struct FPolygonID& PolygonID)
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -852,12 +946,12 @@ bool UEditableMesh::IsValidPolygon(const struct FPolygonID& PolygonID)
 
 
 // Function EditableMesh.EditableMesh.IsValidEdge
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEditableMesh::IsValidEdge(const struct FEdgeID& EdgeID)
+bool UEditableMesh::IsValidEdge(struct FEdgeID* EdgeID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidEdge");
 
@@ -865,6 +959,7 @@ bool UEditableMesh::IsValidEdge(const struct FEdgeID& EdgeID)
 	params.EdgeID = EdgeID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -875,7 +970,7 @@ bool UEditableMesh::IsValidEdge(const struct FEdgeID& EdgeID)
 
 
 // Function EditableMesh.EditableMesh.IsUndoAllowed
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -886,6 +981,7 @@ bool UEditableMesh::IsUndoAllowed()
 	UEditableMesh_IsUndoAllowed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -896,7 +992,7 @@ bool UEditableMesh::IsUndoAllowed()
 
 
 // Function EditableMesh.EditableMesh.IsSpatialDatabaseAllowed
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -907,6 +1003,7 @@ bool UEditableMesh::IsSpatialDatabaseAllowed()
 	UEditableMesh_IsSpatialDatabaseAllowed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -917,7 +1014,7 @@ bool UEditableMesh::IsSpatialDatabaseAllowed()
 
 
 // Function EditableMesh.EditableMesh.IsPreviewingSubdivisions
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -928,6 +1025,7 @@ bool UEditableMesh::IsPreviewingSubdivisions()
 	UEditableMesh_IsPreviewingSubdivisions_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -938,12 +1036,12 @@ bool UEditableMesh::IsPreviewingSubdivisions()
 
 
 // Function EditableMesh.EditableMesh.IsOrphanedVertex
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEditableMesh::IsOrphanedVertex(const struct FVertexID& VertexID)
+bool UEditableMesh::IsOrphanedVertex(struct FVertexID* VertexID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsOrphanedVertex");
 
@@ -951,6 +1049,7 @@ bool UEditableMesh::IsOrphanedVertex(const struct FVertexID& VertexID)
 	params.VertexID = VertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -961,7 +1060,7 @@ bool UEditableMesh::IsOrphanedVertex(const struct FVertexID& VertexID)
 
 
 // Function EditableMesh.EditableMesh.IsCompactAllowed
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -972,6 +1071,7 @@ bool UEditableMesh::IsCompactAllowed()
 	UEditableMesh_IsCompactAllowed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -982,7 +1082,7 @@ bool UEditableMesh::IsCompactAllowed()
 
 
 // Function EditableMesh.EditableMesh.IsCommittedAsInstance
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -993,6 +1093,7 @@ bool UEditableMesh::IsCommittedAsInstance()
 	UEditableMesh_IsCommittedAsInstance_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1003,7 +1104,7 @@ bool UEditableMesh::IsCommittedAsInstance()
 
 
 // Function EditableMesh.EditableMesh.IsCommitted
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1014,6 +1115,7 @@ bool UEditableMesh::IsCommitted()
 	UEditableMesh_IsCommitted_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1024,7 +1126,7 @@ bool UEditableMesh::IsCommitted()
 
 
 // Function EditableMesh.EditableMesh.IsBeingModified
-// ()
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1035,6 +1137,7 @@ bool UEditableMesh::IsBeingModified()
 	UEditableMesh_IsBeingModified_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1045,17 +1148,18 @@ bool UEditableMesh::IsBeingModified()
 
 
 // Function EditableMesh.EditableMesh.InvalidVertexID
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVertexID               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FVertexID UEditableMesh::InvalidVertexID()
+struct FVertexID UEditableMesh::STATIC_InvalidVertexID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidVertexID");
 
 	UEditableMesh_InvalidVertexID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1066,17 +1170,18 @@ struct FVertexID UEditableMesh::InvalidVertexID()
 
 
 // Function EditableMesh.EditableMesh.InvalidPolygonID
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FPolygonID              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPolygonID UEditableMesh::InvalidPolygonID()
+struct FPolygonID UEditableMesh::STATIC_InvalidPolygonID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidPolygonID");
 
 	UEditableMesh_InvalidPolygonID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1087,17 +1192,18 @@ struct FPolygonID UEditableMesh::InvalidPolygonID()
 
 
 // Function EditableMesh.EditableMesh.InvalidPolygonGroupID
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FPolygonGroupID         ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPolygonGroupID UEditableMesh::InvalidPolygonGroupID()
+struct FPolygonGroupID UEditableMesh::STATIC_InvalidPolygonGroupID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidPolygonGroupID");
 
 	UEditableMesh_InvalidPolygonGroupID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1108,17 +1214,18 @@ struct FPolygonGroupID UEditableMesh::InvalidPolygonGroupID()
 
 
 // Function EditableMesh.EditableMesh.InvalidEdgeID
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FEdgeID                 ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEdgeID UEditableMesh::InvalidEdgeID()
+struct FEdgeID UEditableMesh::STATIC_InvalidEdgeID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidEdgeID");
 
 	UEditableMesh_InvalidEdgeID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1129,16 +1236,16 @@ struct FEdgeID UEditableMesh::InvalidEdgeID()
 
 
 // Function EditableMesh.EditableMesh.InsetPolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonID>      PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          InsetFixedDistance             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          InsetProgressTowardCenter      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// EInsetPolygonsMode             Mode                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPolygonID>*     PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float*                         InsetFixedDistance             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InsetProgressTowardCenter      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EInsetPolygonsMode*            Mode                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FPolygonID>      OutNewCenterPolygonIDs         (Parm, OutParm, ZeroConstructor)
 // TArray<struct FPolygonID>      OutNewSidePolygonIDs           (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::InsetPolygons(TArray<struct FPolygonID> PolygonIDs, float InsetFixedDistance, float InsetProgressTowardCenter, EInsetPolygonsMode Mode, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs)
+void UEditableMesh::InsetPolygons(TArray<struct FPolygonID>* PolygonIDs, float* InsetFixedDistance, float* InsetProgressTowardCenter, EInsetPolygonsMode* Mode, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InsetPolygons");
 
@@ -1149,6 +1256,7 @@ void UEditableMesh::InsetPolygons(TArray<struct FPolygonID> PolygonIDs, float In
 	params.Mode = Mode;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1162,13 +1270,13 @@ void UEditableMesh::InsetPolygons(TArray<struct FPolygonID> PolygonIDs, float In
 
 
 // Function EditableMesh.EditableMesh.InsertPolygonPerimeterVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            InsertBeforeVertexNumber       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVertexAndAttributes> VerticesToInsert               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// int*                           InsertBeforeVertexNumber       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVertexAndAttributes>* VerticesToInsert               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::InsertPolygonPerimeterVertices(const struct FPolygonID& PolygonID, int InsertBeforeVertexNumber, TArray<struct FVertexAndAttributes> VerticesToInsert)
+void UEditableMesh::InsertPolygonPerimeterVertices(struct FPolygonID* PolygonID, int* InsertBeforeVertexNumber, TArray<struct FVertexAndAttributes>* VerticesToInsert)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InsertPolygonPerimeterVertices");
 
@@ -1178,6 +1286,7 @@ void UEditableMesh::InsertPolygonPerimeterVertices(const struct FPolygonID& Poly
 	params.VerticesToInsert = VerticesToInsert;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1186,13 +1295,13 @@ void UEditableMesh::InsertPolygonPerimeterVertices(const struct FPolygonID& Poly
 
 
 // Function EditableMesh.EditableMesh.InsertEdgeLoop
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
-// TArray<float>                  Splits                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
+// TArray<float>*                 Splits                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FEdgeID>         OutNewEdgeIDs                  (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::InsertEdgeLoop(const struct FEdgeID& EdgeID, TArray<float> Splits, TArray<struct FEdgeID>* OutNewEdgeIDs)
+void UEditableMesh::InsertEdgeLoop(struct FEdgeID* EdgeID, TArray<float>* Splits, TArray<struct FEdgeID>* OutNewEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InsertEdgeLoop");
 
@@ -1201,6 +1310,7 @@ void UEditableMesh::InsertEdgeLoop(const struct FEdgeID& EdgeID, TArray<float> S
 	params.Splits = Splits;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1212,7 +1322,7 @@ void UEditableMesh::InsertEdgeLoop(const struct FEdgeID& EdgeID, TArray<float> S
 
 
 // Function EditableMesh.EditableMesh.InitializeAdapters
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UEditableMesh::InitializeAdapters()
 {
@@ -1221,6 +1331,7 @@ void UEditableMesh::InitializeAdapters()
 	UEditableMesh_InitializeAdapters_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1229,14 +1340,14 @@ void UEditableMesh::InitializeAdapters()
 
 
 // Function EditableMesh.EditableMesh.GetVertexPairEdge
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
-// struct FVertexID               NextVertexID                   (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
+// struct FVertexID*              NextVertexID                   (ConstParm, Parm)
 // bool                           bOutEdgeWindingIsReversed      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FEdgeID                 ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEdgeID UEditableMesh::GetVertexPairEdge(const struct FVertexID& VertexID, const struct FVertexID& NextVertexID, bool* bOutEdgeWindingIsReversed)
+struct FEdgeID UEditableMesh::GetVertexPairEdge(struct FVertexID* VertexID, struct FVertexID* NextVertexID, bool* bOutEdgeWindingIsReversed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexPairEdge");
 
@@ -1245,6 +1356,7 @@ struct FEdgeID UEditableMesh::GetVertexPairEdge(const struct FVertexID& VertexID
 	params.NextVertexID = NextVertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1258,12 +1370,12 @@ struct FEdgeID UEditableMesh::GetVertexPairEdge(const struct FVertexID& VertexID
 
 
 // Function EditableMesh.EditableMesh.GetVertexInstanceVertex
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexInstanceID       VertexInstanceID               (ConstParm, Parm)
+// struct FVertexInstanceID*      VertexInstanceID               (ConstParm, Parm)
 // struct FVertexID               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FVertexID UEditableMesh::GetVertexInstanceVertex(const struct FVertexInstanceID& VertexInstanceID)
+struct FVertexID UEditableMesh::GetVertexInstanceVertex(struct FVertexInstanceID* VertexInstanceID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceVertex");
 
@@ -1271,6 +1383,7 @@ struct FVertexID UEditableMesh::GetVertexInstanceVertex(const struct FVertexInst
 	params.VertexInstanceID = VertexInstanceID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1281,7 +1394,7 @@ struct FVertexID UEditableMesh::GetVertexInstanceVertex(const struct FVertexInst
 
 
 // Function EditableMesh.EditableMesh.GetVertexInstanceCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1292,6 +1405,7 @@ int UEditableMesh::GetVertexInstanceCount()
 	UEditableMesh_GetVertexInstanceCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1302,12 +1416,12 @@ int UEditableMesh::GetVertexInstanceCount()
 
 
 // Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexInstanceID       VertexInstanceID               (ConstParm, Parm)
+// struct FVertexInstanceID*      VertexInstanceID               (ConstParm, Parm)
 // TArray<struct FPolygonID>      OutConnectedPolygonIDs         (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetVertexInstanceConnectedPolygons(const struct FVertexInstanceID& VertexInstanceID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
+void UEditableMesh::GetVertexInstanceConnectedPolygons(struct FVertexInstanceID* VertexInstanceID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygons");
 
@@ -1315,6 +1429,7 @@ void UEditableMesh::GetVertexInstanceConnectedPolygons(const struct FVertexInsta
 	params.VertexInstanceID = VertexInstanceID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1326,12 +1441,12 @@ void UEditableMesh::GetVertexInstanceConnectedPolygons(const struct FVertexInsta
 
 
 // Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygonCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexInstanceID       VertexInstanceID               (ConstParm, Parm)
+// struct FVertexInstanceID*      VertexInstanceID               (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::GetVertexInstanceConnectedPolygonCount(const struct FVertexInstanceID& VertexInstanceID)
+int UEditableMesh::GetVertexInstanceConnectedPolygonCount(struct FVertexInstanceID* VertexInstanceID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygonCount");
 
@@ -1339,6 +1454,7 @@ int UEditableMesh::GetVertexInstanceConnectedPolygonCount(const struct FVertexIn
 	params.VertexInstanceID = VertexInstanceID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1349,13 +1465,13 @@ int UEditableMesh::GetVertexInstanceConnectedPolygonCount(const struct FVertexIn
 
 
 // Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygon
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexInstanceID       VertexInstanceID               (ConstParm, Parm)
-// int                            ConnectedPolygonNumber         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVertexInstanceID*      VertexInstanceID               (ConstParm, Parm)
+// int*                           ConnectedPolygonNumber         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FPolygonID              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPolygonID UEditableMesh::GetVertexInstanceConnectedPolygon(const struct FVertexInstanceID& VertexInstanceID, int ConnectedPolygonNumber)
+struct FPolygonID UEditableMesh::GetVertexInstanceConnectedPolygon(struct FVertexInstanceID* VertexInstanceID, int* ConnectedPolygonNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygon");
 
@@ -1364,6 +1480,7 @@ struct FPolygonID UEditableMesh::GetVertexInstanceConnectedPolygon(const struct 
 	params.ConnectedPolygonNumber = ConnectedPolygonNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1374,7 +1491,7 @@ struct FPolygonID UEditableMesh::GetVertexInstanceConnectedPolygon(const struct 
 
 
 // Function EditableMesh.EditableMesh.GetVertexCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1385,6 +1502,7 @@ int UEditableMesh::GetVertexCount()
 	UEditableMesh_GetVertexCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1395,12 +1513,12 @@ int UEditableMesh::GetVertexCount()
 
 
 // Function EditableMesh.EditableMesh.GetVertexConnectedPolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
 // TArray<struct FPolygonID>      OutConnectedPolygonIDs         (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetVertexConnectedPolygons(const struct FVertexID& VertexID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
+void UEditableMesh::GetVertexConnectedPolygons(struct FVertexID* VertexID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedPolygons");
 
@@ -1408,6 +1526,7 @@ void UEditableMesh::GetVertexConnectedPolygons(const struct FVertexID& VertexID,
 	params.VertexID = VertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1419,12 +1538,12 @@ void UEditableMesh::GetVertexConnectedPolygons(const struct FVertexID& VertexID,
 
 
 // Function EditableMesh.EditableMesh.GetVertexConnectedEdges
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
 // TArray<struct FEdgeID>         OutConnectedEdgeIDs            (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetVertexConnectedEdges(const struct FVertexID& VertexID, TArray<struct FEdgeID>* OutConnectedEdgeIDs)
+void UEditableMesh::GetVertexConnectedEdges(struct FVertexID* VertexID, TArray<struct FEdgeID>* OutConnectedEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdges");
 
@@ -1432,6 +1551,7 @@ void UEditableMesh::GetVertexConnectedEdges(const struct FVertexID& VertexID, TA
 	params.VertexID = VertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1443,12 +1563,12 @@ void UEditableMesh::GetVertexConnectedEdges(const struct FVertexID& VertexID, TA
 
 
 // Function EditableMesh.EditableMesh.GetVertexConnectedEdgeCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::GetVertexConnectedEdgeCount(const struct FVertexID& VertexID)
+int UEditableMesh::GetVertexConnectedEdgeCount(struct FVertexID* VertexID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdgeCount");
 
@@ -1456,6 +1576,7 @@ int UEditableMesh::GetVertexConnectedEdgeCount(const struct FVertexID& VertexID)
 	params.VertexID = VertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1466,13 +1587,13 @@ int UEditableMesh::GetVertexConnectedEdgeCount(const struct FVertexID& VertexID)
 
 
 // Function EditableMesh.EditableMesh.GetVertexConnectedEdge
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
-// int                            ConnectedEdgeNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
+// int*                           ConnectedEdgeNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FEdgeID                 ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEdgeID UEditableMesh::GetVertexConnectedEdge(const struct FVertexID& VertexID, int ConnectedEdgeNumber)
+struct FEdgeID UEditableMesh::GetVertexConnectedEdge(struct FVertexID* VertexID, int* ConnectedEdgeNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdge");
 
@@ -1481,6 +1602,7 @@ struct FEdgeID UEditableMesh::GetVertexConnectedEdge(const struct FVertexID& Ver
 	params.ConnectedEdgeNumber = ConnectedEdgeNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1491,12 +1613,12 @@ struct FEdgeID UEditableMesh::GetVertexConnectedEdge(const struct FVertexID& Ver
 
 
 // Function EditableMesh.EditableMesh.GetVertexAdjacentVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
 // TArray<struct FVertexID>       OutAdjacentVertexIDs           (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetVertexAdjacentVertices(const struct FVertexID& VertexID, TArray<struct FVertexID>* OutAdjacentVertexIDs)
+void UEditableMesh::GetVertexAdjacentVertices(struct FVertexID* VertexID, TArray<struct FVertexID>* OutAdjacentVertexIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexAdjacentVertices");
 
@@ -1504,6 +1626,7 @@ void UEditableMesh::GetVertexAdjacentVertices(const struct FVertexID& VertexID, 
 	params.VertexID = VertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1515,7 +1638,7 @@ void UEditableMesh::GetVertexAdjacentVertices(const struct FVertexID& VertexID, 
 
 
 // Function EditableMesh.EditableMesh.GetTextureCoordinateCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1526,6 +1649,7 @@ int UEditableMesh::GetTextureCoordinateCount()
 	UEditableMesh_GetTextureCoordinateCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1536,7 +1660,7 @@ int UEditableMesh::GetTextureCoordinateCount()
 
 
 // Function EditableMesh.EditableMesh.GetSubdivisionLimitData
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FSubdivisionLimitData   ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
 
@@ -1547,6 +1671,7 @@ struct FSubdivisionLimitData UEditableMesh::GetSubdivisionLimitData()
 	UEditableMesh_GetSubdivisionLimitData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1557,7 +1682,7 @@ struct FSubdivisionLimitData UEditableMesh::GetSubdivisionLimitData()
 
 
 // Function EditableMesh.EditableMesh.GetSubdivisionCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1568,6 +1693,7 @@ int UEditableMesh::GetSubdivisionCount()
 	UEditableMesh_GetSubdivisionCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1578,12 +1704,12 @@ int UEditableMesh::GetSubdivisionCount()
 
 
 // Function EditableMesh.EditableMesh.GetPolygonTriangulatedTriangleCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::GetPolygonTriangulatedTriangleCount(const struct FPolygonID& PolygonID)
+int UEditableMesh::GetPolygonTriangulatedTriangleCount(struct FPolygonID* PolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonTriangulatedTriangleCount");
 
@@ -1591,6 +1717,7 @@ int UEditableMesh::GetPolygonTriangulatedTriangleCount(const struct FPolygonID& 
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1601,13 +1728,13 @@ int UEditableMesh::GetPolygonTriangulatedTriangleCount(const struct FPolygonID& 
 
 
 // Function EditableMesh.EditableMesh.GetPolygonTriangulatedTriangle
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            PolygonTriangleNumber          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// int*                           PolygonTriangleNumber          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FMeshTriangle           ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FMeshTriangle UEditableMesh::GetPolygonTriangulatedTriangle(const struct FPolygonID& PolygonID, int PolygonTriangleNumber)
+struct FMeshTriangle UEditableMesh::GetPolygonTriangulatedTriangle(struct FPolygonID* PolygonID, int* PolygonTriangleNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonTriangulatedTriangle");
 
@@ -1616,6 +1743,7 @@ struct FMeshTriangle UEditableMesh::GetPolygonTriangulatedTriangle(const struct 
 	params.PolygonTriangleNumber = PolygonTriangleNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1626,12 +1754,12 @@ struct FMeshTriangle UEditableMesh::GetPolygonTriangulatedTriangle(const struct 
 
 
 // Function EditableMesh.EditableMesh.GetPolygonPerimeterVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // TArray<struct FVertexID>       OutPolygonPerimeterVertexIDs   (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetPolygonPerimeterVertices(const struct FPolygonID& PolygonID, TArray<struct FVertexID>* OutPolygonPerimeterVertexIDs)
+void UEditableMesh::GetPolygonPerimeterVertices(struct FPolygonID* PolygonID, TArray<struct FVertexID>* OutPolygonPerimeterVertexIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertices");
 
@@ -1639,6 +1767,7 @@ void UEditableMesh::GetPolygonPerimeterVertices(const struct FPolygonID& Polygon
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1650,12 +1779,12 @@ void UEditableMesh::GetPolygonPerimeterVertices(const struct FPolygonID& Polygon
 
 
 // Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstances
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // TArray<struct FVertexInstanceID> OutPolygonPerimeterVertexInstanceIDs (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetPolygonPerimeterVertexInstances(const struct FPolygonID& PolygonID, TArray<struct FVertexInstanceID>* OutPolygonPerimeterVertexInstanceIDs)
+void UEditableMesh::GetPolygonPerimeterVertexInstances(struct FPolygonID* PolygonID, TArray<struct FVertexInstanceID>* OutPolygonPerimeterVertexInstanceIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstances");
 
@@ -1663,6 +1792,7 @@ void UEditableMesh::GetPolygonPerimeterVertexInstances(const struct FPolygonID& 
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1674,13 +1804,13 @@ void UEditableMesh::GetPolygonPerimeterVertexInstances(const struct FPolygonID& 
 
 
 // Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstance
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            PolygonVertexNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// int*                           PolygonVertexNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVertexInstanceID       ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FVertexInstanceID UEditableMesh::GetPolygonPerimeterVertexInstance(const struct FPolygonID& PolygonID, int PolygonVertexNumber)
+struct FVertexInstanceID UEditableMesh::GetPolygonPerimeterVertexInstance(struct FPolygonID* PolygonID, int* PolygonVertexNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstance");
 
@@ -1689,6 +1819,7 @@ struct FVertexInstanceID UEditableMesh::GetPolygonPerimeterVertexInstance(const 
 	params.PolygonVertexNumber = PolygonVertexNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1699,12 +1830,12 @@ struct FVertexInstanceID UEditableMesh::GetPolygonPerimeterVertexInstance(const 
 
 
 // Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::GetPolygonPerimeterVertexCount(const struct FPolygonID& PolygonID)
+int UEditableMesh::GetPolygonPerimeterVertexCount(struct FPolygonID* PolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexCount");
 
@@ -1712,6 +1843,7 @@ int UEditableMesh::GetPolygonPerimeterVertexCount(const struct FPolygonID& Polyg
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1722,13 +1854,13 @@ int UEditableMesh::GetPolygonPerimeterVertexCount(const struct FPolygonID& Polyg
 
 
 // Function EditableMesh.EditableMesh.GetPolygonPerimeterVertex
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            PolygonVertexNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// int*                           PolygonVertexNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVertexID               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FVertexID UEditableMesh::GetPolygonPerimeterVertex(const struct FPolygonID& PolygonID, int PolygonVertexNumber)
+struct FVertexID UEditableMesh::GetPolygonPerimeterVertex(struct FPolygonID* PolygonID, int* PolygonVertexNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertex");
 
@@ -1737,6 +1869,7 @@ struct FVertexID UEditableMesh::GetPolygonPerimeterVertex(const struct FPolygonI
 	params.PolygonVertexNumber = PolygonVertexNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1747,12 +1880,12 @@ struct FVertexID UEditableMesh::GetPolygonPerimeterVertex(const struct FPolygonI
 
 
 // Function EditableMesh.EditableMesh.GetPolygonPerimeterEdges
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // TArray<struct FEdgeID>         OutPolygonPerimeterEdgeIDs     (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetPolygonPerimeterEdges(const struct FPolygonID& PolygonID, TArray<struct FEdgeID>* OutPolygonPerimeterEdgeIDs)
+void UEditableMesh::GetPolygonPerimeterEdges(struct FPolygonID* PolygonID, TArray<struct FEdgeID>* OutPolygonPerimeterEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdges");
 
@@ -1760,6 +1893,7 @@ void UEditableMesh::GetPolygonPerimeterEdges(const struct FPolygonID& PolygonID,
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1771,12 +1905,12 @@ void UEditableMesh::GetPolygonPerimeterEdges(const struct FPolygonID& PolygonID,
 
 
 // Function EditableMesh.EditableMesh.GetPolygonPerimeterEdgeCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::GetPolygonPerimeterEdgeCount(const struct FPolygonID& PolygonID)
+int UEditableMesh::GetPolygonPerimeterEdgeCount(struct FPolygonID* PolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdgeCount");
 
@@ -1784,6 +1918,7 @@ int UEditableMesh::GetPolygonPerimeterEdgeCount(const struct FPolygonID& Polygon
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1794,14 +1929,14 @@ int UEditableMesh::GetPolygonPerimeterEdgeCount(const struct FPolygonID& Polygon
 
 
 // Function EditableMesh.EditableMesh.GetPolygonPerimeterEdge
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            PerimeterEdgeNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// int*                           PerimeterEdgeNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bOutEdgeWindingIsReversedForPolygon (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FEdgeID                 ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEdgeID UEditableMesh::GetPolygonPerimeterEdge(const struct FPolygonID& PolygonID, int PerimeterEdgeNumber, bool* bOutEdgeWindingIsReversedForPolygon)
+struct FEdgeID UEditableMesh::GetPolygonPerimeterEdge(struct FPolygonID* PolygonID, int* PerimeterEdgeNumber, bool* bOutEdgeWindingIsReversedForPolygon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdge");
 
@@ -1810,6 +1945,7 @@ struct FEdgeID UEditableMesh::GetPolygonPerimeterEdge(const struct FPolygonID& P
 	params.PerimeterEdgeNumber = PerimeterEdgeNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1823,13 +1959,13 @@ struct FEdgeID UEditableMesh::GetPolygonPerimeterEdge(const struct FPolygonID& P
 
 
 // Function EditableMesh.EditableMesh.GetPolygonInGroup
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonGroupID         PolygonGroupID                 (ConstParm, Parm)
-// int                            PolygonNumber                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPolygonGroupID*        PolygonGroupID                 (ConstParm, Parm)
+// int*                           PolygonNumber                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FPolygonID              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPolygonID UEditableMesh::GetPolygonInGroup(const struct FPolygonGroupID& PolygonGroupID, int PolygonNumber)
+struct FPolygonID UEditableMesh::GetPolygonInGroup(struct FPolygonGroupID* PolygonGroupID, int* PolygonNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonInGroup");
 
@@ -1838,238 +1974,7 @@ struct FPolygonID UEditableMesh::GetPolygonInGroup(const struct FPolygonGroupID&
 	params.PolygonNumber = PolygonNumber;
 
 	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleVertices
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVertexID>       OutHoleVertexIDs               (Parm, OutParm, ZeroConstructor)
-
-void UEditableMesh::GetPolygonHoleVertices(const struct FPolygonID& PolygonID, int HoleNumber, TArray<struct FVertexID>* OutHoleVertexIDs)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleVertices");
-
-	UEditableMesh_GetPolygonHoleVertices_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutHoleVertexIDs != nullptr)
-		*OutHoleVertexIDs = params.OutHoleVertexIDs;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleVertexInstances
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVertexInstanceID> OutHoleVertexInstanceIDs       (Parm, OutParm, ZeroConstructor)
-
-void UEditableMesh::GetPolygonHoleVertexInstances(const struct FPolygonID& PolygonID, int HoleNumber, TArray<struct FVertexInstanceID>* OutHoleVertexInstanceIDs)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleVertexInstances");
-
-	UEditableMesh_GetPolygonHoleVertexInstances_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutHoleVertexInstanceIDs != nullptr)
-		*OutHoleVertexInstanceIDs = params.OutHoleVertexInstanceIDs;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleVertexInstance
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            PolygonVertexNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVertexInstanceID       ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FVertexInstanceID UEditableMesh::GetPolygonHoleVertexInstance(const struct FPolygonID& PolygonID, int HoleNumber, int PolygonVertexNumber)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleVertexInstance");
-
-	UEditableMesh_GetPolygonHoleVertexInstance_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-	params.PolygonVertexNumber = PolygonVertexNumber;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleVertexCount
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UEditableMesh::GetPolygonHoleVertexCount(const struct FPolygonID& PolygonID, int HoleNumber)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleVertexCount");
-
-	UEditableMesh_GetPolygonHoleVertexCount_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleVertex
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            PolygonVertexNumber            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVertexID               ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FVertexID UEditableMesh::GetPolygonHoleVertex(const struct FPolygonID& PolygonID, int HoleNumber, int PolygonVertexNumber)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleVertex");
-
-	UEditableMesh_GetPolygonHoleVertex_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-	params.PolygonVertexNumber = PolygonVertexNumber;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleEdges
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FEdgeID>         OutHoleEdgeIDs                 (Parm, OutParm, ZeroConstructor)
-
-void UEditableMesh::GetPolygonHoleEdges(const struct FPolygonID& PolygonID, int HoleNumber, TArray<struct FEdgeID>* OutHoleEdgeIDs)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleEdges");
-
-	UEditableMesh_GetPolygonHoleEdges_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutHoleEdgeIDs != nullptr)
-		*OutHoleEdgeIDs = params.OutHoleEdgeIDs;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleEdgeCount
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UEditableMesh::GetPolygonHoleEdgeCount(const struct FPolygonID& PolygonID, int HoleNumber)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleEdgeCount");
-
-	UEditableMesh_GetPolygonHoleEdgeCount_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleEdge
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            HoleEdgeNumber                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FEdgeID                 ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FEdgeID UEditableMesh::GetPolygonHoleEdge(const struct FPolygonID& PolygonID, int HoleNumber, int HoleEdgeNumber)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleEdge");
-
-	UEditableMesh_GetPolygonHoleEdge_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-	params.HoleEdgeNumber = HoleEdgeNumber;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function EditableMesh.EditableMesh.GetPolygonHoleCount
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UEditableMesh::GetPolygonHoleCount(const struct FPolygonID& PolygonID)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonHoleCount");
-
-	UEditableMesh_GetPolygonHoleCount_Params params;
-	params.PolygonID = PolygonID;
-
-	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2080,7 +1985,7 @@ int UEditableMesh::GetPolygonHoleCount(const struct FPolygonID& PolygonID)
 
 
 // Function EditableMesh.EditableMesh.GetPolygonGroupCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2091,6 +1996,7 @@ int UEditableMesh::GetPolygonGroupCount()
 	UEditableMesh_GetPolygonGroupCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2101,12 +2007,12 @@ int UEditableMesh::GetPolygonGroupCount()
 
 
 // Function EditableMesh.EditableMesh.GetPolygonCountInGroup
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonGroupID         PolygonGroupID                 (ConstParm, Parm)
+// struct FPolygonGroupID*        PolygonGroupID                 (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::GetPolygonCountInGroup(const struct FPolygonGroupID& PolygonGroupID)
+int UEditableMesh::GetPolygonCountInGroup(struct FPolygonGroupID* PolygonGroupID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonCountInGroup");
 
@@ -2114,6 +2020,7 @@ int UEditableMesh::GetPolygonCountInGroup(const struct FPolygonGroupID& PolygonG
 	params.PolygonGroupID = PolygonGroupID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2124,7 +2031,7 @@ int UEditableMesh::GetPolygonCountInGroup(const struct FPolygonGroupID& PolygonG
 
 
 // Function EditableMesh.EditableMesh.GetPolygonCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2135,6 +2042,7 @@ int UEditableMesh::GetPolygonCount()
 	UEditableMesh_GetPolygonCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2145,12 +2053,12 @@ int UEditableMesh::GetPolygonCount()
 
 
 // Function EditableMesh.EditableMesh.GetPolygonAdjacentPolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // TArray<struct FPolygonID>      OutAdjacentPolygons            (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetPolygonAdjacentPolygons(const struct FPolygonID& PolygonID, TArray<struct FPolygonID>* OutAdjacentPolygons)
+void UEditableMesh::GetPolygonAdjacentPolygons(struct FPolygonID* PolygonID, TArray<struct FPolygonID>* OutAdjacentPolygons)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonAdjacentPolygons");
 
@@ -2158,6 +2066,7 @@ void UEditableMesh::GetPolygonAdjacentPolygons(const struct FPolygonID& PolygonI
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2169,12 +2078,12 @@ void UEditableMesh::GetPolygonAdjacentPolygons(const struct FPolygonID& PolygonI
 
 
 // Function EditableMesh.EditableMesh.GetGroupForPolygon
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // struct FPolygonGroupID         ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPolygonGroupID UEditableMesh::GetGroupForPolygon(const struct FPolygonID& PolygonID)
+struct FPolygonGroupID UEditableMesh::GetGroupForPolygon(struct FPolygonID* PolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetGroupForPolygon");
 
@@ -2182,6 +2091,7 @@ struct FPolygonGroupID UEditableMesh::GetGroupForPolygon(const struct FPolygonID
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2192,7 +2102,7 @@ struct FPolygonGroupID UEditableMesh::GetGroupForPolygon(const struct FPolygonID
 
 
 // Function EditableMesh.EditableMesh.GetFirstValidPolygonGroup
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FPolygonGroupID         ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -2203,6 +2113,7 @@ struct FPolygonGroupID UEditableMesh::GetFirstValidPolygonGroup()
 	UEditableMesh_GetFirstValidPolygonGroup_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2213,13 +2124,13 @@ struct FPolygonGroupID UEditableMesh::GetFirstValidPolygonGroup()
 
 
 // Function EditableMesh.EditableMesh.GetEdgeVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
 // struct FVertexID               OutEdgeVertexID0               (Parm, OutParm)
 // struct FVertexID               OutEdgeVertexID1               (Parm, OutParm)
 
-void UEditableMesh::GetEdgeVertices(const struct FEdgeID& EdgeID, struct FVertexID* OutEdgeVertexID0, struct FVertexID* OutEdgeVertexID1)
+void UEditableMesh::GetEdgeVertices(struct FEdgeID* EdgeID, struct FVertexID* OutEdgeVertexID0, struct FVertexID* OutEdgeVertexID1)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeVertices");
 
@@ -2227,6 +2138,7 @@ void UEditableMesh::GetEdgeVertices(const struct FEdgeID& EdgeID, struct FVertex
 	params.EdgeID = EdgeID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2240,13 +2152,13 @@ void UEditableMesh::GetEdgeVertices(const struct FEdgeID& EdgeID, struct FVertex
 
 
 // Function EditableMesh.EditableMesh.GetEdgeVertex
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
-// int                            EdgeVertexNumber               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
+// int*                           EdgeVertexNumber               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVertexID               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FVertexID UEditableMesh::GetEdgeVertex(const struct FEdgeID& EdgeID, int EdgeVertexNumber)
+struct FVertexID UEditableMesh::GetEdgeVertex(struct FEdgeID* EdgeID, int* EdgeVertexNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeVertex");
 
@@ -2255,6 +2167,7 @@ struct FVertexID UEditableMesh::GetEdgeVertex(const struct FEdgeID& EdgeID, int 
 	params.EdgeVertexNumber = EdgeVertexNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2265,13 +2178,13 @@ struct FVertexID UEditableMesh::GetEdgeVertex(const struct FEdgeID& EdgeID, int 
 
 
 // Function EditableMesh.EditableMesh.GetEdgeThatConnectsVertices
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVertexID               VertexID0                      (ConstParm, Parm)
-// struct FVertexID               VertexID1                      (ConstParm, Parm)
+// struct FVertexID*              VertexID0                      (ConstParm, Parm)
+// struct FVertexID*              VertexID1                      (ConstParm, Parm)
 // struct FEdgeID                 ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEdgeID UEditableMesh::GetEdgeThatConnectsVertices(const struct FVertexID& VertexID0, const struct FVertexID& VertexID1)
+struct FEdgeID UEditableMesh::GetEdgeThatConnectsVertices(struct FVertexID* VertexID0, struct FVertexID* VertexID1)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeThatConnectsVertices");
 
@@ -2280,6 +2193,7 @@ struct FEdgeID UEditableMesh::GetEdgeThatConnectsVertices(const struct FVertexID
 	params.VertexID1 = VertexID1;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2290,12 +2204,12 @@ struct FEdgeID UEditableMesh::GetEdgeThatConnectsVertices(const struct FVertexID
 
 
 // Function EditableMesh.EditableMesh.GetEdgeLoopElements
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
 // TArray<struct FEdgeID>         EdgeLoopIDs                    (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetEdgeLoopElements(const struct FEdgeID& EdgeID, TArray<struct FEdgeID>* EdgeLoopIDs)
+void UEditableMesh::GetEdgeLoopElements(struct FEdgeID* EdgeID, TArray<struct FEdgeID>* EdgeLoopIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeLoopElements");
 
@@ -2303,6 +2217,7 @@ void UEditableMesh::GetEdgeLoopElements(const struct FEdgeID& EdgeID, TArray<str
 	params.EdgeID = EdgeID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2314,7 +2229,7 @@ void UEditableMesh::GetEdgeLoopElements(const struct FEdgeID& EdgeID, TArray<str
 
 
 // Function EditableMesh.EditableMesh.GetEdgeCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2325,6 +2240,7 @@ int UEditableMesh::GetEdgeCount()
 	UEditableMesh_GetEdgeCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2335,12 +2251,12 @@ int UEditableMesh::GetEdgeCount()
 
 
 // Function EditableMesh.EditableMesh.GetEdgeConnectedPolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
 // TArray<struct FPolygonID>      OutConnectedPolygonIDs         (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::GetEdgeConnectedPolygons(const struct FEdgeID& EdgeID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
+void UEditableMesh::GetEdgeConnectedPolygons(struct FEdgeID* EdgeID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygons");
 
@@ -2348,6 +2264,7 @@ void UEditableMesh::GetEdgeConnectedPolygons(const struct FEdgeID& EdgeID, TArra
 	params.EdgeID = EdgeID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2359,12 +2276,12 @@ void UEditableMesh::GetEdgeConnectedPolygons(const struct FEdgeID& EdgeID, TArra
 
 
 // Function EditableMesh.EditableMesh.GetEdgeConnectedPolygonCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::GetEdgeConnectedPolygonCount(const struct FEdgeID& EdgeID)
+int UEditableMesh::GetEdgeConnectedPolygonCount(struct FEdgeID* EdgeID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygonCount");
 
@@ -2372,6 +2289,7 @@ int UEditableMesh::GetEdgeConnectedPolygonCount(const struct FEdgeID& EdgeID)
 	params.EdgeID = EdgeID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2382,13 +2300,13 @@ int UEditableMesh::GetEdgeConnectedPolygonCount(const struct FEdgeID& EdgeID)
 
 
 // Function EditableMesh.EditableMesh.GetEdgeConnectedPolygon
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
-// int                            ConnectedPolygonNumber         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
+// int*                           ConnectedPolygonNumber         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FPolygonID              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPolygonID UEditableMesh::GetEdgeConnectedPolygon(const struct FEdgeID& EdgeID, int ConnectedPolygonNumber)
+struct FPolygonID UEditableMesh::GetEdgeConnectedPolygon(struct FEdgeID* EdgeID, int* ConnectedPolygonNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygon");
 
@@ -2397,6 +2315,7 @@ struct FPolygonID UEditableMesh::GetEdgeConnectedPolygon(const struct FEdgeID& E
 	params.ConnectedPolygonNumber = ConnectedPolygonNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2407,11 +2326,11 @@ struct FPolygonID UEditableMesh::GetEdgeConnectedPolygon(const struct FEdgeID& E
 
 
 // Function EditableMesh.EditableMesh.GeneratePolygonTangentsAndNormals
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonID>      PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPolygonID>*     PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::GeneratePolygonTangentsAndNormals(TArray<struct FPolygonID> PolygonIDs)
+void UEditableMesh::GeneratePolygonTangentsAndNormals(TArray<struct FPolygonID>* PolygonIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GeneratePolygonTangentsAndNormals");
 
@@ -2419,6 +2338,7 @@ void UEditableMesh::GeneratePolygonTangentsAndNormals(TArray<struct FPolygonID> 
 	params.PolygonIDs = PolygonIDs;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2427,11 +2347,11 @@ void UEditableMesh::GeneratePolygonTangentsAndNormals(TArray<struct FPolygonID> 
 
 
 // Function EditableMesh.EditableMesh.FlipPolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonID>      PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPolygonID>*     PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::FlipPolygons(TArray<struct FPolygonID> PolygonIDs)
+void UEditableMesh::FlipPolygons(TArray<struct FPolygonID>* PolygonIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FlipPolygons");
 
@@ -2439,6 +2359,7 @@ void UEditableMesh::FlipPolygons(TArray<struct FPolygonID> PolygonIDs)
 	params.PolygonIDs = PolygonIDs;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2447,13 +2368,13 @@ void UEditableMesh::FlipPolygons(TArray<struct FPolygonID> PolygonIDs)
 
 
 // Function EditableMesh.EditableMesh.FindPolygonPerimeterVertexNumberForVertex
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// struct FVertexID               VertexID                       (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::FindPolygonPerimeterVertexNumberForVertex(const struct FPolygonID& PolygonID, const struct FVertexID& VertexID)
+int UEditableMesh::FindPolygonPerimeterVertexNumberForVertex(struct FPolygonID* PolygonID, struct FVertexID* VertexID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonPerimeterVertexNumberForVertex");
 
@@ -2462,6 +2383,7 @@ int UEditableMesh::FindPolygonPerimeterVertexNumberForVertex(const struct FPolyg
 	params.VertexID = VertexID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2472,14 +2394,14 @@ int UEditableMesh::FindPolygonPerimeterVertexNumberForVertex(const struct FPolyg
 
 
 // Function EditableMesh.EditableMesh.FindPolygonPerimeterEdgeNumberForVertices
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// struct FVertexID               EdgeVertexID0                  (ConstParm, Parm)
-// struct FVertexID               EdgeVertexID1                  (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// struct FVertexID*              EdgeVertexID0                  (ConstParm, Parm)
+// struct FVertexID*              EdgeVertexID1                  (ConstParm, Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UEditableMesh::FindPolygonPerimeterEdgeNumberForVertices(const struct FPolygonID& PolygonID, const struct FVertexID& EdgeVertexID0, const struct FVertexID& EdgeVertexID1)
+int UEditableMesh::FindPolygonPerimeterEdgeNumberForVertices(struct FPolygonID* PolygonID, struct FVertexID* EdgeVertexID0, struct FVertexID* EdgeVertexID1)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonPerimeterEdgeNumberForVertices");
 
@@ -2489,6 +2411,7 @@ int UEditableMesh::FindPolygonPerimeterEdgeNumberForVertices(const struct FPolyg
 	params.EdgeVertexID1 = EdgeVertexID1;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2499,15 +2422,15 @@ int UEditableMesh::FindPolygonPerimeterEdgeNumberForVertices(const struct FPolyg
 
 
 // Function EditableMesh.EditableMesh.FindPolygonLoop
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
 // TArray<struct FEdgeID>         OutEdgeLoopEdgeIDs             (Parm, OutParm, ZeroConstructor)
 // TArray<struct FEdgeID>         OutFlippedEdgeIDs              (Parm, OutParm, ZeroConstructor)
 // TArray<struct FEdgeID>         OutReversedEdgeIDPathToTake    (Parm, OutParm, ZeroConstructor)
 // TArray<struct FPolygonID>      OutPolygonIDsToSplit           (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::FindPolygonLoop(const struct FEdgeID& EdgeID, TArray<struct FEdgeID>* OutEdgeLoopEdgeIDs, TArray<struct FEdgeID>* OutFlippedEdgeIDs, TArray<struct FEdgeID>* OutReversedEdgeIDPathToTake, TArray<struct FPolygonID>* OutPolygonIDsToSplit)
+void UEditableMesh::FindPolygonLoop(struct FEdgeID* EdgeID, TArray<struct FEdgeID>* OutEdgeLoopEdgeIDs, TArray<struct FEdgeID>* OutFlippedEdgeIDs, TArray<struct FEdgeID>* OutReversedEdgeIDPathToTake, TArray<struct FPolygonID>* OutPolygonIDsToSplit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonLoop");
 
@@ -2515,6 +2438,7 @@ void UEditableMesh::FindPolygonLoop(const struct FEdgeID& EdgeID, TArray<struct 
 	params.EdgeID = EdgeID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2531,71 +2455,15 @@ void UEditableMesh::FindPolygonLoop(const struct FEdgeID& EdgeID, TArray<struct 
 }
 
 
-// Function EditableMesh.EditableMesh.FindPolygonHoleVertexNumberForVertex
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVertexID               VertexID                       (ConstParm, Parm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UEditableMesh::FindPolygonHoleVertexNumberForVertex(const struct FPolygonID& PolygonID, int HoleNumber, const struct FVertexID& VertexID)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonHoleVertexNumberForVertex");
-
-	UEditableMesh_FindPolygonHoleVertexNumberForVertex_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-	params.VertexID = VertexID;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function EditableMesh.EditableMesh.FindPolygonHoleEdgeNumberForVertices
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVertexID               EdgeVertexID0                  (ConstParm, Parm)
-// struct FVertexID               EdgeVertexID1                  (ConstParm, Parm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UEditableMesh::FindPolygonHoleEdgeNumberForVertices(const struct FPolygonID& PolygonID, int HoleNumber, const struct FVertexID& EdgeVertexID0, const struct FVertexID& EdgeVertexID1)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonHoleEdgeNumberForVertices");
-
-	UEditableMesh_FindPolygonHoleEdgeNumberForVertices_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-	params.EdgeVertexID0 = EdgeVertexID0;
-	params.EdgeVertexID1 = EdgeVertexID1;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function EditableMesh.EditableMesh.ExtrudePolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonID>      Polygons                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          ExtrudeDistance                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bKeepNeighborsTogether         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPolygonID>*     Polygons                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float*                         ExtrudeDistance                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bKeepNeighborsTogether         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FPolygonID>      OutNewExtrudedFrontPolygons    (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::ExtrudePolygons(TArray<struct FPolygonID> Polygons, float ExtrudeDistance, bool bKeepNeighborsTogether, TArray<struct FPolygonID>* OutNewExtrudedFrontPolygons)
+void UEditableMesh::ExtrudePolygons(TArray<struct FPolygonID>* Polygons, float* ExtrudeDistance, bool* bKeepNeighborsTogether, TArray<struct FPolygonID>* OutNewExtrudedFrontPolygons)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtrudePolygons");
 
@@ -2605,6 +2473,7 @@ void UEditableMesh::ExtrudePolygons(TArray<struct FPolygonID> Polygons, float Ex
 	params.bKeepNeighborsTogether = bKeepNeighborsTogether;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2616,14 +2485,14 @@ void UEditableMesh::ExtrudePolygons(TArray<struct FPolygonID> Polygons, float Ex
 
 
 // Function EditableMesh.EditableMesh.ExtendVertices
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexID>       VertexIDs                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bOnlyExtendClosestEdge         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReferencePosition              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVertexID>*      VertexIDs                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool*                          bOnlyExtendClosestEdge         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                ReferencePosition              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FVertexID>       OutNewExtendedVertexIDs        (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::ExtendVertices(TArray<struct FVertexID> VertexIDs, bool bOnlyExtendClosestEdge, const struct FVector& ReferencePosition, TArray<struct FVertexID>* OutNewExtendedVertexIDs)
+void UEditableMesh::ExtendVertices(TArray<struct FVertexID>* VertexIDs, bool* bOnlyExtendClosestEdge, struct FVector* ReferencePosition, TArray<struct FVertexID>* OutNewExtendedVertexIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtendVertices");
 
@@ -2633,6 +2502,7 @@ void UEditableMesh::ExtendVertices(TArray<struct FVertexID> VertexIDs, bool bOnl
 	params.ReferencePosition = ReferencePosition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2644,13 +2514,13 @@ void UEditableMesh::ExtendVertices(TArray<struct FVertexID> VertexIDs, bool bOnl
 
 
 // Function EditableMesh.EditableMesh.ExtendEdges
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FEdgeID>         EdgeIDs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bWeldNeighbors                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FEdgeID>*        EdgeIDs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool*                          bWeldNeighbors                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FEdgeID>         OutNewExtendedEdgeIDs          (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::ExtendEdges(TArray<struct FEdgeID> EdgeIDs, bool bWeldNeighbors, TArray<struct FEdgeID>* OutNewExtendedEdgeIDs)
+void UEditableMesh::ExtendEdges(TArray<struct FEdgeID>* EdgeIDs, bool* bWeldNeighbors, TArray<struct FEdgeID>* OutNewExtendedEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtendEdges");
 
@@ -2659,6 +2529,7 @@ void UEditableMesh::ExtendEdges(TArray<struct FEdgeID> EdgeIDs, bool bWeldNeighb
 	params.bWeldNeighbors = bWeldNeighbors;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2670,11 +2541,11 @@ void UEditableMesh::ExtendEdges(TArray<struct FEdgeID> EdgeIDs, bool bWeldNeighb
 
 
 // Function EditableMesh.EditableMesh.EndModification
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bFromUndo                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bFromUndo                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::EndModification(bool bFromUndo)
+void UEditableMesh::EndModification(bool* bFromUndo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.EndModification");
 
@@ -2682,6 +2553,7 @@ void UEditableMesh::EndModification(bool bFromUndo)
 	params.bFromUndo = bFromUndo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2690,12 +2562,12 @@ void UEditableMesh::EndModification(bool bFromUndo)
 
 
 // Function EditableMesh.EditableMesh.DeleteVertexInstances
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexInstanceID> VertexInstanceIDsToDelete      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVertexInstanceID>* VertexInstanceIDsToDelete      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool*                          bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::DeleteVertexInstances(TArray<struct FVertexInstanceID> VertexInstanceIDsToDelete, bool bDeleteOrphanedVertices)
+void UEditableMesh::DeleteVertexInstances(TArray<struct FVertexInstanceID>* VertexInstanceIDsToDelete, bool* bDeleteOrphanedVertices)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteVertexInstances");
 
@@ -2704,6 +2576,7 @@ void UEditableMesh::DeleteVertexInstances(TArray<struct FVertexInstanceID> Verte
 	params.bDeleteOrphanedVertices = bDeleteOrphanedVertices;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2712,15 +2585,15 @@ void UEditableMesh::DeleteVertexInstances(TArray<struct FVertexInstanceID> Verte
 
 
 // Function EditableMesh.EditableMesh.DeleteVertexAndConnectedEdgesAndPolygons
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FVertexID               VertexID                       (ConstParm, Parm)
-// bool                           bDeleteOrphanedEdges           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteOrphanedVertexInstances (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteEmptyPolygonGroups      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVertexID*              VertexID                       (ConstParm, Parm)
+// bool*                          bDeleteOrphanedEdges           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteOrphanedVertexInstances (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteEmptyPolygonGroups      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::DeleteVertexAndConnectedEdgesAndPolygons(const struct FVertexID& VertexID, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
+void UEditableMesh::DeleteVertexAndConnectedEdgesAndPolygons(struct FVertexID* VertexID, bool* bDeleteOrphanedEdges, bool* bDeleteOrphanedVertices, bool* bDeleteOrphanedVertexInstances, bool* bDeleteEmptyPolygonGroups)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteVertexAndConnectedEdgesAndPolygons");
 
@@ -2732,6 +2605,7 @@ void UEditableMesh::DeleteVertexAndConnectedEdgesAndPolygons(const struct FVerte
 	params.bDeleteEmptyPolygonGroups = bDeleteEmptyPolygonGroups;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2740,15 +2614,15 @@ void UEditableMesh::DeleteVertexAndConnectedEdgesAndPolygons(const struct FVerte
 
 
 // Function EditableMesh.EditableMesh.DeletePolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonID>      PolygonIDsToDelete             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bDeleteOrphanedEdges           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteOrphanedVertexInstances (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteEmptyPolygonGroups      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPolygonID>*     PolygonIDsToDelete             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool*                          bDeleteOrphanedEdges           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteOrphanedVertexInstances (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteEmptyPolygonGroups      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::DeletePolygons(TArray<struct FPolygonID> PolygonIDsToDelete, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
+void UEditableMesh::DeletePolygons(TArray<struct FPolygonID>* PolygonIDsToDelete, bool* bDeleteOrphanedEdges, bool* bDeleteOrphanedVertices, bool* bDeleteOrphanedVertexInstances, bool* bDeleteEmptyPolygonGroups)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeletePolygons");
 
@@ -2760,6 +2634,7 @@ void UEditableMesh::DeletePolygons(TArray<struct FPolygonID> PolygonIDsToDelete,
 	params.bDeleteEmptyPolygonGroups = bDeleteEmptyPolygonGroups;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2768,11 +2643,11 @@ void UEditableMesh::DeletePolygons(TArray<struct FPolygonID> PolygonIDsToDelete,
 
 
 // Function EditableMesh.EditableMesh.DeletePolygonGroups
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonGroupID> PolygonGroupIDs                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPolygonGroupID>* PolygonGroupIDs                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::DeletePolygonGroups(TArray<struct FPolygonGroupID> PolygonGroupIDs)
+void UEditableMesh::DeletePolygonGroups(TArray<struct FPolygonGroupID>* PolygonGroupIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeletePolygonGroups");
 
@@ -2780,6 +2655,7 @@ void UEditableMesh::DeletePolygonGroups(TArray<struct FPolygonGroupID> PolygonGr
 	params.PolygonGroupIDs = PolygonGroupIDs;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2788,11 +2664,11 @@ void UEditableMesh::DeletePolygonGroups(TArray<struct FPolygonGroupID> PolygonGr
 
 
 // Function EditableMesh.EditableMesh.DeleteOrphanVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexID>       VertexIDsToDelete              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVertexID>*      VertexIDsToDelete              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::DeleteOrphanVertices(TArray<struct FVertexID> VertexIDsToDelete)
+void UEditableMesh::DeleteOrphanVertices(TArray<struct FVertexID>* VertexIDsToDelete)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteOrphanVertices");
 
@@ -2800,6 +2676,7 @@ void UEditableMesh::DeleteOrphanVertices(TArray<struct FVertexID> VertexIDsToDel
 	params.VertexIDsToDelete = VertexIDsToDelete;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2808,12 +2685,12 @@ void UEditableMesh::DeleteOrphanVertices(TArray<struct FVertexID> VertexIDsToDel
 
 
 // Function EditableMesh.EditableMesh.DeleteEdges
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FEdgeID>         EdgeIDsToDelete                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FEdgeID>*        EdgeIDsToDelete                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool*                          bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::DeleteEdges(TArray<struct FEdgeID> EdgeIDsToDelete, bool bDeleteOrphanedVertices)
+void UEditableMesh::DeleteEdges(TArray<struct FEdgeID>* EdgeIDsToDelete, bool* bDeleteOrphanedVertices)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteEdges");
 
@@ -2822,6 +2699,7 @@ void UEditableMesh::DeleteEdges(TArray<struct FEdgeID> EdgeIDsToDelete, bool bDe
 	params.bDeleteOrphanedVertices = bDeleteOrphanedVertices;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2830,15 +2708,15 @@ void UEditableMesh::DeleteEdges(TArray<struct FEdgeID> EdgeIDsToDelete, bool bDe
 
 
 // Function EditableMesh.EditableMesh.DeleteEdgeAndConnectedPolygons
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FEdgeID                 EdgeID                         (ConstParm, Parm)
-// bool                           bDeleteOrphanedEdges           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteOrphanedVertexInstances (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeleteEmptyPolygonGroups      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FEdgeID*                EdgeID                         (ConstParm, Parm)
+// bool*                          bDeleteOrphanedEdges           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteOrphanedVertices        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteOrphanedVertexInstances (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bDeleteEmptyPolygonGroups      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::DeleteEdgeAndConnectedPolygons(const struct FEdgeID& EdgeID, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
+void UEditableMesh::DeleteEdgeAndConnectedPolygons(struct FEdgeID* EdgeID, bool* bDeleteOrphanedEdges, bool* bDeleteOrphanedVertices, bool* bDeleteOrphanedVertexInstances, bool* bDeleteEmptyPolygonGroups)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteEdgeAndConnectedPolygons");
 
@@ -2850,6 +2728,7 @@ void UEditableMesh::DeleteEdgeAndConnectedPolygons(const struct FEdgeID& EdgeID,
 	params.bDeleteEmptyPolygonGroups = bDeleteEmptyPolygonGroups;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2858,12 +2737,12 @@ void UEditableMesh::DeleteEdgeAndConnectedPolygons(const struct FEdgeID& EdgeID,
 
 
 // Function EditableMesh.EditableMesh.CreateVertices
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexToCreate> VerticesToCreate               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVertexToCreate>* VerticesToCreate               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FVertexID>       OutNewVertexIDs                (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::CreateVertices(TArray<struct FVertexToCreate> VerticesToCreate, TArray<struct FVertexID>* OutNewVertexIDs)
+void UEditableMesh::CreateVertices(TArray<struct FVertexToCreate>* VerticesToCreate, TArray<struct FVertexID>* OutNewVertexIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateVertices");
 
@@ -2871,6 +2750,7 @@ void UEditableMesh::CreateVertices(TArray<struct FVertexToCreate> VerticesToCrea
 	params.VerticesToCreate = VerticesToCreate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2882,12 +2762,12 @@ void UEditableMesh::CreateVertices(TArray<struct FVertexToCreate> VerticesToCrea
 
 
 // Function EditableMesh.EditableMesh.CreateVertexInstances
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVertexInstanceToCreate> VertexInstancesToCreate        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVertexInstanceToCreate>* VertexInstancesToCreate        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FVertexInstanceID> OutNewVertexInstanceIDs        (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::CreateVertexInstances(TArray<struct FVertexInstanceToCreate> VertexInstancesToCreate, TArray<struct FVertexInstanceID>* OutNewVertexInstanceIDs)
+void UEditableMesh::CreateVertexInstances(TArray<struct FVertexInstanceToCreate>* VertexInstancesToCreate, TArray<struct FVertexInstanceID>* OutNewVertexInstanceIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateVertexInstances");
 
@@ -2895,6 +2775,7 @@ void UEditableMesh::CreateVertexInstances(TArray<struct FVertexInstanceToCreate>
 	params.VertexInstancesToCreate = VertexInstancesToCreate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2906,13 +2787,13 @@ void UEditableMesh::CreateVertexInstances(TArray<struct FVertexInstanceToCreate>
 
 
 // Function EditableMesh.EditableMesh.CreatePolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonToCreate> PolygonsToCreate               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPolygonToCreate>* PolygonsToCreate               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FPolygonID>      OutNewPolygonIDs               (Parm, OutParm, ZeroConstructor)
 // TArray<struct FEdgeID>         OutNewEdgeIDs                  (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::CreatePolygons(TArray<struct FPolygonToCreate> PolygonsToCreate, TArray<struct FPolygonID>* OutNewPolygonIDs, TArray<struct FEdgeID>* OutNewEdgeIDs)
+void UEditableMesh::CreatePolygons(TArray<struct FPolygonToCreate>* PolygonsToCreate, TArray<struct FPolygonID>* OutNewPolygonIDs, TArray<struct FEdgeID>* OutNewEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreatePolygons");
 
@@ -2920,6 +2801,7 @@ void UEditableMesh::CreatePolygons(TArray<struct FPolygonToCreate> PolygonsToCre
 	params.PolygonsToCreate = PolygonsToCreate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2933,12 +2815,12 @@ void UEditableMesh::CreatePolygons(TArray<struct FPolygonToCreate> PolygonsToCre
 
 
 // Function EditableMesh.EditableMesh.CreatePolygonGroups
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonGroupToCreate> PolygonGroupsToCreate          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPolygonGroupToCreate>* PolygonGroupsToCreate          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FPolygonGroupID> OutNewPolygonGroupIDs          (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::CreatePolygonGroups(TArray<struct FPolygonGroupToCreate> PolygonGroupsToCreate, TArray<struct FPolygonGroupID>* OutNewPolygonGroupIDs)
+void UEditableMesh::CreatePolygonGroups(TArray<struct FPolygonGroupToCreate>* PolygonGroupsToCreate, TArray<struct FPolygonGroupID>* OutNewPolygonGroupIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreatePolygonGroups");
 
@@ -2946,6 +2828,7 @@ void UEditableMesh::CreatePolygonGroups(TArray<struct FPolygonGroupToCreate> Pol
 	params.PolygonGroupsToCreate = PolygonGroupsToCreate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2957,12 +2840,12 @@ void UEditableMesh::CreatePolygonGroups(TArray<struct FPolygonGroupToCreate> Pol
 
 
 // Function EditableMesh.EditableMesh.CreateMissingPolygonPerimeterEdges
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // TArray<struct FEdgeID>         OutNewEdgeIDs                  (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::CreateMissingPolygonPerimeterEdges(const struct FPolygonID& PolygonID, TArray<struct FEdgeID>* OutNewEdgeIDs)
+void UEditableMesh::CreateMissingPolygonPerimeterEdges(struct FPolygonID* PolygonID, TArray<struct FEdgeID>* OutNewEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateMissingPolygonPerimeterEdges");
 
@@ -2970,32 +2853,7 @@ void UEditableMesh::CreateMissingPolygonPerimeterEdges(const struct FPolygonID& 
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutNewEdgeIDs != nullptr)
-		*OutNewEdgeIDs = params.OutNewEdgeIDs;
-}
-
-
-// Function EditableMesh.EditableMesh.CreateMissingPolygonHoleEdges
-// ()
-// Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// int                            HoleNumber                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FEdgeID>         OutNewEdgeIDs                  (Parm, OutParm, ZeroConstructor)
-
-void UEditableMesh::CreateMissingPolygonHoleEdges(const struct FPolygonID& PolygonID, int HoleNumber, TArray<struct FEdgeID>* OutNewEdgeIDs)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateMissingPolygonHoleEdges");
-
-	UEditableMesh_CreateMissingPolygonHoleEdges_Params params;
-	params.PolygonID = PolygonID;
-	params.HoleNumber = HoleNumber;
-
-	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3007,12 +2865,12 @@ void UEditableMesh::CreateMissingPolygonHoleEdges(const struct FPolygonID& Polyg
 
 
 // Function EditableMesh.EditableMesh.CreateEmptyVertexRange
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            NumVerticesToCreate            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumVerticesToCreate            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FVertexID>       OutNewVertexIDs                (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::CreateEmptyVertexRange(int NumVerticesToCreate, TArray<struct FVertexID>* OutNewVertexIDs)
+void UEditableMesh::CreateEmptyVertexRange(int* NumVerticesToCreate, TArray<struct FVertexID>* OutNewVertexIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateEmptyVertexRange");
 
@@ -3020,6 +2878,7 @@ void UEditableMesh::CreateEmptyVertexRange(int NumVerticesToCreate, TArray<struc
 	params.NumVerticesToCreate = NumVerticesToCreate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3031,12 +2890,12 @@ void UEditableMesh::CreateEmptyVertexRange(int NumVerticesToCreate, TArray<struc
 
 
 // Function EditableMesh.EditableMesh.CreateEdges
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FEdgeToCreate>   EdgesToCreate                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FEdgeToCreate>*  EdgesToCreate                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FEdgeID>         OutNewEdgeIDs                  (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::CreateEdges(TArray<struct FEdgeToCreate> EdgesToCreate, TArray<struct FEdgeID>* OutNewEdgeIDs)
+void UEditableMesh::CreateEdges(TArray<struct FEdgeToCreate>* EdgesToCreate, TArray<struct FEdgeID>* OutNewEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateEdges");
 
@@ -3044,6 +2903,7 @@ void UEditableMesh::CreateEdges(TArray<struct FEdgeToCreate> EdgesToCreate, TArr
 	params.EdgesToCreate = EdgesToCreate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3055,12 +2915,12 @@ void UEditableMesh::CreateEdges(TArray<struct FEdgeToCreate> EdgesToCreate, TArr
 
 
 // Function EditableMesh.EditableMesh.ComputePolygonTriangulation
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // TArray<struct FMeshTriangle>   OutTriangles                   (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::ComputePolygonTriangulation(const struct FPolygonID& PolygonID, TArray<struct FMeshTriangle>* OutTriangles)
+void UEditableMesh::ComputePolygonTriangulation(struct FPolygonID* PolygonID, TArray<struct FMeshTriangle>* OutTriangles)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonTriangulation");
 
@@ -3068,6 +2928,7 @@ void UEditableMesh::ComputePolygonTriangulation(const struct FPolygonID& Polygon
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3079,12 +2940,12 @@ void UEditableMesh::ComputePolygonTriangulation(const struct FPolygonID& Polygon
 
 
 // Function EditableMesh.EditableMesh.ComputePolygonsSharedEdges
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FPolygonID>      PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FPolygonID>*     PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FEdgeID>         OutSharedEdgeIDs               (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::ComputePolygonsSharedEdges(TArray<struct FPolygonID> PolygonIDs, TArray<struct FEdgeID>* OutSharedEdgeIDs)
+void UEditableMesh::ComputePolygonsSharedEdges(TArray<struct FPolygonID>* PolygonIDs, TArray<struct FEdgeID>* OutSharedEdgeIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonsSharedEdges");
 
@@ -3092,6 +2953,7 @@ void UEditableMesh::ComputePolygonsSharedEdges(TArray<struct FPolygonID> Polygon
 	params.PolygonIDs = PolygonIDs;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3103,12 +2965,12 @@ void UEditableMesh::ComputePolygonsSharedEdges(TArray<struct FPolygonID> Polygon
 
 
 // Function EditableMesh.EditableMesh.ComputePolygonPlane
-// ()
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // struct FPlane                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FPlane UEditableMesh::ComputePolygonPlane(const struct FPolygonID& PolygonID)
+struct FPlane UEditableMesh::ComputePolygonPlane(struct FPolygonID* PolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonPlane");
 
@@ -3116,6 +2978,7 @@ struct FPlane UEditableMesh::ComputePolygonPlane(const struct FPolygonID& Polygo
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3126,12 +2989,12 @@ struct FPlane UEditableMesh::ComputePolygonPlane(const struct FPolygonID& Polygo
 
 
 // Function EditableMesh.EditableMesh.ComputePolygonNormal
-// ()
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UEditableMesh::ComputePolygonNormal(const struct FPolygonID& PolygonID)
+struct FVector UEditableMesh::ComputePolygonNormal(struct FPolygonID* PolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonNormal");
 
@@ -3139,6 +3002,7 @@ struct FVector UEditableMesh::ComputePolygonNormal(const struct FPolygonID& Poly
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3149,12 +3013,12 @@ struct FVector UEditableMesh::ComputePolygonNormal(const struct FPolygonID& Poly
 
 
 // Function EditableMesh.EditableMesh.ComputePolygonCenter
-// ()
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UEditableMesh::ComputePolygonCenter(const struct FPolygonID& PolygonID)
+struct FVector UEditableMesh::ComputePolygonCenter(struct FPolygonID* PolygonID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonCenter");
 
@@ -3162,6 +3026,7 @@ struct FVector UEditableMesh::ComputePolygonCenter(const struct FPolygonID& Poly
 	params.PolygonID = PolygonID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3172,7 +3037,7 @@ struct FVector UEditableMesh::ComputePolygonCenter(const struct FPolygonID& Poly
 
 
 // Function EditableMesh.EditableMesh.ComputeBoundingBoxAndSphere
-// ()
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FBoxSphereBounds        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3183,6 +3048,7 @@ struct FBoxSphereBounds UEditableMesh::ComputeBoundingBoxAndSphere()
 	UEditableMesh_ComputeBoundingBoxAndSphere_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3193,7 +3059,7 @@ struct FBoxSphereBounds UEditableMesh::ComputeBoundingBoxAndSphere()
 
 
 // Function EditableMesh.EditableMesh.ComputeBoundingBox
-// ()
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3204,6 +3070,7 @@ struct FBox UEditableMesh::ComputeBoundingBox()
 	UEditableMesh_ComputeBoundingBox_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3214,15 +3081,15 @@ struct FBox UEditableMesh::ComputeBoundingBox()
 
 
 // Function EditableMesh.EditableMesh.ComputeBarycentricWeightForPointOnPolygon
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPolygonID              PolygonID                      (ConstParm, Parm)
-// struct FVector                 PointOnPolygon                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FPolygonID*             PolygonID                      (ConstParm, Parm)
+// struct FVector*                PointOnPolygon                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FMeshTriangle           OutTriangle                    (Parm, OutParm)
 // struct FVector                 OutTriangleVertexWeights       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEditableMesh::ComputeBarycentricWeightForPointOnPolygon(const struct FPolygonID& PolygonID, const struct FVector& PointOnPolygon, struct FMeshTriangle* OutTriangle, struct FVector* OutTriangleVertexWeights)
+bool UEditableMesh::ComputeBarycentricWeightForPointOnPolygon(struct FPolygonID* PolygonID, struct FVector* PointOnPolygon, struct FMeshTriangle* OutTriangle, struct FVector* OutTriangleVertexWeights)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputeBarycentricWeightForPointOnPolygon");
 
@@ -3231,6 +3098,7 @@ bool UEditableMesh::ComputeBarycentricWeightForPointOnPolygon(const struct FPoly
 	params.PointOnPolygon = PointOnPolygon;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3246,12 +3114,12 @@ bool UEditableMesh::ComputeBarycentricWeightForPointOnPolygon(const struct FPoly
 
 
 // Function EditableMesh.EditableMesh.CommitInstance
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPrimitiveComponent*     ComponentToInstanceTo          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPrimitiveComponent**    ComponentToInstanceTo          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UEditableMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UEditableMesh* UEditableMesh::CommitInstance(class UPrimitiveComponent* ComponentToInstanceTo)
+class UEditableMesh* UEditableMesh::CommitInstance(class UPrimitiveComponent** ComponentToInstanceTo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CommitInstance");
 
@@ -3259,6 +3127,7 @@ class UEditableMesh* UEditableMesh::CommitInstance(class UPrimitiveComponent* Co
 	params.ComponentToInstanceTo = ComponentToInstanceTo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3269,7 +3138,7 @@ class UEditableMesh* UEditableMesh::CommitInstance(class UPrimitiveComponent* Co
 
 
 // Function EditableMesh.EditableMesh.COMMIT
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UEditableMesh::COMMIT()
 {
@@ -3278,6 +3147,7 @@ void UEditableMesh::COMMIT()
 	UEditableMesh_COMMIT_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3286,11 +3156,11 @@ void UEditableMesh::COMMIT()
 
 
 // Function EditableMesh.EditableMesh.ChangePolygonsVertexInstances
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FChangeVertexInstancesForPolygon> VertexInstancesForPolygons     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FChangeVertexInstancesForPolygon>* VertexInstancesForPolygons     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEditableMesh::ChangePolygonsVertexInstances(TArray<struct FChangeVertexInstancesForPolygon> VertexInstancesForPolygons)
+void UEditableMesh::ChangePolygonsVertexInstances(TArray<struct FChangeVertexInstancesForPolygon>* VertexInstancesForPolygons)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ChangePolygonsVertexInstances");
 
@@ -3298,6 +3168,7 @@ void UEditableMesh::ChangePolygonsVertexInstances(TArray<struct FChangeVertexIns
 	params.VertexInstancesForPolygons = VertexInstancesForPolygons;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3306,15 +3177,15 @@ void UEditableMesh::ChangePolygonsVertexInstances(TArray<struct FChangeVertexIns
 
 
 // Function EditableMesh.EditableMesh.BevelPolygons
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonID>      PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          BevelFixedDistance             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          BevelProgressTowardCenter      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPolygonID>*     PolygonIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float*                         BevelFixedDistance             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         BevelProgressTowardCenter      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FPolygonID>      OutNewCenterPolygonIDs         (Parm, OutParm, ZeroConstructor)
 // TArray<struct FPolygonID>      OutNewSidePolygonIDs           (Parm, OutParm, ZeroConstructor)
 
-void UEditableMesh::BevelPolygons(TArray<struct FPolygonID> PolygonIDs, float BevelFixedDistance, float BevelProgressTowardCenter, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs)
+void UEditableMesh::BevelPolygons(TArray<struct FPolygonID>* PolygonIDs, float* BevelFixedDistance, float* BevelProgressTowardCenter, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.BevelPolygons");
 
@@ -3324,6 +3195,7 @@ void UEditableMesh::BevelPolygons(TArray<struct FPolygonID> PolygonIDs, float Be
 	params.BevelProgressTowardCenter = BevelProgressTowardCenter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3337,12 +3209,12 @@ void UEditableMesh::BevelPolygons(TArray<struct FPolygonID> PolygonIDs, float Be
 
 
 // Function EditableMesh.EditableMesh.AssignPolygonsToPolygonGroups
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FPolygonGroupForPolygon> PolygonGroupForPolygons        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bDeleteOrphanedPolygonGroups   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPolygonGroupForPolygon>* PolygonGroupForPolygons        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool*                          bDeleteOrphanedPolygonGroups   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UEditableMesh::AssignPolygonsToPolygonGroups(TArray<struct FPolygonGroupForPolygon> PolygonGroupForPolygons, bool bDeleteOrphanedPolygonGroups)
+void UEditableMesh::AssignPolygonsToPolygonGroups(TArray<struct FPolygonGroupForPolygon>* PolygonGroupForPolygons, bool* bDeleteOrphanedPolygonGroups)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.AssignPolygonsToPolygonGroups");
 
@@ -3351,6 +3223,7 @@ void UEditableMesh::AssignPolygonsToPolygonGroups(TArray<struct FPolygonGroupFor
 	params.bDeleteOrphanedPolygonGroups = bDeleteOrphanedPolygonGroups;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3359,7 +3232,7 @@ void UEditableMesh::AssignPolygonsToPolygonGroups(TArray<struct FPolygonGroupFor
 
 
 // Function EditableMesh.EditableMesh.AnyChangesToUndo
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3370,6 +3243,7 @@ bool UEditableMesh::AnyChangesToUndo()
 	UEditableMesh_AnyChangesToUndo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3380,13 +3254,13 @@ bool UEditableMesh::AnyChangesToUndo()
 
 
 // Function EditableMesh.EditableMeshFactory.MakeEditableMesh
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UPrimitiveComponent*     PrimitiveComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            LODIndex                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent**    PrimitiveComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           LODIndex                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class UEditableMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UEditableMesh* UEditableMeshFactory::MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int LODIndex)
+class UEditableMesh* UEditableMeshFactory::STATIC_MakeEditableMesh(class UPrimitiveComponent** PrimitiveComponent, int* LODIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMeshFactory.MakeEditableMesh");
 
@@ -3395,6 +3269,7 @@ class UEditableMesh* UEditableMeshFactory::MakeEditableMesh(class UPrimitiveComp
 	params.LODIndex = LODIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

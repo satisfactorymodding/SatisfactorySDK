@@ -25,7 +25,7 @@ struct UBTS_CheckNearbyThreats_C_ReceiveTickAI_Params
 // Function BTS_CheckNearbyThreats.BTS_CheckNearbyThreats_C.ExecuteUbergraph_BTS_CheckNearbyThreats
 struct UBTS_CheckNearbyThreats_C_ExecuteUbergraph_BTS_CheckNearbyThreats_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

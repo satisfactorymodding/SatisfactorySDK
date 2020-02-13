@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_StorageContainerMk2.Build_StorageContainerMk2_C.UserConstructionScript
-struct ABuild_StorageContainerMk2_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

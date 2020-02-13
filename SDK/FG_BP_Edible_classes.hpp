@@ -15,12 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Edible.BP_Edible_C
-// 0x0010 (0x03B8 - 0x03A8)
+// 0x0014 (0x03F0 - 0x03DC)
 class ABP_Edible_C : public ABP_Pickup_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        BushMesh;                                                 // 0x03B0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x03DC(0x0004) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        BushMesh;                                                 // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,10 +31,9 @@ public:
 
 
 	void UpdateVisiblityState();
-	void UserConstructionScript();
 	void PlayPickupEffect();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_Edible(int EntryPoint);
+	void ExecuteUbergraph_BP_Edible(int* EntryPoint);
 };
 
 

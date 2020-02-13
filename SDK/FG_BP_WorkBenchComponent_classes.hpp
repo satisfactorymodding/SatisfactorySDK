@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WorkBenchComponent.BP_WorkBenchComponent_C
-// 0x0000 (0x0288 - 0x0288)
+// 0x0000 (0x02E8 - 0x02E8)
 class UBP_WorkBenchComponent_C : public UBP_ManualManufacturingComponent_C
 {
 public:

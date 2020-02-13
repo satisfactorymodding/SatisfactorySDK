@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_StartingPod.BP_StartingPod_C.GatherDependencies
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UObject*>         out_dependentObjects           (Parm, OutParm, ZeroConstructor)
 
@@ -35,7 +35,7 @@ void ABP_StartingPod_C::GatherDependencies(TArray<class UObject*>* out_dependent
 
 
 // Function BP_StartingPod.BP_StartingPod_C.NeedTransform
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -56,7 +56,7 @@ bool ABP_StartingPod_C::NeedTransform()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.ShouldSave
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,13 +76,57 @@ bool ABP_StartingPod_C::ShouldSave()
 }
 
 
-// Function BP_StartingPod.BP_StartingPod_C.SetActorRepresentationText
-// ()
+// Function BP_StartingPod.BP_StartingPod_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_StartingPod_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.GetActorCompassViewDistance");
+
+	ABP_StartingPod_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_StartingPod.BP_StartingPod_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_StartingPod_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.SetActorCompassViewDistance");
+
+	ABP_StartingPod_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_StartingPod.BP_StartingPod_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABP_StartingPod_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABP_StartingPod_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.SetActorRepresentationText");
 
@@ -100,7 +144,7 @@ struct FText ABP_StartingPod_C::SetActorRepresentationText(const struct FText& n
 
 
 // Function BP_StartingPod.BP_StartingPod_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -121,7 +165,7 @@ bool ABP_StartingPod_C::UpdateRepresentation()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -142,7 +186,7 @@ float ABP_StartingPod_C::GetActorFogOfWarRevealRadius()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -163,7 +207,7 @@ EFogOfWarRevealType ABP_StartingPod_C::GetActorFogOfWarRevealType()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -184,7 +228,7 @@ struct FLinearColor ABP_StartingPod_C::GetActorRepresentationColor()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -205,7 +249,7 @@ struct FText ABP_StartingPod_C::GetActorRepresentationText()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -226,7 +270,7 @@ class UTexture2D* ABP_StartingPod_C::GetActorRepresentationTexture()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -247,7 +291,7 @@ ERepresentationType ABP_StartingPod_C::GetActorRepresentationType()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -268,7 +312,7 @@ bool ABP_StartingPod_C::GetActorShouldShowInCompass()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -289,7 +333,7 @@ bool ABP_StartingPod_C::AddAsRepresentation()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -310,7 +354,7 @@ bool ABP_StartingPod_C::GetActorShouldShowOnMap()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -331,7 +375,7 @@ struct FVector ABP_StartingPod_C::GetRealActorLocation()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -352,7 +396,7 @@ struct FRotator ABP_StartingPod_C::GetRealActorRotation()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -373,7 +417,7 @@ bool ABP_StartingPod_C::IsActorStatic()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -393,14 +437,17 @@ bool ABP_StartingPod_C::RemoveAsRepresentation()
 }
 
 
-// Function BP_StartingPod.BP_StartingPod_C.UserConstructionScript
-// ()
+// Function BP_StartingPod.BP_StartingPod_C.OnLoaded_8586F6D040F0FFE03962849F398DB59A
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject**                Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StartingPod_C::UserConstructionScript()
+void ABP_StartingPod_C::OnLoaded_8586F6D040F0FFE03962849F398DB59A(class UObject** Loaded)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.OnLoaded_8586F6D040F0FFE03962849F398DB59A");
 
-	ABP_StartingPod_C_UserConstructionScript_Params params;
+	ABP_StartingPod_C_OnLoaded_8586F6D040F0FFE03962849F398DB59A_Params params;
+	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
 
@@ -411,12 +458,12 @@ void ABP_StartingPod_C::UserConstructionScript()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.PostLoadGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StartingPod_C::PostLoadGame(int SaveVersion, int GameVersion)
+void ABP_StartingPod_C::PostLoadGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.PostLoadGame");
 
@@ -433,12 +480,12 @@ void ABP_StartingPod_C::PostLoadGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_StartingPod.BP_StartingPod_C.PostSaveGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StartingPod_C::PostSaveGame(int SaveVersion, int GameVersion)
+void ABP_StartingPod_C::PostSaveGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.PostSaveGame");
 
@@ -455,12 +502,12 @@ void ABP_StartingPod_C::PostSaveGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_StartingPod.BP_StartingPod_C.PreLoadGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StartingPod_C::PreLoadGame(int SaveVersion, int GameVersion)
+void ABP_StartingPod_C::PreLoadGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.PreLoadGame");
 
@@ -477,12 +524,12 @@ void ABP_StartingPod_C::PreLoadGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_StartingPod.BP_StartingPod_C.PreSaveGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StartingPod_C::PreSaveGame(int SaveVersion, int GameVersion)
+void ABP_StartingPod_C::PreSaveGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.PreSaveGame");
 
@@ -498,8 +545,28 @@ void ABP_StartingPod_C::PreSaveGame(int SaveVersion, int GameVersion)
 }
 
 
+// Function BP_StartingPod.BP_StartingPod_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_StartingPod_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.SetActorRepresentationColor");
+
+	ABP_StartingPod_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_StartingPod.BP_StartingPod_C.StartIsLookedAtForDismantle
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -519,7 +586,7 @@ void ABP_StartingPod_C::StartIsLookedAtForDismantle(class AFGCharacterPlayer** b
 
 
 // Function BP_StartingPod.BP_StartingPod_C.StopIsLookedAtForDismantle
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -539,7 +606,7 @@ void ABP_StartingPod_C::StopIsLookedAtForDismantle(class AFGCharacterPlayer** by
 
 
 // Function BP_StartingPod.BP_StartingPod_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -559,7 +626,7 @@ void ABP_StartingPod_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_StartingPod.BP_StartingPod_C.SetupPodForOwner
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::SetupPodForOwner()
 {
@@ -576,7 +643,7 @@ void ABP_StartingPod_C::SetupPodForOwner()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.SetupPodForObserver
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::SetupPodForObserver()
 {
@@ -593,7 +660,7 @@ void ABP_StartingPod_C::SetupPodForObserver()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.EndCinematic
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::EndCinematic()
 {
@@ -610,7 +677,7 @@ void ABP_StartingPod_C::EndCinematic()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.StartMovie
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::StartMovie()
 {
@@ -627,7 +694,7 @@ void ABP_StartingPod_C::StartMovie()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.AK_StopDucking
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::AK_StopDucking()
 {
@@ -644,7 +711,7 @@ void ABP_StartingPod_C::AK_StopDucking()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.AK_HalveDucking
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::AK_HalveDucking()
 {
@@ -661,7 +728,7 @@ void ABP_StartingPod_C::AK_HalveDucking()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_StartingPod_C::ReceiveDestroyed()
 {
@@ -678,7 +745,7 @@ void ABP_StartingPod_C::ReceiveDestroyed()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.StartCinematic
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::StartCinematic()
 {
@@ -695,7 +762,7 @@ void ABP_StartingPod_C::StartCinematic()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.OnPlayerSkipIntroSequence
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::OnPlayerSkipIntroSequence()
 {
@@ -712,7 +779,7 @@ void ABP_StartingPod_C::OnPlayerSkipIntroSequence()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.AllowSkipIntro
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::AllowSkipIntro()
 {
@@ -729,7 +796,7 @@ void ABP_StartingPod_C::AllowSkipIntro()
 
 
 // Function BP_StartingPod.BP_StartingPod_C.BlockSkipIntro
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingPod_C::BlockSkipIntro()
 {
@@ -745,12 +812,29 @@ void ABP_StartingPod_C::BlockSkipIntro()
 }
 
 
-// Function BP_StartingPod.BP_StartingPod_C.ExecuteUbergraph_BP_StartingPod
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_StartingPod.BP_StartingPod_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_StartingPod_C::ExecuteUbergraph_BP_StartingPod(int EntryPoint)
+void ABP_StartingPod_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.ReceiveBeginPlay");
+
+	ABP_StartingPod_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_StartingPod.BP_StartingPod_C.ExecuteUbergraph_BP_StartingPod
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_StartingPod_C::ExecuteUbergraph_BP_StartingPod(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StartingPod.BP_StartingPod_C.ExecuteUbergraph_BP_StartingPod");
 

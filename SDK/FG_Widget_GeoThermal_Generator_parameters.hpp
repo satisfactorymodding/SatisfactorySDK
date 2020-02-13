@@ -61,7 +61,7 @@ struct UWidget_GeoThermal_Generator_C_Destruct_Params
 // Function Widget_GeoThermal_Generator.Widget_GeoThermal_Generator_C.ExecuteUbergraph_Widget_GeoThermal_Generator
 struct UWidget_GeoThermal_Generator_C_ExecuteUbergraph_Widget_GeoThermal_Generator_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

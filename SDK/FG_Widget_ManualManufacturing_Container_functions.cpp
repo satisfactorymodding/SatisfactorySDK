@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.OnPreviewKeyDown
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -38,7 +38,7 @@ struct FEventReply UWidget_ManualManufacturing_Container_C::OnPreviewKeyDown(str
 
 
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.SetWindowAlignment
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_Container_C::SetWindowAlignment()
 {
@@ -55,7 +55,7 @@ void UWidget_ManualManufacturing_Container_C::SetWindowAlignment()
 
 
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.UpdateHeaderText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_Container_C::UpdateHeaderText()
 {
@@ -72,7 +72,7 @@ void UWidget_ManualManufacturing_Container_C::UpdateHeaderText()
 
 
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_Container_C::Cleanup()
 {
@@ -89,7 +89,7 @@ void UWidget_ManualManufacturing_Container_C::Cleanup()
 
 
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManualManufacturing_Container_C::Destruct()
 {
@@ -106,7 +106,7 @@ void UWidget_ManualManufacturing_Container_C::Destruct()
 
 
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_ManualManufacturing_Container_C::Init()
 {
@@ -123,7 +123,7 @@ void UWidget_ManualManufacturing_Container_C::Init()
 
 
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManualManufacturing_Container_C::Construct()
 {
@@ -140,7 +140,7 @@ void UWidget_ManualManufacturing_Container_C::Construct()
 
 
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.LoopSmoke
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_Container_C::LoopSmoke()
 {
@@ -156,12 +156,34 @@ void UWidget_ManualManufacturing_Container_C::LoopSmoke()
 }
 
 
-// Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.ExecuteUbergraph_Widget_ManualManufacturing_Container
-// ()
+// Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.BndEvt__mManufacturingWidget_K2Node_ComponentBoundEvent_0_OnRelevantClassesUpdated__DelegateSignature
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UClass*>          relevantClasses                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UWidget_ManualManufacturing_Container_C::ExecuteUbergraph_Widget_ManualManufacturing_Container(int EntryPoint)
+void UWidget_ManualManufacturing_Container_C::BndEvt__mManufacturingWidget_K2Node_ComponentBoundEvent_0_OnRelevantClassesUpdated__DelegateSignature(TArray<class UClass*>* relevantClasses)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.BndEvt__mManufacturingWidget_K2Node_ComponentBoundEvent_0_OnRelevantClassesUpdated__DelegateSignature");
+
+	UWidget_ManualManufacturing_Container_C_BndEvt__mManufacturingWidget_K2Node_ComponentBoundEvent_0_OnRelevantClassesUpdated__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (relevantClasses != nullptr)
+		*relevantClasses = params.relevantClasses;
+}
+
+
+// Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.ExecuteUbergraph_Widget_ManualManufacturing_Container
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ManualManufacturing_Container_C::ExecuteUbergraph_Widget_ManualManufacturing_Container(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.ExecuteUbergraph_Widget_ManualManufacturing_Container");
 

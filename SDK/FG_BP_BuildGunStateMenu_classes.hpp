@@ -33,7 +33,7 @@ public:
 	void EndState();
 	void SecondaryFire();
 	void BeginState();
-	void ExecuteUbergraph_BP_BuildGunStateMenu(int EntryPoint);
+	void ExecuteUbergraph_BP_BuildGunStateMenu(int* EntryPoint);
 };
 
 

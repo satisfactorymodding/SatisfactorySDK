@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HUDBox_Fuel.Widget_HUDBox_Fuel_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HUDBox_Fuel_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_HUDBox_Fuel_C::Construct()
 
 
 // Function Widget_HUDBox_Fuel.Widget_HUDBox_Fuel_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,11 +52,11 @@ void UWidget_HUDBox_Fuel_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTim
 
 
 // Function Widget_HUDBox_Fuel.Widget_HUDBox_Fuel_C.ExecuteUbergraph_Widget_HUDBox_Fuel
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HUDBox_Fuel_C::ExecuteUbergraph_Widget_HUDBox_Fuel(int EntryPoint)
+void UWidget_HUDBox_Fuel_C::ExecuteUbergraph_Widget_HUDBox_Fuel(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HUDBox_Fuel.Widget_HUDBox_Fuel_C.ExecuteUbergraph_Widget_HUDBox_Fuel");
 

@@ -24,7 +24,7 @@ struct UWidget_ResourceExtractorUI_C_DropInventorySlotStack_Params
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.GetWarningVisibility
 struct UWidget_ResourceExtractorUI_C_GetWarningVisibility_Params
 {
-	class AFGBuildableResourceExtractor*               buildableResourceExtractor;                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGBuildableResourceExtractor**              buildableResourceExtractor;                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.UpdateOutputInfo
@@ -65,20 +65,25 @@ struct UWidget_ResourceExtractorUI_C_BndEvt__Widget_StandbyButton_K2Node_Compone
 {
 };
 
+// Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_2_OnClose__DelegateSignature
+struct UWidget_ResourceExtractorUI_C_BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_2_OnClose__DelegateSignature_Params
+{
+};
+
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Init
 struct UWidget_ResourceExtractorUI_C_Init_Params
 {
 };
 
-// Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_2_OnClose__DelegateSignature
-struct UWidget_ResourceExtractorUI_C_BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_2_OnClose__DelegateSignature_Params
+// Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Destruct
+struct UWidget_ResourceExtractorUI_C_Destruct_Params
 {
 };
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.ExecuteUbergraph_Widget_ResourceExtractorUI
 struct UWidget_ResourceExtractorUI_C_ExecuteUbergraph_Widget_ResourceExtractorUI_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

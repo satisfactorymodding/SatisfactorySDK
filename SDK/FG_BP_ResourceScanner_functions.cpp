@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.IsScannerWheelVisible
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsVisible                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -34,25 +34,8 @@ void ABP_ResourceScanner_C::IsScannerWheelVisible(bool* IsVisible)
 }
 
 
-// Function BP_ResourceScanner.BP_ResourceScanner_C.UserConstructionScript
-// ()
-
-void ABP_ResourceScanner_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ResourceScanner.BP_ResourceScanner_C.UserConstructionScript");
-
-	ABP_ResourceScanner_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ResourceScanner.BP_ResourceScanner_C.Timeline_0__FinishedFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_ResourceScanner_C::Timeline_0__FinishedFunc()
 {
@@ -69,7 +52,7 @@ void ABP_ResourceScanner_C::Timeline_0__FinishedFunc()
 
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.Timeline_0__UpdateFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_ResourceScanner_C::Timeline_0__UpdateFunc()
 {
@@ -86,7 +69,7 @@ void ABP_ResourceScanner_C::Timeline_0__UpdateFunc()
 
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.ShowResourceDescriptorSelectUI
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_ResourceScanner_C::ShowResourceDescriptorSelectUI()
 {
@@ -103,7 +86,7 @@ void ABP_ResourceScanner_C::ShowResourceDescriptorSelectUI()
 
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.CloseResourceDescriptorSelectUI
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_ResourceScanner_C::CloseResourceDescriptorSelectUI()
 {
@@ -120,7 +103,7 @@ void ABP_ResourceScanner_C::CloseResourceDescriptorSelectUI()
 
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.PlayClusterEffects
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // TArray<struct FNodeClusterData>* clusters                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -140,7 +123,7 @@ void ABP_ResourceScanner_C::PlayClusterEffects(TArray<struct FNodeClusterData>* 
 
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.Event Play Pulse Effect
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_ResourceScanner_C::Event_Play_Pulse_Effect()
 {
@@ -157,7 +140,7 @@ void ABP_ResourceScanner_C::Event_Play_Pulse_Effect()
 
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.CustomEvent_1
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_ResourceScanner_C::CustomEvent_1()
 {
@@ -174,11 +157,11 @@ void ABP_ResourceScanner_C::CustomEvent_1()
 
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.ExecuteUbergraph_BP_ResourceScanner
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ResourceScanner_C::ExecuteUbergraph_BP_ResourceScanner(int EntryPoint)
+void ABP_ResourceScanner_C::ExecuteUbergraph_BP_ResourceScanner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ResourceScanner.BP_ResourceScanner_C.ExecuteUbergraph_BP_ResourceScanner");
 
@@ -194,7 +177,7 @@ void ABP_ResourceScanner_C::ExecuteUbergraph_BP_ResourceScanner(int EntryPoint)
 
 
 // Function BP_ResourceScanner.BP_ResourceScanner_C.OnClustersFound__DelegateSignature
-// ()
+// (Public, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FNodeClusterData> ClustersFound                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 

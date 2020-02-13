@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CodexEntry_Buildings.Widget_CodexEntry_Buildings_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UWidget_CodexEntry_Buildings_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_CodexEntry_Buildings.Widget_CodexEntry_Buildings_C.ExecuteUbergraph_Widget_CodexEntry_Buildings
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CodexEntry_Buildings_C::ExecuteUbergraph_Widget_CodexEntry_Buildings(int EntryPoint)
+void UWidget_CodexEntry_Buildings_C::ExecuteUbergraph_Widget_CodexEntry_Buildings(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CodexEntry_Buildings.Widget_CodexEntry_Buildings_C.ExecuteUbergraph_Widget_CodexEntry_Buildings");
 

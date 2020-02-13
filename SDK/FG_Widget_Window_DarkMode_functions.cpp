@@ -12,8 +12,106 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnMouseButtonUp
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_Window_DarkMode_C::OnMouseButtonUp(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnMouseButtonUp");
+
+	UWidget_Window_DarkMode_C_OnMouseButtonUp_Params params;
+	params.MyGeometry = MyGeometry;
+	params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnNumKeyDown
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FKeyEvent*              KeyEvent                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_Window_DarkMode_C::OnNumKeyDown(struct FKeyEvent* KeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnNumKeyDown");
+
+	UWidget_Window_DarkMode_C_OnNumKeyDown_Params params;
+	params.KeyEvent = KeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnKeyUp
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_Window_DarkMode_C::OnKeyUp(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnKeyUp");
+
+	UWidget_Window_DarkMode_C_OnKeyUp_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnMouseButtonDown
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_Window_DarkMode_C::OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnMouseButtonDown");
+
+	UWidget_Window_DarkMode_C_OnMouseButtonDown_Params params;
+	params.MyGeometry = MyGeometry;
+	params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.InitTabs
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::InitTabs()
 {
@@ -30,12 +128,12 @@ void UWidget_Window_DarkMode_C::InitTabs()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetInventoryVisibility
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           mShowInventory                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Animate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          mShowInventory                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          Animate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Window_DarkMode_C::SetInventoryVisibility(bool mShowInventory, bool Animate)
+void UWidget_Window_DarkMode_C::SetInventoryVisibility(bool* mShowInventory, bool* Animate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetInventoryVisibility");
 
@@ -52,7 +150,7 @@ void UWidget_Window_DarkMode_C::SetInventoryVisibility(bool mShowInventory, bool
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.GetDividerButtonSlotVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -73,7 +171,7 @@ ESlateVisibility UWidget_Window_DarkMode_C::GetDividerButtonSlotVisibility()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.GetNavigationVisibiliy
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -94,7 +192,7 @@ ESlateVisibility UWidget_Window_DarkMode_C::GetNavigationVisibiliy()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.GetInventoryBodyVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -115,7 +213,7 @@ ESlateVisibility UWidget_Window_DarkMode_C::GetInventoryBodyVisibility()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.GetTopButtonSlotVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -136,7 +234,7 @@ ESlateVisibility UWidget_Window_DarkMode_C::GetTopButtonSlotVisibility()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnDrop
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -163,11 +261,11 @@ bool UWidget_Window_DarkMode_C::OnDrop(struct FGeometry* MyGeometry, struct FPoi
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetTitle
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Window_DarkMode_C::SetTitle(const struct FText& Title)
+void UWidget_Window_DarkMode_C::SetTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetTitle");
 
@@ -183,7 +281,7 @@ void UWidget_Window_DarkMode_C::SetTitle(const struct FText& Title)
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::Construct()
 {
@@ -200,7 +298,7 @@ void UWidget_Window_DarkMode_C::Construct()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnEscapePressed
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::OnEscapePressed()
 {
@@ -217,7 +315,7 @@ void UWidget_Window_DarkMode_C::OnEscapePressed()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::Destruct()
 {
@@ -234,7 +332,7 @@ void UWidget_Window_DarkMode_C::Destruct()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -256,7 +354,7 @@ void UWidget_Window_DarkMode_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnConstructAnimFinished
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::OnConstructAnimFinished()
 {
@@ -273,7 +371,7 @@ void UWidget_Window_DarkMode_C::OnConstructAnimFinished()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -293,7 +391,7 @@ void UWidget_Window_DarkMode_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnCloseButtonClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::OnCloseButtonClicked()
 {
@@ -310,7 +408,7 @@ void UWidget_Window_DarkMode_C::OnCloseButtonClicked()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.LerpShowInventory
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::LerpShowInventory()
 {
@@ -327,11 +425,11 @@ void UWidget_Window_DarkMode_C::LerpShowInventory()
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Window_DarkMode_C::BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature(int ButtonIndex)
+void UWidget_Window_DarkMode_C::BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature(int* ButtonIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature");
 
@@ -347,7 +445,7 @@ void UWidget_Window_DarkMode_C::BndEvt__Widget_TabsContainer_K2Node_ComponentBou
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_0_OnNoTabsGenerated__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_0_OnNoTabsGenerated__DelegateSignature()
 {
@@ -364,7 +462,7 @@ void UWidget_Window_DarkMode_C::BndEvt__Widget_TabsContainer_K2Node_ComponentBou
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_1_OnTabsGenerated__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_1_OnTabsGenerated__DelegateSignature()
 {
@@ -380,12 +478,32 @@ void UWidget_Window_DarkMode_C::BndEvt__Widget_TabsContainer_K2Node_ComponentBou
 }
 
 
-// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.ExecuteUbergraph_Widget_Window_DarkMode
-// ()
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetupRelevantInventory
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UClass*>*         relevantClasses                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UWidget_Window_DarkMode_C::ExecuteUbergraph_Widget_Window_DarkMode(int EntryPoint)
+void UWidget_Window_DarkMode_C::SetupRelevantInventory(TArray<class UClass*>* relevantClasses)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetupRelevantInventory");
+
+	UWidget_Window_DarkMode_C_SetupRelevantInventory_Params params;
+	params.relevantClasses = relevantClasses;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.ExecuteUbergraph_Widget_Window_DarkMode
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Window_DarkMode_C::ExecuteUbergraph_Widget_Window_DarkMode(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.ExecuteUbergraph_Widget_Window_DarkMode");
 
@@ -400,12 +518,32 @@ void UWidget_Window_DarkMode_C::ExecuteUbergraph_Widget_Window_DarkMode(int Entr
 }
 
 
-// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnTabButtonClicked__DelegateSignature
-// ()
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnRelevantShortcutPressed__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Window_DarkMode_C::OnTabButtonClicked__DelegateSignature(int ButtonIndex)
+void UWidget_Window_DarkMode_C::OnRelevantShortcutPressed__DelegateSignature(class UWidget_InventorySlot_C** InventorySlot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnRelevantShortcutPressed__DelegateSignature");
+
+	UWidget_Window_DarkMode_C_OnRelevantShortcutPressed__DelegateSignature_Params params;
+	params.InventorySlot = InventorySlot;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnTabButtonClicked__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int*                           ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Window_DarkMode_C::OnTabButtonClicked__DelegateSignature(int* ButtonIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnTabButtonClicked__DelegateSignature");
 
@@ -421,7 +559,7 @@ void UWidget_Window_DarkMode_C::OnTabButtonClicked__DelegateSignature(int Button
 
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnClose__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_DarkMode_C::OnClose__DelegateSignature()
 {

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_MoveToTargetPoint.BTT_MoveToTargetPoint_C.OnLocationReached
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_MoveToTargetPoint_C::OnLocationReached()
 {
@@ -30,7 +30,7 @@ void UBTT_MoveToTargetPoint_C::OnLocationReached()
 
 
 // Function BTT_MoveToTargetPoint.BTT_MoveToTargetPoint_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,7 +52,7 @@ void UBTT_MoveToTargetPoint_C::ReceiveExecuteAI(class AAIController** OwnerContr
 
 
 // Function BTT_MoveToTargetPoint.BTT_MoveToTargetPoint_C.ReceiveAbortAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -74,11 +74,11 @@ void UBTT_MoveToTargetPoint_C::ReceiveAbortAI(class AAIController** OwnerControl
 
 
 // Function BTT_MoveToTargetPoint.BTT_MoveToTargetPoint_C.ExecuteUbergraph_BTT_MoveToTargetPoint
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveToTargetPoint_C::ExecuteUbergraph_BTT_MoveToTargetPoint(int EntryPoint)
+void UBTT_MoveToTargetPoint_C::ExecuteUbergraph_BTT_MoveToTargetPoint(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveToTargetPoint.BTT_MoveToTargetPoint_C.ExecuteUbergraph_BTT_MoveToTargetPoint");
 

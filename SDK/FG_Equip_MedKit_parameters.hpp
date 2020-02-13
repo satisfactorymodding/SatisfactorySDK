@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Equip_MedKit.Equip_MedKit_C.UserConstructionScript
-struct AEquip_MedKit_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_MedKit.Equip_MedKit_C.WasEquipped
 struct AEquip_MedKit_C_WasEquipped_Params
 {
@@ -38,7 +33,7 @@ struct AEquip_MedKit_C_WasUnEquipped_Params
 // Function Equip_MedKit.Equip_MedKit_C.ExecuteUbergraph_Equip_MedKit
 struct AEquip_MedKit_C_ExecuteUbergraph_Equip_MedKit_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.ShowHideDeleteButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ShowDeleteButton               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ShowDeleteButton               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterProgrammableRule_C::ShowHideDeleteButton(bool ShowDeleteButton)
+void UWidget_SplitterProgrammableRule_C::ShowHideDeleteButton(bool* ShowDeleteButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.ShowHideDeleteButton");
 
@@ -33,7 +33,7 @@ void UWidget_SplitterProgrammableRule_C::ShowHideDeleteButton(bool ShowDeleteBut
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.RemoveRule
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammableRule_C::RemoveRule()
 {
@@ -50,11 +50,11 @@ void UWidget_SplitterProgrammableRule_C::RemoveRule()
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.SetRuleOutputIndex
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            OutputIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           OutputIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterProgrammableRule_C::SetRuleOutputIndex(int OutputIndex)
+void UWidget_SplitterProgrammableRule_C::SetRuleOutputIndex(int* OutputIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.SetRuleOutputIndex");
 
@@ -70,11 +70,11 @@ void UWidget_SplitterProgrammableRule_C::SetRuleOutputIndex(int OutputIndex)
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.SetRuleItemClass
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterProgrammableRule_C::SetRuleItemClass(class UClass* ItemClass)
+void UWidget_SplitterProgrammableRule_C::SetRuleItemClass(class UClass** ItemClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.SetRuleItemClass");
 
@@ -90,7 +90,7 @@ void UWidget_SplitterProgrammableRule_C::SetRuleItemClass(class UClass* ItemClas
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.GetSortRuleSafe
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FSplitterSortRule       Rule                           (Parm, OutParm)
 
@@ -112,7 +112,7 @@ void UWidget_SplitterProgrammableRule_C::GetSortRuleSafe(struct FSplitterSortRul
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.AddButtonsForDescriptorsContaining
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   textToContain                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -134,11 +134,11 @@ void UWidget_SplitterProgrammableRule_C::AddButtonsForDescriptorsContaining(stru
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.SetSelectedItemDescriptor
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  inDescriptor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 inDescriptor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterProgrammableRule_C::SetSelectedItemDescriptor(class UClass* inDescriptor)
+void UWidget_SplitterProgrammableRule_C::SetSelectedItemDescriptor(class UClass** inDescriptor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.SetSelectedItemDescriptor");
 
@@ -154,7 +154,7 @@ void UWidget_SplitterProgrammableRule_C::SetSelectedItemDescriptor(class UClass*
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.RefreshItemClassButton
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammableRule_C::RefreshItemClassButton()
 {
@@ -171,7 +171,7 @@ void UWidget_SplitterProgrammableRule_C::RefreshItemClassButton()
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SplitterProgrammableRule_C::Construct()
 {
@@ -188,11 +188,11 @@ void UWidget_SplitterProgrammableRule_C::Construct()
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_0_OnTextChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SplitterProgrammableRule_C::BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_0_OnTextChanged__DelegateSignature(const struct FText& Text)
+void UWidget_SplitterProgrammableRule_C::BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_0_OnTextChanged__DelegateSignature(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_0_OnTextChanged__DelegateSignature");
 
@@ -208,7 +208,7 @@ void UWidget_SplitterProgrammableRule_C::BndEvt__Widget_InputBox_K2Node_Componen
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SplitterProgrammableRule_C::BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 {
@@ -225,11 +225,11 @@ void UWidget_SplitterProgrammableRule_C::BndEvt__mDeleteButton_K2Node_ComponentB
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.ForceRefreshButton
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSplitterSortRule       Splitter_Rule                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSplitterSortRule*      Splitter_Rule                  (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SplitterProgrammableRule_C::ForceRefreshButton(const struct FSplitterSortRule& Splitter_Rule)
+void UWidget_SplitterProgrammableRule_C::ForceRefreshButton(struct FSplitterSortRule* Splitter_Rule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.ForceRefreshButton");
 
@@ -245,12 +245,12 @@ void UWidget_SplitterProgrammableRule_C::ForceRefreshButton(const struct FSplitt
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.BndEvt__mOtherListButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SplitterProgrammableRule_C::BndEvt__mOtherListButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_SplitterProgrammableRule_C::BndEvt__mOtherListButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.BndEvt__mOtherListButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
 
@@ -267,7 +267,7 @@ void UWidget_SplitterProgrammableRule_C::BndEvt__mOtherListButton_K2Node_Compone
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -287,11 +287,11 @@ void UWidget_SplitterProgrammableRule_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.ExecuteUbergraph_Widget_SplitterProgrammableRule
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterProgrammableRule_C::ExecuteUbergraph_Widget_SplitterProgrammableRule(int EntryPoint)
+void UWidget_SplitterProgrammableRule_C::ExecuteUbergraph_Widget_SplitterProgrammableRule(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.ExecuteUbergraph_Widget_SplitterProgrammableRule");
 
@@ -307,11 +307,11 @@ void UWidget_SplitterProgrammableRule_C::ExecuteUbergraph_Widget_SplitterProgram
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SplitterProgrammableRule_C* SplitterRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SplitterProgrammableRule_C** SplitterRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SplitterProgrammableRule_C::OnClicked__DelegateSignature(class UWidget_SplitterProgrammableRule_C* SplitterRule)
+void UWidget_SplitterProgrammableRule_C::OnClicked__DelegateSignature(class UWidget_SplitterProgrammableRule_C** SplitterRule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.OnClicked__DelegateSignature");
 
@@ -327,12 +327,12 @@ void UWidget_SplitterProgrammableRule_C::OnClicked__DelegateSignature(class UWid
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.OnUpdated__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            RuleIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FSplitterSortRule       RuleData                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// int*                           RuleIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FSplitterSortRule*      RuleData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SplitterProgrammableRule_C::OnUpdated__DelegateSignature(int RuleIndex, const struct FSplitterSortRule& RuleData)
+void UWidget_SplitterProgrammableRule_C::OnUpdated__DelegateSignature(int* RuleIndex, struct FSplitterSortRule* RuleData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.OnUpdated__DelegateSignature");
 
@@ -349,11 +349,11 @@ void UWidget_SplitterProgrammableRule_C::OnUpdated__DelegateSignature(int RuleIn
 
 
 // Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.OnRemoved__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SplitterProgrammableRule_C* SplitterRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SplitterProgrammableRule_C** SplitterRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SplitterProgrammableRule_C::OnRemoved__DelegateSignature(class UWidget_SplitterProgrammableRule_C* SplitterRule)
+void UWidget_SplitterProgrammableRule_C::OnRemoved__DelegateSignature(class UWidget_SplitterProgrammableRule_C** SplitterRule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammableRule.Widget_SplitterProgrammableRule_C.OnRemoved__DelegateSignature");
 

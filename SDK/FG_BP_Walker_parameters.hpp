@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_Walker.BP_Walker_C.UserConstructionScript
-struct ABP_Walker_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_Walker.BP_Walker_C.PlayConsumeItemEffect
 struct ABP_Walker_C_PlayConsumeItemEffect_Params
 {
@@ -29,7 +24,7 @@ struct ABP_Walker_C_PlayConsumeItemEffect_Params
 // Function BP_Walker.BP_Walker_C.ExecuteUbergraph_BP_Walker
 struct ABP_Walker_C_ExecuteUbergraph_BP_Walker_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

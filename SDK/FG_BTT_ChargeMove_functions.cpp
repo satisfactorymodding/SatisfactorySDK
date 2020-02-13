@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_ChargeMove.BTT_ChargeMove_C.ReceiveExecute
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UBTT_ChargeMove_C::ReceiveExecute(class AActor** OwnerActor)
 
 
 // Function BTT_ChargeMove.BTT_ChargeMove_C.ChargeComplete
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_ChargeMove_C::ChargeComplete()
 {
@@ -50,7 +50,7 @@ void UBTT_ChargeMove_C::ChargeComplete()
 
 
 // Function BTT_ChargeMove.BTT_ChargeMove_C.ReceiveAbortAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -72,11 +72,11 @@ void UBTT_ChargeMove_C::ReceiveAbortAI(class AAIController** OwnerController, cl
 
 
 // Function BTT_ChargeMove.BTT_ChargeMove_C.ExecuteUbergraph_BTT_ChargeMove
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_ChargeMove_C::ExecuteUbergraph_BTT_ChargeMove(int EntryPoint)
+void UBTT_ChargeMove_C::ExecuteUbergraph_BTT_ChargeMove(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_ChargeMove.BTT_ChargeMove_C.ExecuteUbergraph_BTT_ChargeMove");
 

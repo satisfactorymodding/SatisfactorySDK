@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_WindowPan.Widget_WindowPan_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UWidget_WindowPan_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_WindowPan.Widget_WindowPan_C.ExecuteUbergraph_Widget_WindowPan
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_WindowPan_C::ExecuteUbergraph_Widget_WindowPan(int EntryPoint)
+void UWidget_WindowPan_C::ExecuteUbergraph_Widget_WindowPan(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_WindowPan.Widget_WindowPan_C.ExecuteUbergraph_Widget_WindowPan");
 

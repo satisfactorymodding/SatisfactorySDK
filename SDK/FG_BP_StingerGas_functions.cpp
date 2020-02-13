@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_StingerGas.BP_StingerGas_C.UserConstructionScript
-// ()
-
-void ABP_StingerGas_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_StingerGas.BP_StingerGas_C.UserConstructionScript");
-
-	ABP_StingerGas_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_StingerGas.BP_StingerGas_C.Timeline_1__FinishedFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_StingerGas_C::Timeline_1__FinishedFunc()
 {
@@ -47,7 +30,7 @@ void ABP_StingerGas_C::Timeline_1__FinishedFunc()
 
 
 // Function BP_StingerGas.BP_StingerGas_C.Timeline_1__UpdateFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_StingerGas_C::Timeline_1__UpdateFunc()
 {
@@ -64,7 +47,7 @@ void ABP_StingerGas_C::Timeline_1__UpdateFunc()
 
 
 // Function BP_StingerGas.BP_StingerGas_C.Timeline_0__FinishedFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_StingerGas_C::Timeline_0__FinishedFunc()
 {
@@ -81,7 +64,7 @@ void ABP_StingerGas_C::Timeline_0__FinishedFunc()
 
 
 // Function BP_StingerGas.BP_StingerGas_C.Timeline_0__UpdateFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_StingerGas_C::Timeline_0__UpdateFunc()
 {
@@ -98,7 +81,7 @@ void ABP_StingerGas_C::Timeline_0__UpdateFunc()
 
 
 // Function BP_StingerGas.BP_StingerGas_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_StingerGas_C::ReceiveBeginPlay()
 {
@@ -115,11 +98,11 @@ void ABP_StingerGas_C::ReceiveBeginPlay()
 
 
 // Function BP_StingerGas.BP_StingerGas_C.ExecuteUbergraph_BP_StingerGas
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StingerGas_C::ExecuteUbergraph_BP_StingerGas(int EntryPoint)
+void ABP_StingerGas_C::ExecuteUbergraph_BP_StingerGas(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StingerGas.BP_StingerGas_C.ExecuteUbergraph_BP_StingerGas");
 

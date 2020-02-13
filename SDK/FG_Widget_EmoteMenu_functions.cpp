@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_EmoteMenu.Widget_EmoteMenu_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_EmoteMenu_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_EmoteMenu_C::Construct()
 
 
 // Function Widget_EmoteMenu.Widget_EmoteMenu_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_EmoteMenu_C::Destruct()
 {
@@ -47,7 +47,7 @@ void UWidget_EmoteMenu_C::Destruct()
 
 
 // Function Widget_EmoteMenu.Widget_EmoteMenu_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -69,11 +69,11 @@ void UWidget_EmoteMenu_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_EmoteMenu.Widget_EmoteMenu_C.ExecuteUbergraph_Widget_EmoteMenu
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_EmoteMenu_C::ExecuteUbergraph_Widget_EmoteMenu(int EntryPoint)
+void UWidget_EmoteMenu_C::ExecuteUbergraph_Widget_EmoteMenu(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_EmoteMenu.Widget_EmoteMenu_C.ExecuteUbergraph_Widget_EmoteMenu");
 
@@ -89,11 +89,11 @@ void UWidget_EmoteMenu_C::ExecuteUbergraph_Widget_EmoteMenu(int EntryPoint)
 
 
 // Function Widget_EmoteMenu.Widget_EmoteMenu_C.ShowEmote__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EmoteIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EmoteIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_EmoteMenu_C::ShowEmote__DelegateSignature(int EmoteIndex)
+void UWidget_EmoteMenu_C::ShowEmote__DelegateSignature(int* EmoteIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_EmoteMenu.Widget_EmoteMenu_C.ShowEmote__DelegateSignature");
 

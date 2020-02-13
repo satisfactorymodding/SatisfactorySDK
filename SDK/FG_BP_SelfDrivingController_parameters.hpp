@@ -14,19 +14,14 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_SelfDrivingController.BP_SelfDrivingController_C.UserConstructionScript
-struct ABP_SelfDrivingController_C_UserConstructionScript_Params
-{
-};
-
-// Function BP_SelfDrivingController.BP_SelfDrivingController_C.OnPossess
-struct ABP_SelfDrivingController_C_OnPossess_Params
+// Function BP_SelfDrivingController.BP_SelfDrivingController_C.ReceivePossess
+struct ABP_SelfDrivingController_C_ReceivePossess_Params
 {
 	class APawn**                                      PossessedPawn;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_SelfDrivingController.BP_SelfDrivingController_C.OnUnpossess
-struct ABP_SelfDrivingController_C_OnUnpossess_Params
+// Function BP_SelfDrivingController.BP_SelfDrivingController_C.ReceiveUnPossess
+struct ABP_SelfDrivingController_C_ReceiveUnPossess_Params
 {
 	class APawn**                                      UnpossessedPawn;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -34,7 +29,7 @@ struct ABP_SelfDrivingController_C_OnUnpossess_Params
 // Function BP_SelfDrivingController.BP_SelfDrivingController_C.ExecuteUbergraph_BP_SelfDrivingController
 struct ABP_SelfDrivingController_C_ExecuteUbergraph_BP_SelfDrivingController_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

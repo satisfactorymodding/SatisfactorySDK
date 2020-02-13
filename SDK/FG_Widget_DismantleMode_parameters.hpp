@@ -14,6 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_DismantleMode.Widget_DismantleMode_C.UpdateMassDismantleFeedback
+struct UWidget_DismantleMode_C_UpdateMassDismantleFeedback_Params
+{
+};
+
+// Function Widget_DismantleMode.Widget_DismantleMode_C.SetDismantleFeedbackVisibility
+struct UWidget_DismantleMode_C_SetDismantleFeedbackVisibility_Params
+{
+	bool*                                              Condition;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_DismantleMode.Widget_DismantleMode_C.GetReticleVisibility
 struct UWidget_DismantleMode_C_GetReticleVisibility_Params
 {
@@ -35,13 +46,6 @@ struct UWidget_DismantleMode_C_Init_Params
 {
 };
 
-// Function Widget_DismantleMode.Widget_DismantleMode_C.Tick
-struct UWidget_DismantleMode_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Widget_DismantleMode.Widget_DismantleMode_C.Construct
 struct UWidget_DismantleMode_C_Construct_Params
 {
@@ -50,13 +54,29 @@ struct UWidget_DismantleMode_C_Construct_Params
 // Function Widget_DismantleMode.Widget_DismantleMode_C.OnDismantleRefundChanged
 struct UWidget_DismantleMode_C_OnDismantleRefundChanged_Params
 {
-	class UFGBuildGunStateDismantle*                   dismantleGun;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UFGBuildGunStateDismantle**                  dismantleGun;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_DismantleMode.Widget_DismantleMode_C.Event OnMultiDismantleStateChanged
+struct UWidget_DismantleMode_C_Event_OnMultiDismantleStateChanged_Params
+{
+	bool*                                              newState;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_DismantleMode.Widget_DismantleMode_C.Event OnPendingDismantleActorsChanged
+struct UWidget_DismantleMode_C_Event_OnPendingDismantleActorsChanged_Params
+{
+};
+
+// Function Widget_DismantleMode.Widget_DismantleMode_C.Destruct
+struct UWidget_DismantleMode_C_Destruct_Params
+{
 };
 
 // Function Widget_DismantleMode.Widget_DismantleMode_C.ExecuteUbergraph_Widget_DismantleMode
 struct UWidget_DismantleMode_C_ExecuteUbergraph_Widget_DismantleMode_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

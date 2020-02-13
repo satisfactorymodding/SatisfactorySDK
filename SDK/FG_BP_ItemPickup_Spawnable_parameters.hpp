@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.UserConstructionScript
-struct ABP_ItemPickup_Spawnable_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.PlayPickupEffect
 struct ABP_ItemPickup_Spawnable_C_PlayPickupEffect_Params
 {
@@ -32,7 +27,7 @@ struct ABP_ItemPickup_Spawnable_C_PlaySpawnEffect_Params
 // Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.ExecuteUbergraph_BP_ItemPickup_Spawnable
 struct ABP_ItemPickup_Spawnable_C_ExecuteUbergraph_BP_ItemPickup_Spawnable_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

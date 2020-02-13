@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RadarTower.Widget_RadarTower_C.UpdateStandByButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Producing                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          Producing                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadarTower_C::UpdateStandByButton(bool Producing)
+void UWidget_RadarTower_C::UpdateStandByButton(bool* Producing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower.Widget_RadarTower_C.UpdateStandByButton");
 
@@ -33,7 +33,7 @@ void UWidget_RadarTower_C::UpdateStandByButton(bool Producing)
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.ToggleStandby
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadarTower_C::ToggleStandby()
 {
@@ -50,12 +50,12 @@ void UWidget_RadarTower_C::ToggleStandby()
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.RevealStepToNormalizedRevealPercent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            inInt                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           inInt                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UWidget_RadarTower_C::RevealStepToNormalizedRevealPercent(int inInt)
+float UWidget_RadarTower_C::RevealStepToNormalizedRevealPercent(int* inInt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower.Widget_RadarTower_C.RevealStepToNormalizedRevealPercent");
 
@@ -73,7 +73,7 @@ float UWidget_RadarTower_C::RevealStepToNormalizedRevealPercent(int inInt)
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.InitScanLines
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadarTower_C::InitScanLines()
 {
@@ -90,11 +90,11 @@ void UWidget_RadarTower_C::InitScanLines()
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.UpdateTitle
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   OverrideText                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  OverrideText                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_RadarTower_C::UpdateTitle(const struct FText& OverrideText)
+void UWidget_RadarTower_C::UpdateTitle(struct FText* OverrideText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower.Widget_RadarTower_C.UpdateTitle");
 
@@ -110,12 +110,12 @@ void UWidget_RadarTower_C::UpdateTitle(const struct FText& OverrideText)
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.SecondsToMinutesAndSecondsText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Output                         (Parm, OutParm)
 
-void UWidget_RadarTower_C::SecondsToMinutesAndSecondsText(float Input, struct FText* Output)
+void UWidget_RadarTower_C::SecondsToMinutesAndSecondsText(float* Input, struct FText* Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower.Widget_RadarTower_C.SecondsToMinutesAndSecondsText");
 
@@ -134,7 +134,7 @@ void UWidget_RadarTower_C::SecondsToMinutesAndSecondsText(float Input, struct FT
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.InitScannedPercent
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadarTower_C::InitScannedPercent()
 {
@@ -151,7 +151,7 @@ void UWidget_RadarTower_C::InitScannedPercent()
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RadarTower_C::Construct()
 {
@@ -168,7 +168,7 @@ void UWidget_RadarTower_C::Construct()
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.OnRadiusChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadarTower_C::OnRadiusChanged()
 {
@@ -185,7 +185,7 @@ void UWidget_RadarTower_C::OnRadiusChanged()
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.UpdateScanTimer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadarTower_C::UpdateScanTimer()
 {
@@ -202,7 +202,7 @@ void UWidget_RadarTower_C::UpdateScanTimer()
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RadarTower_C::Destruct()
 {
@@ -219,12 +219,12 @@ void UWidget_RadarTower_C::Destruct()
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.BndEvt__mTowerName_K2Node_ComponentBoundEvent_0_OnEditableTextCommittedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadarTower_C::BndEvt__mTowerName_K2Node_ComponentBoundEvent_0_OnEditableTextCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_RadarTower_C::BndEvt__mTowerName_K2Node_ComponentBoundEvent_0_OnEditableTextCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower.Widget_RadarTower_C.BndEvt__mTowerName_K2Node_ComponentBoundEvent_0_OnEditableTextCommittedEvent__DelegateSignature");
 
@@ -241,7 +241,7 @@ void UWidget_RadarTower_C::BndEvt__mTowerName_K2Node_ComponentBoundEvent_0_OnEdi
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.LerpScannedAreaEvent
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadarTower_C::LerpScannedAreaEvent()
 {
@@ -258,11 +258,11 @@ void UWidget_RadarTower_C::LerpScannedAreaEvent()
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.BndEvt__mRadarTower_K2Node_ComponentBoundEvent_2_BuildingStateChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadarTower_C::BndEvt__mRadarTower_K2Node_ComponentBoundEvent_2_BuildingStateChanged__DelegateSignature(bool State)
+void UWidget_RadarTower_C::BndEvt__mRadarTower_K2Node_ComponentBoundEvent_2_BuildingStateChanged__DelegateSignature(bool* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower.Widget_RadarTower_C.BndEvt__mRadarTower_K2Node_ComponentBoundEvent_2_BuildingStateChanged__DelegateSignature");
 
@@ -278,7 +278,7 @@ void UWidget_RadarTower_C::BndEvt__mRadarTower_K2Node_ComponentBoundEvent_2_Buil
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_3_OnStandbyClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_RadarTower_C::BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_3_OnStandbyClicked__DelegateSignature()
 {
@@ -295,11 +295,11 @@ void UWidget_RadarTower_C::BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEve
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.OnProductionChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           HasChanged                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          HasChanged                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadarTower_C::OnProductionChanged(bool HasChanged)
+void UWidget_RadarTower_C::OnProductionChanged(bool* HasChanged)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower.Widget_RadarTower_C.OnProductionChanged");
 
@@ -315,11 +315,11 @@ void UWidget_RadarTower_C::OnProductionChanged(bool HasChanged)
 
 
 // Function Widget_RadarTower.Widget_RadarTower_C.ExecuteUbergraph_Widget_RadarTower
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadarTower_C::ExecuteUbergraph_Widget_RadarTower(int EntryPoint)
+void UWidget_RadarTower_C::ExecuteUbergraph_Widget_RadarTower(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadarTower.Widget_RadarTower_C.ExecuteUbergraph_Widget_RadarTower");
 

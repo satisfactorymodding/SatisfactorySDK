@@ -23,7 +23,7 @@ struct UBTT_SetBoolKey_C_ReceiveExecute_Params
 // Function BTT_SetBoolKey.BTT_SetBoolKey_C.ExecuteUbergraph_BTT_SetBoolKey
 struct UBTT_SetBoolKey_C_ExecuteUbergraph_BTT_SetBoolKey_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

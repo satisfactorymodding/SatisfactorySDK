@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BuildableSubsystem.BP_BuildableSubsystem_C
-// 0x0000 (0x0568 - 0x0568)
+// 0x0000 (0x06A8 - 0x06A8)
 class ABP_BuildableSubsystem_C : public AFGBuildableSubsystem
 {
 public:

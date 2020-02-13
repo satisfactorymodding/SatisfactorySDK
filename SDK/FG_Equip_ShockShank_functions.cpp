@@ -12,14 +12,14 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_ShockShank.Equip_ShockShank_C.UserConstructionScript
-// ()
+// Function Equip_ShockShank.Equip_ShockShank_C.WasEquipped
+// (Event, Protected, BlueprintEvent)
 
-void AEquip_ShockShank_C::UserConstructionScript()
+void AEquip_ShockShank_C::WasEquipped()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_ShockShank.Equip_ShockShank_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function Equip_ShockShank.Equip_ShockShank_C.WasEquipped");
 
-	AEquip_ShockShank_C_UserConstructionScript_Params params;
+	AEquip_ShockShank_C_WasEquipped_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -30,7 +30,7 @@ void AEquip_ShockShank_C::UserConstructionScript()
 
 
 // Function Equip_ShockShank.Equip_ShockShank_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_ShockShank_C::WasUnEquipped()
 {
@@ -47,7 +47,7 @@ void AEquip_ShockShank_C::WasUnEquipped()
 
 
 // Function Equip_ShockShank.Equip_ShockShank_C.PlayStunEffects
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_ShockShank_C::PlayStunEffects()
 {
@@ -64,7 +64,7 @@ void AEquip_ShockShank_C::PlayStunEffects()
 
 
 // Function Equip_ShockShank.Equip_ShockShank_C.OnHitTarget
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_ShockShank_C::OnHitTarget()
 {
@@ -80,29 +80,12 @@ void AEquip_ShockShank_C::OnHitTarget()
 }
 
 
-// Function Equip_ShockShank.Equip_ShockShank_C.WasEquipped
-// ()
-
-void AEquip_ShockShank_C::WasEquipped()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_ShockShank.Equip_ShockShank_C.WasEquipped");
-
-	AEquip_ShockShank_C_WasEquipped_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_ShockShank.Equip_ShockShank_C.ExecuteUbergraph_Equip_ShockShank
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_ShockShank_C::ExecuteUbergraph_Equip_ShockShank(int EntryPoint)
+void AEquip_ShockShank_C::ExecuteUbergraph_Equip_ShockShank(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_ShockShank.Equip_ShockShank_C.ExecuteUbergraph_Equip_ShockShank");
 

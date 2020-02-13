@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_DE80A22C462AAD6D4AF0FAA2C35116D6
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_DE80A22C462AAD6D4AF0FAA2C35116D6()
 {
@@ -30,7 +30,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_2D899F194CC5AB60994BBBB3656A69C1
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_2D899F194CC5AB60994BBBB3656A69C1()
 {
@@ -47,7 +47,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_FEB68251477AF8323B3C37B67C6B8035
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_FEB68251477AF8323B3C37B67C6B8035()
 {
@@ -64,7 +64,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_88075AD545F4ED1673A522BFA69A3FCF
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_88075AD545F4ED1673A522BFA69A3FCF()
 {
@@ -81,7 +81,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_18B9D1964A9FB7AF5749B89C511DA245
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_18B9D1964A9FB7AF5749B89C511DA245()
 {
@@ -98,7 +98,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_9303EDE44A5AAF546D17639FD5DB9340
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_9303EDE44A5AAF546D17639FD5DB9340()
 {
@@ -115,7 +115,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_784E3D5E4E2850538D163BA309393C4F
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_784E3D5E4E2850538D163BA309393C4F()
 {
@@ -132,7 +132,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_1009A665402C5052A95F3981BFF70542
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_1009A665402C5052A95F3981BFF70542()
 {
@@ -149,7 +149,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_B392C0124773DC7F9E6D158EE884C586
-// ()
+// (BlueprintEvent)
 
 void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1PportableMiner_AnimGraphNode_TransitionResult_B392C0124773DC7F9E6D158EE884C586()
 {
@@ -166,7 +166,7 @@ void UAnim_1PportableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_1
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -186,11 +186,11 @@ void UAnim_1PportableMiner_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_1PportableMiner.Anim_1PportableMiner_C.ExecuteUbergraph_Anim_1PportableMiner
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_1PportableMiner_C::ExecuteUbergraph_Anim_1PportableMiner(int EntryPoint)
+void UAnim_1PportableMiner_C::ExecuteUbergraph_Anim_1PportableMiner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_1PportableMiner.Anim_1PportableMiner_C.ExecuteUbergraph_Anim_1PportableMiner");
 

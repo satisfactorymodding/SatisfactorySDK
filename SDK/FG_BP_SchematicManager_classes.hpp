@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SchematicManager.BP_SchematicManager_C
-// 0x0000 (0x03C8 - 0x03C8)
+// 0x0000 (0x03D0 - 0x03D0)
 class ABP_SchematicManager_C : public AFGSchematicManager
 {
 public:

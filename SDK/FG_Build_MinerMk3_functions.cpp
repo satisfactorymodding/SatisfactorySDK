@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_MinerMk3.Build_MinerMk3_C.UserConstructionScript
-// ()
-
-void ABuild_MinerMk3_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_MinerMk3.Build_MinerMk3_C.UserConstructionScript");
-
-	ABuild_MinerMk3_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_MinerMk3.Build_MinerMk3_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_MinerMk3_C::ReceiveDestroyed()
 {
@@ -47,7 +30,7 @@ void ABuild_MinerMk3_C::ReceiveDestroyed()
 
 
 // Function Build_MinerMk3.Build_MinerMk3_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_MinerMk3_C::ReceiveBeginPlay()
 {
@@ -64,11 +47,11 @@ void ABuild_MinerMk3_C::ReceiveBeginPlay()
 
 
 // Function Build_MinerMk3.Build_MinerMk3_C.ExecuteUbergraph_Build_MinerMk3
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_MinerMk3_C::ExecuteUbergraph_Build_MinerMk3(int EntryPoint)
+void ABuild_MinerMk3_C::ExecuteUbergraph_Build_MinerMk3(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_MinerMk3.Build_MinerMk3_C.ExecuteUbergraph_Build_MinerMk3");
 

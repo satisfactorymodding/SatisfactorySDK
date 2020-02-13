@@ -12,13 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_TradingPost.Build_TradingPost_C.SetActorRepresentationText
-// ()
+// Function Build_TradingPost.Build_TradingPost_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABuild_TradingPost_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_TradingPost.Build_TradingPost_C.GetActorCompassViewDistance");
+
+	ABuild_TradingPost_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Build_TradingPost.Build_TradingPost_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABuild_TradingPost_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_TradingPost.Build_TradingPost_C.SetActorCompassViewDistance");
+
+	ABuild_TradingPost_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Build_TradingPost.Build_TradingPost_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABuild_TradingPost_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABuild_TradingPost_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_TradingPost.Build_TradingPost_C.SetActorRepresentationText");
 
@@ -36,7 +80,7 @@ struct FText ABuild_TradingPost_C::SetActorRepresentationText(const struct FText
 
 
 // Function Build_TradingPost.Build_TradingPost_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +101,7 @@ bool ABuild_TradingPost_C::UpdateRepresentation()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +122,7 @@ struct FLinearColor ABuild_TradingPost_C::GetActorRepresentationColor()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -99,7 +143,7 @@ struct FText ABuild_TradingPost_C::GetActorRepresentationText()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -120,7 +164,7 @@ class UTexture2D* ABuild_TradingPost_C::GetActorRepresentationTexture()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -141,7 +185,7 @@ ERepresentationType ABuild_TradingPost_C::GetActorRepresentationType()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +206,7 @@ bool ABuild_TradingPost_C::GetActorShouldShowInCompass()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -183,7 +227,7 @@ float ABuild_TradingPost_C::GetActorFogOfWarRevealRadius()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +248,7 @@ EFogOfWarRevealType ABuild_TradingPost_C::GetActorFogOfWarRevealType()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +269,7 @@ bool ABuild_TradingPost_C::RemoveAsRepresentation()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -246,7 +290,7 @@ struct FRotator ABuild_TradingPost_C::GetRealActorRotation()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -267,7 +311,7 @@ struct FVector ABuild_TradingPost_C::GetRealActorLocation()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -288,7 +332,7 @@ bool ABuild_TradingPost_C::GetActorShouldShowOnMap()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -309,7 +353,7 @@ bool ABuild_TradingPost_C::AddAsRepresentation()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -330,7 +374,7 @@ bool ABuild_TradingPost_C::IsActorStatic()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.UpdateTradingPostVisibility
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABuild_TradingPost_C::UpdateTradingPostVisibility()
 {
@@ -347,7 +391,7 @@ void ABuild_TradingPost_C::UpdateTradingPostVisibility()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.UpdateMainMesh
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABuild_TradingPost_C::UpdateMainMesh()
 {
@@ -363,25 +407,8 @@ void ABuild_TradingPost_C::UpdateMainMesh()
 }
 
 
-// Function Build_TradingPost.Build_TradingPost_C.UserConstructionScript
-// ()
-
-void ABuild_TradingPost_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_TradingPost.Build_TradingPost_C.UserConstructionScript");
-
-	ABuild_TradingPost_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_TradingPost.Build_TradingPost_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_TradingPost_C::ReceiveDestroyed()
 {
@@ -397,8 +424,28 @@ void ABuild_TradingPost_C::ReceiveDestroyed()
 }
 
 
+// Function Build_TradingPost.Build_TradingPost_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuild_TradingPost_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_TradingPost.Build_TradingPost_C.SetActorRepresentationColor");
+
+	ABuild_TradingPost_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Build_TradingPost.Build_TradingPost_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_TradingPost_C::ReceiveBeginPlay()
 {
@@ -415,7 +462,7 @@ void ABuild_TradingPost_C::ReceiveBeginPlay()
 
 
 // Function Build_TradingPost.Build_TradingPost_C.OnTradingPostUpgraded
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int*                           Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          suppressBuildEffects           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -437,11 +484,11 @@ void ABuild_TradingPost_C::OnTradingPostUpgraded(int* Level, bool* suppressBuild
 
 
 // Function Build_TradingPost.Build_TradingPost_C.ExecuteUbergraph_Build_TradingPost
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_TradingPost_C::ExecuteUbergraph_Build_TradingPost(int EntryPoint)
+void ABuild_TradingPost_C::ExecuteUbergraph_Build_TradingPost(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_TradingPost.Build_TradingPost_C.ExecuteUbergraph_Build_TradingPost");
 

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MaterialEffect_WireBuild.BP_MaterialEffect_WireBuild_C
-// 0x0008 (0x0168 - 0x0160)
+// 0x0008 (0x0170 - 0x0168)
 class UBP_MaterialEffect_WireBuild_C : public UFGMaterialEffect_Build
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0160(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0168(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +29,7 @@ public:
 
 
 	void OnStarted();
-	void ExecuteUbergraph_BP_MaterialEffect_WireBuild(int EntryPoint);
+	void ExecuteUbergraph_BP_MaterialEffect_WireBuild(int* EntryPoint);
 };
 
 

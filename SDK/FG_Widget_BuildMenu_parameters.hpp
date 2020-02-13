@@ -14,13 +14,24 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Widget_BuildMenu.Widget_BuildMenu_C.HideSearchbar
-struct UWidget_BuildMenu_C_HideSearchbar_Params
+// Function Widget_BuildMenu.Widget_BuildMenu_C.SaveCategories
+struct UWidget_BuildMenu_C_SaveCategories_Params
 {
 };
 
-// Function Widget_BuildMenu.Widget_BuildMenu_C.ShowSearchbar
-struct UWidget_BuildMenu_C_ShowSearchbar_Params
+// Function Widget_BuildMenu.Widget_BuildMenu_C.OnCategoryClicked
+struct UWidget_BuildMenu_C_OnCategoryClicked_Params
+{
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_BuildMenu.Widget_BuildMenu_C.SetSearchbarUnfocused
+struct UWidget_BuildMenu_C_SetSearchbarUnfocused_Params
+{
+};
+
+// Function Widget_BuildMenu.Widget_BuildMenu_C.SetSearchbarFocused
+struct UWidget_BuildMenu_C_SetSearchbarFocused_Params
 {
 };
 
@@ -38,7 +49,7 @@ struct UWidget_BuildMenu_C_ClearAndHideSearchResults_Params
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnSearchCreateResults
 struct UWidget_BuildMenu_C_OnSearchCreateResults_Params
 {
-	struct FText                                       mText;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      mText;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnKeyDown
@@ -47,11 +58,6 @@ struct UWidget_BuildMenu_C_OnKeyDown_Params
 	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FKeyEvent*                                  InKeyEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function Widget_BuildMenu.Widget_BuildMenu_C.SetVisibilityForSpecialCategory
-struct UWidget_BuildMenu_C_SetVisibilityForSpecialCategory_Params
-{
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.PopulateBuildings
@@ -67,22 +73,22 @@ struct UWidget_BuildMenu_C_UpdateShortcuts_Params
 // Function Widget_BuildMenu.Widget_BuildMenu_C.HandleShortcutPressed
 struct UWidget_BuildMenu_C_HandleShortcutPressed_Params
 {
-	int                                                shortcutIndex;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               shortcutIndex;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               setupNewShortcut;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnStopHoveringRecipe
 struct UWidget_BuildMenu_C_OnStopHoveringRecipe_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget_BuildMenuRecipeButton_C*             RecipeButton;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_BuildMenuRecipeButton_C**            RecipeButton;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnRecipeHovered
 struct UWidget_BuildMenu_C_OnRecipeHovered_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget_BuildMenuRecipeButton_C*             RecipeButton;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_BuildMenuRecipeButton_C**            RecipeButton;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnKeyUp
@@ -111,25 +117,9 @@ struct UWidget_BuildMenu_C_IsTradingPostBuilt_Params
 	bool                                               IsBuilt;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Widget_BuildMenu.Widget_BuildMenu_C.PonderAddingSpecialCategory
-struct UWidget_BuildMenu_C_PonderAddingSpecialCategory_Params
-{
-};
-
 // Function Widget_BuildMenu.Widget_BuildMenu_C.GetInfoboxVisiblity
 struct UWidget_BuildMenu_C_GetInfoboxVisiblity_Params
 {
-};
-
-// Function Widget_BuildMenu.Widget_BuildMenu_C.SaveCategories
-struct UWidget_BuildMenu_C_SaveCategories_Params
-{
-};
-
-// Function Widget_BuildMenu.Widget_BuildMenu_C.OnBuildCategoryClicked
-struct UWidget_BuildMenu_C_OnBuildCategoryClicked_Params
-{
-	class UClass*                                      buildCategory;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.InitBuildMenu
@@ -140,13 +130,13 @@ struct UWidget_BuildMenu_C_InitBuildMenu_Params
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnRecipeClicked
 struct UWidget_BuildMenu_C_OnRecipeClicked_Params
 {
-	class UClass*                                      InputPin;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     InputPin;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.CreateInfoBox
 struct UWidget_BuildMenu_C_CreateInfoBox_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.CreateCategoryButtons
@@ -157,14 +147,14 @@ struct UWidget_BuildMenu_C_CreateCategoryButtons_Params
 // Function Widget_BuildMenu.Widget_BuildMenu_C.CanAffordRecipe
 struct UWidget_BuildMenu_C_CanAffordRecipe_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               CanAfford;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnScroll
 struct UWidget_BuildMenu_C_OnScroll_Params
 {
-	float                                              ScrollPos;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             ScrollPos;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.RemoveHotbarUpdateListener
@@ -195,14 +185,14 @@ struct UWidget_BuildMenu_C_OnEscapePressed_Params
 // Function Widget_BuildMenu.Widget_BuildMenu_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature
 struct UWidget_BuildMenu_C_BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_2_OnTextComitted__DelegateSignature
 struct UWidget_BuildMenu_C_BndEvt__mSearchBar_K2Node_ComponentBoundEvent_2_OnTextComitted__DelegateSignature_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	TEnumAsByte<ETextCommit>                           CommitMethod;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	TEnumAsByte<ETextCommit>*                          CommitMethod;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.CheckSearchResultHover
@@ -228,7 +218,7 @@ struct UWidget_BuildMenu_C_BlockMouse_Params
 // Function Widget_BuildMenu.Widget_BuildMenu_C.ExecuteUbergraph_Widget_BuildMenu
 struct UWidget_BuildMenu_C_ExecuteUbergraph_Widget_BuildMenu_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_BuildMenu.Widget_BuildMenu_C.OnClicked__DelegateSignature

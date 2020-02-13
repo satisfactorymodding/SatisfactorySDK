@@ -12,8 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_StandbyButton.Widget_StandbyButton_C.SetIsProductionPaused
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          IsPaused                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_StandbyButton_C::SetIsProductionPaused(bool* IsPaused)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_StandbyButton.Widget_StandbyButton_C.SetIsProductionPaused");
+
+	UWidget_StandbyButton_C_SetIsProductionPaused_Params params;
+	params.IsPaused = IsPaused;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_StandbyButton.Widget_StandbyButton_C.BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_StandbyButton_C::BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -30,11 +50,11 @@ void UWidget_StandbyButton_C::BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_StandbyButton.Widget_StandbyButton_C.SetStandbyButtonBrush
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           productionIsPaused             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          productionIsPaused             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_StandbyButton_C::SetStandbyButtonBrush(bool productionIsPaused)
+void UWidget_StandbyButton_C::SetStandbyButtonBrush(bool* productionIsPaused)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_StandbyButton.Widget_StandbyButton_C.SetStandbyButtonBrush");
 
@@ -50,7 +70,7 @@ void UWidget_StandbyButton_C::SetStandbyButtonBrush(bool productionIsPaused)
 
 
 // Function Widget_StandbyButton.Widget_StandbyButton_C.BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_StandbyButton_C::BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -67,7 +87,7 @@ void UWidget_StandbyButton_C::BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_StandbyButton.Widget_StandbyButton_C.BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_StandbyButton_C::BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -84,7 +104,7 @@ void UWidget_StandbyButton_C::BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_StandbyButton.Widget_StandbyButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -103,12 +123,29 @@ void UWidget_StandbyButton_C::PreConstruct(bool* IsDesignTime)
 }
 
 
-// Function Widget_StandbyButton.Widget_StandbyButton_C.ExecuteUbergraph_Widget_StandbyButton
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_StandbyButton.Widget_StandbyButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_StandbyButton_C::ExecuteUbergraph_Widget_StandbyButton(int EntryPoint)
+void UWidget_StandbyButton_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_StandbyButton.Widget_StandbyButton_C.Construct");
+
+	UWidget_StandbyButton_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_StandbyButton.Widget_StandbyButton_C.ExecuteUbergraph_Widget_StandbyButton
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_StandbyButton_C::ExecuteUbergraph_Widget_StandbyButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_StandbyButton.Widget_StandbyButton_C.ExecuteUbergraph_Widget_StandbyButton");
 
@@ -124,7 +161,7 @@ void UWidget_StandbyButton_C::ExecuteUbergraph_Widget_StandbyButton(int EntryPoi
 
 
 // Function Widget_StandbyButton.Widget_StandbyButton_C.OnStandbyClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_StandbyButton_C::OnStandbyClicked__DelegateSignature()
 {

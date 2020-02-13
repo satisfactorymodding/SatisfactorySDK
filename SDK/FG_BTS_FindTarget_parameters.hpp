@@ -25,7 +25,7 @@ struct UBTS_FindTarget_C_ReceiveTickAI_Params
 // Function BTS_FindTarget.BTS_FindTarget_C.ExecuteUbergraph_BTS_FindTarget
 struct UBTS_FindTarget_C_ExecuteUbergraph_BTS_FindTarget_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

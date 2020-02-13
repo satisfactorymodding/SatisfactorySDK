@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Edible.BP_Edible_C.UpdateVisiblityState
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Edible_C::UpdateVisiblityState()
 {
@@ -29,25 +29,8 @@ void ABP_Edible_C::UpdateVisiblityState()
 }
 
 
-// Function BP_Edible.BP_Edible_C.UserConstructionScript
-// ()
-
-void ABP_Edible_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Edible.BP_Edible_C.UserConstructionScript");
-
-	ABP_Edible_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Edible.BP_Edible_C.PlayPickupEffect
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_Edible_C::PlayPickupEffect()
 {
@@ -64,7 +47,7 @@ void ABP_Edible_C::PlayPickupEffect()
 
 
 // Function BP_Edible.BP_Edible_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Edible_C::ReceiveBeginPlay()
 {
@@ -81,11 +64,11 @@ void ABP_Edible_C::ReceiveBeginPlay()
 
 
 // Function BP_Edible.BP_Edible_C.ExecuteUbergraph_BP_Edible
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Edible_C::ExecuteUbergraph_BP_Edible(int EntryPoint)
+void ABP_Edible_C::ExecuteUbergraph_BP_Edible(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Edible.BP_Edible_C.ExecuteUbergraph_BP_Edible");
 

@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.ConstructFromManufacturingWidget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Manufacturing_C* WidgetManufacturing            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Manufacturing_C** WidgetManufacturing            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ManufacturingIOSlot_C::ConstructFromManufacturingWidget(class UWidget_Manufacturing_C* WidgetManufacturing)
+void UWidget_ManufacturingIOSlot_C::ConstructFromManufacturingWidget(class UWidget_Manufacturing_C** WidgetManufacturing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.ConstructFromManufacturingWidget");
 
@@ -33,7 +33,7 @@ void UWidget_ManufacturingIOSlot_C::ConstructFromManufacturingWidget(class UWidg
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.UpdateOutputTooltip
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManufacturingIOSlot_C::UpdateOutputTooltip()
 {
@@ -50,7 +50,7 @@ void UWidget_ManufacturingIOSlot_C::UpdateOutputTooltip()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.GetDividerTopVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -71,7 +71,7 @@ ESlateVisibility UWidget_ManufacturingIOSlot_C::GetDividerTopVisibility()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.GetDividerVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -92,7 +92,7 @@ ESlateVisibility UWidget_ManufacturingIOSlot_C::GetDividerVisibility()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.GetInputInfoVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -113,7 +113,7 @@ ESlateVisibility UWidget_ManufacturingIOSlot_C::GetInputInfoVisibility()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.GetNumPerSecond
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -134,7 +134,7 @@ struct FText UWidget_ManufacturingIOSlot_C::GetNumPerSecond()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.GetOutputSlotVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -155,7 +155,7 @@ ESlateVisibility UWidget_ManufacturingIOSlot_C::GetOutputSlotVisibility()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.GetItemNum
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -176,7 +176,7 @@ struct FText UWidget_ManufacturingIOSlot_C::GetItemNum()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.GetItemAmount
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FItemAmount             ItemAmount                     (Parm, OutParm)
 
@@ -198,7 +198,7 @@ void UWidget_ManufacturingIOSlot_C::GetItemAmount(struct FItemAmount* ItemAmount
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.GetItemName
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -219,7 +219,7 @@ struct FText UWidget_ManufacturingIOSlot_C::GetItemName()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManufacturingIOSlot_C::Construct()
 {
@@ -236,11 +236,11 @@ void UWidget_ManufacturingIOSlot_C::Construct()
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.Set CostSlot
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            SlotIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SlotIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManufacturingIOSlot_C::Set_CostSlot(int SlotIdx)
+void UWidget_ManufacturingIOSlot_C::Set_CostSlot(int* SlotIdx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.Set CostSlot");
 
@@ -256,11 +256,11 @@ void UWidget_ManufacturingIOSlot_C::Set_CostSlot(int SlotIdx)
 
 
 // Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.ExecuteUbergraph_Widget_ManufacturingIOSlot
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManufacturingIOSlot_C::ExecuteUbergraph_Widget_ManufacturingIOSlot(int EntryPoint)
+void UWidget_ManufacturingIOSlot_C::ExecuteUbergraph_Widget_ManufacturingIOSlot(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingIOSlot.Widget_ManufacturingIOSlot_C.ExecuteUbergraph_Widget_ManufacturingIOSlot");
 

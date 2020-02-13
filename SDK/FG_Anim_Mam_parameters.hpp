@@ -38,7 +38,7 @@ struct UAnim_Mam_C_BlueprintInitializeAnimation_Params
 // Function Anim_Mam.Anim_Mam_C.HasPowerChanged
 struct UAnim_Mam_C_HasPowerChanged_Params
 {
-	bool                                               State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Anim_Mam.Anim_Mam_C.AnimNotify_MamEnteredProducing
@@ -59,7 +59,7 @@ struct UAnim_Mam_C_BlueprintBeginPlay_Params
 // Function Anim_Mam.Anim_Mam_C.ExecuteUbergraph_Anim_Mam
 struct UAnim_Mam_C_ExecuteUbergraph_Anim_Mam_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

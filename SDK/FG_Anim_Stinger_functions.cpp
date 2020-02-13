@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Stinger.Anim_Stinger_C.CalculateAnimGraphVariables
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_Stinger_C::CalculateAnimGraphVariables()
 {
@@ -30,7 +30,7 @@ void UAnim_Stinger_C::CalculateAnimGraphVariables()
 
 
 // Function Anim_Stinger.Anim_Stinger_C.OnRadialDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_Stinger_C::OnRadialDamageTaken()
 {
@@ -47,7 +47,7 @@ void UAnim_Stinger_C::OnRadialDamageTaken()
 
 
 // Function Anim_Stinger.Anim_Stinger_C.OnPointDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector*                shootDIrection                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,7 +67,7 @@ void UAnim_Stinger_C::OnPointDamageTaken(struct FVector* shootDIrection)
 
 
 // Function Anim_Stinger.Anim_Stinger_C.AnimNotify_Notify_Stinger_Entered_Idle
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Stinger_C::AnimNotify_Notify_Stinger_Entered_Idle()
 {
@@ -84,7 +84,7 @@ void UAnim_Stinger_C::AnimNotify_Notify_Stinger_Entered_Idle()
 
 
 // Function Anim_Stinger.Anim_Stinger_C.AnimNotify_Notify_Stinger_Entered_Walk
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Stinger_C::AnimNotify_Notify_Stinger_Entered_Walk()
 {
@@ -101,7 +101,7 @@ void UAnim_Stinger_C::AnimNotify_Notify_Stinger_Entered_Walk()
 
 
 // Function Anim_Stinger.Anim_Stinger_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,11 +121,11 @@ void UAnim_Stinger_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_Stinger.Anim_Stinger_C.ExecuteUbergraph_Anim_Stinger
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Stinger_C::ExecuteUbergraph_Anim_Stinger(int EntryPoint)
+void UAnim_Stinger_C::ExecuteUbergraph_Anim_Stinger(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Stinger.Anim_Stinger_C.ExecuteUbergraph_Anim_Stinger");
 

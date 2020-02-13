@@ -27,10 +27,10 @@ public:
 	}
 
 
-	bool NotEqual_CompareLensDistortionModels(const struct FLensDistortionCameraModel& A, const struct FLensDistortionCameraModel& B);
-	void GetUndistortOverscanFactor(const struct FLensDistortionCameraModel& CameraModel, float DistortedHorizontalFOV, float DistortedAspectRatio, float* UndistortOverscanFactor);
-	bool EqualEqual_CompareLensDistortionModels(const struct FLensDistortionCameraModel& A, const struct FLensDistortionCameraModel& B);
-	void DrawUVDisplacementToRenderTarget(class UObject* WorldContextObject, const struct FLensDistortionCameraModel& CameraModel, float DistortedHorizontalFOV, float DistortedAspectRatio, float UndistortOverscanFactor, class UTextureRenderTarget2D* OutputRenderTarget, float OutputMultiply, float OutputAdd);
+	bool STATIC_NotEqual_CompareLensDistortionModels(struct FLensDistortionCameraModel* A, struct FLensDistortionCameraModel* B);
+	void STATIC_GetUndistortOverscanFactor(struct FLensDistortionCameraModel* CameraModel, float* DistortedHorizontalFOV, float* DistortedAspectRatio, float* UndistortOverscanFactor);
+	bool STATIC_EqualEqual_CompareLensDistortionModels(struct FLensDistortionCameraModel* A, struct FLensDistortionCameraModel* B);
+	void STATIC_DrawUVDisplacementToRenderTarget(class UObject** WorldContextObject, struct FLensDistortionCameraModel* CameraModel, float* DistortedHorizontalFOV, float* DistortedAspectRatio, float* UndistortOverscanFactor, class UTextureRenderTarget2D** OutputRenderTarget, float* OutputMultiply, float* OutputAdd);
 };
 
 

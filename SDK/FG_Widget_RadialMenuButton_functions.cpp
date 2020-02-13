@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Hover Lerp
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadialMenuButton_C::Hover_Lerp(float DeltaTime)
+void UWidget_RadialMenuButton_C::Hover_Lerp(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Hover Lerp");
 
@@ -33,7 +33,7 @@ void UWidget_RadialMenuButton_C::Hover_Lerp(float DeltaTime)
 
 
 // Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Get Screen Position
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -54,7 +54,7 @@ float UWidget_RadialMenuButton_C::Get_Screen_Position()
 
 
 // Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Set Angle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadialMenuButton_C::Set_Angle()
 {
@@ -71,7 +71,7 @@ void UWidget_RadialMenuButton_C::Set_Angle()
 
 
 // Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RadialMenuButton_C::Construct()
 {
@@ -87,25 +87,8 @@ void UWidget_RadialMenuButton_C::Construct()
 }
 
 
-// Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Set Icon Position
-// ()
-
-void UWidget_RadialMenuButton_C::Set_Icon_Position()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Set Icon Position");
-
-	UWidget_RadialMenuButton_C_Set_Icon_Position_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Create Style
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadialMenuButton_C::Create_Style()
 {
@@ -121,8 +104,25 @@ void UWidget_RadialMenuButton_C::Create_Style()
 }
 
 
+// Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Set Icon Position
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_RadialMenuButton_C::Set_Icon_Position()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Set Icon Position");
+
+	UWidget_RadialMenuButton_C_Set_Icon_Position_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -144,11 +144,11 @@ void UWidget_RadialMenuButton_C::Tick(struct FGeometry* MyGeometry, float* InDel
 
 
 // Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.ExecuteUbergraph_Widget_RadialMenuButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadialMenuButton_C::ExecuteUbergraph_Widget_RadialMenuButton(int EntryPoint)
+void UWidget_RadialMenuButton_C::ExecuteUbergraph_Widget_RadialMenuButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadialMenuButton.Widget_RadialMenuButton_C.ExecuteUbergraph_Widget_RadialMenuButton");
 

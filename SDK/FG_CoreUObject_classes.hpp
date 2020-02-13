@@ -81,7 +81,7 @@ public:
 	}
 
 
-	void ExecuteUbergraph(int EntryPoint);
+	void ExecuteUbergraph(int* EntryPoint);
 };
 
 
@@ -149,21 +149,16 @@ public:
 
 
 // Class CoreUObject.Struct
-// 0x0058 (0x0088 - 0x0030)
+// 0x0068 (0x0098 - 0x0030)
 class UStruct : public UField
 {
 public:
+	char                                               UnknownData00[0x10];                                      // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	class UStruct*                                     SuperField;                                               // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	class UField*                                      Children;                                                 // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	int32_t                                            PropertySize;                                             // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-	TArray<uint8_t>                                    Script;                                                   // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	int32_t                                            MinAlignment;                                             // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-	class UProperty*                                   PropertyLink;                                             // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-	class UProperty*                                   RefLink;                                                  // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-	class UProperty*                                   DestructorLink;                                           // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-	class UProperty*                                   PostConstructLink;                                        // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-	TArray<UObject*>                                   ScriptObjectReferences;                                   // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-	TArray<UProperty*>                                 AllSaveGameProps;                                         // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
+	char                                               UnknownData01[0x40];                                      // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 
 	static UClass* StaticClass()
 	{
@@ -175,11 +170,11 @@ public:
 
 
 // Class CoreUObject.ScriptStruct
-// 0x0010 (0x0098 - 0x0088)
+// 0x0010 (0x00A8 - 0x0098)
 class UScriptStruct : public UStruct
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0088(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0098(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -207,11 +202,11 @@ public:
 
 
 // Class CoreUObject.Class
-// 0x0180 (0x0208 - 0x0088)
+// 0x0168 (0x0200 - 0x0098)
 class UClass : public UStruct
 {
 public:
-	unsigned char                                      UnknownData00[0x180];                                     // 0x0088(0x0180) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x168];                                     // 0x0098(0x0168) MISSED OFFSET
 
 	template<typename T>
 	inline T* CreateDefaultObject()
@@ -225,22 +220,17 @@ public:
 		return ptr;
 	}
 
-	inline UObject* CreateDefaultObject()
-	{
-		return GetVFunction<UObject*(*)(UClass*)>(this, 103)(this);
-	}
-
 };
 
 
 // Class CoreUObject.Function
-// 0x0030 (0x00B8 - 0x0088)
+// 0x0030 (0x00C8 - 0x0098)
 class UFunction : public UStruct
 {
 public:
 	int32_t                                            FunctionFlags;                                            // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-	int16_t                                            RepOffset;                                                // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	int8_t                                             NumParms;                                                 // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
+	char                                               UnknownData[0x1];                                         // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	int16_t                                            ParmsSize;                                                // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	int16_t                                            ReturnValueOffset;                                        // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	int16_t                                            RPCId;                                                    // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
@@ -258,7 +248,7 @@ public:
 
 
 // Class CoreUObject.DelegateFunction
-// 0x0000 (0x00B8 - 0x00B8)
+// 0x0000 (0x00C8 - 0x00C8)
 class UDelegateFunction : public UFunction
 {
 public:
@@ -273,11 +263,11 @@ public:
 
 
 // Class CoreUObject.DynamicClass
-// 0x0068 (0x0270 - 0x0208)
+// 0x0068 (0x0268 - 0x0200)
 class UDynamicClass : public UClass
 {
 public:
-	unsigned char                                      UnknownData00[0x68];                                      // 0x0208(0x0068) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x68];                                      // 0x0200(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -353,11 +343,11 @@ public:
 
 
 // Class CoreUObject.LinkerPlaceholderClass
-// 0x01B8 (0x03C0 - 0x0208)
+// 0x01B8 (0x03B8 - 0x0200)
 class ULinkerPlaceholderClass : public UClass
 {
 public:
-	unsigned char                                      UnknownData00[0x1B8];                                     // 0x0208(0x01B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x1B8];                                     // 0x0200(0x01B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -385,11 +375,11 @@ public:
 
 
 // Class CoreUObject.LinkerPlaceholderFunction
-// 0x01B8 (0x0270 - 0x00B8)
+// 0x01B8 (0x0280 - 0x00C8)
 class ULinkerPlaceholderFunction : public UFunction
 {
 public:
-	unsigned char                                      UnknownData00[0x1B8];                                     // 0x00B8(0x01B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x1B8];                                     // 0x00C8(0x01B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -680,11 +670,11 @@ public:
 
 
 // Class CoreUObject.MapProperty
-// 0x0038 (0x00A8 - 0x0070)
+// 0x0028 (0x0098 - 0x0070)
 class UMapProperty : public UProperty
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0070(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0070(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -727,11 +717,11 @@ public:
 
 
 // Class CoreUObject.SetProperty
-// 0x0028 (0x0098 - 0x0070)
+// 0x0020 (0x0090 - 0x0070)
 class USetProperty : public UProperty
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0070(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

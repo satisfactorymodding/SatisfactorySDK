@@ -23,7 +23,7 @@ struct UBTT_ClearFocus_C_ReceiveExecute_Params
 // Function BTT_ClearFocus.BTT_ClearFocus_C.ExecuteUbergraph_BTT_ClearFocus
 struct UBTT_ClearFocus_C_ExecuteUbergraph_BTT_ClearFocus_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

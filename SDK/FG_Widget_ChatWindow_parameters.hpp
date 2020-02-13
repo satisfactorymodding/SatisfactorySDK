@@ -37,7 +37,7 @@ struct UWidget_ChatWindow_C_OnChatMessageReceived_Params
 // Function Widget_ChatWindow.Widget_ChatWindow_C.SetInputWindowVisibility
 struct UWidget_ChatWindow_C_SetInputWindowVisibility_Params
 {
-	bool                                               Visible;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              visible;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ChatWindow.Widget_ChatWindow_C.GetInputWindowVisibility
@@ -72,11 +72,6 @@ struct UWidget_ChatWindow_C_MatchWidgetsAndMessages_Params
 {
 };
 
-// Function Widget_ChatWindow.Widget_ChatWindow_C.Construct
-struct UWidget_ChatWindow_C_Construct_Params
-{
-};
-
 // Function Widget_ChatWindow.Widget_ChatWindow_C.OnRemovedFromFocusPath
 struct UWidget_ChatWindow_C_OnRemovedFromFocusPath_Params
 {
@@ -96,10 +91,15 @@ struct UWidget_ChatWindow_C_OnMouseLeave_Params
 	struct FPointerEvent*                              MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
+// Function Widget_ChatWindow.Widget_ChatWindow_C.Construct
+struct UWidget_ChatWindow_C_Construct_Params
+{
+};
+
 // Function Widget_ChatWindow.Widget_ChatWindow_C.ExecuteUbergraph_Widget_ChatWindow
 struct UWidget_ChatWindow_C_ExecuteUbergraph_Widget_ChatWindow_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

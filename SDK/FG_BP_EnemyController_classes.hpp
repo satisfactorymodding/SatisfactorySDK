@@ -31,10 +31,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void OnPossess(class APawn** PossessedPawn);
+	void ReceivePossess(class APawn** PossessedPawn);
 	void OnAggroTargetLost(class AActor** lostActor);
-	void ExecuteUbergraph_BP_EnemyController(int EntryPoint);
+	void ExecuteUbergraph_BP_EnemyController(int* EntryPoint);
 };
 
 

@@ -12,14 +12,90 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_UseableBase.Widget_UseableBase_C.DropInventoryStackOnInventoryWidget
-// ()
+// Function Widget_UseableBase.Widget_UseableBase_C.OnKeyDown
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_InventorySlot_C* InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UWidget_Inventory_C*     WidgetInventory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_UseableBase_C::OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.OnKeyDown");
+
+	UWidget_UseableBase_C_OnKeyDown_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_UseableBase.Widget_UseableBase_C.OnKeyUp
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_UseableBase_C::OnKeyUp(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.OnKeyUp");
+
+	UWidget_UseableBase_C_OnKeyUp_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_UseableBase.Widget_UseableBase_C.DropInventoryStackOnInventoryComponent
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_UseableBase_C::DropInventoryStackOnInventoryWidget(class UWidget_InventorySlot_C* InventorySlot, class UWidget_Inventory_C* WidgetInventory, bool* Result)
+void UWidget_UseableBase_C::DropInventoryStackOnInventoryComponent(class UWidget_InventorySlot_C** InventorySlot, class UFGInventoryComponent** InventoryComponent, bool* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.DropInventoryStackOnInventoryComponent");
+
+	UWidget_UseableBase_C_DropInventoryStackOnInventoryComponent_Params params;
+	params.InventorySlot = InventorySlot;
+	params.InventoryComponent = InventoryComponent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
+// Function Widget_UseableBase.Widget_UseableBase_C.DropInventoryStackOnInventoryWidget
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Inventory_C**    WidgetInventory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_UseableBase_C::DropInventoryStackOnInventoryWidget(class UWidget_InventorySlot_C** InventorySlot, class UWidget_Inventory_C** WidgetInventory, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.DropInventoryStackOnInventoryWidget");
 
@@ -39,11 +115,11 @@ void UWidget_UseableBase_C::DropInventoryStackOnInventoryWidget(class UWidget_In
 
 
 // Function Widget_UseableBase.Widget_UseableBase_C.InitInventoryWidgetCallbacks
-// ()
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Inventory_C*     InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Inventory_C**    InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_UseableBase_C::InitInventoryWidgetCallbacks(class UWidget_Inventory_C* InventoryComponent)
+void UWidget_UseableBase_C::InitInventoryWidgetCallbacks(class UWidget_Inventory_C** InventoryComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.InitInventoryWidgetCallbacks");
 
@@ -59,11 +135,11 @@ void UWidget_UseableBase_C::InitInventoryWidgetCallbacks(class UWidget_Inventory
 
 
 // Function Widget_UseableBase.Widget_UseableBase_C.OnInventorySlotStackMove
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_InventorySlot_C* InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_UseableBase_C::OnInventorySlotStackMove(class UWidget_InventorySlot_C* InventorySlot)
+void UWidget_UseableBase_C::OnInventorySlotStackMove(class UWidget_InventorySlot_C** InventorySlot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.OnInventorySlotStackMove");
 
@@ -79,12 +155,12 @@ void UWidget_UseableBase_C::OnInventorySlotStackMove(class UWidget_InventorySlot
 
 
 // Function Widget_UseableBase.Widget_UseableBase_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_InventorySlot_C* InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_UseableBase_C::DropInventorySlotStack(class UWidget_InventorySlot_C* InventorySlot, bool* WasStackMoved)
+void UWidget_UseableBase_C::DropInventorySlotStack(class UWidget_InventorySlot_C** InventorySlot, bool* WasStackMoved)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.DropInventorySlotStack");
 
@@ -103,16 +179,16 @@ void UWidget_UseableBase_C::DropInventorySlotStack(class UWidget_InventorySlot_C
 
 
 // Function Widget_UseableBase.Widget_UseableBase_C.SetInventoryVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_UseableBase_C::SetInventoryVisibility(bool Visible)
+void UWidget_UseableBase_C::SetInventoryVisibility(bool* visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.SetInventoryVisibility");
 
 	UWidget_UseableBase_C_SetInventoryVisibility_Params params;
-	params.Visible = Visible;
+	params.visible = visible;
 
 	auto flags = fn->FunctionFlags;
 
@@ -123,7 +199,7 @@ void UWidget_UseableBase_C::SetInventoryVisibility(bool Visible)
 
 
 // Function Widget_UseableBase.Widget_UseableBase_C.GetDefaultRCO
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBP_RemoteCallObject_C*  RCO                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -145,7 +221,7 @@ void UWidget_UseableBase_C::GetDefaultRCO(class UBP_RemoteCallObject_C** RCO)
 
 
 // Function Widget_UseableBase.Widget_UseableBase_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -165,7 +241,7 @@ void UWidget_UseableBase_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_UseableBase.Widget_UseableBase_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_UseableBase_C::Construct()
 {
@@ -182,7 +258,7 @@ void UWidget_UseableBase_C::Construct()
 
 
 // Function Widget_UseableBase.Widget_UseableBase_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_UseableBase_C::Destruct()
 {
@@ -198,29 +274,12 @@ void UWidget_UseableBase_C::Destruct()
 }
 
 
-// Function Widget_UseableBase.Widget_UseableBase_C.SetupDefaultFocus
-// ()
-
-void UWidget_UseableBase_C::SetupDefaultFocus()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.SetupDefaultFocus");
-
-	UWidget_UseableBase_C_SetupDefaultFocus_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_UseableBase.Widget_UseableBase_C.ExecuteUbergraph_Widget_UseableBase
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_UseableBase_C::ExecuteUbergraph_Widget_UseableBase(int EntryPoint)
+void UWidget_UseableBase_C::ExecuteUbergraph_Widget_UseableBase(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.ExecuteUbergraph_Widget_UseableBase");
 
@@ -235,13 +294,53 @@ void UWidget_UseableBase_C::ExecuteUbergraph_Widget_UseableBase(int EntryPoint)
 }
 
 
-// Function Widget_UseableBase.Widget_UseableBase_C.InventorySlotStackMoveEvent__DelegateSignature
-// ()
+// Function Widget_UseableBase.Widget_UseableBase_C.ModifierReleased__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_InventorySlot_C* InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<EInteractionDirection> InteractionDirection           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UFGInteractWidget**      Owner                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_UseableBase_C::InventorySlotStackMoveEvent__DelegateSignature(class UWidget_InventorySlot_C* InventorySlot, TEnumAsByte<EInteractionDirection> InteractionDirection)
+void UWidget_UseableBase_C::ModifierReleased__DelegateSignature(class UFGInteractWidget** Owner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.ModifierReleased__DelegateSignature");
+
+	UWidget_UseableBase_C_ModifierReleased__DelegateSignature_Params params;
+	params.Owner = Owner;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_UseableBase.Widget_UseableBase_C.ModifierPressed__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFGInteractWidget**      NewParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_UseableBase_C::ModifierPressed__DelegateSignature(class UFGInteractWidget** NewParam)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.ModifierPressed__DelegateSignature");
+
+	UWidget_UseableBase_C_ModifierPressed__DelegateSignature_Params params;
+	params.NewParam = NewParam;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_UseableBase.Widget_UseableBase_C.InventorySlotStackMoveEvent__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<EInteractionDirection>* InteractionDirection           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_UseableBase_C::InventorySlotStackMoveEvent__DelegateSignature(class UWidget_InventorySlot_C** InventorySlot, TEnumAsByte<EInteractionDirection>* InteractionDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.InventorySlotStackMoveEvent__DelegateSignature");
 

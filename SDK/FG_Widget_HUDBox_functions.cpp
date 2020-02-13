@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HUDBox.Widget_HUDBox_C.SetIconVisibility
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_C::SetIconVisibility()
 {
@@ -30,7 +30,7 @@ void UWidget_HUDBox_C::SetIconVisibility()
 
 
 // Function Widget_HUDBox.Widget_HUDBox_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HUDBox_C::Construct()
 {
@@ -47,7 +47,7 @@ void UWidget_HUDBox_C::Construct()
 
 
 // Function Widget_HUDBox.Widget_HUDBox_C.RemoveHUDBox
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_C::RemoveHUDBox()
 {
@@ -64,7 +64,7 @@ void UWidget_HUDBox_C::RemoveHUDBox()
 
 
 // Function Widget_HUDBox.Widget_HUDBox_C.DestroySelf
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_C::DestroySelf()
 {
@@ -81,7 +81,7 @@ void UWidget_HUDBox_C::DestroySelf()
 
 
 // Function Widget_HUDBox.Widget_HUDBox_C.StartWarningSign
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_C::StartWarningSign()
 {
@@ -98,7 +98,7 @@ void UWidget_HUDBox_C::StartWarningSign()
 
 
 // Function Widget_HUDBox.Widget_HUDBox_C.StopWarningSign
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_C::StopWarningSign()
 {
@@ -115,7 +115,7 @@ void UWidget_HUDBox_C::StopWarningSign()
 
 
 // Function Widget_HUDBox.Widget_HUDBox_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -135,11 +135,11 @@ void UWidget_HUDBox_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_HUDBox.Widget_HUDBox_C.ExecuteUbergraph_Widget_HUDBox
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HUDBox_C::ExecuteUbergraph_Widget_HUDBox(int EntryPoint)
+void UWidget_HUDBox_C::ExecuteUbergraph_Widget_HUDBox(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HUDBox.Widget_HUDBox_C.ExecuteUbergraph_Widget_HUDBox");
 

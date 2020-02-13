@@ -17,7 +17,7 @@ namespace SDK
 // Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
 struct UCustomMeshComponent_SetCustomMeshTriangles_Params
 {
-	TArray<struct FCustomMeshTriangle>                 Triangles;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FCustomMeshTriangle>*                Triangles;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -29,7 +29,7 @@ struct UCustomMeshComponent_ClearCustomMeshTriangles_Params
 // Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles
 struct UCustomMeshComponent_AddCustomMeshTriangles_Params
 {
-	TArray<struct FCustomMeshTriangle>                 Triangles;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FCustomMeshTriangle>*                Triangles;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 }

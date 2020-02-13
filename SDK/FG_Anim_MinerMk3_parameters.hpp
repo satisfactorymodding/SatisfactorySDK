@@ -93,13 +93,13 @@ struct UAnim_MinerMk3_C_AnimNotify_MinerIndustrialAudioLowpassOff_Params
 // Function Anim_MinerMk3.Anim_MinerMk3_C.HasPowerChanged
 struct UAnim_MinerMk3_C_HasPowerChanged_Params
 {
-	bool                                               State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Anim_MinerMk3.Anim_MinerMk3_C.ExecuteUbergraph_Anim_MinerMk3
 struct UAnim_MinerMk3_C_ExecuteUbergraph_Anim_MinerMk3_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

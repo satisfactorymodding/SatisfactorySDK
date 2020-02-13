@@ -49,7 +49,29 @@ struct UMeshReconstructorBase_DisconnectMRMesh_Params
 // Function MRMesh.MeshReconstructorBase.ConnectMRMesh
 struct UMeshReconstructorBase_ConnectMRMesh_Params
 {
-	class UMRMeshComponent*                            Mesh;                                                     // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMRMeshComponent**                           Mesh;                                                     // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// DelegateFunction MRMesh.MockDataMeshTrackerComponent.OnMockDataMeshTrackerUpdated__DelegateSignature
+struct UMockDataMeshTrackerComponent_OnMockDataMeshTrackerUpdated__DelegateSignature_Params
+{
+	int*                                               Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector>*                            Vertices;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<int>*                                       Triangles;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FVector>*                            Normals;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<float>*                                     Confidence;                                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function MRMesh.MockDataMeshTrackerComponent.DisconnectMRMesh
+struct UMockDataMeshTrackerComponent_DisconnectMRMesh_Params
+{
+	class UMRMeshComponent**                           InMRMeshPtr;                                              // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh
+struct UMockDataMeshTrackerComponent_ConnectMRMesh_Params
+{
+	class UMRMeshComponent**                           InMRMeshPtr;                                              // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function MRMesh.MRMeshComponent.IsConnected

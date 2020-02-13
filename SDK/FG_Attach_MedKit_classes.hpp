@@ -30,10 +30,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void PlayUseEffect(struct FVector* UseLocation);
 	void PlayAttachEffects3P();
-	void ExecuteUbergraph_Attach_MedKit(int EntryPoint);
+	void ExecuteUbergraph_Attach_MedKit(int* EntryPoint);
 };
 
 

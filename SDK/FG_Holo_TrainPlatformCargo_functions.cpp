@@ -12,23 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Holo_TrainPlatformCargo.Holo_TrainPlatformCargo_C.UserConstructionScript
-// ()
-
-void AHolo_TrainPlatformCargo_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Holo_TrainPlatformCargo.Holo_TrainPlatformCargo_C.UserConstructionScript");
-
-	AHolo_TrainPlatformCargo_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 }
 
 #ifdef _MSC_VER

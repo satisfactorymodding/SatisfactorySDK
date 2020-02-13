@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_FoilagePickup.BP_FoilagePickup_C.UserConstructionScript
-struct ABP_FoilagePickup_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_FoilagePickup.BP_FoilagePickup_C.PlayPickupEffect
 struct ABP_FoilagePickup_C_PlayPickupEffect_Params
 {
@@ -29,7 +24,7 @@ struct ABP_FoilagePickup_C_PlayPickupEffect_Params
 // Function BP_FoilagePickup.BP_FoilagePickup_C.ExecuteUbergraph_BP_FoilagePickup
 struct ABP_FoilagePickup_C_ExecuteUbergraph_BP_FoilagePickup_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

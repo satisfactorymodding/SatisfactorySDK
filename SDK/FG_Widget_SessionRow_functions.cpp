@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SessionRow.Widget_SessionRow_C.SetDisabled
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionRow_C::SetDisabled()
 {
@@ -30,7 +30,7 @@ void UWidget_SessionRow_C::SetDisabled()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.GetPointerVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -51,7 +51,7 @@ ESlateVisibility UWidget_SessionRow_C::GetPointerVisibility()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.OnButtonClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionRow_C::OnButtonClicked()
 {
@@ -68,7 +68,7 @@ void UWidget_SessionRow_C::OnButtonClicked()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.GetMostRecentSaveFromSession
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionRow_C::GetMostRecentSaveFromSession()
 {
@@ -85,7 +85,7 @@ void UWidget_SessionRow_C::GetMostRecentSaveFromSession()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.GetLastSaveTime
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionRow_C::GetLastSaveTime()
 {
@@ -102,7 +102,7 @@ void UWidget_SessionRow_C::GetLastSaveTime()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.GetSessionName
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionRow_C::GetSessionName()
 {
@@ -119,7 +119,7 @@ void UWidget_SessionRow_C::GetSessionName()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.GetLastSaveName
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionRow_C::GetLastSaveName()
 {
@@ -136,11 +136,11 @@ void UWidget_SessionRow_C::GetLastSaveName()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.PopulateSavesFromSession
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSessionSaveStruct      session                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSessionSaveStruct*     session                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SessionRow_C::PopulateSavesFromSession(const struct FSessionSaveStruct& session)
+void UWidget_SessionRow_C::PopulateSavesFromSession(struct FSessionSaveStruct* session)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionRow.Widget_SessionRow_C.PopulateSavesFromSession");
 
@@ -156,7 +156,7 @@ void UWidget_SessionRow_C::PopulateSavesFromSession(const struct FSessionSaveStr
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.OnFocusReceived
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FFocusEvent*            InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -181,7 +181,7 @@ struct FEventReply UWidget_SessionRow_C::OnFocusReceived(struct FGeometry* MyGeo
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.GetSaveTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -202,7 +202,7 @@ struct FSlateColor UWidget_SessionRow_C::GetSaveTextColor()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.GetIconColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -223,7 +223,7 @@ struct FLinearColor UWidget_SessionRow_C::GetIconColor()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.GetButtonHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -244,7 +244,7 @@ struct FLinearColor UWidget_SessionRow_C::GetButtonHoverColor()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.BndEvt__mButton_K2Node_ComponentBoundEvent_120_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SessionRow_C::BndEvt__mButton_K2Node_ComponentBoundEvent_120_OnButtonClickedEvent__DelegateSignature()
 {
@@ -261,7 +261,7 @@ void UWidget_SessionRow_C::BndEvt__mButton_K2Node_ComponentBoundEvent_120_OnButt
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.BndEvt__mSessionRowButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SessionRow_C::BndEvt__mSessionRowButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -278,7 +278,7 @@ void UWidget_SessionRow_C::BndEvt__mSessionRowButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SessionRow_C::Construct()
 {
@@ -295,7 +295,7 @@ void UWidget_SessionRow_C::Construct()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -315,7 +315,7 @@ void UWidget_SessionRow_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.BndEvt__mLoadButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SessionRow_C::BndEvt__mLoadButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -332,7 +332,7 @@ void UWidget_SessionRow_C::BndEvt__mLoadButton_K2Node_ComponentBoundEvent_1_OnBu
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.BndEvt__mDeleteSessionButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SessionRow_C::BndEvt__mDeleteSessionButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
@@ -349,7 +349,7 @@ void UWidget_SessionRow_C::BndEvt__mDeleteSessionButton_K2Node_ComponentBoundEve
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.ConfirmDeleteSessionPopUp
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionRow_C::ConfirmDeleteSessionPopUp()
 {
@@ -366,13 +366,16 @@ void UWidget_SessionRow_C::ConfirmDeleteSessionPopUp()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.Event DeleteSession
-// ()
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          confirmed                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SessionRow_C::Event_DeleteSession()
+void UWidget_SessionRow_C::Event_DeleteSession(bool* confirmed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionRow.Widget_SessionRow_C.Event DeleteSession");
 
 	UWidget_SessionRow_C_Event_DeleteSession_Params params;
+	params.confirmed = confirmed;
 
 	auto flags = fn->FunctionFlags;
 
@@ -383,7 +386,7 @@ void UWidget_SessionRow_C::Event_DeleteSession()
 
 
 // Function Widget_SessionRow.Widget_SessionRow_C.BndEvt__mSessionRowButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SessionRow_C::BndEvt__mSessionRowButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
@@ -399,12 +402,32 @@ void UWidget_SessionRow_C::BndEvt__mSessionRowButton_K2Node_ComponentBoundEvent_
 }
 
 
-// Function Widget_SessionRow.Widget_SessionRow_C.ExecuteUbergraph_Widget_SessionRow
-// ()
+// Function Widget_SessionRow.Widget_SessionRow_C.OnDeleteSessionDone
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SessionRow_C::ExecuteUbergraph_Widget_SessionRow(int EntryPoint)
+void UWidget_SessionRow_C::OnDeleteSessionDone(bool* success)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionRow.Widget_SessionRow_C.OnDeleteSessionDone");
+
+	UWidget_SessionRow_C_OnDeleteSessionDone_Params params;
+	params.success = success;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_SessionRow.Widget_SessionRow_C.ExecuteUbergraph_Widget_SessionRow
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_SessionRow_C::ExecuteUbergraph_Widget_SessionRow(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionRow.Widget_SessionRow_C.ExecuteUbergraph_Widget_SessionRow");
 

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WAT2.BP_WAT2_C
-// 0x0008 (0x03C8 - 0x03C0)
+// 0x0008 (0x0400 - 0x03F8)
 class ABP_WAT2_C : public ABP_WAT1_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x03C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,8 +27,6 @@ public:
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
 };
 
 

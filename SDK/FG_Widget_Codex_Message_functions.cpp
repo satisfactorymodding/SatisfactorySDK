@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.ClearMessage
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_Message_C::ClearMessage()
 {
@@ -30,12 +30,12 @@ void UWidget_Codex_Message_C::ClearMessage()
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.GenerateAudioMessage
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  inClass                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 inClass                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Text                           (Parm, OutParm)
 
-void UWidget_Codex_Message_C::GenerateAudioMessage(class UClass* inClass, struct FText* Text)
+void UWidget_Codex_Message_C::GenerateAudioMessage(class UClass** inClass, struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Message.Widget_Codex_Message_C.GenerateAudioMessage");
 
@@ -54,7 +54,7 @@ void UWidget_Codex_Message_C::GenerateAudioMessage(class UClass* inClass, struct
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.GetAttachedFilesVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -75,7 +75,7 @@ ESlateVisibility UWidget_Codex_Message_C::GetAttachedFilesVisibility()
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.GetScrollButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -96,7 +96,7 @@ ESlateVisibility UWidget_Codex_Message_C::GetScrollButtonVisibility()
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.SetupImage
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Codex_Message_C::SetupImage()
 {
@@ -113,7 +113,7 @@ void UWidget_Codex_Message_C::SetupImage()
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Codex_Message_C::Construct()
 {
@@ -130,11 +130,11 @@ void UWidget_Codex_Message_C::Construct()
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.AddContent
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  contentClass                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 contentClass                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Codex_Message_C::AddContent(class UClass* contentClass)
+void UWidget_Codex_Message_C::AddContent(class UClass** contentClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Message.Widget_Codex_Message_C.AddContent");
 
@@ -150,7 +150,7 @@ void UWidget_Codex_Message_C::AddContent(class UClass* contentClass)
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.BndEvt__mScrollButton_K2Node_ComponentBoundEvent_40_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Codex_Message_C::BndEvt__mScrollButton_K2Node_ComponentBoundEvent_40_OnClicked__DelegateSignature()
 {
@@ -167,7 +167,7 @@ void UWidget_Codex_Message_C::BndEvt__mScrollButton_K2Node_ComponentBoundEvent_4
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Codex_Message_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -184,11 +184,11 @@ void UWidget_Codex_Message_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnBu
 
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.ExecuteUbergraph_Widget_Codex_Message
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Codex_Message_C::ExecuteUbergraph_Widget_Codex_Message(int EntryPoint)
+void UWidget_Codex_Message_C::ExecuteUbergraph_Widget_Codex_Message(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Message.Widget_Codex_Message_C.ExecuteUbergraph_Widget_Codex_Message");
 

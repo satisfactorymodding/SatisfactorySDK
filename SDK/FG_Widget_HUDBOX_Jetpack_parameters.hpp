@@ -44,7 +44,7 @@ struct UWidget_HUDBox_Jetpack_C_BarPulse_Params
 // Function Widget_HUDBOX_Jetpack.Widget_HUDBox_Jetpack_C.ExecuteUbergraph_Widget_HUDBox_Jetpack
 struct UWidget_HUDBox_Jetpack_C_ExecuteUbergraph_Widget_HUDBox_Jetpack_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

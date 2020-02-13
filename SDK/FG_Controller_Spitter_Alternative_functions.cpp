@@ -12,30 +12,13 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Controller_Spitter_Alternative.Controller_Spitter_Alternative_C.UserConstructionScript
-// ()
-
-void AController_Spitter_Alternative_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_Spitter_Alternative.Controller_Spitter_Alternative_C.UserConstructionScript");
-
-	AController_Spitter_Alternative_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Controller_Spitter_Alternative.Controller_Spitter_Alternative_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIStimulus             Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class AActor**                 Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIStimulus*            Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AController_Spitter_Alternative_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus)
+void AController_Spitter_Alternative_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_Spitter_Alternative.Controller_Spitter_Alternative_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature");
 
@@ -52,11 +35,11 @@ void AController_Spitter_Alternative_C::BndEvt__PerceptionComponent_K2Node_Compo
 
 
 // Function Controller_Spitter_Alternative.Controller_Spitter_Alternative_C.ExecuteUbergraph_Controller_Spitter_Alternative
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_Spitter_Alternative_C::ExecuteUbergraph_Controller_Spitter_Alternative(int EntryPoint)
+void AController_Spitter_Alternative_C::ExecuteUbergraph_Controller_Spitter_Alternative(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_Spitter_Alternative.Controller_Spitter_Alternative_C.ExecuteUbergraph_Controller_Spitter_Alternative");
 

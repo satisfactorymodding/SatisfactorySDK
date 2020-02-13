@@ -12,8 +12,79 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_MapObject.Widget_MapObject_C.HideViewDistanceIndicator
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_MapObject_C::HideViewDistanceIndicator()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.HideViewDistanceIndicator");
+
+	UWidget_MapObject_C_HideViewDistanceIndicator_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_MapObject.Widget_MapObject_C.ShowViewDistanceIndicator
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          viewDistance                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_MapObject_C::ShowViewDistanceIndicator(ECompassViewDistance* viewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.ShowViewDistanceIndicator");
+
+	UWidget_MapObject_C_ShowViewDistanceIndicator_Params params;
+	params.viewDistance = viewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_MapObject.Widget_MapObject_C.UnhighlightOnMap
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_MapObject_C::UnhighlightOnMap()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.UnhighlightOnMap");
+
+	UWidget_MapObject_C_UnhighlightOnMap_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_MapObject.Widget_MapObject_C.HighlightOnMap
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_MapObject_C::HighlightOnMap()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.HighlightOnMap");
+
+	UWidget_MapObject_C_HighlightOnMap_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_MapObject.Widget_MapObject_C.mShowActorDetails
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_MapObject_C::mShowActorDetails()
 {
@@ -30,7 +101,7 @@ void UWidget_MapObject_C::mShowActorDetails()
 
 
 // Function Widget_MapObject.Widget_MapObject_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,16 +123,16 @@ void UWidget_MapObject_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_MapObject.Widget_MapObject_C.OnObjectFiltered
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool*                          FilteredIn                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapObject_C::OnObjectFiltered(bool* FilteredIn)
+void UWidget_MapObject_C::OnObjectFiltered(bool* visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.OnObjectFiltered");
 
 	UWidget_MapObject_C_OnObjectFiltered_Params params;
-	params.FilteredIn = FilteredIn;
+	params.visible = visible;
 
 	auto flags = fn->FunctionFlags;
 
@@ -72,7 +143,7 @@ void UWidget_MapObject_C::OnObjectFiltered(bool* FilteredIn)
 
 
 // Function Widget_MapObject.Widget_MapObject_C.OnObjectMoved
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // struct FVector2D*              normalizedLocation             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -92,7 +163,7 @@ void UWidget_MapObject_C::OnObjectMoved(struct FVector2D* normalizedLocation)
 
 
 // Function Widget_MapObject.Widget_MapObject_C.OnActorRepresentationUpdated
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_MapObject_C::OnActorRepresentationUpdated()
 {
@@ -109,7 +180,7 @@ void UWidget_MapObject_C::OnActorRepresentationUpdated()
 
 
 // Function Widget_MapObject.Widget_MapObject_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_MapObject_C::Construct()
 {
@@ -126,11 +197,11 @@ void UWidget_MapObject_C::Construct()
 
 
 // Function Widget_MapObject.Widget_MapObject_C.DestructionTimer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapObject_C::DestructionTimer(float Time)
+void UWidget_MapObject_C::DestructionTimer(float* Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.DestructionTimer");
 
@@ -146,7 +217,7 @@ void UWidget_MapObject_C::DestructionTimer(float Time)
 
 
 // Function Widget_MapObject.Widget_MapObject_C.BndEvt__Widget_MapCompass_Icon_K2Node_ComponentBoundEvent_0_OnUnhovered__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_MapObject_C::BndEvt__Widget_MapCompass_Icon_K2Node_ComponentBoundEvent_0_OnUnhovered__DelegateSignature()
 {
@@ -163,7 +234,7 @@ void UWidget_MapObject_C::BndEvt__Widget_MapCompass_Icon_K2Node_ComponentBoundEv
 
 
 // Function Widget_MapObject.Widget_MapObject_C.BndEvt__Widget_MapCompass_Icon_K2Node_ComponentBoundEvent_1_OnHovered__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_MapObject_C::BndEvt__Widget_MapCompass_Icon_K2Node_ComponentBoundEvent_1_OnHovered__DelegateSignature()
 {
@@ -180,7 +251,7 @@ void UWidget_MapObject_C::BndEvt__Widget_MapCompass_Icon_K2Node_ComponentBoundEv
 
 
 // Function Widget_MapObject.Widget_MapObject_C.ShowActorDetailsEvent
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_MapObject_C::ShowActorDetailsEvent()
 {
@@ -197,11 +268,11 @@ void UWidget_MapObject_C::ShowActorDetailsEvent()
 
 
 // Function Widget_MapObject.Widget_MapObject_C.ExecuteUbergraph_Widget_MapObject
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapObject_C::ExecuteUbergraph_Widget_MapObject(int EntryPoint)
+void UWidget_MapObject_C::ExecuteUbergraph_Widget_MapObject(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.ExecuteUbergraph_Widget_MapObject");
 
@@ -217,11 +288,11 @@ void UWidget_MapObject_C::ExecuteUbergraph_Widget_MapObject(int EntryPoint)
 
 
 // Function Widget_MapObject.Widget_MapObject_C.OnUnhovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_MapObject_C*     MapObject                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_MapObject_C**    MapObject                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_MapObject_C::OnUnhovered__DelegateSignature(class UWidget_MapObject_C* MapObject)
+void UWidget_MapObject_C::OnUnhovered__DelegateSignature(class UWidget_MapObject_C** MapObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.OnUnhovered__DelegateSignature");
 
@@ -237,11 +308,11 @@ void UWidget_MapObject_C::OnUnhovered__DelegateSignature(class UWidget_MapObject
 
 
 // Function Widget_MapObject.Widget_MapObject_C.OnHovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_MapObject_C*     MapObject                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_MapObject_C**    MapObject                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_MapObject_C::OnHovered__DelegateSignature(class UWidget_MapObject_C* MapObject)
+void UWidget_MapObject_C::OnHovered__DelegateSignature(class UWidget_MapObject_C** MapObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapObject.Widget_MapObject_C.OnHovered__DelegateSignature");
 

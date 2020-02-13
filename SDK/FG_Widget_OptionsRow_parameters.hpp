@@ -46,7 +46,7 @@ struct UWidget_OptionsRow_C_BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButto
 // Function Widget_OptionsRow.Widget_OptionsRow_C.ExecuteUbergraph_Widget_OptionsRow
 struct UWidget_OptionsRow_C_ExecuteUbergraph_Widget_OptionsRow_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_OptionsRow.Widget_OptionsRow_C.OnClicked__DelegateSignature

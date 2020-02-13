@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.UserConstructionScript
-// ()
-
-void AAttach_NobeliskDetonator_R_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.UserConstructionScript");
-
-	AAttach_NobeliskDetonator_R_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.OnIsLoadedSet
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_NobeliskDetonator_R_C::OnIsLoadedSet()
 {
@@ -47,7 +30,7 @@ void AAttach_NobeliskDetonator_R_C::OnIsLoadedSet()
 
 
 // Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.PlayFireEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector*                flashLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,7 +50,7 @@ void AAttach_NobeliskDetonator_R_C::PlayFireEffect(struct FVector* flashLocation
 
 
 // Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.OnBeginFireEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector*                Location                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -87,7 +70,7 @@ void AAttach_NobeliskDetonator_R_C::OnBeginFireEffect(struct FVector* Location)
 
 
 // Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.ClientPlayReloadEffect
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_NobeliskDetonator_R_C::ClientPlayReloadEffect()
 {
@@ -104,7 +87,7 @@ void AAttach_NobeliskDetonator_R_C::ClientPlayReloadEffect()
 
 
 // Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.OnAttach
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_NobeliskDetonator_R_C::OnAttach()
 {
@@ -121,11 +104,11 @@ void AAttach_NobeliskDetonator_R_C::OnAttach()
 
 
 // Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.ExecuteUbergraph_Attach_NobeliskDetonator_R
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_NobeliskDetonator_R_C::ExecuteUbergraph_Attach_NobeliskDetonator_R(int EntryPoint)
+void AAttach_NobeliskDetonator_R_C::ExecuteUbergraph_Attach_NobeliskDetonator_R(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_NobeliskDetonator_R.Attach_NobeliskDetonator_R_C.ExecuteUbergraph_Attach_NobeliskDetonator_R");
 

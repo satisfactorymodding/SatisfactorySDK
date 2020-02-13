@@ -64,7 +64,7 @@ struct UWidget_TitleButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButt
 // Function Widget_TitleButton.Widget_TitleButton_C.ExecuteUbergraph_Widget_TitleButton
 struct UWidget_TitleButton_C_ExecuteUbergraph_Widget_TitleButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TitleButton.Widget_TitleButton_C.OnReleased__DelegateSignature

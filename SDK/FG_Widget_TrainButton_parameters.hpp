@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_TrainButton.Widget_TrainButton_C.SetTitle
 struct UWidget_TrainButton_C_SetTitle_Params
 {
-	struct FText                                       mTitle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      mTitle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_TrainButton.Widget_TrainButton_C.PreConstruct
@@ -59,13 +59,13 @@ struct UWidget_TrainButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButt
 // Function Widget_TrainButton.Widget_TrainButton_C.ExecuteUbergraph_Widget_TrainButton
 struct UWidget_TrainButton_C_ExecuteUbergraph_Widget_TrainButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TrainButton.Widget_TrainButton_C.OnClicked__DelegateSignature
 struct UWidget_TrainButton_C_OnClicked__DelegateSignature_Params
 {
-	class UWidget_TrainButton_C*                       Button;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_TrainButton_C**                      Button;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 }

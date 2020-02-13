@@ -36,7 +36,7 @@ struct UBTT_MoveToTargetPoint_C_ReceiveAbortAI_Params
 // Function BTT_MoveToTargetPoint.BTT_MoveToTargetPoint_C.ExecuteUbergraph_BTT_MoveToTargetPoint
 struct UBTT_MoveToTargetPoint_C_ExecuteUbergraph_BTT_MoveToTargetPoint_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

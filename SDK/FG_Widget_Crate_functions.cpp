@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Crate.Widget_Crate_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -37,7 +37,7 @@ void UWidget_Crate_C::DropInventorySlotStack(class UWidget_InventorySlot_C** Inv
 
 
 // Function Widget_Crate.Widget_Crate_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Crate_C::Cleanup()
 {
@@ -54,7 +54,7 @@ void UWidget_Crate_C::Cleanup()
 
 
 // Function Widget_Crate.Widget_Crate_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_Crate_C::Init()
 {
@@ -71,7 +71,7 @@ void UWidget_Crate_C::Init()
 
 
 // Function Widget_Crate.Widget_Crate_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -93,7 +93,7 @@ void UWidget_Crate_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Crate.Widget_Crate_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Crate_C::Construct()
 {
@@ -110,7 +110,7 @@ void UWidget_Crate_C::Construct()
 
 
 // Function Widget_Crate.Widget_Crate_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Crate_C::Destruct()
 {
@@ -127,7 +127,7 @@ void UWidget_Crate_C::Destruct()
 
 
 // Function Widget_Crate.Widget_Crate_C.OnGrabAll
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Crate_C::OnGrabAll()
 {
@@ -144,11 +144,11 @@ void UWidget_Crate_C::OnGrabAll()
 
 
 // Function Widget_Crate.Widget_Crate_C.ExecuteUbergraph_Widget_Crate
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Crate_C::ExecuteUbergraph_Widget_Crate(int EntryPoint)
+void UWidget_Crate_C::ExecuteUbergraph_Widget_Crate(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Crate.Widget_Crate_C.ExecuteUbergraph_Widget_Crate");
 

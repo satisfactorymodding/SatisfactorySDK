@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_ReverseToFreedom.BTT_ReverseToFreedom_C.ReverseComplete
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_ReverseToFreedom_C::ReverseComplete()
 {
@@ -30,7 +30,7 @@ void UBTT_ReverseToFreedom_C::ReverseComplete()
 
 
 // Function BTT_ReverseToFreedom.BTT_ReverseToFreedom_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,11 +52,11 @@ void UBTT_ReverseToFreedom_C::ReceiveExecuteAI(class AAIController** OwnerContro
 
 
 // Function BTT_ReverseToFreedom.BTT_ReverseToFreedom_C.ExecuteUbergraph_BTT_ReverseToFreedom
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_ReverseToFreedom_C::ExecuteUbergraph_BTT_ReverseToFreedom(int EntryPoint)
+void UBTT_ReverseToFreedom_C::ExecuteUbergraph_BTT_ReverseToFreedom(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_ReverseToFreedom.BTT_ReverseToFreedom_C.ExecuteUbergraph_BTT_ReverseToFreedom");
 

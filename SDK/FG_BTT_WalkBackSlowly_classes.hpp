@@ -31,7 +31,7 @@ public:
 	void ReceiveExecute(class AActor** OwnerActor);
 	void WalkBackComplete();
 	void ReceiveAbort(class AActor** OwnerActor);
-	void ExecuteUbergraph_BTT_WalkBackSlowly(int EntryPoint);
+	void ExecuteUbergraph_BTT_WalkBackSlowly(int* EntryPoint);
 };
 
 

@@ -12,8 +12,25 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_BuildMode.Widget_BuildMode_C.UpdateHintVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_BuildMode_C::UpdateHintVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMode.Widget_BuildMode_C.UpdateHintVisibility");
+
+	UWidget_BuildMode_C_UpdateHintVisibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_BuildMode.Widget_BuildMode_C.CheckHologramState
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +51,7 @@ bool UWidget_BuildMode_C::CheckHologramState()
 
 
 // Function Widget_BuildMode.Widget_BuildMode_C.GetBuildDisqualifiersVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +72,7 @@ ESlateVisibility UWidget_BuildMode_C::GetBuildDisqualifiersVisibility()
 
 
 // Function Widget_BuildMode.Widget_BuildMode_C.GetBuildDisqualifiersText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -76,7 +93,7 @@ struct FText UWidget_BuildMode_C::GetBuildDisqualifiersText()
 
 
 // Function Widget_BuildMode.Widget_BuildMode_C.UpdateCost
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMode_C::UpdateCost()
 {
@@ -93,7 +110,7 @@ void UWidget_BuildMode_C::UpdateCost()
 
 
 // Function Widget_BuildMode.Widget_BuildMode_C.CreateCostSlots
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMode_C::CreateCostSlots()
 {
@@ -110,7 +127,7 @@ void UWidget_BuildMode_C::CreateCostSlots()
 
 
 // Function Widget_BuildMode.Widget_BuildMode_C.GetTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -131,7 +148,7 @@ struct FSlateColor UWidget_BuildMode_C::GetTextColor()
 
 
 // Function Widget_BuildMode.Widget_BuildMode_C.OnEscapePressed
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMode_C::OnEscapePressed()
 {
@@ -148,7 +165,7 @@ void UWidget_BuildMode_C::OnEscapePressed()
 
 
 // Function Widget_BuildMode.Widget_BuildMode_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_BuildMode_C::Construct()
 {
@@ -164,30 +181,8 @@ void UWidget_BuildMode_C::Construct()
 }
 
 
-// Function Widget_BuildMode.Widget_BuildMode_C.Tick
-// ()
-// Parameters:
-// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_BuildMode_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMode.Widget_BuildMode_C.Tick");
-
-	UWidget_BuildMode_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_BuildMode.Widget_BuildMode_C.PlayDismantleAnimation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMode_C::PlayDismantleAnimation()
 {
@@ -204,7 +199,7 @@ void UWidget_BuildMode_C::PlayDismantleAnimation()
 
 
 // Function Widget_BuildMode.Widget_BuildMode_C.StopDismantleAnimation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMode_C::StopDismantleAnimation()
 {
@@ -220,12 +215,52 @@ void UWidget_BuildMode_C::StopDismantleAnimation()
 }
 
 
-// Function Widget_BuildMode.Widget_BuildMode_C.ExecuteUbergraph_Widget_BuildMode
-// ()
+// Function Widget_BuildMode.Widget_BuildMode_C.OnCustomTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         UpdateTime                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMode_C::ExecuteUbergraph_Widget_BuildMode(int EntryPoint)
+void UWidget_BuildMode_C::OnCustomTick(float* UpdateTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMode.Widget_BuildMode_C.OnCustomTick");
+
+	UWidget_BuildMode_C_OnCustomTick_Params params;
+	params.UpdateTime = UpdateTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_BuildMode.Widget_BuildMode_C.PlayOnSplineModeChangedAnimation
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EHologramSplinePathMode*       newSplineMode                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_BuildMode_C::PlayOnSplineModeChangedAnimation(EHologramSplinePathMode* newSplineMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMode.Widget_BuildMode_C.PlayOnSplineModeChangedAnimation");
+
+	UWidget_BuildMode_C_PlayOnSplineModeChangedAnimation_Params params;
+	params.newSplineMode = newSplineMode;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_BuildMode.Widget_BuildMode_C.ExecuteUbergraph_Widget_BuildMode
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_BuildMode_C::ExecuteUbergraph_Widget_BuildMode(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMode.Widget_BuildMode_C.ExecuteUbergraph_Widget_BuildMode");
 

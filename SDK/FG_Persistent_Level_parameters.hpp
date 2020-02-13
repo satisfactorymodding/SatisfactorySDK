@@ -27,7 +27,7 @@ struct APersistent_Level_C_TeleportPlayer_Params
 // Function Persistent_Level.Persistent_Level_C.ExecuteUbergraph_Persistent_Level
 struct APersistent_Level_C_ExecuteUbergraph_Persistent_Level_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

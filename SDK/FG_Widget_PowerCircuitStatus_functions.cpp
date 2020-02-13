@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PowerCircuitStatus.Widget_PowerCircuitStatus_C.IsConnectedVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_PowerCircuitStatus_C::IsConnectedVisibility()
 
 
 // Function Widget_PowerCircuitStatus.Widget_PowerCircuitStatus_C.IsConnected
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsConnected                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -56,7 +56,7 @@ void UWidget_PowerCircuitStatus_C::IsConnected(bool* IsConnected)
 
 
 // Function Widget_PowerCircuitStatus.Widget_PowerCircuitStatus_C.GetCircuitText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 

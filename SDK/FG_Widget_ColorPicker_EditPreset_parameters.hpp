@@ -33,7 +33,7 @@ struct UWidget_ColorPicker_EditPreset_C_BndEvt__mEditPresetCanel_K2Node_Componen
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.OnPopupConfirm
 struct UWidget_ColorPicker_EditPreset_C_OnPopupConfirm_Params
 {
-	bool                                               ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.BndEvt__mPrimaryColorPicker_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
@@ -49,14 +49,14 @@ struct UWidget_ColorPicker_EditPreset_C_BndEvt__mSecondaryColorPicker_K2Node_Com
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.ExecuteUbergraph_Widget_ColorPicker_EditPreset
 struct UWidget_ColorPicker_EditPreset_C_ExecuteUbergraph_Widget_ColorPicker_EditPreset_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.OnAccept__DelegateSignature
 struct UWidget_ColorPicker_EditPreset_C_OnAccept__DelegateSignature_Params
 {
-	struct FLinearColor                                PrimaryColor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                SecondaryColor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               PrimaryColor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               SecondaryColor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -12,23 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Crystal.BP_Crystal_C.UserConstructionScript
-// ()
-
-void ABP_Crystal_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Crystal.BP_Crystal_C.UserConstructionScript");
-
-	ABP_Crystal_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 }
 
 #ifdef _MSC_VER

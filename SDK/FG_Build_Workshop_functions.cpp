@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_Workshop.Build_Workshop_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -38,7 +38,7 @@ struct FText ABuild_Workshop_C::GetLookAtDecription(class AFGCharacterPlayer** b
 
 
 // Function Build_Workshop.Build_Workshop_C.IsUseable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -59,7 +59,7 @@ bool ABuild_Workshop_C::IsUseable()
 
 
 // Function Build_Workshop.Build_Workshop_C.UpdateUseState
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -83,23 +83,6 @@ void ABuild_Workshop_C::UpdateUseState(class AFGCharacterPlayer** byCharacter, s
 
 	if (out_useState != nullptr)
 		*out_useState = params.out_useState;
-}
-
-
-// Function Build_Workshop.Build_Workshop_C.UserConstructionScript
-// ()
-
-void ABuild_Workshop_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_Workshop.Build_Workshop_C.UserConstructionScript");
-
-	ABuild_Workshop_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

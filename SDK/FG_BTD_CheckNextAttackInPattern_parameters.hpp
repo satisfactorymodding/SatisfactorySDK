@@ -32,7 +32,7 @@ struct UBTD_CheckNextAttackInPattern_C_ReceiveExecutionStartAI_Params
 // Function BTD_CheckNextAttackInPattern.BTD_CheckNextAttackInPattern_C.ExecuteUbergraph_BTD_CheckNextAttackInPattern
 struct UBTD_CheckNextAttackInPattern_C_ExecuteUbergraph_BTD_CheckNextAttackInPattern_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -14,21 +14,26 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.GetByProductIconVisibility
+struct UWidget_BuildMenu_InfoBox_C_GetByProductIconVisibility_Params
+{
+	bool*                                              IsValid;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.GetStatsVisibility
 struct UWidget_BuildMenu_InfoBox_C_GetStatsVisibility_Params
 {
-	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.AnimateCostSlots
-struct UWidget_BuildMenu_InfoBox_C_AnimateCostSlots_Params
+// Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.AnimateCostslots
+struct UWidget_BuildMenu_InfoBox_C_AnimateCostslots_Params
 {
 };
 
 // Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.ExecuteUbergraph_Widget_BuildMenu_InfoBox
 struct UWidget_BuildMenu_InfoBox_C_ExecuteUbergraph_Widget_BuildMenu_InfoBox_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

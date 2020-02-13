@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_JetPack.Attach_JetPack_C.UserConstructionScript
-struct AAttach_JetPack_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_JetPack.Attach_JetPack_C.OnStopThrusting
 struct AAttach_JetPack_C_OnStopThrusting_Params
 {
@@ -37,7 +32,7 @@ struct AAttach_JetPack_C_ReceiveBeginPlay_Params
 // Function Attach_JetPack.Attach_JetPack_C.ExecuteUbergraph_Attach_JetPack
 struct AAttach_JetPack_C_ExecuteUbergraph_Attach_JetPack_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

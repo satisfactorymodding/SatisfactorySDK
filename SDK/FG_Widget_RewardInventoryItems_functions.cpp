@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RewardInventoryItems.Widget_RewardInventoryItems_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UWidget_RewardInventoryItems_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_RewardInventoryItems.Widget_RewardInventoryItems_C.ExecuteUbergraph_Widget_RewardInventoryItems
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RewardInventoryItems_C::ExecuteUbergraph_Widget_RewardInventoryItems(int EntryPoint)
+void UWidget_RewardInventoryItems_C::ExecuteUbergraph_Widget_RewardInventoryItems(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardInventoryItems.Widget_RewardInventoryItems_C.ExecuteUbergraph_Widget_RewardInventoryItems");
 

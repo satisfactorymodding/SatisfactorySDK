@@ -23,7 +23,7 @@ struct UBTT_CheckValidPath_C_ReceiveExecute_Params
 // Function BTT_CheckValidPath.BTT_CheckValidPath_C.ExecuteUbergraph_BTT_CheckValidPath
 struct UBTT_CheckValidPath_C_ExecuteUbergraph_BTT_CheckValidPath_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

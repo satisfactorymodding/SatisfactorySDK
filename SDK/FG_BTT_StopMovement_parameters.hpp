@@ -24,7 +24,7 @@ struct UBTT_StopMovement_C_ReceiveExecuteAI_Params
 // Function BTT_StopMovement.BTT_StopMovement_C.ExecuteUbergraph_BTT_StopMovement
 struct UBTT_StopMovement_C_ExecuteUbergraph_BTT_StopMovement_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

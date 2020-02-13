@@ -22,7 +22,7 @@ struct UWidget_CompassObjectPing_C_Construct_Params
 // Function Widget_CompassObjectPing.Widget_CompassObjectPing_C.ExecuteUbergraph_Widget_CompassObjectPing
 struct UWidget_CompassObjectPing_C_ExecuteUbergraph_Widget_CompassObjectPing_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -29,11 +29,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void InpActEvt_Shift_P_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_Shift_P_K2Node_InputKeyEvent_1(struct FKey* Key);
 	void ReceiveOnActivate(class APlayerController** OriginalPC);
 	void ReceiveOnDeactivate(class APlayerController** RestoredPC);
-	void ExecuteUbergraph_BP_DebugCameraController(int EntryPoint);
+	void ExecuteUbergraph_BP_DebugCameraController(int* EntryPoint);
 };
 
 

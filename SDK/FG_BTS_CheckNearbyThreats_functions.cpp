@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_CheckNearbyThreats.BTS_CheckNearbyThreats_C.ReceiveTickAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -37,11 +37,11 @@ void UBTS_CheckNearbyThreats_C::ReceiveTickAI(class AAIController** OwnerControl
 
 
 // Function BTS_CheckNearbyThreats.BTS_CheckNearbyThreats_C.ExecuteUbergraph_BTS_CheckNearbyThreats
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_CheckNearbyThreats_C::ExecuteUbergraph_BTS_CheckNearbyThreats(int EntryPoint)
+void UBTS_CheckNearbyThreats_C::ExecuteUbergraph_BTS_CheckNearbyThreats(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_CheckNearbyThreats.BTS_CheckNearbyThreats_C.ExecuteUbergraph_BTS_CheckNearbyThreats");
 

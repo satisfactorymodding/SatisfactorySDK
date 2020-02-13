@@ -19,11 +19,6 @@ struct AChar_EliteCaveStinger_C_OnRep_bSpawnGass_Params
 {
 };
 
-// Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.UserConstructionScript
-struct AChar_EliteCaveStinger_C_UserConstructionScript_Params
-{
-};
-
 // Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.SpawnGas
 struct AChar_EliteCaveStinger_C_SpawnGas_Params
 {
@@ -37,7 +32,7 @@ struct AChar_EliteCaveStinger_C_GasEffect_Params
 // Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.ExecuteUbergraph_Char_EliteCaveStinger
 struct AChar_EliteCaveStinger_C_ExecuteUbergraph_Char_EliteCaveStinger_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

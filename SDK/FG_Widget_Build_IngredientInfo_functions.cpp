@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Build_IngredientInfo.Widget_Build_IngredientInfo_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Build_IngredientInfo_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_Build_IngredientInfo_C::Construct()
 
 
 // Function Widget_Build_IngredientInfo.Widget_Build_IngredientInfo_C.ExecuteUbergraph_Widget_Build_IngredientInfo
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Build_IngredientInfo_C::ExecuteUbergraph_Widget_Build_IngredientInfo(int EntryPoint)
+void UWidget_Build_IngredientInfo_C::ExecuteUbergraph_Widget_Build_IngredientInfo(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Build_IngredientInfo.Widget_Build_IngredientInfo_C.ExecuteUbergraph_Widget_Build_IngredientInfo");
 

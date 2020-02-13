@@ -30,7 +30,7 @@ struct UWidget_Graph_C_Tick_Params
 // Function Widget_Graph.Widget_Graph_C.ExecuteUbergraph_Widget_Graph
 struct UWidget_Graph_C_ExecuteUbergraph_Widget_Graph_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

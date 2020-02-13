@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ManageSession.Widget_ManageSession_C.ClearIngamePlayerList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageSession_C::ClearIngamePlayerList()
 {
@@ -30,12 +30,12 @@ void UWidget_ManageSession_C::ClearIngamePlayerList()
 
 
 // Function Widget_ManageSession.Widget_ManageSession_C.IsHost
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class APlayerState*            State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerState**           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isOurself                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManageSession_C::IsHost(class APlayerState* State, bool* isOurself)
+void UWidget_ManageSession_C::IsHost(class APlayerState** State, bool* isOurself)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.IsHost");
 
@@ -53,25 +53,8 @@ void UWidget_ManageSession_C::IsHost(class APlayerState* State, bool* isOurself)
 }
 
 
-// Function Widget_ManageSession.Widget_ManageSession_C.DisableManagePlayers
-// ()
-
-void UWidget_ManageSession_C::DisableManagePlayers()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.DisableManagePlayers");
-
-	UWidget_ManageSession_C_DisableManagePlayers_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_ManageSession.Widget_ManageSession_C.DisableSessionType
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageSession_C::DisableSessionType()
 {
@@ -88,7 +71,7 @@ void UWidget_ManageSession_C::DisableSessionType()
 
 
 // Function Widget_ManageSession.Widget_ManageSession_C.DisableClientOptions
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageSession_C::DisableClientOptions()
 {
@@ -105,7 +88,7 @@ void UWidget_ManageSession_C::DisableClientOptions()
 
 
 // Function Widget_ManageSession.Widget_ManageSession_C.UpdateCurrentSessionType
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageSession_C::UpdateCurrentSessionType()
 {
@@ -122,7 +105,7 @@ void UWidget_ManageSession_C::UpdateCurrentSessionType()
 
 
 // Function Widget_ManageSession.Widget_ManageSession_C.PopulateManagePlayerList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageSession_C::PopulateManagePlayerList()
 {
@@ -139,7 +122,7 @@ void UWidget_ManageSession_C::PopulateManagePlayerList()
 
 
 // Function Widget_ManageSession.Widget_ManageSession_C.ClearLeftSelection
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageSession_C::ClearLeftSelection()
 {
@@ -155,12 +138,49 @@ void UWidget_ManageSession_C::ClearLeftSelection()
 }
 
 
-// Function Widget_ManageSession.Widget_ManageSession_C.BndEvt__Widget_Options_DropdownBox_K2Node_ComponentBoundEvent_0_onSelectionChanged__DelegateSignature
-// ()
-// Parameters:
-// class FString                  SelectedOption                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// Function Widget_ManageSession.Widget_ManageSession_C.OnEscape
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_ManageSession_C::BndEvt__Widget_Options_DropdownBox_K2Node_ComponentBoundEvent_0_onSelectionChanged__DelegateSignature(const class FString& SelectedOption)
+void UWidget_ManageSession_C::OnEscape()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.OnEscape");
+
+	UWidget_ManageSession_C_OnEscape_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ManageSession.Widget_ManageSession_C.OnKick
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_Multiplayer_ListButton_C** ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_ManageSession_C::OnKick(class UWidget_Multiplayer_ListButton_C** ClickedButton)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.OnKick");
+
+	UWidget_ManageSession_C_OnKick_Params params;
+	params.ClickedButton = ClickedButton;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ManageSession.Widget_ManageSession_C.BndEvt__Widget_Options_DropdownBox_K2Node_ComponentBoundEvent_0_onSelectionChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class FString*                 SelectedOption                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void UWidget_ManageSession_C::BndEvt__Widget_Options_DropdownBox_K2Node_ComponentBoundEvent_0_onSelectionChanged__DelegateSignature(class FString* SelectedOption)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.BndEvt__Widget_Options_DropdownBox_K2Node_ComponentBoundEvent_0_onSelectionChanged__DelegateSignature");
 
@@ -176,11 +196,11 @@ void UWidget_ManageSession_C::BndEvt__Widget_Options_DropdownBox_K2Node_Componen
 
 
 // Function Widget_ManageSession.Widget_ManageSession_C.OnJoinInvite
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Multiplayer_ListButton_C* Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Multiplayer_ListButton_C** Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ManageSession_C::OnJoinInvite(class UWidget_Multiplayer_ListButton_C* Button)
+void UWidget_ManageSession_C::OnJoinInvite(class UWidget_Multiplayer_ListButton_C** Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.OnJoinInvite");
 
@@ -196,7 +216,7 @@ void UWidget_ManageSession_C::OnJoinInvite(class UWidget_Multiplayer_ListButton_
 
 
 // Function Widget_ManageSession.Widget_ManageSession_C.SpawnAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool*                          PlayBackgroundAnim             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -215,25 +235,8 @@ void UWidget_ManageSession_C::SpawnAnim(bool* PlayBackgroundAnim)
 }
 
 
-// Function Widget_ManageSession.Widget_ManageSession_C.OnEscape
-// ()
-
-void UWidget_ManageSession_C::OnEscape()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.OnEscape");
-
-	UWidget_ManageSession_C_OnEscape_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_ManageSession.Widget_ManageSession_C.OnMenuEnter
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UWidget**                prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -252,33 +255,13 @@ void UWidget_ManageSession_C::OnMenuEnter(class UWidget** prevMenu)
 }
 
 
-// Function Widget_ManageSession.Widget_ManageSession_C.OnKick
-// ()
-// Parameters:
-// class UWidget_Multiplayer_ListButton_C* ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UWidget_ManageSession_C::OnKick(class UWidget_Multiplayer_ListButton_C* ClickedButton)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.OnKick");
-
-	UWidget_ManageSession_C_OnKick_Params params;
-	params.ClickedButton = ClickedButton;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_ManageSession.Widget_ManageSession_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_1_OnActiveWidgetSet__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class UWidget*                 oldWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UWidget*                 newWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget**                oldWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget**                newWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ManageSession_C::BndEvt__mSwitcher_K2Node_ComponentBoundEvent_1_OnActiveWidgetSet__DelegateSignature(class UWidget* oldWidget, class UWidget* newWidget)
+void UWidget_ManageSession_C::BndEvt__mSwitcher_K2Node_ComponentBoundEvent_1_OnActiveWidgetSet__DelegateSignature(class UWidget** oldWidget, class UWidget** newWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_1_OnActiveWidgetSet__DelegateSignature");
 
@@ -295,11 +278,11 @@ void UWidget_ManageSession_C::BndEvt__mSwitcher_K2Node_ComponentBoundEvent_1_OnA
 
 
 // Function Widget_ManageSession.Widget_ManageSession_C.ExecuteUbergraph_Widget_ManageSession
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManageSession_C::ExecuteUbergraph_Widget_ManageSession(int EntryPoint)
+void UWidget_ManageSession_C::ExecuteUbergraph_Widget_ManageSession(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageSession.Widget_ManageSession_C.ExecuteUbergraph_Widget_ManageSession");
 

@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_BuildMode.Widget_BuildMode_C.UpdateHintVisibility
+struct UWidget_BuildMode_C_UpdateHintVisibility_Params
+{
+};
+
 // Function Widget_BuildMode.Widget_BuildMode_C.CheckHologramState
 struct UWidget_BuildMode_C_CheckHologramState_Params
 {
@@ -58,13 +63,6 @@ struct UWidget_BuildMode_C_Construct_Params
 {
 };
 
-// Function Widget_BuildMode.Widget_BuildMode_C.Tick
-struct UWidget_BuildMode_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Widget_BuildMode.Widget_BuildMode_C.PlayDismantleAnimation
 struct UWidget_BuildMode_C_PlayDismantleAnimation_Params
 {
@@ -75,10 +73,22 @@ struct UWidget_BuildMode_C_StopDismantleAnimation_Params
 {
 };
 
+// Function Widget_BuildMode.Widget_BuildMode_C.OnCustomTick
+struct UWidget_BuildMode_C_OnCustomTick_Params
+{
+	float*                                             UpdateTime;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_BuildMode.Widget_BuildMode_C.PlayOnSplineModeChangedAnimation
+struct UWidget_BuildMode_C_PlayOnSplineModeChangedAnimation_Params
+{
+	EHologramSplinePathMode*                           newSplineMode;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_BuildMode.Widget_BuildMode_C.ExecuteUbergraph_Widget_BuildMode
 struct UWidget_BuildMode_C_ExecuteUbergraph_Widget_BuildMode_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_HUDBox_Equipment_Parent.Widget_HUDBox_Equipment_Parent_C
-// 0x0010 (0x0218 - 0x0208)
+// 0x0010 (0x0240 - 0x0230)
 class UWidget_HUDBox_Equipment_Parent_C : public UUserWidget
 {
 public:
-	class AFGEquipment*                                mEquipment;                                               // 0x0208(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class UWidget_HUDBox_C*                            mHudBoxParent;                                            // 0x0210(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AFGEquipment*                                mEquipment;                                               // 0x0230(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	class UWidget_HUDBox_C*                            mHudBoxParent;                                            // 0x0238(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

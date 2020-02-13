@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ActorDetails_Parent.Widget_ActorDetails_Parent_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActorDetails_Parent_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_ActorDetails_Parent_C::Construct()
 
 
 // Function Widget_ActorDetails_Parent.Widget_ActorDetails_Parent_C.ActorDetailsUpdate
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActorDetails_Parent_C::ActorDetailsUpdate()
 {
@@ -47,7 +47,7 @@ void UWidget_ActorDetails_Parent_C::ActorDetailsUpdate()
 
 
 // Function Widget_ActorDetails_Parent.Widget_ActorDetails_Parent_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActorDetails_Parent_C::Destruct()
 {
@@ -64,11 +64,11 @@ void UWidget_ActorDetails_Parent_C::Destruct()
 
 
 // Function Widget_ActorDetails_Parent.Widget_ActorDetails_Parent_C.ExecuteUbergraph_Widget_ActorDetails_Parent
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActorDetails_Parent_C::ExecuteUbergraph_Widget_ActorDetails_Parent(int EntryPoint)
+void UWidget_ActorDetails_Parent_C::ExecuteUbergraph_Widget_ActorDetails_Parent(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActorDetails_Parent.Widget_ActorDetails_Parent_C.ExecuteUbergraph_Widget_ActorDetails_Parent");
 

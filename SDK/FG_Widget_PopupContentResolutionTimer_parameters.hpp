@@ -51,7 +51,7 @@ struct UWidget_PopupContentResolutionTimer_C_Destruct_Params
 // Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.ExecuteUbergraph_Widget_PopupContentResolutionTimer
 struct UWidget_PopupContentResolutionTimer_C_ExecuteUbergraph_Widget_PopupContentResolutionTimer_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

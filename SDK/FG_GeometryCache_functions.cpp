@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UGeometryCacheComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -24,6 +24,7 @@ class UGeometryCacheComponent* AGeometryCacheActor::GetGeometryCacheComponent()
 	AGeometryCacheActor_GetGeometryCacheComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,14 +35,14 @@ class UGeometryCacheComponent* AGeometryCacheActor::GetGeometryCacheComponent()
 
 
 // Function GeometryCache.GeometryCacheComponent.TickAtThisTime
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Time                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInIsRunning                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInBackwards                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInIsLooping                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Time                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bInIsRunning                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bInBackwards                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bInIsLooping                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UGeometryCacheComponent::TickAtThisTime(float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping)
+void UGeometryCacheComponent::TickAtThisTime(float* Time, bool* bInIsRunning, bool* bInBackwards, bool* bInIsLooping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.TickAtThisTime");
 
@@ -52,6 +53,7 @@ void UGeometryCacheComponent::TickAtThisTime(float Time, bool bInIsRunning, bool
 	params.bInIsLooping = bInIsLooping;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +62,7 @@ void UGeometryCacheComponent::TickAtThisTime(float Time, bool bInIsRunning, bool
 
 
 // Function GeometryCache.GeometryCacheComponent.Stop
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UGeometryCacheComponent::Stop()
 {
@@ -69,6 +71,7 @@ void UGeometryCacheComponent::Stop()
 	UGeometryCacheComponent_Stop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,11 +80,11 @@ void UGeometryCacheComponent::Stop()
 
 
 // Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewStartTimeOffset             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         NewStartTimeOffset             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UGeometryCacheComponent::SetStartTimeOffset(float NewStartTimeOffset)
+void UGeometryCacheComponent::SetStartTimeOffset(float* NewStartTimeOffset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset");
 
@@ -89,6 +92,7 @@ void UGeometryCacheComponent::SetStartTimeOffset(float NewStartTimeOffset)
 	params.NewStartTimeOffset = NewStartTimeOffset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,11 +101,11 @@ void UGeometryCacheComponent::SetStartTimeOffset(float NewStartTimeOffset)
 
 
 // Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewPlaybackSpeed               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         NewPlaybackSpeed               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UGeometryCacheComponent::SetPlaybackSpeed(float NewPlaybackSpeed)
+void UGeometryCacheComponent::SetPlaybackSpeed(float* NewPlaybackSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed");
 
@@ -109,6 +113,7 @@ void UGeometryCacheComponent::SetPlaybackSpeed(float NewPlaybackSpeed)
 	params.NewPlaybackSpeed = NewPlaybackSpeed;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,11 +122,11 @@ void UGeometryCacheComponent::SetPlaybackSpeed(float NewPlaybackSpeed)
 
 
 // Function GeometryCache.GeometryCacheComponent.SetLooping
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewLooping                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bNewLooping                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UGeometryCacheComponent::SetLooping(bool bNewLooping)
+void UGeometryCacheComponent::SetLooping(bool* bNewLooping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetLooping");
 
@@ -129,6 +134,7 @@ void UGeometryCacheComponent::SetLooping(bool bNewLooping)
 	params.bNewLooping = bNewLooping;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,12 +143,12 @@ void UGeometryCacheComponent::SetLooping(bool bNewLooping)
 
 
 // Function GeometryCache.GeometryCacheComponent.SetGeometryCache
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UGeometryCache*          NewGeomCache                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UGeometryCache**         NewGeomCache                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UGeometryCacheComponent::SetGeometryCache(class UGeometryCache* NewGeomCache)
+bool UGeometryCacheComponent::SetGeometryCache(class UGeometryCache** NewGeomCache)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetGeometryCache");
 
@@ -150,6 +156,7 @@ bool UGeometryCacheComponent::SetGeometryCache(class UGeometryCache* NewGeomCach
 	params.NewGeomCache = NewGeomCache;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,7 +167,7 @@ bool UGeometryCacheComponent::SetGeometryCache(class UGeometryCache* NewGeomCach
 
 
 // Function GeometryCache.GeometryCacheComponent.PlayReversedFromEnd
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UGeometryCacheComponent::PlayReversedFromEnd()
 {
@@ -169,6 +176,7 @@ void UGeometryCacheComponent::PlayReversedFromEnd()
 	UGeometryCacheComponent_PlayReversedFromEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -177,7 +185,7 @@ void UGeometryCacheComponent::PlayReversedFromEnd()
 
 
 // Function GeometryCache.GeometryCacheComponent.PlayReversed
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UGeometryCacheComponent::PlayReversed()
 {
@@ -186,6 +194,7 @@ void UGeometryCacheComponent::PlayReversed()
 	UGeometryCacheComponent_PlayReversed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,7 +203,7 @@ void UGeometryCacheComponent::PlayReversed()
 
 
 // Function GeometryCache.GeometryCacheComponent.PlayFromStart
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UGeometryCacheComponent::PlayFromStart()
 {
@@ -203,6 +212,7 @@ void UGeometryCacheComponent::PlayFromStart()
 	UGeometryCacheComponent_PlayFromStart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -211,7 +221,7 @@ void UGeometryCacheComponent::PlayFromStart()
 
 
 // Function GeometryCache.GeometryCacheComponent.Play
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UGeometryCacheComponent::Play()
 {
@@ -220,6 +230,7 @@ void UGeometryCacheComponent::Play()
 	UGeometryCacheComponent_Play_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -228,7 +239,7 @@ void UGeometryCacheComponent::Play()
 
 
 // Function GeometryCache.GeometryCacheComponent.Pause
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UGeometryCacheComponent::Pause()
 {
@@ -237,6 +248,7 @@ void UGeometryCacheComponent::Pause()
 	UGeometryCacheComponent_Pause_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -245,7 +257,7 @@ void UGeometryCacheComponent::Pause()
 
 
 // Function GeometryCache.GeometryCacheComponent.IsPlayingReversed
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -256,6 +268,7 @@ bool UGeometryCacheComponent::IsPlayingReversed()
 	UGeometryCacheComponent_IsPlayingReversed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,7 +279,7 @@ bool UGeometryCacheComponent::IsPlayingReversed()
 
 
 // Function GeometryCache.GeometryCacheComponent.IsPlaying
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -277,6 +290,7 @@ bool UGeometryCacheComponent::IsPlaying()
 	UGeometryCacheComponent_IsPlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -287,7 +301,7 @@ bool UGeometryCacheComponent::IsPlaying()
 
 
 // Function GeometryCache.GeometryCacheComponent.IsLooping
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -298,6 +312,7 @@ bool UGeometryCacheComponent::IsLooping()
 	UGeometryCacheComponent_IsLooping_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -308,7 +323,7 @@ bool UGeometryCacheComponent::IsLooping()
 
 
 // Function GeometryCache.GeometryCacheComponent.GetStartTimeOffset
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -319,6 +334,7 @@ float UGeometryCacheComponent::GetStartTimeOffset()
 	UGeometryCacheComponent_GetStartTimeOffset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -329,7 +345,7 @@ float UGeometryCacheComponent::GetStartTimeOffset()
 
 
 // Function GeometryCache.GeometryCacheComponent.GetPlaybackSpeed
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -340,6 +356,7 @@ float UGeometryCacheComponent::GetPlaybackSpeed()
 	UGeometryCacheComponent_GetPlaybackSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -350,7 +367,7 @@ float UGeometryCacheComponent::GetPlaybackSpeed()
 
 
 // Function GeometryCache.GeometryCacheComponent.GetPlaybackDirection
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -361,6 +378,7 @@ float UGeometryCacheComponent::GetPlaybackDirection()
 	UGeometryCacheComponent_GetPlaybackDirection_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -371,7 +389,7 @@ float UGeometryCacheComponent::GetPlaybackDirection()
 
 
 // Function GeometryCache.GeometryCacheComponent.GetNumberOfFrames
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -382,6 +400,7 @@ int UGeometryCacheComponent::GetNumberOfFrames()
 	UGeometryCacheComponent_GetNumberOfFrames_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -392,7 +411,7 @@ int UGeometryCacheComponent::GetNumberOfFrames()
 
 
 // Function GeometryCache.GeometryCacheComponent.GetDuration
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -403,6 +422,7 @@ float UGeometryCacheComponent::GetDuration()
 	UGeometryCacheComponent_GetDuration_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -413,7 +433,7 @@ float UGeometryCacheComponent::GetDuration()
 
 
 // Function GeometryCache.GeometryCacheComponent.GetAnimationTime
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -424,6 +444,7 @@ float UGeometryCacheComponent::GetAnimationTime()
 	UGeometryCacheComponent_GetAnimationTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -434,12 +455,12 @@ float UGeometryCacheComponent::GetAnimationTime()
 
 
 // Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
-// ()
+// (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGeometryCacheMeshData  MeshData                       (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          SampleTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FGeometryCacheMeshData* MeshData                       (ConstParm, Parm, OutParm, ReferenceParm)
+// float*                         SampleTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometryCacheMeshData& MeshData, float SampleTime)
+void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(struct FGeometryCacheMeshData* MeshData, float* SampleTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample");
 
@@ -448,6 +469,7 @@ void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometry
 	params.SampleTime = SampleTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -456,11 +478,11 @@ void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometry
 
 
 // Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
-// ()
+// (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGeometryCacheMeshData  NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGeometryCacheMeshData* NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
+void UGeometryCacheTrack_TransformAnimation::SetMesh(struct FGeometryCacheMeshData* NewMeshData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh");
 
@@ -468,6 +490,7 @@ void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCache
 	params.NewMeshData = NewMeshData;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -476,11 +499,11 @@ void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCache
 
 
 // Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
-// ()
+// (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGeometryCacheMeshData  NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGeometryCacheMeshData* NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
+void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(struct FGeometryCacheMeshData* NewMeshData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh");
 
@@ -488,6 +511,7 @@ void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(const struct FGeometry
 	params.NewMeshData = NewMeshData;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

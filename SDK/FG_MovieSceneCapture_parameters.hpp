@@ -29,13 +29,13 @@ struct UMovieSceneCaptureProtocolBase_GetState_Params
 // Function MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType
 struct UMovieSceneCapture_SetImageCaptureProtocolType_Params
 {
-	class UClass*                                      ProtocolType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     ProtocolType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType
 struct UMovieSceneCapture_SetAudioCaptureProtocolType_Params
 {
-	class UClass*                                      ProtocolType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     ProtocolType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MovieSceneCapture.MovieSceneCapture.GetImageCaptureProtocol
@@ -88,22 +88,14 @@ struct UUserDefinedCaptureProtocol_StopCapturingFinalPixels_Params
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.StartCapturingFinalPixels
 struct UUserDefinedCaptureProtocol_StartCapturingFinalPixels_Params
 {
-	struct FName                                       StreamName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FCapturedPixelsID*                          StreamID;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer
 struct UUserDefinedCaptureProtocol_ResolveBuffer_Params
 {
-	class UTexture*                                    Buffer;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       BufferName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FScriptDelegate                             Handler;                                                  // (Parm, ZeroConstructor)
-};
-
-// Function MovieSceneCapture.UserDefinedCaptureProtocol.PushBufferToStream
-struct UUserDefinedCaptureProtocol_PushBufferToStream_Params
-{
-	class UTexture*                                    Buffer;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       StreamName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UTexture**                                   Buffer;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FCapturedPixelsID*                          BufferID;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnWarmUp
@@ -130,6 +122,14 @@ struct UUserDefinedCaptureProtocol_OnSetup_Params
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPreTick
 struct UUserDefinedCaptureProtocol_OnPreTick_Params
 {
+};
+
+// Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPixelsReceived
+struct UUserDefinedCaptureProtocol_OnPixelsReceived_Params
+{
+	struct FCapturedPixels*                            Pixels;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FCapturedPixelsID*                          ID;                                                       // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FFrameMetrics*                              FrameMetrics;                                             // (Parm)
 };
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPauseCapture
@@ -167,24 +167,17 @@ struct UUserDefinedCaptureProtocol_GetCurrentFrameMetrics_Params
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.GenerateFilename
 struct UUserDefinedCaptureProtocol_GenerateFilename_Params
 {
-	struct FFrameMetrics                               InFrameMetrics;                                           // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FFrameMetrics*                              InFrameMetrics;                                           // (ConstParm, Parm, OutParm, ReferenceParm)
 	class FString                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function MovieSceneCapture.UserDefinedCaptureProtocol.BindToStream
-struct UUserDefinedCaptureProtocol_BindToStream_Params
-{
-	struct FName                                       StreamName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FScriptDelegate                             Handler;                                                  // (Parm, ZeroConstructor)
 };
 
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.WriteImageToDisk
 struct UUserDefinedImageCaptureProtocol_WriteImageToDisk_Params
 {
-	struct FCapturedPixels                             PixelData;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FName                                       StreamName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FFrameMetrics                               FrameMetrics;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               bCopyImageData;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FCapturedPixels*                            PixelData;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FCapturedPixelsID*                          StreamID;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FFrameMetrics*                              FrameMetrics;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool*                                              bCopyImageData;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForCurrentFrame
@@ -196,8 +189,8 @@ struct UUserDefinedImageCaptureProtocol_GenerateFilenameForCurrentFrame_Params
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer
 struct UUserDefinedImageCaptureProtocol_GenerateFilenameForBuffer_Params
 {
-	class UTexture*                                    Buffer;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       StreamName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UTexture**                                   Buffer;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FCapturedPixelsID*                          StreamID;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
 	class FString                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 

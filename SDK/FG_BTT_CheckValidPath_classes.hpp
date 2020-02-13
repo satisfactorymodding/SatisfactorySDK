@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BTT_CheckValidPath.BTT_CheckValidPath_C
-// 0x008C (0x012C - 0x00A0)
+// 0x0098 (0x0138 - 0x00A0)
 class UBTT_CheckValidPath_C : public UBTTask_BlueprintBase
 {
 public:
@@ -24,6 +24,8 @@ public:
 	struct FBlackboardKeySelector                      mTargetLocationBBKey;                                     // 0x00D0(0x0028) (Edit, BlueprintVisible)
 	struct FBlackboardKeySelector                      mHasValidPath;                                            // 0x00F8(0x0028) (Edit, BlueprintVisible)
 	struct FVector                                     mPathEnd;                                                 // 0x0120(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x012C(0x0004) MISSED OFFSET
+	class UClass*                                      NavFilter;                                                // 0x0130(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33,7 +35,7 @@ public:
 
 
 	void ReceiveExecute(class AActor** OwnerActor);
-	void ExecuteUbergraph_BTT_CheckValidPath(int EntryPoint);
+	void ExecuteUbergraph_BTT_CheckValidPath(int* EntryPoint);
 };
 
 

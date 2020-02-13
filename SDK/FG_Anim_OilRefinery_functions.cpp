@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_OilRefinery.Anim_OilRefinery_C.AnimNotify_OilRefineryEnteredOffline
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilRefinery_C::AnimNotify_OilRefineryEnteredOffline()
 {
@@ -30,7 +30,7 @@ void UAnim_OilRefinery_C::AnimNotify_OilRefineryEnteredOffline()
 
 
 // Function Anim_OilRefinery.Anim_OilRefinery_C.AnimNotify_OilRefineryEnteredProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilRefinery_C::AnimNotify_OilRefineryEnteredProducing()
 {
@@ -47,7 +47,7 @@ void UAnim_OilRefinery_C::AnimNotify_OilRefineryEnteredProducing()
 
 
 // Function Anim_OilRefinery.Anim_OilRefinery_C.AnimNotify_OilRefineryLeftOffline
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilRefinery_C::AnimNotify_OilRefineryLeftOffline()
 {
@@ -64,7 +64,7 @@ void UAnim_OilRefinery_C::AnimNotify_OilRefineryLeftOffline()
 
 
 // Function Anim_OilRefinery.Anim_OilRefinery_C.AnimNotify_OilRefineryLeftProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_OilRefinery_C::AnimNotify_OilRefineryLeftProducing()
 {
@@ -81,11 +81,11 @@ void UAnim_OilRefinery_C::AnimNotify_OilRefineryLeftProducing()
 
 
 // Function Anim_OilRefinery.Anim_OilRefinery_C.ExecuteUbergraph_Anim_OilRefinery
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_OilRefinery_C::ExecuteUbergraph_Anim_OilRefinery(int EntryPoint)
+void UAnim_OilRefinery_C::ExecuteUbergraph_Anim_OilRefinery(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_OilRefinery.Anim_OilRefinery_C.ExecuteUbergraph_Anim_OilRefinery");
 

@@ -12,29 +12,12 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_CreatureSeat.BP_CreatureSeat_C.UserConstructionScript
-// ()
-
-void ABP_CreatureSeat_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CreatureSeat.BP_CreatureSeat_C.UserConstructionScript");
-
-	ABP_CreatureSeat_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_CreatureSeat.BP_CreatureSeat_C.InpActEvt_Use_K2Node_InputActionEvent_2
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_CreatureSeat_C::InpActEvt_Use_K2Node_InputActionEvent_2(const struct FKey& Key)
+void ABP_CreatureSeat_C::InpActEvt_Use_K2Node_InputActionEvent_2(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CreatureSeat.BP_CreatureSeat_C.InpActEvt_Use_K2Node_InputActionEvent_2");
 
@@ -50,11 +33,11 @@ void ABP_CreatureSeat_C::InpActEvt_Use_K2Node_InputActionEvent_2(const struct FK
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_CreatureSeat_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_1(const struct FKey& Key)
+void ABP_CreatureSeat_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_1(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CreatureSeat.BP_CreatureSeat_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_1");
 
@@ -70,11 +53,11 @@ void ABP_CreatureSeat_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_1(const st
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CreatureSeat_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_CreatureSeat_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float* AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CreatureSeat.BP_CreatureSeat_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1");
 
@@ -90,7 +73,7 @@ void ABP_CreatureSeat_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float Ax
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.UpdateCamera
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_CreatureSeat_C::UpdateCamera()
 {
@@ -107,7 +90,7 @@ void ABP_CreatureSeat_C::UpdateCamera()
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -127,7 +110,7 @@ void ABP_CreatureSeat_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.ReceivePossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            NewController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -147,11 +130,11 @@ void ABP_CreatureSeat_C::ReceivePossessed(class AController** NewController)
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.ClientSetupHUD
-// ()
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGPlayerController*     Controller                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGPlayerController**    Controller                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CreatureSeat_C::ClientSetupHUD(class AFGPlayerController* Controller)
+void ABP_CreatureSeat_C::ClientSetupHUD(class AFGPlayerController** Controller)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CreatureSeat.BP_CreatureSeat_C.ClientSetupHUD");
 
@@ -167,7 +150,7 @@ void ABP_CreatureSeat_C::ClientSetupHUD(class AFGPlayerController* Controller)
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.Server_Leave
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_CreatureSeat_C::Server_Leave()
 {
@@ -184,7 +167,7 @@ void ABP_CreatureSeat_C::Server_Leave()
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.Server_DoAction
-// ()
+// (Net, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_CreatureSeat_C::Server_DoAction()
 {
@@ -201,7 +184,7 @@ void ABP_CreatureSeat_C::Server_DoAction()
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.Multicast_PlayClap
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_CreatureSeat_C::Multicast_PlayClap()
 {
@@ -218,7 +201,7 @@ void ABP_CreatureSeat_C::Multicast_PlayClap()
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.Server_PlayClap
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_CreatureSeat_C::Server_PlayClap()
 {
@@ -235,7 +218,7 @@ void ABP_CreatureSeat_C::Server_PlayClap()
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.PlayClap
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_CreatureSeat_C::PlayClap()
 {
@@ -252,11 +235,11 @@ void ABP_CreatureSeat_C::PlayClap()
 
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.ExecuteUbergraph_BP_CreatureSeat
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CreatureSeat_C::ExecuteUbergraph_BP_CreatureSeat(int EntryPoint)
+void ABP_CreatureSeat_C::ExecuteUbergraph_BP_CreatureSeat(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CreatureSeat.BP_CreatureSeat_C.ExecuteUbergraph_BP_CreatureSeat");
 

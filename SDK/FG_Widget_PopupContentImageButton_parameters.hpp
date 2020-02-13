@@ -22,7 +22,7 @@ struct UWidget_PopupContentImageButton_C_CacheDataFromReward_Params
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.GetIsSmeltable
 struct UWidget_PopupContentImageButton_C_GetIsSmeltable_Params
 {
-	class UClass*                                      inClass;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     inClass;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsSmeltable;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -63,8 +63,8 @@ struct UWidget_PopupContentImageButton_C_Construct_Params
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.UpdateButton
 struct UWidget_PopupContentImageButton_C_UpdateButton_Params
 {
-	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FSlateBrush                                 ImageBrush;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSlateBrush*                                ImageBrush;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.BndEvt__mPopupContentButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
@@ -85,13 +85,13 @@ struct UWidget_PopupContentImageButton_C_BndEvt__mPopupContentButton_K2Node_Comp
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.ExecuteUbergraph_Widget_PopupContentImageButton
 struct UWidget_PopupContentImageButton_C_ExecuteUbergraph_Widget_PopupContentImageButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_PopupContentImageButton.Widget_PopupContentImageButton_C.NotifyPopupContentIndexSelect__DelegateSignature
 struct UWidget_PopupContentImageButton_C_NotifyPopupContentIndexSelect__DelegateSignature_Params
 {
-	int                                                ChildIndex;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ChildIndex;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

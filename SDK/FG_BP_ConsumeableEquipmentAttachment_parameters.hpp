@@ -20,11 +20,6 @@ struct ABP_ConsumeableEquipmentAttachment_C_GetHandsItem_Params
 	class UClass*                                      Item;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.UserConstructionScript
-struct ABP_ConsumeableEquipmentAttachment_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.ReceiveTick
 struct ABP_ConsumeableEquipmentAttachment_C_ReceiveTick_Params
 {
@@ -45,7 +40,7 @@ struct ABP_ConsumeableEquipmentAttachment_C_OnAttach_Params
 // Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.ExecuteUbergraph_BP_ConsumeableEquipmentAttachment
 struct ABP_ConsumeableEquipmentAttachment_C_ExecuteUbergraph_BP_ConsumeableEquipmentAttachment_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

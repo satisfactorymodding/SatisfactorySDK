@@ -27,21 +27,23 @@ public:
 	}
 
 
-	void GetDefaultRCO(class APlayerController* OwningPlayer, class UObject* __WorldContext, class UBP_RemoteCallObject_C** RCO);
-	void IsInMainMenu(class UObject* WorldContext, class UObject* __WorldContext, bool* IsInMainMenu);
-	void GetFGGameUI(class AController* Controller, class UObject* __WorldContext, class UFGGameUI** gameUI);
-	void GetNumItemsFromCentralStorage(class APawn* OwningPawn, class UClass* mItemClass, class UObject* __WorldContext, int* NumItems);
-	void GetNumItemsOwned(class UObject* __WorldContext);
-	void GetFactoryGameLightBlue(class UObject* __WorldContext, struct FLinearColor* Graphics, struct FSlateColor* Text);
-	void GetFactoryGameLightGray(class UObject* __WorldContext, struct FSlateColor* Text, struct FLinearColor* Graphics);
-	void GetFactoryGameDarkGray(class UObject* __WorldContext, struct FSlateColor* Text, struct FLinearColor* Graphics);
-	void SetSliderSteps(class USlider* mSlider, int mSteps, class UObject* __WorldContext);
-	void GetScanningObjectName(class APawn* OwningPawn, class UObject* __WorldContext, struct FText* Object_Name);
-	void ShowHideHUD(bool isMenuOpen, class APawn* OwningPawn, class AController* Controller, class UObject* __WorldContext);
-	void GetNumItemsFromInventory(class UFGInventoryComponent* InventoryComponent, class UClass* mItemClass, class UObject* __WorldContext, int* NumItems);
-	void GetFactoryGameOrange(class UObject* __WorldContext, struct FLinearColor* Orange, struct FSlateColor* OrangeText);
-	void GetFactoryGameWhite(class UObject* __WorldContext, struct FSlateColor* TextWhite, struct FLinearColor* GraphicsWhite);
-	void GetNumItemsFromPlayerInventory(class APawn* OwningPawn, class UClass* mItemClass, class UObject* __WorldContext, int* NumItems);
+	void STATIC_GetKeyNameForActionSimple(class AController** Controller, struct FName* buttonName, class UObject** __WorldContext, struct FText* Button);
+	void STATIC_GetAdminInterface(class APlayerController** PlayerController, class UObject** __WorldContext, class AFGAdminInterface** adminInterface);
+	void STATIC_HasValidAdminInterface(class APlayerController** Controller, class UObject** __WorldContext, bool* Valid);
+	void STATIC_IsInMainMenu(class UObject** WorldContext, class UObject** __WorldContext, bool* IsInMainMenu);
+	void STATIC_GetFGGameUI(class AController** Controller, class UObject** __WorldContext, class UFGGameUI** gameUI);
+	void STATIC_GetNumItemsFromCentralStorage(class APawn** OwningPawn, class UClass** mItemClass, class UObject** __WorldContext, int* NumItems);
+	void STATIC_GetNumItemsOwned(class UObject** __WorldContext);
+	void STATIC_GetFactoryGameLightBlue(class UObject** __WorldContext, struct FLinearColor* Graphics, struct FSlateColor* Text);
+	void STATIC_GetFactoryGameLightGray(class UObject** __WorldContext, struct FSlateColor* Text, struct FLinearColor* Graphics);
+	void STATIC_GetFactoryGameDarkGray(class UObject** __WorldContext, struct FSlateColor* Text, struct FLinearColor* Graphics);
+	void STATIC_SetSliderSteps(class USlider** mSlider, int* mSteps, class UObject** __WorldContext);
+	void STATIC_GetScanningObjectName(class APawn** OwningPawn, class UObject** __WorldContext, struct FText* Object_Name);
+	void STATIC_ShowHideHUD(bool* isMenuOpen, class APawn** OwningPawn, class AController** Controller, class UObject** __WorldContext);
+	void STATIC_GetNumItemsFromInventory(class UFGInventoryComponent** InventoryComponent, class UClass** mItemClass, class UObject** __WorldContext, int* NumItems);
+	void STATIC_GetFactoryGameOrange(class UObject** __WorldContext, struct FLinearColor* Orange, struct FSlateColor* OrangeText);
+	void STATIC_GetFactoryGameWhite(class UObject** __WorldContext, struct FSlateColor* TextWhite, struct FLinearColor* GraphicsWhite);
+	void STATIC_GetNumItemsFromPlayerInventory(class APawn** OwningPawn, class UClass** mItemClass, class UObject** __WorldContext, int* NumItems);
 };
 
 

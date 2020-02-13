@@ -35,7 +35,7 @@ struct UWidget_BuildGunDelay_C_Construct_Params
 // Function Widget_BuildGunDelay.Widget_BuildGunDelay_C.ExecuteUbergraph_Widget_BuildGunDelay
 struct UWidget_BuildGunDelay_C_ExecuteUbergraph_Widget_BuildGunDelay_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

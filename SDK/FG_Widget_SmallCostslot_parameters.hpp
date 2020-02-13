@@ -24,7 +24,7 @@ struct UWidget_SmallCostSlot_C_Tick_Params
 // Function Widget_SmallCostslot.Widget_SmallCostSlot_C.ExecuteUbergraph_Widget_SmallCostSlot
 struct UWidget_SmallCostSlot_C_ExecuteUbergraph_Widget_SmallCostSlot_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

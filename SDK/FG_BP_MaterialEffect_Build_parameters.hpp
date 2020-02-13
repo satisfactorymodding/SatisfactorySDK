@@ -105,7 +105,7 @@ struct UBP_MaterialEffect_Build_C_OnCostActorReachedTarget_Params
 // Function BP_MaterialEffect_Build.BP_MaterialEffect_Build_C.ExecuteUbergraph_BP_MaterialEffect_Build
 struct UBP_MaterialEffect_Build_C_ExecuteUbergraph_BP_MaterialEffect_Build_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

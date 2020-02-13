@@ -32,7 +32,7 @@ struct UBP_BuildGunStateMenu_C_BeginState_Params
 // Function BP_BuildGunStateMenu.BP_BuildGunStateMenu_C.ExecuteUbergraph_BP_BuildGunStateMenu
 struct UBP_BuildGunStateMenu_C_ExecuteUbergraph_BP_BuildGunStateMenu_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

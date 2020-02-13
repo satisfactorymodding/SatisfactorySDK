@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SpitterParts.BP_SpitterParts_C
-// 0x0000 (0x03A8 - 0x03A8)
+// 0x0000 (0x03DC - 0x03DC)
 class ABP_SpitterParts_C : public ABP_Pickup_C
 {
 public:

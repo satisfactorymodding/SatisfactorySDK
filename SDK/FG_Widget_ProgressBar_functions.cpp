@@ -12,8 +12,68 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_ProgressBar.Widget_ProgressBar_C.SetUseIconContainer
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          mUseIconContainer              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ProgressBar_C::SetUseIconContainer(bool* mUseIconContainer)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgressBar.Widget_ProgressBar_C.SetUseIconContainer");
+
+	UWidget_ProgressBar_C_SetUseIconContainer_Params params;
+	params.mUseIconContainer = mUseIconContainer;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ProgressBar.Widget_ProgressBar_C.SetShowIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          mShowIcon                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ProgressBar_C::SetShowIcon(bool* mShowIcon)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgressBar.Widget_ProgressBar_C.SetShowIcon");
+
+	UWidget_ProgressBar_C_SetShowIcon_Params params;
+	params.mShowIcon = mShowIcon;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ProgressBar.Widget_ProgressBar_C.SetIcon
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture**               mIcon                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ProgressBar_C::SetIcon(class UTexture** mIcon)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgressBar.Widget_ProgressBar_C.SetIcon");
+
+	UWidget_ProgressBar_C_SetIcon_Params params;
+	params.mIcon = mIcon;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_ProgressBar.Widget_ProgressBar_C.GetCurveType
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UCurveFloat*             Curve                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,11 +95,11 @@ void UWidget_ProgressBar_C::GetCurveType(class UCurveFloat** Curve)
 
 
 // Function Widget_ProgressBar.Widget_ProgressBar_C.SetProgressBarFillColor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          InputValue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InputValue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ProgressBar_C::SetProgressBarFillColor(float InputValue)
+void UWidget_ProgressBar_C::SetProgressBarFillColor(float* InputValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgressBar.Widget_ProgressBar_C.SetProgressBarFillColor");
 
@@ -55,13 +115,13 @@ void UWidget_ProgressBar_C::SetProgressBarFillColor(float InputValue)
 
 
 // Function Widget_ProgressBar.Widget_ProgressBar_C.LerpBar
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          StartValue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          EndValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LerpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         StartValue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         EndValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         LerpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ProgressBar_C::LerpBar(float StartValue, float EndValue, float LerpTime)
+void UWidget_ProgressBar_C::LerpBar(float* StartValue, float* EndValue, float* LerpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgressBar.Widget_ProgressBar_C.LerpBar");
 
@@ -79,7 +139,7 @@ void UWidget_ProgressBar_C::LerpBar(float StartValue, float EndValue, float Lerp
 
 
 // Function Widget_ProgressBar.Widget_ProgressBar_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -99,11 +159,11 @@ void UWidget_ProgressBar_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ProgressBar.Widget_ProgressBar_C.ExecuteUbergraph_Widget_ProgressBar
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ProgressBar_C::ExecuteUbergraph_Widget_ProgressBar(int EntryPoint)
+void UWidget_ProgressBar_C::ExecuteUbergraph_Widget_ProgressBar(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgressBar.Widget_ProgressBar_C.ExecuteUbergraph_Widget_ProgressBar");
 

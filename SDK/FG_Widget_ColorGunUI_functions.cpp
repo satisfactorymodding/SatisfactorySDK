@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorGunUI.Widget_ColorGunUI_C.OnPrimaryColorPicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorGunUI_C::OnPrimaryColorPicked(const struct FLinearColor& Color)
+void UWidget_ColorGunUI_C::OnPrimaryColorPicked(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGunUI.Widget_ColorGunUI_C.OnPrimaryColorPicked");
 
@@ -32,29 +32,12 @@ void UWidget_ColorGunUI_C::OnPrimaryColorPicked(const struct FLinearColor& Color
 }
 
 
-// Function Widget_ColorGunUI.Widget_ColorGunUI_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature
-// ()
-
-void UWidget_ColorGunUI_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGunUI.Widget_ColorGunUI_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature");
-
-	UWidget_ColorGunUI_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_ColorGunUI.Widget_ColorGunUI_C.OnSecondaryColorPicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorGunUI_C::OnSecondaryColorPicked(const struct FLinearColor& Color)
+void UWidget_ColorGunUI_C::OnSecondaryColorPicked(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGunUI.Widget_ColorGunUI_C.OnSecondaryColorPicked");
 
@@ -70,7 +53,7 @@ void UWidget_ColorGunUI_C::OnSecondaryColorPicked(const struct FLinearColor& Col
 
 
 // Function Widget_ColorGunUI.Widget_ColorGunUI_C.BndEvt__mSecondaryButton_K2Node_ComponentBoundEvent_26_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorGunUI_C::BndEvt__mSecondaryButton_K2Node_ComponentBoundEvent_26_OnButtonClickedEvent__DelegateSignature()
 {
@@ -87,7 +70,7 @@ void UWidget_ColorGunUI_C::BndEvt__mSecondaryButton_K2Node_ComponentBoundEvent_2
 
 
 // Function Widget_ColorGunUI.Widget_ColorGunUI_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ColorGunUI_C::Construct()
 {
@@ -104,7 +87,7 @@ void UWidget_ColorGunUI_C::Construct()
 
 
 // Function Widget_ColorGunUI.Widget_ColorGunUI_C.BndEvt__mAcceptButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorGunUI_C::BndEvt__mAcceptButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -120,8 +103,25 @@ void UWidget_ColorGunUI_C::BndEvt__mAcceptButton_K2Node_ComponentBoundEvent_1_On
 }
 
 
+// Function Widget_ColorGunUI.Widget_ColorGunUI_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_ColorGunUI_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGunUI.Widget_ColorGunUI_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature");
+
+	UWidget_ColorGunUI_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_21_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_ColorGunUI.Widget_ColorGunUI_C.OnClose
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorGunUI_C::OnClose()
 {
@@ -138,11 +138,11 @@ void UWidget_ColorGunUI_C::OnClose()
 
 
 // Function Widget_ColorGunUI.Widget_ColorGunUI_C.ExecuteUbergraph_Widget_ColorGunUI
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorGunUI_C::ExecuteUbergraph_Widget_ColorGunUI(int EntryPoint)
+void UWidget_ColorGunUI_C::ExecuteUbergraph_Widget_ColorGunUI(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGunUI.Widget_ColorGunUI_C.ExecuteUbergraph_Widget_ColorGunUI");
 

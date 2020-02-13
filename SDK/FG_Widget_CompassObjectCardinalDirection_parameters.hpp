@@ -29,7 +29,7 @@ struct UWidget_CompassObjectCardinalDirection_C_OnCompassObjectAddedToPanel_Para
 // Function Widget_CompassObjectCardinalDirection.Widget_CompassObjectCardinalDirection_C.ExecuteUbergraph_Widget_CompassObjectCardinalDirection
 struct UWidget_CompassObjectCardinalDirection_C_ExecuteUbergraph_Widget_CompassObjectCardinalDirection_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

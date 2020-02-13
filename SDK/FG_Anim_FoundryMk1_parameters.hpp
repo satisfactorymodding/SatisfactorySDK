@@ -37,7 +37,7 @@ struct UAnim_FoundryMk1_C_AnimNotify_SmelterLeftOfflineState_Params
 // Function Anim_FoundryMk1.Anim_FoundryMk1_C.ExecuteUbergraph_Anim_FoundryMk1
 struct UAnim_FoundryMk1_C_ExecuteUbergraph_Anim_FoundryMk1_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

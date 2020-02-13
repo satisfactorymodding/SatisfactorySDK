@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Shroom_01.BP_Shroom_01_C.GetDestroyAudioEvent
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAkAudioEvent*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ class UAkAudioEvent* ABP_Shroom_01_C::GetDestroyAudioEvent()
 
 
 // Function BP_Shroom_01.BP_Shroom_01_C.GetDestroyEffect
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UParticleSystem*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ class UParticleSystem* ABP_Shroom_01_C::GetDestroyEffect()
 
 
 // Function BP_Shroom_01.BP_Shroom_01_C.GetForceThreshold
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ float ABP_Shroom_01_C::GetForceThreshold()
 
 
 // Function BP_Shroom_01.BP_Shroom_01_C.UserConstructionScript
-// ()
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Shroom_01_C::UserConstructionScript()
 {

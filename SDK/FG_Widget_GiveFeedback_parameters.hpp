@@ -55,13 +55,13 @@ struct UWidget_GiveFeedback_C_BndEvt__THANKSDUDE_K2Node_ComponentBoundEvent_147_
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__mTypeFeedbackSelect_K2Node_ComponentBoundEvent_1_onSelectionChanged__DelegateSignature
 struct UWidget_GiveFeedback_C_BndEvt__mTypeFeedbackSelect_K2Node_ComponentBoundEvent_1_onSelectionChanged__DelegateSignature_Params
 {
-	class FString                                      SelectedOption;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class FString*                                     SelectedOption;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Details_text_K2Node_ComponentBoundEvent_4_OnMultiLineEditableTextChangedEvent__DelegateSignature
 struct UWidget_GiveFeedback_C_BndEvt__Details_text_K2Node_ComponentBoundEvent_4_OnMultiLineEditableTextChangedEvent__DelegateSignature_Params
 {
-	struct FText                                       Text;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      Text;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature
@@ -77,7 +77,7 @@ struct UWidget_GiveFeedback_C_BndEvt__Widget_StandardButton_K2Node_ComponentBoun
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.SendFeedbackAfterConfirm
 struct UWidget_GiveFeedback_C_SendFeedbackAfterConfirm_Params
 {
-	bool                                               mConfirmBool;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              mConfirmBool;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
@@ -88,7 +88,7 @@ struct UWidget_GiveFeedback_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnBu
 // Function Widget_GiveFeedback.Widget_GiveFeedback_C.ExecuteUbergraph_Widget_GiveFeedback
 struct UWidget_GiveFeedback_C_ExecuteUbergraph_Widget_GiveFeedback_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

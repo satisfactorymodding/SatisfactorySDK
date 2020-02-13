@@ -118,7 +118,7 @@ struct UAnim_Tradingpost_C_AnimNotify_OnInitialLand_Params
 // Function Anim_Tradingpost.Anim_Tradingpost_C.ExecuteUbergraph_Anim_Tradingpost
 struct UAnim_Tradingpost_C_ExecuteUbergraph_Anim_Tradingpost_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

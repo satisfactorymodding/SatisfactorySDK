@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Fusebox.Widget_Fusebox_C.Get_HandleShadow_Value_1
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ float UWidget_Fusebox_C::Get_HandleShadow_Value_1()
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.GetHandleSliderClickabe
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ ESlateVisibility UWidget_Fusebox_C::GetHandleSliderClickabe()
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Fusebox_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -72,7 +72,7 @@ void UWidget_Fusebox_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonCl
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -94,11 +94,11 @@ void UWidget_Fusebox_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Fusebox_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWidget_Fusebox_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Fusebox.Widget_Fusebox_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature");
 
@@ -114,7 +114,7 @@ void UWidget_Fusebox_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatVal
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Fusebox_C::Construct()
 {
@@ -131,7 +131,7 @@ void UWidget_Fusebox_C::Construct()
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.ResetFusebox
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Fusebox_C::ResetFusebox()
 {
@@ -148,7 +148,7 @@ void UWidget_Fusebox_C::ResetFusebox()
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.BndEvt__HandleSlider_K2Node_ComponentBoundEvent_2_OnMouseCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Fusebox_C::BndEvt__HandleSlider_K2Node_ComponentBoundEvent_2_OnMouseCaptureEndEvent__DelegateSignature()
 {
@@ -165,7 +165,7 @@ void UWidget_Fusebox_C::BndEvt__HandleSlider_K2Node_ComponentBoundEvent_2_OnMous
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.BndEvt__HandleSlider_K2Node_ComponentBoundEvent_3_OnControllerCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Fusebox_C::BndEvt__HandleSlider_K2Node_ComponentBoundEvent_3_OnControllerCaptureEndEvent__DelegateSignature()
 {
@@ -182,7 +182,7 @@ void UWidget_Fusebox_C::BndEvt__HandleSlider_K2Node_ComponentBoundEvent_3_OnCont
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.RestFuseWithAnimation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Fusebox_C::RestFuseWithAnimation()
 {
@@ -199,11 +199,11 @@ void UWidget_Fusebox_C::RestFuseWithAnimation()
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.ExecuteUbergraph_Widget_Fusebox
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Fusebox_C::ExecuteUbergraph_Widget_Fusebox(int EntryPoint)
+void UWidget_Fusebox_C::ExecuteUbergraph_Widget_Fusebox(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Fusebox.Widget_Fusebox_C.ExecuteUbergraph_Widget_Fusebox");
 
@@ -219,7 +219,7 @@ void UWidget_Fusebox_C::ExecuteUbergraph_Widget_Fusebox(int EntryPoint)
 
 
 // Function Widget_Fusebox.Widget_Fusebox_C.ResetFuse__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Fusebox_C::ResetFuse__DelegateSignature()
 {

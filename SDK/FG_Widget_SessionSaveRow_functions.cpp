@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.SetSelected
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           isSelected                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          isSelected                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SessionSaveRow_C::SetSelected(bool isSelected)
+void UWidget_SessionSaveRow_C::SetSelected(bool* isSelected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.SetSelected");
 
@@ -33,7 +33,7 @@ void UWidget_SessionSaveRow_C::SetSelected(bool isSelected)
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetIconColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -54,7 +54,7 @@ struct FLinearColor UWidget_SessionSaveRow_C::GetIconColor()
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -75,7 +75,7 @@ struct FSlateColor UWidget_SessionSaveRow_C::GetTextColor()
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetPlayDurationTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -96,7 +96,7 @@ struct FSlateColor UWidget_SessionSaveRow_C::GetPlayDurationTextColor()
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetIconBGColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -117,7 +117,7 @@ struct FLinearColor UWidget_SessionSaveRow_C::GetIconBGColor()
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -138,7 +138,7 @@ struct FLinearColor UWidget_SessionSaveRow_C::GetHoverColor()
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetPlayDuration
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionSaveRow_C::GetPlayDuration()
 {
@@ -155,7 +155,7 @@ void UWidget_SessionSaveRow_C::GetPlayDuration()
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetSaveTimeText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionSaveRow_C::GetSaveTimeText()
 {
@@ -172,7 +172,7 @@ void UWidget_SessionSaveRow_C::GetSaveTimeText()
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetSaveNameText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SessionSaveRow_C::GetSaveNameText()
 {
@@ -188,14 +188,14 @@ void UWidget_SessionSaveRow_C::GetSaveNameText()
 }
 
 
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// ()
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_SessionSaveRow_C::BndEvt__mSaveButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
+void UWidget_SessionSaveRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
-	UWidget_SessionSaveRow_C_BndEvt__mSaveButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params params;
+	UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -205,31 +205,14 @@ void UWidget_SessionSaveRow_C::BndEvt__mSaveButton_K2Node_ComponentBoundEvent_2_
 }
 
 
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// ()
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_SessionSaveRow_C::BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
+void UWidget_SessionSaveRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
 
-	UWidget_SessionSaveRow_C_BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.ConfirmDeleteSavePopUp
-// ()
-
-void UWidget_SessionSaveRow_C::ConfirmDeleteSavePopUp()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.ConfirmDeleteSavePopUp");
-
-	UWidget_SessionSaveRow_C_ConfirmDeleteSavePopUp_Params params;
+	UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -240,7 +223,7 @@ void UWidget_SessionSaveRow_C::ConfirmDeleteSavePopUp()
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -259,12 +242,46 @@ void UWidget_SessionSaveRow_C::PreConstruct(bool* IsDesignTime)
 }
 
 
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.Event DeleteSave
-// ()
-// Parameters:
-// bool                           confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_SessionSaveRow_C::Event_DeleteSave(bool confirm)
+void UWidget_SessionSaveRow_C::BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+
+	UWidget_SessionSaveRow_C_BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.ConfirmDeleteSavePopUp
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_SessionSaveRow_C::ConfirmDeleteSavePopUp()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.ConfirmDeleteSavePopUp");
+
+	UWidget_SessionSaveRow_C_ConfirmDeleteSavePopUp_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.Event DeleteSave
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_SessionSaveRow_C::Event_DeleteSave(bool* confirm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.Event DeleteSave");
 
@@ -279,25 +296,8 @@ void UWidget_SessionSaveRow_C::Event_DeleteSave(bool confirm)
 }
 
 
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
-
-void UWidget_SessionSaveRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SessionSaveRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature()
 {
@@ -313,14 +313,17 @@ void UWidget_SessionSaveRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent
 }
 
 
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.OnDeleteSaveDone
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SessionSaveRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+void UWidget_SessionSaveRow_C::OnDeleteSaveDone(bool* success)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.OnDeleteSaveDone");
 
-	UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params params;
+	UWidget_SessionSaveRow_C_OnDeleteSaveDone_Params params;
+	params.success = success;
 
 	auto flags = fn->FunctionFlags;
 
@@ -331,11 +334,11 @@ void UWidget_SessionSaveRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent
 
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.ExecuteUbergraph_Widget_SessionSaveRow
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SessionSaveRow_C::ExecuteUbergraph_Widget_SessionSaveRow(int EntryPoint)
+void UWidget_SessionSaveRow_C::ExecuteUbergraph_Widget_SessionSaveRow(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.ExecuteUbergraph_Widget_SessionSaveRow");
 

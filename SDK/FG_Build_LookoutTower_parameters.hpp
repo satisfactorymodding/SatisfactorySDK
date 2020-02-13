@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_LookoutTower.Build_LookoutTower_C.UserConstructionScript
-struct ABuild_LookoutTower_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

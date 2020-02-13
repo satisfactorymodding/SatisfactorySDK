@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Planet.BP_Planet_C.ShouldSave
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ bool ABP_Planet_C::ShouldSave()
 
 
 // Function BP_Planet.BP_Planet_C.GatherDependencies
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UObject*>         out_dependentObjects           (Parm, OutParm, ZeroConstructor)
 
@@ -56,7 +56,7 @@ void ABP_Planet_C::GatherDependencies(TArray<class UObject*>* out_dependentObjec
 
 
 // Function BP_Planet.BP_Planet_C.NeedTransform
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -77,7 +77,7 @@ bool ABP_Planet_C::NeedTransform()
 
 
 // Function BP_Planet.BP_Planet_C.UpdateMaterialParameters
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Planet_C::UpdateMaterialParameters()
 {
@@ -94,7 +94,7 @@ void ABP_Planet_C::UpdateMaterialParameters()
 
 
 // Function BP_Planet.BP_Planet_C.UserConstructionScript
-// ()
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Planet_C::UserConstructionScript()
 {
@@ -111,12 +111,12 @@ void ABP_Planet_C::UserConstructionScript()
 
 
 // Function BP_Planet.BP_Planet_C.PostSaveGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Planet_C::PostSaveGame(int SaveVersion, int GameVersion)
+void ABP_Planet_C::PostSaveGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Planet.BP_Planet_C.PostSaveGame");
 
@@ -133,12 +133,12 @@ void ABP_Planet_C::PostSaveGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_Planet.BP_Planet_C.PreLoadGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Planet_C::PreLoadGame(int SaveVersion, int GameVersion)
+void ABP_Planet_C::PreLoadGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Planet.BP_Planet_C.PreLoadGame");
 
@@ -155,7 +155,7 @@ void ABP_Planet_C::PreLoadGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_Planet.BP_Planet_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Planet_C::ReceiveBeginPlay()
 {
@@ -172,7 +172,7 @@ void ABP_Planet_C::ReceiveBeginPlay()
 
 
 // Function BP_Planet.BP_Planet_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -192,7 +192,7 @@ void ABP_Planet_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_Planet.BP_Planet_C.UpdatePreview
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Planet_C::UpdatePreview()
 {
@@ -209,12 +209,12 @@ void ABP_Planet_C::UpdatePreview()
 
 
 // Function BP_Planet.BP_Planet_C.PreSaveGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Planet_C::PreSaveGame(int SaveVersion, int GameVersion)
+void ABP_Planet_C::PreSaveGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Planet.BP_Planet_C.PreSaveGame");
 
@@ -231,12 +231,12 @@ void ABP_Planet_C::PreSaveGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_Planet.BP_Planet_C.PostLoadGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Planet_C::PostLoadGame(int SaveVersion, int GameVersion)
+void ABP_Planet_C::PostLoadGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Planet.BP_Planet_C.PostLoadGame");
 
@@ -253,11 +253,11 @@ void ABP_Planet_C::PostLoadGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_Planet.BP_Planet_C.ExecuteUbergraph_BP_Planet
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Planet_C::ExecuteUbergraph_BP_Planet(int EntryPoint)
+void ABP_Planet_C::ExecuteUbergraph_BP_Planet(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Planet.BP_Planet_C.ExecuteUbergraph_BP_Planet");
 

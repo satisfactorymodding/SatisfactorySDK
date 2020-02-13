@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Equip_Parachute.Equip_Parachute_C.UserConstructionScript
-struct AEquip_Parachute_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_Parachute.Equip_Parachute_C.OnDeployed
 struct AEquip_Parachute_C_OnDeployed_Params
 {
@@ -32,7 +27,7 @@ struct AEquip_Parachute_C_OnDeployStop_Params
 // Function Equip_Parachute.Equip_Parachute_C.ExecuteUbergraph_Equip_Parachute
 struct AEquip_Parachute_C_ExecuteUbergraph_Equip_Parachute_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

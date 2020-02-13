@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.GetHasAllRepairParts
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Has_All_Parts                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +35,7 @@ void UWidget_DropPod_Repair_C::GetHasAllRepairParts(bool* Has_All_Parts)
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.SetHasDoorBeenOpened
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Repair_C::SetHasDoorBeenOpened()
 {
@@ -52,7 +52,7 @@ void UWidget_DropPod_Repair_C::SetHasDoorBeenOpened()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.SetupScreenText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Repair_C::SetupScreenText()
 {
@@ -69,7 +69,7 @@ void UWidget_DropPod_Repair_C::SetupScreenText()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.SetupCostSlot
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Repair_C::SetupCostSlot()
 {
@@ -86,7 +86,7 @@ void UWidget_DropPod_Repair_C::SetupCostSlot()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.GetHasPartsAndPower
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -107,7 +107,7 @@ bool UWidget_DropPod_Repair_C::GetHasPartsAndPower()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.GetRepairButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -128,7 +128,7 @@ ESlateVisibility UWidget_DropPod_Repair_C::GetRepairButtonVisibility()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.GetRepairConditionText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -149,7 +149,7 @@ struct FText UWidget_DropPod_Repair_C::GetRepairConditionText()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.BndEvt__mGrabAllButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_DropPod_Repair_C::BndEvt__mGrabAllButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature()
 {
@@ -166,7 +166,7 @@ void UWidget_DropPod_Repair_C::BndEvt__mGrabAllButton_K2Node_ComponentBoundEvent
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_DropPod_Repair_C::Init()
 {
@@ -183,7 +183,7 @@ void UWidget_DropPod_Repair_C::Init()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.OnDoorOpen
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Repair_C::OnDoorOpen()
 {
@@ -200,7 +200,7 @@ void UWidget_DropPod_Repair_C::OnDoorOpen()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.PodUnlocked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Repair_C::PodUnlocked()
 {
@@ -217,7 +217,7 @@ void UWidget_DropPod_Repair_C::PodUnlocked()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.SpawnSmoke
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_DropPod_Repair_C::SpawnSmoke()
 {
@@ -234,11 +234,11 @@ void UWidget_DropPod_Repair_C::SpawnSmoke()
 
 
 // Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.ExecuteUbergraph_Widget_DropPod_Repair
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_DropPod_Repair_C::ExecuteUbergraph_Widget_DropPod_Repair(int EntryPoint)
+void UWidget_DropPod_Repair_C::ExecuteUbergraph_Widget_DropPod_Repair(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_DropPod_Repair.Widget_DropPod_Repair_C.ExecuteUbergraph_Widget_DropPod_Repair");
 

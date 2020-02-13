@@ -17,7 +17,7 @@ namespace SDK
 // Function Anim_AssemblerMk1.Anim_AssemblerMk1_C.ExecuteUbergraph_Anim_AssemblerMk1
 struct UAnim_AssemblerMk1_C_ExecuteUbergraph_Anim_AssemblerMk1_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

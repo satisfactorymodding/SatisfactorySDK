@@ -17,13 +17,13 @@ namespace SDK
 // Function BTT_MoveToActor.BTT_MoveToActor_C.OnFail_A86C15A64D326131272CCA93E74F5421
 struct UBTT_MoveToActor_C_OnFail_A86C15A64D326131272CCA93E74F5421_Params
 {
-	TEnumAsByte<EPathFollowingResult>                  MovementResult;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPathFollowingResult>*                 MovementResult;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BTT_MoveToActor.BTT_MoveToActor_C.OnSuccess_A86C15A64D326131272CCA93E74F5421
 struct UBTT_MoveToActor_C_OnSuccess_A86C15A64D326131272CCA93E74F5421_Params
 {
-	TEnumAsByte<EPathFollowingResult>                  MovementResult;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPathFollowingResult>*                 MovementResult;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BTT_MoveToActor.BTT_MoveToActor_C.ReceiveExecuteAI
@@ -36,7 +36,7 @@ struct UBTT_MoveToActor_C_ReceiveExecuteAI_Params
 // Function BTT_MoveToActor.BTT_MoveToActor_C.ExecuteUbergraph_BTT_MoveToActor
 struct UBTT_MoveToActor_C_ExecuteUbergraph_BTT_MoveToActor_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

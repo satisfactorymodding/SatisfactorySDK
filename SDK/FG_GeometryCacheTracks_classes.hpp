@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class GeometryCacheTracks.MovieSceneGeometryCacheSection
-// 0x0028 (0x0108 - 0x00E0)
+// 0x0038 (0x0118 - 0x00E0)
 class UMovieSceneGeometryCacheSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneGeometryCacheParams              Params;                                                   // 0x00E0(0x0028) (Edit)
+	struct FMovieSceneGeometryCacheParams              Params;                                                   // 0x00E0(0x0038) (Edit)
 
 	static UClass* StaticClass()
 	{

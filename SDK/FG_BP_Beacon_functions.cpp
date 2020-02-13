@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Beacon.BP_Beacon_C.ShouldSave
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ bool ABP_Beacon_C::ShouldSave()
 
 
 // Function BP_Beacon.BP_Beacon_C.GatherDependencies
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UObject*>         out_dependentObjects           (Parm, OutParm, ZeroConstructor)
 
@@ -56,7 +56,7 @@ void ABP_Beacon_C::GatherDependencies(TArray<class UObject*>* out_dependentObjec
 
 
 // Function BP_Beacon.BP_Beacon_C.NeedTransform
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -77,13 +77,13 @@ bool ABP_Beacon_C::NeedTransform()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABP_Beacon_C::GetLookAtDecription(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+struct FText ABP_Beacon_C::GetLookAtDecription(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.GetLookAtDecription");
 
@@ -102,7 +102,7 @@ struct FText ABP_Beacon_C::GetLookAtDecription(class AFGCharacterPlayer* byChara
 
 
 // Function BP_Beacon.BP_Beacon_C.IsUseable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -123,14 +123,14 @@ bool ABP_Beacon_C::IsUseable()
 
 
 // Function BP_Beacon.BP_Beacon_C.UpdateUseState
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UPrimitiveComponent*     componentHit                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent**    componentHit                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FUseState               out_useState                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_Beacon_C::UpdateUseState(class AFGCharacterPlayer* byCharacter, const struct FVector& atLocation, class UPrimitiveComponent* componentHit, struct FUseState* out_useState)
+void ABP_Beacon_C::UpdateUseState(class AFGCharacterPlayer** byCharacter, struct FVector* atLocation, class UPrimitiveComponent** componentHit, struct FUseState* out_useState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.UpdateUseState");
 
@@ -150,13 +150,57 @@ void ABP_Beacon_C::UpdateUseState(class AFGCharacterPlayer* byCharacter, const s
 }
 
 
-// Function BP_Beacon.BP_Beacon_C.SetActorRepresentationText
-// ()
+// Function BP_Beacon.BP_Beacon_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_Beacon_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.GetActorCompassViewDistance");
+
+	ABP_Beacon_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Beacon.BP_Beacon_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_Beacon_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.SetActorCompassViewDistance");
+
+	ABP_Beacon_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Beacon.BP_Beacon_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABP_Beacon_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABP_Beacon_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.SetActorRepresentationText");
 
@@ -174,7 +218,7 @@ struct FText ABP_Beacon_C::SetActorRepresentationText(const struct FText& newTex
 
 
 // Function BP_Beacon.BP_Beacon_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -195,7 +239,7 @@ bool ABP_Beacon_C::UpdateRepresentation()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -216,7 +260,7 @@ float ABP_Beacon_C::GetActorFogOfWarRevealRadius()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -237,7 +281,7 @@ EFogOfWarRevealType ABP_Beacon_C::GetActorFogOfWarRevealType()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -258,7 +302,7 @@ struct FLinearColor ABP_Beacon_C::GetActorRepresentationColor()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -279,7 +323,7 @@ struct FText ABP_Beacon_C::GetActorRepresentationText()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -300,7 +344,7 @@ class UTexture2D* ABP_Beacon_C::GetActorRepresentationTexture()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -321,7 +365,7 @@ ERepresentationType ABP_Beacon_C::GetActorRepresentationType()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -342,7 +386,7 @@ bool ABP_Beacon_C::GetActorShouldShowInCompass()
 
 
 // Function BP_Beacon.BP_Beacon_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -363,7 +407,7 @@ bool ABP_Beacon_C::RemoveAsRepresentation()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -384,7 +428,7 @@ struct FRotator ABP_Beacon_C::GetRealActorRotation()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -405,7 +449,7 @@ struct FVector ABP_Beacon_C::GetRealActorLocation()
 
 
 // Function BP_Beacon.BP_Beacon_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -426,7 +470,7 @@ bool ABP_Beacon_C::GetActorShouldShowOnMap()
 
 
 // Function BP_Beacon.BP_Beacon_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -447,7 +491,7 @@ bool ABP_Beacon_C::IsActorStatic()
 
 
 // Function BP_Beacon.BP_Beacon_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -467,12 +511,32 @@ bool ABP_Beacon_C::AddAsRepresentation()
 }
 
 
-// Function BP_Beacon.BP_Beacon_C.CloseWidget
-// ()
+// Function BP_Beacon.BP_Beacon_C.SetColor
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*             Controller                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Beacon_C::CloseWidget(class AController* Controller)
+void ABP_Beacon_C::SetColor(struct FLinearColor* NewColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.SetColor");
+
+	ABP_Beacon_C_SetColor_Params params;
+	params.NewColor = NewColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Beacon.BP_Beacon_C.CloseWidget
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AController**            Controller                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Beacon_C::CloseWidget(class AController** Controller)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.CloseWidget");
 
@@ -487,30 +551,13 @@ void ABP_Beacon_C::CloseWidget(class AController* Controller)
 }
 
 
-// Function BP_Beacon.BP_Beacon_C.UserConstructionScript
-// ()
-
-void ABP_Beacon_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.UserConstructionScript");
-
-	ABP_Beacon_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Beacon.BP_Beacon_C.PostLoadGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Beacon_C::PostLoadGame(int SaveVersion, int GameVersion)
+void ABP_Beacon_C::PostLoadGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.PostLoadGame");
 
@@ -527,12 +574,12 @@ void ABP_Beacon_C::PostLoadGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_Beacon.BP_Beacon_C.PostSaveGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Beacon_C::PostSaveGame(int SaveVersion, int GameVersion)
+void ABP_Beacon_C::PostSaveGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.PostSaveGame");
 
@@ -549,12 +596,12 @@ void ABP_Beacon_C::PostSaveGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_Beacon.BP_Beacon_C.PreLoadGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Beacon_C::PreLoadGame(int SaveVersion, int GameVersion)
+void ABP_Beacon_C::PreLoadGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.PreLoadGame");
 
@@ -571,12 +618,12 @@ void ABP_Beacon_C::PreLoadGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_Beacon.BP_Beacon_C.PreSaveGame
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SaveVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GameVersion                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Beacon_C::PreSaveGame(int SaveVersion, int GameVersion)
+void ABP_Beacon_C::PreSaveGame(int* SaveVersion, int* GameVersion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.PreSaveGame");
 
@@ -593,12 +640,12 @@ void ABP_Beacon_C::PreSaveGame(int SaveVersion, int GameVersion)
 
 
 // Function BP_Beacon.BP_Beacon_C.OnUseStop
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_Beacon_C::OnUseStop(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void ABP_Beacon_C::OnUseStop(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.OnUseStop");
 
@@ -615,11 +662,11 @@ void ABP_Beacon_C::OnUseStop(class AFGCharacterPlayer* byCharacter, const struct
 
 
 // Function BP_Beacon.BP_Beacon_C.RegisterInteractingPlayer
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Beacon_C::RegisterInteractingPlayer(class AFGCharacterPlayer* Player)
+void ABP_Beacon_C::RegisterInteractingPlayer(class AFGCharacterPlayer** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.RegisterInteractingPlayer");
 
@@ -635,12 +682,12 @@ void ABP_Beacon_C::RegisterInteractingPlayer(class AFGCharacterPlayer* Player)
 
 
 // Function BP_Beacon.BP_Beacon_C.StartIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_Beacon_C::StartIsLookedAt(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void ABP_Beacon_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.StartIsLookedAt");
 
@@ -657,12 +704,12 @@ void ABP_Beacon_C::StartIsLookedAt(class AFGCharacterPlayer* byCharacter, const 
 
 
 // Function BP_Beacon.BP_Beacon_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_Beacon_C::StopIsLookedAt(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void ABP_Beacon_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.StopIsLookedAt");
 
@@ -679,11 +726,11 @@ void ABP_Beacon_C::StopIsLookedAt(class AFGCharacterPlayer* byCharacter, const s
 
 
 // Function BP_Beacon.BP_Beacon_C.UnregisterInteractingPlayer
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Beacon_C::UnregisterInteractingPlayer(class AFGCharacterPlayer* Player)
+void ABP_Beacon_C::UnregisterInteractingPlayer(class AFGCharacterPlayer** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.UnregisterInteractingPlayer");
 
@@ -699,7 +746,7 @@ void ABP_Beacon_C::UnregisterInteractingPlayer(class AFGCharacterPlayer* Player)
 
 
 // Function BP_Beacon.BP_Beacon_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Beacon_C::ReceiveBeginPlay()
 {
@@ -716,12 +763,12 @@ void ABP_Beacon_C::ReceiveBeginPlay()
 
 
 // Function BP_Beacon.BP_Beacon_C.OnUse
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_Beacon_C::OnUse(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void ABP_Beacon_C::OnUse(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.OnUse");
 
@@ -737,12 +784,52 @@ void ABP_Beacon_C::OnUse(class AFGCharacterPlayer* byCharacter, const struct FUs
 }
 
 
-// Function BP_Beacon.BP_Beacon_C.ExecuteUbergraph_BP_Beacon
-// ()
+// Function BP_Beacon.BP_Beacon_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Beacon_C::ExecuteUbergraph_BP_Beacon(int EntryPoint)
+void ABP_Beacon_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.SetActorRepresentationColor");
+
+	ABP_Beacon_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Beacon.BP_Beacon_C.PickUpBeacon
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Beacon_C::PickUpBeacon(class AFGCharacterPlayer** Player)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.PickUpBeacon");
+
+	ABP_Beacon_C_PickUpBeacon_Params params;
+	params.Player = Player;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Beacon.BP_Beacon_C.ExecuteUbergraph_BP_Beacon
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Beacon_C::ExecuteUbergraph_BP_Beacon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beacon.BP_Beacon_C.ExecuteUbergraph_BP_Beacon");
 

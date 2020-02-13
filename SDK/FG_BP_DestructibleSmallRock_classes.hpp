@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DestructibleSmallRock.BP_DestructibleSmallRock_C
-// 0x0000 (0x0370 - 0x0370)
+// 0x0000 (0x0378 - 0x0378)
 class ABP_DestructibleSmallRock_C : public AFGDestructibleActor
 {
 public:

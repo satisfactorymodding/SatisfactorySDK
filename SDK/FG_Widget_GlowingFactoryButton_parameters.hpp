@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.SetEnabled
 struct UWidget_GlowingFactoryButton_C_SetEnabled_Params
 {
-	bool                                               Enabled;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              Enabled;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.GetHoveredVisibility
@@ -82,7 +82,7 @@ struct UWidget_GlowingFactoryButton_C_SimulateRelease_Params
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.ExecuteUbergraph_Widget_GlowingFactoryButton
 struct UWidget_GlowingFactoryButton_C_ExecuteUbergraph_Widget_GlowingFactoryButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.OnClicked__DelegateSignature

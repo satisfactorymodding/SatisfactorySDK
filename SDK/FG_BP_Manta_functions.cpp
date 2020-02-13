@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Manta.BP_Manta_C.UserConstructionScript
-// ()
-
-void ABP_Manta_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Manta.BP_Manta_C.UserConstructionScript");
-
-	ABP_Manta_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Manta.BP_Manta_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_Manta_C::GainedSignificance()
 {
@@ -47,7 +30,7 @@ void ABP_Manta_C::GainedSignificance()
 
 
 // Function BP_Manta.BP_Manta_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_Manta_C::LostSignificance()
 {
@@ -64,11 +47,11 @@ void ABP_Manta_C::LostSignificance()
 
 
 // Function BP_Manta.BP_Manta_C.ExecuteUbergraph_BP_Manta
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Manta_C::ExecuteUbergraph_BP_Manta(int EntryPoint)
+void ABP_Manta_C::ExecuteUbergraph_BP_Manta(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Manta.BP_Manta_C.ExecuteUbergraph_BP_Manta");
 

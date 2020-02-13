@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Holo_ConveyorAttachment.Holo_ConveyorAttachment_C
-// 0x0008 (0x0468 - 0x0460)
+// 0x0008 (0x04B8 - 0x04B0)
 class AHolo_ConveyorAttachment_C : public AFGConveyorAttachmentHologram
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0460(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -28,9 +28,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void ReceiveConfigureComponents(class AFGBuildable** inBuildable);
-	void ExecuteUbergraph_Holo_ConveyorAttachment(int EntryPoint);
+	void ExecuteUbergraph_Holo_ConveyorAttachment(int* EntryPoint);
 };
 
 

@@ -41,7 +41,7 @@ struct UWidget_AggroEntry_C_Tick_Params
 // Function Widget_AggroEntry.Widget_AggroEntry_C.ExecuteUbergraph_Widget_AggroEntry
 struct UWidget_AggroEntry_C_ExecuteUbergraph_Widget_AggroEntry_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

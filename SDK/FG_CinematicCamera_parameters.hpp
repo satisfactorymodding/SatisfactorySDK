@@ -23,13 +23,13 @@ struct ACineCameraActor_GetCineCameraComponent_Params
 // Function CinematicCamera.CineCameraComponent.SetLensPresetByName
 struct UCineCameraComponent_SetLensPresetByName_Params
 {
-	class FString                                      InPresetName;                                             // (Parm, ZeroConstructor)
+	class FString*                                     InPresetName;                                             // (Parm, ZeroConstructor)
 };
 
 // Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName
 struct UCineCameraComponent_SetFilmbackPresetByName_Params
 {
-	class FString                                      InPresetName;                                             // (Parm, ZeroConstructor)
+	class FString*                                     InPresetName;                                             // (Parm, ZeroConstructor)
 };
 
 // Function CinematicCamera.CineCameraComponent.GetVerticalFieldOfView

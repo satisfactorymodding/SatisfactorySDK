@@ -40,7 +40,7 @@ public:
 
 
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_AttractOtherAI(int EntryPoint);
+	void ExecuteUbergraph_BTT_AttractOtherAI(int* EntryPoint);
 };
 
 

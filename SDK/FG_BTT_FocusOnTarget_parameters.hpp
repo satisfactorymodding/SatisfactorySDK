@@ -24,7 +24,7 @@ struct UBTT_FocusOnTarget_C_ReceiveExecuteAI_Params
 // Function BTT_FocusOnTarget.BTT_FocusOnTarget_C.ExecuteUbergraph_BTT_FocusOnTarget
 struct UBTT_FocusOnTarget_C_ExecuteUbergraph_BTT_FocusOnTarget_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

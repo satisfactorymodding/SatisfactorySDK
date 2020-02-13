@@ -15,6 +15,39 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum AudioMixer.EFFTWindowType
+enum class EFFTWindowType : uint8_t
+{
+	None                           = 0,
+	Hamming                        = 1,
+	Hann                           = 2,
+	Blackman                       = 3,
+	EFFTWindowType_MAX             = 4
+};
+
+
+// Enum AudioMixer.EFFTPeakInterpolationMethod
+enum class EFFTPeakInterpolationMethod : uint8_t
+{
+	NearestNeighbor                = 0,
+	Linear                         = 1,
+	Quadratic                      = 2,
+	EFFTPeakInterpolationMethod_MAX = 3
+};
+
+
+// Enum AudioMixer.EFFTSize
+enum class EFFTSize : uint8_t
+{
+	DefaultSize                    = 0,
+	Min                            = 1,
+	Small                          = 2,
+	Medium                         = 3,
+	Large                          = 4,
+	Max                            = 5
+};
+
+
 // Enum AudioMixer.ESubmixEffectDynamicsPeakMode
 enum class ESubmixEffectDynamicsPeakMode : uint8_t
 {

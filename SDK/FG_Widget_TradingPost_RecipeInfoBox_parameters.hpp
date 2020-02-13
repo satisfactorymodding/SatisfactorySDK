@@ -47,13 +47,13 @@ struct UWidget_TradingPost_RecipeInfoBox_C_Get_mIcon_Visibility_1_Params
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.SetItemTitle
 struct UWidget_TradingPost_RecipeInfoBox_C_SetItemTitle_Params
 {
-	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.SetItemDescriptionText
 struct UWidget_TradingPost_RecipeInfoBox_C_SetItemDescriptionText_Params
 {
-	struct FText                                       Description;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Description;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.Construct
@@ -64,7 +64,7 @@ struct UWidget_TradingPost_RecipeInfoBox_C_Construct_Params
 // Function Widget_TradingPost_RecipeInfoBox.Widget_TradingPost_RecipeInfoBox_C.ExecuteUbergraph_Widget_TradingPost_RecipeInfoBox
 struct UWidget_TradingPost_RecipeInfoBox_C_ExecuteUbergraph_Widget_TradingPost_RecipeInfoBox_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

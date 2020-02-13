@@ -23,7 +23,7 @@ struct UBTT_ClearObject_C_ReceiveExecute_Params
 // Function BTT_ClearObject.BTT_ClearObject_C.ExecuteUbergraph_BTT_ClearObject
 struct UBTT_ClearObject_C_ExecuteUbergraph_BTT_ClearObject_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

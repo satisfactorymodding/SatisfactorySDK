@@ -12,6 +12,196 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.AddChildToBeacons
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget**                Content                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Map_Filters_Container_C::AddChildToBeacons(class UWidget** Content)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.AddChildToBeacons");
+
+	UWidget_Map_Filters_Container_C_AddChildToBeacons_Params params;
+	params.Content = Content;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.AddChildToFilters
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget**                Content                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Map_Filters_Container_C::AddChildToFilters(class UWidget** Content)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.AddChildToFilters");
+
+	UWidget_Map_Filters_Container_C_AddChildToFilters_Params params;
+	params.Content = Content;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_Map_Filters_Container_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.Destruct");
+
+	UWidget_Map_Filters_Container_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_Map_Filters_Container_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.Construct");
+
+	UWidget_Map_Filters_Container_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_Map_Filters_Container_C::BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature(struct FText* Text)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature");
+
+	UWidget_Map_Filters_Container_C_BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature_Params params;
+	params.Text = Text;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_2_OnClearTextClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_Map_Filters_Container_C::BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_2_OnClearTextClicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_2_OnClearTextClicked__DelegateSignature");
+
+	UWidget_Map_Filters_Container_C_BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_2_OnClearTextClicked__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_3_OnTextComitted__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Map_Filters_Container_C::BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_3_OnTextComitted__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_3_OnTextComitted__DelegateSignature");
+
+	UWidget_Map_Filters_Container_C_BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_3_OnTextComitted__DelegateSignature_Params params;
+	params.Text = Text;
+	params.CommitMethod = CommitMethod;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.ExecuteUbergraph_Widget_Map_Filters_Container
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Map_Filters_Container_C::ExecuteUbergraph_Widget_Map_Filters_Container(int* EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.ExecuteUbergraph_Widget_Map_Filters_Container");
+
+	UWidget_Map_Filters_Container_C_ExecuteUbergraph_Widget_Map_Filters_Container_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.OnClearSearchResults__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Map_Filters_Container_C::OnClearSearchResults__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.OnClearSearchResults__DelegateSignature");
+
+	UWidget_Map_Filters_Container_C_OnClearSearchResults__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.OnBeaconSearchChanged__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_Map_Filters_Container_C::OnBeaconSearchChanged__DelegateSignature(struct FText* Text)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map_Filters_Container.Widget_Map_Filters_Container_C.OnBeaconSearchChanged__DelegateSignature");
+
+	UWidget_Map_Filters_Container_C_OnBeaconSearchChanged__DelegateSignature_Params params;
+	params.Text = Text;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

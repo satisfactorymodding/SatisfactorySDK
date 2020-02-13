@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_RebarProjectile.BP_RebarProjectile_C.UserConstructionScript
-struct ABP_RebarProjectile_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_RebarProjectile.BP_RebarProjectile_C.ReceiveBeginPlay
 struct ABP_RebarProjectile_C_ReceiveBeginPlay_Params
 {
@@ -51,14 +46,14 @@ struct ABP_RebarProjectile_C_ReceiveHit_Params
 // Function BP_RebarProjectile.BP_RebarProjectile_C.Shot Player
 struct ABP_RebarProjectile_C_Shot_Player_Params
 {
-	class AFGCharacterPlayer*                          Player;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     HitNormal;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGCharacterPlayer**                         Player;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector*                                    HitNormal;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_RebarProjectile.BP_RebarProjectile_C.ExecuteUbergraph_BP_RebarProjectile
 struct ABP_RebarProjectile_C_ExecuteUbergraph_BP_RebarProjectile_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

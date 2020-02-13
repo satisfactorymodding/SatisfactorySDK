@@ -37,7 +37,7 @@ struct UWidget_ButtonShine_C_PlayShineAnim_Params
 // Function Widget_ButtonShine.Widget_ButtonShine_C.ExecuteUbergraph_Widget_ButtonShine
 struct UWidget_ButtonShine_C_ExecuteUbergraph_Widget_ButtonShine_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

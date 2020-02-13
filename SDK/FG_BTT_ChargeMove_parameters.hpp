@@ -35,7 +35,7 @@ struct UBTT_ChargeMove_C_ReceiveAbortAI_Params
 // Function BTT_ChargeMove.BTT_ChargeMove_C.ExecuteUbergraph_BTT_ChargeMove
 struct UBTT_ChargeMove_C_ExecuteUbergraph_BTT_ChargeMove_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

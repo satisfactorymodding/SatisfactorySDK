@@ -23,7 +23,7 @@ struct UWidget_RewardInventoryItems_C_PreConstruct_Params
 // Function Widget_RewardInventoryItems.Widget_RewardInventoryItems_C.ExecuteUbergraph_Widget_RewardInventoryItems
 struct UWidget_RewardInventoryItems_C_ExecuteUbergraph_Widget_RewardInventoryItems_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

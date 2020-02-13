@@ -47,7 +47,7 @@ struct UAnim_ResourceMiner_C_AnimNotify_SecondMineVfx_Params
 // Function Anim_ResourceMiner.Anim_ResourceMiner_C.ExecuteUbergraph_Anim_ResourceMiner
 struct UAnim_ResourceMiner_C_ExecuteUbergraph_Anim_ResourceMiner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

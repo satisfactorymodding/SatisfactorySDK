@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.CheckHasPower
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_HUD_C::CheckHasPower()
 {
@@ -30,7 +30,7 @@ void UWidget_Locomotive_HUD_C::CheckHasPower()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.SetSpeedometerPosition
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_HUD_C::SetSpeedometerPosition()
 {
@@ -47,7 +47,7 @@ void UWidget_Locomotive_HUD_C::SetSpeedometerPosition()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.GetPowerConsumptionText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -68,7 +68,7 @@ struct FText UWidget_Locomotive_HUD_C::GetPowerConsumptionText()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.GetSpeedInKMHText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -89,7 +89,7 @@ struct FText UWidget_Locomotive_HUD_C::GetSpeedInKMHText()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -111,7 +111,7 @@ void UWidget_Locomotive_HUD_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.StartBrakeIndicatorAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_HUD_C::StartBrakeIndicatorAnim()
 {
@@ -128,7 +128,7 @@ void UWidget_Locomotive_HUD_C::StartBrakeIndicatorAnim()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.StopBrakeIndicatorAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_HUD_C::StopBrakeIndicatorAnim()
 {
@@ -145,7 +145,7 @@ void UWidget_Locomotive_HUD_C::StopBrakeIndicatorAnim()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Locomotive_HUD_C::Construct()
 {
@@ -162,7 +162,7 @@ void UWidget_Locomotive_HUD_C::Construct()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.CheckIsDocked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_HUD_C::CheckIsDocked()
 {
@@ -179,7 +179,7 @@ void UWidget_Locomotive_HUD_C::CheckIsDocked()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Locomotive_HUD_C::Destruct()
 {
@@ -196,7 +196,7 @@ void UWidget_Locomotive_HUD_C::Destruct()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.UpdateStats
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_HUD_C::UpdateStats()
 {
@@ -213,11 +213,11 @@ void UWidget_Locomotive_HUD_C::UpdateStats()
 
 
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.ExecuteUbergraph_Widget_Locomotive_HUD
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Locomotive_HUD_C::ExecuteUbergraph_Widget_Locomotive_HUD(int EntryPoint)
+void UWidget_Locomotive_HUD_C::ExecuteUbergraph_Widget_Locomotive_HUD(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.ExecuteUbergraph_Widget_Locomotive_HUD");
 

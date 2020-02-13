@@ -15,12 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CrabEggParts.BP_CrabEggParts_C
-// 0x0010 (0x03B8 - 0x03A8)
+// 0x0014 (0x03F0 - 0x03DC)
 class ABP_CrabEggParts_C : public ABP_HogParts_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                               Box;                                                      // 0x03B0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x03DC(0x0004) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                               Box;                                                      // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,7 +32,7 @@ public:
 
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_CrabEggParts(int EntryPoint);
+	void ExecuteUbergraph_BP_CrabEggParts(int* EntryPoint);
 };
 
 

@@ -45,10 +45,16 @@ struct UWidget_AutoScrollingContainer_C_PreConstruct_Params
 	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.DelayedStartAutoScroll
+struct UWidget_AutoScrollingContainer_C_DelayedStartAutoScroll_Params
+{
+	float*                                             Seconds_Delayed;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.ExecuteUbergraph_Widget_AutoScrollingContainer
 struct UWidget_AutoScrollingContainer_C_ExecuteUbergraph_Widget_AutoScrollingContainer_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -22,7 +22,7 @@ struct UWidget_PassengerSeat_C_Construct_Params
 // Function Widget_PassengerSeat.Widget_PassengerSeat_C.ExecuteUbergraph_Widget_PassengerSeat
 struct UWidget_PassengerSeat_C_ExecuteUbergraph_Widget_PassengerSeat_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_FindFoliageLocation.BTT_FindFoliageLocation_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_FindFoliageLocation_C::ReceiveExecuteAI(class AAIController** OwnerCon
 
 
 // Function BTT_FindFoliageLocation.BTT_FindFoliageLocation_C.ExecuteUbergraph_BTT_FindFoliageLocation
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_FindFoliageLocation_C::ExecuteUbergraph_BTT_FindFoliageLocation(int EntryPoint)
+void UBTT_FindFoliageLocation_C::ExecuteUbergraph_BTT_FindFoliageLocation(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_FindFoliageLocation.BTT_FindFoliageLocation_C.ExecuteUbergraph_BTT_FindFoliageLocation");
 

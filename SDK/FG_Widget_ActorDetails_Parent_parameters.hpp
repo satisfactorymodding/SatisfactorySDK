@@ -32,7 +32,7 @@ struct UWidget_ActorDetails_Parent_C_Destruct_Params
 // Function Widget_ActorDetails_Parent.Widget_ActorDetails_Parent_C.ExecuteUbergraph_Widget_ActorDetails_Parent
 struct UWidget_ActorDetails_Parent_C_ExecuteUbergraph_Widget_ActorDetails_Parent_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

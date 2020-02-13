@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.CalculateAnimGraphValues
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_SpaceRabbitAnim_C::CalculateAnimGraphValues()
 {
@@ -30,7 +30,7 @@ void UBP_SpaceRabbitAnim_C::CalculateAnimGraphValues()
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +50,7 @@ void UBP_SpaceRabbitAnim_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.OnRadialDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_SpaceRabbitAnim_C::OnRadialDamageTaken()
 {
@@ -67,7 +67,7 @@ void UBP_SpaceRabbitAnim_C::OnRadialDamageTaken()
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.OnPointDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector*                shootDIrection                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -87,7 +87,7 @@ void UBP_SpaceRabbitAnim_C::OnPointDamageTaken(struct FVector* shootDIrection)
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.AnimNotify_AudioNotify_SpaceBunny_RTPC_2
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_RTPC_2()
 {
@@ -104,7 +104,7 @@ void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_RTPC_2()
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.AnimNotify_AudioNotify_SpaceBunny_RTPC_3
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_RTPC_3()
 {
@@ -121,7 +121,7 @@ void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_RTPC_3()
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.AnimNotify_AudioNotify_SpaceBunny_RTPC_4
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_RTPC_4()
 {
@@ -138,7 +138,7 @@ void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_RTPC_4()
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.AnimNotify_AudioNotify_SpaceBunny_SupressBreath
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_SupressBreath()
 {
@@ -155,7 +155,7 @@ void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_SupressBreath()
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.AnimNotify_AudioNotify_SpaceBunny_ReleaseBreath
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_ReleaseBreath()
 {
@@ -172,11 +172,11 @@ void UBP_SpaceRabbitAnim_C::AnimNotify_AudioNotify_SpaceBunny_ReleaseBreath()
 
 
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.ExecuteUbergraph_BP_SpaceRabbitAnim
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_SpaceRabbitAnim_C::ExecuteUbergraph_BP_SpaceRabbitAnim(int EntryPoint)
+void UBP_SpaceRabbitAnim_C::ExecuteUbergraph_BP_SpaceRabbitAnim(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.ExecuteUbergraph_BP_SpaceRabbitAnim");
 

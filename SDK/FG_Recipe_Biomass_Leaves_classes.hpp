@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_Biomass_Leaves.Recipe_Biomass_Leaves_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_Biomass_Leaves_C : public UFGRecipe
 {
 public:

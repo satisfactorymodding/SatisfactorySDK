@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_CostEffectActor.BP_CostEffectActor_C.UserConstructionScript
-// ()
-
-void ABP_CostEffectActor_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CostEffectActor.BP_CostEffectActor_C.UserConstructionScript");
-
-	ABP_CostEffectActor_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_CostEffectActor.BP_CostEffectActor_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_CostEffectActor_C::ReceiveBeginPlay()
 {
@@ -47,7 +30,7 @@ void ABP_CostEffectActor_C::ReceiveBeginPlay()
 
 
 // Function BP_CostEffectActor.BP_CostEffectActor_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,11 +50,11 @@ void ABP_CostEffectActor_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_CostEffectActor.BP_CostEffectActor_C.ExecuteUbergraph_BP_CostEffectActor
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CostEffectActor_C::ExecuteUbergraph_BP_CostEffectActor(int EntryPoint)
+void ABP_CostEffectActor_C::ExecuteUbergraph_BP_CostEffectActor(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CostEffectActor.BP_CostEffectActor_C.ExecuteUbergraph_BP_CostEffectActor");
 
@@ -87,7 +70,7 @@ void ABP_CostEffectActor_C::ExecuteUbergraph_BP_CostEffectActor(int EntryPoint)
 
 
 // Function BP_CostEffectActor.BP_CostEffectActor_C.OnReachedTarget__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_CostEffectActor_C::OnReachedTarget__DelegateSignature()
 {

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class UEOS.EOSAuthentication
-// 0x0058 (0x0080 - 0x0028)
+// 0x00C8 (0x00F0 - 0x0028)
 class UEOSAuthentication : public UObject
 {
 public:
@@ -23,9 +23,9 @@ public:
 	struct FScriptMulticastDelegate                    OnUserLoggedOut;                                          // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnUserLoginRequiresMFA;                                   // 0x0048(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnUserLoginFail;                                          // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0068(0x0010) MISSED OFFSET
-	bool                                               bAuthorised;                                              // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x80];                                      // 0x0068(0x0080) MISSED OFFSET
+	bool                                               bAuthorised;                                              // 0x00E8(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -36,7 +36,7 @@ public:
 
 	void Update();
 	void Logout();
-	void Login(ELoginMode LoginMode, const class FString& UserId, const class FString& UserToken);
+	void Login(ELoginMode* LoginMode, class FString* UserId, class FString* UserToken);
 	bool GetAuthorised();
 };
 
@@ -58,8 +58,8 @@ public:
 
 	bool IsValid();
 	bool InitMetric();
-	bool EndPlayerSession(const class FString& DisplayName);
-	bool BeginPlayerSession(const class FString& DisplayName, ESupportedAccountType TargetAccountType, EInputControllerType ControllerType);
+	bool EndPlayerSession(class FString* DisplayName);
+	bool BeginPlayerSession(class FString* DisplayName, ESupportedAccountType* TargetAccountType, EInputControllerType* ControllerType);
 };
 
 
@@ -87,15 +87,14 @@ public:
 
 
 // Class UEOS.EOSManager
-// 0x0020 (0x0048 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UEOSManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	bool                                               bEOSInitialized;                                          // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-	class UEOSAuthentication*                          Authentication;                                           // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UEOSMetrics*                                 Metrics;                                                  // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               bEOSInitialized;                                          // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	class UEOSAuthentication*                          Authentication;                                           // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UEOSMetrics*                                 Metrics;                                                  // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -106,12 +105,12 @@ public:
 
 	bool UpdateEOS();
 	bool ShutdownEOS();
-	bool IsEOSInitialized();
+	bool STATIC_IsEOSInitialized();
 	bool InitEOS();
-	class UEOSMetrics* GetMetrics();
-	class UEOSManager* GetEOSManager();
-	class UEOSAuthentication* GetAuthentication();
-	void Cleanup();
+	class UEOSMetrics* STATIC_GetMetrics();
+	class UEOSManager* STATIC_GetEOSManager();
+	class UEOSAuthentication* STATIC_GetAuthentication();
+	void STATIC_Cleanup();
 };
 
 

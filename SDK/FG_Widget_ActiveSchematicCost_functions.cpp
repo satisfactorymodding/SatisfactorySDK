@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ActiveSchematicCost.Widget_ActiveSchematicCost_C.GetNumIngredientsPaidOff
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            NumItems                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +35,7 @@ void UWidget_ActiveSchematicCost_C::GetNumIngredientsPaidOff(int* NumItems)
 
 
 // Function Widget_ActiveSchematicCost.Widget_ActiveSchematicCost_C.GetIngredient
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FItemAmount             ingredient                     (Parm, OutParm)
 
@@ -57,7 +57,7 @@ void UWidget_ActiveSchematicCost_C::GetIngredient(struct FItemAmount* ingredient
 
 
 // Function Widget_ActiveSchematicCost.Widget_ActiveSchematicCost_C.UpdateTimer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActiveSchematicCost_C::UpdateTimer()
 {
@@ -74,7 +74,7 @@ void UWidget_ActiveSchematicCost_C::UpdateTimer()
 
 
 // Function Widget_ActiveSchematicCost.Widget_ActiveSchematicCost_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActiveSchematicCost_C::Construct()
 {
@@ -91,7 +91,7 @@ void UWidget_ActiveSchematicCost_C::Construct()
 
 
 // Function Widget_ActiveSchematicCost.Widget_ActiveSchematicCost_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActiveSchematicCost_C::Destruct()
 {
@@ -108,11 +108,11 @@ void UWidget_ActiveSchematicCost_C::Destruct()
 
 
 // Function Widget_ActiveSchematicCost.Widget_ActiveSchematicCost_C.ExecuteUbergraph_Widget_ActiveSchematicCost
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActiveSchematicCost_C::ExecuteUbergraph_Widget_ActiveSchematicCost(int EntryPoint)
+void UWidget_ActiveSchematicCost_C::ExecuteUbergraph_Widget_ActiveSchematicCost(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActiveSchematicCost.Widget_ActiveSchematicCost_C.ExecuteUbergraph_Widget_ActiveSchematicCost");
 

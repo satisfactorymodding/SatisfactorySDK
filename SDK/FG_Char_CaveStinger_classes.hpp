@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Char_CaveStinger.Char_CaveStinger_C
-// 0x0000 (0x09B8 - 0x09B8)
+// 0x0000 (0x09D8 - 0x09D8)
 class AChar_CaveStinger_C : public AChar_Stinger_C
 {
 public:

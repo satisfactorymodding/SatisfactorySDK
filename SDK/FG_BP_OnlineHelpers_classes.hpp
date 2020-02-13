@@ -27,18 +27,18 @@ public:
 	}
 
 
-	void InsertionAddButton(class UPanelWidget* NewParam, class UObject* __WorldContext);
-	void GetSessionFromFriendNetId(class UObject* WorldContext, const struct FUniqueNetIdRepl& friendNetId, class UObject* __WorldContext, struct FBlueprintSessionResult* session);
-	void IsHost(class APlayerState* PlayerState, class APlayerController* OwningPlayer, class UObject* __WorldContext, bool* isOurself);
-	void CanJoinInvite(class UObject* WorldContext, const struct FPendingInvite& invite, class UObject* __WorldContext, TEnumAsByte<ECanJoinInviteResult>* Result);
-	void IsInThisGame(class UObject* WorldContext, class UObject* __WorldContext, struct FFGOnlineFriend* onlineFriend, bool* inThisGame);
-	void CanSendInvite(class UObject* WorldContext, const struct FFGOnlineFriend& _friend, class UObject* __WorldContext, TEnumAsByte<ECantInviteResult>* canSend);
-	void IsFriendInOnlineSession(class UObject* WorldContext, class UObject* __WorldContext, struct FFGOnlineFriend* frriend, bool* inSession);
-	void GetCompactPresence(const struct FOnlinePresence& presence, class UObject* __WorldContext, struct FFCompactPresence* compactPresence);
-	void GetFriendSession(const struct FFGOnlineFriend& _friend, class UObject* WorldContext, class UObject* __WorldContext, struct FBlueprintSessionResult* session);
-	void GetInvitePresence(class UObject* WorldContext, const struct FPendingInvite& invite, class UObject* __WorldContext, struct FOnlinePresence* presence);
-	struct FOnlinePresence GetFriendPresence(const struct FFGOnlineFriend& onlineFriend, class UObject* WorldContext, class UObject* __WorldContext);
-	void SessionVisibilityStringToEnum(const class FString& String, class UObject* __WorldContext, TEnumAsByte<ESessionVisibility>* Enum);
+	void STATIC_InsertionAddButton(class UPanelWidget** NewParam, class UObject** __WorldContext);
+	void STATIC_GetSessionFromFriendNetId(class UObject** WorldContext, struct FUniqueNetIdRepl* friendNetId, class UObject** __WorldContext, struct FBlueprintSessionResult* session);
+	void STATIC_IsHost(class APlayerState** PlayerState, class APlayerController** OwningPlayer, class UObject** __WorldContext, bool* isOurself);
+	void STATIC_CanJoinInvite(class UObject** WorldContext, struct FPendingInvite* invite, class UObject** __WorldContext, TEnumAsByte<ECanJoinInviteResult>* Result);
+	void STATIC_IsInThisGame(class UObject** WorldContext, class UObject** __WorldContext, struct FFGOnlineFriend* onlineFriend, bool* inThisGame);
+	void STATIC_CanSendInvite(class UObject** WorldContext, struct FFGOnlineFriend* _friend, class UObject** __WorldContext, TEnumAsByte<ECantInviteResult>* canSend);
+	void STATIC_IsFriendInOnlineSession(class UObject** WorldContext, class UObject** __WorldContext, struct FFGOnlineFriend* frriend, bool* inSession);
+	void STATIC_GetCompactPresence(struct FOnlinePresence* presence, class UObject** __WorldContext, struct FFCompactPresence* compactPresence);
+	void STATIC_GetFriendSession(struct FFGOnlineFriend* _friend, class UObject** WorldContext, class UObject** __WorldContext, struct FBlueprintSessionResult* session);
+	void STATIC_GetInvitePresence(class UObject** WorldContext, struct FPendingInvite* invite, class UObject** __WorldContext, struct FOnlinePresence* presence);
+	struct FOnlinePresence STATIC_GetFriendPresence(struct FFGOnlineFriend* onlineFriend, class UObject** WorldContext, class UObject** __WorldContext);
+	void STATIC_SessionVisibilityStringToEnum(class FString* String, class UObject** __WorldContext, TEnumAsByte<ESessionVisibility>* Enum);
 };
 
 

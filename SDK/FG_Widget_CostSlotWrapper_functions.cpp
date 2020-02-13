@@ -12,12 +12,36 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.SetIconBrush
-// ()
+// Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.FormatNumbers
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UTexture*                IconTexture                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumItems                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Out_Text                       (Parm, OutParm)
 
-void UWidget_CostSlotWrapper_C::SetIconBrush(class UTexture* IconTexture)
+void UWidget_CostSlotWrapper_C::FormatNumbers(int* NumItems, struct FText* Out_Text)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.FormatNumbers");
+
+	UWidget_CostSlotWrapper_C_FormatNumbers_Params params;
+	params.NumItems = NumItems;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Out_Text != nullptr)
+		*Out_Text = params.Out_Text;
+}
+
+
+// Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.SetIconBrush
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture**               IconTexture                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_CostSlotWrapper_C::SetIconBrush(class UTexture** IconTexture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.SetIconBrush");
 
@@ -33,7 +57,7 @@ void UWidget_CostSlotWrapper_C::SetIconBrush(class UTexture* IconTexture)
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.GetProgressbarPercent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -54,7 +78,7 @@ float UWidget_CostSlotWrapper_C::GetProgressbarPercent()
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.GetOrange
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -75,11 +99,11 @@ struct FLinearColor UWidget_CostSlotWrapper_C::GetOrange()
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.SetTextboxFormating
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           HasItems                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          HasItems                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CostSlotWrapper_C::SetTextboxFormating(bool HasItems)
+void UWidget_CostSlotWrapper_C::SetTextboxFormating(bool* HasItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.SetTextboxFormating");
 
@@ -95,7 +119,7 @@ void UWidget_CostSlotWrapper_C::SetTextboxFormating(bool HasItems)
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.GetDarkGray
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -116,7 +140,7 @@ struct FLinearColor UWidget_CostSlotWrapper_C::GetDarkGray()
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.SetPartsNumbers
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -137,18 +161,18 @@ struct FText UWidget_CostSlotWrapper_C::SetPartsNumbers()
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.Setup CostIcon
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTexture*                IconTexture                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemAmount             ItemAmount                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UFGInventoryComponent*   CachedInventoryComponent       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            SlotIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            CurrentNumInSlot               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           SmallSlot                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           BigSlot                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ForceOrangeTextbox             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture**               IconTexture                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemAmount*            ItemAmount                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UFGInventoryComponent**  CachedInventoryComponent       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           SlotIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           CurrentNumInSlot               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          SmallSlot                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          BigSlot                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ForceOrangeTextbox             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CostSlotWrapper_C::Setup_CostIcon(class UTexture* IconTexture, const struct FItemAmount& ItemAmount, class UFGInventoryComponent* CachedInventoryComponent, int SlotIdx, int CurrentNumInSlot, bool SmallSlot, bool BigSlot, bool ForceOrangeTextbox)
+void UWidget_CostSlotWrapper_C::Setup_CostIcon(class UTexture** IconTexture, struct FItemAmount* ItemAmount, class UFGInventoryComponent** CachedInventoryComponent, int* SlotIdx, int* CurrentNumInSlot, bool* SmallSlot, bool* BigSlot, bool* ForceOrangeTextbox)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.Setup CostIcon");
 
@@ -171,7 +195,7 @@ void UWidget_CostSlotWrapper_C::Setup_CostIcon(class UTexture* IconTexture, cons
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -193,7 +217,7 @@ void UWidget_CostSlotWrapper_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -213,11 +237,11 @@ void UWidget_CostSlotWrapper_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.ExecuteUbergraph_Widget_CostSlotWrapper
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CostSlotWrapper_C::ExecuteUbergraph_Widget_CostSlotWrapper(int EntryPoint)
+void UWidget_CostSlotWrapper_C::ExecuteUbergraph_Widget_CostSlotWrapper(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.ExecuteUbergraph_Widget_CostSlotWrapper");
 

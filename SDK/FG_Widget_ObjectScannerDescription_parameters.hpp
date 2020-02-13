@@ -28,7 +28,7 @@ struct UWidget_ObjectScannerDescription_C_Construct_Params
 // Function Widget_ObjectScannerDescription.Widget_ObjectScannerDescription_C.ExecuteUbergraph_Widget_ObjectScannerDescription
 struct UWidget_ObjectScannerDescription_C_ExecuteUbergraph_Widget_ObjectScannerDescription_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

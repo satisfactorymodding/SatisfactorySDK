@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MantaAnim.BP_MantaAnim_C.ExecuteUbergraph_BP_MantaAnim
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MantaAnim_C::ExecuteUbergraph_BP_MantaAnim(int EntryPoint)
+void UBP_MantaAnim_C::ExecuteUbergraph_BP_MantaAnim(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MantaAnim.BP_MantaAnim_C.ExecuteUbergraph_BP_MantaAnim");
 

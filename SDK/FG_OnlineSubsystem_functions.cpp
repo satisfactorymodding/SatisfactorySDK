@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class FString                  Match                          (Parm, ZeroConstructor)
-// bool                           bDidBecomeActive               (Parm, ZeroConstructor, IsPlainOldData)
+// class FString*                 Match                          (Parm, ZeroConstructor)
+// bool*                          bDidBecomeActive               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UTurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive)
+void UTurnBasedMatchInterface::OnMatchReceivedTurn(class FString* Match, bool* bDidBecomeActive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn");
 
@@ -35,11 +35,11 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, b
 
 
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class FString                  Match                          (Parm, ZeroConstructor)
+// class FString*                 Match                          (Parm, ZeroConstructor)
 
-void UTurnBasedMatchInterface::OnMatchEnded(const class FString& Match)
+void UTurnBasedMatchInterface::OnMatchEnded(class FString* Match)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded");
 

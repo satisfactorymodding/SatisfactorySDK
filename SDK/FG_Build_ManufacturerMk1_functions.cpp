@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.SetText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                  intText                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString*                 intText                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABuild_ManufacturerMk1_C::SetText(const class FString& intText)
+void ABuild_ManufacturerMk1_C::SetText(class FString* intText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.SetText");
 
@@ -32,14 +32,91 @@ void ABuild_ManufacturerMk1_C::SetText(const class FString& intText)
 }
 
 
-// Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.UserConstructionScript
-// ()
+// Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.GainedSignificance
+// (Event, Public, BlueprintEvent)
 
-void ABuild_ManufacturerMk1_C::UserConstructionScript()
+void ABuild_ManufacturerMk1_C::GainedSignificance()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.GainedSignificance");
 
-	ABuild_ManufacturerMk1_C_UserConstructionScript_Params params;
+	ABuild_ManufacturerMk1_C_GainedSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.LostSignificance
+// (Event, Public, BlueprintEvent)
+
+void ABuild_ManufacturerMk1_C::LostSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.LostSignificance");
+
+	ABuild_ManufacturerMk1_C_LostSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.StartProductionLoopEffects
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuild_ManufacturerMk1_C::StartProductionLoopEffects(bool* didStartProducing)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.StartProductionLoopEffects");
+
+	ABuild_ManufacturerMk1_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.StopProductionLoopEffects
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuild_ManufacturerMk1_C::StopProductionLoopEffects(bool* didStopProducing)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.StopProductionLoopEffects");
+
+	ABuild_ManufacturerMk1_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.ExecuteUbergraph_Build_ManufacturerMk1
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuild_ManufacturerMk1_C::ExecuteUbergraph_Build_ManufacturerMk1(int* EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_ManufacturerMk1.Build_ManufacturerMk1_C.ExecuteUbergraph_Build_ManufacturerMk1");
+
+	ABuild_ManufacturerMk1_C_ExecuteUbergraph_Build_ManufacturerMk1_Params params;
+	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 

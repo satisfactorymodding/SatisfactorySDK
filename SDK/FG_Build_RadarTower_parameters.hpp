@@ -14,10 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Build_RadarTower.Build_RadarTower_C.GetActorCompassViewDistance
+struct ABuild_RadarTower_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Build_RadarTower.Build_RadarTower_C.SetActorCompassViewDistance
+struct ABuild_RadarTower_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Build_RadarTower.Build_RadarTower_C.SetActorRepresentationText
 struct ABuild_RadarTower_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -105,9 +118,10 @@ struct ABuild_RadarTower_C_RemoveAsRepresentation_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Build_RadarTower.Build_RadarTower_C.UserConstructionScript
-struct ABuild_RadarTower_C_UserConstructionScript_Params
+// Function Build_RadarTower.Build_RadarTower_C.SetActorRepresentationColor
+struct ABuild_RadarTower_C_SetActorRepresentationColor_Params
 {
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_RadarTower.Build_RadarTower_C.ReceiveBeginPlay
@@ -121,20 +135,15 @@ struct ABuild_RadarTower_C_ReceiveEndPlay_Params
 	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Build_RadarTower.Build_RadarTower_C.OnRadiusExpansionTriggered
-struct ABuild_RadarTower_C_OnRadiusExpansionTriggered_Params
-{
-};
-
-// Function Build_RadarTower.Build_RadarTower_C.Factory_ReceiveStartProducing
-struct ABuild_RadarTower_C_Factory_ReceiveStartProducing_Params
+// Function Build_RadarTower.Build_RadarTower_C.OnRadiusUpdateTriggered
+struct ABuild_RadarTower_C_OnRadiusUpdateTriggered_Params
 {
 };
 
 // Function Build_RadarTower.Build_RadarTower_C.ExecuteUbergraph_Build_RadarTower
 struct ABuild_RadarTower_C_ExecuteUbergraph_Build_RadarTower_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

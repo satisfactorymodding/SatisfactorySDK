@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class LinearTimecode.LinearTimecodeComponent
-// 0x0060 (0x02A0 - 0x0240)
+// 0x0060 (0x02C0 - 0x0260)
 class ULinearTimecodeComponent : public USceneComponent
 {
 public:
-	struct FDropTimecode                               DropTimecode;                                             // 0x0240(0x001C) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x025C(0x0004) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnTimecodeChange;                                         // 0x0260(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x30];                                      // 0x0270(0x0030) MISSED OFFSET
+	struct FDropTimecode                               DropTimecode;                                             // 0x0260(0x001C) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x027C(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnTimecodeChange;                                         // 0x0280(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x30];                                      // 0x0290(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -31,8 +31,8 @@ public:
 	}
 
 
-	void SetDropTimecodeFrameNumber(const struct FDropTimecode& Timecode, int FrameNumber, struct FDropTimecode* OutTimecode);
-	void GetDropTimeCodeFrameNumber(const struct FDropTimecode& Timecode, int* FrameNumber);
+	void STATIC_SetDropTimecodeFrameNumber(struct FDropTimecode* Timecode, int* FrameNumber, struct FDropTimecode* OutTimecode);
+	void STATIC_GetDropTimeCodeFrameNumber(struct FDropTimecode* Timecode, int* FrameNumber);
 	int GetDropFrameNumber();
 };
 
@@ -50,7 +50,7 @@ public:
 	}
 
 
-	class FString Conv_DropTimecodeToString(const struct FDropTimecode& InTimecode);
+	class FString STATIC_Conv_DropTimecodeToString(struct FDropTimecode* InTimecode);
 };
 
 

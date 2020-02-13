@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_SplitterSmart.Widget_SplitterSmart_C
-// 0x000F (0x02E8 - 0x02D9)
+// 0x000F (0x0348 - 0x0339)
 class UWidget_SplitterSmart_C : public UWidget_SplitterProgrammable_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x02D9(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x02E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0339(0x0007) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0340(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -32,7 +32,7 @@ public:
 	void Construct();
 	void Destruct();
 	void PreConstruct(bool* IsDesignTime);
-	void ExecuteUbergraph_Widget_SplitterSmart(int EntryPoint);
+	void ExecuteUbergraph_Widget_SplitterSmart(int* EntryPoint);
 };
 
 

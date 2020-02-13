@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.GetInteractionText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -33,25 +33,8 @@ struct FText UWidget_PlayerInteraction_C::GetInteractionText()
 }
 
 
-// Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.Construct
-// ()
-
-void UWidget_PlayerInteraction_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.Construct");
-
-	UWidget_PlayerInteraction_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -73,11 +56,11 @@ void UWidget_PlayerInteraction_C::Tick(struct FGeometry* MyGeometry, float* InDe
 
 
 // Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.ExecuteUbergraph_Widget_PlayerInteraction
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PlayerInteraction_C::ExecuteUbergraph_Widget_PlayerInteraction(int EntryPoint)
+void UWidget_PlayerInteraction_C::ExecuteUbergraph_Widget_PlayerInteraction(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerInteraction.Widget_PlayerInteraction_C.ExecuteUbergraph_Widget_PlayerInteraction");
 

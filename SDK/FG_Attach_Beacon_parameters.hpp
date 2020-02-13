@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_Beacon.Attach_Beacon_C.UserConstructionScript
-struct AAttach_Beacon_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_Beacon.Attach_Beacon_C.PlayAttachEffects3P
 struct AAttach_Beacon_C_PlayAttachEffects3P_Params
 {
@@ -27,7 +22,7 @@ struct AAttach_Beacon_C_PlayAttachEffects3P_Params
 // Function Attach_Beacon.Attach_Beacon_C.ExecuteUbergraph_Attach_Beacon
 struct AAttach_Beacon_C_ExecuteUbergraph_Attach_Beacon_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

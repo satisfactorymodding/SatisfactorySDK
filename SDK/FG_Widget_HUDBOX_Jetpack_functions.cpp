@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HUDBOX_Jetpack.Widget_HUDBox_Jetpack_C.StopPulse
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Jetpack_C::StopPulse()
 {
@@ -30,7 +30,7 @@ void UWidget_HUDBox_Jetpack_C::StopPulse()
 
 
 // Function Widget_HUDBOX_Jetpack.Widget_HUDBox_Jetpack_C.StartPulse
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Jetpack_C::StartPulse()
 {
@@ -47,7 +47,7 @@ void UWidget_HUDBox_Jetpack_C::StartPulse()
 
 
 // Function Widget_HUDBOX_Jetpack.Widget_HUDBox_Jetpack_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HUDBox_Jetpack_C::Construct()
 {
@@ -64,7 +64,7 @@ void UWidget_HUDBox_Jetpack_C::Construct()
 
 
 // Function Widget_HUDBOX_Jetpack.Widget_HUDBox_Jetpack_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -86,7 +86,7 @@ void UWidget_HUDBox_Jetpack_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 
 
 // Function Widget_HUDBOX_Jetpack.Widget_HUDBox_Jetpack_C.BarPulse
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Jetpack_C::BarPulse()
 {
@@ -103,11 +103,11 @@ void UWidget_HUDBox_Jetpack_C::BarPulse()
 
 
 // Function Widget_HUDBOX_Jetpack.Widget_HUDBox_Jetpack_C.ExecuteUbergraph_Widget_HUDBox_Jetpack
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HUDBox_Jetpack_C::ExecuteUbergraph_Widget_HUDBox_Jetpack(int EntryPoint)
+void UWidget_HUDBox_Jetpack_C::ExecuteUbergraph_Widget_HUDBox_Jetpack(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HUDBOX_Jetpack.Widget_HUDBox_Jetpack_C.ExecuteUbergraph_Widget_HUDBox_Jetpack");
 

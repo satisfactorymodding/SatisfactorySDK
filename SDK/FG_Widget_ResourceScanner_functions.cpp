@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ResourceScanner.Widget_ResourceScanner_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ResourceScanner_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_ResourceScanner_C::Construct()
 
 
 // Function Widget_ResourceScanner.Widget_ResourceScanner_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ResourceScanner_C::Destruct()
 {
@@ -47,11 +47,11 @@ void UWidget_ResourceScanner_C::Destruct()
 
 
 // Function Widget_ResourceScanner.Widget_ResourceScanner_C.ExecuteUbergraph_Widget_ResourceScanner
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ResourceScanner_C::ExecuteUbergraph_Widget_ResourceScanner(int EntryPoint)
+void UWidget_ResourceScanner_C::ExecuteUbergraph_Widget_ResourceScanner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ResourceScanner.Widget_ResourceScanner_C.ExecuteUbergraph_Widget_ResourceScanner");
 

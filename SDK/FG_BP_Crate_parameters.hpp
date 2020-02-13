@@ -14,10 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Crate.BP_Crate_C.GetActorCompassViewDistance
+struct ABP_Crate_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_Crate.BP_Crate_C.SetActorCompassViewDistance
+struct ABP_Crate_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_Crate.BP_Crate_C.SetActorRepresentationText
 struct ABP_Crate_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -105,9 +118,10 @@ struct ABP_Crate_C_RemoveAsRepresentation_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BP_Crate.BP_Crate_C.UserConstructionScript
-struct ABP_Crate_C_UserConstructionScript_Params
+// Function BP_Crate.BP_Crate_C.SetActorRepresentationColor
+struct ABP_Crate_C_SetActorRepresentationColor_Params
 {
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Crate.BP_Crate_C.StartIsLookedAt
@@ -134,7 +148,7 @@ struct ABP_Crate_C_OnUse_Params
 // Function BP_Crate.BP_Crate_C.SwitchHUD
 struct ABP_Crate_C_SwitchHUD_Params
 {
-	class AFGCharacterPlayer*                          byCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGCharacterPlayer**                         byCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Crate.BP_Crate_C.OnRequestReprecentMarker
@@ -156,14 +170,14 @@ struct ABP_Crate_C_ReceiveBeginPlay_Params
 // Function BP_Crate.BP_Crate_C.checkForClearAndRemove
 struct ABP_Crate_C_checkForClearAndRemove_Params
 {
-	class UClass*                                      ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                numRemoved;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               numRemoved;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Crate.BP_Crate_C.ExecuteUbergraph_BP_Crate
 struct ABP_Crate_C_ExecuteUbergraph_BP_Crate_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

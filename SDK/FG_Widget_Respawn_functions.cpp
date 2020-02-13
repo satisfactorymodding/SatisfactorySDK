@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Respawn.Widget_Respawn_C.GetRandomTip
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Respawn_C::GetRandomTip()
 {
@@ -30,7 +30,7 @@ void UWidget_Respawn_C::GetRandomTip()
 
 
 // Function Widget_Respawn.Widget_Respawn_C.SetTipNumber
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Respawn_C::SetTipNumber()
 {
@@ -47,7 +47,7 @@ void UWidget_Respawn_C::SetTipNumber()
 
 
 // Function Widget_Respawn.Widget_Respawn_C.UpdateProgressBlips
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Respawn_C::UpdateProgressBlips()
 {
@@ -64,7 +64,7 @@ void UWidget_Respawn_C::UpdateProgressBlips()
 
 
 // Function Widget_Respawn.Widget_Respawn_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Respawn_C::Construct()
 {
@@ -81,7 +81,7 @@ void UWidget_Respawn_C::Construct()
 
 
 // Function Widget_Respawn.Widget_Respawn_C.SpawnRespawnMessage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Respawn_C::SpawnRespawnMessage()
 {
@@ -98,7 +98,7 @@ void UWidget_Respawn_C::SpawnRespawnMessage()
 
 
 // Function Widget_Respawn.Widget_Respawn_C.MoveProgressbar
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Respawn_C::MoveProgressbar()
 {
@@ -115,11 +115,11 @@ void UWidget_Respawn_C::MoveProgressbar()
 
 
 // Function Widget_Respawn.Widget_Respawn_C.ExecuteUbergraph_Widget_Respawn
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Respawn_C::ExecuteUbergraph_Widget_Respawn(int EntryPoint)
+void UWidget_Respawn_C::ExecuteUbergraph_Widget_Respawn(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Respawn.Widget_Respawn_C.ExecuteUbergraph_Widget_Respawn");
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GameMode.BP_GameMode_C
-// 0x0000 (0x04C0 - 0x04C0)
+// 0x0000 (0x04D8 - 0x04D8)
 class ABP_GameMode_C : public ABP_GameModeBase_C
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Water.BP_Water_C.UserConstructionScript
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Water_C::UserConstructionScript()
 {

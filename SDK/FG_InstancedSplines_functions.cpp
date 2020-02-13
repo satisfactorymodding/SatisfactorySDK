@@ -13,19 +13,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function InstancedSplines.FGInstancedSplineMeshComponent.UpdateInstanceTransform
-// ()
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 StartPos                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 StartTangent                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 EndPos                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 EndTangent                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bMarkRenderStateDirty          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                StartPos                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                StartTangent                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                EndPos                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                EndTangent                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool*                          bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bMarkRenderStateDirty          (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UFGInstancedSplineMeshComponent::UpdateInstanceTransform(int InstanceIndex, const struct FVector& StartPos, const struct FVector& StartTangent, const struct FVector& EndPos, const struct FVector& EndTangent, bool bWorldSpace, bool bMarkRenderStateDirty, bool bTeleport)
+bool UFGInstancedSplineMeshComponent::UpdateInstanceTransform(int* InstanceIndex, struct FVector* StartPos, struct FVector* StartTangent, struct FVector* EndPos, struct FVector* EndTangent, bool* bWorldSpace, bool* bMarkRenderStateDirty, bool* bTeleport)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InstancedSplines.FGInstancedSplineMeshComponent.UpdateInstanceTransform");
 
@@ -40,6 +40,7 @@ bool UFGInstancedSplineMeshComponent::UpdateInstanceTransform(int InstanceIndex,
 	params.bTeleport = bTeleport;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,12 +51,12 @@ bool UFGInstancedSplineMeshComponent::UpdateInstanceTransform(int InstanceIndex,
 
 
 // Function InstancedSplines.FGInstancedSplineMeshComponent.RemoveInstance
-// ()
+// (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UFGInstancedSplineMeshComponent::RemoveInstance(int InstanceIndex)
+bool UFGInstancedSplineMeshComponent::RemoveInstance(int* InstanceIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InstancedSplines.FGInstancedSplineMeshComponent.RemoveInstance");
 
@@ -63,6 +64,7 @@ bool UFGInstancedSplineMeshComponent::RemoveInstance(int InstanceIndex)
 	params.InstanceIndex = InstanceIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +75,7 @@ bool UFGInstancedSplineMeshComponent::RemoveInstance(int InstanceIndex)
 
 
 // Function InstancedSplines.FGInstancedSplineMeshComponent.GetInstanceCount
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -84,6 +86,7 @@ int UFGInstancedSplineMeshComponent::GetInstanceCount()
 	UFGInstancedSplineMeshComponent_GetInstanceCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +97,7 @@ int UFGInstancedSplineMeshComponent::GetInstanceCount()
 
 
 // Function InstancedSplines.FGInstancedSplineMeshComponent.ClearInstances
-// ()
+// (Native, Public, BlueprintCallable)
 
 void UFGInstancedSplineMeshComponent::ClearInstances()
 {
@@ -103,6 +106,7 @@ void UFGInstancedSplineMeshComponent::ClearInstances()
 	UFGInstancedSplineMeshComponent_ClearInstances_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,15 +115,15 @@ void UFGInstancedSplineMeshComponent::ClearInstances()
 
 
 // Function InstancedSplines.FGInstancedSplineMeshComponent.AddInstance
-// ()
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 StartPos                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 StartTangent                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 EndPos                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 EndTangent                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                StartPos                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                StartTangent                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                EndPos                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                EndTangent                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UFGInstancedSplineMeshComponent::AddInstance(const struct FVector& StartPos, const struct FVector& StartTangent, const struct FVector& EndPos, const struct FVector& EndTangent)
+int UFGInstancedSplineMeshComponent::AddInstance(struct FVector* StartPos, struct FVector* StartTangent, struct FVector* EndPos, struct FVector* EndTangent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InstancedSplines.FGInstancedSplineMeshComponent.AddInstance");
 
@@ -130,6 +134,7 @@ int UFGInstancedSplineMeshComponent::AddInstance(const struct FVector& StartPos,
 	params.EndTangent = EndTangent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

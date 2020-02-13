@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C.UserConstructionScript
-struct ABuild_ConveyorAttachmentMerger_C_UserConstructionScript_Params
-{
-};
-
 // Function Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C.PlayConstructSound
 struct ABuild_ConveyorAttachmentMerger_C_PlayConstructSound_Params
 {
@@ -27,7 +22,7 @@ struct ABuild_ConveyorAttachmentMerger_C_PlayConstructSound_Params
 // Function Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C.ExecuteUbergraph_Build_ConveyorAttachmentMerger
 struct ABuild_ConveyorAttachmentMerger_C_ExecuteUbergraph_Build_ConveyorAttachmentMerger_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

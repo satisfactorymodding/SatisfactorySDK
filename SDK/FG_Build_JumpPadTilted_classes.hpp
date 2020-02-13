@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_JumpPadTilted.Build_JumpPadTilted_C
-// 0x0000 (0x06A8 - 0x06A8)
+// 0x0000 (0x06B4 - 0x06B4)
 class ABuild_JumpPadTilted_C : public ABuild_JumpPad_C
 {
 public:

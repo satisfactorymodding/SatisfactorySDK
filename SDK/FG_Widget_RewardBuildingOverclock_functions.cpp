@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.IsValidRewardItem
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -34,25 +34,8 @@ void UWidget_RewardBuildingOverclock_C::IsValidRewardItem(bool* IsValid)
 }
 
 
-// Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.UpdateVisibility
-// ()
-
-void UWidget_RewardBuildingOverclock_C::UpdateVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.UpdateVisibility");
-
-	UWidget_RewardBuildingOverclock_C_UpdateVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.GetName
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -73,7 +56,7 @@ struct FText UWidget_RewardBuildingOverclock_C::GetName()
 
 
 // Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.GetIcon
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -93,56 +76,14 @@ struct FSlateBrush UWidget_RewardBuildingOverclock_C::GetIcon()
 }
 
 
-// Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.PreConstruct
-// ()
-// Parameters:
-// bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_RewardBuildingOverclock_C::PreConstruct(bool* IsDesignTime)
+void UWidget_RewardBuildingOverclock_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.PreConstruct");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.Construct");
 
-	UWidget_RewardBuildingOverclock_C_PreConstruct_Params params;
-	params.IsDesignTime = IsDesignTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.Tick
-// ()
-// Parameters:
-// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_RewardBuildingOverclock_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.Tick");
-
-	UWidget_RewardBuildingOverclock_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.OnRewardClicked
-// ()
-
-void UWidget_RewardBuildingOverclock_C::OnRewardClicked()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.OnRewardClicked");
-
-	UWidget_RewardBuildingOverclock_C_OnRewardClicked_Params params;
+	UWidget_RewardBuildingOverclock_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -153,11 +94,11 @@ void UWidget_RewardBuildingOverclock_C::OnRewardClicked()
 
 
 // Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.ExecuteUbergraph_Widget_RewardBuildingOverclock
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RewardBuildingOverclock_C::ExecuteUbergraph_Widget_RewardBuildingOverclock(int EntryPoint)
+void UWidget_RewardBuildingOverclock_C::ExecuteUbergraph_Widget_RewardBuildingOverclock(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C.ExecuteUbergraph_Widget_RewardBuildingOverclock");
 

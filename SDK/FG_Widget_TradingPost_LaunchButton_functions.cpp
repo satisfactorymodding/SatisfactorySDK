@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.Test
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           NewParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +35,7 @@ void UWidget_TradingPost_LaunchButton_C::Test(bool* NewParam)
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.IsTutorialPhase
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsTutorialPhase                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -57,7 +57,7 @@ void UWidget_TradingPost_LaunchButton_C::IsTutorialPhase(bool* IsTutorialPhase)
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.GetButtonClickedVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +78,7 @@ ESlateVisibility UWidget_TradingPost_LaunchButton_C::GetButtonClickedVisibility(
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.IsSchematicPaidOff
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -99,7 +99,7 @@ bool UWidget_TradingPost_LaunchButton_C::IsSchematicPaidOff()
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.GetTextFeedback
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -120,7 +120,7 @@ struct FText UWidget_TradingPost_LaunchButton_C::GetTextFeedback()
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.GetLaunchButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -141,7 +141,7 @@ ESlateVisibility UWidget_TradingPost_LaunchButton_C::GetLaunchButtonVisibility()
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.GetLaunchButtonEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +162,7 @@ bool UWidget_TradingPost_LaunchButton_C::GetLaunchButtonEnabled()
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -184,7 +184,7 @@ void UWidget_TradingPost_LaunchButton_C::Tick(struct FGeometry* MyGeometry, floa
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_65_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_LaunchButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_65_OnButtonHoverEvent__DelegateSignature()
 {
@@ -201,7 +201,7 @@ void UWidget_TradingPost_LaunchButton_C::BndEvt__mButton_K2Node_ComponentBoundEv
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_75_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_LaunchButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_75_OnButtonHoverEvent__DelegateSignature()
 {
@@ -218,7 +218,7 @@ void UWidget_TradingPost_LaunchButton_C::BndEvt__mButton_K2Node_ComponentBoundEv
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_LaunchButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature()
 {
@@ -235,7 +235,7 @@ void UWidget_TradingPost_LaunchButton_C::BndEvt__Button_26_K2Node_ComponentBound
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPost_LaunchButton_C::Construct()
 {
@@ -252,11 +252,11 @@ void UWidget_TradingPost_LaunchButton_C::Construct()
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.mLaunchShip
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           IsTutorialPhase                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          IsTutorialPhase                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_LaunchButton_C::mLaunchShip(bool IsTutorialPhase)
+void UWidget_TradingPost_LaunchButton_C::mLaunchShip(bool* IsTutorialPhase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.mLaunchShip");
 
@@ -272,11 +272,11 @@ void UWidget_TradingPost_LaunchButton_C::mLaunchShip(bool IsTutorialPhase)
 
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.ExecuteUbergraph_Widget_TradingPost_LaunchButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_LaunchButton_C::ExecuteUbergraph_Widget_TradingPost_LaunchButton(int EntryPoint)
+void UWidget_TradingPost_LaunchButton_C::ExecuteUbergraph_Widget_TradingPost_LaunchButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.ExecuteUbergraph_Widget_TradingPost_LaunchButton");
 

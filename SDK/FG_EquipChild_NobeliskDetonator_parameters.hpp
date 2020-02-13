@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function EquipChild_NobeliskDetonator.EquipChild_NobeliskDetonator_C.UserConstructionScript
-struct AEquipChild_NobeliskDetonator_C_UserConstructionScript_Params
-{
-};
-
 // Function EquipChild_NobeliskDetonator.EquipChild_NobeliskDetonator_C.NotifyReloadComplete
 struct AEquipChild_NobeliskDetonator_C_NotifyReloadComplete_Params
 {
@@ -53,7 +48,7 @@ struct AEquipChild_NobeliskDetonator_C_NotifyPrimaryFireExecuted_Params
 // Function EquipChild_NobeliskDetonator.EquipChild_NobeliskDetonator_C.ExecuteUbergraph_EquipChild_NobeliskDetonator
 struct AEquipChild_NobeliskDetonator_C_ExecuteUbergraph_EquipChild_NobeliskDetonator_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

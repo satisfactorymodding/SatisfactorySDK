@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Equip_Beacon.Equip_Beacon_C.SpawnBeacon
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AEquip_Beacon_C::SpawnBeacon()
 {
@@ -29,25 +29,8 @@ void AEquip_Beacon_C::SpawnBeacon()
 }
 
 
-// Function Equip_Beacon.Equip_Beacon_C.UserConstructionScript
-// ()
-
-void AEquip_Beacon_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_Beacon.Equip_Beacon_C.UserConstructionScript");
-
-	AEquip_Beacon_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_Beacon.Equip_Beacon_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Beacon_C::WasEquipped()
 {
@@ -64,7 +47,7 @@ void AEquip_Beacon_C::WasEquipped()
 
 
 // Function Equip_Beacon.Equip_Beacon_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Beacon_C::WasUnEquipped()
 {
@@ -80,12 +63,32 @@ void AEquip_Beacon_C::WasUnEquipped()
 }
 
 
-// Function Equip_Beacon.Equip_Beacon_C.ExecuteUbergraph_Equip_Beacon
-// ()
+// Function Equip_Beacon.Equip_Beacon_C.PlayConsumeEffects
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UFGConsumableDescriptor** consumable                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_Beacon_C::ExecuteUbergraph_Equip_Beacon(int EntryPoint)
+void AEquip_Beacon_C::PlayConsumeEffects(class UFGConsumableDescriptor** consumable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Equip_Beacon.Equip_Beacon_C.PlayConsumeEffects");
+
+	AEquip_Beacon_C_PlayConsumeEffects_Params params;
+	params.consumable = consumable;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Equip_Beacon.Equip_Beacon_C.ExecuteUbergraph_Equip_Beacon
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AEquip_Beacon_C::ExecuteUbergraph_Equip_Beacon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_Beacon.Equip_Beacon_C.ExecuteUbergraph_Equip_Beacon");
 

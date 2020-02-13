@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MaterialEffect_Build_Hub.BP_MaterialEffect_Build_Hub_C.PlayThumpSound
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MaterialEffect_Build_Hub_C::PlayThumpSound()
 {
@@ -30,11 +30,11 @@ void UBP_MaterialEffect_Build_Hub_C::PlayThumpSound()
 
 
 // Function BP_MaterialEffect_Build_Hub.BP_MaterialEffect_Build_Hub_C.ExecuteUbergraph_BP_MaterialEffect_Build_Hub
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MaterialEffect_Build_Hub_C::ExecuteUbergraph_BP_MaterialEffect_Build_Hub(int EntryPoint)
+void UBP_MaterialEffect_Build_Hub_C::ExecuteUbergraph_BP_MaterialEffect_Build_Hub(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MaterialEffect_Build_Hub.BP_MaterialEffect_Build_Hub_C.ExecuteUbergraph_BP_MaterialEffect_Build_Hub");
 

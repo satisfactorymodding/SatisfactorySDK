@@ -29,7 +29,7 @@ struct UWidget_HUDBox_GasMask_C_Tick_Params
 // Function Widget_HUDBox_GasMask.Widget_HUDBox_GasMask_C.ExecuteUbergraph_Widget_HUDBox_GasMask
 struct UWidget_HUDBox_GasMask_C_ExecuteUbergraph_Widget_HUDBox_GasMask_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

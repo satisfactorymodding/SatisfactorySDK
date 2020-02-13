@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Truck.BP_Truck_C.UpdateOutline
+struct ABP_Truck_C_UpdateOutline_Params
+{
+	bool*                                              aimingAtWorkbench;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_Truck.BP_Truck_C.GetActorRepresentationTexture
 struct ABP_Truck_C_GetActorRepresentationTexture_Params
 {
@@ -44,37 +50,42 @@ struct ABP_Truck_C_ShouldAutoregisterAsTargetable_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BP_Truck.BP_Truck_C.UserConstructionScript
-struct ABP_Truck_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_Truck.BP_Truck_C.InpActEvt_Flashlight_K2Node_InputActionEvent_1
 struct ABP_Truck_C_InpActEvt_Flashlight_K2Node_InputActionEvent_1_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function BP_Truck.BP_Truck_C.OpenTrunk
-struct ABP_Truck_C_OpenTrunk_Params
-{
-};
-
-// Function BP_Truck.BP_Truck_C.CloseTrunk
-struct ABP_Truck_C_CloseTrunk_Params
-{
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_Truck.BP_Truck_C.Server_SetFlashlightOn
 struct ABP_Truck_C_Server_SetFlashlightOn_Params
 {
-	bool                                               FlashlightOn;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              FlashlightOn;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Truck.BP_Truck_C.GainedSignificance
+struct ABP_Truck_C_GainedSignificance_Params
+{
+};
+
+// Function BP_Truck.BP_Truck_C.LostSignificance
+struct ABP_Truck_C_LostSignificance_Params
+{
+};
+
+// Function BP_Truck.BP_Truck_C.Multicast_OpenTrunk
+struct ABP_Truck_C_Multicast_OpenTrunk_Params
+{
+};
+
+// Function BP_Truck.BP_Truck_C.Multicast_CloseTrunk
+struct ABP_Truck_C_Multicast_CloseTrunk_Params
+{
 };
 
 // Function BP_Truck.BP_Truck_C.ExecuteUbergraph_BP_Truck
 struct ABP_Truck_C_ExecuteUbergraph_BP_Truck_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

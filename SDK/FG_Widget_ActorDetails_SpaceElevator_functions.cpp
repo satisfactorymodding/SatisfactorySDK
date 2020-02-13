@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ActorDetails_SpaceElevator.Widget_ActorDetails_SpaceElevator_C.SetupInventory
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActorDetails_SpaceElevator_C::SetupInventory()
 {
@@ -30,7 +30,7 @@ void UWidget_ActorDetails_SpaceElevator_C::SetupInventory()
 
 
 // Function Widget_ActorDetails_SpaceElevator.Widget_ActorDetails_SpaceElevator_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActorDetails_SpaceElevator_C::Construct()
 {
@@ -47,7 +47,7 @@ void UWidget_ActorDetails_SpaceElevator_C::Construct()
 
 
 // Function Widget_ActorDetails_SpaceElevator.Widget_ActorDetails_SpaceElevator_C.InitCostSlots
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActorDetails_SpaceElevator_C::InitCostSlots()
 {
@@ -64,11 +64,11 @@ void UWidget_ActorDetails_SpaceElevator_C::InitCostSlots()
 
 
 // Function Widget_ActorDetails_SpaceElevator.Widget_ActorDetails_SpaceElevator_C.ExecuteUbergraph_Widget_ActorDetails_SpaceElevator
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActorDetails_SpaceElevator_C::ExecuteUbergraph_Widget_ActorDetails_SpaceElevator(int EntryPoint)
+void UWidget_ActorDetails_SpaceElevator_C::ExecuteUbergraph_Widget_ActorDetails_SpaceElevator(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActorDetails_SpaceElevator.Widget_ActorDetails_SpaceElevator_C.ExecuteUbergraph_Widget_ActorDetails_SpaceElevator");
 

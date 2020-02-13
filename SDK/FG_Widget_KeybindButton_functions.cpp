@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.UpdateKeyMapping
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_KeybindButton_C::UpdateKeyMapping()
 {
@@ -30,7 +30,7 @@ void UWidget_KeybindButton_C::UpdateKeyMapping()
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.RebindKey
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_KeybindButton_C::RebindKey()
 {
@@ -47,16 +47,16 @@ void UWidget_KeybindButton_C::RebindKey()
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.KeyBindingOverrideConfirmed
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Confirmed                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          confirmed                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_KeybindButton_C::KeyBindingOverrideConfirmed(bool Confirmed)
+void UWidget_KeybindButton_C::KeyBindingOverrideConfirmed(bool* confirmed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeybindButton.Widget_KeybindButton_C.KeyBindingOverrideConfirmed");
 
 	UWidget_KeybindButton_C_KeyBindingOverrideConfirmed_Params params;
-	params.Confirmed = Confirmed;
+	params.confirmed = confirmed;
 
 	auto flags = fn->FunctionFlags;
 
@@ -67,7 +67,7 @@ void UWidget_KeybindButton_C::KeyBindingOverrideConfirmed(bool Confirmed)
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.GetHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -88,12 +88,12 @@ struct FLinearColor UWidget_KeybindButton_C::GetHoverColor()
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.HandleInput
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FInputEvent             InputEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FKey                    keyPressed                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FInputEvent*            InputEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   keyPressed                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_KeybindButton_C::HandleInput(const struct FInputEvent& InputEvent, const struct FKey& keyPressed)
+void UWidget_KeybindButton_C::HandleInput(struct FInputEvent* InputEvent, struct FKey* keyPressed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeybindButton.Widget_KeybindButton_C.HandleInput");
 
@@ -110,7 +110,7 @@ void UWidget_KeybindButton_C::HandleInput(const struct FInputEvent& InputEvent, 
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_KeybindButton_C::Construct()
 {
@@ -127,7 +127,7 @@ void UWidget_KeybindButton_C::Construct()
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_25_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_KeybindButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_25_OnButtonClickedEvent__DelegateSignature()
 {
@@ -144,7 +144,7 @@ void UWidget_KeybindButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_25_OnBu
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_KeybindButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature()
 {
@@ -161,7 +161,7 @@ void UWidget_KeybindButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnBut
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_KeybindButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -178,7 +178,7 @@ void UWidget_KeybindButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnBut
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.ShowKeyBindWidget
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_KeybindButton_C::ShowKeyBindWidget()
 {
@@ -195,11 +195,11 @@ void UWidget_KeybindButton_C::ShowKeyBindWidget()
 
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.ExecuteUbergraph_Widget_KeybindButton
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_KeybindButton_C::ExecuteUbergraph_Widget_KeybindButton(int EntryPoint)
+void UWidget_KeybindButton_C::ExecuteUbergraph_Widget_KeybindButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeybindButton.Widget_KeybindButton_C.ExecuteUbergraph_Widget_KeybindButton");
 

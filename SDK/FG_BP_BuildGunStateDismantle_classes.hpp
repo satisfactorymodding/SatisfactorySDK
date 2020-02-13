@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C
-// 0x0010 (0x0090 - 0x0080)
+// 0x0010 (0x00C8 - 0x00B8)
 class UBP_BuildGunStateDismantle_C : public UFGBuildGunStateDismantle
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0080(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UWidget_DismantleMode_C*                     mDismantleUI;                                             // 0x0088(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x00B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_DismantleMode_C*                     mDismantleUI;                                             // 0x00C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,7 @@ public:
 	void EndState();
 	void OnStartDismantle();
 	void OnStopDismantle();
-	void ExecuteUbergraph_BP_BuildGunStateDismantle(int EntryPoint);
+	void ExecuteUbergraph_BP_BuildGunStateDismantle(int* EntryPoint);
 };
 
 

@@ -17,15 +17,15 @@ namespace SDK
 // Function LinearTimecode.LinearTimecodeComponent.SetDropTimecodeFrameNumber
 struct ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Params
 {
-	struct FDropTimecode                               Timecode;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	int                                                FrameNumber;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FDropTimecode*                              Timecode;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	int*                                               FrameNumber;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FDropTimecode                               OutTimecode;                                              // (Parm, OutParm)
 };
 
 // Function LinearTimecode.LinearTimecodeComponent.GetDropTimeCodeFrameNumber
 struct ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Params
 {
-	struct FDropTimecode                               Timecode;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FDropTimecode*                              Timecode;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
 	int                                                FrameNumber;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -38,7 +38,7 @@ struct ULinearTimecodeComponent_GetDropFrameNumber_Params
 // Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString
 struct UDropTimecodeToStringConversion_Conv_DropTimecodeToString_Params
 {
-	struct FDropTimecode                               InTimecode;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FDropTimecode*                              InTimecode;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
 	class FString                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 

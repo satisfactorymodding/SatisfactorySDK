@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C.ConsumedBy
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.ShouldSave
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ bool ABP_NobeliskExplosive_C::ShouldSave()
 
 
 // Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.GatherDependencies
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UObject*>         out_dependentObjects           (Parm, OutParm, ZeroConstructor)
 
@@ -56,7 +56,7 @@ void ABP_NobeliskExplosive_C::GatherDependencies(TArray<class UObject*>* out_dep
 
 
 // Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.NeedTransform
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,25 +76,8 @@ bool ABP_NobeliskExplosive_C::NeedTransform()
 }
 
 
-// Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.UserConstructionScript
-// ()
-
-void ABP_NobeliskExplosive_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.UserConstructionScript");
-
-	ABP_NobeliskExplosive_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.PlayExplosionEffects
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_NobeliskExplosive_C::PlayExplosionEffects()
 {
@@ -111,7 +94,7 @@ void ABP_NobeliskExplosive_C::PlayExplosionEffects()
 
 
 // Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.ReceiveHit
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent**    MyComp                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor**                 Other                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -145,11 +128,11 @@ void ABP_NobeliskExplosive_C::ReceiveHit(class UPrimitiveComponent** MyComp, cla
 
 
 // Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.ExecuteUbergraph_BP_NobeliskExplosive
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NobeliskExplosive_C::ExecuteUbergraph_BP_NobeliskExplosive(int EntryPoint)
+void ABP_NobeliskExplosive_C::ExecuteUbergraph_BP_NobeliskExplosive(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.ExecuteUbergraph_BP_NobeliskExplosive");
 

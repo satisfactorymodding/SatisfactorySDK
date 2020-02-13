@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.UpdateButtonStyle
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ImageTabButton_C::UpdateButtonStyle()
 {
@@ -30,7 +30,7 @@ void UWidget_ImageTabButton_C::UpdateButtonStyle()
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.CheckIsSelected
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           isSelected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -52,7 +52,7 @@ void UWidget_ImageTabButton_C::CheckIsSelected(bool* isSelected)
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.SetIcon
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ImageTabButton_C::SetIcon()
 {
@@ -69,7 +69,7 @@ void UWidget_ImageTabButton_C::SetIcon()
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.GetButtonEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -90,7 +90,7 @@ bool UWidget_ImageTabButton_C::GetButtonEnabled()
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ImageTabButton_C::Construct()
 {
@@ -107,7 +107,7 @@ void UWidget_ImageTabButton_C::Construct()
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ImageTabButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature()
 {
@@ -124,7 +124,7 @@ void UWidget_ImageTabButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_32_OnB
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ImageTabButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -141,7 +141,7 @@ void UWidget_ImageTabButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnBu
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -161,7 +161,7 @@ void UWidget_ImageTabButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ImageTabButton_C::Destruct()
 {
@@ -178,11 +178,11 @@ void UWidget_ImageTabButton_C::Destruct()
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.ExecuteUbergraph_Widget_ImageTabButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ImageTabButton_C::ExecuteUbergraph_Widget_ImageTabButton(int EntryPoint)
+void UWidget_ImageTabButton_C::ExecuteUbergraph_Widget_ImageTabButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ImageTabButton.Widget_ImageTabButton_C.ExecuteUbergraph_Widget_ImageTabButton");
 
@@ -198,7 +198,7 @@ void UWidget_ImageTabButton_C::ExecuteUbergraph_Widget_ImageTabButton(int EntryP
 
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.TabButtonClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ImageTabButton_C::TabButtonClicked__DelegateSignature()
 {

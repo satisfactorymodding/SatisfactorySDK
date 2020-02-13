@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Spline.BP_Spline_C.GetNextSplineIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            currentIndex                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           currentIndex                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            nextIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Spline_C::GetNextSplineIndex(int currentIndex, int* nextIndex)
+void ABP_Spline_C::GetNextSplineIndex(int* currentIndex, int* nextIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Spline.BP_Spline_C.GetNextSplineIndex");
 
@@ -33,23 +33,6 @@ void ABP_Spline_C::GetNextSplineIndex(int currentIndex, int* nextIndex)
 
 	if (nextIndex != nullptr)
 		*nextIndex = params.nextIndex;
-}
-
-
-// Function BP_Spline.BP_Spline_C.UserConstructionScript
-// ()
-
-void ABP_Spline_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Spline.BP_Spline_C.UserConstructionScript");
-
-	ABP_Spline_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

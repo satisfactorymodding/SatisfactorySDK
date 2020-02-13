@@ -12,23 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function ParachuteMesh.ParachuteMesh_C.UserConstructionScript
-// ()
-
-void AParachuteMesh_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ParachuteMesh.ParachuteMesh_C.UserConstructionScript");
-
-	AParachuteMesh_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 }
 
 #ifdef _MSC_VER

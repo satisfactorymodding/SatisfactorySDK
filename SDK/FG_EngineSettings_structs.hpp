@@ -15,12 +15,22 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum EngineSettings.ESubLevelStripMode
+enum class ESubLevelStripMode : uint8_t
+{
+	ExactClass                     = 0,
+	IsChildOf                      = 1,
+	ESubLevelStripMode_MAX         = 2
+};
+
+
 // Enum EngineSettings.EFourPlayerSplitScreenType
 enum class EFourPlayerSplitScreenType : uint8_t
 {
 	Grid                           = 0,
 	Vertical                       = 1,
-	EFourPlayerSplitScreenType_MAX = 2
+	Horizontal                     = 2,
+	EFourPlayerSplitScreenType_MAX = 3
 };
 
 
@@ -30,7 +40,8 @@ enum class EThreePlayerSplitScreenType : uint8_t
 	FavorTop                       = 0,
 	FavorBottom                    = 1,
 	Vertical                       = 2,
-	EThreePlayerSplitScreenType_MAX = 3
+	Horizontal                     = 3,
+	EThreePlayerSplitScreenType_MAX = 4
 };
 
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_EatItem.BTT_EatItem_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_EatItem_C::ReceiveExecuteAI(class AAIController** OwnerController, cla
 
 
 // Function BTT_EatItem.BTT_EatItem_C.ExecuteUbergraph_BTT_EatItem
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_EatItem_C::ExecuteUbergraph_BTT_EatItem(int EntryPoint)
+void UBTT_EatItem_C::ExecuteUbergraph_BTT_EatItem(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_EatItem.BTT_EatItem_C.ExecuteUbergraph_BTT_EatItem");
 

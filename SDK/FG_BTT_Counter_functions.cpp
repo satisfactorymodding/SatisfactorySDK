@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_Counter.BTT_Counter_C.ReceiveExecute
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UBTT_Counter_C::ReceiveExecute(class AActor** OwnerActor)
 
 
 // Function BTT_Counter.BTT_Counter_C.ExecuteUbergraph_BTT_Counter
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_Counter_C::ExecuteUbergraph_BTT_Counter(int EntryPoint)
+void UBTT_Counter_C::ExecuteUbergraph_BTT_Counter(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_Counter.BTT_Counter_C.ExecuteUbergraph_BTT_Counter");
 

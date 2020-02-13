@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_TradingPost.Widget_TradingPost_C.SetSelectedSchematic
+struct UWidget_TradingPost_C_SetSelectedSchematic_Params
+{
+	class UClass**                                     mSelectedSchematic;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_TradingPost.Widget_TradingPost_C.DropInventorySlotStack
 struct UWidget_TradingPost_C_DropInventorySlotStack_Params
 {
@@ -31,14 +37,14 @@ struct UWidget_TradingPost_C_GetLowestNonFullyResearchedTier_Params
 // Function Widget_TradingPost.Widget_TradingPost_C.CheckIfTierIsFullyResearched
 struct UWidget_TradingPost_C_CheckIfTierIsFullyResearched_Params
 {
-	int                                                tier;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               tier;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsResearched;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.SetTierAndDeafultSchematic
 struct UWidget_TradingPost_C_SetTierAndDeafultSchematic_Params
 {
-	int                                                tier;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               tier;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetSchematicHintTextVisibility
@@ -84,9 +90,9 @@ struct UWidget_TradingPost_C_GetShipAwayFeedback_Params
 // Function Widget_TradingPost.Widget_TradingPost_C.SetRewardInformation
 struct UWidget_TradingPost_C_SetRewardInformation_Params
 {
-	struct FText                                       inTitle;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       inDesc;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FSlateBrush                                 inIcon;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      inTitle;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      inDesc;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSlateBrush*                                inIcon;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetActiveSchematicTabEnabled
@@ -120,13 +126,13 @@ struct UWidget_TradingPost_C_GetSelectedRecipeBoxVisibility_Params
 // Function Widget_TradingPost.Widget_TradingPost_C.SetDefaultDescriptionText
 struct UWidget_TradingPost_C_SetDefaultDescriptionText_Params
 {
-	class UClass*                                      mSchematicClass;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     mSchematicClass;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.UpdateRewardInfoFromProduct
 struct UWidget_TradingPost_C_UpdateRewardInfoFromProduct_Params
 {
-	class UWidget_SchematicRewardItem_C*               Reward_Widget;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SchematicRewardItem_C**              Reward_Widget;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetTabFeedback
@@ -137,7 +143,7 @@ struct UWidget_TradingPost_C_GetTabFeedback_Params
 // Function Widget_TradingPost.Widget_TradingPost_C.OnSchematicClicked
 struct UWidget_TradingPost_C_OnSchematicClicked_Params
 {
-	class UClass*                                      Schematic;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     schematic;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.GetActiveSchematicInfoVisibility
@@ -154,6 +160,11 @@ struct UWidget_TradingPost_C_SetActiveSchematicInfo_Params
 
 // Function Widget_TradingPost.Widget_TradingPost_C.Cleanup
 struct UWidget_TradingPost_C_Cleanup_Params
+{
+};
+
+// Function Widget_TradingPost.Widget_TradingPost_C.CloseTradepost
+struct UWidget_TradingPost_C_CloseTradepost_Params
 {
 };
 
@@ -174,15 +185,10 @@ struct UWidget_TradingPost_C_Tick_Params
 	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Widget_TradingPost.Widget_TradingPost_C.CloseTradepost
-struct UWidget_TradingPost_C_CloseTradepost_Params
-{
-};
-
 // Function Widget_TradingPost.Widget_TradingPost_C.OnActiveSchematicChanged
 struct UWidget_TradingPost_C_OnActiveSchematicChanged_Params
 {
-	class UClass*                                      Schematic;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     schematic;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.Construct
@@ -193,7 +199,7 @@ struct UWidget_TradingPost_C_Construct_Params
 // Function Widget_TradingPost.Widget_TradingPost_C.purchasedSchematic
 struct UWidget_TradingPost_C_purchasedSchematic_Params
 {
-	class UClass*                                      purchasedSchematic;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     purchasedSchematic;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.mShakeWindow
@@ -214,13 +220,13 @@ struct UWidget_TradingPost_C_CreateSmoke_Params
 // Function Widget_TradingPost.Widget_TradingPost_C.BndEvt__mWindow_K2Node_ComponentBoundEvent_3_OnTabButtonClicked__DelegateSignature
 struct UWidget_TradingPost_C_BndEvt__mWindow_K2Node_ComponentBoundEvent_3_OnTabButtonClicked__DelegateSignature_Params
 {
-	int                                                ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost.Widget_TradingPost_C.ExecuteUbergraph_Widget_TradingPost
 struct UWidget_TradingPost_C_ExecuteUbergraph_Widget_TradingPost_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

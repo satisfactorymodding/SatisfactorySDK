@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.GetNewTarget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SpitterProjectile_C::GetNewTarget()
 {
@@ -29,25 +29,8 @@ void ABP_SpitterProjectile_C::GetNewTarget()
 }
 
 
-// Function BP_SpitterProjectile.BP_SpitterProjectile_C.UserConstructionScript
-// ()
-
-void ABP_SpitterProjectile_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectile.BP_SpitterProjectile_C.UserConstructionScript");
-
-	ABP_SpitterProjectile_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_SpitterProjectile_C::ReceiveBeginPlay()
 {
@@ -64,7 +47,7 @@ void ABP_SpitterProjectile_C::ReceiveBeginPlay()
 
 
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.SplitProjectile
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_SpitterProjectile_C::SplitProjectile()
 {
@@ -81,7 +64,7 @@ void ABP_SpitterProjectile_C::SplitProjectile()
 
 
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -101,12 +84,12 @@ void ABP_SpitterProjectile_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class UActorComponent*         component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bReset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent**        component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool*                          bReset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterProjectile_C::BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent* component, bool bReset)
+void ABP_SpitterProjectile_C::BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent** component, bool* bReset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectile.BP_SpitterProjectile_C.BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature");
 
@@ -123,7 +106,7 @@ void ABP_SpitterProjectile_C::BndEvt__mProjectileMovement_K2Node_ComponentBoundE
 
 
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.PlayExplosionEffects
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_SpitterProjectile_C::PlayExplosionEffects()
 {
@@ -139,12 +122,29 @@ void ABP_SpitterProjectile_C::PlayExplosionEffects()
 }
 
 
-// Function BP_SpitterProjectile.BP_SpitterProjectile_C.ExecuteUbergraph_BP_SpitterProjectile
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_SpitterProjectile.BP_SpitterProjectile_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
 
-void ABP_SpitterProjectile_C::ExecuteUbergraph_BP_SpitterProjectile(int EntryPoint)
+void ABP_SpitterProjectile_C::ReceiveDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectile.BP_SpitterProjectile_C.ReceiveDestroyed");
+
+	ABP_SpitterProjectile_C_ReceiveDestroyed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_SpitterProjectile.BP_SpitterProjectile_C.ExecuteUbergraph_BP_SpitterProjectile
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_SpitterProjectile_C::ExecuteUbergraph_BP_SpitterProjectile(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectile.BP_SpitterProjectile_C.ExecuteUbergraph_BP_SpitterProjectile");
 

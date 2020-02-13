@@ -7,20 +7,21 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_SlateCore_classes.hpp"
-#include "FG_CoreUObject_classes.hpp"
-#include "FG_InputCore_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
 #include "FG_GameplayTasks_classes.hpp"
-#include "FG_UMG_classes.hpp"
 #include "FG_AIModule_classes.hpp"
-#include "FG_Slate_classes.hpp"
-#include "FG_ApexDestruction_classes.hpp"
-#include "FG_NavigationSystem_classes.hpp"
-#include "FG_SignificanceManager_classes.hpp"
-#include "FG_OnlineSubsystemUtils_classes.hpp"
+#include "FG_SlateCore_classes.hpp"
+#include "FG_UMG_classes.hpp"
 #include "FG_ReplicationGraph_classes.hpp"
+#include "FG_InputCore_classes.hpp"
+#include "FG_ApexDestruction_classes.hpp"
+#include "FG_Slate_classes.hpp"
+#include "FG_NavigationSystem_classes.hpp"
+#include "FG_OnlineSubsystemUtils_classes.hpp"
 #include "FG_AssetRegistry_classes.hpp"
+#include "FG_AnimGraphRuntime_classes.hpp"
+#include "FG_SignificanceManager_classes.hpp"
 #include "FG_AkAudio_classes.hpp"
 #include "FG_PhysXVehicles_classes.hpp"
 
@@ -41,6 +42,42 @@ enum class EBuildGunState : uint8_t
 };
 
 
+// Enum FactoryGame.EHologramSplinePathMode
+enum class EHologramSplinePathMode : uint8_t
+{
+	HSPM_AUTO                      = 0,
+	HSPM_STRAIGHT_HORZ             = 1,
+	HSPM_STRAIGHT_VERT             = 2,
+	HSPM_HORZ_TO_VERT              = 3,
+	HSPM_VERT_TO_HORZ              = 4,
+	HSPM_PATH_FIND                 = 5,
+	HSPM_AUTO_2D                   = 6,
+	HSPM_NOODLE                    = 7,
+	HSPM_MAX                       = 8
+};
+
+
+// Enum FactoryGame.ERepresentationType
+enum class ERepresentationType : uint8_t
+{
+	RT_Default                     = 0,
+	RT_Beacon                      = 1,
+	RT_Crate                       = 2,
+	RT_Hub                         = 3,
+	RT_Ping                        = 4,
+	RT_Player                      = 5,
+	RT_RadarTower                  = 6,
+	RT_Resource                    = 7,
+	RT_SpaceElevator               = 8,
+	RT_StartingPod                 = 9,
+	RT_Train                       = 10,
+	RT_TrainStation                = 11,
+	RT_Vehicle                     = 12,
+	RT_VehicleDockingStation       = 13,
+	RT_MAX                         = 14
+};
+
+
 // Enum FactoryGame.EGamePhase
 enum class EGamePhase : uint8_t
 {
@@ -51,6 +88,18 @@ enum class EGamePhase : uint8_t
 	EGP_FoodCourt                  = 4,
 	EGP_Victory                    = 5,
 	EGP_MAX                        = 6
+};
+
+
+// Enum FactoryGame.EJoinSessionState
+enum class EJoinSessionState : uint8_t
+{
+	JSS_NotJoiningSession          = 0,
+	JSS_WaitingForLoginToComplete  = 1,
+	JSS_QueryingHostsId            = 2,
+	JSS_DestroyingOldSession       = 3,
+	JSS_ConnectingToHost           = 4,
+	JSS_MAX                        = 5
 };
 
 
@@ -65,6 +114,28 @@ enum class ECachedNATType : uint8_t
 };
 
 
+// Enum FactoryGame.EResearchState
+enum class EResearchState : uint8_t
+{
+	ERS_NotResearching             = 0,
+	ERS_Researching                = 1,
+	ERS_MAX                        = 2
+};
+
+
+// Enum FactoryGame.ECreateSessionState
+enum class ECreateSessionState : uint8_t
+{
+	CSS_NotCreateingSession        = 0,
+	CSS_CreatingSession            = 1,
+	CSS_DestroyingOldSession       = 2,
+	CSS_UpdatingPresence           = 3,
+	CSS_WaitingForPresenceToUpdate = 4,
+	CSS_WaitingForLogin            = 5,
+	CSS_MAX                        = 6
+};
+
+
 // Enum FactoryGame.ELoginState
 enum class ELoginState : uint8_t
 {
@@ -73,6 +144,16 @@ enum class ELoginState : uint8_t
 	LS_LoggedIn                    = 2,
 	LS_FailedToLogin               = 3,
 	LS_MAX                         = 4
+};
+
+
+// Enum FactoryGame.ETrainDockingState
+enum class ETrainDockingState : uint8_t
+{
+	TDS_None                       = 0,
+	TDS_ReadyToDock                = 1,
+	TDS_Docked                     = 2,
+	TDS_MAX                        = 3
 };
 
 
@@ -103,7 +184,21 @@ enum class EArmEquipment : uint8_t
 	AE_StunSpear                   = 12,
 	AE_ShockShank                  = 13,
 	AE_ResourceCollector           = 14,
-	AE_MAX                         = 15
+	AE_Generic1Hand                = 15,
+	AE_Generic2Hand                = 16,
+	AE_MAX                         = 17
+};
+
+
+// Enum FactoryGame.ECompassViewDistance
+enum class ECompassViewDistance : uint8_t
+{
+	CVD_Off                        = 0,
+	CVD_Near                       = 1,
+	CVD_Mid                        = 2,
+	CVD_Far                        = 3,
+	CVD_Always                     = 4,
+	CVD_MAX                        = 5
 };
 
 
@@ -115,24 +210,6 @@ enum class EFogOfWarRevealType : uint8_t
 	FOWRT_Intermittent             = 2,
 	FOWRT_Dynamic                  = 3,
 	FOWRT_MAX                      = 4
-};
-
-
-// Enum FactoryGame.ERepresentationType
-enum class ERepresentationType : uint8_t
-{
-	RT_Default                     = 0,
-	RT_Beacon                      = 1,
-	RT_Crate                       = 2,
-	RT_Hub                         = 3,
-	RT_Ping                        = 4,
-	RT_Player                      = 5,
-	RT_RadarTower                  = 6,
-	RT_Resource                    = 7,
-	RT_SpaceElevator               = 8,
-	RT_StartingPod                 = 9,
-	RT_Vehicle                     = 10,
-	RT_MAX                         = 11
 };
 
 
@@ -156,16 +233,6 @@ enum class EProductionStatus : uint8_t
 	IS_STANDBY                     = 3,
 	IS_ERROR                       = 4,
 	IS_MAX                         = 5
-};
-
-
-// Enum FactoryGame.EStationDockingStatus
-enum class EStationDockingStatus : uint8_t
-{
-	ESDS_NotDocked                 = 0,
-	ESDS_DockInProcess             = 1,
-	ESDS_DockComplete              = 2,
-	ESDS_MAX                       = 3
 };
 
 
@@ -196,7 +263,8 @@ enum class ECustomMovementMode : uint8_t
 {
 	CMM_None                       = 0,
 	CMM_Ladder                     = 1,
-	CMM_MAX                        = 2
+	CMM_PipeHyper                  = 2,
+	CMM_MAX                        = 3
 };
 
 
@@ -342,13 +410,24 @@ enum class EFactoryConnectionConnector : uint8_t
 };
 
 
+// Enum FactoryGame.EFreightCargoType
+enum class EFreightCargoType : uint8_t
+{
+	FCT_NONE                       = 0,
+	FCT_Standard                   = 1,
+	FCT_Liquid                     = 2,
+	FCT_MAX                        = 3
+};
+
+
 // Enum FactoryGame.EHologramScrollMode
 enum class EHologramScrollMode : uint8_t
 {
 	HSM_NONE                       = 0,
 	HSM_ROTATE                     = 1,
 	HSM_RAISE_LOWER                = 2,
-	HSM_MAX                        = 3
+	HSM_SPLINE_PATH_MODE           = 3,
+	HSM_MAX                        = 4
 };
 
 
@@ -376,8 +455,9 @@ enum class EStackSize : uint8_t
 	SS_MEDIUM                      = 2,
 	SS_BIG                         = 3,
 	SS_HUGE                        = 4,
-	SS_LAST_ENUM                   = 5,
-	SS_MAX                         = 6
+	SS_FLUID                       = 5,
+	SS_LAST_ENUM                   = 6,
+	SS_MAX                         = 7
 };
 
 
@@ -440,6 +520,15 @@ enum class ECantJoinReason : uint8_t
 };
 
 
+// Enum FactoryGame.ECycleDirection
+enum class ECycleDirection : uint8_t
+{
+	CD_Forward                     = 0,
+	CD_Backward                    = 1,
+	CD_MAX                         = 2
+};
+
+
 // Enum FactoryGame.ESessionVisibility
 enum class ESessionVisibility : uint8_t
 {
@@ -447,6 +536,40 @@ enum class ESessionVisibility : uint8_t
 	SV_FriendsOnly                 = 1,
 	SV_Invalid                     = 2,
 	SV_MAX                         = 3
+};
+
+
+// Enum FactoryGame.EOptionType
+enum class EOptionType : uint8_t
+{
+	OT_Checkbox                    = 0,
+	OT_IntegerSelection            = 1,
+	OT_FloatSelection              = 2,
+	OT_Slider                      = 3,
+	OT_MAX                         = 4
+};
+
+
+// Enum FactoryGame.EOptionCategory
+enum class EOptionCategory : uint8_t
+{
+	OC_Gameplay                    = 0,
+	OC_Audio                       = 1,
+	OC_Video                       = 2,
+	OC_Controls                    = 3,
+	OC_UserInterface               = 4,
+	OC_MAX                         = 5
+};
+
+
+// Enum FactoryGame.EPipeConnectionType
+enum class EPipeConnectionType : uint8_t
+{
+	PCT_ANY                        = 0,
+	PCT_CONSUMER                   = 1,
+	PCT_PRODUCER                   = 2,
+	PCT_SNAP_ONLY                  = 3,
+	PCT_MAX                        = 4
 };
 
 
@@ -490,6 +613,35 @@ enum class EResourceAmount : uint8_t
 };
 
 
+// Enum FactoryGame.ESaveSortDirection
+enum class ESaveSortDirection : uint8_t
+{
+	SSD_Ascending                  = 0,
+	SSD_Descending                 = 1,
+	SSD_MAX                        = 2
+};
+
+
+// Enum FactoryGame.ESaveSortMode
+enum class ESaveSortMode : uint8_t
+{
+	SSM_Name                       = 0,
+	SSM_Time                       = 1,
+	SSM_MAX                        = 2
+};
+
+
+// Enum FactoryGame.ESaveState
+enum class ESaveState : uint8_t
+{
+	SS_Unsupported                 = 0,
+	SS_Volatile                    = 1,
+	SS_Supported                   = 2,
+	SS_Newer                       = 3,
+	SS_MAX                         = 4
+};
+
+
 // Enum FactoryGame.ESaveExists
 enum class ESaveExists : uint8_t
 {
@@ -506,12 +658,13 @@ enum class ESchematicType : uint8_t
 	EST_Custom                     = 0,
 	EST_Cheat                      = 1,
 	EST_Tutorial                   = 2,
-	EST_Research                   = 3,
+	EST_Milestone                  = 3,
 	EST_Alternate                  = 4,
 	EST_Story                      = 5,
-	EST_TradingPostUpgrade         = 6,
-	EST_MAM                        = 7,
-	EST_MAX                        = 8
+	EST_MAM                        = 6,
+	EST_ResourceSink               = 7,
+	EST_HardDrive                  = 8,
+	EST_MAX                        = 9
 };
 
 
@@ -543,6 +696,39 @@ enum class EHorizontalSignTextAlignment : uint8_t
 	EHSTA_Center                   = 1,
 	EHSTA_Right                    = 2,
 	EHSTA_MAX                      = 3
+};
+
+
+// Enum FactoryGame.ESplineHologramBuildStep
+enum class ESplineHologramBuildStep : uint8_t
+{
+	SHBS_FindStart                 = 0,
+	SHBS_PlacePoleOrSnapEnding     = 1,
+	SHBS_AdjustPole                = 2,
+	SHBS_MAX                       = 3
+};
+
+
+// Enum FactoryGame.ESelfDrivingLocomotiveState
+enum class ESelfDrivingLocomotiveState : uint8_t
+{
+	SDLS_Idle                      = 0,
+	SDLS_FollowPath                = 1,
+	SDLS_Docking                   = 2,
+	SDLS_DockingCompleted          = 3,
+	SDLS_MAX                       = 4
+};
+
+
+// Enum FactoryGame.ERailroadSignalAspect
+enum class ERailroadSignalAspect : uint8_t
+{
+	RSA_None                       = 0,
+	RSA_Clear                      = 1,
+	RSA_ClearThenStop              = 2,
+	RSA_Stop                       = 3,
+	RSA_Dock                       = 4,
+	RSA_MAX                        = 5
 };
 
 
@@ -579,12 +765,13 @@ enum class EIntroTutorialSteps : uint8_t
 	ITS_IRON_ORE                   = 4,
 	ITS_HUB                        = 5,
 	ITS_HUB_LVL1                   = 6,
-	ITS_HUB_LVL2                   = 7,
-	ITS_HUB_LVL3                   = 8,
-	ITS_HUB_LVL4                   = 9,
-	ITS_HUB_LVL5                   = 10,
-	ITS_DONE                       = 11,
-	ITS_MAX                        = 12
+	ITS_HUB_LVL101                 = 7,
+	ITS_HUB_LVL2                   = 8,
+	ITS_HUB_LVL3                   = 9,
+	ITS_HUB_LVL4                   = 10,
+	ITS_HUB_LVL5                   = 11,
+	ITS_DONE                       = 12,
+	ITS_MAX                        = 13
 };
 
 
@@ -647,6 +834,30 @@ enum class EUndefinedBool : uint8_t
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct FactoryGame.SaveHeader
+// 0x0060
+struct FSaveHeader
+{
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0000(0x0060) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.SessionSaveStruct
+// 0x0020
+struct FSessionSaveStruct
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+	TArray<struct FSaveHeader>                         SaveHeaders;                                              // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct FactoryGame.ItemView
+// 0x0014
+struct FItemView
+{
+	float                                              Distance;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     FocalOffset;                                              // 0x0004(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CameraPitch;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct FactoryGame.AudioSubtitlePair
 // 0x0028
 struct FAudioSubtitlePair
@@ -688,13 +899,14 @@ struct FFactoryTickFunction : public FTickFunction
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct FactoryGame.ItemAmount
-// 0x0010
-struct FItemAmount
+// ScriptStruct FactoryGame.NetConstructionID
+// 0x0006
+struct FNetConstructionID
 {
-	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
-	int                                                amount;                                                   // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	int8_t                                             NetPlayerID;                                              // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0001(0x0001) MISSED OFFSET
+	uint16_t                                           Server_ID;                                                // 0x0002(0x0002) (ZeroConstructor, IsPlainOldData)
+	uint16_t                                           Client_ID;                                                // 0x0004(0x0002) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.SharedInventoryStatePtr
@@ -723,20 +935,45 @@ struct FInventoryStack
 };
 
 // ScriptStruct FactoryGame.ConnectionItemStruct
-// 0x0028
+// 0x0030
 struct FConnectionItemStruct
 {
 	class UFGFactoryConnectionComponent*               Connection;                                               // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FInventoryItem                              Item;                                                     // 0x0008(0x0018)
-	float                                              OffsetBeyond;                                             // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0020(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.ConveyorSpaceData
+// 0x0008
+struct FConveyorSpaceData
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.FluidBox
+// 0x0058
+struct FFluidBox
+{
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0000(0x0058) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.ConstructHologramMessage
+// 0x0030
+struct FConstructHologramMessage
+{
+	struct FNetConstructionID                          ConstructionID;                                           // 0x0000(0x0006)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0006(0x0002) MISSED OFFSET
+	class UClass*                                      Recipe;                                                   // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      UpgradeActor;                                             // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<unsigned char>                              SerializedHologramData;                                   // 0x0018(0x0010) (ZeroConstructor)
+	int64_t                                            NumBits;                                                  // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.ConveyorBeltItems
-// 0x0170
+// 0x0178
 struct FConveyorBeltItems
 {
-	unsigned char                                      UnknownData00[0x170];                                     // 0x0000(0x0170) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x178];                                     // 0x0000(0x0178) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.FoundationSideSelectionFlags
@@ -751,13 +988,37 @@ struct FFoundationSideSelectionFlags
 	unsigned char                                      Bottom : 1;                                               // 0x0000(0x0001) (Edit, DisableEditOnInstance)
 };
 
-// ScriptStruct FactoryGame.RailroadTrackPosition
-// 0x0010
-struct FRailroadTrackPosition
+// ScriptStruct FactoryGame.QuantizedPipelineIndicatorData
+// 0x0002
+struct FQuantizedPipelineIndicatorData
 {
-	TWeakObjectPtr<class AFGBuildableRailroadTrack>    Track;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              Offset;                                                   // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              Forward;                                                  // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int8_t                                             PackedFlow;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      PackedContent;                                            // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct FactoryGame.StringPair
+// 0x0020
+struct FStringPair
+{
+	class FString                                      WwiseSafeName;                                            // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      ActualName;                                               // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct FactoryGame.QuantizedPumpIndicatorData
+// 0x0002
+struct FQuantizedPumpIndicatorData
+{
+	int8_t                                             PackedFlow;                                               // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      PackedPressure;                                           // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct FactoryGame.QuantizedReservoirIndicatorData
+// 0x0003
+struct FQuantizedReservoirIndicatorData
+{
+	unsigned char                                      PackedFlowFill;                                           // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      PackedFlowDrain;                                          // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      PackedContent;                                            // 0x0002(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.SignWallData
@@ -769,6 +1030,15 @@ struct FSignWallData
 	class FString                                      SignText;                                                 // 0x0008(0x0010) (BlueprintVisible, ZeroConstructor, SaveGame)
 };
 
+// ScriptStruct FactoryGame.ItemAmount
+// 0x0010
+struct FItemAmount
+{
+	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+	int                                                amount;                                                   // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct FactoryGame.SplitterSortRule
 // 0x0010
 struct FSplitterSortRule
@@ -776,15 +1046,6 @@ struct FSplitterSortRule
 	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	int                                                OutputIndex;                                              // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.SignData
-// 0x0018
-struct FSignData
-{
-	TArray<class UFGSignElementData*>                  SignElementData;                                          // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, SaveGame)
-	int                                                BackgroundColorIndex;                                     // 0x0010(0x0004) (BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.SignElementConstraints
@@ -797,12 +1058,14 @@ struct FSignElementConstraints
 	float                                              MaxScale;                                                 // 0x0014(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
-// ScriptStruct FactoryGame.BuildableBucket
-// 0x0018
-struct FBuildableBucket
+// ScriptStruct FactoryGame.SignData
+// 0x0028
+struct FSignData
 {
-	class UClass*                                      BuildableClass;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class AFGBuildable*>                        Buildables;                                               // 0x0008(0x0010) (ZeroConstructor)
+	TArray<class UFGSignLayer*>                        SignLayers;                                               // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, SaveGame)
+	TArray<class UFGSignElementData*>                  SignElementData;                                          // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, SaveGame)
+	int                                                BackgroundColorIndex;                                     // 0x0020(0x0004) (BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.DistanceBasedTickRate
@@ -811,15 +1074,6 @@ struct FDistanceBasedTickRate
 {
 	float                                              Distance;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TickRate;                                                 // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-};
-
-// ScriptStruct FactoryGame.ItemView
-// 0x0014
-struct FItemView
-{
-	float                                              Distance;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     FocalOffset;                                              // 0x0004(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CameraPitch;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.ConnectionRepresentation
@@ -831,19 +1085,21 @@ struct FConnectionRepresentation
 };
 
 // ScriptStruct FactoryGame.FactoryClearanceData
-// 0x0020
+// 0x0028
 struct FFactoryClearanceData
 {
 	class AFGBuildableFactory*                         FACTORY;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UStaticMeshComponent*                        ClearanceComponent;                                       // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TArray<struct FConnectionRepresentation>           mConnectionComponents;                                    // 0x0010(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0020(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.DismantleRefunds
 // 0x0018
 struct FDismantleRefunds
 {
-	class AActor*                                      SelectedActor;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           NumPendingActors;                                         // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	TArray<struct FInventoryStack>                     PeekDismantleRefund;                                      // 0x0008(0x0010) (ZeroConstructor)
 };
 
@@ -857,24 +1113,47 @@ struct FPickedUpInstance
 };
 
 // ScriptStruct FactoryGame.FootstepEffect
-// 0x0010
+// 0x0018
 struct FFootstepEffect
 {
 	class UParticleSystem*                             Particle;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UMaterialInterface*                          GroundDecal;                                              // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UMaterialInterface*>                  GroundDecals;                                             // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct FactoryGame.FootstepEffectSurface
-// 0x0018
+// 0x0020
 struct FFootstepEffectSurface
 {
 	TEnumAsByte<EPhysicalSurface>                      Surface;                                                  // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FFootstepEffect                             Effect;                                                   // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FFootstepEffect                             Effect;                                                   // 0x0008(0x0018) (Edit, DisableEditOnInstance)
+};
+
+// ScriptStruct FactoryGame.PlayerPipeHyperData
+// 0x00A8
+struct FPlayerPipeHyperData
+{
+	class AActor*                                      mTravelingPipeHyper;                                      // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2C];                                      // 0x0008(0x002C) MISSED OFFSET
+	float                                              mMinPipeSpeed;                                            // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mPipeGravityStrength;                                     // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mPipeFriction;                                            // 0x003C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mPipeConstantAcceleration;                                // 0x0040(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mPipeCurveDamping;                                        // 0x0044(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     mPipeDirectionLast;                                       // 0x0048(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	struct FVector                                     mPipeDirection;                                           // 0x0054(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	float                                              mDistanceToEndOfPipe;                                     // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	float                                              mCombinedLengthTillEndOfPipesINcludingCurrent;            // 0x0064(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	float                                              mMaxCurveDiffThisFrame;                                   // 0x0068(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	float                                              mMaxCurveDiffSmooth;                                      // 0x006C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	float                                              mPipeTempMinSpeed;                                        // 0x0070(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	struct FVector                                     mFulPipeEndPoint;                                         // 0x0074(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	struct FVector                                     mFulPipeEndDir;                                           // 0x0080(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1C];                                      // 0x008C(0x001C) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.DisabledInputGate
-// 0x0004
+// 0x0002
 struct FDisabledInputGate
 {
 	unsigned char                                      mBuildGun : 1;                                            // 0x0000(0x0001) (Edit, BlueprintVisible)
@@ -889,7 +1168,6 @@ struct FDisabledInputGate
 	unsigned char                                      mChat : 1;                                                // 0x0001(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      mUse : 1;                                                 // 0x0001(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      mVehicleRecording : 1;                                    // 0x0001(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.ChatMessageStruct
@@ -903,6 +1181,16 @@ struct FChatMessageStruct
 	unsigned char                                      UnknownData01[0x20];                                      // 0x0020(0x0020) MISSED OFFSET
 	EFGChatMessageType                                 MessageType;                                              // 0x0040(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.FGKeyMapping
+// 0x0058
+struct FFGKeyMapping
+{
+	struct FInputActionKeyMapping                      ActionKeyMapping;                                         // 0x0000(0x0028) (BlueprintVisible, BlueprintReadOnly)
+	struct FInputAxisKeyMapping                        AxisKeyMapping;                                           // 0x0028(0x0028) (BlueprintVisible, BlueprintReadOnly)
+	bool                                               IsAxisMapping;                                            // 0x0050(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.PoleHeightMesh
@@ -924,7 +1212,7 @@ struct FMoveSpeedPair
 };
 
 // ScriptStruct FactoryGame.SpawnData
-// 0x0020
+// 0x0028
 struct FSpawnData
 {
 	struct FVector                                     SpawnLocation;                                            // 0x0000(0x000C) (ZeroConstructor, SaveGame, IsPlainOldData)
@@ -933,6 +1221,7 @@ struct FSpawnData
 	bool                                               WasKilled;                                                // 0x0018(0x0001) (ZeroConstructor, SaveGame, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
 	int                                                KilledOnDayNr;                                            // 0x001C(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
+	class UClass*                                      CreatureClassOverride;                                    // 0x0020(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.ProjectileData
@@ -972,6 +1261,33 @@ struct FDropPackage
 	class UClass*                                      RequiredSchematic;                                        // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct FactoryGame.OptionRowData
+// 0x0110
+struct FOptionRowData
+{
+	class FString                                      OptionName;                                               // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	EOptionType                                        OptionType;                                               // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
+	class FString                                      ConsoleVariable;                                          // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               DefaultCheckBoxValue;                                     // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
+	float                                              MinValue;                                                 // 0x002C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxValue;                                                 // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MinDisplayValue;                                          // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDisplayValue;                                          // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MaxFractionalDigits;                                      // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               ShowZeroAsOff;                                            // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
+	float                                              DefaultSliderValue;                                       // 0x0044(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TMap<class FString, int>                           IntegerSelectionValues;                                   // 0x0048(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	TMap<class FString, float>                         FloatSelectionValues;                                     // 0x0098(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                      DefaultSelectionValue;                                    // 0x00E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               UpdateInstantly;                                          // 0x00F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               RequireRestart;                                           // 0x00F9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x6];                                       // 0x00FA(0x0006) MISSED OFFSET
+	class FString                                      Tooltip;                                                  // 0x0100(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
 // ScriptStruct FactoryGame.AggroEntry
 // 0x0030
 struct FAggroEntry
@@ -992,37 +1308,44 @@ struct FFeetOffset
 	unsigned char                                      FeetIndex;                                                // 0x0000(0x0001) (ZeroConstructor, SaveGame, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              OffsetZ;                                                  // 0x0004(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      ShouldShow : 1;                                           // 0x0008(0x0001) (SaveGame)
-	unsigned char                                      IsValidOffset : 1;                                        // 0x0008(0x0001)
+	bool                                               IsValidOffset;                                            // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
 };
 
+// ScriptStruct FactoryGame.ViscosityToPuddlePair
+// 0x0008
+struct FViscosityToPuddlePair
+{
+	float                                              Viscosity;                                                // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Puddle;                                                   // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct FactoryGame.AnimInstanceProxyFactory
-// 0x0040 (0x0620 - 0x05E0)
+// 0x0040 (0x06D0 - 0x0690)
 struct FAnimInstanceProxyFactory : public FAnimInstanceProxy
 {
-	float                                              mDeltaTime;                                               // 0x05E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mProductionProgress;                                      // 0x05E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mProductionCycleTime;                                     // 0x05E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mAnimPlayRate;                                            // 0x05EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mRampUpTime;                                              // 0x05F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mTimeNotProducing;                                        // 0x05F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mRampDownTime;                                            // 0x05F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mLastProductionProgress;                                  // 0x05FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mRecipePlayRate;                                          // 0x0600(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mCycleTime;                                               // 0x0604(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mDefaultCycleTime;                                        // 0x0608(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mStartFrame;                                              // 0x060C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              mLoadPercentage;                                          // 0x0610(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               mHasFuel;                                                 // 0x0614(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      mHasPower : 1;                                            // 0x0615(0x0001) (Edit, BlueprintVisible, Transient)
-	unsigned char                                      mIsProducing : 1;                                         // 0x0615(0x0001) (Edit, BlueprintVisible, Transient)
-	unsigned char                                      mIsActivated : 1;                                         // 0x0615(0x0001) (Edit, BlueprintVisible, Transient)
-	unsigned char                                      mCycleComplete : 1;                                       // 0x0615(0x0001) (Edit, BlueprintVisible, Transient)
-	unsigned char                                      mUseRampUp : 1;                                           // 0x0615(0x0001) (Edit, BlueprintVisible, Transient)
-	unsigned char                                      mIsGenerator : 1;                                         // 0x0615(0x0001) (Edit, BlueprintVisible, Transient)
-	unsigned char                                      mIsFuelGeneratorOnline : 1;                               // 0x0615(0x0001) (Edit, BlueprintVisible, Transient)
-	unsigned char                                      UnknownData00[0xA];                                       // 0x0616(0x000A) MISSED OFFSET
+	float                                              mDeltaTime;                                               // 0x0690(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mProductionProgress;                                      // 0x0694(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mProductionCycleTime;                                     // 0x0698(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mAnimPlayRate;                                            // 0x069C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mRampUpTime;                                              // 0x06A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mTimeNotProducing;                                        // 0x06A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mRampDownTime;                                            // 0x06A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mLastProductionProgress;                                  // 0x06AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mRecipePlayRate;                                          // 0x06B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mCycleTime;                                               // 0x06B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mDefaultCycleTime;                                        // 0x06B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mStartFrame;                                              // 0x06BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mLoadPercentage;                                          // 0x06C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               mHasFuel;                                                 // 0x06C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      mHasPower : 1;                                            // 0x06C5(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mIsProducing : 1;                                         // 0x06C5(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mIsActivated : 1;                                         // 0x06C5(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mCycleComplete : 1;                                       // 0x06C5(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mUseRampUp : 1;                                           // 0x06C5(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mIsGenerator : 1;                                         // 0x06C5(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mIsFuelGeneratorOnline : 1;                               // 0x06C5(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      UnknownData00[0xA];                                       // 0x06C6(0x000A) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.RemovedInstance
@@ -1065,20 +1388,29 @@ struct FVehiclePhysicsData
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
 };
 
+// ScriptStruct FactoryGame.RailroadTrackPosition
+// 0x0010
+struct FRailroadTrackPosition
+{
+	TWeakObjectPtr<class AFGBuildableRailroadTrack>    Track;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              Offset;                                                   // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              Forward;                                                  // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct FactoryGame.FGEngineCommon
 // 0x0020
 struct FFGEngineCommon
 {
 	class UEngine*                                     Engine;                                                   // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TArray<class UWorld*>                              CreatedWorlds;                                            // 0x0008(0x0010) (ZeroConstructor, Transient)
-	class UFGDynamicHeightFogUpdater*                  HeightFogUpdater;                                         // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UFGAtmosphereUpdater*                        HeightFogUpdater;                                         // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.OnJoinSessionData
 // 0x00C8
 struct FOnJoinSessionData
 {
-	class ULocalPlayer*                                LocalPlayer;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UFGLocalPlayer*                              LocalPlayer;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xC0];                                      // 0x0008(0x00C0) MISSED OFFSET
 };
 
@@ -1092,6 +1424,15 @@ struct FFGModPackage
 	class FString                                      Author;                                                   // 0x0010(0x0010) (BlueprintVisible, ZeroConstructor)
 	class FString                                      Version;                                                  // 0x0020(0x0010) (BlueprintVisible, ZeroConstructor)
 	class FString                                      Description;                                              // 0x0030(0x0010) (BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct FactoryGame.FGGameNetworkErrorMsg
+// 0x0018
+struct FFGGameNetworkErrorMsg
+{
+	TEnumAsByte<ENetworkFailure>                       errorType;                                                // 0x0000(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class FString                                      errorMsg;                                                 // 0x0008(0x0010) (BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct FactoryGame.PhaseTierInfo
@@ -1142,32 +1483,13 @@ struct FAudioVolumeMap
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct FactoryGame.FGKeyMapping
-// 0x0058
-struct FFGKeyMapping
-{
-	struct FInputActionKeyMapping                      ActionKeyMapping;                                         // 0x0000(0x0028) (BlueprintVisible, BlueprintReadOnly)
-	struct FInputAxisKeyMapping                        AxisKeyMapping;                                           // 0x0028(0x0028) (BlueprintVisible, BlueprintReadOnly)
-	bool                                               IsAxisMapping;                                            // 0x0050(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
-};
-
 // ScriptStruct FactoryGame.HardDriveSchematicDrop
 // 0x0030
 struct FHardDriveSchematicDrop
 {
 	float                                              DropChance;                                               // 0x0000(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	TSoftObjectPtr<class UClass>                       Schematic;                                                // 0x0008(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-};
-
-// ScriptStruct FactoryGame.ResearchRecipeReward
-// 0x0030
-struct FResearchRecipeReward
-{
-	TArray<struct FItemAmount>                         Products;                                                 // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class UClass*>                              ResearchRecipes;                                          // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class UClass*>                              Schematics;                                               // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TSoftObjectPtr<class UClass>                       schematic;                                                // 0x0008(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
 };
 
 // ScriptStruct FactoryGame.FGOnlineFriend
@@ -1175,24 +1497,6 @@ struct FResearchRecipeReward
 struct FFGOnlineFriend
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.RailroadPathFindingResult
-// 0x0018
-struct FRailroadPathFindingResult
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	ERailroadPathFindingResult                         Result;                                                   // 0x0010(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.RailroadPathPoint
-// 0x0010
-struct FRailroadPathPoint
-{
-	class UObject*                                     Object;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              Distance;                                                 // 0x0008(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.WheelsetSetup
@@ -1297,7 +1601,7 @@ struct FFGOnlineSessionSettings
 	int                                                NumConnectedPlayers;                                      // 0x003C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                PlayDuration;                                             // 0x0040(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
-	class FString                                      BuildVersion;                                             // 0x0048(0x0010) (ZeroConstructor)
+	class FString                                      BuildVersion;                                             // 0x0048(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	class FString                                      SessionName;                                              // 0x0058(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	ECachedNATType                                     natType;                                                  // 0x0068(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
@@ -1366,6 +1670,14 @@ struct FCachedSplineMeshToMaterialObject
 	TArray<class UMaterialInterface*>                  InstancedMaterialInterfaces;                              // 0x0050(0x0010) (ZeroConstructor)
 };
 
+// ScriptStruct FactoryGame.SplineSupportPair
+// 0x0010
+struct FSplineSupportPair
+{
+	class UClass*                                      SplineSupportRecipeClass;                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      SplineRecipeClass;                                        // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct FactoryGame.SlotData
 // 0x0020
 struct FSlotData
@@ -1408,6 +1720,14 @@ struct FPowerCircuitStats
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 };
 
+// ScriptStruct FactoryGame.MapAreaParticleCollection
+// 0x0018
+struct FMapAreaParticleCollection
+{
+	TArray<class UClass*>                              Areas;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UParticleSystem*                             Particle;                                                 // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct FactoryGame.RadioactiveSource
 // 0x0018
 struct FRadioactiveSource
@@ -1434,6 +1754,45 @@ struct FTimeTableStop
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct FactoryGame.AnimInstanceProxyRailRoadVehicle
+// 0x0090 (0x0720 - 0x0690)
+struct FAnimInstanceProxyRailRoadVehicle : public FAnimInstanceProxy
+{
+	float                                              mDeltaTime;                                               // 0x0690(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mFrontBogieRotation;                                      // 0x0694(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mBackBogieRotation;                                       // 0x06A0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mWheelRotation;                                           // 0x06AC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mFrontConnectorRotation;                                  // 0x06B8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     mFrontConnectorTranslation;                               // 0x06C4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mBackConnectorRotation;                                   // 0x06D0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     mBackConnectorTranslation;                                // 0x06DC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FRotator                                    mTrackCurvature;                                          // 0x06E8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mForwardSpeed;                                            // 0x06F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mTractiveForce;                                           // 0x06F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mHandBrakeForce;                                          // 0x06FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mThrottle;                                                // 0x0700(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mBrakeForce;                                              // 0x0704(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mHandBrakeForceSpeed;                                     // 0x0708(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mHandBrakeGlow;                                           // 0x070C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mHandBrakeVfxSpawn;                                       // 0x0710(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              mAGBrakePlayRate;                                         // 0x0714(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      mIsMoving : 1;                                            // 0x0718(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mIsUsingHandBrake : 1;                                    // 0x0718(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mIsLocomotive : 1;                                        // 0x0718(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mHasPower : 1;                                            // 0x0718(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGThrottleZero : 1;                                      // 0x0718(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGThrottlePositive : 1;                                  // 0x0718(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGStartToRunningTransition : 1;                          // 0x0718(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeTransition01 : 1;                             // 0x0718(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeTransition02 : 1;                             // 0x0719(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGBrakeForcePositive : 1;                                // 0x0719(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGBrakeToRunningTransition : 1;                          // 0x0719(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeReset01 : 1;                                  // 0x0719(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeReset02 : 1;                                  // 0x0719(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      mAGHandBrakeStop : 1;                                     // 0x0719(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x071A(0x0006) MISSED OFFSET
+};
+
 // ScriptStruct FactoryGame.ConnectionAlwaysRelevant_NodePair
 // 0x0010
 struct FConnectionAlwaysRelevant_NodePair
@@ -1442,35 +1801,32 @@ struct FConnectionAlwaysRelevant_NodePair
 	class UReplicationGraphNode_AlwaysRelevant_ForConnection* Node;                                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct FactoryGame.ResearchCost
-// 0x0018
-struct FResearchCost
+// ScriptStruct FactoryGame.ResearchData
+// 0x0020
+struct FResearchData
 {
-	class UClass*                                      researchRecipe;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	TArray<struct FItemAmount>                         Cost;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
-};
-
-// ScriptStruct FactoryGame.CompletedResearch
-// 0x0030
-struct FCompletedResearch
-{
-	bool                                               RewardRequiresSelection;                                  // 0x0000(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	class UClass*                                      researchRecipe;                                           // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	bool                                               RewardHasBeenClaimed;                                     // 0x0010(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-	TArray<struct FResearchRecipeReward>               PendingRewards;                                           // 0x0018(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class UClass*                                      schematic;                                                // 0x0000(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	class UClass*                                      InitiatingResearchTree;                                   // 0x0008(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	TArray<class UClass*>                              PendingRewards;                                           // 0x0010(0x0010) (ZeroConstructor, SaveGame)
 };
 
 // ScriptStruct FactoryGame.ResearchTime
-// 0x0018
+// 0x0030
 struct FResearchTime
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	class UClass*                                      researchRecipe;                                           // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	float                                              ResearchCompleteTimestamp;                                // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	struct FResearchData                               ResearchData;                                             // 0x0008(0x0020) (SaveGame)
+	float                                              ResearchCompleteTimestamp;                                // 0x0028(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.ResearchRecipeReward
+// 0x0030
+struct FResearchRecipeReward
+{
+	TArray<struct FItemAmount>                         Products;                                                 // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class UClass*>                              ResearchRecipes;                                          // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class UClass*>                              Schematics;                                               // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
 // ScriptStruct FactoryGame.PurityTextPair
@@ -1505,19 +1861,13 @@ struct FNodeClusterData
 	class UClass*                                      ResourceDescriptor;                                       // 0x0020(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct FactoryGame.SaveHeader
-// 0x0060
-struct FSaveHeader
+// ScriptStruct FactoryGame.CalculatedRewardSteps
+// 0x0010
+struct FCalculatedRewardSteps
 {
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0000(0x0060) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.SessionSaveStruct
-// 0x0020
-struct FSessionSaveStruct
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	TArray<struct FSaveHeader>                         SaveHeaders;                                              // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int64_t                                            RequiredPoints;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                NumRepeats;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.MapRedirector
@@ -1532,8 +1882,15 @@ struct FMapRedirector
 // 0x0018
 struct FSchematicCost
 {
-	class UClass*                                      Schematic;                                                // 0x0000(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	class UClass*                                      schematic;                                                // 0x0000(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
 	TArray<struct FItemAmount>                         ItemCost;                                                 // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
+};
+
+// ScriptStruct FactoryGame.SignPixelColumn
+// 0x0010
+struct FSignPixelColumn
+{
+	TArray<class UFGSignPixelData*>                    Column;                                                   // 0x0000(0x0010) (ZeroConstructor, SaveGame)
 };
 
 // ScriptStruct FactoryGame.SignColorData
@@ -1548,17 +1905,18 @@ struct FSignColorData
 };
 
 // ScriptStruct FactoryGame.SkySphereSettings
-// 0x0038
+// 0x0064
 struct FSkySphereSettings
 {
 	struct FLinearColor                                HorizonColor;                                             // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                ZenithColor;                                              // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                CloudColor;                                               // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              CloudOpacity;                                             // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               OverrideHorizonColor;                                     // 0x0034(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               OverrideZenithColor;                                      // 0x0035(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               OverrideCloudColor;                                       // 0x0036(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               OverrideCloudOpacity;                                     // 0x0037(0x0001) (ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                SunLightColor;                                            // 0x0030(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SunIntensity;                                             // 0x0040(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                MoonLightColor;                                           // 0x0044(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MoonIntensity;                                            // 0x0054(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              CloudOpacity;                                             // 0x0058(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x005C(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.SchematicMessagePair
@@ -1580,14 +1938,12 @@ struct FItemFoundData
 	TSoftObjectPtr<class UClass>                       ItemClass;                                                // 0x0040(0x0028) (Edit, DisableEditOnInstance)
 };
 
-// ScriptStruct FactoryGame.ResearchMessageData
-// 0x0040
-struct FResearchMessageData
+// ScriptStruct FactoryGame.ResearchTreeMessageData
+// 0x0038
+struct FResearchTreeMessageData
 {
-	bool                                               wasCollected;                                             // 0x0000(0x0001) (ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	TArray<class UClass*>                              Messages;                                                 // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TSoftObjectPtr<class UClass>                       ResearchCollected;                                        // 0x0018(0x0028) (Edit, DisableEditOnInstance)
+	TArray<class UClass*>                              Messages;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TSoftObjectPtr<class UClass>                       researchTree;                                             // 0x0010(0x0028) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct FactoryGame.MaterialAndSlotName
@@ -1598,6 +1954,24 @@ struct FMaterialAndSlotName
 	class UMaterialInterface*                          Material;                                                 // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct FactoryGame.TrainConsist
+// 0x0030
+struct FTrainConsist
+{
+	TArray<class UClass*>                              Vehicles;                                                 // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	float                                              Length;                                                   // 0x0010(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              Mass;                                                     // 0x0014(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxSpeed;                                                 // 0x0018(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x14];                                      // 0x001C(0x0014) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.TrainAtcData
+// 0x0058
+struct FTrainAtcData
+{
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0000(0x0058) MISSED OFFSET
+};
+
 // ScriptStruct FactoryGame.TrainSimulationData
 // 0x0050
 struct FTrainSimulationData
@@ -1605,8 +1979,19 @@ struct FTrainSimulationData
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	TArray<class AFGRailroadVehicle*>                  SimulatedVehicles;                                        // 0x0008(0x0010) (ZeroConstructor)
 	TArray<class UFGRailroadVehicleMovementComponent*> SimulatedMovements;                                       // 0x0018(0x0010) (ExportObject, ZeroConstructor)
-	class UFGLocomotiveMovementComponent*              MasterMovement;                                           // 0x0028(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0030(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class UFGLocomotiveMovementComponent*              MasterMovement;                                           // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x14];                                      // 0x0038(0x0014) MISSED OFFSET
+	float                                              Velocity;                                                 // 0x004C(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
+};
+
+// ScriptStruct FactoryGame.RecipeAmountPair
+// 0x0010
+struct FRecipeAmountPair
+{
+	class UClass*                                      Recipe;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                amount;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.TutorialData
@@ -1644,6 +2029,21 @@ struct FTireTrackDecalDetails
 	class UMaterial*                                   DecalMaterialOverride;                                    // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
+// ScriptStruct FactoryGame.ParticleTemplatePair
+// 0x0010
+struct FParticleTemplatePair
+{
+	class UParticleSystem*                             Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    Particle;                                                 // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct FactoryGame.TireParticleCollection
+// 0x0010
+struct FTireParticleCollection
+{
+	TArray<struct FParticleTemplatePair>               Collection;                                               // 0x0000(0x0010) (ZeroConstructor)
+};
+
 // ScriptStruct FactoryGame.SurfaceParticlePair
 // 0x0010
 struct FSurfaceParticlePair
@@ -1651,14 +2051,6 @@ struct FSurfaceParticlePair
 	class UParticleSystem*                             EmitterTemplate;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<EPhysicalSurface>                      Surface;                                                  // 0x0008(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct FactoryGame.ParticleTemplatePair
-// 0x0010
-struct FParticleTemplatePair
-{
-	class UParticleSystem*                             Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    Particle;                                                 // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.TireData
@@ -1675,16 +2067,16 @@ struct FTireData
 };
 
 // ScriptStruct FactoryGame.VehicleEngineData6W
-// 0x0090
+// 0x00A0
 struct FVehicleEngineData6W
 {
-	struct FRuntimeFloatCurve                          TorqueCurve;                                              // 0x0000(0x0078) (Edit)
-	float                                              MaxRPM;                                                   // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MOI;                                                      // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateFullThrottle;                                  // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateZeroThrottleClutchEngaged;                     // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateZeroThrottleClutchDisengaged;                  // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
+	struct FRuntimeFloatCurve                          TorqueCurve;                                              // 0x0000(0x0088) (Edit)
+	float                                              MaxRPM;                                                   // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MOI;                                                      // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DampingRateFullThrottle;                                  // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DampingRateZeroThrottleClutchEngaged;                     // 0x0094(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DampingRateZeroThrottleClutchDisengaged;                  // 0x0098(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.DifferentialSetup6W
@@ -1729,7 +2121,7 @@ struct FVehicleTransmissionData6W
 };
 
 // ScriptStruct FactoryGame.ExponentialFogSettings
-// 0x0048
+// 0x004C
 struct FExponentialFogSettings
 {
 	float                                              FogHeight;                                                // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -1744,6 +2136,7 @@ struct FExponentialFogSettings
 	float                                              FogMaxOpacity;                                            // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              StartDistance;                                            // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              FogCutoffDistance;                                        // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0048(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.UpdatedFriends
@@ -1751,6 +2144,14 @@ struct FExponentialFogSettings
 struct FUpdatedFriends
 {
 	TArray<struct FFGOnlineFriend>                     Friends;                                                  // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct FactoryGame.FGAnimNode_RandomPlayer
+// 0x0008 (0x0070 - 0x0068)
+struct FFGAnimNode_RandomPlayer : public FAnimNode_RandomPlayer
+{
+	float                                              mPlayRate;                                                // 0x0068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.ConveyorBeltItem
@@ -1762,13 +2163,35 @@ struct FConveyorBeltItem
 	unsigned char                                      UnknownData00[0xC];                                       // 0x001C(0x000C) MISSED OFFSET
 };
 
-// ScriptStruct FactoryGame.FootstepEffectWater
+// ScriptStruct FactoryGame.BuildableGroupTimeData
+// 0x0008
+struct FBuildableGroupTimeData
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.ConveyorBucket
+// 0x0010
+struct FConveyorBucket
+{
+	TArray<class AFGBuildableConveyorBase*>            Conveyors;                                                // 0x0000(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct FactoryGame.BuildableBucket
 // 0x0018
+struct FBuildableBucket
+{
+	class UClass*                                      BuildableClass;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class AFGBuildable*>                        Buildables;                                               // 0x0008(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct FactoryGame.FootstepEffectWater
+// 0x0020
 struct FFootstepEffectWater
 {
 	float                                              MinWaterDepth;                                            // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FFootstepEffect                             Effect;                                                   // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FFootstepEffect                             Effect;                                                   // 0x0008(0x0018) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct FactoryGame.SimulatedItemDropTransform
@@ -1839,6 +2262,13 @@ struct FCategory
 	struct FSlateBrush                                 Icon;                                                     // 0x0018(0x0088) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 };
 
+// ScriptStruct FactoryGame.OptionUpdateDelegateData
+// 0x0010
+struct FOptionUpdateDelegateData
+{
+	TArray<struct FScriptDelegate>                     OptionUpdatedDelegates;                                   // 0x0000(0x0010) (ZeroConstructor)
+};
+
 // ScriptStruct FactoryGame.CostIngredientEffectActorInfo
 // 0x0018
 struct FCostIngredientEffectActorInfo
@@ -1872,7 +2302,7 @@ struct FCustomFastArraySerializerItem
 };
 
 // ScriptStruct FactoryGame.RadiationVisualization
-// 0x0028
+// 0x0024
 struct FRadiationVisualization
 {
 	struct FName                                       Case;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -1883,7 +2313,23 @@ struct FRadiationVisualization
 	float                                              HighestDamageInterval;                                    // 0x0018(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	float                                              DistanceForHighestIntensity;                              // 0x001C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	float                                              DistanceForNoticableIntensity;                            // 0x0020(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.SetEmitterID
+// 0x0030
+struct FSetEmitterID
+{
+	class UObject*                                     Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             AttachRoot;                                               // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.RemoveEmitterID
+// 0x0010
+struct FRemoveEmitterID
+{
+	class UObject*                                     Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.ItemSettings
@@ -1894,6 +2340,15 @@ struct FItemSettings
 	int                                                Resolution;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	class UMaterial*                                   MasterMaterial;                                           // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct FactoryGame.ResourceSinkPointsData
+// 0x0010 (0x0018 - 0x0008)
+struct FResourceSinkPointsData : public FTableRowBase
+{
+	class UClass*                                      ItemClass;                                                // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                Points;                                                   // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                OverriddenResourceSinkPoints;                             // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct FactoryGame.MultipleItemStruct
@@ -1919,11 +2374,19 @@ struct FMapAreaVisitedData
 	TSoftObjectPtr<class UClass>                       SchematicClass;                                           // 0x0018(0x0028) (Edit, DisableEditOnInstance)
 };
 
-// ScriptStruct FactoryGame.TrainConsist
-// 0x0001
-struct FTrainConsist
+// ScriptStruct FactoryGame.TrainSelfDrivingData
+// 0x0010
+struct FTrainSelfDrivingData
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct FactoryGame.TrainAtcPoint
+// 0x0020
+struct FTrainAtcPoint
+{
+	class UFGRailroadTrackConnectionComponent*         TrackConnection;                                          // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct FactoryGame.VehicleSeat
@@ -1940,13 +2403,6 @@ struct FVehicleSeat
 	class AFGDriveablePawn*                            mSeatPawn;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AFGCharacterPlayer*                          mCharacter;                                               // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AController*                                 mController;                                              // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct FactoryGame.TireParticleCollection
-// 0x0010
-struct FTireParticleCollection
-{
-	TArray<struct FParticleTemplatePair>               Collection;                                               // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct FactoryGame.Errors

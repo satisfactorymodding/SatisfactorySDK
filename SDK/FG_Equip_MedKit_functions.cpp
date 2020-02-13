@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_MedKit.Equip_MedKit_C.UserConstructionScript
-// ()
-
-void AEquip_MedKit_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_MedKit.Equip_MedKit_C.UserConstructionScript");
-
-	AEquip_MedKit_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_MedKit.Equip_MedKit_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_MedKit_C::WasEquipped()
 {
@@ -47,7 +30,7 @@ void AEquip_MedKit_C::WasEquipped()
 
 
 // Function Equip_MedKit.Equip_MedKit_C.PlayConsumeEffects
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UFGConsumableDescriptor** consumable                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,7 +50,7 @@ void AEquip_MedKit_C::PlayConsumeEffects(class UFGConsumableDescriptor** consuma
 
 
 // Function Equip_MedKit.Equip_MedKit_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_MedKit_C::WasUnEquipped()
 {
@@ -84,11 +67,11 @@ void AEquip_MedKit_C::WasUnEquipped()
 
 
 // Function Equip_MedKit.Equip_MedKit_C.ExecuteUbergraph_Equip_MedKit
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_MedKit_C::ExecuteUbergraph_Equip_MedKit(int EntryPoint)
+void AEquip_MedKit_C::ExecuteUbergraph_Equip_MedKit(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_MedKit.Equip_MedKit_C.ExecuteUbergraph_Equip_MedKit");
 

@@ -23,7 +23,7 @@ struct UBTT_SetVectorKey_C_ReceiveExecute_Params
 // Function BTT_SetVectorKey.BTT_SetVectorKey_C.ExecuteUbergraph_BTT_SetVectorKey
 struct UBTT_SetVectorKey_C_ExecuteUbergraph_BTT_SetVectorKey_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

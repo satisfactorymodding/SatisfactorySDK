@@ -32,7 +32,7 @@ public:
 
 
 	void ReceiveExecute(class AActor** OwnerActor);
-	void ExecuteUbergraph_BTT_Counter(int EntryPoint);
+	void ExecuteUbergraph_BTT_Counter(int* EntryPoint);
 };
 
 

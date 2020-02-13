@@ -27,7 +27,7 @@ public:
 	}
 
 
-	TArray<struct FRegisteredDeviceInfo> GetRegisteredDevices();
+	TArray<struct FRegisteredDeviceInfo> STATIC_GetRegisteredDevices();
 };
 
 

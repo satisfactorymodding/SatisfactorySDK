@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ItemNotification.Widget_ItemNotification_C.GetTotalNumItemsInPlayerInventory
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ItemNotification_C::GetTotalNumItemsInPlayerInventory()
 {
@@ -30,7 +30,7 @@ void UWidget_ItemNotification_C::GetTotalNumItemsInPlayerInventory()
 
 
 // Function Widget_ItemNotification.Widget_ItemNotification_C.GetNumItemsPickedUp
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ItemNotification_C::GetNumItemsPickedUp()
 {
@@ -47,11 +47,11 @@ void UWidget_ItemNotification_C::GetNumItemsPickedUp()
 
 
 // Function Widget_ItemNotification.Widget_ItemNotification_C.AddToNumItems
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            NumItems                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumItems                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ItemNotification_C::AddToNumItems(int NumItems)
+void UWidget_ItemNotification_C::AddToNumItems(int* NumItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ItemNotification.Widget_ItemNotification_C.AddToNumItems");
 
@@ -67,7 +67,7 @@ void UWidget_ItemNotification_C::AddToNumItems(int NumItems)
 
 
 // Function Widget_ItemNotification.Widget_ItemNotification_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ItemNotification_C::Construct()
 {
@@ -84,7 +84,7 @@ void UWidget_ItemNotification_C::Construct()
 
 
 // Function Widget_ItemNotification.Widget_ItemNotification_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ItemNotification_C::Destruct()
 {
@@ -101,7 +101,7 @@ void UWidget_ItemNotification_C::Destruct()
 
 
 // Function Widget_ItemNotification.Widget_ItemNotification_C.UpdatePickUpAmount
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ItemNotification_C::UpdatePickUpAmount()
 {
@@ -118,11 +118,11 @@ void UWidget_ItemNotification_C::UpdatePickUpAmount()
 
 
 // Function Widget_ItemNotification.Widget_ItemNotification_C.ExecuteUbergraph_Widget_ItemNotification
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ItemNotification_C::ExecuteUbergraph_Widget_ItemNotification(int EntryPoint)
+void UWidget_ItemNotification_C::ExecuteUbergraph_Widget_ItemNotification(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ItemNotification.Widget_ItemNotification_C.ExecuteUbergraph_Widget_ItemNotification");
 

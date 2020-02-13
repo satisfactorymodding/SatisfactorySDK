@@ -119,7 +119,7 @@ struct UWidget_ShoppingList_IngredientRow_C_Tick_Params
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.ExecuteUbergraph_Widget_ShoppingList_IngredientRow
 struct UWidget_ShoppingList_IngredientRow_C_ExecuteUbergraph_Widget_ShoppingList_IngredientRow_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

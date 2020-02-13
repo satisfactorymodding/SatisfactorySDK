@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TitleLabel.Widget_TitleLabel_C.SetFicsItDriverText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UWidget_TitleLabel_C::SetFicsItDriverText()
 {
@@ -30,11 +30,11 @@ void UWidget_TitleLabel_C::SetFicsItDriverText()
 
 
 // Function Widget_TitleLabel.Widget_TitleLabel_C.SetTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TitleLabel_C::SetTitle(const struct FText& Title)
+void UWidget_TitleLabel_C::SetTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TitleLabel.Widget_TitleLabel_C.SetTitle");
 

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CircuitSubsystem.BP_CircuitSubsystem_C
-// 0x0008 (0x03A0 - 0x0398)
+// 0x0008 (0x03A8 - 0x03A0)
 class ABP_CircuitSubsystem_C : public AFGCircuitSubsystem
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0398(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -28,10 +28,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void PowerCircuit_OnFuseSet();
 	void Multicast_PlayFuseSetSound();
-	void ExecuteUbergraph_BP_CircuitSubsystem(int EntryPoint);
+	void ExecuteUbergraph_BP_CircuitSubsystem(int* EntryPoint);
 };
 
 

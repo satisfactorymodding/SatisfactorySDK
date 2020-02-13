@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_WorkBenchIntegrated.Build_WorkBenchIntegrated_C.CanDismantle
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ bool ABuild_WorkBenchIntegrated_C::CanDismantle()
 
 
 // Function Build_WorkBenchIntegrated.Build_WorkBenchIntegrated_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -59,7 +59,7 @@ struct FText ABuild_WorkBenchIntegrated_C::GetLookAtDecription(class AFGCharacte
 
 
 // Function Build_WorkBenchIntegrated.Build_WorkBenchIntegrated_C.IsUseable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -80,7 +80,7 @@ bool ABuild_WorkBenchIntegrated_C::IsUseable()
 
 
 // Function Build_WorkBenchIntegrated.Build_WorkBenchIntegrated_C.UpdateUseState
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -104,23 +104,6 @@ void ABuild_WorkBenchIntegrated_C::UpdateUseState(class AFGCharacterPlayer** byC
 
 	if (out_useState != nullptr)
 		*out_useState = params.out_useState;
-}
-
-
-// Function Build_WorkBenchIntegrated.Build_WorkBenchIntegrated_C.UserConstructionScript
-// ()
-
-void ABuild_WorkBenchIntegrated_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_WorkBenchIntegrated.Build_WorkBenchIntegrated_C.UserConstructionScript");
-
-	ABuild_WorkBenchIntegrated_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

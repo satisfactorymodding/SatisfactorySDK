@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Equip_JetPack.Equip_JetPack_C.GetMaxFuel
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ float AEquip_JetPack_C::GetMaxFuel()
 
 
 // Function Equip_JetPack.Equip_JetPack_C.GetCurrentFuel
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ float AEquip_JetPack_C::GetCurrentFuel()
 
 
 // Function Equip_JetPack.Equip_JetPack_C.GetNewVelocityWhenThrusting
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float*                         Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -78,7 +78,7 @@ struct FVector AEquip_JetPack_C::GetNewVelocityWhenThrusting(float* Delta)
 
 
 // Function Equip_JetPack.Equip_JetPack_C.CanThrust
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -98,25 +98,8 @@ bool AEquip_JetPack_C::CanThrust()
 }
 
 
-// Function Equip_JetPack.Equip_JetPack_C.UserConstructionScript
-// ()
-
-void AEquip_JetPack_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_JetPack.Equip_JetPack_C.UserConstructionScript");
-
-	AEquip_JetPack_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_JetPack.Equip_JetPack_C.OnStartThrusting
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_JetPack_C::OnStartThrusting()
 {
@@ -133,7 +116,7 @@ void AEquip_JetPack_C::OnStartThrusting()
 
 
 // Function Equip_JetPack.Equip_JetPack_C.OnStopThrusting
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_JetPack_C::OnStopThrusting()
 {
@@ -150,7 +133,7 @@ void AEquip_JetPack_C::OnStopThrusting()
 
 
 // Function Equip_JetPack.Equip_JetPack_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -170,11 +153,11 @@ void AEquip_JetPack_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Equip_JetPack.Equip_JetPack_C.ConsumeFuel
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_JetPack_C::ConsumeFuel(float Delta)
+void AEquip_JetPack_C::ConsumeFuel(float* Delta)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_JetPack.Equip_JetPack_C.ConsumeFuel");
 
@@ -190,11 +173,11 @@ void AEquip_JetPack_C::ConsumeFuel(float Delta)
 
 
 // Function Equip_JetPack.Equip_JetPack_C.RegenerateFuel
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_JetPack_C::RegenerateFuel(float Delta)
+void AEquip_JetPack_C::RegenerateFuel(float* Delta)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_JetPack.Equip_JetPack_C.RegenerateFuel");
 
@@ -210,7 +193,7 @@ void AEquip_JetPack_C::RegenerateFuel(float Delta)
 
 
 // Function Equip_JetPack.Equip_JetPack_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_JetPack_C::ReceiveBeginPlay()
 {
@@ -227,7 +210,7 @@ void AEquip_JetPack_C::ReceiveBeginPlay()
 
 
 // Function Equip_JetPack.Equip_JetPack_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_JetPack_C::WasEquipped()
 {
@@ -244,7 +227,7 @@ void AEquip_JetPack_C::WasEquipped()
 
 
 // Function Equip_JetPack.Equip_JetPack_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_JetPack_C::WasUnEquipped()
 {
@@ -261,11 +244,11 @@ void AEquip_JetPack_C::WasUnEquipped()
 
 
 // Function Equip_JetPack.Equip_JetPack_C.ExecuteUbergraph_Equip_JetPack
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_JetPack_C::ExecuteUbergraph_Equip_JetPack(int EntryPoint)
+void AEquip_JetPack_C::ExecuteUbergraph_Equip_JetPack(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_JetPack.Equip_JetPack_C.ExecuteUbergraph_Equip_JetPack");
 

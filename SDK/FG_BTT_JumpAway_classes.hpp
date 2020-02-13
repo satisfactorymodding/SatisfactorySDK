@@ -29,8 +29,8 @@ public:
 
 
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void BirdHasLanded(class AChar_NonFlyingBird_C* birdLanded);
-	void ExecuteUbergraph_BTT_JumpAway(int EntryPoint);
+	void BirdHasLanded(class AChar_NonFlyingBird_C** birdLanded);
+	void ExecuteUbergraph_BTT_JumpAway(int* EntryPoint);
 };
 
 

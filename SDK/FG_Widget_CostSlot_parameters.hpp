@@ -29,7 +29,7 @@ struct UWidget_CostSlot_C_GetItemName_Params
 // Function Widget_CostSlot.Widget_CostSlot_C.SetCostSlot
 struct UWidget_CostSlot_C_SetCostSlot_Params
 {
-	int                                                SlotIdx;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               SlotIdx;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_CostSlot.Widget_CostSlot_C.Tick
@@ -42,7 +42,7 @@ struct UWidget_CostSlot_C_Tick_Params
 // Function Widget_CostSlot.Widget_CostSlot_C.ExecuteUbergraph_Widget_CostSlot
 struct UWidget_CostSlot_C_ExecuteUbergraph_Widget_CostSlot_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

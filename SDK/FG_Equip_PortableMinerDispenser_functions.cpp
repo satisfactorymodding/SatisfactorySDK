@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.UserConstructionScript
-// ()
-
-void AEquip_PortableMinerDispenser_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.UserConstructionScript");
-
-	AEquip_PortableMinerDispenser_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.SpawnPortableMiner
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AFGResourceNode**        resourceNode                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,11 +33,11 @@ void AEquip_PortableMinerDispenser_C::SpawnPortableMiner(class AFGResourceNode**
 
 
 // Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.PlaySpawnEffects
-// ()
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_PortableMiner_C*     PortableMiner                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ABP_PortableMiner_C**    PortableMiner                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_PortableMinerDispenser_C::PlaySpawnEffects(class ABP_PortableMiner_C* PortableMiner)
+void AEquip_PortableMinerDispenser_C::PlaySpawnEffects(class ABP_PortableMiner_C** PortableMiner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.PlaySpawnEffects");
 
@@ -70,7 +53,7 @@ void AEquip_PortableMinerDispenser_C::PlaySpawnEffects(class ABP_PortableMiner_C
 
 
 // Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_PortableMinerDispenser_C::WasEquipped()
 {
@@ -87,7 +70,7 @@ void AEquip_PortableMinerDispenser_C::WasEquipped()
 
 
 // Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_PortableMinerDispenser_C::WasUnEquipped()
 {
@@ -104,11 +87,11 @@ void AEquip_PortableMinerDispenser_C::WasUnEquipped()
 
 
 // Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.ExecuteUbergraph_Equip_PortableMinerDispenser
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_PortableMinerDispenser_C::ExecuteUbergraph_Equip_PortableMinerDispenser(int EntryPoint)
+void AEquip_PortableMinerDispenser_C::ExecuteUbergraph_Equip_PortableMinerDispenser(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_PortableMinerDispenser.Equip_PortableMinerDispenser_C.ExecuteUbergraph_Equip_PortableMinerDispenser");
 

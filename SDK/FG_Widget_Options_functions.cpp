@@ -12,8 +12,76 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_Options.Widget_Options_C.UpdateDynamicSettings
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Options_C::UpdateDynamicSettings()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.UpdateDynamicSettings");
+
+	UWidget_Options_C_UpdateDynamicSettings_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Options.Widget_Options_C.SetupDynamicOptions
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Options_C::SetupDynamicOptions()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.SetupDynamicOptions");
+
+	UWidget_Options_C_SetupDynamicOptions_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Options.Widget_Options_C.ApplyVideoSettings
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Options_C::ApplyVideoSettings()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.ApplyVideoSettings");
+
+	UWidget_Options_C_ApplyVideoSettings_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Options.Widget_Options_C.SetCurrentShowBreakNotifications
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Options_C::SetCurrentShowBreakNotifications()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.SetCurrentShowBreakNotifications");
+
+	UWidget_Options_C_SetCurrentShowBreakNotifications_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Options.Widget_Options_C.BindEventsForGameplayOptions
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::BindEventsForGameplayOptions()
 {
@@ -30,7 +98,7 @@ void UWidget_Options_C::BindEventsForGameplayOptions()
 
 
 // Function Widget_Options.Widget_Options_C.ResetMouseSensitivity
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ResetMouseSensitivity()
 {
@@ -47,7 +115,7 @@ void UWidget_Options_C::ResetMouseSensitivity()
 
 
 // Function Widget_Options.Widget_Options_C.ResetAudioSettings
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ResetAudioSettings()
 {
@@ -64,7 +132,7 @@ void UWidget_Options_C::ResetAudioSettings()
 
 
 // Function Widget_Options.Widget_Options_C.UpdateGameplaySettings
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::UpdateGameplaySettings()
 {
@@ -81,7 +149,7 @@ void UWidget_Options_C::UpdateGameplaySettings()
 
 
 // Function Widget_Options.Widget_Options_C.SetCurrentAnalyticsSetting
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::SetCurrentAnalyticsSetting()
 {
@@ -98,7 +166,7 @@ void UWidget_Options_C::SetCurrentAnalyticsSetting()
 
 
 // Function Widget_Options.Widget_Options_C.SetCurrentHeadbobScale
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::SetCurrentHeadbobScale()
 {
@@ -115,7 +183,7 @@ void UWidget_Options_C::SetCurrentHeadbobScale()
 
 
 // Function Widget_Options.Widget_Options_C.UpdatePostProcessValues
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::UpdatePostProcessValues()
 {
@@ -132,7 +200,7 @@ void UWidget_Options_C::UpdatePostProcessValues()
 
 
 // Function Widget_Options.Widget_Options_C.SetupSubmenuOptionsForSpawnAnim
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UUserWidget*>     ActiveOptions                  (Parm, OutParm, ZeroConstructor)
 
@@ -154,11 +222,11 @@ void UWidget_Options_C::SetupSubmenuOptionsForSpawnAnim(TArray<class UUserWidget
 
 
 // Function Widget_Options.Widget_Options_C.OnAudioValueChanged
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          NewParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         NewParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::OnAudioValueChanged(float NewParam)
+void UWidget_Options_C::OnAudioValueChanged(float* NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.OnAudioValueChanged");
 
@@ -174,12 +242,12 @@ void UWidget_Options_C::OnAudioValueChanged(float NewParam)
 
 
 // Function Widget_Options.Widget_Options_C.OnResolutionChanged
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                  selected_item                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// TEnumAsByte<ESelectInfo>       selection_type                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class FString*                 selected_item                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// TEnumAsByte<ESelectInfo>*      selection_type                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::OnResolutionChanged(const class FString& selected_item, TEnumAsByte<ESelectInfo> selection_type)
+void UWidget_Options_C::OnResolutionChanged(class FString* selected_item, TEnumAsByte<ESelectInfo>* selection_type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.OnResolutionChanged");
 
@@ -196,7 +264,7 @@ void UWidget_Options_C::OnResolutionChanged(const class FString& selected_item, 
 
 
 // Function Widget_Options.Widget_Options_C.OnDefaultKeybindPressed
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::OnDefaultKeybindPressed()
 {
@@ -213,7 +281,7 @@ void UWidget_Options_C::OnDefaultKeybindPressed()
 
 
 // Function Widget_Options.Widget_Options_C.UpdateControlSettings
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::UpdateControlSettings()
 {
@@ -230,7 +298,7 @@ void UWidget_Options_C::UpdateControlSettings()
 
 
 // Function Widget_Options.Widget_Options_C.SetCurrentArachnophobiaMode
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::SetCurrentArachnophobiaMode()
 {
@@ -247,7 +315,7 @@ void UWidget_Options_C::SetCurrentArachnophobiaMode()
 
 
 // Function Widget_Options.Widget_Options_C.SetCurrentLanguage
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::SetCurrentLanguage()
 {
@@ -264,7 +332,7 @@ void UWidget_Options_C::SetCurrentLanguage()
 
 
 // Function Widget_Options.Widget_Options_C.ApplyControlsSettings
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ApplyControlsSettings()
 {
@@ -281,7 +349,7 @@ void UWidget_Options_C::ApplyControlsSettings()
 
 
 // Function Widget_Options.Widget_Options_C.ApplyAudioSettings
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ApplyAudioSettings()
 {
@@ -298,7 +366,7 @@ void UWidget_Options_C::ApplyAudioSettings()
 
 
 // Function Widget_Options.Widget_Options_C.ApplyGameplaySettings
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ApplyGameplaySettings()
 {
@@ -315,7 +383,7 @@ void UWidget_Options_C::ApplyGameplaySettings()
 
 
 // Function Widget_Options.Widget_Options_C.ApplyAudioSliders
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ApplyAudioSliders()
 {
@@ -332,7 +400,7 @@ void UWidget_Options_C::ApplyAudioSliders()
 
 
 // Function Widget_Options.Widget_Options_C.CacheAudioSliders
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::CacheAudioSliders()
 {
@@ -349,7 +417,7 @@ void UWidget_Options_C::CacheAudioSliders()
 
 
 // Function Widget_Options.Widget_Options_C.UpdateAudioSettings
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::UpdateAudioSettings()
 {
@@ -366,7 +434,7 @@ void UWidget_Options_C::UpdateAudioSettings()
 
 
 // Function Widget_Options.Widget_Options_C.BindEventsForVolumeSliders
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::BindEventsForVolumeSliders()
 {
@@ -383,13 +451,13 @@ void UWidget_Options_C::BindEventsForVolumeSliders()
 
 
 // Function Widget_Options.Widget_Options_C.ClampedNextIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            currentIndex                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           currentIndex                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FText>           settingsArray                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            nextIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::ClampedNextIndex(int currentIndex, TArray<struct FText>* settingsArray, int* nextIndex)
+void UWidget_Options_C::ClampedNextIndex(int* currentIndex, TArray<struct FText>* settingsArray, int* nextIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.ClampedNextIndex");
 
@@ -410,7 +478,7 @@ void UWidget_Options_C::ClampedNextIndex(int currentIndex, TArray<struct FText>*
 
 
 // Function Widget_Options.Widget_Options_C.BindEventsToAllButtonsForVideoSettings
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::BindEventsToAllButtonsForVideoSettings()
 {
@@ -427,7 +495,7 @@ void UWidget_Options_C::BindEventsToAllButtonsForVideoSettings()
 
 
 // Function Widget_Options.Widget_Options_C.UpdateVideoSettings
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::UpdateVideoSettings()
 {
@@ -444,7 +512,7 @@ void UWidget_Options_C::UpdateVideoSettings()
 
 
 // Function Widget_Options.Widget_Options_C.PopulateLanguageBox
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::PopulateLanguageBox()
 {
@@ -461,7 +529,7 @@ void UWidget_Options_C::PopulateLanguageBox()
 
 
 // Function Widget_Options.Widget_Options_C.PopulateResolutionBox
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::PopulateResolutionBox()
 {
@@ -478,7 +546,7 @@ void UWidget_Options_C::PopulateResolutionBox()
 
 
 // Function Widget_Options.Widget_Options_C.PostProcessingNext
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::PostProcessingNext()
 {
@@ -495,7 +563,7 @@ void UWidget_Options_C::PostProcessingNext()
 
 
 // Function Widget_Options.Widget_Options_C.PostProcessingPrevious
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::PostProcessingPrevious()
 {
@@ -512,7 +580,7 @@ void UWidget_Options_C::PostProcessingPrevious()
 
 
 // Function Widget_Options.Widget_Options_C.ShadowQualityNext
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ShadowQualityNext()
 {
@@ -529,7 +597,7 @@ void UWidget_Options_C::ShadowQualityNext()
 
 
 // Function Widget_Options.Widget_Options_C.ShadowQualityPrevious
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ShadowQualityPrevious()
 {
@@ -546,7 +614,7 @@ void UWidget_Options_C::ShadowQualityPrevious()
 
 
 // Function Widget_Options.Widget_Options_C.FoliagePrevious
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::FoliagePrevious()
 {
@@ -562,25 +630,8 @@ void UWidget_Options_C::FoliagePrevious()
 }
 
 
-// Function Widget_Options.Widget_Options_C.FoliageNext
-// ()
-
-void UWidget_Options_C::FoliageNext()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.FoliageNext");
-
-	UWidget_Options_C_FoliageNext_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Options.Widget_Options_C.TextureQualityNext
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::TextureQualityNext()
 {
@@ -597,7 +648,7 @@ void UWidget_Options_C::TextureQualityNext()
 
 
 // Function Widget_Options.Widget_Options_C.TextureQualityPrevious
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::TextureQualityPrevious()
 {
@@ -613,8 +664,25 @@ void UWidget_Options_C::TextureQualityPrevious()
 }
 
 
+// Function Widget_Options.Widget_Options_C.FoliageNext
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_Options_C::FoliageNext()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.FoliageNext");
+
+	UWidget_Options_C_FoliageNext_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Options.Widget_Options_C.ViewDistanceNext
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ViewDistanceNext()
 {
@@ -631,7 +699,7 @@ void UWidget_Options_C::ViewDistanceNext()
 
 
 // Function Widget_Options.Widget_Options_C.ViewDistancePrevious
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ViewDistancePrevious()
 {
@@ -648,7 +716,7 @@ void UWidget_Options_C::ViewDistancePrevious()
 
 
 // Function Widget_Options.Widget_Options_C.VFXQualityNext
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::VFXQualityNext()
 {
@@ -665,7 +733,7 @@ void UWidget_Options_C::VFXQualityNext()
 
 
 // Function Widget_Options.Widget_Options_C.VFXQualityPrevious
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::VFXQualityPrevious()
 {
@@ -682,11 +750,11 @@ void UWidget_Options_C::VFXQualityPrevious()
 
 
 // Function Widget_Options.Widget_Options_C.OnVSyncChecked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::OnVSyncChecked(bool bIsChecked)
+void UWidget_Options_C::OnVSyncChecked(bool* bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.OnVSyncChecked");
 
@@ -702,11 +770,11 @@ void UWidget_Options_C::OnVSyncChecked(bool bIsChecked)
 
 
 // Function Widget_Options.Widget_Options_C.OnFullScreenChecked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::OnFullScreenChecked(bool bIsChecked)
+void UWidget_Options_C::OnFullScreenChecked(bool* bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.OnFullScreenChecked");
 
@@ -722,11 +790,11 @@ void UWidget_Options_C::OnFullScreenChecked(bool bIsChecked)
 
 
 // Function Widget_Options.Widget_Options_C.ResetVideoSettings
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::ResetVideoSettings(bool confirm)
+void UWidget_Options_C::ResetVideoSettings(bool* confirm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.ResetVideoSettings");
 
@@ -742,7 +810,7 @@ void UWidget_Options_C::ResetVideoSettings(bool confirm)
 
 
 // Function Widget_Options.Widget_Options_C.OnEscape
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::OnEscape()
 {
@@ -759,11 +827,11 @@ void UWidget_Options_C::OnEscape()
 
 
 // Function Widget_Options.Widget_Options_C.SaveChanges
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::SaveChanges(bool confirm)
+void UWidget_Options_C::SaveChanges(bool* confirm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.SaveChanges");
 
@@ -779,11 +847,11 @@ void UWidget_Options_C::SaveChanges(bool confirm)
 
 
 // Function Widget_Options.Widget_Options_C.DoVolumeThings
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          VolumeThingsValue              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         VolumeThingsValue              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::DoVolumeThings(float VolumeThingsValue)
+void UWidget_Options_C::DoVolumeThings(float* VolumeThingsValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.DoVolumeThings");
 
@@ -799,11 +867,11 @@ void UWidget_Options_C::DoVolumeThings(float VolumeThingsValue)
 
 
 // Function Widget_Options.Widget_Options_C.OnFOVChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          NewFOV                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         NewFOV                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::OnFOVChanged(float NewFOV)
+void UWidget_Options_C::OnFOVChanged(float* NewFOV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.OnFOVChanged");
 
@@ -819,7 +887,7 @@ void UWidget_Options_C::OnFOVChanged(float NewFOV)
 
 
 // Function Widget_Options.Widget_Options_C.ShowConfirmResetPopup
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ShowConfirmResetPopup()
 {
@@ -836,7 +904,7 @@ void UWidget_Options_C::ShowConfirmResetPopup()
 
 
 // Function Widget_Options.Widget_Options_C.BndEvt__Widget_FrontEnd_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Options_C::BndEvt__Widget_FrontEnd_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -853,7 +921,7 @@ void UWidget_Options_C::BndEvt__Widget_FrontEnd_Button_K2Node_ComponentBoundEven
 
 
 // Function Widget_Options.Widget_Options_C.BndEvt__Widget_FrontEnd_Button_C_0_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Options_C::BndEvt__Widget_FrontEnd_Button_C_0_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature()
 {
@@ -870,7 +938,7 @@ void UWidget_Options_C::BndEvt__Widget_FrontEnd_Button_C_0_K2Node_ComponentBound
 
 
 // Function Widget_Options.Widget_Options_C.ShowConfirmChangesPopup
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::ShowConfirmChangesPopup()
 {
@@ -887,7 +955,7 @@ void UWidget_Options_C::ShowConfirmChangesPopup()
 
 
 // Function Widget_Options.Widget_Options_C.BndEvt__Widget_FrontEnd_Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Options_C::BndEvt__Widget_FrontEnd_Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -904,7 +972,7 @@ void UWidget_Options_C::BndEvt__Widget_FrontEnd_Button_K2Node_ComponentBoundEven
 
 
 // Function Widget_Options.Widget_Options_C.Init
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::Init()
 {
@@ -921,11 +989,11 @@ void UWidget_Options_C::Init()
 
 
 // Function Widget_Options.Widget_Options_C.OnMotionBlurChecked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Checked                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          Checked                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::OnMotionBlurChecked(bool Checked)
+void UWidget_Options_C::OnMotionBlurChecked(bool* Checked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.OnMotionBlurChecked");
 
@@ -940,8 +1008,30 @@ void UWidget_Options_C::OnMotionBlurChecked(bool Checked)
 }
 
 
+// Function Widget_Options.Widget_Options_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UWidget**                oldWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget**                newWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Options_C::BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature(class UWidget** oldWidget, class UWidget** newWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature");
+
+	UWidget_Options_C_BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature_Params params;
+	params.oldWidget = oldWidget;
+	params.newWidget = newWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Options.Widget_Options_C.AntiAliasNext
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::AntiAliasNext()
 {
@@ -958,7 +1048,7 @@ void UWidget_Options_C::AntiAliasNext()
 
 
 // Function Widget_Options.Widget_Options_C.AntiAliasPrevious
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::AntiAliasPrevious()
 {
@@ -974,30 +1064,8 @@ void UWidget_Options_C::AntiAliasPrevious()
 }
 
 
-// Function Widget_Options.Widget_Options_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature
-// ()
-// Parameters:
-// class UWidget*                 oldWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UWidget*                 newWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UWidget_Options_C::BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature(class UWidget* oldWidget, class UWidget* newWidget)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature");
-
-	UWidget_Options_C_BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature_Params params;
-	params.oldWidget = oldWidget;
-	params.newWidget = newWidget;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Options.Widget_Options_C.NetworkQualityPrevious
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::NetworkQualityPrevious()
 {
@@ -1014,7 +1082,7 @@ void UWidget_Options_C::NetworkQualityPrevious()
 
 
 // Function Widget_Options.Widget_Options_C.NetworkQualityNext
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::NetworkQualityNext()
 {
@@ -1031,7 +1099,7 @@ void UWidget_Options_C::NetworkQualityNext()
 
 
 // Function Widget_Options.Widget_Options_C.SaveSettings
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::SaveSettings()
 {
@@ -1048,7 +1116,7 @@ void UWidget_Options_C::SaveSettings()
 
 
 // Function Widget_Options.Widget_Options_C.OnMenuExit
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UWidget**                prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool*                          noAnimation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1070,7 +1138,7 @@ void UWidget_Options_C::OnMenuExit(class UWidget** prevMenu, bool* noAnimation)
 
 
 // Function Widget_Options.Widget_Options_C.CheckResolutionChanges
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::CheckResolutionChanges()
 {
@@ -1087,11 +1155,11 @@ void UWidget_Options_C::CheckResolutionChanges()
 
 
 // Function Widget_Options.Widget_Options_C.ResolutionChangedAccepted
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::ResolutionChangedAccepted(bool confirm)
+void UWidget_Options_C::ResolutionChangedAccepted(bool* confirm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.ResolutionChangedAccepted");
 
@@ -1107,7 +1175,7 @@ void UWidget_Options_C::ResolutionChangedAccepted(bool confirm)
 
 
 // Function Widget_Options.Widget_Options_C.OpenRequireRestartIfRequired
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::OpenRequireRestartIfRequired()
 {
@@ -1123,8 +1191,62 @@ void UWidget_Options_C::OpenRequireRestartIfRequired()
 }
 
 
+// Function Widget_Options.Widget_Options_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Options_C::PreConstruct(bool* IsDesignTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.PreConstruct");
+
+	UWidget_Options_C_PreConstruct_Params params;
+	params.IsDesignTime = IsDesignTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Options.Widget_Options_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_Options_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.Destruct");
+
+	UWidget_Options_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Options.Widget_Options_C.RevertUnsavedChanges
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_Options_C::RevertUnsavedChanges()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.RevertUnsavedChanges");
+
+	UWidget_Options_C_RevertUnsavedChanges_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Options.Widget_Options_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Options_C::Construct()
 {
@@ -1141,11 +1263,11 @@ void UWidget_Options_C::Construct()
 
 
 // Function Widget_Options.Widget_Options_C.ExecuteUbergraph_Widget_Options
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_C::ExecuteUbergraph_Widget_Options(int EntryPoint)
+void UWidget_Options_C::ExecuteUbergraph_Widget_Options(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options.Widget_Options_C.ExecuteUbergraph_Widget_Options");
 
@@ -1161,7 +1283,7 @@ void UWidget_Options_C::ExecuteUbergraph_Widget_Options(int EntryPoint)
 
 
 // Function Widget_Options.Widget_Options_C.OnBackClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_C::OnBackClicked__DelegateSignature()
 {

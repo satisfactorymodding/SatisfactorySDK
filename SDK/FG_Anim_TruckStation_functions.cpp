@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_TruckStation.Anim_TruckStation_C.CalculateAnimGraphVariables
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_TruckStation_C::CalculateAnimGraphVariables()
 {
@@ -30,7 +30,7 @@ void UAnim_TruckStation_C::CalculateAnimGraphVariables()
 
 
 // Function Anim_TruckStation.Anim_TruckStation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TruckStation_AnimGraphNode_TransitionResult_BA79A65D40E552FCF0E8F2AD451D5B6F
-// ()
+// (BlueprintEvent)
 
 void UAnim_TruckStation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TruckStation_AnimGraphNode_TransitionResult_BA79A65D40E552FCF0E8F2AD451D5B6F()
 {
@@ -47,7 +47,7 @@ void UAnim_TruckStation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Truc
 
 
 // Function Anim_TruckStation.Anim_TruckStation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TruckStation_AnimGraphNode_TransitionResult_B9266FD3469546EFB24EB0AAA526FD77
-// ()
+// (BlueprintEvent)
 
 void UAnim_TruckStation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_TruckStation_AnimGraphNode_TransitionResult_B9266FD3469546EFB24EB0AAA526FD77()
 {
@@ -64,7 +64,7 @@ void UAnim_TruckStation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Truc
 
 
 // Function Anim_TruckStation.Anim_TruckStation_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,7 +84,7 @@ void UAnim_TruckStation_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_TruckStation.Anim_TruckStation_C.BlueprintInitializeAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UAnim_TruckStation_C::BlueprintInitializeAnimation()
 {
@@ -101,11 +101,11 @@ void UAnim_TruckStation_C::BlueprintInitializeAnimation()
 
 
 // Function Anim_TruckStation.Anim_TruckStation_C.HasPowerChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_TruckStation_C::HasPowerChanged(bool State)
+void UAnim_TruckStation_C::HasPowerChanged(bool* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_TruckStation.Anim_TruckStation_C.HasPowerChanged");
 
@@ -121,11 +121,11 @@ void UAnim_TruckStation_C::HasPowerChanged(bool State)
 
 
 // Function Anim_TruckStation.Anim_TruckStation_C.ExecuteUbergraph_Anim_TruckStation
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_TruckStation_C::ExecuteUbergraph_Anim_TruckStation(int EntryPoint)
+void UAnim_TruckStation_C::ExecuteUbergraph_Anim_TruckStation(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_TruckStation.Anim_TruckStation_C.ExecuteUbergraph_Anim_TruckStation");
 

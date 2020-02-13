@@ -14,6 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Tutorial_Map.Tutorial_Map_C.Construct
+struct UTutorial_Map_C_Construct_Params
+{
+};
+
+// Function Tutorial_Map.Tutorial_Map_C.ExecuteUbergraph_Tutorial_Map
+struct UTutorial_Map_C_ExecuteUbergraph_Tutorial_Map_Params
+{
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

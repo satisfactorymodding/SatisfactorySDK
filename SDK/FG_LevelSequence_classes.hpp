@@ -33,16 +33,31 @@ public:
 };
 
 
+// Class LevelSequence.LevelSequenceMetaData
+// 0x0000 (0x0028 - 0x0028)
+class ULevelSequenceMetaData : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceMetaData");
+		return ptr;
+	}
+
+};
+
+
 // Class LevelSequence.LevelSequence
 // 0x0150 (0x0498 - 0x0348)
 class ULevelSequence : public UMovieSceneSequence
 {
 public:
 	class UMovieScene*                                 MovieScene;                                               // 0x0348(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlueprintGeneratedClass*                    DirectorClass;                                            // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FLevelSequenceObjectReferenceMap            ObjectReferences;                                         // 0x0358(0x0050)
-	struct FLevelSequenceBindingReferences             BindingReferences;                                        // 0x03A8(0x00A0)
-	TMap<class FString, struct FLevelSequenceObject>   PossessedObjects;                                         // 0x0448(0x0050) (ZeroConstructor, Deprecated)
+	struct FLevelSequenceObjectReferenceMap            ObjectReferences;                                         // 0x0350(0x0050)
+	struct FLevelSequenceBindingReferences             BindingReferences;                                        // 0x03A0(0x00A0)
+	TMap<class FString, struct FLevelSequenceObject>   PossessedObjects;                                         // 0x0440(0x0050) (ZeroConstructor, Deprecated)
+	class UClass*                                      DirectorClass;                                            // 0x0490(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -50,6 +65,11 @@ public:
 		return ptr;
 	}
 
+
+	void RemoveMetaDataByClass(class UClass** inClass);
+	class UObject* FindOrAddMetaDataByClass(class UClass** inClass);
+	class UObject* FindMetaDataByClass(class UClass** inClass);
+	class UObject* CopyMetaData(class UObject** InMetaData);
 };
 
 
@@ -85,28 +105,29 @@ public:
 	}
 
 
-	void SetBurnIn(const struct FSoftClassPath& InBurnInClass);
+	void SetBurnIn(struct FSoftClassPath* InBurnInClass);
 };
 
 
 // Class LevelSequence.LevelSequenceActor
-// 0x00A8 (0x03D0 - 0x0328)
+// 0x0080 (0x03B0 - 0x0330)
 class ALevelSequenceActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
-	bool                                               bAutoPlay;                                                // 0x0330(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
-	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                         // 0x0338(0x0040) (Edit, BlueprintVisible, BlueprintReadOnly)
-	class ULevelSequencePlayer*                        SequencePlayer;                                           // 0x0378(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	struct FSoftObjectPath                             LevelSequence;                                            // 0x0380(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class AActor*>                              AdditionalEventReceivers;                                 // 0x0398(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class ULevelSequenceBurnInOptions*                 BurnInOptions;                                            // 0x03A8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UMovieSceneBindingOverrides*                 BindingOverrides;                                         // 0x03B0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bOverrideInstanceData;                                    // 0x03B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x03B9(0x0007) MISSED OFFSET
-	class UObject*                                     DefaultInstanceData;                                      // 0x03C0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class ULevelSequenceBurnIn*                        BurnInInstance;                                           // 0x03C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0330(0x0010) MISSED OFFSET
+	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                         // 0x0340(0x0014) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0354(0x0004) MISSED OFFSET
+	class ULevelSequencePlayer*                        SequencePlayer;                                           // 0x0358(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, Net, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	struct FSoftObjectPath                             LevelSequence;                                            // 0x0360(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class AActor*>                              AdditionalEventReceivers;                                 // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class ULevelSequenceBurnInOptions*                 BurnInOptions;                                            // 0x0388(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMovieSceneBindingOverrides*                 BindingOverrides;                                         // 0x0390(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      bAutoPlay : 1;                                            // 0x0398(0x0001) (Deprecated)
+	unsigned char                                      bOverrideInstanceData : 1;                                // 0x0398(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bReplicatePlayback : 1;                                   // 0x0398(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0399(0x0007) MISSED OFFSET
+	class UObject*                                     DefaultInstanceData;                                      // 0x03A0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class ULevelSequenceBurnIn*                        BurnInInstance;                                           // 0x03A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -115,24 +136,28 @@ public:
 	}
 
 
-	void SetSequence(class ULevelSequence* InSequence);
-	void SetEventReceivers(TArray<class AActor*> AdditionalReceivers);
-	void SetBinding(const struct FMovieSceneObjectBindingID& Binding, TArray<class AActor*> Actors, bool bAllowBindingsFromAsset);
+	void SetSequence(class ULevelSequence** InSequence);
+	void SetReplicatePlayback(bool* ReplicatePlayback);
+	void SetEventReceivers(TArray<class AActor*>* AdditionalReceivers);
+	void SetBinding(struct FMovieSceneObjectBindingID* Binding, TArray<class AActor*>* Actors, bool* bAllowBindingsFromAsset);
 	void ResetBindings();
-	void ResetBinding(const struct FMovieSceneObjectBindingID& Binding);
-	void RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor);
-	class ULevelSequence* GetSequence(bool bLoad, bool bInitializePlayer);
-	void AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset);
+	void ResetBinding(struct FMovieSceneObjectBindingID* Binding);
+	void RemoveBinding(struct FMovieSceneObjectBindingID* Binding, class AActor** Actor);
+	void OnLevelSequenceLoaded__DelegateSignature();
+	class ULevelSequence* LoadSequence();
+	class ULevelSequencePlayer* GetSequencePlayer();
+	class ULevelSequence* GetSequence();
+	void AddBinding(struct FMovieSceneObjectBindingID* Binding, class AActor** Actor, bool* bAllowBindingsFromAsset);
 };
 
 
 // Class LevelSequence.LevelSequenceBurnIn
-// 0x0090 (0x0298 - 0x0208)
+// 0x00A0 (0x02D0 - 0x0230)
 class ULevelSequenceBurnIn : public UUserWidget
 {
 public:
-	struct FLevelSequencePlayerSnapshot                FrameInformation;                                         // 0x0208(0x0088) (BlueprintVisible, BlueprintReadOnly)
-	class ALevelSequenceActor*                         LevelSequenceActor;                                       // 0x0290(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FLevelSequencePlayerSnapshot                FrameInformation;                                         // 0x0230(0x0098) (BlueprintVisible, BlueprintReadOnly)
+	class ALevelSequenceActor*                         LevelSequenceActor;                                       // 0x02C8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -141,7 +166,7 @@ public:
 	}
 
 
-	void SetSettings(class UObject* InSettings);
+	void SetSettings(class UObject** InSettings);
 	class UClass* GetSettingsClass();
 };
 
@@ -165,7 +190,7 @@ public:
 
 
 // Class LevelSequence.LegacyLevelSequenceDirectorBlueprint
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x00D8 - 0x00D8)
 class ULegacyLevelSequenceDirectorBlueprint : public UBlueprint
 {
 public:
@@ -180,14 +205,12 @@ public:
 
 
 // Class LevelSequence.LevelSequencePlayer
-// 0x00A0 (0x0868 - 0x07C8)
+// 0x0140 (0x0908 - 0x07C8)
 class ULevelSequencePlayer : public UMovieSceneSequencePlayer
 {
 public:
 	struct FScriptMulticastDelegate                    OnCameraCut;                                              // 0x07C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x30];                                      // 0x07D8(0x0030) MISSED OFFSET
-	TArray<class UObject*>                             AdditionalEventReceivers;                                 // 0x0808(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0818(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x130];                                     // 0x07D8(0x0130) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -196,7 +219,8 @@ public:
 	}
 
 
-	class ULevelSequencePlayer* CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor);
+	class UCameraComponent* GetActiveCameraComponent();
+	class ULevelSequencePlayer* STATIC_CreateLevelSequencePlayer(class UObject** WorldContextObject, class ULevelSequence** LevelSequence, struct FMovieSceneSequencePlaybackSettings* Settings, class ALevelSequenceActor** OutActor);
 };
 
 

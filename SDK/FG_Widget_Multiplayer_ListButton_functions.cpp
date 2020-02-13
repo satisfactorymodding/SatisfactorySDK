@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.UpdateNATWarningForClient
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::UpdateNATWarningForClient()
 {
@@ -30,19 +30,19 @@ void UWidget_Multiplayer_ListButton_C::UpdateNATWarningForClient()
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetHostingNATIsse
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// ECachedNATType                 HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// ECachedNATType                 clientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   ToolTip                        (Parm, OutParm)
+// ECachedNATType*                HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECachedNATType*                ClientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Tooltip                        (Parm, OutParm)
 
-void UWidget_Multiplayer_ListButton_C::GetHostingNATIsse(ECachedNATType HostNAT, ECachedNATType clientNat, struct FText* ToolTip)
+void UWidget_Multiplayer_ListButton_C::GetHostingNATIsse(ECachedNATType* HostNAT, ECachedNATType* ClientNat, struct FText* Tooltip)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetHostingNATIsse");
 
 	UWidget_Multiplayer_ListButton_C_GetHostingNATIsse_Params params;
 	params.HostNAT = HostNAT;
-	params.clientNat = clientNat;
+	params.ClientNat = ClientNat;
 
 	auto flags = fn->FunctionFlags;
 
@@ -50,25 +50,25 @@ void UWidget_Multiplayer_ListButton_C::GetHostingNATIsse(ECachedNATType HostNAT,
 
 	fn->FunctionFlags = flags;
 
-	if (ToolTip != nullptr)
-		*ToolTip = params.ToolTip;
+	if (Tooltip != nullptr)
+		*Tooltip = params.Tooltip;
 }
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetConnectingNATIsse
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// ECachedNATType                 HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// ECachedNATType                 clientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   ToolTip                        (Parm, OutParm)
+// ECachedNATType*                HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECachedNATType*                ClientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Tooltip                        (Parm, OutParm)
 
-void UWidget_Multiplayer_ListButton_C::GetConnectingNATIsse(ECachedNATType HostNAT, ECachedNATType clientNat, struct FText* ToolTip)
+void UWidget_Multiplayer_ListButton_C::GetConnectingNATIsse(ECachedNATType* HostNAT, ECachedNATType* ClientNat, struct FText* Tooltip)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetConnectingNATIsse");
 
 	UWidget_Multiplayer_ListButton_C_GetConnectingNATIsse_Params params;
 	params.HostNAT = HostNAT;
-	params.clientNat = clientNat;
+	params.ClientNat = ClientNat;
 
 	auto flags = fn->FunctionFlags;
 
@@ -76,25 +76,25 @@ void UWidget_Multiplayer_ListButton_C::GetConnectingNATIsse(ECachedNATType HostN
 
 	fn->FunctionFlags = flags;
 
-	if (ToolTip != nullptr)
-		*ToolTip = params.ToolTip;
+	if (Tooltip != nullptr)
+		*Tooltip = params.Tooltip;
 }
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.IsNATIssue
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ECachedNATType                 HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// ECachedNATType                 clientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECachedNATType*                HostNAT                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECachedNATType*                ClientNat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isIssue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Multiplayer_ListButton_C::IsNATIssue(ECachedNATType HostNAT, ECachedNATType clientNat, bool* isIssue)
+void UWidget_Multiplayer_ListButton_C::IsNATIssue(ECachedNATType* HostNAT, ECachedNATType* ClientNat, bool* isIssue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.IsNATIssue");
 
 	UWidget_Multiplayer_ListButton_C_IsNATIssue_Params params;
 	params.HostNAT = HostNAT;
-	params.clientNat = clientNat;
+	params.ClientNat = ClientNat;
 
 	auto flags = fn->FunctionFlags;
 
@@ -108,7 +108,7 @@ void UWidget_Multiplayer_ListButton_C::IsNATIssue(ECachedNATType HostNAT, ECache
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.UpdateNATWarningForHost
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::UpdateNATWarningForHost()
 {
@@ -125,11 +125,11 @@ void UWidget_Multiplayer_ListButton_C::UpdateNATWarningForHost()
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetupForManagePlayers
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGPlayerState*          PlayerState                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGPlayerState**         PlayerState                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Multiplayer_ListButton_C::SetupForManagePlayers(class AFGPlayerState* PlayerState)
+void UWidget_Multiplayer_ListButton_C::SetupForManagePlayers(class AFGPlayerState** PlayerState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetupForManagePlayers");
 
@@ -145,7 +145,7 @@ void UWidget_Multiplayer_ListButton_C::SetupForManagePlayers(class AFGPlayerStat
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetupForJoinInvite
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FPendingInvite          invite                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -167,7 +167,7 @@ void UWidget_Multiplayer_ListButton_C::SetupForJoinInvite(struct FPendingInvite*
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetupForSendInvite
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FFGOnlineFriend         _friend                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -189,30 +189,31 @@ void UWidget_Multiplayer_ListButton_C::SetupForSendInvite(struct FFGOnlineFriend
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.Internal_UpdateButton
-// ()
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           IsOnline                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   AdditionalInfo                 (BlueprintVisible, BlueprintReadOnly, Parm)
-// int                            PlayersInSession               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           privateSession                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            TimePlayed                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   ActionButtonText               (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           hideSessionInfo                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           isPlayingSatisfactory          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           hideActionButton               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           hideSecondaryActionButton      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           disableActionButton            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   actionButtonTooltip            (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           inAGame                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlueprintSessionResult session                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           IsSelectable                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsNonInteractable              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// ECachedNATType                 natType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsHost                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           careAboutNAT                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          IsOnline                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  AdditionalInfo                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// int*                           playersInSession               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          privateSession                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           TimePlayed                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  ActionButtonText               (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          hideSessionInfo                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          isPlayingSatisfactory          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          hideActionButton               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          hideSecondaryActionButton      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          disableActionButton            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  actionButtonTooltip            (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          inAGame                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlueprintSessionResult* session                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          isSelectable                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          IsNonInteractable              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECachedNATType*                natType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          IsHost                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          careAboutNAT                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ShowWarning                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Multiplayer_ListButton_C::Internal_UpdateButton(const struct FText& Title, bool IsOnline, const struct FText& AdditionalInfo, int PlayersInSession, bool privateSession, int TimePlayed, const struct FText& ActionButtonText, bool hideSessionInfo, bool isPlayingSatisfactory, bool hideActionButton, bool hideSecondaryActionButton, bool disableActionButton, const struct FText& actionButtonTooltip, bool inAGame, const struct FBlueprintSessionResult& session, bool IsSelectable, bool IsNonInteractable, ECachedNATType natType, bool IsHost, bool careAboutNAT)
+void UWidget_Multiplayer_ListButton_C::Internal_UpdateButton(struct FText* Title, bool* IsOnline, struct FText* AdditionalInfo, int* playersInSession, bool* privateSession, int* TimePlayed, struct FText* ActionButtonText, bool* hideSessionInfo, bool* isPlayingSatisfactory, bool* hideActionButton, bool* hideSecondaryActionButton, bool* disableActionButton, struct FText* actionButtonTooltip, bool* inAGame, struct FBlueprintSessionResult* session, bool* isSelectable, bool* IsNonInteractable, ECachedNATType* natType, bool* IsHost, bool* careAboutNAT, bool* ShowWarning)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.Internal_UpdateButton");
 
@@ -220,7 +221,7 @@ void UWidget_Multiplayer_ListButton_C::Internal_UpdateButton(const struct FText&
 	params.Title = Title;
 	params.IsOnline = IsOnline;
 	params.AdditionalInfo = AdditionalInfo;
-	params.PlayersInSession = PlayersInSession;
+	params.playersInSession = playersInSession;
 	params.privateSession = privateSession;
 	params.TimePlayed = TimePlayed;
 	params.ActionButtonText = ActionButtonText;
@@ -232,11 +233,12 @@ void UWidget_Multiplayer_ListButton_C::Internal_UpdateButton(const struct FText&
 	params.actionButtonTooltip = actionButtonTooltip;
 	params.inAGame = inAGame;
 	params.session = session;
-	params.IsSelectable = IsSelectable;
+	params.isSelectable = isSelectable;
 	params.IsNonInteractable = IsNonInteractable;
 	params.natType = natType;
 	params.IsHost = IsHost;
 	params.careAboutNAT = careAboutNAT;
+	params.ShowWarning = ShowWarning;
 
 	auto flags = fn->FunctionFlags;
 
@@ -247,7 +249,7 @@ void UWidget_Multiplayer_ListButton_C::Internal_UpdateButton(const struct FText&
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetupForJoinGame
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FFGOnlineFriend         _friend                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -269,11 +271,11 @@ void UWidget_Multiplayer_ListButton_C::SetupForJoinGame(struct FFGOnlineFriend* 
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetButtonColor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Multiplayer_ListButton_C::SetButtonColor(const struct FLinearColor& Color)
+void UWidget_Multiplayer_ListButton_C::SetButtonColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetButtonColor");
 
@@ -289,7 +291,7 @@ void UWidget_Multiplayer_ListButton_C::SetButtonColor(const struct FLinearColor&
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.ClearListSelection
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::ClearListSelection()
 {
@@ -306,7 +308,7 @@ void UWidget_Multiplayer_ListButton_C::ClearListSelection()
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.UpdateButton
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::UpdateButton()
 {
@@ -323,7 +325,7 @@ void UWidget_Multiplayer_ListButton_C::UpdateButton()
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -343,7 +345,7 @@ void UWidget_Multiplayer_ListButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.BndEvt__ActionButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::BndEvt__ActionButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -360,7 +362,7 @@ void UWidget_Multiplayer_ListButton_C::BndEvt__ActionButton_K2Node_ComponentBoun
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
@@ -377,7 +379,7 @@ void UWidget_Multiplayer_ListButton_C::BndEvt__mButton_K2Node_ComponentBoundEven
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -394,7 +396,7 @@ void UWidget_Multiplayer_ListButton_C::BndEvt__mButton_K2Node_ComponentBoundEven
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature()
 {
@@ -411,11 +413,11 @@ void UWidget_Multiplayer_ListButton_C::BndEvt__mButton_K2Node_ComponentBoundEven
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.ExecuteUbergraph_Widget_Multiplayer_ListButton
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Multiplayer_ListButton_C::ExecuteUbergraph_Widget_Multiplayer_ListButton(int EntryPoint)
+void UWidget_Multiplayer_ListButton_C::ExecuteUbergraph_Widget_Multiplayer_ListButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.ExecuteUbergraph_Widget_Multiplayer_ListButton");
 
@@ -431,7 +433,7 @@ void UWidget_Multiplayer_ListButton_C::ExecuteUbergraph_Widget_Multiplayer_ListB
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnSessionDeselected__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::OnSessionDeselected__DelegateSignature()
 {
@@ -448,7 +450,7 @@ void UWidget_Multiplayer_ListButton_C::OnSessionDeselected__DelegateSignature()
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnButtonClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Multiplayer_ListButton_C::OnButtonClicked__DelegateSignature()
 {
@@ -465,11 +467,11 @@ void UWidget_Multiplayer_ListButton_C::OnButtonClicked__DelegateSignature()
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnSessionSelected__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FBlueprintSessionResult session                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FBlueprintSessionResult* session                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Multiplayer_ListButton_C::OnSessionSelected__DelegateSignature(const struct FBlueprintSessionResult& session)
+void UWidget_Multiplayer_ListButton_C::OnSessionSelected__DelegateSignature(struct FBlueprintSessionResult* session)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnSessionSelected__DelegateSignature");
 
@@ -485,11 +487,11 @@ void UWidget_Multiplayer_ListButton_C::OnSessionSelected__DelegateSignature(cons
 
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnActionButtonClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Multiplayer_ListButton_C* ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Multiplayer_ListButton_C** ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Multiplayer_ListButton_C::OnActionButtonClicked__DelegateSignature(class UWidget_Multiplayer_ListButton_C* ClickedButton)
+void UWidget_Multiplayer_ListButton_C::OnActionButtonClicked__DelegateSignature(class UWidget_Multiplayer_ListButton_C** ClickedButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnActionButtonClicked__DelegateSignature");
 

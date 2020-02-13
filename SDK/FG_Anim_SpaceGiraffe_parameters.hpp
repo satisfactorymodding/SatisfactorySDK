@@ -43,7 +43,7 @@ struct UAnim_SpaceGiraffe_C_OnRadialDamageTaken_Params
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.StartRotation
 struct UAnim_SpaceGiraffe_C_StartRotation_Params
 {
-	struct FRotator                                    Target_Rotation;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator*                                   Target_Rotation;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.BlueprintUpdateAnimation
@@ -55,7 +55,7 @@ struct UAnim_SpaceGiraffe_C_BlueprintUpdateAnimation_Params
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.ExecuteUbergraph_Anim_SpaceGiraffe
 struct UAnim_SpaceGiraffe_C_ExecuteUbergraph_Anim_SpaceGiraffe_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

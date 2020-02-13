@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass SC_Walls.SC_Walls_C
 // 0x0000 (0x00C8 - 0x00C8)
-class USC_Walls_C : public UFGBuildSubCategory
+class USC_Walls_C : public UFGSchematicCategory
 {
 public:
 

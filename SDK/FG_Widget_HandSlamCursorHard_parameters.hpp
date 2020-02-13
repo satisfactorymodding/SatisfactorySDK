@@ -22,7 +22,7 @@ struct UWidget_HandSlamCursorHard_C_Construct_Params
 // Function Widget_HandSlamCursorHard.Widget_HandSlamCursorHard_C.ExecuteUbergraph_Widget_HandSlamCursorHard
 struct UWidget_HandSlamCursorHard_C_ExecuteUbergraph_Widget_HandSlamCursorHard_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

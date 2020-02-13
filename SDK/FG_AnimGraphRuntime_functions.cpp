@@ -13,20 +13,20 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                 RootPos                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 JointPos                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 EndPos                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 JointTarget                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 Effector                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                RootPos                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                JointPos                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                EndPos                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                JointTarget                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                Effector                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 OutJointPos                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 OutEndPos                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           bAllowStretching               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartStretchRatio              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxStretchScale                (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bAllowStretching               (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         StartStretchRatio              (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         MaxStretchScale                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale, struct FVector* OutJointPos, struct FVector* OutEndPos)
+void UKismetAnimationLibrary::STATIC_K2_TwoBoneIK(struct FVector* RootPos, struct FVector* JointPos, struct FVector* EndPos, struct FVector* JointTarget, struct FVector* Effector, bool* bAllowStretching, float* StartStretchRatio, float* MaxStretchScale, struct FVector* OutJointPos, struct FVector* OutEndPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK");
 
@@ -41,6 +41,7 @@ void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const 
 	params.MaxStretchScale = MaxStretchScale;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,20 +55,20 @@ void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const 
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseVectorAndRemap
-// ()
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeOutMinX                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeOutMaxX                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeOutMinY                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeOutMaxY                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeOutMinZ                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeOutMaxZ                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         X                              (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Y                              (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RangeOutMinX                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RangeOutMaxX                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RangeOutMinY                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RangeOutMaxY                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RangeOutMinZ                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RangeOutMaxZ                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UKismetAnimationLibrary::K2_MakePerlinNoiseVectorAndRemap(float X, float Y, float Z, float RangeOutMinX, float RangeOutMaxX, float RangeOutMinY, float RangeOutMaxY, float RangeOutMinZ, float RangeOutMaxZ)
+struct FVector UKismetAnimationLibrary::STATIC_K2_MakePerlinNoiseVectorAndRemap(float* X, float* Y, float* Z, float* RangeOutMinX, float* RangeOutMaxX, float* RangeOutMinY, float* RangeOutMaxY, float* RangeOutMinZ, float* RangeOutMaxZ)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseVectorAndRemap");
 
@@ -83,6 +84,7 @@ struct FVector UKismetAnimationLibrary::K2_MakePerlinNoiseVectorAndRemap(float X
 	params.RangeOutMaxZ = RangeOutMaxZ;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,14 +95,14 @@ struct FVector UKismetAnimationLibrary::K2_MakePerlinNoiseVectorAndRemap(float X
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseAndRemap
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeOutMin                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeOutMax                    (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RangeOutMin                    (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RangeOutMax                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UKismetAnimationLibrary::K2_MakePerlinNoiseAndRemap(float Value, float RangeOutMin, float RangeOutMax)
+float UKismetAnimationLibrary::STATIC_K2_MakePerlinNoiseAndRemap(float* Value, float* RangeOutMin, float* RangeOutMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseAndRemap");
 
@@ -110,6 +112,7 @@ float UKismetAnimationLibrary::K2_MakePerlinNoiseAndRemap(float Value, float Ran
 	params.RangeOutMax = RangeOutMax;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,17 +123,17 @@ float UKismetAnimationLibrary::K2_MakePerlinNoiseAndRemap(float Value, float Ran
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FTransform              CurrentTransform               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 TargetPosition                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 LookAtVector                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseUpVector                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 UpVector                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ClampConeInDegree              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform*             CurrentTransform               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector*                TargetPosition                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector*                LookAtVector                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bUseUpVector                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                UpVector                       (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         ClampConeInDegree              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree)
+struct FTransform UKismetAnimationLibrary::STATIC_K2_LookAt(struct FTransform* CurrentTransform, struct FVector* TargetPosition, struct FVector* LookAtVector, bool* bUseUpVector, struct FVector* UpVector, float* ClampConeInDegree)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt");
 
@@ -143,6 +146,7 @@ struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& Cu
 	params.ClampConeInDegree = ClampConeInDegree;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,21 +157,21 @@ struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& Cu
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_DistanceBetweenTwoSocketsAndMapRange
-// ()
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class USkeletalMeshComponent*  component                      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   SocketOrBoneNameA              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ERelativeTransformSpace> SocketSpaceA                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SocketOrBoneNameB              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ERelativeTransformSpace> SocketSpaceB                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRemapRange                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRangeMin                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRangeMax                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OutRangeMin                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OutRangeMax                    (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** component                      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName*                  SocketOrBoneNameA              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ERelativeTransformSpace>* SocketSpaceA                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SocketOrBoneNameB              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ERelativeTransformSpace>* SocketSpaceB                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bRemapRange                    (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InRangeMin                     (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InRangeMax                     (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         OutRangeMin                    (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         OutRangeMax                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UKismetAnimationLibrary::K2_DistanceBetweenTwoSocketsAndMapRange(class USkeletalMeshComponent* component, const struct FName& SocketOrBoneNameA, TEnumAsByte<ERelativeTransformSpace> SocketSpaceA, const struct FName& SocketOrBoneNameB, TEnumAsByte<ERelativeTransformSpace> SocketSpaceB, bool bRemapRange, float InRangeMin, float InRangeMax, float OutRangeMin, float OutRangeMax)
+float UKismetAnimationLibrary::STATIC_K2_DistanceBetweenTwoSocketsAndMapRange(class USkeletalMeshComponent** component, struct FName* SocketOrBoneNameA, TEnumAsByte<ERelativeTransformSpace>* SocketSpaceA, struct FName* SocketOrBoneNameB, TEnumAsByte<ERelativeTransformSpace>* SocketSpaceB, bool* bRemapRange, float* InRangeMin, float* InRangeMax, float* OutRangeMin, float* OutRangeMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_DistanceBetweenTwoSocketsAndMapRange");
 
@@ -184,6 +188,7 @@ float UKismetAnimationLibrary::K2_DistanceBetweenTwoSocketsAndMapRange(class USk
 	params.OutRangeMax = OutRangeMax;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,14 +199,14 @@ float UKismetAnimationLibrary::K2_DistanceBetweenTwoSocketsAndMapRange(class USk
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_DirectionBetweenSockets
-// ()
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class USkeletalMeshComponent*  component                      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   SocketOrBoneNameFrom           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SocketOrBoneNameTo             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** component                      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName*                  SocketOrBoneNameFrom           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  SocketOrBoneNameTo             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UKismetAnimationLibrary::K2_DirectionBetweenSockets(class USkeletalMeshComponent* component, const struct FName& SocketOrBoneNameFrom, const struct FName& SocketOrBoneNameTo)
+struct FVector UKismetAnimationLibrary::STATIC_K2_DirectionBetweenSockets(class USkeletalMeshComponent** component, struct FName* SocketOrBoneNameFrom, struct FName* SocketOrBoneNameTo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_DirectionBetweenSockets");
 
@@ -211,6 +216,7 @@ struct FVector UKismetAnimationLibrary::K2_DirectionBetweenSockets(class USkelet
 	params.SocketOrBoneNameTo = SocketOrBoneNameTo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,12 +227,12 @@ struct FVector UKismetAnimationLibrary::K2_DirectionBetweenSockets(class USkelet
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
-// ()
+// (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FName                   NotifyName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBranchingPointNotifyPayload BranchingPointNotifyPayload    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName*                  NotifyName                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBranchingPointNotifyPayload* BranchingPointNotifyPayload    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UPlayMontageCallbackProxy::OnNotifyEndReceived(const struct FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload)
+void UPlayMontageCallbackProxy::OnNotifyEndReceived(struct FName* NotifyName, struct FBranchingPointNotifyPayload* BranchingPointNotifyPayload)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived");
 
@@ -235,6 +241,7 @@ void UPlayMontageCallbackProxy::OnNotifyEndReceived(const struct FName& NotifyNa
 	params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,12 +250,12 @@ void UPlayMontageCallbackProxy::OnNotifyEndReceived(const struct FName& NotifyNa
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
-// ()
+// (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FName                   NotifyName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBranchingPointNotifyPayload BranchingPointNotifyPayload    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName*                  NotifyName                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBranchingPointNotifyPayload* BranchingPointNotifyPayload    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const struct FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload)
+void UPlayMontageCallbackProxy::OnNotifyBeginReceived(struct FName* NotifyName, struct FBranchingPointNotifyPayload* BranchingPointNotifyPayload)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived");
 
@@ -257,6 +264,7 @@ void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const struct FName& Notify
 	params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -265,12 +273,12 @@ void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const struct FName& Notify
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
-// ()
+// (Final, Native, Protected)
 // Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInterrupted                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage**           Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bInterrupted                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted)
+void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage** Montage, bool* bInterrupted)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded");
 
@@ -279,6 +287,7 @@ void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool
 	params.bInterrupted = bInterrupted;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -287,12 +296,12 @@ void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
-// ()
+// (Final, Native, Protected)
 // Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInterrupted                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage**           Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bInterrupted                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted)
+void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage** Montage, bool* bInterrupted)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut");
 
@@ -301,6 +310,7 @@ void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage
 	params.bInterrupted = bInterrupted;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -309,16 +319,16 @@ void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class USkeletalMeshComponent*  InSkeletalMeshComponent        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PlayRate                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartingPosition               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StartingSection                (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** InSkeletalMeshComponent        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAnimMontage**           MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         PlayRate                       (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         StartingPosition               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  StartingSection                (Parm, ZeroConstructor, IsPlainOldData)
 // class UPlayMontageCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, const struct FName& StartingSection)
+class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::STATIC_CreateProxyObjectForPlayMontage(class USkeletalMeshComponent** InSkeletalMeshComponent, class UAnimMontage** MontageToPlay, float* PlayRate, float* StartingPosition, struct FName* StartingSection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage");
 
@@ -330,6 +340,7 @@ class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::CreateProxyObjectFor
 	params.StartingSection = StartingSection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

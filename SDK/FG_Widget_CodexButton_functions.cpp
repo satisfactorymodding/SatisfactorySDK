@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CodexButton.Widget_CodexButton_C.GetTextHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -34,7 +34,7 @@ struct FSlateColor UWidget_CodexButton_C::GetTextHoverColor()
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.GetMessageNotificationVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ ESlateVisibility UWidget_CodexButton_C::GetMessageNotificationVisibility()
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_CodexButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature()
 {
@@ -72,7 +72,7 @@ void UWidget_CodexButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnB
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_CodexButton_C::Construct()
 {
@@ -89,7 +89,7 @@ void UWidget_CodexButton_C::Construct()
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_CodexButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 {
@@ -106,7 +106,7 @@ void UWidget_CodexButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButto
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_CodexButton_C::Destruct()
 {
@@ -123,7 +123,7 @@ void UWidget_CodexButton_C::Destruct()
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.Clicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_CodexButton_C::Clicked()
 {
@@ -140,11 +140,11 @@ void UWidget_CodexButton_C::Clicked()
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.ExecuteUbergraph_Widget_CodexButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CodexButton_C::ExecuteUbergraph_Widget_CodexButton(int EntryPoint)
+void UWidget_CodexButton_C::ExecuteUbergraph_Widget_CodexButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CodexButton.Widget_CodexButton_C.ExecuteUbergraph_Widget_CodexButton");
 
@@ -160,7 +160,7 @@ void UWidget_CodexButton_C::ExecuteUbergraph_Widget_CodexButton(int EntryPoint)
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.OnReleased__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_CodexButton_C::OnReleased__DelegateSignature()
 {
@@ -177,7 +177,7 @@ void UWidget_CodexButton_C::OnReleased__DelegateSignature()
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.OnPressed__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_CodexButton_C::OnPressed__DelegateSignature()
 {
@@ -194,11 +194,11 @@ void UWidget_CodexButton_C::OnPressed__DelegateSignature()
 
 
 // Function Widget_CodexButton.Widget_CodexButton_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_CodexButton_C*   ButtonPressed                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_CodexButton_C**  ButtonPressed                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_CodexButton_C::OnClicked__DelegateSignature(class UWidget_CodexButton_C* ButtonPressed)
+void UWidget_CodexButton_C::OnClicked__DelegateSignature(class UWidget_CodexButton_C** ButtonPressed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CodexButton.Widget_CodexButton_C.OnClicked__DelegateSignature");
 

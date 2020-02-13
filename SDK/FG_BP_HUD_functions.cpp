@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HUD.BP_HUD_C.IsInventoryOpen
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsOpen                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +35,7 @@ void ABP_HUD_C::IsInventoryOpen(bool* IsOpen)
 
 
 // Function BP_HUD.BP_HUD_C.GetBP_GameUI
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBP_GameUI_C*            BPGameUI                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -57,7 +57,7 @@ void ABP_HUD_C::GetBP_GameUI(class UBP_GameUI_C** BPGameUI)
 
 
 // Function BP_HUD.BP_HUD_C.SetupFrontEnd
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HUD_C::SetupFrontEnd()
 {
@@ -73,25 +73,8 @@ void ABP_HUD_C::SetupFrontEnd()
 }
 
 
-// Function BP_HUD.BP_HUD_C.UserConstructionScript
-// ()
-
-void ABP_HUD_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HUD.BP_HUD_C.UserConstructionScript");
-
-	ABP_HUD_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_HUD.BP_HUD_C.ToggleInventoryUI
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HUD_C::ToggleInventoryUI()
 {
@@ -108,7 +91,7 @@ void ABP_HUD_C::ToggleInventoryUI()
 
 
 // Function BP_HUD.BP_HUD_C.OpenInventoryUI
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HUD_C::OpenInventoryUI()
 {
@@ -125,7 +108,7 @@ void ABP_HUD_C::OpenInventoryUI()
 
 
 // Function BP_HUD.BP_HUD_C.OpenInteractUI
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass**                 WidgetClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject**                interactObject                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -147,7 +130,7 @@ void ABP_HUD_C::OpenInteractUI(class UClass** WidgetClass, class UObject** inter
 
 
 // Function BP_HUD.BP_HUD_C.RemovePawnHUD
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HUD_C::RemovePawnHUD()
 {
@@ -164,7 +147,7 @@ void ABP_HUD_C::RemovePawnHUD()
 
 
 // Function BP_HUD.BP_HUD_C.AddEquipmentHUD
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UClass**                 WidgetClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // EEquipmentSlot*                Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -186,7 +169,7 @@ void ABP_HUD_C::AddEquipmentHUD(class UClass** WidgetClass, EEquipmentSlot* Slot
 
 
 // Function BP_HUD.BP_HUD_C.RemoveEquipmentHUD
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // EEquipmentSlot*                Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -206,7 +189,7 @@ void ABP_HUD_C::RemoveEquipmentHUD(EEquipmentSlot* Slot)
 
 
 // Function BP_HUD.BP_HUD_C.CloseInteractUIIfOpen
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HUD_C::CloseInteractUIIfOpen()
 {
@@ -223,11 +206,11 @@ void ABP_HUD_C::CloseInteractUIIfOpen()
 
 
 // Function BP_HUD.BP_HUD_C.ExecuteUbergraph_BP_HUD
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HUD_C::ExecuteUbergraph_BP_HUD(int EntryPoint)
+void ABP_HUD_C::ExecuteUbergraph_BP_HUD(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HUD.BP_HUD_C.ExecuteUbergraph_BP_HUD");
 

@@ -17,7 +17,7 @@ namespace SDK
 // Function EyeTracker.EyeTrackerFunctionLibrary.SetEyeTrackedPlayer
 struct UEyeTrackerFunctionLibrary_SetEyeTrackedPlayer_Params
 {
-	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	class APlayerController**                          PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.IsStereoGazeDataAvailable

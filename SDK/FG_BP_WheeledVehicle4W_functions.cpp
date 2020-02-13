@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_WheeledVehicle4W.BP_WheeledVehicle4W_C.UserConstructionScript
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle4W_C::UserConstructionScript()
 {

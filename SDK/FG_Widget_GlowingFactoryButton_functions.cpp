@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.SetEnabled
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_GlowingFactoryButton_C::SetEnabled(bool Enabled)
+void UWidget_GlowingFactoryButton_C::SetEnabled(bool* Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.SetEnabled");
 
@@ -33,7 +33,7 @@ void UWidget_GlowingFactoryButton_C::SetEnabled(bool Enabled)
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.GetHoveredVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -54,7 +54,7 @@ ESlateVisibility UWidget_GlowingFactoryButton_C::GetHoveredVisibility()
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.GetIdleVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -75,7 +75,7 @@ ESlateVisibility UWidget_GlowingFactoryButton_C::GetIdleVisibility()
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.GetDisabledVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -96,7 +96,7 @@ ESlateVisibility UWidget_GlowingFactoryButton_C::GetDisabledVisibility()
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GlowingFactoryButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature()
 {
@@ -113,7 +113,7 @@ void UWidget_GlowingFactoryButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GlowingFactoryButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -130,7 +130,7 @@ void UWidget_GlowingFactoryButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GlowingFactoryButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
@@ -147,7 +147,7 @@ void UWidget_GlowingFactoryButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_GlowingFactoryButton_C::Construct()
 {
@@ -164,7 +164,7 @@ void UWidget_GlowingFactoryButton_C::Construct()
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonPressedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GlowingFactoryButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_5_OnButtonPressedEvent__DelegateSignature()
 {
@@ -181,7 +181,7 @@ void UWidget_GlowingFactoryButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -201,7 +201,7 @@ void UWidget_GlowingFactoryButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_GlowingFactoryButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 {
@@ -218,7 +218,7 @@ void UWidget_GlowingFactoryButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.SimulateRelease
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_GlowingFactoryButton_C::SimulateRelease()
 {
@@ -235,11 +235,11 @@ void UWidget_GlowingFactoryButton_C::SimulateRelease()
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.ExecuteUbergraph_Widget_GlowingFactoryButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_GlowingFactoryButton_C::ExecuteUbergraph_Widget_GlowingFactoryButton(int EntryPoint)
+void UWidget_GlowingFactoryButton_C::ExecuteUbergraph_Widget_GlowingFactoryButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.ExecuteUbergraph_Widget_GlowingFactoryButton");
 
@@ -255,7 +255,7 @@ void UWidget_GlowingFactoryButton_C::ExecuteUbergraph_Widget_GlowingFactoryButto
 
 
 // Function Widget_GlowingFactoryButton.Widget_GlowingFactoryButton_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_GlowingFactoryButton_C::OnClicked__DelegateSignature()
 {

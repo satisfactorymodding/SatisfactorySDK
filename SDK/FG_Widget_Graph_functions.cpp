@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Graph.Widget_Graph_C.OnPaint
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FPaintContext           Context                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -35,7 +35,7 @@ void UWidget_Graph_C::OnPaint(struct FPaintContext* Context)
 
 
 // Function Widget_Graph.Widget_Graph_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -57,11 +57,11 @@ void UWidget_Graph_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Graph.Widget_Graph_C.ExecuteUbergraph_Widget_Graph
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Graph_C::ExecuteUbergraph_Widget_Graph(int EntryPoint)
+void UWidget_Graph_C::ExecuteUbergraph_Widget_Graph(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Graph.Widget_Graph_C.ExecuteUbergraph_Widget_Graph");
 

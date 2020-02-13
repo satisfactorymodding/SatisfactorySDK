@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.UpdateColors
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            PrimaryColor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            SecondaryColor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           PrimaryColor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           SecondaryColor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Slot_C::UpdateColors(const struct FLinearColor& PrimaryColor, const struct FLinearColor& SecondaryColor)
+void UWidget_ColorPicker_Slot_C::UpdateColors(struct FLinearColor* PrimaryColor, struct FLinearColor* SecondaryColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.UpdateColors");
 
@@ -35,11 +35,11 @@ void UWidget_ColorPicker_Slot_C::UpdateColors(const struct FLinearColor& Primary
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.SetIsSelected
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           isSelected                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          isSelected                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Slot_C::SetIsSelected(bool isSelected)
+void UWidget_ColorPicker_Slot_C::SetIsSelected(bool* isSelected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.SetIsSelected");
 
@@ -55,7 +55,7 @@ void UWidget_ColorPicker_Slot_C::SetIsSelected(bool isSelected)
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -75,7 +75,7 @@ void UWidget_ColorPicker_Slot_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_Slot_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -92,7 +92,7 @@ void UWidget_ColorPicker_Slot_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_On
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_Slot_C::BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -109,7 +109,7 @@ void UWidget_ColorPicker_Slot_C::BndEvt__mButton_K2Node_ComponentBoundEvent_2_On
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_Slot_C::BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
@@ -126,7 +126,7 @@ void UWidget_ColorPicker_Slot_C::BndEvt__mButton_K2Node_ComponentBoundEvent_3_On
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.BndEvt__mEditButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_Slot_C::BndEvt__mEditButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -143,11 +143,11 @@ void UWidget_ColorPicker_Slot_C::BndEvt__mEditButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.ExecuteUbergraph_Widget_ColorPicker_Slot
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Slot_C::ExecuteUbergraph_Widget_ColorPicker_Slot(int EntryPoint)
+void UWidget_ColorPicker_Slot_C::ExecuteUbergraph_Widget_ColorPicker_Slot(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.ExecuteUbergraph_Widget_ColorPicker_Slot");
 
@@ -163,11 +163,11 @@ void UWidget_ColorPicker_Slot_C::ExecuteUbergraph_Widget_ColorPicker_Slot(int En
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.OnEditClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_ColorPicker_Slot_C* Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_ColorPicker_Slot_C** Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ColorPicker_Slot_C::OnEditClicked__DelegateSignature(class UWidget_ColorPicker_Slot_C* Slot)
+void UWidget_ColorPicker_Slot_C::OnEditClicked__DelegateSignature(class UWidget_ColorPicker_Slot_C** Slot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.OnEditClicked__DelegateSignature");
 
@@ -183,11 +183,11 @@ void UWidget_ColorPicker_Slot_C::OnEditClicked__DelegateSignature(class UWidget_
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.OnUnhovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_ColorPicker_Slot_C* Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_ColorPicker_Slot_C** Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ColorPicker_Slot_C::OnUnhovered__DelegateSignature(class UWidget_ColorPicker_Slot_C* Slot)
+void UWidget_ColorPicker_Slot_C::OnUnhovered__DelegateSignature(class UWidget_ColorPicker_Slot_C** Slot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.OnUnhovered__DelegateSignature");
 
@@ -203,11 +203,11 @@ void UWidget_ColorPicker_Slot_C::OnUnhovered__DelegateSignature(class UWidget_Co
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.OnHovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_ColorPicker_Slot_C* Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_ColorPicker_Slot_C** Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ColorPicker_Slot_C::OnHovered__DelegateSignature(class UWidget_ColorPicker_Slot_C* Slot)
+void UWidget_ColorPicker_Slot_C::OnHovered__DelegateSignature(class UWidget_ColorPicker_Slot_C** Slot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.OnHovered__DelegateSignature");
 
@@ -223,11 +223,11 @@ void UWidget_ColorPicker_Slot_C::OnHovered__DelegateSignature(class UWidget_Colo
 
 
 // Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_ColorPicker_Slot_C* Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_ColorPicker_Slot_C** Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ColorPicker_Slot_C::OnClicked__DelegateSignature(class UWidget_ColorPicker_Slot_C* Slot)
+void UWidget_ColorPicker_Slot_C::OnClicked__DelegateSignature(class UWidget_ColorPicker_Slot_C** Slot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Slot.Widget_ColorPicker_Slot_C.OnClicked__DelegateSignature");
 

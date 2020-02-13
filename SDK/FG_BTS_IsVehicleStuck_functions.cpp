@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_IsVehicleStuck.BTS_IsVehicleStuck_C.ReceiveTickAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -37,11 +37,11 @@ void UBTS_IsVehicleStuck_C::ReceiveTickAI(class AAIController** OwnerController,
 
 
 // Function BTS_IsVehicleStuck.BTS_IsVehicleStuck_C.ExecuteUbergraph_BTS_IsVehicleStuck
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_IsVehicleStuck_C::ExecuteUbergraph_BTS_IsVehicleStuck(int EntryPoint)
+void UBTS_IsVehicleStuck_C::ExecuteUbergraph_BTS_IsVehicleStuck(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_IsVehicleStuck.BTS_IsVehicleStuck_C.ExecuteUbergraph_BTS_IsVehicleStuck");
 

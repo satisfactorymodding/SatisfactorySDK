@@ -14,21 +14,21 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_PauseWidget.BP_PauseWidget_C.CanDoServerAdministration
+struct UBP_PauseWidget_C_CanDoServerAdministration_Params
+{
+	bool                                               canAdminister;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_PauseWidget.BP_PauseWidget_C.IsIntroSequenceDone
+struct UBP_PauseWidget_C_IsIntroSequenceDone_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_PauseWidget.BP_PauseWidget_C.UpdateMenuItemVisibility
 struct UBP_PauseWidget_C_UpdateMenuItemVisibility_Params
 {
-};
-
-// Function BP_PauseWidget.BP_PauseWidget_C.Get_bRespawn_Visibility_1
-struct UBP_PauseWidget_C_Get_bRespawn_Visibility_1_Params
-{
-	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BP_PauseWidget.BP_PauseWidget_C.Get_bSkipIntro_bIsEnabled_1
-struct UBP_PauseWidget_C_Get_bSkipIntro_bIsEnabled_1_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function BP_PauseWidget.BP_PauseWidget_C.UpdateHostNATText
@@ -91,13 +91,13 @@ struct UBP_PauseWidget_C_BndEvt__bFeedback_K2Node_ComponentBoundEvent_53_OnClick
 // Function BP_PauseWidget.BP_PauseWidget_C.Event ExitToMainMenu
 struct UBP_PauseWidget_C_Event_ExitToMainMenu_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PauseWidget.BP_PauseWidget_C.Event ExitToDesktop
 struct UBP_PauseWidget_C_Event_ExitToDesktop_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bExitMainMenu_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
@@ -128,7 +128,7 @@ struct UBP_PauseWidget_C_Destruct_Params
 // Function BP_PauseWidget.BP_PauseWidget_C.ExecuteUbergraph_BP_PauseWidget
 struct UBP_PauseWidget_C_ExecuteUbergraph_BP_PauseWidget_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_PauseWidget.BP_PauseWidget_C.OnBackClicked__DelegateSignature

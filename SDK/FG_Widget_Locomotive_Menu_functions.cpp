@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.UpdatePowerStatus
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_Menu_C::UpdatePowerStatus()
 {
@@ -30,11 +30,11 @@ void UWidget_Locomotive_Menu_C::UpdatePowerStatus()
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.GetLocomotiveSpeed
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGLocomotive*           Locomotive                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGLocomotive**          Locomotive                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Locomotive_Menu_C::GetLocomotiveSpeed(class AFGLocomotive* Locomotive)
+void UWidget_Locomotive_Menu_C::GetLocomotiveSpeed(class AFGLocomotive** Locomotive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.GetLocomotiveSpeed");
 
@@ -50,11 +50,11 @@ void UWidget_Locomotive_Menu_C::GetLocomotiveSpeed(class AFGLocomotive* Locomoti
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.GetPowerConsumption
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGLocomotive*           Locomotive                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGLocomotive**          Locomotive                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Locomotive_Menu_C::GetPowerConsumption(class AFGLocomotive* Locomotive)
+void UWidget_Locomotive_Menu_C::GetPowerConsumption(class AFGLocomotive** Locomotive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.GetPowerConsumption");
 
@@ -70,7 +70,7 @@ void UWidget_Locomotive_Menu_C::GetPowerConsumption(class AFGLocomotive* Locomot
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Locomotive_Menu_C::Construct()
 {
@@ -87,7 +87,7 @@ void UWidget_Locomotive_Menu_C::Construct()
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_Locomotive_Menu_C::Init()
 {
@@ -104,7 +104,7 @@ void UWidget_Locomotive_Menu_C::Init()
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Locomotive_Menu_C::Destruct()
 {
@@ -121,7 +121,7 @@ void UWidget_Locomotive_Menu_C::Destruct()
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.UpdateLocomotiveStats
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_Menu_C::UpdateLocomotiveStats()
 {
@@ -138,7 +138,7 @@ void UWidget_Locomotive_Menu_C::UpdateLocomotiveStats()
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnEscapePressed
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_Menu_C::OnEscapePressed()
 {
@@ -155,11 +155,11 @@ void UWidget_Locomotive_Menu_C::OnEscapePressed()
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnNameChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   mName                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  mName                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Locomotive_Menu_C::OnNameChanged(const struct FText& mName)
+void UWidget_Locomotive_Menu_C::OnNameChanged(struct FText* mName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnNameChanged");
 
@@ -174,12 +174,69 @@ void UWidget_Locomotive_Menu_C::OnNameChanged(const struct FText& mName)
 }
 
 
-// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.ExecuteUbergraph_Widget_Locomotive_Menu
-// ()
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          SelfDrivingEnabled             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Locomotive_Menu_C::ExecuteUbergraph_Widget_Locomotive_Menu(int EntryPoint)
+void UWidget_Locomotive_Menu_C::BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature(bool* SelfDrivingEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature");
+
+	UWidget_Locomotive_Menu_C_BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_1_OnAutopilotChanged__DelegateSignature_Params params;
+	params.SelfDrivingEnabled = SelfDrivingEnabled;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_Locomotive_Menu_C::BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature");
+
+	UWidget_Locomotive_Menu_C_BndEvt__Widget_TrainStats_K2Node_ComponentBoundEvent_0_OnDockClicked__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnDockingStateChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETrainDockingState*            State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Locomotive_Menu_C::OnDockingStateChanged(ETrainDockingState* State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnDockingStateChanged");
+
+	UWidget_Locomotive_Menu_C_OnDockingStateChanged_Params params;
+	params.State = State;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.ExecuteUbergraph_Widget_Locomotive_Menu
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Locomotive_Menu_C::ExecuteUbergraph_Widget_Locomotive_Menu(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.ExecuteUbergraph_Widget_Locomotive_Menu");
 
@@ -195,7 +252,7 @@ void UWidget_Locomotive_Menu_C::ExecuteUbergraph_Widget_Locomotive_Menu(int Entr
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnTrainNameChanged__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_Menu_C::OnTrainNameChanged__DelegateSignature()
 {
@@ -212,7 +269,7 @@ void UWidget_Locomotive_Menu_C::OnTrainNameChanged__DelegateSignature()
 
 
 // Function Widget_Locomotive_Menu.Widget_Locomotive_Menu_C.OnClose__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Locomotive_Menu_C::OnClose__DelegateSignature()
 {

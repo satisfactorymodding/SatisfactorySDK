@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.GetResetButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,19 +34,19 @@ ESlateVisibility UWidget_ColorPicker_C::GetResetButtonVisibility()
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.GetOneDimensionalIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            ColorIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            shadeIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ColorIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ShadeIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_C::GetOneDimensionalIndex(int ColorIndex, int shadeIndex, int* Index)
+void UWidget_ColorPicker_C::GetOneDimensionalIndex(int* ColorIndex, int* ShadeIndex, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker.Widget_ColorPicker_C.GetOneDimensionalIndex");
 
 	UWidget_ColorPicker_C_GetOneDimensionalIndex_Params params;
 	params.ColorIndex = ColorIndex;
-	params.shadeIndex = shadeIndex;
+	params.ShadeIndex = ShadeIndex;
 
 	auto flags = fn->FunctionFlags;
 
@@ -60,19 +60,19 @@ void UWidget_ColorPicker_C::GetOneDimensionalIndex(int ColorIndex, int shadeInde
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.GetSavedColorFromIndexes
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            ColorIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            shadeIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ColorIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ShadeIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FSlateColor             SavedColor                     (Parm, OutParm)
 
-void UWidget_ColorPicker_C::GetSavedColorFromIndexes(int ColorIndex, int shadeIndex, struct FSlateColor* SavedColor)
+void UWidget_ColorPicker_C::GetSavedColorFromIndexes(int* ColorIndex, int* ShadeIndex, struct FSlateColor* SavedColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker.Widget_ColorPicker_C.GetSavedColorFromIndexes");
 
 	UWidget_ColorPicker_C_GetSavedColorFromIndexes_Params params;
 	params.ColorIndex = ColorIndex;
-	params.shadeIndex = shadeIndex;
+	params.ShadeIndex = ShadeIndex;
 
 	auto flags = fn->FunctionFlags;
 
@@ -86,13 +86,13 @@ void UWidget_ColorPicker_C::GetSavedColorFromIndexes(int ColorIndex, int shadeIn
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.CalculateSaturationAndValueFromIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Saturation                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_C::CalculateSaturationAndValueFromIndex(int Index, float* Saturation, float* Value)
+void UWidget_ColorPicker_C::CalculateSaturationAndValueFromIndex(int* Index, float* Saturation, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker.Widget_ColorPicker_C.CalculateSaturationAndValueFromIndex");
 
@@ -113,12 +113,12 @@ void UWidget_ColorPicker_C::CalculateSaturationAndValueFromIndex(int Index, floa
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.CalculateHueFromIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Hue                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_C::CalculateHueFromIndex(int Index, float* Hue)
+void UWidget_ColorPicker_C::CalculateHueFromIndex(int* Index, float* Hue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker.Widget_ColorPicker_C.CalculateHueFromIndex");
 
@@ -137,7 +137,7 @@ void UWidget_ColorPicker_C::CalculateHueFromIndex(int Index, float* Hue)
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.FirstTimeFillColors
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorPicker_C::FirstTimeFillColors()
 {
@@ -154,7 +154,7 @@ void UWidget_ColorPicker_C::FirstTimeFillColors()
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.GetFinalColor
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -175,7 +175,7 @@ struct FLinearColor UWidget_ColorPicker_C::GetFinalColor()
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.CloseColorPicker
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorPicker_C::CloseColorPicker()
 {
@@ -192,7 +192,7 @@ void UWidget_ColorPicker_C::CloseColorPicker()
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ColorPicker_C::Construct()
 {
@@ -209,7 +209,7 @@ void UWidget_ColorPicker_C::Construct()
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_ColorPicker_C::Init()
 {
@@ -226,7 +226,7 @@ void UWidget_ColorPicker_C::Init()
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.ExitColorPicker
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorPicker_C::ExitColorPicker()
 {
@@ -243,7 +243,7 @@ void UWidget_ColorPicker_C::ExitColorPicker()
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.BndEvt__mCancelButton_K2Node_ComponentBoundEvent_36_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_C::BndEvt__mCancelButton_K2Node_ComponentBoundEvent_36_OnClicked__DelegateSignature()
 {
@@ -260,7 +260,7 @@ void UWidget_ColorPicker_C::BndEvt__mCancelButton_K2Node_ComponentBoundEvent_36_
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -282,7 +282,7 @@ void UWidget_ColorPicker_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTim
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.BndEvt__mResetButton_K2Node_ComponentBoundEvent_31_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_C::BndEvt__mResetButton_K2Node_ComponentBoundEvent_31_OnClicked__DelegateSignature()
 {
@@ -299,7 +299,7 @@ void UWidget_ColorPicker_C::BndEvt__mResetButton_K2Node_ComponentBoundEvent_31_O
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.BndEvt__mAcceptButton_K2Node_ComponentBoundEvent_331_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_C::BndEvt__mAcceptButton_K2Node_ComponentBoundEvent_331_OnClicked__DelegateSignature()
 {
@@ -316,7 +316,7 @@ void UWidget_ColorPicker_C::BndEvt__mAcceptButton_K2Node_ComponentBoundEvent_331
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_C::BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature()
 {
@@ -333,7 +333,7 @@ void UWidget_ColorPicker_C::BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_O
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.BndEvt__mCancel_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_C::BndEvt__mCancel_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -350,7 +350,7 @@ void UWidget_ColorPicker_C::BndEvt__mCancel_K2Node_ComponentBoundEvent_1_OnClick
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.BndEvt__mReset_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_C::BndEvt__mReset_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature()
 {
@@ -367,7 +367,7 @@ void UWidget_ColorPicker_C::BndEvt__mReset_K2Node_ComponentBoundEvent_2_OnClicke
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.BndEvt__mAccept_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_C::BndEvt__mAccept_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature()
 {
@@ -384,11 +384,11 @@ void UWidget_ColorPicker_C::BndEvt__mAccept_K2Node_ComponentBoundEvent_3_OnClick
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.ExecuteUbergraph_Widget_ColorPicker
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_C::ExecuteUbergraph_Widget_ColorPicker(int EntryPoint)
+void UWidget_ColorPicker_C::ExecuteUbergraph_Widget_ColorPicker(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker.Widget_ColorPicker_C.ExecuteUbergraph_Widget_ColorPicker");
 
@@ -404,11 +404,11 @@ void UWidget_ColorPicker_C::ExecuteUbergraph_Widget_ColorPicker(int EntryPoint)
 
 
 // Function Widget_ColorPicker.Widget_ColorPicker_C.mOnColorPicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_C::mOnColorPicked__DelegateSignature(const struct FLinearColor& Color)
+void UWidget_ColorPicker_C::mOnColorPicked__DelegateSignature(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker.Widget_ColorPicker_C.mOnColorPicked__DelegateSignature");
 

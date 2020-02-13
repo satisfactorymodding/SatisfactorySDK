@@ -42,7 +42,7 @@ struct Amaster_river_spline_C_ReceiveBeginPlay_Params
 // Function master_river_spline.master_river_spline_C.ExecuteUbergraph_master_river_spline
 struct Amaster_river_spline_C_ExecuteUbergraph_master_river_spline_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -12,29 +12,12 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.UserConstructionScript
-// ()
-
-void ABuild_PowerPoleMk1_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.UserConstructionScript");
-
-	ABuild_PowerPoleMk1_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.OnHasPowerChanged_2
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           newHasPower                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          newHasPower                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_PowerPoleMk1_C::OnHasPowerChanged_2(bool newHasPower)
+void ABuild_PowerPoleMk1_C::OnHasPowerChanged_2(bool* newHasPower)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.OnHasPowerChanged_2");
 
@@ -50,7 +33,7 @@ void ABuild_PowerPoleMk1_C::OnHasPowerChanged_2(bool newHasPower)
 
 
 // Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.PlayConstructSound
-// ()
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
 void ABuild_PowerPoleMk1_C::PlayConstructSound()
 {
@@ -67,7 +50,7 @@ void ABuild_PowerPoleMk1_C::PlayConstructSound()
 
 
 // Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_PowerPoleMk1_C::ReceiveBeginPlay()
 {
@@ -83,12 +66,29 @@ void ABuild_PowerPoleMk1_C::ReceiveBeginPlay()
 }
 
 
-// Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.ExecuteUbergraph_Build_PowerPoleMk1
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.OnShowConnectionFeedback
+// (Event, Public, BlueprintEvent)
 
-void ABuild_PowerPoleMk1_C::ExecuteUbergraph_Build_PowerPoleMk1(int EntryPoint)
+void ABuild_PowerPoleMk1_C::OnShowConnectionFeedback()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.OnShowConnectionFeedback");
+
+	ABuild_PowerPoleMk1_C_OnShowConnectionFeedback_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.ExecuteUbergraph_Build_PowerPoleMk1
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuild_PowerPoleMk1_C::ExecuteUbergraph_Build_PowerPoleMk1(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_PowerPoleMk1.Build_PowerPoleMk1_C.ExecuteUbergraph_Build_PowerPoleMk1");
 

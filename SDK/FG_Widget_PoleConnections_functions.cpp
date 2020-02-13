@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.SetStyle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           UseBackground                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          UseBackground                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PoleConnections_C::SetStyle(bool UseBackground)
+void UWidget_PoleConnections_C::SetStyle(bool* UseBackground)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PoleConnections.Widget_PoleConnections_C.SetStyle");
 
@@ -33,7 +33,7 @@ void UWidget_PoleConnections_C::SetStyle(bool UseBackground)
 
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.GetColorAndOpacity_1
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -54,7 +54,7 @@ struct FSlateColor UWidget_PoleConnections_C::GetColorAndOpacity_1()
 
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.GetText_1
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -75,7 +75,7 @@ struct FText UWidget_PoleConnections_C::GetText_1()
 
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PoleConnections_C::Construct()
 {
@@ -92,7 +92,7 @@ void UWidget_PoleConnections_C::Construct()
 
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.UpdateConnections
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PoleConnections_C::UpdateConnections()
 {
@@ -109,7 +109,7 @@ void UWidget_PoleConnections_C::UpdateConnections()
 
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PoleConnections_C::Destruct()
 {
@@ -126,7 +126,7 @@ void UWidget_PoleConnections_C::Destruct()
 
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -146,11 +146,11 @@ void UWidget_PoleConnections_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.ExecuteUbergraph_Widget_PoleConnections
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PoleConnections_C::ExecuteUbergraph_Widget_PoleConnections(int EntryPoint)
+void UWidget_PoleConnections_C::ExecuteUbergraph_Widget_PoleConnections(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PoleConnections.Widget_PoleConnections_C.ExecuteUbergraph_Widget_PoleConnections");
 

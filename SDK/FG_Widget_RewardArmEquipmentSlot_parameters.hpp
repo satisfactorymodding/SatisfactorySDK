@@ -20,17 +20,6 @@ struct UWidget_RewardArmEquipmentSlot_C_IsValidRewardItem_Params
 	bool                                               IsValid;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.UpdateVisibility
-struct UWidget_RewardArmEquipmentSlot_C_UpdateVisibility_Params
-{
-};
-
-// Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.PreConstruct
-struct UWidget_RewardArmEquipmentSlot_C_PreConstruct_Params
-{
-	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.Construct
 struct UWidget_RewardArmEquipmentSlot_C_Construct_Params
 {
@@ -39,7 +28,7 @@ struct UWidget_RewardArmEquipmentSlot_C_Construct_Params
 // Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.ExecuteUbergraph_Widget_RewardArmEquipmentSlot
 struct UWidget_RewardArmEquipmentSlot_C_ExecuteUbergraph_Widget_RewardArmEquipmentSlot_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

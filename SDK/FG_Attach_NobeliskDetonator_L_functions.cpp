@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_NobeliskDetonator_L.Attach_NobeliskDetonator_L_C.UserConstructionScript
-// ()
-
-void AAttach_NobeliskDetonator_L_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_NobeliskDetonator_L.Attach_NobeliskDetonator_L_C.UserConstructionScript");
-
-	AAttach_NobeliskDetonator_L_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_NobeliskDetonator_L.Attach_NobeliskDetonator_L_C.ClientPlayReloadEffect
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_NobeliskDetonator_L_C::ClientPlayReloadEffect()
 {
@@ -47,7 +30,7 @@ void AAttach_NobeliskDetonator_L_C::ClientPlayReloadEffect()
 
 
 // Function Attach_NobeliskDetonator_L.Attach_NobeliskDetonator_L_C.PlayFireEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector*                flashLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,7 +50,7 @@ void AAttach_NobeliskDetonator_L_C::PlayFireEffect(struct FVector* flashLocation
 
 
 // Function Attach_NobeliskDetonator_L.Attach_NobeliskDetonator_L_C.PlayAttachEffects3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_NobeliskDetonator_L_C::PlayAttachEffects3P()
 {
@@ -84,11 +67,11 @@ void AAttach_NobeliskDetonator_L_C::PlayAttachEffects3P()
 
 
 // Function Attach_NobeliskDetonator_L.Attach_NobeliskDetonator_L_C.ExecuteUbergraph_Attach_NobeliskDetonator_L
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_NobeliskDetonator_L_C::ExecuteUbergraph_Attach_NobeliskDetonator_L(int EntryPoint)
+void AAttach_NobeliskDetonator_L_C::ExecuteUbergraph_Attach_NobeliskDetonator_L(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_NobeliskDetonator_L.Attach_NobeliskDetonator_L_C.ExecuteUbergraph_Attach_NobeliskDetonator_L");
 

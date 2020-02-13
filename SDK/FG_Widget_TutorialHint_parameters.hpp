@@ -22,7 +22,7 @@ struct UWidget_TutorialHint_C_Construct_Params
 // Function Widget_TutorialHint.Widget_TutorialHint_C.ExecuteUbergraph_Widget_TutorialHint
 struct UWidget_TutorialHint_C_ExecuteUbergraph_Widget_TutorialHint_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

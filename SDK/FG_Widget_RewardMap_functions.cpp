@@ -12,8 +12,50 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_RewardMap.Widget_RewardMap_C.GetName
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UWidget_RewardMap_C::GetName()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardMap.Widget_RewardMap_C.GetName");
+
+	UWidget_RewardMap_C_GetName_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_RewardMap.Widget_RewardMap_C.GetIcon
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateBrush UWidget_RewardMap_C::GetIcon()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardMap.Widget_RewardMap_C.GetIcon");
+
+	UWidget_RewardMap_C_GetIcon_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Widget_RewardMap.Widget_RewardMap_C.IsValidRewardItem
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -34,45 +76,8 @@ void UWidget_RewardMap_C::IsValidRewardItem(bool* IsValid)
 }
 
 
-// Function Widget_RewardMap.Widget_RewardMap_C.UpdateVisibility
-// ()
-
-void UWidget_RewardMap_C::UpdateVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardMap.Widget_RewardMap_C.UpdateVisibility");
-
-	UWidget_RewardMap_C_UpdateVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_RewardMap.Widget_RewardMap_C.PreConstruct
-// ()
-// Parameters:
-// bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_RewardMap_C::PreConstruct(bool* IsDesignTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardMap.Widget_RewardMap_C.PreConstruct");
-
-	UWidget_RewardMap_C_PreConstruct_Params params;
-	params.IsDesignTime = IsDesignTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_RewardMap.Widget_RewardMap_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RewardMap_C::Construct()
 {
@@ -88,29 +93,12 @@ void UWidget_RewardMap_C::Construct()
 }
 
 
-// Function Widget_RewardMap.Widget_RewardMap_C.OnRewardClicked
-// ()
-
-void UWidget_RewardMap_C::OnRewardClicked()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardMap.Widget_RewardMap_C.OnRewardClicked");
-
-	UWidget_RewardMap_C_OnRewardClicked_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_RewardMap.Widget_RewardMap_C.ExecuteUbergraph_Widget_RewardMap
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RewardMap_C::ExecuteUbergraph_Widget_RewardMap(int EntryPoint)
+void UWidget_RewardMap_C::ExecuteUbergraph_Widget_RewardMap(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardMap.Widget_RewardMap_C.ExecuteUbergraph_Widget_RewardMap");
 

@@ -12,8 +12,25 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.UpdateVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SchematicRewardItem_C::UpdateVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.UpdateVisibility");
+
+	UWidget_SchematicRewardItem_C_UpdateVisibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.SetCategoryIconColor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SchematicRewardItem_C::SetCategoryIconColor()
 {
@@ -30,7 +47,7 @@ void UWidget_SchematicRewardItem_C::SetCategoryIconColor()
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetLockedIcon
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -51,11 +68,11 @@ struct FLinearColor UWidget_SchematicRewardItem_C::GetLockedIcon()
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.SetCategoryTexture
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SchematicRewardItem_C::SetCategoryTexture(class UClass* ItemClass)
+void UWidget_SchematicRewardItem_C::SetCategoryTexture(class UClass** ItemClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.SetCategoryTexture");
 
@@ -71,7 +88,7 @@ void UWidget_SchematicRewardItem_C::SetCategoryTexture(class UClass* ItemClass)
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetCategoryIcon
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -92,7 +109,7 @@ struct FSlateBrush UWidget_SchematicRewardItem_C::GetCategoryIcon()
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetLinesColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -113,7 +130,7 @@ struct FLinearColor UWidget_SchematicRewardItem_C::GetLinesColor()
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetButtonColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -134,7 +151,7 @@ struct FLinearColor UWidget_SchematicRewardItem_C::GetButtonColor()
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetCategoryIconBackgroundColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -155,7 +172,7 @@ struct FLinearColor UWidget_SchematicRewardItem_C::GetCategoryIconBackgroundColo
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -176,7 +193,7 @@ struct FSlateColor UWidget_SchematicRewardItem_C::GetHoverColor()
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.IsValidRewardItem
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -198,7 +215,7 @@ void UWidget_SchematicRewardItem_C::IsValidRewardItem(bool* IsValid)
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.OnRewardClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SchematicRewardItem_C::OnRewardClicked()
 {
@@ -215,7 +232,7 @@ void UWidget_SchematicRewardItem_C::OnRewardClicked()
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetName
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -236,7 +253,7 @@ struct FText UWidget_SchematicRewardItem_C::GetName()
 
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetIcon
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -256,59 +273,8 @@ struct FSlateBrush UWidget_SchematicRewardItem_C::GetIcon()
 }
 
 
-// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
-
-void UWidget_SchematicRewardItem_C::BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
-
-	UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
-
-void UWidget_SchematicRewardItem_C::BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_19_OnButtonHoverEvent__DelegateSignature
-// ()
-
-void UWidget_SchematicRewardItem_C::BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_19_OnButtonHoverEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_19_OnButtonHoverEvent__DelegateSignature");
-
-	UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_19_OnButtonHoverEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SchematicRewardItem_C::Construct()
 {
@@ -324,12 +290,46 @@ void UWidget_SchematicRewardItem_C::Construct()
 }
 
 
-// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.ExecuteUbergraph_Widget_SchematicRewardItem
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_SchematicRewardItem_C::ExecuteUbergraph_Widget_SchematicRewardItem(int EntryPoint)
+void UWidget_SchematicRewardItem_C::BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_19_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_SchematicRewardItem_C::BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_19_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_19_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_19_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.ExecuteUbergraph_Widget_SchematicRewardItem
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_SchematicRewardItem_C::ExecuteUbergraph_Widget_SchematicRewardItem(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.ExecuteUbergraph_Widget_SchematicRewardItem");
 

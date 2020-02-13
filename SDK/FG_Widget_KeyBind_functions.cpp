@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_KeyBind.Widget_KeyBind_C.RefreshKeyBindings
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_KeyBind_C::RefreshKeyBindings()
 {
@@ -30,7 +30,7 @@ void UWidget_KeyBind_C::RefreshKeyBindings()
 
 
 // Function Widget_KeyBind.Widget_KeyBind_C.Init
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_KeyBind_C::Init()
 {
@@ -47,7 +47,7 @@ void UWidget_KeyBind_C::Init()
 
 
 // Function Widget_KeyBind.Widget_KeyBind_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_KeyBind_C::Construct()
 {
@@ -64,7 +64,7 @@ void UWidget_KeyBind_C::Construct()
 
 
 // Function Widget_KeyBind.Widget_KeyBind_C.DefaultBindings
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_KeyBind_C::DefaultBindings()
 {
@@ -81,7 +81,7 @@ void UWidget_KeyBind_C::DefaultBindings()
 
 
 // Function Widget_KeyBind.Widget_KeyBind_C.BndEvt__mResetButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_KeyBind_C::BndEvt__mResetButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -98,11 +98,11 @@ void UWidget_KeyBind_C::BndEvt__mResetButton_K2Node_ComponentBoundEvent_0_OnClic
 
 
 // Function Widget_KeyBind.Widget_KeyBind_C.ExecuteUbergraph_Widget_KeyBind
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_KeyBind_C::ExecuteUbergraph_Widget_KeyBind(int EntryPoint)
+void UWidget_KeyBind_C::ExecuteUbergraph_Widget_KeyBind(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeyBind.Widget_KeyBind_C.ExecuteUbergraph_Widget_KeyBind");
 

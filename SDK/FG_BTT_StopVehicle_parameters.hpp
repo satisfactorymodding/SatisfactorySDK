@@ -32,7 +32,7 @@ struct UBTT_StopVehicle_C_ReceiveTickAI_Params
 // Function BTT_StopVehicle.BTT_StopVehicle_C.ExecuteUbergraph_BTT_StopVehicle
 struct UBTT_StopVehicle_C_ExecuteUbergraph_BTT_StopVehicle_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

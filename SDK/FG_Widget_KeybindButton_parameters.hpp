@@ -27,7 +27,7 @@ struct UWidget_KeybindButton_C_RebindKey_Params
 // Function Widget_KeybindButton.Widget_KeybindButton_C.KeyBindingOverrideConfirmed
 struct UWidget_KeybindButton_C_KeyBindingOverrideConfirmed_Params
 {
-	bool                                               Confirmed;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirmed;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.GetHoverColor
@@ -39,8 +39,8 @@ struct UWidget_KeybindButton_C_GetHoverColor_Params
 // Function Widget_KeybindButton.Widget_KeybindButton_C.HandleInput
 struct UWidget_KeybindButton_C_HandleInput_Params
 {
-	struct FInputEvent                                 InputEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FKey                                        keyPressed;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FInputEvent*                                InputEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       keyPressed;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_KeybindButton.Widget_KeybindButton_C.Construct
@@ -71,7 +71,7 @@ struct UWidget_KeybindButton_C_ShowKeyBindWidget_Params
 // Function Widget_KeybindButton.Widget_KeybindButton_C.ExecuteUbergraph_Widget_KeybindButton
 struct UWidget_KeybindButton_C_ExecuteUbergraph_Widget_KeybindButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

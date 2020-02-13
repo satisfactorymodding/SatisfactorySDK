@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HueSlider.Widget_HueSlider_C.GetSliderValue
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ float UWidget_HueSlider_C::GetSliderValue()
 
 
 // Function Widget_HueSlider.Widget_HueSlider_C.GetInputText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +55,7 @@ struct FText UWidget_HueSlider_C::GetInputText()
 
 
 // Function Widget_HueSlider.Widget_HueSlider_C.OnPaint
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FPaintContext           Context                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -77,11 +77,11 @@ void UWidget_HueSlider_C::OnPaint(struct FPaintContext* Context)
 
 
 // Function Widget_HueSlider.Widget_HueSlider_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloatValueChangedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HueSlider_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWidget_HueSlider_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloatValueChangedEvent__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HueSlider.Widget_HueSlider_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloatValueChangedEvent__DelegateSignature");
 
@@ -97,12 +97,12 @@ void UWidget_HueSlider_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloa
 
 
 // Function Widget_HueSlider.Widget_HueSlider_C.BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEditableTextBoxCommittedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HueSlider_C::BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_HueSlider_C::BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEditableTextBoxCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HueSlider.Widget_HueSlider_C.BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
@@ -119,11 +119,11 @@ void UWidget_HueSlider_C::BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEd
 
 
 // Function Widget_HueSlider.Widget_HueSlider_C.ExecuteUbergraph_Widget_HueSlider
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HueSlider_C::ExecuteUbergraph_Widget_HueSlider(int EntryPoint)
+void UWidget_HueSlider_C::ExecuteUbergraph_Widget_HueSlider(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HueSlider.Widget_HueSlider_C.ExecuteUbergraph_Widget_HueSlider");
 

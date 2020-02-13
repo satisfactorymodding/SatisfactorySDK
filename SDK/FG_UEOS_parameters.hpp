@@ -27,9 +27,9 @@ struct UEOSAuthentication_Logout_Params
 // Function UEOS.EOSAuthentication.Login
 struct UEOSAuthentication_Login_Params
 {
-	ELoginMode                                         LoginMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	class FString                                      UserId;                                                   // (Parm, ZeroConstructor)
-	class FString                                      UserToken;                                                // (Parm, ZeroConstructor)
+	ELoginMode*                                        LoginMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString*                                     UserId;                                                   // (Parm, ZeroConstructor)
+	class FString*                                     UserToken;                                                // (Parm, ZeroConstructor)
 };
 
 // Function UEOS.EOSAuthentication.GetAuthorised
@@ -53,16 +53,16 @@ struct UEOSMetrics_InitMetric_Params
 // Function UEOS.EOSMetrics.EndPlayerSession
 struct UEOSMetrics_EndPlayerSession_Params
 {
-	class FString                                      DisplayName;                                              // (Parm, ZeroConstructor)
+	class FString*                                     DisplayName;                                              // (Parm, ZeroConstructor)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function UEOS.EOSMetrics.BeginPlayerSession
 struct UEOSMetrics_BeginPlayerSession_Params
 {
-	class FString                                      DisplayName;                                              // (Parm, ZeroConstructor)
-	ESupportedAccountType                              TargetAccountType;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	EInputControllerType                               ControllerType;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString*                                     DisplayName;                                              // (Parm, ZeroConstructor)
+	ESupportedAccountType*                             TargetAccountType;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	EInputControllerType*                              ControllerType;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

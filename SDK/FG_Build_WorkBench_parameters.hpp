@@ -37,11 +37,6 @@ struct ABuild_WorkBench_C_UpdateUseState_Params
 	struct FUseState                                   out_useState;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
-// Function Build_WorkBench.Build_WorkBench_C.UserConstructionScript
-struct ABuild_WorkBench_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

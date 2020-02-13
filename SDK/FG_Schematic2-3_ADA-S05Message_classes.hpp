@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Schematic2-3_ADA-S05Message.Schematic2-3_ADA-S05Message_C
-// 0x0000 (0x02F0 - 0x02F0)
+// 0x0000 (0x0328 - 0x0328)
 class USchematic2_3_ADA_S05Message_C : public UWidget_AudioMessage_C
 {
 public:

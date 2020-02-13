@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.RemoveProductionEffects
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABuild_FoundryMk1_C::RemoveProductionEffects()
 {
@@ -30,7 +30,7 @@ void ABuild_FoundryMk1_C::RemoveProductionEffects()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.SetupProductionEffects
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABuild_FoundryMk1_C::SetupProductionEffects()
 {
@@ -47,7 +47,7 @@ void ABuild_FoundryMk1_C::SetupProductionEffects()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.RemoveIdleEffects
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABuild_FoundryMk1_C::RemoveIdleEffects()
 {
@@ -64,7 +64,7 @@ void ABuild_FoundryMk1_C::RemoveIdleEffects()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.SetupIdleEffects
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABuild_FoundryMk1_C::SetupIdleEffects()
 {
@@ -80,31 +80,17 @@ void ABuild_FoundryMk1_C::SetupIdleEffects()
 }
 
 
-// Function Build_FoundryMk1.Build_FoundryMk1_C.UserConstructionScript
-// ()
-
-void ABuild_FoundryMk1_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_FoundryMk1.Build_FoundryMk1_C.UserConstructionScript");
-
-	ABuild_FoundryMk1_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_FoundryMk1.Build_FoundryMk1_C.StartProductionLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_FoundryMk1_C::StartProductionLoopEffects()
+void ABuild_FoundryMk1_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_FoundryMk1.Build_FoundryMk1_C.StartProductionLoopEffects");
 
 	ABuild_FoundryMk1_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -115,13 +101,16 @@ void ABuild_FoundryMk1_C::StartProductionLoopEffects()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.StopProductionLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_FoundryMk1_C::StopProductionLoopEffects()
+void ABuild_FoundryMk1_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_FoundryMk1.Build_FoundryMk1_C.StopProductionLoopEffects");
 
 	ABuild_FoundryMk1_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -132,13 +121,16 @@ void ABuild_FoundryMk1_C::StopProductionLoopEffects()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.StartIdlingLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didGainPower                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_FoundryMk1_C::StartIdlingLoopEffects()
+void ABuild_FoundryMk1_C::StartIdlingLoopEffects(bool* didGainPower)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_FoundryMk1.Build_FoundryMk1_C.StartIdlingLoopEffects");
 
 	ABuild_FoundryMk1_C_StartIdlingLoopEffects_Params params;
+	params.didGainPower = didGainPower;
 
 	auto flags = fn->FunctionFlags;
 
@@ -149,13 +141,16 @@ void ABuild_FoundryMk1_C::StartIdlingLoopEffects()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.StopIdlingLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didLosePower                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_FoundryMk1_C::StopIdlingLoopEffects()
+void ABuild_FoundryMk1_C::StopIdlingLoopEffects(bool* didLosePower)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_FoundryMk1.Build_FoundryMk1_C.StopIdlingLoopEffects");
 
 	ABuild_FoundryMk1_C_StopIdlingLoopEffects_Params params;
+	params.didLosePower = didLosePower;
 
 	auto flags = fn->FunctionFlags;
 
@@ -166,7 +161,7 @@ void ABuild_FoundryMk1_C::StopIdlingLoopEffects()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_FoundryMk1_C::LostSignificance()
 {
@@ -183,7 +178,7 @@ void ABuild_FoundryMk1_C::LostSignificance()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_FoundryMk1_C::GainedSignificance()
 {
@@ -200,11 +195,11 @@ void ABuild_FoundryMk1_C::GainedSignificance()
 
 
 // Function Build_FoundryMk1.Build_FoundryMk1_C.ExecuteUbergraph_Build_FoundryMk1
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_FoundryMk1_C::ExecuteUbergraph_Build_FoundryMk1(int EntryPoint)
+void ABuild_FoundryMk1_C::ExecuteUbergraph_Build_FoundryMk1(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_FoundryMk1.Build_FoundryMk1_C.ExecuteUbergraph_Build_FoundryMk1");
 

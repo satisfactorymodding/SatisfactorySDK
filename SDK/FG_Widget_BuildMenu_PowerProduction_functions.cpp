@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_BuildMenu_PowerProduction.Widget_BuildMenu_PowerProduction_C.GetStatText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_PowerProduction_C::GetStatText()
 {
@@ -30,7 +30,7 @@ void UWidget_BuildMenu_PowerProduction_C::GetStatText()
 
 
 // Function Widget_BuildMenu_PowerProduction.Widget_BuildMenu_PowerProduction_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,11 +50,11 @@ void UWidget_BuildMenu_PowerProduction_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_BuildMenu_PowerProduction.Widget_BuildMenu_PowerProduction_C.ExecuteUbergraph_Widget_BuildMenu_PowerProduction
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_PowerProduction_C::ExecuteUbergraph_Widget_BuildMenu_PowerProduction(int EntryPoint)
+void UWidget_BuildMenu_PowerProduction_C::ExecuteUbergraph_Widget_BuildMenu_PowerProduction(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_PowerProduction.Widget_BuildMenu_PowerProduction_C.ExecuteUbergraph_Widget_BuildMenu_PowerProduction");
 

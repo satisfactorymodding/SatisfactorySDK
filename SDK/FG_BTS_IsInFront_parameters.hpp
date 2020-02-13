@@ -25,7 +25,7 @@ struct UBTS_IsInFront_C_ReceiveTickAI_Params
 // Function BTS_IsInFront.BTS_IsInFront_C.ExecuteUbergraph_BTS_IsInFront
 struct UBTS_IsInFront_C_ExecuteUbergraph_BTS_IsInFront_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

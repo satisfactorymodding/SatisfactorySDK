@@ -39,7 +39,7 @@ struct UWidget_HUDBox_Weapon_C_Construct_Params
 // Function Widget_HUDBox_Weapon.Widget_HUDBox_Weapon_C.ExecuteUbergraph_Widget_HUDBox_Weapon
 struct UWidget_HUDBox_Weapon_C_ExecuteUbergraph_Widget_HUDBox_Weapon_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -12,13 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Char_Player.Char_Player_C.SetActorRepresentationText
-// ()
+// Function Char_Player.Char_Player_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance AChar_Player_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.GetActorCompassViewDistance");
+
+	AChar_Player_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Char_Player.Char_Player_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance AChar_Player_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SetActorCompassViewDistance");
+
+	AChar_Player_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Char_Player.Char_Player_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText AChar_Player_C::SetActorRepresentationText(const struct FText& newText)
+struct FText AChar_Player_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SetActorRepresentationText");
 
@@ -36,7 +80,7 @@ struct FText AChar_Player_C::SetActorRepresentationText(const struct FText& newT
 
 
 // Function Char_Player.Char_Player_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +101,7 @@ bool AChar_Player_C::UpdateRepresentation()
 
 
 // Function Char_Player.Char_Player_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +122,7 @@ struct FLinearColor AChar_Player_C::GetActorRepresentationColor()
 
 
 // Function Char_Player.Char_Player_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -99,7 +143,7 @@ struct FText AChar_Player_C::GetActorRepresentationText()
 
 
 // Function Char_Player.Char_Player_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -120,7 +164,7 @@ class UTexture2D* AChar_Player_C::GetActorRepresentationTexture()
 
 
 // Function Char_Player.Char_Player_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -141,7 +185,7 @@ ERepresentationType AChar_Player_C::GetActorRepresentationType()
 
 
 // Function Char_Player.Char_Player_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +206,7 @@ bool AChar_Player_C::GetActorShouldShowInCompass()
 
 
 // Function Char_Player.Char_Player_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -183,7 +227,7 @@ float AChar_Player_C::GetActorFogOfWarRevealRadius()
 
 
 // Function Char_Player.Char_Player_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +248,7 @@ EFogOfWarRevealType AChar_Player_C::GetActorFogOfWarRevealType()
 
 
 // Function Char_Player.Char_Player_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +269,7 @@ bool AChar_Player_C::RemoveAsRepresentation()
 
 
 // Function Char_Player.Char_Player_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -246,7 +290,7 @@ struct FRotator AChar_Player_C::GetRealActorRotation()
 
 
 // Function Char_Player.Char_Player_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -267,7 +311,7 @@ bool AChar_Player_C::AddAsRepresentation()
 
 
 // Function Char_Player.Char_Player_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -288,7 +332,7 @@ bool AChar_Player_C::GetActorShouldShowOnMap()
 
 
 // Function Char_Player.Char_Player_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -309,7 +353,7 @@ struct FVector AChar_Player_C::GetRealActorLocation()
 
 
 // Function Char_Player.Char_Player_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -329,8 +373,113 @@ bool AChar_Player_C::IsActorStatic()
 }
 
 
+// Function Char_Player.Char_Player_C.TubeTravelHardCorners
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float*                         CurveFloatValue                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::TubeTravelHardCorners(float* CurveFloatValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.TubeTravelHardCorners");
+
+	AChar_Player_C_TubeTravelHardCorners_Params params;
+	params.CurveFloatValue = CurveFloatValue;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.AudioWindDirectionSpeedUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::AudioWindDirectionSpeedUpdate()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.AudioWindDirectionSpeedUpdate");
+
+	AChar_Player_C_AudioWindDirectionSpeedUpdate_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.SlideVFX
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::SlideVFX()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SlideVFX");
+
+	AChar_Player_C_SlideVFX_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.TubeTravelSpeedUpdate
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::TubeTravelSpeedUpdate()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.TubeTravelSpeedUpdate");
+
+	AChar_Player_C_TubeTravelSpeedUpdate_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.SlideSpeedWindUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::SlideSpeedWindUpdate()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SlideSpeedWindUpdate");
+
+	AChar_Player_C_SlideSpeedWindUpdate_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.SlideVelocityUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::SlideVelocityUpdate()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SlideVelocityUpdate");
+
+	AChar_Player_C_SlideVelocityUpdate_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Char_Player.Char_Player_C.ToggleCodex
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::ToggleCodex()
 {
@@ -347,7 +496,7 @@ void AChar_Player_C::ToggleCodex()
 
 
 // Function Char_Player.Char_Player_C.ToggleInventory
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::ToggleInventory()
 {
@@ -364,7 +513,7 @@ void AChar_Player_C::ToggleInventory()
 
 
 // Function Char_Player.Char_Player_C.ToggleFlashlight
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::ToggleFlashlight()
 {
@@ -381,11 +530,11 @@ void AChar_Player_C::ToggleFlashlight()
 
 
 // Function Char_Player.Char_Player_C.RemovePlayerHUD
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGPlayerController*     OldController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGPlayerController**    OldController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_Player_C::RemovePlayerHUD(class AFGPlayerController* OldController)
+void AChar_Player_C::RemovePlayerHUD(class AFGPlayerController** OldController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.RemovePlayerHUD");
 
@@ -401,11 +550,11 @@ void AChar_Player_C::RemovePlayerHUD(class AFGPlayerController* OldController)
 
 
 // Function Char_Player.Char_Player_C.SetupPlayerHUD
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGPlayerController*     PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGPlayerController**    PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_Player_C::SetupPlayerHUD(class AFGPlayerController* PlayerController)
+void AChar_Player_C::SetupPlayerHUD(class AFGPlayerController** PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SetupPlayerHUD");
 
@@ -421,7 +570,7 @@ void AChar_Player_C::SetupPlayerHUD(class AFGPlayerController* PlayerController)
 
 
 // Function Char_Player.Char_Player_C.HandleFlashlight
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::HandleFlashlight()
 {
@@ -438,7 +587,7 @@ void AChar_Player_C::HandleFlashlight()
 
 
 // Function Char_Player.Char_Player_C.UpdatePlayerTextVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::UpdatePlayerTextVisibility()
 {
@@ -455,7 +604,7 @@ void AChar_Player_C::UpdatePlayerTextVisibility()
 
 
 // Function Char_Player.Char_Player_C.GetHealthPct
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          healthPct                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -477,7 +626,7 @@ void AChar_Player_C::GetHealthPct(float* healthPct)
 
 
 // Function Char_Player.Char_Player_C.UpdateDamageIndicator
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::UpdateDamageIndicator()
 {
@@ -494,11 +643,11 @@ void AChar_Player_C::UpdateDamageIndicator()
 
 
 // Function Char_Player.Char_Player_C.PlayDamageVO
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UDamageType*             Damage_Type                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UDamageType**            Damage_Type                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_Player_C::PlayDamageVO(class UDamageType* Damage_Type)
+void AChar_Player_C::PlayDamageVO(class UDamageType** Damage_Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.PlayDamageVO");
 
@@ -514,7 +663,7 @@ void AChar_Player_C::PlayDamageVO(class UDamageType* Damage_Type)
 
 
 // Function Char_Player.Char_Player_C.PlayDamageCameraShake
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::PlayDamageCameraShake()
 {
@@ -531,7 +680,7 @@ void AChar_Player_C::PlayDamageCameraShake()
 
 
 // Function Char_Player.Char_Player_C.ApplyDamagePP
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::ApplyDamagePP()
 {
@@ -548,11 +697,11 @@ void AChar_Player_C::ApplyDamagePP()
 
 
 // Function Char_Player.Char_Player_C.PlayImpactEffectSound
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UDamageType*             DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_Player_C::PlayImpactEffectSound(class UDamageType* DamageType)
+void AChar_Player_C::PlayImpactEffectSound(class UDamageType** DamageType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.PlayImpactEffectSound");
 
@@ -568,7 +717,7 @@ void AChar_Player_C::PlayImpactEffectSound(class UDamageType* DamageType)
 
 
 // Function Char_Player.Char_Player_C.CalculateOnscreenEffectBlendWeight
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          BlendWeight                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -590,7 +739,7 @@ void AChar_Player_C::CalculateOnscreenEffectBlendWeight(float* BlendWeight)
 
 
 // Function Char_Player.Char_Player_C.UpdateWindParticle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::UpdateWindParticle()
 {
@@ -607,7 +756,7 @@ void AChar_Player_C::UpdateWindParticle()
 
 
 // Function Char_Player.Char_Player_C.TickSprintNoise
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::TickSprintNoise()
 {
@@ -624,7 +773,7 @@ void AChar_Player_C::TickSprintNoise()
 
 
 // Function Char_Player.Char_Player_C.GetPlayerCameraManager
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerCameraManager*    cameraManager                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -646,7 +795,7 @@ void AChar_Player_C::GetPlayerCameraManager(class APlayerCameraManager** cameraM
 
 
 // Function Char_Player.Char_Player_C.FadeDamageIndicator
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::FadeDamageIndicator()
 {
@@ -663,7 +812,7 @@ void AChar_Player_C::FadeDamageIndicator()
 
 
 // Function Char_Player.Char_Player_C.TickPlayerNameText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::TickPlayerNameText()
 {
@@ -679,29 +828,12 @@ void AChar_Player_C::TickPlayerNameText()
 }
 
 
-// Function Char_Player.Char_Player_C.UserConstructionScript
-// ()
-
-void AChar_Player_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.UserConstructionScript");
-
-	AChar_Player_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_Player.Char_Player_C.InpActEvt_OpenCodex_K2Node_InputActionEvent_6
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AChar_Player_C::InpActEvt_OpenCodex_K2Node_InputActionEvent_6(const struct FKey& Key)
+void AChar_Player_C::InpActEvt_OpenCodex_K2Node_InputActionEvent_6(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_OpenCodex_K2Node_InputActionEvent_6");
 
@@ -717,11 +849,11 @@ void AChar_Player_C::InpActEvt_OpenCodex_K2Node_InputActionEvent_6(const struct 
 
 
 // Function Char_Player.Char_Player_C.InpActEvt_Flashlight_K2Node_InputActionEvent_5
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AChar_Player_C::InpActEvt_Flashlight_K2Node_InputActionEvent_5(const struct FKey& Key)
+void AChar_Player_C::InpActEvt_Flashlight_K2Node_InputActionEvent_5(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_Flashlight_K2Node_InputActionEvent_5");
 
@@ -736,16 +868,16 @@ void AChar_Player_C::InpActEvt_Flashlight_K2Node_InputActionEvent_5(const struct
 }
 
 
-// Function Char_Player.Char_Player_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_4
-// ()
+// Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_4
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AChar_Player_C::InpActEvt_PrimaryFire_K2Node_InputActionEvent_4(const struct FKey& Key)
+void AChar_Player_C::InpActEvt_EmoteWheel_K2Node_InputActionEvent_4(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_4");
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_4");
 
-	AChar_Player_C_InpActEvt_PrimaryFire_K2Node_InputActionEvent_4_Params params;
+	AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_4_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -756,16 +888,16 @@ void AChar_Player_C::InpActEvt_PrimaryFire_K2Node_InputActionEvent_4(const struc
 }
 
 
-// Function Char_Player.Char_Player_C.InpActEvt_Inventory_K2Node_InputActionEvent_3
-// ()
+// Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_3
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AChar_Player_C::InpActEvt_Inventory_K2Node_InputActionEvent_3(const struct FKey& Key)
+void AChar_Player_C::InpActEvt_EmoteWheel_K2Node_InputActionEvent_3(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_Inventory_K2Node_InputActionEvent_3");
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_3");
 
-	AChar_Player_C_InpActEvt_Inventory_K2Node_InputActionEvent_3_Params params;
+	AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_3_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -776,16 +908,16 @@ void AChar_Player_C::InpActEvt_Inventory_K2Node_InputActionEvent_3(const struct 
 }
 
 
-// Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_2
-// ()
+// Function Char_Player.Char_Player_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_2
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AChar_Player_C::InpActEvt_EmoteWheel_K2Node_InputActionEvent_2(const struct FKey& Key)
+void AChar_Player_C::InpActEvt_PrimaryFire_K2Node_InputActionEvent_2(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_2");
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_2");
 
-	AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_2_Params params;
+	AChar_Player_C_InpActEvt_PrimaryFire_K2Node_InputActionEvent_2_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -796,16 +928,16 @@ void AChar_Player_C::InpActEvt_EmoteWheel_K2Node_InputActionEvent_2(const struct
 }
 
 
-// Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_1
-// ()
+// Function Char_Player.Char_Player_C.InpActEvt_Inventory_K2Node_InputActionEvent_1
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AChar_Player_C::InpActEvt_EmoteWheel_K2Node_InputActionEvent_1(const struct FKey& Key)
+void AChar_Player_C::InpActEvt_Inventory_K2Node_InputActionEvent_1(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_1");
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.InpActEvt_Inventory_K2Node_InputActionEvent_1");
 
-	AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_1_Params params;
+	AChar_Player_C_InpActEvt_Inventory_K2Node_InputActionEvent_1_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -817,7 +949,7 @@ void AChar_Player_C::InpActEvt_EmoteWheel_K2Node_InputActionEvent_1(const struct
 
 
 // Function Char_Player.Char_Player_C.SetFirstPersonMode
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Player_C::SetFirstPersonMode()
 {
@@ -834,7 +966,7 @@ void AChar_Player_C::SetFirstPersonMode()
 
 
 // Function Char_Player.Char_Player_C.SetThirdPersonMode
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Player_C::SetThirdPersonMode()
 {
@@ -851,7 +983,7 @@ void AChar_Player_C::SetThirdPersonMode()
 
 
 // Function Char_Player.Char_Player_C.StartFocusAim
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Player_C::StartFocusAim()
 {
@@ -868,7 +1000,7 @@ void AChar_Player_C::StartFocusAim()
 
 
 // Function Char_Player.Char_Player_C.StopFocusAim
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Player_C::StopFocusAim()
 {
@@ -885,7 +1017,7 @@ void AChar_Player_C::StopFocusAim()
 
 
 // Function Char_Player.Char_Player_C.StartFreeRotate3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Player_C::StartFreeRotate3P()
 {
@@ -902,7 +1034,7 @@ void AChar_Player_C::StartFreeRotate3P()
 
 
 // Function Char_Player.Char_Player_C.StopFreeRotate3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Player_C::StopFreeRotate3P()
 {
@@ -919,7 +1051,7 @@ void AChar_Player_C::StopFreeRotate3P()
 
 
 // Function Char_Player.Char_Player_C.CameraZoomOut
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Player_C::CameraZoomOut()
 {
@@ -936,7 +1068,7 @@ void AChar_Player_C::CameraZoomOut()
 
 
 // Function Char_Player.Char_Player_C.CameraZoomIn
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AChar_Player_C::CameraZoomIn()
 {
@@ -953,7 +1085,7 @@ void AChar_Player_C::CameraZoomIn()
 
 
 // Function Char_Player.Char_Player_C.ReceiveDied
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::ReceiveDied()
 {
@@ -969,25 +1101,8 @@ void AChar_Player_C::ReceiveDied()
 }
 
 
-// Function Char_Player.Char_Player_C.CameraTick
-// ()
-
-void AChar_Player_C::CameraTick()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.CameraTick");
-
-	AChar_Player_C_CameraTick_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_Player.Char_Player_C.PlayPickupEffects
-// ()
+// (BlueprintCosmetic, Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::PlayPickupEffects()
 {
@@ -1004,7 +1119,7 @@ void AChar_Player_C::PlayPickupEffects()
 
 
 // Function Char_Player.Char_Player_C.SnapSpringArmToDesiredLocation
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AChar_Player_C::SnapSpringArmToDesiredLocation()
 {
@@ -1021,7 +1136,7 @@ void AChar_Player_C::SnapSpringArmToDesiredLocation()
 
 
 // Function Char_Player.Char_Player_C.OnReviveComplete
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AChar_Player_C::OnReviveComplete()
 {
@@ -1037,32 +1152,12 @@ void AChar_Player_C::OnReviveComplete()
 }
 
 
-// Function Char_Player.Char_Player_C.OnLanded
-// ()
-// Parameters:
-// struct FHitResult*             Hit                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
-
-void AChar_Player_C::OnLanded(struct FHitResult* Hit)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnLanded");
-
-	AChar_Player_C_OnLanded_Params params;
-	params.Hit = Hit;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_Player.Char_Player_C.ClientSetupPlayerHUD
-// ()
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*             InController                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InController                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_Player_C::ClientSetupPlayerHUD(class AController* InController)
+void AChar_Player_C::ClientSetupPlayerHUD(class AController** InController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ClientSetupPlayerHUD");
 
@@ -1078,7 +1173,7 @@ void AChar_Player_C::ClientSetupPlayerHUD(class AController* InController)
 
 
 // Function Char_Player.Char_Player_C.ReceiveUnpossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            OldController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1098,7 +1193,7 @@ void AChar_Player_C::ReceiveUnpossessed(class AController** OldController)
 
 
 // Function Char_Player.Char_Player_C.OnReceiveRadiationStart
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AChar_Player_C::OnReceiveRadiationStart()
 {
@@ -1115,7 +1210,7 @@ void AChar_Player_C::OnReceiveRadiationStart()
 
 
 // Function Char_Player.Char_Player_C.OnReceiveRadiationStop
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AChar_Player_C::OnReceiveRadiationStop()
 {
@@ -1131,8 +1226,329 @@ void AChar_Player_C::OnReceiveRadiationStop()
 }
 
 
+// Function Char_Player.Char_Player_C.Server_PlayClap
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::Server_PlayClap()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Server_PlayClap");
+
+	AChar_Player_C_Server_PlayClap_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.Multicast_PlayClap
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::Multicast_PlayClap()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Multicast_PlayClap");
+
+	AChar_Player_C_Multicast_PlayClap_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.Server_SetFlashlightOn
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          FlashlightOn                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::Server_SetFlashlightOn(bool* FlashlightOn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Server_SetFlashlightOn");
+
+	AChar_Player_C_Server_SetFlashlightOn_Params params;
+	params.FlashlightOn = FlashlightOn;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.OnDisabledInputGateChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// struct FDisabledInputGate*     NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AChar_Player_C::OnDisabledInputGateChanged(struct FDisabledInputGate* NewValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnDisabledInputGateChanged");
+
+	AChar_Player_C_OnDisabledInputGateChanged_Params params;
+	params.NewValue = NewValue;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.LimitLook
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          doLimit                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::LimitLook(bool* doLimit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.LimitLook");
+
+	AChar_Player_C_LimitLook_Params params;
+	params.doLimit = doLimit;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.StartCinematic
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::StartCinematic()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.StartCinematic");
+
+	AChar_Player_C_StartCinematic_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.EndCinematic
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::EndCinematic()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.EndCinematic");
+
+	AChar_Player_C_EndCinematic_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.DisableGravity
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::DisableGravity()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.DisableGravity");
+
+	AChar_Player_C_DisableGravity_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.CameraTick
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::CameraTick()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.CameraTick");
+
+	AChar_Player_C_CameraTick_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.Server_PlaySpinEmote
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::Server_PlaySpinEmote()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Server_PlaySpinEmote");
+
+	AChar_Player_C_Server_PlaySpinEmote_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.Multicast_PlatSpinEmote
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::Multicast_PlatSpinEmote()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Multicast_PlatSpinEmote");
+
+	AChar_Player_C_Multicast_PlatSpinEmote_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.ClearEmoteMesh
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::ClearEmoteMesh()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ClearEmoteMesh");
+
+	AChar_Player_C_ClearEmoteMesh_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.OnSpawnDeathMarker
+// (Event, Protected, BlueprintEvent)
+
+void AChar_Player_C::OnSpawnDeathMarker()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnSpawnDeathMarker");
+
+	AChar_Player_C_OnSpawnDeathMarker_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.ShowEmote
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int*                           EmoteIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::ShowEmote(int* EmoteIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ShowEmote");
+
+	AChar_Player_C_ShowEmote_Params params;
+	params.EmoteIndex = EmoteIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.SkipIntro
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::SkipIntro()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SkipIntro");
+
+	AChar_Player_C_SkipIntro_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.Server_playSignsEmote
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::Server_playSignsEmote()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Server_playSignsEmote");
+
+	AChar_Player_C_Server_playSignsEmote_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.Multicast_PlaySignsEmote
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void AChar_Player_C::Multicast_PlaySignsEmote()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Multicast_PlaySignsEmote");
+
+	AChar_Player_C_Multicast_PlaySignsEmote_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.OnLanded
+// (Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FHitResult*             Hit                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+
+void AChar_Player_C::OnLanded(struct FHitResult* Hit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnLanded");
+
+	AChar_Player_C_OnLanded_Params params;
+	params.Hit = Hit;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Char_Player.Char_Player_C.ReceivePossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            NewController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1151,394 +1567,8 @@ void AChar_Player_C::ReceivePossessed(class AController** NewController)
 }
 
 
-// Function Char_Player.Char_Player_C.ReceiveDestroyed
-// ()
-
-void AChar_Player_C::ReceiveDestroyed()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ReceiveDestroyed");
-
-	AChar_Player_C_ReceiveDestroyed_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.TakeDamageEvent
-// ()
-// Parameters:
-// class AActor*                  damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          damageAmount                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UDamageType*             DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AChar_Player_C::TakeDamageEvent(class AActor* damagedActor, float damageAmount, class UDamageType* DamageType, class AController* instigatedBy, class AActor* damageCauser)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.TakeDamageEvent");
-
-	AChar_Player_C_TakeDamageEvent_Params params;
-	params.damagedActor = damagedActor;
-	params.damageAmount = damageAmount;
-	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.ReceiveBeginPlay
-// ()
-
-void AChar_Player_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ReceiveBeginPlay");
-
-	AChar_Player_C_ReceiveBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.ReceiveTick
-// ()
-// Parameters:
-// float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AChar_Player_C::ReceiveTick(float* DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ReceiveTick");
-
-	AChar_Player_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.Server_PlayClap
-// ()
-
-void AChar_Player_C::Server_PlayClap()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Server_PlayClap");
-
-	AChar_Player_C_Server_PlayClap_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.Multicast_PlayClap
-// ()
-
-void AChar_Player_C::Multicast_PlayClap()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Multicast_PlayClap");
-
-	AChar_Player_C_Multicast_PlayClap_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.Server_SetFlashlightOn
-// ()
-// Parameters:
-// bool                           FlashlightOn                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AChar_Player_C::Server_SetFlashlightOn(bool FlashlightOn)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Server_SetFlashlightOn");
-
-	AChar_Player_C_Server_SetFlashlightOn_Params params;
-	params.FlashlightOn = FlashlightOn;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.OnDisabledInputGateChanged
-// ()
-// Parameters:
-// struct FDisabledInputGate*     NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AChar_Player_C::OnDisabledInputGateChanged(struct FDisabledInputGate* NewValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnDisabledInputGateChanged");
-
-	AChar_Player_C_OnDisabledInputGateChanged_Params params;
-	params.NewValue = NewValue;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.AudioTickEvent
-// ()
-// Parameters:
-// float                          AudioTick                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AChar_Player_C::AudioTickEvent(float AudioTick)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.AudioTickEvent");
-
-	AChar_Player_C_AudioTickEvent_Params params;
-	params.AudioTick = AudioTick;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.LimitLook
-// ()
-// Parameters:
-// bool                           doLimit                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AChar_Player_C::LimitLook(bool doLimit)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.LimitLook");
-
-	AChar_Player_C_LimitLook_Params params;
-	params.doLimit = doLimit;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.StartCinematic
-// ()
-
-void AChar_Player_C::StartCinematic()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.StartCinematic");
-
-	AChar_Player_C_StartCinematic_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.EndCinematic
-// ()
-
-void AChar_Player_C::EndCinematic()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.EndCinematic");
-
-	AChar_Player_C_EndCinematic_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.DisableGravity
-// ()
-
-void AChar_Player_C::DisableGravity()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.DisableGravity");
-
-	AChar_Player_C_DisableGravity_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.Server_PlaySpinEmote
-// ()
-
-void AChar_Player_C::Server_PlaySpinEmote()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Server_PlaySpinEmote");
-
-	AChar_Player_C_Server_PlaySpinEmote_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.Multicast_PlatSpinEmote
-// ()
-
-void AChar_Player_C::Multicast_PlatSpinEmote()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Multicast_PlatSpinEmote");
-
-	AChar_Player_C_Multicast_PlatSpinEmote_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.ClearEmoteMesh
-// ()
-
-void AChar_Player_C::ClearEmoteMesh()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ClearEmoteMesh");
-
-	AChar_Player_C_ClearEmoteMesh_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.OnSpawnDeathMarker
-// ()
-
-void AChar_Player_C::OnSpawnDeathMarker()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnSpawnDeathMarker");
-
-	AChar_Player_C_OnSpawnDeathMarker_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.ShowEmote
-// ()
-// Parameters:
-// int                            EmoteIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AChar_Player_C::ShowEmote(int EmoteIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ShowEmote");
-
-	AChar_Player_C_ShowEmote_Params params;
-	params.EmoteIndex = EmoteIndex;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.SkipIntro
-// ()
-
-void AChar_Player_C::SkipIntro()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SkipIntro");
-
-	AChar_Player_C_SkipIntro_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.Server_playSignsEmote
-// ()
-
-void AChar_Player_C::Server_playSignsEmote()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Server_playSignsEmote");
-
-	AChar_Player_C_Server_playSignsEmote_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Char_Player.Char_Player_C.Multicast_PlaySignsEmote
-// ()
-
-void AChar_Player_C::Multicast_PlaySignsEmote()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.Multicast_PlaySignsEmote");
-
-	AChar_Player_C_Multicast_PlaySignsEmote_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_Player.Char_Player_C.StartIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -1560,7 +1590,7 @@ void AChar_Player_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, str
 
 
 // Function Char_Player.Char_Player_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -1582,7 +1612,7 @@ void AChar_Player_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter, stru
 
 
 // Function Char_Player.Char_Player_C.OnRadiationIntensityUpdated
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // float*                         radiationIntensity             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         radiationImmunity              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1603,12 +1633,248 @@ void AChar_Player_C::OnRadiationIntensityUpdated(float* radiationIntensity, floa
 }
 
 
-// Function Char_Player.Char_Player_C.ExecuteUbergraph_Char_Player
-// ()
+// Function Char_Player.Char_Player_C.TickVisuals
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         dt                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_Player_C::ExecuteUbergraph_Char_Player(int EntryPoint)
+void AChar_Player_C::TickVisuals(float* dt)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.TickVisuals");
+
+	AChar_Player_C_TickVisuals_Params params;
+	params.dt = dt;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void AChar_Player_C::ReceiveDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ReceiveDestroyed");
+
+	AChar_Player_C_ReceiveDestroyed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.OnSlideStartLocal
+// (Event, Public, BlueprintEvent)
+
+void AChar_Player_C::OnSlideStartLocal()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnSlideStartLocal");
+
+	AChar_Player_C_OnSlideStartLocal_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.OnSlideEndLocal
+// (Event, Public, BlueprintEvent)
+
+void AChar_Player_C::OnSlideEndLocal()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnSlideEndLocal");
+
+	AChar_Player_C_OnSlideEndLocal_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.TakeDamageEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         damageAmount                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::TakeDamageEvent(class AActor** DamagedActor, float* damageAmount, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.TakeDamageEvent");
+
+	AChar_Player_C_TakeDamageEvent_Params params;
+	params.DamagedActor = DamagedActor;
+	params.damageAmount = damageAmount;
+	params.DamageType = DamageType;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.OnSlideEndSimulated
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void AChar_Player_C::OnSlideEndSimulated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnSlideEndSimulated");
+
+	AChar_Player_C_OnSlideEndSimulated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.OnSlideStartSimulated
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void AChar_Player_C::OnSlideStartSimulated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.OnSlideStartSimulated");
+
+	AChar_Player_C_OnSlideStartSimulated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.PlayJumpEffects
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          boostJump                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::PlayJumpEffects(bool* boostJump)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.PlayJumpEffects");
+
+	AChar_Player_C_PlayJumpEffects_Params params;
+	params.boostJump = boostJump;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AChar_Player_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ReceiveBeginPlay");
+
+	AChar_Player_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.K2_OnMovementModeChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EMovementMode>*    PrevMovementMode               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 PrevCustomMode                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.K2_OnMovementModeChanged");
+
+	AChar_Player_C_K2_OnMovementModeChanged_Params params;
+	params.PrevMovementMode = PrevMovementMode;
+	params.NewMovementMode = NewMovementMode;
+	params.PrevCustomMode = PrevCustomMode;
+	params.NewCustomMode = NewCustomMode;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.AudioTickEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float*                         AudioTick                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::AudioTickEvent(float* AudioTick)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.AudioTickEvent");
+
+	AChar_Player_C_AudioTickEvent_Params params;
+	params.AudioTick = AudioTick;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.SetActorRepresentationColor");
+
+	AChar_Player_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_Player.Char_Player_C.ExecuteUbergraph_Char_Player
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_Player_C::ExecuteUbergraph_Char_Player(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.ExecuteUbergraph_Char_Player");
 
@@ -1624,7 +1890,7 @@ void AChar_Player_C::ExecuteUbergraph_Char_Player(int EntryPoint)
 
 
 // Function Char_Player.Char_Player_C.EventFire__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::EventFire__DelegateSignature()
 {
@@ -1641,11 +1907,11 @@ void AChar_Player_C::EventFire__DelegateSignature()
 
 
 // Function Char_Player.Char_Player_C.EventScroll__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_Player_C::EventScroll__DelegateSignature(int Index)
+void AChar_Player_C::EventScroll__DelegateSignature(int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_Player.Char_Player_C.EventScroll__DelegateSignature");
 
@@ -1661,7 +1927,7 @@ void AChar_Player_C::EventScroll__DelegateSignature(int Index)
 
 
 // Function Char_Player.Char_Player_C.EventScrollDown__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::EventScrollDown__DelegateSignature()
 {
@@ -1678,7 +1944,7 @@ void AChar_Player_C::EventScrollDown__DelegateSignature()
 
 
 // Function Char_Player.Char_Player_C.EventScrollUp__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void AChar_Player_C::EventScrollUp__DelegateSignature()
 {

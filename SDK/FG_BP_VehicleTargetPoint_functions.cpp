@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABP_VehicleTargetPoint_C::GetLookAtDecription(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+struct FText ABP_VehicleTargetPoint_C::GetLookAtDecription(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.GetLookAtDecription");
 
@@ -38,7 +38,7 @@ struct FText ABP_VehicleTargetPoint_C::GetLookAtDecription(class AFGCharacterPla
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.IsUseable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -59,14 +59,14 @@ bool ABP_VehicleTargetPoint_C::IsUseable()
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.UpdateUseState
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UPrimitiveComponent*     componentHit                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent**    componentHit                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FUseState               out_useState                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_VehicleTargetPoint_C::UpdateUseState(class AFGCharacterPlayer* byCharacter, const struct FVector& atLocation, class UPrimitiveComponent* componentHit, struct FUseState* out_useState)
+void ABP_VehicleTargetPoint_C::UpdateUseState(class AFGCharacterPlayer** byCharacter, struct FVector* atLocation, class UPrimitiveComponent** componentHit, struct FUseState* out_useState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.UpdateUseState");
 
@@ -87,7 +87,7 @@ void ABP_VehicleTargetPoint_C::UpdateUseState(class AFGCharacterPlayer* byCharac
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.ShouldSave
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -108,7 +108,7 @@ bool ABP_VehicleTargetPoint_C::ShouldSave()
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.NeedTransform
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -129,7 +129,7 @@ bool ABP_VehicleTargetPoint_C::NeedTransform()
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.GatherDependencies
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UObject*>         out_dependentObjects           (Parm, OutParm, ZeroConstructor)
 
@@ -150,30 +150,13 @@ void ABP_VehicleTargetPoint_C::GatherDependencies(TArray<class UObject*>* out_de
 }
 
 
-// Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.UserConstructionScript
-// ()
-
-void ABP_VehicleTargetPoint_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.UserConstructionScript");
-
-	ABP_VehicleTargetPoint_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.OnUseStop
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_VehicleTargetPoint_C::OnUseStop(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void ABP_VehicleTargetPoint_C::OnUseStop(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.OnUseStop");
 
@@ -190,11 +173,11 @@ void ABP_VehicleTargetPoint_C::OnUseStop(class AFGCharacterPlayer* byCharacter, 
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.RegisterInteractingPlayer
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_VehicleTargetPoint_C::RegisterInteractingPlayer(class AFGCharacterPlayer* Player)
+void ABP_VehicleTargetPoint_C::RegisterInteractingPlayer(class AFGCharacterPlayer** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.RegisterInteractingPlayer");
 
@@ -210,11 +193,11 @@ void ABP_VehicleTargetPoint_C::RegisterInteractingPlayer(class AFGCharacterPlaye
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.UnregisterInteractingPlayer
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_VehicleTargetPoint_C::UnregisterInteractingPlayer(class AFGCharacterPlayer* Player)
+void ABP_VehicleTargetPoint_C::UnregisterInteractingPlayer(class AFGCharacterPlayer** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.UnregisterInteractingPlayer");
 
@@ -230,7 +213,7 @@ void ABP_VehicleTargetPoint_C::UnregisterInteractingPlayer(class AFGCharacterPla
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_VehicleTargetPoint_C::ReceiveBeginPlay()
 {
@@ -247,12 +230,12 @@ void ABP_VehicleTargetPoint_C::ReceiveBeginPlay()
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.OnUse
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_VehicleTargetPoint_C::OnUse(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void ABP_VehicleTargetPoint_C::OnUse(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.OnUse");
 
@@ -269,12 +252,12 @@ void ABP_VehicleTargetPoint_C::OnUse(class AFGCharacterPlayer* byCharacter, cons
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.StartIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_VehicleTargetPoint_C::StartIsLookedAt(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void ABP_VehicleTargetPoint_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.StartIsLookedAt");
 
@@ -291,12 +274,12 @@ void ABP_VehicleTargetPoint_C::StartIsLookedAt(class AFGCharacterPlayer* byChara
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_VehicleTargetPoint_C::StopIsLookedAt(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void ABP_VehicleTargetPoint_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.StopIsLookedAt");
 
@@ -313,7 +296,7 @@ void ABP_VehicleTargetPoint_C::StopIsLookedAt(class AFGCharacterPlayer* byCharac
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.SetMeshRotation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_VehicleTargetPoint_C::SetMeshRotation()
 {
@@ -330,11 +313,11 @@ void ABP_VehicleTargetPoint_C::SetMeshRotation()
 
 
 // Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.ExecuteUbergraph_BP_VehicleTargetPoint
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_VehicleTargetPoint_C::ExecuteUbergraph_BP_VehicleTargetPoint(int EntryPoint)
+void ABP_VehicleTargetPoint_C::ExecuteUbergraph_BP_VehicleTargetPoint(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_VehicleTargetPoint.BP_VehicleTargetPoint_C.ExecuteUbergraph_BP_VehicleTargetPoint");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_InviteNotification.Widget_InviteNotification_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_InviteNotification_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_InviteNotification_C::Construct()
 
 
 // Function Widget_InviteNotification.Widget_InviteNotification_C.OnInviteReceived
-// ()
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPendingInvite          receivedInvite                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FPendingInvite*         receivedInvite                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_InviteNotification_C::OnInviteReceived(const struct FPendingInvite& receivedInvite)
+void UWidget_InviteNotification_C::OnInviteReceived(struct FPendingInvite* receivedInvite)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InviteNotification.Widget_InviteNotification_C.OnInviteReceived");
 
@@ -49,12 +49,29 @@ void UWidget_InviteNotification_C::OnInviteReceived(const struct FPendingInvite&
 }
 
 
-// Function Widget_InviteNotification.Widget_InviteNotification_C.ExecuteUbergraph_Widget_InviteNotification
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_InviteNotification.Widget_InviteNotification_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_InviteNotification_C::ExecuteUbergraph_Widget_InviteNotification(int EntryPoint)
+void UWidget_InviteNotification_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_InviteNotification.Widget_InviteNotification_C.Destruct");
+
+	UWidget_InviteNotification_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_InviteNotification.Widget_InviteNotification_C.ExecuteUbergraph_Widget_InviteNotification
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_InviteNotification_C::ExecuteUbergraph_Widget_InviteNotification(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InviteNotification.Widget_InviteNotification_C.ExecuteUbergraph_Widget_InviteNotification");
 

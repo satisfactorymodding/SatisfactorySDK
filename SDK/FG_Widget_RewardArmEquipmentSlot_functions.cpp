@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.IsValidRewardItem
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -34,45 +34,8 @@ void UWidget_RewardArmEquipmentSlot_C::IsValidRewardItem(bool* IsValid)
 }
 
 
-// Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.UpdateVisibility
-// ()
-
-void UWidget_RewardArmEquipmentSlot_C::UpdateVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.UpdateVisibility");
-
-	UWidget_RewardArmEquipmentSlot_C_UpdateVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.PreConstruct
-// ()
-// Parameters:
-// bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_RewardArmEquipmentSlot_C::PreConstruct(bool* IsDesignTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.PreConstruct");
-
-	UWidget_RewardArmEquipmentSlot_C_PreConstruct_Params params;
-	params.IsDesignTime = IsDesignTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RewardArmEquipmentSlot_C::Construct()
 {
@@ -89,11 +52,11 @@ void UWidget_RewardArmEquipmentSlot_C::Construct()
 
 
 // Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.ExecuteUbergraph_Widget_RewardArmEquipmentSlot
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RewardArmEquipmentSlot_C::ExecuteUbergraph_Widget_RewardArmEquipmentSlot(int EntryPoint)
+void UWidget_RewardArmEquipmentSlot_C::ExecuteUbergraph_Widget_RewardArmEquipmentSlot(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RewardArmEquipmentSlot.Widget_RewardArmEquipmentSlot_C.ExecuteUbergraph_Widget_RewardArmEquipmentSlot");
 

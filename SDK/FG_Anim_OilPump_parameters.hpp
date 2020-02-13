@@ -42,7 +42,7 @@ struct UAnim_OilPump_C_AnimNotify_OilpumpLeftOfflineState_Params
 // Function Anim_OilPump.Anim_OilPump_C.ExecuteUbergraph_Anim_OilPump
 struct UAnim_OilPump_C_ExecuteUbergraph_Anim_OilPump_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

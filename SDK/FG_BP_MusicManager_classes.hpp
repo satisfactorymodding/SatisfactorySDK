@@ -34,7 +34,7 @@ public:
 	void Play();
 	void Pause();
 	void Stop();
-	void ExecuteUbergraph_BP_MusicManager(int EntryPoint);
+	void ExecuteUbergraph_BP_MusicManager(int* EntryPoint);
 };
 
 

@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Holo_Locomotive.Holo_Locomotive_C.UserConstructionScript
-struct AHolo_Locomotive_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText AChar_SpaceRabbit_C::GetLookAtDecription(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+struct FText AChar_SpaceRabbit_C::GetLookAtDecription(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.GetLookAtDecription");
 
@@ -38,7 +38,7 @@ struct FText AChar_SpaceRabbit_C::GetLookAtDecription(class AFGCharacterPlayer* 
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.IsUseable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -59,14 +59,14 @@ bool AChar_SpaceRabbit_C::IsUseable()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.UpdateUseState
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UPrimitiveComponent*     componentHit                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent**    componentHit                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FUseState               out_useState                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceRabbit_C::UpdateUseState(class AFGCharacterPlayer* byCharacter, const struct FVector& atLocation, class UPrimitiveComponent* componentHit, struct FUseState* out_useState)
+void AChar_SpaceRabbit_C::UpdateUseState(class AFGCharacterPlayer** byCharacter, struct FVector* atLocation, class UPrimitiveComponent** componentHit, struct FUseState* out_useState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.UpdateUseState");
 
@@ -87,7 +87,7 @@ void AChar_SpaceRabbit_C::UpdateUseState(class AFGCharacterPlayer* byCharacter, 
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.SetupLootTimer
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::SetupLootTimer()
 {
@@ -104,7 +104,7 @@ void AChar_SpaceRabbit_C::SetupLootTimer()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.OnRep_mLootTableIndex
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::OnRep_mLootTableIndex()
 {
@@ -121,7 +121,7 @@ void AChar_SpaceRabbit_C::OnRep_mLootTableIndex()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.RollLoot
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::RollLoot()
 {
@@ -138,11 +138,11 @@ void AChar_SpaceRabbit_C::RollLoot()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.SetNewFriend
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  newFriend                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 newFriend                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceRabbit_C::SetNewFriend(class AActor* newFriend)
+void AChar_SpaceRabbit_C::SetNewFriend(class AActor** newFriend)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.SetNewFriend");
 
@@ -158,7 +158,7 @@ void AChar_SpaceRabbit_C::SetNewFriend(class AActor* newFriend)
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.StopBackwardWalk
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::StopBackwardWalk()
 {
@@ -175,7 +175,7 @@ void AChar_SpaceRabbit_C::StopBackwardWalk()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.UpdateWalkBackMovement
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::UpdateWalkBackMovement()
 {
@@ -192,7 +192,7 @@ void AChar_SpaceRabbit_C::UpdateWalkBackMovement()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.UpdateWalkBackDirection
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::UpdateWalkBackDirection()
 {
@@ -209,7 +209,7 @@ void AChar_SpaceRabbit_C::UpdateWalkBackDirection()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.StartWalkBack
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::StartWalkBack()
 {
@@ -225,30 +225,13 @@ void AChar_SpaceRabbit_C::StartWalkBack()
 }
 
 
-// Function Char_SpaceRabbit.Char_SpaceRabbit_C.UserConstructionScript
-// ()
-
-void AChar_SpaceRabbit_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.UserConstructionScript");
-
-	AChar_SpaceRabbit_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.OnUseStop
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceRabbit_C::OnUseStop(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void AChar_SpaceRabbit_C::OnUseStop(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.OnUseStop");
 
@@ -265,11 +248,11 @@ void AChar_SpaceRabbit_C::OnUseStop(class AFGCharacterPlayer* byCharacter, const
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.RegisterInteractingPlayer
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceRabbit_C::RegisterInteractingPlayer(class AFGCharacterPlayer* Player)
+void AChar_SpaceRabbit_C::RegisterInteractingPlayer(class AFGCharacterPlayer** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.RegisterInteractingPlayer");
 
@@ -285,12 +268,12 @@ void AChar_SpaceRabbit_C::RegisterInteractingPlayer(class AFGCharacterPlayer* Pl
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.StartIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceRabbit_C::StartIsLookedAt(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void AChar_SpaceRabbit_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.StartIsLookedAt");
 
@@ -307,12 +290,12 @@ void AChar_SpaceRabbit_C::StartIsLookedAt(class AFGCharacterPlayer* byCharacter,
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceRabbit_C::StopIsLookedAt(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void AChar_SpaceRabbit_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.StopIsLookedAt");
 
@@ -329,11 +312,11 @@ void AChar_SpaceRabbit_C::StopIsLookedAt(class AFGCharacterPlayer* byCharacter, 
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.UnregisterInteractingPlayer
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceRabbit_C::UnregisterInteractingPlayer(class AFGCharacterPlayer* Player)
+void AChar_SpaceRabbit_C::UnregisterInteractingPlayer(class AFGCharacterPlayer** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.UnregisterInteractingPlayer");
 
@@ -349,7 +332,7 @@ void AChar_SpaceRabbit_C::UnregisterInteractingPlayer(class AFGCharacterPlayer* 
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -369,24 +352,24 @@ void AChar_SpaceRabbit_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.NotifyOnTakeDamage
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor**                 damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         damageAmount                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController**            instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor**                 damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceRabbit_C::NotifyOnTakeDamage(class AActor** damagedActor, float* damageAmount, class UDamageType** DamageType, class AController** instigatedBy, class AActor** damageCauser)
+void AChar_SpaceRabbit_C::NotifyOnTakeDamage(class AActor** DamagedActor, float* damageAmount, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.NotifyOnTakeDamage");
 
 	AChar_SpaceRabbit_C_NotifyOnTakeDamage_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.damageAmount = damageAmount;
 	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -397,7 +380,7 @@ void AChar_SpaceRabbit_C::NotifyOnTakeDamage(class AActor** damagedActor, float*
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.ReceiveDied
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::ReceiveDied()
 {
@@ -414,32 +397,32 @@ void AChar_SpaceRabbit_C::ReceiveDied()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.NotifyOnTakePointDamage
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor**                 damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController**            instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                HitLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent**    HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName*                  BoneName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                ShotFromDirection              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor**                 damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceRabbit_C::NotifyOnTakePointDamage(class AActor** damagedActor, float* Damage, class AController** instigatedBy, struct FVector* HitLocation, class UPrimitiveComponent** HitComponent, struct FName* BoneName, struct FVector* ShotFromDirection, class UDamageType** DamageType, class AActor** damageCauser)
+void AChar_SpaceRabbit_C::NotifyOnTakePointDamage(class AActor** DamagedActor, float* Damage, class AController** InstigatedBy, struct FVector* HitLocation, class UPrimitiveComponent** HitComponent, struct FName* BoneName, struct FVector* ShotFromDirection, class UDamageType** DamageType, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.NotifyOnTakePointDamage");
 
 	AChar_SpaceRabbit_C_NotifyOnTakePointDamage_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.Damage = Damage;
-	params.instigatedBy = instigatedBy;
+	params.InstigatedBy = InstigatedBy;
 	params.HitLocation = HitLocation;
 	params.HitComponent = HitComponent;
 	params.BoneName = BoneName;
 	params.ShotFromDirection = ShotFromDirection;
 	params.DamageType = DamageType;
-	params.damageCauser = damageCauser;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -450,24 +433,24 @@ void AChar_SpaceRabbit_C::NotifyOnTakePointDamage(class AActor** damagedActor, f
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.NotifyOnTakeRadialDamage
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor**                 damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController**            instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor**                 damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceRabbit_C::NotifyOnTakeRadialDamage(class AActor** damagedActor, float* Damage, class AController** instigatedBy, class UDamageType** DamageType, class AActor** damageCauser)
+void AChar_SpaceRabbit_C::NotifyOnTakeRadialDamage(class AActor** DamagedActor, float* Damage, class AController** InstigatedBy, class UDamageType** DamageType, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.NotifyOnTakeRadialDamage");
 
 	AChar_SpaceRabbit_C_NotifyOnTakeRadialDamage_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.Damage = Damage;
-	params.instigatedBy = instigatedBy;
+	params.InstigatedBy = InstigatedBy;
 	params.DamageType = DamageType;
-	params.damageCauser = damageCauser;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -478,7 +461,7 @@ void AChar_SpaceRabbit_C::NotifyOnTakeRadialDamage(class AActor** damagedActor, 
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::ReceiveBeginPlay()
 {
@@ -495,7 +478,7 @@ void AChar_SpaceRabbit_C::ReceiveBeginPlay()
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.PlayConsumeItemEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UClass**                 itemDescriptor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int*                           amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -517,12 +500,12 @@ void AChar_SpaceRabbit_C::PlayConsumeItemEffect(class UClass** itemDescriptor, i
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.OnUse
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceRabbit_C::OnUse(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void AChar_SpaceRabbit_C::OnUse(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.OnUse");
 
@@ -539,11 +522,11 @@ void AChar_SpaceRabbit_C::OnUse(class AFGCharacterPlayer* byCharacter, const str
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.ExecuteUbergraph_Char_SpaceRabbit
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceRabbit_C::ExecuteUbergraph_Char_SpaceRabbit(int EntryPoint)
+void AChar_SpaceRabbit_C::ExecuteUbergraph_Char_SpaceRabbit(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceRabbit.Char_SpaceRabbit_C.ExecuteUbergraph_Char_SpaceRabbit");
 
@@ -559,7 +542,7 @@ void AChar_SpaceRabbit_C::ExecuteUbergraph_Char_SpaceRabbit(int EntryPoint)
 
 
 // Function Char_SpaceRabbit.Char_SpaceRabbit_C.OnWalkBackStopped__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceRabbit_C::OnWalkBackStopped__DelegateSignature()
 {

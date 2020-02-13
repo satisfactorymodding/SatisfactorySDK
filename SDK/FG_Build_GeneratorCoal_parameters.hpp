@@ -14,8 +14,20 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_GeneratorCoal.Build_GeneratorCoal_C.UserConstructionScript
-struct ABuild_GeneratorCoal_C_UserConstructionScript_Params
+// Function Build_GeneratorCoal.Build_GeneratorCoal_C.StartProductionLoopEffects
+struct ABuild_GeneratorCoal_C_StartProductionLoopEffects_Params
+{
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Build_GeneratorCoal.Build_GeneratorCoal_C.StopProductionLoopEffects
+struct ABuild_GeneratorCoal_C_StopProductionLoopEffects_Params
+{
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Build_GeneratorCoal.Build_GeneratorCoal_C.LostSignificance
+struct ABuild_GeneratorCoal_C_LostSignificance_Params
 {
 };
 
@@ -24,25 +36,10 @@ struct ABuild_GeneratorCoal_C_GainedSignificance_Params
 {
 };
 
-// Function Build_GeneratorCoal.Build_GeneratorCoal_C.StartProductionLoopEffects
-struct ABuild_GeneratorCoal_C_StartProductionLoopEffects_Params
-{
-};
-
-// Function Build_GeneratorCoal.Build_GeneratorCoal_C.StopProductionLoopEffects
-struct ABuild_GeneratorCoal_C_StopProductionLoopEffects_Params
-{
-};
-
-// Function Build_GeneratorCoal.Build_GeneratorCoal_C.LostSignificance
-struct ABuild_GeneratorCoal_C_LostSignificance_Params
-{
-};
-
 // Function Build_GeneratorCoal.Build_GeneratorCoal_C.ExecuteUbergraph_Build_GeneratorCoal
 struct ABuild_GeneratorCoal_C_ExecuteUbergraph_Build_GeneratorCoal_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

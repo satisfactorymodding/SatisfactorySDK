@@ -12,14 +12,14 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Pickup.BP_Pickup_C.UserConstructionScript
-// ()
+// Function BP_Pickup.BP_Pickup_C.PlayPickupEffect
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void ABP_Pickup_C::UserConstructionScript()
+void ABP_Pickup_C::PlayPickupEffect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Pickup.BP_Pickup_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Pickup.BP_Pickup_C.PlayPickupEffect");
 
-	ABP_Pickup_C_UserConstructionScript_Params params;
+	ABP_Pickup_C_PlayPickupEffect_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -30,7 +30,7 @@ void ABP_Pickup_C::UserConstructionScript()
 
 
 // Function BP_Pickup.BP_Pickup_C.StartIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -52,7 +52,7 @@ void ABP_Pickup_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struc
 
 
 // Function BP_Pickup.BP_Pickup_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -74,7 +74,7 @@ void ABP_Pickup_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter, struct
 
 
 // Function BP_Pickup.BP_Pickup_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Pickup_C::ReceiveBeginPlay()
 {
@@ -91,7 +91,7 @@ void ABP_Pickup_C::ReceiveBeginPlay()
 
 
 // Function BP_Pickup.BP_Pickup_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_Pickup_C::GainedSignificance()
 {
@@ -108,7 +108,7 @@ void ABP_Pickup_C::GainedSignificance()
 
 
 // Function BP_Pickup.BP_Pickup_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_Pickup_C::LostSignificance()
 {
@@ -124,25 +124,8 @@ void ABP_Pickup_C::LostSignificance()
 }
 
 
-// Function BP_Pickup.BP_Pickup_C.PlayPickupEffect
-// ()
-
-void ABP_Pickup_C::PlayPickupEffect()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Pickup.BP_Pickup_C.PlayPickupEffect");
-
-	ABP_Pickup_C_PlayPickupEffect_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Pickup.BP_Pickup_C.ReceiveEndPlay
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -161,12 +144,29 @@ void ABP_Pickup_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
 }
 
 
-// Function BP_Pickup.BP_Pickup_C.ExecuteUbergraph_BP_Pickup
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_Pickup.BP_Pickup_C.Event Check Subtitle Distance
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Pickup_C::ExecuteUbergraph_BP_Pickup(int EntryPoint)
+void ABP_Pickup_C::Event_Check_Subtitle_Distance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Pickup.BP_Pickup_C.Event Check Subtitle Distance");
+
+	ABP_Pickup_C_Event_Check_Subtitle_Distance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Pickup.BP_Pickup_C.ExecuteUbergraph_BP_Pickup
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Pickup_C::ExecuteUbergraph_BP_Pickup(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Pickup.BP_Pickup_C.ExecuteUbergraph_BP_Pickup");
 

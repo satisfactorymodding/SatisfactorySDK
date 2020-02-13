@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ProductionIndicatorInstanced.BP_ProductionIndicatorInstanced_C
-// 0x0000 (0x0610 - 0x0610)
+// 0x0000 (0x0630 - 0x0630)
 class UBP_ProductionIndicatorInstanced_C : public UFGProductionIndicatorInstanceComponent
 {
 public:

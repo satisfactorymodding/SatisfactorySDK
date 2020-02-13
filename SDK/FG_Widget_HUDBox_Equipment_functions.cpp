@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.SetEquipmentSlotText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Equipment_C::SetEquipmentSlotText()
 {
@@ -30,7 +30,7 @@ void UWidget_HUDBox_Equipment_C::SetEquipmentSlotText()
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.GetEquipmentSlotVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Equipment_C::GetEquipmentSlotVisibility()
 {
@@ -47,7 +47,7 @@ void UWidget_HUDBox_Equipment_C::GetEquipmentSlotVisibility()
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.SetContentWidgetClass
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Equipment_C::SetContentWidgetClass()
 {
@@ -64,7 +64,7 @@ void UWidget_HUDBox_Equipment_C::SetContentWidgetClass()
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.GetEquipmentInSlot
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AFGEquipment*            equipment                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -86,7 +86,7 @@ void UWidget_HUDBox_Equipment_C::GetEquipmentInSlot(class AFGEquipment** equipme
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.UpdateTitle
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Equipment_C::UpdateTitle()
 {
@@ -103,7 +103,7 @@ void UWidget_HUDBox_Equipment_C::UpdateTitle()
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.UpdateIcon
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Equipment_C::UpdateIcon()
 {
@@ -120,7 +120,7 @@ void UWidget_HUDBox_Equipment_C::UpdateIcon()
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.GetEquipmentItemClass
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UClass*                  Class                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -142,7 +142,7 @@ void UWidget_HUDBox_Equipment_C::GetEquipmentItemClass(class UClass** Class)
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HUDBox_Equipment_C::Construct()
 {
@@ -159,7 +159,7 @@ void UWidget_HUDBox_Equipment_C::Construct()
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -181,7 +181,7 @@ void UWidget_HUDBox_Equipment_C::Tick(struct FGeometry* MyGeometry, float* InDel
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.HideWidget
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Equipment_C::HideWidget()
 {
@@ -198,7 +198,7 @@ void UWidget_HUDBox_Equipment_C::HideWidget()
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HUDBox_Equipment_C::Destruct()
 {
@@ -215,11 +215,11 @@ void UWidget_HUDBox_Equipment_C::Destruct()
 
 
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.ExecuteUbergraph_Widget_HUDBox_Equipment
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HUDBox_Equipment_C::ExecuteUbergraph_Widget_HUDBox_Equipment(int EntryPoint)
+void UWidget_HUDBox_Equipment_C::ExecuteUbergraph_Widget_HUDBox_Equipment(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.ExecuteUbergraph_Widget_HUDBox_Equipment");
 

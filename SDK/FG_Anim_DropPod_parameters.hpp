@@ -17,7 +17,7 @@ namespace SDK
 // Function Anim_DropPod.Anim_DropPod_C.ExecuteUbergraph_Anim_DropPod
 struct UAnim_DropPod_C_ExecuteUbergraph_Anim_DropPod_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CodexStatItem.Widget_CodexStatItem_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_CodexStatItem_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_CodexStatItem_C::Construct()
 
 
 // Function Widget_CodexStatItem.Widget_CodexStatItem_C.ExecuteUbergraph_Widget_CodexStatItem
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CodexStatItem_C::ExecuteUbergraph_Widget_CodexStatItem(int EntryPoint)
+void UWidget_CodexStatItem_C::ExecuteUbergraph_Widget_CodexStatItem(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CodexStatItem.Widget_CodexStatItem_C.ExecuteUbergraph_Widget_CodexStatItem");
 

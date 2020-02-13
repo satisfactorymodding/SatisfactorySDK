@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Desc_ConveyorPoleStackable.Desc_ConveyorPoleStackable_C
-// 0x0000 (0x0160 - 0x0160)
+// 0x0000 (0x0180 - 0x0180)
 class UDesc_ConveyorPoleStackable_C : public UFGPoleDescriptor
 {
 public:

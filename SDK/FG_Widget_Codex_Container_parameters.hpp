@@ -17,13 +17,13 @@ namespace SDK
 // Function Widget_Codex_Container.Widget_Codex_Container_C.PopulateSearchResults
 struct UWidget_Codex_Container_C_PopulateSearchResults_Params
 {
-	struct FText                                       InText;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      InText;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateItemInfo
 struct UWidget_Codex_Container_C_UpdateItemInfo_Params
 {
-	class UClass*                                      product;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     product;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.SetAllItemsAndBuildings
@@ -40,19 +40,19 @@ struct UWidget_Codex_Container_C_GenerateReceipes_Params
 // Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateNotifications
 struct UWidget_Codex_Container_C_UpdateNotifications_Params
 {
-	class UWidget_CodexButton_C*                       forButton;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_CodexButton_C**                      forButton;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.OnFilterButtonPressed
 struct UWidget_Codex_Container_C_OnFilterButtonPressed_Params
 {
-	class UWidget_CodexButton_C*                       ButtonPressed;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_CodexButton_C**                      ButtonPressed;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.SelectButtonWithMessage
 struct UWidget_Codex_Container_C_SelectButtonWithMessage_Params
 {
-	class UClass*                                      inMessage;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     inMessage;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.CheckShouldOpenMessage
@@ -63,9 +63,9 @@ struct UWidget_Codex_Container_C_CheckShouldOpenMessage_Params
 // Function Widget_Codex_Container.Widget_Codex_Container_C.UpdateMessageText
 struct UWidget_Codex_Container_C_UpdateMessageText_Params
 {
-	struct FText                                       senderMail;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       Sender;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      senderMail;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Sender;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.PopulateList
@@ -109,54 +109,61 @@ struct UWidget_Codex_Container_C_MarkAllAsRead_Params
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_0_OnTabButtonClicked__DelegateSignature
 struct UWidget_Codex_Container_C_BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_0_OnTabButtonClicked__DelegateSignature_Params
 {
-	int                                                ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.OnRecipeButtonClicked
 struct UWidget_Codex_Container_C_OnRecipeButtonClicked_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget_ListButton_C*                        ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_ListButton_C**                       ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature
 struct UWidget_Codex_Container_C_BndEvt__mSearchBar_K2Node_ComponentBoundEvent_1_OnTextChanged__DelegateSignature_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.OnSearchResultClicked
 struct UWidget_Codex_Container_C_OnSearchResultClicked_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget_ListButton_C*                        ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_ListButton_C**                       ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
 struct UWidget_Codex_Container_C_BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget_ListButton_C*                        ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_ListButton_C**                       ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_C_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature
 struct UWidget_Codex_Container_C_BndEvt__Widget_ListButton_C_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget_ListButton_C*                        ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_ListButton_C**                       ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__Widget_ListButton_C_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature
 struct UWidget_Codex_Container_C_BndEvt__Widget_ListButton_C_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget_ListButton_C*                        ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_ListButton_C**                       ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function Widget_Codex_Container.Widget_Codex_Container_C.BndEvt__mCategoryVehicles_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature
+struct UWidget_Codex_Container_C_BndEvt__mCategoryVehicles_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature_Params
+{
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_ListButton_C**                       ListButton;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Codex_Container.Widget_Codex_Container_C.ExecuteUbergraph_Widget_Codex_Container
 struct UWidget_Codex_Container_C_ExecuteUbergraph_Widget_Codex_Container_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

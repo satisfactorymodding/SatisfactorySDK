@@ -67,7 +67,7 @@ struct UWidget_Codex_MessageButton_C_BndEvt__mMessageButton_K2Node_ComponentBoun
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.ExecuteUbergraph_Widget_Codex_MessageButton
 struct UWidget_Codex_MessageButton_C_ExecuteUbergraph_Widget_Codex_MessageButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Codex_MessageButton.Widget_Codex_MessageButton_C.OnClicked__DelegateSignature

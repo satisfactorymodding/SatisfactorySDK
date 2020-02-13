@@ -12,8 +12,50 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetNobeliskBarVisibility
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UWidget_PlayerHUD_C::GetNobeliskBarVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetNobeliskBarVisibility");
+
+	UWidget_PlayerHUD_C_GetNobeliskBarVisibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetNobeliskBarPercent
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UWidget_PlayerHUD_C::GetNobeliskBarPercent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetNobeliskBarPercent");
+
+	UWidget_PlayerHUD_C_GetNobeliskBarPercent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.Get_mCollectBar_Percent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +76,7 @@ float UWidget_PlayerHUD_C::Get_mCollectBar_Percent()
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.Get_CollectBarContainer_Visibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,12 +97,12 @@ ESlateVisibility UWidget_PlayerHUD_C::Get_CollectBarContainer_Visibility()
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnToggleInteractUI
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           IsOpen                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  InteractWidgetClass            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          IsOpen                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 InteractWidgetClass            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PlayerHUD_C::OnToggleInteractUI(bool IsOpen, class UClass* InteractWidgetClass)
+void UWidget_PlayerHUD_C::OnToggleInteractUI(bool* IsOpen, class UClass** InteractWidgetClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnToggleInteractUI");
 
@@ -77,11 +119,11 @@ void UWidget_PlayerHUD_C::OnToggleInteractUI(bool IsOpen, class UClass* Interact
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnToggleInventory
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           IsOpen                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          IsOpen                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PlayerHUD_C::OnToggleInventory(bool IsOpen)
+void UWidget_PlayerHUD_C::OnToggleInventory(bool* IsOpen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnToggleInventory");
 
@@ -97,12 +139,12 @@ void UWidget_PlayerHUD_C::OnToggleInventory(bool IsOpen)
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.SetImageVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UImage*                  Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool*                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UImage**                 Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_PlayerHUD_C::SetImageVisibility(bool Value, class UImage* Image)
+void UWidget_PlayerHUD_C::SetImageVisibility(bool* Value, class UImage** Image)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.SetImageVisibility");
 
@@ -119,11 +161,11 @@ void UWidget_PlayerHUD_C::SetImageVisibility(bool Value, class UImage* Image)
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnDisabledInputGateChanged
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FDisabledInputGate      NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FDisabledInputGate*     NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_PlayerHUD_C::OnDisabledInputGateChanged(const struct FDisabledInputGate& NewValue)
+void UWidget_PlayerHUD_C::OnDisabledInputGateChanged(struct FDisabledInputGate* NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnDisabledInputGateChanged");
 
@@ -139,7 +181,7 @@ void UWidget_PlayerHUD_C::OnDisabledInputGateChanged(const struct FDisabledInput
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetVisibility_1
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -160,7 +202,7 @@ ESlateVisibility UWidget_PlayerHUD_C::GetVisibility_1()
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.Get_mInputLockedTExt_Visibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -181,7 +223,7 @@ ESlateVisibility UWidget_PlayerHUD_C::Get_mInputLockedTExt_Visibility()
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetScannerDetailsVisibility
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -202,7 +244,7 @@ ESlateVisibility UWidget_PlayerHUD_C::GetScannerDetailsVisibility()
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.Get_mReviveProgressBar_Visibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -223,7 +265,7 @@ ESlateVisibility UWidget_PlayerHUD_C::Get_mReviveProgressBar_Visibility()
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.Get_mReviveProgressBar_Percent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -244,7 +286,7 @@ float UWidget_PlayerHUD_C::Get_mReviveProgressBar_Percent()
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.PlayRadiationAnimation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PlayerHUD_C::PlayRadiationAnimation()
 {
@@ -261,7 +303,7 @@ void UWidget_PlayerHUD_C::PlayRadiationAnimation()
 
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.StopRadiationAnimation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PlayerHUD_C::StopRadiationAnimation()
 {
@@ -277,8 +319,25 @@ void UWidget_PlayerHUD_C::StopRadiationAnimation()
 }
 
 
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.CreateTimeWarning
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerHUD_C::CreateTimeWarning()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.CreateTimeWarning");
+
+	UWidget_PlayerHUD_C_CreateTimeWarning_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PlayerHUD_C::Construct()
 {
@@ -294,12 +353,46 @@ void UWidget_PlayerHUD_C::Construct()
 }
 
 
-// Function Widget_PlayerHUD.Widget_PlayerHUD_C.ExecuteUbergraph_Widget_PlayerHUD
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.EventUpdateQuickslotBackgroundOpacity
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_PlayerHUD_C::ExecuteUbergraph_Widget_PlayerHUD(int EntryPoint)
+void UWidget_PlayerHUD_C::EventUpdateQuickslotBackgroundOpacity()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.EventUpdateQuickslotBackgroundOpacity");
+
+	UWidget_PlayerHUD_C_EventUpdateQuickslotBackgroundOpacity_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_PlayerHUD_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.Destruct");
+
+	UWidget_PlayerHUD_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.ExecuteUbergraph_Widget_PlayerHUD
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_PlayerHUD_C::ExecuteUbergraph_Widget_PlayerHUD(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHUD.Widget_PlayerHUD_C.ExecuteUbergraph_Widget_PlayerHUD");
 

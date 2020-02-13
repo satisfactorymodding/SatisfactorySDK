@@ -49,7 +49,7 @@ public:
 	void ReceiveAbort(class AActor** OwnerActor);
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
 	void ReceiveAbortAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_EnemyAttackChoice(int EntryPoint);
+	void ExecuteUbergraph_BTT_EnemyAttackChoice(int* EntryPoint);
 };
 
 

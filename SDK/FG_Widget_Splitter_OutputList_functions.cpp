@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.ShowHideAddButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ShouldShowAddButton            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ShouldShowAddButton            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Splitter_OutputList_C::ShowHideAddButton(bool ShouldShowAddButton)
+void UWidget_Splitter_OutputList_C::ShowHideAddButton(bool* ShouldShowAddButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.ShowHideAddButton");
 
@@ -33,7 +33,7 @@ void UWidget_Splitter_OutputList_C::ShowHideAddButton(bool ShouldShowAddButton)
 
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.GetDescriptorsForSearch
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Splitter_OutputList_C::GetDescriptorsForSearch()
 {
@@ -50,7 +50,7 @@ void UWidget_Splitter_OutputList_C::GetDescriptorsForSearch()
 
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,7 +70,7 @@ void UWidget_Splitter_OutputList_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.BndEvt__mAdd_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Splitter_OutputList_C::BndEvt__mAdd_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -87,7 +87,7 @@ void UWidget_Splitter_OutputList_C::BndEvt__mAdd_K2Node_ComponentBoundEvent_1_On
 
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Splitter_OutputList_C::Construct()
 {
@@ -104,11 +104,11 @@ void UWidget_Splitter_OutputList_C::Construct()
 
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.ExecuteUbergraph_Widget_Splitter_OutputList
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Splitter_OutputList_C::ExecuteUbergraph_Widget_Splitter_OutputList(int EntryPoint)
+void UWidget_Splitter_OutputList_C::ExecuteUbergraph_Widget_Splitter_OutputList(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.ExecuteUbergraph_Widget_Splitter_OutputList");
 
@@ -124,7 +124,7 @@ void UWidget_Splitter_OutputList_C::ExecuteUbergraph_Widget_Splitter_OutputList(
 
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.OnAddClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Splitter_OutputList_C::OnAddClicked__DelegateSignature()
 {

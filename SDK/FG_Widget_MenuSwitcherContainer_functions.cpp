@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.GetFirstChildOfSwitcher
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*            SwitcherWidget                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPanelWidget**           SwitcherWidget                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UWidget*                 Child                          (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_MenuSwitcherContainer_C::GetFirstChildOfSwitcher(class UPanelWidget* SwitcherWidget, class UWidget** Child)
+void UWidget_MenuSwitcherContainer_C::GetFirstChildOfSwitcher(class UPanelWidget** SwitcherWidget, class UWidget** Child)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.GetFirstChildOfSwitcher");
 
@@ -37,7 +37,7 @@ void UWidget_MenuSwitcherContainer_C::GetFirstChildOfSwitcher(class UPanelWidget
 
 
 // Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.SetSwitcherWidget
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidgetSwitcher*         Widget_Switcher                (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -59,7 +59,7 @@ void UWidget_MenuSwitcherContainer_C::SetSwitcherWidget(class UWidgetSwitcher** 
 
 
 // Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.SetNoneActive
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_MenuSwitcherContainer_C::SetNoneActive()
 {
@@ -75,29 +75,12 @@ void UWidget_MenuSwitcherContainer_C::SetNoneActive()
 }
 
 
-// Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.BndEvt__HideSwitcher_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// ()
-
-void UWidget_MenuSwitcherContainer_C::BndEvt__HideSwitcher_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.BndEvt__HideSwitcher_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
-
-	UWidget_MenuSwitcherContainer_C_BndEvt__HideSwitcher_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.SetActiveWidget
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget*                 Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget**                Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_MenuSwitcherContainer_C::SetActiveWidget(class UWidget* Widget)
+void UWidget_MenuSwitcherContainer_C::SetActiveWidget(class UWidget** Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.SetActiveWidget");
 
@@ -112,12 +95,29 @@ void UWidget_MenuSwitcherContainer_C::SetActiveWidget(class UWidget* Widget)
 }
 
 
-// Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.ExecuteUbergraph_Widget_MenuSwitcherContainer
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.WidgetAnimationEvt_HideSwitcher_K2Node_WidgetAnimationEvent_1
+// (BlueprintEvent)
 
-void UWidget_MenuSwitcherContainer_C::ExecuteUbergraph_Widget_MenuSwitcherContainer(int EntryPoint)
+void UWidget_MenuSwitcherContainer_C::WidgetAnimationEvt_HideSwitcher_K2Node_WidgetAnimationEvent_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.WidgetAnimationEvt_HideSwitcher_K2Node_WidgetAnimationEvent_1");
+
+	UWidget_MenuSwitcherContainer_C_WidgetAnimationEvt_HideSwitcher_K2Node_WidgetAnimationEvent_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.ExecuteUbergraph_Widget_MenuSwitcherContainer
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_MenuSwitcherContainer_C::ExecuteUbergraph_Widget_MenuSwitcherContainer(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.ExecuteUbergraph_Widget_MenuSwitcherContainer");
 
@@ -133,11 +133,11 @@ void UWidget_MenuSwitcherContainer_C::ExecuteUbergraph_Widget_MenuSwitcherContai
 
 
 // Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.OnWidgetSet__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           mHasChangedActiveWidget        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          mHasChangedActiveWidget        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MenuSwitcherContainer_C::OnWidgetSet__DelegateSignature(bool mHasChangedActiveWidget)
+void UWidget_MenuSwitcherContainer_C::OnWidgetSet__DelegateSignature(bool* mHasChangedActiveWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MenuSwitcherContainer.Widget_MenuSwitcherContainer_C.OnWidgetSet__DelegateSignature");
 

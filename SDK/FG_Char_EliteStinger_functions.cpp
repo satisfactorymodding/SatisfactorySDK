@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Char_EliteStinger.Char_EliteStinger_C.UserConstructionScript
-// ()
-
-void AChar_EliteStinger_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_EliteStinger.Char_EliteStinger_C.UserConstructionScript");
-
-	AChar_EliteStinger_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_EliteStinger.Char_EliteStinger_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AChar_EliteStinger_C::ReceiveBeginPlay()
 {
@@ -47,7 +30,7 @@ void AChar_EliteStinger_C::ReceiveBeginPlay()
 
 
 // Function Char_EliteStinger.Char_EliteStinger_C.SpawnGas
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_EliteStinger_C::SpawnGas()
 {
@@ -64,24 +47,24 @@ void AChar_EliteStinger_C::SpawnGas()
 
 
 // Function Char_EliteStinger.Char_EliteStinger_C.OnTakeAnyDamage_Event_1
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UDamageType*             DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_EliteStinger_C::OnTakeAnyDamage_Event_1(class AActor* damagedActor, float Damage, class UDamageType* DamageType, class AController* instigatedBy, class AActor* damageCauser)
+void AChar_EliteStinger_C::OnTakeAnyDamage_Event_1(class AActor** DamagedActor, float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_EliteStinger.Char_EliteStinger_C.OnTakeAnyDamage_Event_1");
 
 	AChar_EliteStinger_C_OnTakeAnyDamage_Event_1_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.Damage = Damage;
 	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -92,11 +75,11 @@ void AChar_EliteStinger_C::OnTakeAnyDamage_Event_1(class AActor* damagedActor, f
 
 
 // Function Char_EliteStinger.Char_EliteStinger_C.ExecuteUbergraph_Char_EliteStinger
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_EliteStinger_C::ExecuteUbergraph_Char_EliteStinger(int EntryPoint)
+void AChar_EliteStinger_C::ExecuteUbergraph_Char_EliteStinger(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_EliteStinger.Char_EliteStinger_C.ExecuteUbergraph_Char_EliteStinger");
 

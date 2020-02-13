@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.SetActiveSlot
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            mActiveSlotIndex               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           mActiveSlotIndex               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PlayerEquipmentInventory_C::SetActiveSlot(int mActiveSlotIndex)
+void UWidget_PlayerEquipmentInventory_C::SetActiveSlot(int* mActiveSlotIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.SetActiveSlot");
 
@@ -33,7 +33,7 @@ void UWidget_PlayerEquipmentInventory_C::SetActiveSlot(int mActiveSlotIndex)
 
 
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.ArmSelectionVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -54,7 +54,7 @@ ESlateVisibility UWidget_PlayerEquipmentInventory_C::ArmSelectionVisibility()
 
 
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PlayerEquipmentInventory_C::Construct()
 {
@@ -71,7 +71,7 @@ void UWidget_PlayerEquipmentInventory_C::Construct()
 
 
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -93,7 +93,7 @@ void UWidget_PlayerEquipmentInventory_C::Tick(struct FGeometry* MyGeometry, floa
 
 
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PlayerEquipmentInventory_C::Destruct()
 {
@@ -110,11 +110,11 @@ void UWidget_PlayerEquipmentInventory_C::Destruct()
 
 
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.ExecuteUbergraph_Widget_PlayerEquipmentInventory
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PlayerEquipmentInventory_C::ExecuteUbergraph_Widget_PlayerEquipmentInventory(int EntryPoint)
+void UWidget_PlayerEquipmentInventory_C::ExecuteUbergraph_Widget_PlayerEquipmentInventory(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.ExecuteUbergraph_Widget_PlayerEquipmentInventory");
 

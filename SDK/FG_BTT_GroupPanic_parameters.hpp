@@ -23,7 +23,7 @@ struct UBTT_GroupPanic_C_ReceiveExecute_Params
 // Function BTT_GroupPanic.BTT_GroupPanic_C.ExecuteUbergraph_BTT_GroupPanic
 struct UBTT_GroupPanic_C_ExecuteUbergraph_BTT_GroupPanic_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

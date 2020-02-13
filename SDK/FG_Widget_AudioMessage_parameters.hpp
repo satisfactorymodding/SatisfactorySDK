@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_AudioMessage.Widget_AudioMessage_C.SetSenderInfo
 struct UWidget_AudioMessage_C_SetSenderInfo_Params
 {
-	class UClass*                                      inSender;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     inSender;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_AudioMessage.Widget_AudioMessage_C.GetDarkGray
@@ -49,7 +49,7 @@ struct UWidget_AudioMessage_C_Destruct_Params
 // Function Widget_AudioMessage.Widget_AudioMessage_C.ExecuteUbergraph_Widget_AudioMessage
 struct UWidget_AudioMessage_C_ExecuteUbergraph_Widget_AudioMessage_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

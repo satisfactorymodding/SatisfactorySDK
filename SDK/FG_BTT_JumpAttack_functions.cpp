@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_JumpAttack.BTT_JumpAttack_C.mOnJumpAttackFailed_2B6962824822751FCAD482A8789ABE88
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_JumpAttack_C::mOnJumpAttackFailed_2B6962824822751FCAD482A8789ABE88()
 {
@@ -30,7 +30,7 @@ void UBTT_JumpAttack_C::mOnJumpAttackFailed_2B6962824822751FCAD482A8789ABE88()
 
 
 // Function BTT_JumpAttack.BTT_JumpAttack_C.mOnJumpAttackFinished_2B6962824822751FCAD482A8789ABE88
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_JumpAttack_C::mOnJumpAttackFinished_2B6962824822751FCAD482A8789ABE88()
 {
@@ -47,7 +47,7 @@ void UBTT_JumpAttack_C::mOnJumpAttackFinished_2B6962824822751FCAD482A8789ABE88()
 
 
 // Function BTT_JumpAttack.BTT_JumpAttack_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -69,7 +69,7 @@ void UBTT_JumpAttack_C::ReceiveExecuteAI(class AAIController** OwnerController, 
 
 
 // Function BTT_JumpAttack.BTT_JumpAttack_C.ReceiveAbortAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -91,11 +91,11 @@ void UBTT_JumpAttack_C::ReceiveAbortAI(class AAIController** OwnerController, cl
 
 
 // Function BTT_JumpAttack.BTT_JumpAttack_C.ExecuteUbergraph_BTT_JumpAttack
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_JumpAttack_C::ExecuteUbergraph_BTT_JumpAttack(int EntryPoint)
+void UBTT_JumpAttack_C::ExecuteUbergraph_BTT_JumpAttack(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_JumpAttack.BTT_JumpAttack_C.ExecuteUbergraph_BTT_JumpAttack");
 

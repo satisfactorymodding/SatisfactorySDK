@@ -22,7 +22,7 @@ struct UWidget_Codex_Mail_C_Construct_Params
 // Function Widget_Codex_Mail.Widget_Codex_Mail_C.ExecuteUbergraph_Widget_Codex_Mail
 struct UWidget_Codex_Mail_C_ExecuteUbergraph_Widget_Codex_Mail_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

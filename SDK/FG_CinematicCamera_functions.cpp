@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function CinematicCamera.CineCameraActor.GetCineCameraComponent
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UCineCameraComponent*    ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -24,6 +24,7 @@ class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
 	ACineCameraActor_GetCineCameraComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,11 +35,11 @@ class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
 
 
 // Function CinematicCamera.CineCameraComponent.SetLensPresetByName
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                  InPresetName                   (Parm, ZeroConstructor)
+// class FString*                 InPresetName                   (Parm, ZeroConstructor)
 
-void UCineCameraComponent::SetLensPresetByName(const class FString& InPresetName)
+void UCineCameraComponent::SetLensPresetByName(class FString* InPresetName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetLensPresetByName");
 
@@ -46,6 +47,7 @@ void UCineCameraComponent::SetLensPresetByName(const class FString& InPresetName
 	params.InPresetName = InPresetName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +56,11 @@ void UCineCameraComponent::SetLensPresetByName(const class FString& InPresetName
 
 
 // Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                  InPresetName                   (Parm, ZeroConstructor)
+// class FString*                 InPresetName                   (Parm, ZeroConstructor)
 
-void UCineCameraComponent::SetFilmbackPresetByName(const class FString& InPresetName)
+void UCineCameraComponent::SetFilmbackPresetByName(class FString* InPresetName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName");
 
@@ -66,6 +68,7 @@ void UCineCameraComponent::SetFilmbackPresetByName(const class FString& InPreset
 	params.InPresetName = InPresetName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +77,7 @@ void UCineCameraComponent::SetFilmbackPresetByName(const class FString& InPreset
 
 
 // Function CinematicCamera.CineCameraComponent.GetVerticalFieldOfView
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -85,6 +88,7 @@ float UCineCameraComponent::GetVerticalFieldOfView()
 	UCineCameraComponent_GetVerticalFieldOfView_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +99,7 @@ float UCineCameraComponent::GetVerticalFieldOfView()
 
 
 // Function CinematicCamera.CineCameraComponent.GetLensPresetName
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -106,6 +110,7 @@ class FString UCineCameraComponent::GetLensPresetName()
 	UCineCameraComponent_GetLensPresetName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +121,7 @@ class FString UCineCameraComponent::GetLensPresetName()
 
 
 // Function CinematicCamera.CineCameraComponent.GetHorizontalFieldOfView
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -127,6 +132,7 @@ float UCineCameraComponent::GetHorizontalFieldOfView()
 	UCineCameraComponent_GetHorizontalFieldOfView_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +143,7 @@ float UCineCameraComponent::GetHorizontalFieldOfView()
 
 
 // Function CinematicCamera.CineCameraComponent.GetFilmbackPresetName
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -148,6 +154,7 @@ class FString UCineCameraComponent::GetFilmbackPresetName()
 	UCineCameraComponent_GetFilmbackPresetName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

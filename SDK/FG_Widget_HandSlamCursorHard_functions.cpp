@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HandSlamCursorHard.Widget_HandSlamCursorHard_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HandSlamCursorHard_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_HandSlamCursorHard_C::Construct()
 
 
 // Function Widget_HandSlamCursorHard.Widget_HandSlamCursorHard_C.ExecuteUbergraph_Widget_HandSlamCursorHard
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HandSlamCursorHard_C::ExecuteUbergraph_Widget_HandSlamCursorHard(int EntryPoint)
+void UWidget_HandSlamCursorHard_C::ExecuteUbergraph_Widget_HandSlamCursorHard(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HandSlamCursorHard.Widget_HandSlamCursorHard_C.ExecuteUbergraph_Widget_HandSlamCursorHard");
 

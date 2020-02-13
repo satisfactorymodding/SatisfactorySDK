@@ -43,22 +43,22 @@ public:
 	}
 
 
-	struct FFrameTime TransformTime(const struct FFrameTime& SourceTime, const struct FFrameRate& SourceRate, const struct FFrameRate& DestinationRate);
-	struct FFrameNumber Subtract_FrameNumberInteger(const struct FFrameNumber& A, int B);
-	struct FFrameNumber Subtract_FrameNumberFrameNumber(const struct FFrameNumber& A, const struct FFrameNumber& B);
-	struct FFrameTime SnapFrameTimeToRate(const struct FFrameTime& SourceTime, const struct FFrameRate& SourceRate, const struct FFrameRate& SnapToRate);
-	struct FFrameTime Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate);
-	struct FFrameNumber Multiply_FrameNumberInteger(const struct FFrameNumber& A, int B);
-	bool IsValid_MultipleOf(const struct FFrameRate& InFrameRate, const struct FFrameRate& OtherFramerate);
-	bool IsValid_Framerate(const struct FFrameRate& InFrameRate);
-	struct FTimecode GetTimecode();
-	struct FFrameNumber Divide_FrameNumberInteger(const struct FFrameNumber& A, int B);
-	class FString Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay);
-	float Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime);
-	float Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate);
-	int Conv_FrameNumberToInteger(const struct FFrameNumber& InFrameNumber);
-	struct FFrameNumber Add_FrameNumberInteger(const struct FFrameNumber& A, int B);
-	struct FFrameNumber Add_FrameNumberFrameNumber(const struct FFrameNumber& A, const struct FFrameNumber& B);
+	struct FFrameTime STATIC_TransformTime(struct FFrameTime* SourceTime, struct FFrameRate* SourceRate, struct FFrameRate* DestinationRate);
+	struct FFrameNumber STATIC_Subtract_FrameNumberInteger(struct FFrameNumber* A, int* B);
+	struct FFrameNumber STATIC_Subtract_FrameNumberFrameNumber(struct FFrameNumber* A, struct FFrameNumber* B);
+	struct FFrameTime STATIC_SnapFrameTimeToRate(struct FFrameTime* SourceTime, struct FFrameRate* SourceRate, struct FFrameRate* SnapToRate);
+	struct FFrameTime STATIC_Multiply_SecondsFrameRate(float* TimeInSeconds, struct FFrameRate* FrameRate);
+	struct FFrameNumber STATIC_Multiply_FrameNumberInteger(struct FFrameNumber* A, int* B);
+	bool STATIC_IsValid_MultipleOf(struct FFrameRate* InFrameRate, struct FFrameRate* OtherFramerate);
+	bool STATIC_IsValid_Framerate(struct FFrameRate* InFrameRate);
+	struct FTimecode STATIC_GetTimecode();
+	struct FFrameNumber STATIC_Divide_FrameNumberInteger(struct FFrameNumber* A, int* B);
+	class FString STATIC_Conv_TimecodeToString(struct FTimecode* InTimecode, bool* bForceSignDisplay);
+	float STATIC_Conv_QualifiedFrameTimeToSeconds(struct FQualifiedFrameTime* InFrameTime);
+	float STATIC_Conv_FrameRateToSeconds(struct FFrameRate* InFrameRate);
+	int STATIC_Conv_FrameNumberToInteger(struct FFrameNumber* InFrameNumber);
+	struct FFrameNumber STATIC_Add_FrameNumberInteger(struct FFrameNumber* A, int* B);
+	struct FFrameNumber STATIC_Add_FrameNumberFrameNumber(struct FFrameNumber* A, struct FFrameNumber* B);
 };
 
 

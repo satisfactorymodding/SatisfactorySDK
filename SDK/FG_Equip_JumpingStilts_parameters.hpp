@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Equip_JumpingStilts.Equip_JumpingStilts_C.UserConstructionScript
-struct AEquip_JumpingStilts_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_JumpingStilts.Equip_JumpingStilts_C.WasEquipped
 struct AEquip_JumpingStilts_C_WasEquipped_Params
 {
@@ -37,7 +32,7 @@ struct AEquip_JumpingStilts_C_ReceiveBeginPlay_Params
 // Function Equip_JumpingStilts.Equip_JumpingStilts_C.ExecuteUbergraph_Equip_JumpingStilts
 struct AEquip_JumpingStilts_C_ExecuteUbergraph_Equip_JumpingStilts_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

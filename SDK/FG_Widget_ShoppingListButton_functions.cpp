@@ -12,8 +12,33 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.OnKeyDown
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_ShoppingListButton_C::OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.OnKeyDown");
+
+	UWidget_ShoppingListButton_C_OnKeyDown_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.GetMinusVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +59,7 @@ ESlateVisibility UWidget_ShoppingListButton_C::GetMinusVisibility()
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.GetInputNumberTooltip
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -55,7 +80,7 @@ class UWidget* UWidget_ShoppingListButton_C::GetInputNumberTooltip()
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.GetButtonTooltip
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -76,7 +101,7 @@ class UWidget* UWidget_ShoppingListButton_C::GetButtonTooltip()
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.GetInputTextfieldVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,7 +122,7 @@ ESlateVisibility UWidget_ShoppingListButton_C::GetInputTextfieldVisibility()
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.SetAmountText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -118,7 +143,7 @@ struct FText UWidget_ShoppingListButton_C::SetAmountText()
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.GetHoverVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -139,7 +164,7 @@ ESlateVisibility UWidget_ShoppingListButton_C::GetHoverVisibility()
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.GetAmount
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            NumberRecipes                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -161,7 +186,7 @@ void UWidget_ShoppingListButton_C::GetAmount(int* NumberRecipes)
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.GetAmountRecipesInListColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -182,7 +207,7 @@ struct FSlateColor UWidget_ShoppingListButton_C::GetAmountRecipesInListColor()
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.BndEvt__Remove1_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ShoppingListButton_C::BndEvt__Remove1_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
@@ -199,7 +224,7 @@ void UWidget_ShoppingListButton_C::BndEvt__Remove1_K2Node_ComponentBoundEvent_2_
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ShoppingListButton_C::Construct()
 {
@@ -216,7 +241,7 @@ void UWidget_ShoppingListButton_C::Construct()
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.BndEvt__Add1_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ShoppingListButton_C::BndEvt__Add1_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -233,12 +258,12 @@ void UWidget_ShoppingListButton_C::BndEvt__Add1_K2Node_ComponentBoundEvent_0_OnB
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.BndEvt__mInputNumberToAdd_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ShoppingListButton_C::BndEvt__mInputNumberToAdd_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_ShoppingListButton_C::BndEvt__mInputNumberToAdd_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.BndEvt__mInputNumberToAdd_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
@@ -255,11 +280,11 @@ void UWidget_ShoppingListButton_C::BndEvt__mInputNumberToAdd_K2Node_ComponentBou
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.ExecuteUbergraph_Widget_ShoppingListButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ShoppingListButton_C::ExecuteUbergraph_Widget_ShoppingListButton(int EntryPoint)
+void UWidget_ShoppingListButton_C::ExecuteUbergraph_Widget_ShoppingListButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.ExecuteUbergraph_Widget_ShoppingListButton");
 
@@ -275,12 +300,12 @@ void UWidget_ShoppingListButton_C::ExecuteUbergraph_Widget_ShoppingListButton(in
 
 
 // Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.OnShortcutRemapClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            shortcutIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  newRecipe                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           shortcutIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 newRecipe                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ShoppingListButton_C::OnShortcutRemapClicked__DelegateSignature(int shortcutIndex, class UClass* newRecipe)
+void UWidget_ShoppingListButton_C::OnShortcutRemapClicked__DelegateSignature(int* shortcutIndex, class UClass** newRecipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ShoppingListButton.Widget_ShoppingListButton_C.OnShortcutRemapClicked__DelegateSignature");
 

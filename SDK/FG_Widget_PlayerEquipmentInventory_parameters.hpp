@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.SetActiveSlot
 struct UWidget_PlayerEquipmentInventory_C_SetActiveSlot_Params
 {
-	int                                                mActiveSlotIndex;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               mActiveSlotIndex;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.ArmSelectionVisibility
@@ -46,7 +46,7 @@ struct UWidget_PlayerEquipmentInventory_C_Destruct_Params
 // Function Widget_PlayerEquipmentInventory.Widget_PlayerEquipmentInventory_C.ExecuteUbergraph_Widget_PlayerEquipmentInventory
 struct UWidget_PlayerEquipmentInventory_C_ExecuteUbergraph_Widget_PlayerEquipmentInventory_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

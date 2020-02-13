@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_NavigationArea.Widget_NavigationArea_C
-// 0x0018 (0x0220 - 0x0208)
+// 0x0018 (0x0248 - 0x0230)
 class UWidget_NavigationArea_C : public UUserWidget
 {
 public:
-	struct FText                                       mNavigationText;                                          // 0x0208(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FText                                       mNavigationText;                                          // 0x0230(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

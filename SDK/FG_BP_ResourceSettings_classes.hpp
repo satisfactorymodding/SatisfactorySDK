@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResourceSettings.BP_ResourceSettings_C
-// 0x0000 (0x00B8 - 0x00B8)
+// 0x0000 (0x00C0 - 0x00C0)
 class UBP_ResourceSettings_C : public UFGResourceSettings
 {
 public:

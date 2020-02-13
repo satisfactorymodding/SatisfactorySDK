@@ -14,29 +14,28 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_OilRefinery.Build_OilRefinery_C.UserConstructionScript
-struct ABuild_OilRefinery_C_UserConstructionScript_Params
-{
-};
-
 // Function Build_OilRefinery.Build_OilRefinery_C.StartIdlingLoopEffects
 struct ABuild_OilRefinery_C_StartIdlingLoopEffects_Params
 {
+	bool*                                              didGainPower;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_OilRefinery.Build_OilRefinery_C.StopIdlingLoopEffects
 struct ABuild_OilRefinery_C_StopIdlingLoopEffects_Params
 {
+	bool*                                              didLosePower;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_OilRefinery.Build_OilRefinery_C.StartProductionLoopEffects
 struct ABuild_OilRefinery_C_StartProductionLoopEffects_Params
 {
+	bool*                                              didStartProducing;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_OilRefinery.Build_OilRefinery_C.StopProductionLoopEffects
 struct ABuild_OilRefinery_C_StopProductionLoopEffects_Params
 {
+	bool*                                              didStopProducing;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_OilRefinery.Build_OilRefinery_C.GainedSignificance
@@ -52,7 +51,7 @@ struct ABuild_OilRefinery_C_LostSignificance_Params
 // Function Build_OilRefinery.Build_OilRefinery_C.ExecuteUbergraph_Build_OilRefinery
 struct ABuild_OilRefinery_C_ExecuteUbergraph_Build_OilRefinery_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

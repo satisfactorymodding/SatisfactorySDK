@@ -86,13 +86,13 @@ struct UWidget_TradingPost_LaunchButton_C_Construct_Params
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.mLaunchShip
 struct UWidget_TradingPost_LaunchButton_C_mLaunchShip_Params
 {
-	bool                                               IsTutorialPhase;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              IsTutorialPhase;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost_LaunchButton.Widget_TradingPost_LaunchButton_C.ExecuteUbergraph_Widget_TradingPost_LaunchButton
 struct UWidget_TradingPost_LaunchButton_C_ExecuteUbergraph_Widget_TradingPost_LaunchButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

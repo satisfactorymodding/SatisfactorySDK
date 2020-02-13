@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_IsInFront.BTS_IsInFront_C.ReceiveTickAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -37,11 +37,11 @@ void UBTS_IsInFront_C::ReceiveTickAI(class AAIController** OwnerController, clas
 
 
 // Function BTS_IsInFront.BTS_IsInFront_C.ExecuteUbergraph_BTS_IsInFront
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_IsInFront_C::ExecuteUbergraph_BTS_IsInFront(int EntryPoint)
+void UBTS_IsInFront_C::ExecuteUbergraph_BTS_IsInFront(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_IsInFront.BTS_IsInFront_C.ExecuteUbergraph_BTS_IsInFront");
 

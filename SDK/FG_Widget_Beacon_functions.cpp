@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Beacon.Widget_Beacon_C.SetBeaconColor
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Beacon_C::SetBeaconColor(const struct FLinearColor& Color)
+void UWidget_Beacon_C::SetBeaconColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Beacon.Widget_Beacon_C.SetBeaconColor");
 
@@ -33,11 +33,11 @@ void UWidget_Beacon_C::SetBeaconColor(const struct FLinearColor& Color)
 
 
 // Function Widget_Beacon.Widget_Beacon_C.SetBeaconText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Beacon_C::SetBeaconText(const struct FText& Text)
+void UWidget_Beacon_C::SetBeaconText(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Beacon.Widget_Beacon_C.SetBeaconText");
 
@@ -52,28 +52,8 @@ void UWidget_Beacon_C::SetBeaconText(const struct FText& Text)
 }
 
 
-// Function Widget_Beacon.Widget_Beacon_C.SetBeaconTexture
-// ()
-// Parameters:
-// class UTexture2D*              Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_Beacon_C::SetBeaconTexture(class UTexture2D* Texture)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Beacon.Widget_Beacon_C.SetBeaconTexture");
-
-	UWidget_Beacon_C_SetBeaconTexture_Params params;
-	params.Texture = Texture;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Beacon.Widget_Beacon_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Beacon_C::Construct()
 {
@@ -90,7 +70,7 @@ void UWidget_Beacon_C::Construct()
 
 
 // Function Widget_Beacon.Widget_Beacon_C.BndEvt__mColorButton_K2Node_ComponentBoundEvent_115_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Beacon_C::BndEvt__mColorButton_K2Node_ComponentBoundEvent_115_OnButtonClickedEvent__DelegateSignature()
 {
@@ -107,11 +87,11 @@ void UWidget_Beacon_C::BndEvt__mColorButton_K2Node_ComponentBoundEvent_115_OnBut
 
 
 // Function Widget_Beacon.Widget_Beacon_C.OnColorPicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Beacon_C::OnColorPicked(const struct FLinearColor& Color)
+void UWidget_Beacon_C::OnColorPicked(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Beacon.Widget_Beacon_C.OnColorPicked");
 
@@ -127,7 +107,7 @@ void UWidget_Beacon_C::OnColorPicked(const struct FLinearColor& Color)
 
 
 // Function Widget_Beacon.Widget_Beacon_C.BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Beacon_C::BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature()
 {
@@ -144,7 +124,7 @@ void UWidget_Beacon_C::BndEvt__Widget_Window_K2Node_ComponentBoundEvent_0_OnClos
 
 
 // Function Widget_Beacon.Widget_Beacon_C.OnPickup
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Beacon_C::OnPickup()
 {
@@ -161,12 +141,12 @@ void UWidget_Beacon_C::OnPickup()
 
 
 // Function Widget_Beacon.Widget_Beacon_C.BndEvt__mTowerName_K2Node_ComponentBoundEvent_1_OnEditableTextCommittedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Beacon_C::BndEvt__mTowerName_K2Node_ComponentBoundEvent_1_OnEditableTextCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_Beacon_C::BndEvt__mTowerName_K2Node_ComponentBoundEvent_1_OnEditableTextCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Beacon.Widget_Beacon_C.BndEvt__mTowerName_K2Node_ComponentBoundEvent_1_OnEditableTextCommittedEvent__DelegateSignature");
 
@@ -183,11 +163,11 @@ void UWidget_Beacon_C::BndEvt__mTowerName_K2Node_ComponentBoundEvent_1_OnEditabl
 
 
 // Function Widget_Beacon.Widget_Beacon_C.UpdateColor
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            New_Color                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           New_Color                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Beacon_C::UpdateColor(const struct FLinearColor& New_Color)
+void UWidget_Beacon_C::UpdateColor(struct FLinearColor* New_Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Beacon.Widget_Beacon_C.UpdateColor");
 
@@ -203,11 +183,11 @@ void UWidget_Beacon_C::UpdateColor(const struct FLinearColor& New_Color)
 
 
 // Function Widget_Beacon.Widget_Beacon_C.ExecuteUbergraph_Widget_Beacon
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Beacon_C::ExecuteUbergraph_Widget_Beacon(int EntryPoint)
+void UWidget_Beacon_C::ExecuteUbergraph_Widget_Beacon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Beacon.Widget_Beacon_C.ExecuteUbergraph_Widget_Beacon");
 

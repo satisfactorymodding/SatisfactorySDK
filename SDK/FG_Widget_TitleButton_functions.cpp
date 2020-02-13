@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TitleButton.Widget_TitleButton_C.GetButtonHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FLinearColor UWidget_TitleButton_C::GetButtonHoverColor()
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.GetCrossHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ struct FLinearColor UWidget_TitleButton_C::GetCrossHoverColor()
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature()
 {
@@ -72,7 +72,7 @@ void UWidget_TitleButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnB
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_597_OnButtonPressedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_597_OnButtonPressedEvent__DelegateSignature()
 {
@@ -89,7 +89,7 @@ void UWidget_TitleButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_597_OnB
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_642_OnButtonReleasedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_642_OnButtonReleasedEvent__DelegateSignature()
 {
@@ -106,7 +106,7 @@ void UWidget_TitleButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_642_OnB
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TitleButton_C::Construct()
 {
@@ -123,7 +123,7 @@ void UWidget_TitleButton_C::Construct()
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 {
@@ -140,7 +140,7 @@ void UWidget_TitleButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButto
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TitleButton_C::Destruct()
 {
@@ -157,7 +157,7 @@ void UWidget_TitleButton_C::Destruct()
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
@@ -174,11 +174,11 @@ void UWidget_TitleButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButto
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.ExecuteUbergraph_Widget_TitleButton
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TitleButton_C::ExecuteUbergraph_Widget_TitleButton(int EntryPoint)
+void UWidget_TitleButton_C::ExecuteUbergraph_Widget_TitleButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TitleButton.Widget_TitleButton_C.ExecuteUbergraph_Widget_TitleButton");
 
@@ -194,7 +194,7 @@ void UWidget_TitleButton_C::ExecuteUbergraph_Widget_TitleButton(int EntryPoint)
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.OnReleased__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TitleButton_C::OnReleased__DelegateSignature()
 {
@@ -211,7 +211,7 @@ void UWidget_TitleButton_C::OnReleased__DelegateSignature()
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.OnPressed__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TitleButton_C::OnPressed__DelegateSignature()
 {
@@ -228,7 +228,7 @@ void UWidget_TitleButton_C::OnPressed__DelegateSignature()
 
 
 // Function Widget_TitleButton.Widget_TitleButton_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TitleButton_C::OnClicked__DelegateSignature()
 {

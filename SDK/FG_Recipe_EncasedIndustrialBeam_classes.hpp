@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_EncasedIndustrialBeam.Recipe_EncasedIndustrialBeam_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_EncasedIndustrialBeam_C : public UFGRecipe
 {
 public:

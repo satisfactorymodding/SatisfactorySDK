@@ -17,19 +17,19 @@ namespace SDK
 // Function ClothingSystemRuntime.ClothingSimulationInteractorNv.SetAnimDriveSpringStiffness
 struct UClothingSimulationInteractorNv_SetAnimDriveSpringStiffness_Params
 {
-	float                                              InStiffness;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             InStiffness;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ClothingSystemRuntime.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness
 struct UClothingSimulationInteractorNv_SetAnimDriveDamperStiffness_Params
 {
-	float                                              InStiffness;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             InStiffness;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ClothingSystemRuntime.ClothingSimulationInteractorNv.EnableGravityOverride
 struct UClothingSimulationInteractorNv_EnableGravityOverride_Params
 {
-	struct FVector                                     InVector;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FVector*                                    InVector;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
 // Function ClothingSystemRuntime.ClothingSimulationInteractorNv.DisableGravityOverride

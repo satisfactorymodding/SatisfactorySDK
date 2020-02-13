@@ -22,7 +22,8 @@ public:
 	bool                                               AllowNonStandardCodecs;                                   // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               LowLatency;                                               // 0x0029(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               NativeAudioOut;                                           // 0x002A(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x002B(0x0005) MISSED OFFSET
+	bool                                               HardwareAcceleratedVideoDecoding;                         // 0x002B(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

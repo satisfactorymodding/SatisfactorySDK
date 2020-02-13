@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText AChar_SpaceGiraffe_C::GetLookAtDecription(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+struct FText AChar_SpaceGiraffe_C::GetLookAtDecription(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.GetLookAtDecription");
 
@@ -38,7 +38,7 @@ struct FText AChar_SpaceGiraffe_C::GetLookAtDecription(class AFGCharacterPlayer*
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.IsUseable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -59,14 +59,14 @@ bool AChar_SpaceGiraffe_C::IsUseable()
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.UpdateUseState
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UPrimitiveComponent*     componentHit                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent**    componentHit                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FUseState               out_useState                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceGiraffe_C::UpdateUseState(class AFGCharacterPlayer* byCharacter, const struct FVector& atLocation, class UPrimitiveComponent* componentHit, struct FUseState* out_useState)
+void AChar_SpaceGiraffe_C::UpdateUseState(class AFGCharacterPlayer** byCharacter, struct FVector* atLocation, class UPrimitiveComponent** componentHit, struct FUseState* out_useState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.UpdateUseState");
 
@@ -87,7 +87,7 @@ void AChar_SpaceGiraffe_C::UpdateUseState(class AFGCharacterPlayer* byCharacter,
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.OnRep_mDoPanic
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceGiraffe_C::OnRep_mDoPanic()
 {
@@ -103,30 +103,13 @@ void AChar_SpaceGiraffe_C::OnRep_mDoPanic()
 }
 
 
-// Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.UserConstructionScript
-// ()
-
-void AChar_SpaceGiraffe_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.UserConstructionScript");
-
-	AChar_SpaceGiraffe_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.OnUseStop
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceGiraffe_C::OnUseStop(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void AChar_SpaceGiraffe_C::OnUseStop(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.OnUseStop");
 
@@ -143,11 +126,11 @@ void AChar_SpaceGiraffe_C::OnUseStop(class AFGCharacterPlayer* byCharacter, cons
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.RegisterInteractingPlayer
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceGiraffe_C::RegisterInteractingPlayer(class AFGCharacterPlayer* Player)
+void AChar_SpaceGiraffe_C::RegisterInteractingPlayer(class AFGCharacterPlayer** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.RegisterInteractingPlayer");
 
@@ -163,12 +146,12 @@ void AChar_SpaceGiraffe_C::RegisterInteractingPlayer(class AFGCharacterPlayer* P
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.StartIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceGiraffe_C::StartIsLookedAt(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void AChar_SpaceGiraffe_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.StartIsLookedAt");
 
@@ -185,12 +168,12 @@ void AChar_SpaceGiraffe_C::StartIsLookedAt(class AFGCharacterPlayer* byCharacter
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceGiraffe_C::StopIsLookedAt(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void AChar_SpaceGiraffe_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.StopIsLookedAt");
 
@@ -207,11 +190,11 @@ void AChar_SpaceGiraffe_C::StopIsLookedAt(class AFGCharacterPlayer* byCharacter,
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.UnregisterInteractingPlayer
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceGiraffe_C::UnregisterInteractingPlayer(class AFGCharacterPlayer* Player)
+void AChar_SpaceGiraffe_C::UnregisterInteractingPlayer(class AFGCharacterPlayer** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.UnregisterInteractingPlayer");
 
@@ -226,8 +209,25 @@ void AChar_SpaceGiraffe_C::UnregisterInteractingPlayer(class AFGCharacterPlayer*
 }
 
 
+// Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AChar_SpaceGiraffe_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ReceiveBeginPlay");
+
+	AChar_SpaceGiraffe_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -247,24 +247,24 @@ void AChar_SpaceGiraffe_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.NotifyOnTakeDamage
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor**                 damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         damageAmount                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController**            instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor**                 damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceGiraffe_C::NotifyOnTakeDamage(class AActor** damagedActor, float* damageAmount, class UDamageType** DamageType, class AController** instigatedBy, class AActor** damageCauser)
+void AChar_SpaceGiraffe_C::NotifyOnTakeDamage(class AActor** DamagedActor, float* damageAmount, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.NotifyOnTakeDamage");
 
 	AChar_SpaceGiraffe_C_NotifyOnTakeDamage_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.damageAmount = damageAmount;
 	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -275,7 +275,7 @@ void AChar_SpaceGiraffe_C::NotifyOnTakeDamage(class AActor** damagedActor, float
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.StartRotationMovement
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator*               TargetRotation                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -295,11 +295,11 @@ void AChar_SpaceGiraffe_C::StartRotationMovement(struct FRotator* TargetRotation
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceGiraffe_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue)
+void AChar_SpaceGiraffe_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float* AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1");
 
@@ -315,11 +315,11 @@ void AChar_SpaceGiraffe_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float 
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceGiraffe_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10(float AxisValue)
+void AChar_SpaceGiraffe_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10(float* AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10");
 
@@ -335,7 +335,7 @@ void AChar_SpaceGiraffe_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10(float A
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ReceivePossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            NewController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -355,11 +355,11 @@ void AChar_SpaceGiraffe_C::ReceivePossessed(class AController** NewController)
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ClientSetupHUD
-// ()
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGPlayerController*     Controller                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGPlayerController**    Controller                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceGiraffe_C::ClientSetupHUD(class AFGPlayerController* Controller)
+void AChar_SpaceGiraffe_C::ClientSetupHUD(class AFGPlayerController** Controller)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ClientSetupHUD");
 
@@ -375,7 +375,7 @@ void AChar_SpaceGiraffe_C::ClientSetupHUD(class AFGPlayerController* Controller)
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ReceiveUnpossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            OldController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -395,12 +395,12 @@ void AChar_SpaceGiraffe_C::ReceiveUnpossessed(class AController** OldController)
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.OnUse
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState               State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AChar_SpaceGiraffe_C::OnUse(class AFGCharacterPlayer* byCharacter, const struct FUseState& State)
+void AChar_SpaceGiraffe_C::OnUse(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.OnUse");
 
@@ -417,16 +417,16 @@ void AChar_SpaceGiraffe_C::OnUse(class AFGCharacterPlayer* byCharacter, const st
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent**    OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor**                 OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent**    OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult*             SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void AChar_SpaceGiraffe_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void AChar_SpaceGiraffe_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent** OverlappedComponent, class AActor** OtherActor, class UPrimitiveComponent** OtherComp, int* OtherBodyIndex, bool* bFromSweep, struct FHitResult* SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -447,7 +447,7 @@ void AChar_SpaceGiraffe_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_Componen
 
 
 // Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ReceiveDied
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_SpaceGiraffe_C::ReceiveDied()
 {
@@ -463,12 +463,66 @@ void AChar_SpaceGiraffe_C::ReceiveDied()
 }
 
 
-// Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ExecuteUbergraph_Char_SpaceGiraffe
-// ()
+// Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_SpaceGiraffe_C::ExecuteUbergraph_Char_SpaceGiraffe(int EntryPoint)
+void AChar_SpaceGiraffe_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ReceiveEndPlay");
+
+	AChar_SpaceGiraffe_C_ReceiveEndPlay_Params params;
+	params.EndPlayReason = EndPlayReason;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.GainedSignificance
+// (Event, Public, BlueprintEvent)
+
+void AChar_SpaceGiraffe_C::GainedSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.GainedSignificance");
+
+	AChar_SpaceGiraffe_C_GainedSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.LostSignificance
+// (Event, Public, BlueprintEvent)
+
+void AChar_SpaceGiraffe_C::LostSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.LostSignificance");
+
+	AChar_SpaceGiraffe_C_LostSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ExecuteUbergraph_Char_SpaceGiraffe
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_SpaceGiraffe_C::ExecuteUbergraph_Char_SpaceGiraffe(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_SpaceGiraffe.Char_SpaceGiraffe_C.ExecuteUbergraph_Char_SpaceGiraffe");
 

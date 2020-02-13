@@ -12,8 +12,25 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.GetByProductIcon
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_ManufacturingButton_C::GetByProductIcon()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.GetByProductIcon");
+
+	UWidget_ManufacturingButton_C_GetByProductIcon_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.UpdateButtonStyle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManufacturingButton_C::UpdateButtonStyle()
 {
@@ -30,7 +47,7 @@ void UWidget_ManufacturingButton_C::UpdateButtonStyle()
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.CheckIsSelected
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           mIsSelected                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -52,7 +69,7 @@ void UWidget_ManufacturingButton_C::CheckIsSelected(bool* mIsSelected)
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.GetRecipeName
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManufacturingButton_C::GetRecipeName()
 {
@@ -69,7 +86,7 @@ void UWidget_ManufacturingButton_C::GetRecipeName()
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.GetRecipeIcon
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManufacturingButton_C::GetRecipeIcon()
 {
@@ -86,7 +103,7 @@ void UWidget_ManufacturingButton_C::GetRecipeIcon()
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnMouseButtonDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -111,7 +128,7 @@ struct FEventReply UWidget_ManufacturingButton_C::OnMouseButtonDown(struct FGeom
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ManufacturingButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -128,7 +145,7 @@ void UWidget_ManufacturingButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundE
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ManufacturingButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -145,7 +162,7 @@ void UWidget_ManufacturingButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundE
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ManufacturingButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -162,7 +179,7 @@ void UWidget_ManufacturingButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundE
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManufacturingButton_C::Construct()
 {
@@ -179,7 +196,7 @@ void UWidget_ManufacturingButton_C::Construct()
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -199,7 +216,7 @@ void UWidget_ManufacturingButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManufacturingButton_C::Destruct()
 {
@@ -216,11 +233,11 @@ void UWidget_ManufacturingButton_C::Destruct()
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.ExecuteUbergraph_Widget_ManufacturingButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManufacturingButton_C::ExecuteUbergraph_Widget_ManufacturingButton(int EntryPoint)
+void UWidget_ManufacturingButton_C::ExecuteUbergraph_Widget_ManufacturingButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.ExecuteUbergraph_Widget_ManufacturingButton");
 
@@ -236,11 +253,11 @@ void UWidget_ManufacturingButton_C::ExecuteUbergraph_Widget_ManufacturingButton(
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnStopHoveringManufacturingRecipe__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  UnhoveredRecipe                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 UnhoveredRecipe                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManufacturingButton_C::OnStopHoveringManufacturingRecipe__DelegateSignature(class UClass* UnhoveredRecipe)
+void UWidget_ManufacturingButton_C::OnStopHoveringManufacturingRecipe__DelegateSignature(class UClass** UnhoveredRecipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnStopHoveringManufacturingRecipe__DelegateSignature");
 
@@ -256,11 +273,11 @@ void UWidget_ManufacturingButton_C::OnStopHoveringManufacturingRecipe__DelegateS
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnManufacturingRecipeHovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  RecipeHover                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 RecipeHover                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManufacturingButton_C::OnManufacturingRecipeHovered__DelegateSignature(class UClass* RecipeHover)
+void UWidget_ManufacturingButton_C::OnManufacturingRecipeHovered__DelegateSignature(class UClass** RecipeHover)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnManufacturingRecipeHovered__DelegateSignature");
 
@@ -276,11 +293,11 @@ void UWidget_ManufacturingButton_C::OnManufacturingRecipeHovered__DelegateSignat
 
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnManufacturingRecipeClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManufacturingButton_C::OnManufacturingRecipeClicked__DelegateSignature(class UClass* Recipe)
+void UWidget_ManufacturingButton_C::OnManufacturingRecipeClicked__DelegateSignature(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnManufacturingRecipeClicked__DelegateSignature");
 

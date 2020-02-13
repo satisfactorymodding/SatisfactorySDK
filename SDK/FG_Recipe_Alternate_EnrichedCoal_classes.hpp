@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_Alternate_EnrichedCoal.Recipe_Alternate_EnrichedCoal_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_Alternate_EnrichedCoal_C : public UFGRecipe
 {
 public:

@@ -24,7 +24,7 @@ struct UBTT_EatItem_C_ReceiveExecuteAI_Params
 // Function BTT_EatItem.BTT_EatItem_C.ExecuteUbergraph_BTT_EatItem
 struct UBTT_EatItem_C_ExecuteUbergraph_BTT_EatItem_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

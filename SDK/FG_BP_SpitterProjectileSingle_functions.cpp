@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.UserConstructionScript
-// ()
-
-void ABP_SpitterProjectileSingle_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.UserConstructionScript");
-
-	ABP_SpitterProjectileSingle_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.Gravity Scale over Time__FinishedFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_SpitterProjectileSingle_C::Gravity_Scale_over_Time__FinishedFunc()
 {
@@ -47,7 +30,7 @@ void ABP_SpitterProjectileSingle_C::Gravity_Scale_over_Time__FinishedFunc()
 
 
 // Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.Gravity Scale over Time__UpdateFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_SpitterProjectileSingle_C::Gravity_Scale_over_Time__UpdateFunc()
 {
@@ -64,7 +47,7 @@ void ABP_SpitterProjectileSingle_C::Gravity_Scale_over_Time__UpdateFunc()
 
 
 // Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_SpitterProjectileSingle_C::ReceiveBeginPlay()
 {
@@ -81,12 +64,12 @@ void ABP_SpitterProjectileSingle_C::ReceiveBeginPlay()
 
 
 // Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class UActorComponent*         component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bReset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent**        component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool*                          bReset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterProjectileSingle_C::BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent* component, bool bReset)
+void ABP_SpitterProjectileSingle_C::BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent** component, bool* bReset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature");
 
@@ -103,7 +86,7 @@ void ABP_SpitterProjectileSingle_C::BndEvt__mProjectileMovement_K2Node_Component
 
 
 // Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.PlayExplosionEffects
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_SpitterProjectileSingle_C::PlayExplosionEffects()
 {
@@ -120,11 +103,11 @@ void ABP_SpitterProjectileSingle_C::PlayExplosionEffects()
 
 
 // Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.ExecuteUbergraph_BP_SpitterProjectileSingle
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterProjectileSingle_C::ExecuteUbergraph_BP_SpitterProjectileSingle(int EntryPoint)
+void ABP_SpitterProjectileSingle_C::ExecuteUbergraph_BP_SpitterProjectileSingle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileSingle.BP_SpitterProjectileSingle_C.ExecuteUbergraph_BP_SpitterProjectileSingle");
 

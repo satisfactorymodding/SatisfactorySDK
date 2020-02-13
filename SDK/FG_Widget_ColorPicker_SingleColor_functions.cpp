@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.SetupStartColor
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_SingleColor_C::SetupStartColor(const struct FLinearColor& Color)
+void UWidget_ColorPicker_SingleColor_C::SetupStartColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.SetupStartColor");
 
@@ -33,7 +33,7 @@ void UWidget_ColorPicker_SingleColor_C::SetupStartColor(const struct FLinearColo
 
 
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -53,7 +53,7 @@ void UWidget_ColorPicker_SingleColor_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.BndEvt__mEditPresetAccept_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_SingleColor_C::BndEvt__mEditPresetAccept_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -70,7 +70,7 @@ void UWidget_ColorPicker_SingleColor_C::BndEvt__mEditPresetAccept_K2Node_Compone
 
 
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.BndEvt__mEditPresetCanel_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_SingleColor_C::BndEvt__mEditPresetCanel_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -87,11 +87,11 @@ void UWidget_ColorPicker_SingleColor_C::BndEvt__mEditPresetCanel_K2Node_Componen
 
 
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.ExecuteUbergraph_Widget_ColorPicker_SingleColor
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_SingleColor_C::ExecuteUbergraph_Widget_ColorPicker_SingleColor(int EntryPoint)
+void UWidget_ColorPicker_SingleColor_C::ExecuteUbergraph_Widget_ColorPicker_SingleColor(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.ExecuteUbergraph_Widget_ColorPicker_SingleColor");
 
@@ -107,11 +107,11 @@ void UWidget_ColorPicker_SingleColor_C::ExecuteUbergraph_Widget_ColorPicker_Sing
 
 
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.OnClose__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_SingleColor_C::OnClose__DelegateSignature(const struct FLinearColor& Color)
+void UWidget_ColorPicker_SingleColor_C::OnClose__DelegateSignature(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.OnClose__DelegateSignature");
 

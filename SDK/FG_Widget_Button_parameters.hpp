@@ -59,13 +59,13 @@ struct UWidget_Button_C_Destruct_Params
 // Function Widget_Button.Widget_Button_C.ExecuteUbergraph_Widget_Button
 struct UWidget_Button_C_ExecuteUbergraph_Widget_Button_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Button.Widget_Button_C.OnClickedWithRef__DelegateSignature
 struct UWidget_Button_C_OnClickedWithRef__DelegateSignature_Params
 {
-	class UWidget_Button_C*                            ClickedButton;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Button_C**                           ClickedButton;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Button.Widget_Button_C.OnReleased__DelegateSignature

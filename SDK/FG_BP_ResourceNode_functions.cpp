@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_ResourceNode.BP_ResourceNode_C.UserConstructionScript
-// ()
-
-void ABP_ResourceNode_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ResourceNode.BP_ResourceNode_C.UserConstructionScript");
-
-	ABP_ResourceNode_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ResourceNode.BP_ResourceNode_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_ResourceNode_C::GainedSignificance()
 {
@@ -47,7 +30,7 @@ void ABP_ResourceNode_C::GainedSignificance()
 
 
 // Function BP_ResourceNode.BP_ResourceNode_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_ResourceNode_C::LostSignificance()
 {
@@ -64,11 +47,11 @@ void ABP_ResourceNode_C::LostSignificance()
 
 
 // Function BP_ResourceNode.BP_ResourceNode_C.ExecuteUbergraph_BP_ResourceNode
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ResourceNode_C::ExecuteUbergraph_BP_ResourceNode(int EntryPoint)
+void ABP_ResourceNode_C::ExecuteUbergraph_BP_ResourceNode(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ResourceNode.BP_ResourceNode_C.ExecuteUbergraph_BP_ResourceNode");
 

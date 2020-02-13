@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FoilagePickup.BP_FoilagePickup_C
-// 0x0010 (0x0358 - 0x0348)
+// 0x0010 (0x0360 - 0x0350)
 class ABP_FoilagePickup_C : public AFGFoliagePickup
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0348(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0350(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0350(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0358(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,9 +29,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void PlayPickupEffect(class UFGFoliageResourceUserData** foliageUserData, struct FVector* atLocation);
-	void ExecuteUbergraph_BP_FoilagePickup(int EntryPoint);
+	void ExecuteUbergraph_BP_FoilagePickup(int* EntryPoint);
 };
 
 

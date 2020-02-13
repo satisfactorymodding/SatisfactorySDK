@@ -12,64 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_PortableMiner.BP_PortableMiner_C.UserConstructionScript
-// ()
-
-void ABP_PortableMiner_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PortableMiner.BP_PortableMiner_C.UserConstructionScript");
-
-	ABP_PortableMiner_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_PortableMiner.BP_PortableMiner_C.ReceiveDestroyed
-// ()
-
-void ABP_PortableMiner_C::ReceiveDestroyed()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PortableMiner.BP_PortableMiner_C.ReceiveDestroyed");
-
-	ABP_PortableMiner_C_ReceiveDestroyed_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_PortableMiner.BP_PortableMiner_C.StartIsLookedAt
-// ()
-// Parameters:
-// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_PortableMiner_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PortableMiner.BP_PortableMiner_C.StartIsLookedAt");
-
-	ABP_PortableMiner_C_StartIsLookedAt_Params params;
-	params.byCharacter = byCharacter;
-	params.State = State;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_PortableMiner.BP_PortableMiner_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -90,14 +34,36 @@ void ABP_PortableMiner_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter,
 }
 
 
-// Function BP_PortableMiner.BP_PortableMiner_C.ReceiveBeginPlay
-// ()
+// Function BP_PortableMiner.BP_PortableMiner_C.StartIsLookedAt
+// (Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_PortableMiner_C::ReceiveBeginPlay()
+void ABP_PortableMiner_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct FUseState* State)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PortableMiner.BP_PortableMiner_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PortableMiner.BP_PortableMiner_C.StartIsLookedAt");
 
-	ABP_PortableMiner_C_ReceiveBeginPlay_Params params;
+	ABP_PortableMiner_C_StartIsLookedAt_Params params;
+	params.byCharacter = byCharacter;
+	params.State = State;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PortableMiner.BP_PortableMiner_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_PortableMiner_C::ReceiveDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PortableMiner.BP_PortableMiner_C.ReceiveDestroyed");
+
+	ABP_PortableMiner_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -108,11 +74,11 @@ void ABP_PortableMiner_C::ReceiveBeginPlay()
 
 
 // Function BP_PortableMiner.BP_PortableMiner_C.ExecuteUbergraph_BP_PortableMiner
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PortableMiner_C::ExecuteUbergraph_BP_PortableMiner(int EntryPoint)
+void ABP_PortableMiner_C::ExecuteUbergraph_BP_PortableMiner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PortableMiner.BP_PortableMiner_C.ExecuteUbergraph_BP_PortableMiner");
 

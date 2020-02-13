@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CompassObjectCardinalDirection.Widget_CompassObjectCardinalDirection_C.GetVisibility_1
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_CompassObjectCardinalDirection_C::GetVisibility_1()
 
 
 // Function Widget_CompassObjectCardinalDirection.Widget_CompassObjectCardinalDirection_C.OnCompassObjectAddedToPanel
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UCanvasPanelSlot**       parentSlot                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -54,11 +54,11 @@ void UWidget_CompassObjectCardinalDirection_C::OnCompassObjectAddedToPanel(class
 
 
 // Function Widget_CompassObjectCardinalDirection.Widget_CompassObjectCardinalDirection_C.ExecuteUbergraph_Widget_CompassObjectCardinalDirection
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CompassObjectCardinalDirection_C::ExecuteUbergraph_Widget_CompassObjectCardinalDirection(int EntryPoint)
+void UWidget_CompassObjectCardinalDirection_C::ExecuteUbergraph_Widget_CompassObjectCardinalDirection(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CompassObjectCardinalDirection.Widget_CompassObjectCardinalDirection_C.ExecuteUbergraph_Widget_CompassObjectCardinalDirection");
 

@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Char_Spitter_Alternative.Char_Spitter_Alternative_C.UserConstructionScript
-struct AChar_Spitter_Alternative_C_UserConstructionScript_Params
-{
-};
-
 // Function Char_Spitter_Alternative.Char_Spitter_Alternative_C.OnStrafeEnded_0__DelegateSignature
 struct AChar_Spitter_Alternative_C_OnStrafeEnded_0__DelegateSignature_Params
 {

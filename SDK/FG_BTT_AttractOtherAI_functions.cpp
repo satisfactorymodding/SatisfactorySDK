@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_AttractOtherAI.BTT_AttractOtherAI_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_AttractOtherAI_C::ReceiveExecuteAI(class AAIController** OwnerControll
 
 
 // Function BTT_AttractOtherAI.BTT_AttractOtherAI_C.ExecuteUbergraph_BTT_AttractOtherAI
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_AttractOtherAI_C::ExecuteUbergraph_BTT_AttractOtherAI(int EntryPoint)
+void UBTT_AttractOtherAI_C::ExecuteUbergraph_BTT_AttractOtherAI(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_AttractOtherAI.BTT_AttractOtherAI_C.ExecuteUbergraph_BTT_AttractOtherAI");
 

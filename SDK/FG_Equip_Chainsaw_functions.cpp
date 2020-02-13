@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Equip_Chainsaw.Equip_Chainsaw_C.CanStartSawing
-// ()
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,12 +34,12 @@ bool AEquip_Chainsaw_C::CanStartSawing()
 
 
 // Function Equip_Chainsaw.Equip_Chainsaw_C.UpdateAttachmentState
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EChainsawUseState> ChainsawState                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ForceUpdate                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EChainsawUseState>* ChainsawState                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ForceUpdate                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_Chainsaw_C::UpdateAttachmentState(TEnumAsByte<EChainsawUseState> ChainsawState, bool ForceUpdate)
+void AEquip_Chainsaw_C::UpdateAttachmentState(TEnumAsByte<EChainsawUseState>* ChainsawState, bool* ForceUpdate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_Chainsaw.Equip_Chainsaw_C.UpdateAttachmentState");
 
@@ -56,11 +56,11 @@ void AEquip_Chainsaw_C::UpdateAttachmentState(TEnumAsByte<EChainsawUseState> Cha
 
 
 // Function Equip_Chainsaw.Equip_Chainsaw_C.InterpSawProgress
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_Chainsaw_C::InterpSawProgress(float DeltaTime)
+void AEquip_Chainsaw_C::InterpSawProgress(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_Chainsaw.Equip_Chainsaw_C.InterpSawProgress");
 
@@ -75,25 +75,8 @@ void AEquip_Chainsaw_C::InterpSawProgress(float DeltaTime)
 }
 
 
-// Function Equip_Chainsaw.Equip_Chainsaw_C.UserConstructionScript
-// ()
-
-void AEquip_Chainsaw_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_Chainsaw.Equip_Chainsaw_C.UserConstructionScript");
-
-	AEquip_Chainsaw_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_Chainsaw.Equip_Chainsaw_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -113,7 +96,7 @@ void AEquip_Chainsaw_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Equip_Chainsaw.Equip_Chainsaw_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Chainsaw_C::WasEquipped()
 {
@@ -130,7 +113,7 @@ void AEquip_Chainsaw_C::WasEquipped()
 
 
 // Function Equip_Chainsaw.Equip_Chainsaw_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Chainsaw_C::WasUnEquipped()
 {
@@ -147,11 +130,11 @@ void AEquip_Chainsaw_C::WasUnEquipped()
 
 
 // Function Equip_Chainsaw.Equip_Chainsaw_C.ExecuteUbergraph_Equip_Chainsaw
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_Chainsaw_C::ExecuteUbergraph_Equip_Chainsaw(int EntryPoint)
+void AEquip_Chainsaw_C::ExecuteUbergraph_Equip_Chainsaw(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_Chainsaw.Equip_Chainsaw_C.ExecuteUbergraph_Equip_Chainsaw");
 

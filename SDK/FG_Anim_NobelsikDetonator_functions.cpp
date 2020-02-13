@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_NobelsikDetonator.Anim_NobelsikDetonator_C.AnimNotify_NobeliskDetonate
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NobelsikDetonator_C::AnimNotify_NobeliskDetonate()
 {
@@ -30,7 +30,7 @@ void UAnim_NobelsikDetonator_C::AnimNotify_NobeliskDetonate()
 
 
 // Function Anim_NobelsikDetonator.Anim_NobelsikDetonator_C.AnimNotify_NobeliskThrowRelease
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_NobelsikDetonator_C::AnimNotify_NobeliskThrowRelease()
 {
@@ -47,11 +47,11 @@ void UAnim_NobelsikDetonator_C::AnimNotify_NobeliskThrowRelease()
 
 
 // Function Anim_NobelsikDetonator.Anim_NobelsikDetonator_C.ExecuteUbergraph_Anim_NobelsikDetonator
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_NobelsikDetonator_C::ExecuteUbergraph_Anim_NobelsikDetonator(int EntryPoint)
+void UAnim_NobelsikDetonator_C::ExecuteUbergraph_Anim_NobelsikDetonator(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_NobelsikDetonator.Anim_NobelsikDetonator_C.ExecuteUbergraph_Anim_NobelsikDetonator");
 

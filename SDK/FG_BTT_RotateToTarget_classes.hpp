@@ -33,9 +33,9 @@ public:
 
 
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void RotationComplete(class APawn* PawnRotated);
+	void RotationComplete(class APawn** PawnRotated);
 	void ReceiveAbortAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_RotateToTarget(int EntryPoint);
+	void ExecuteUbergraph_BTT_RotateToTarget(int* EntryPoint);
 };
 
 

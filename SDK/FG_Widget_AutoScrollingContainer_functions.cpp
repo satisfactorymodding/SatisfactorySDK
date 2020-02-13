@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.StopAutoScroll
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_AutoScrollingContainer_C::StopAutoScroll()
 {
@@ -30,7 +30,7 @@ void UWidget_AutoScrollingContainer_C::StopAutoScroll()
 
 
 // Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.StartAutoScroll
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_AutoScrollingContainer_C::StartAutoScroll()
 {
@@ -47,7 +47,7 @@ void UWidget_AutoScrollingContainer_C::StartAutoScroll()
 
 
 // Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.AutoScroll
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_AutoScrollingContainer_C::AutoScroll()
 {
@@ -64,7 +64,7 @@ void UWidget_AutoScrollingContainer_C::AutoScroll()
 
 
 // Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_AutoScrollingContainer_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -81,7 +81,7 @@ void UWidget_AutoScrollingContainer_C::BndEvt__mButton_K2Node_ComponentBoundEven
 
 
 // Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_AutoScrollingContainer_C::BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -98,7 +98,7 @@ void UWidget_AutoScrollingContainer_C::BndEvt__mButton_K2Node_ComponentBoundEven
 
 
 // Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -117,12 +117,32 @@ void UWidget_AutoScrollingContainer_C::PreConstruct(bool* IsDesignTime)
 }
 
 
-// Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.ExecuteUbergraph_Widget_AutoScrollingContainer
-// ()
+// Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.DelayedStartAutoScroll
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Seconds_Delayed                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_AutoScrollingContainer_C::ExecuteUbergraph_Widget_AutoScrollingContainer(int EntryPoint)
+void UWidget_AutoScrollingContainer_C::DelayedStartAutoScroll(float* Seconds_Delayed)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.DelayedStartAutoScroll");
+
+	UWidget_AutoScrollingContainer_C_DelayedStartAutoScroll_Params params;
+	params.Seconds_Delayed = Seconds_Delayed;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.ExecuteUbergraph_Widget_AutoScrollingContainer
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_AutoScrollingContainer_C::ExecuteUbergraph_Widget_AutoScrollingContainer(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_AutoScrollingContainer.Widget_AutoScrollingContainer_C.ExecuteUbergraph_Widget_AutoScrollingContainer");
 

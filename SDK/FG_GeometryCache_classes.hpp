@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class GeometryCache.GeometryCache
-// 0x0038 (0x0060 - 0x0028)
+// 0x0040 (0x0068 - 0x0028)
 class UGeometryCache : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 	TArray<class UMaterialInterface*>                  Materials;                                                // 0x0030(0x0010) (Edit, ZeroConstructor)
 	TArray<class UGeometryCacheTrack*>                 TRACKS;                                                   // 0x0040(0x0010) (Edit, ZeroConstructor, EditConst)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
-	int                                                StartFrame;                                               // 0x0058(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                EndFrame;                                                 // 0x005C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0050(0x0010) MISSED OFFSET
+	int                                                StartFrame;                                               // 0x0060(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                EndFrame;                                                 // 0x0064(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -36,11 +36,11 @@ public:
 
 
 // Class GeometryCache.GeometryCacheActor
-// 0x0008 (0x0330 - 0x0328)
+// 0x0008 (0x0338 - 0x0330)
 class AGeometryCacheActor : public AActor
 {
 public:
-	class UGeometryCacheComponent*                     GeometryCacheComponent;                                   // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UGeometryCacheComponent*                     GeometryCacheComponent;                                   // 0x0330(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -103,22 +103,22 @@ public:
 
 
 // Class GeometryCache.GeometryCacheComponent
-// 0x0060 (0x05E0 - 0x0580)
+// 0x0060 (0x0600 - 0x05A0)
 class UGeometryCacheComponent : public UMeshComponent
 {
 public:
-	class UGeometryCache*                              GeometryCache;                                            // 0x0580(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bRunning;                                                 // 0x0588(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bLooping;                                                 // 0x0589(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x058A(0x0002) MISSED OFFSET
-	float                                              StartTimeOffset;                                          // 0x058C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PlaybackSpeed;                                            // 0x0590(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                NumTracks;                                                // 0x0594(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	float                                              ElapsedTime;                                              // 0x0598(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x30];                                      // 0x059C(0x0030) MISSED OFFSET
-	float                                              Duration;                                                 // 0x05CC(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bManualTick;                                              // 0x05D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xF];                                       // 0x05D1(0x000F) MISSED OFFSET
+	class UGeometryCache*                              GeometryCache;                                            // 0x05A0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bRunning;                                                 // 0x05A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bLooping;                                                 // 0x05A9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x05AA(0x0002) MISSED OFFSET
+	float                                              StartTimeOffset;                                          // 0x05AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              PlaybackSpeed;                                            // 0x05B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                NumTracks;                                                // 0x05B4(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	float                                              ElapsedTime;                                              // 0x05B8(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x30];                                      // 0x05BC(0x0030) MISSED OFFSET
+	float                                              Duration;                                                 // 0x05EC(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bManualTick;                                              // 0x05F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xF];                                       // 0x05F1(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -127,12 +127,12 @@ public:
 	}
 
 
-	void TickAtThisTime(float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping);
+	void TickAtThisTime(float* Time, bool* bInIsRunning, bool* bInBackwards, bool* bInIsLooping);
 	void Stop();
-	void SetStartTimeOffset(float NewStartTimeOffset);
-	void SetPlaybackSpeed(float NewPlaybackSpeed);
-	void SetLooping(bool bNewLooping);
-	bool SetGeometryCache(class UGeometryCache* NewGeomCache);
+	void SetStartTimeOffset(float* NewStartTimeOffset);
+	void SetPlaybackSpeed(float* NewPlaybackSpeed);
+	void SetLooping(bool* bNewLooping);
+	bool SetGeometryCache(class UGeometryCache** NewGeomCache);
 	void PlayReversedFromEnd();
 	void PlayReversed();
 	void PlayFromStart();
@@ -182,19 +182,19 @@ public:
 	}
 
 
-	void AddMeshSample(const struct FGeometryCacheMeshData& MeshData, float SampleTime);
+	void AddMeshSample(struct FGeometryCacheMeshData* MeshData, float* SampleTime);
 };
 
 
 // Class GeometryCache.GeometryCacheTrackStreamable
-// 0x0130 (0x0188 - 0x0058)
+// 0x0138 (0x0190 - 0x0058)
 class UGeometryCacheTrackStreamable : public UGeometryCacheTrack
 {
 public:
 	class UGeometryCacheCodecBase*                     Codec;                                                    // 0x0058(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x120];                                     // 0x0060(0x0120) MISSED OFFSET
-	float                                              StartSampleTime;                                          // 0x0180(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0184(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x128];                                     // 0x0060(0x0128) MISSED OFFSET
+	float                                              StartSampleTime;                                          // 0x0188(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x018C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -219,7 +219,7 @@ public:
 	}
 
 
-	void SetMesh(const struct FGeometryCacheMeshData& NewMeshData);
+	void SetMesh(struct FGeometryCacheMeshData* NewMeshData);
 };
 
 
@@ -237,7 +237,7 @@ public:
 	}
 
 
-	void SetMesh(const struct FGeometryCacheMeshData& NewMeshData);
+	void SetMesh(struct FGeometryCacheMeshData* NewMeshData);
 };
 
 

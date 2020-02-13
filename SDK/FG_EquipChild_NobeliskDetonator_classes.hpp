@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass EquipChild_NobeliskDetonator.EquipChild_NobeliskDetonator_C
-// 0x0018 (0x0358 - 0x0340)
+// 0x0018 (0x0360 - 0x0348)
 class AEquipChild_NobeliskDetonator_C : public AFGWeaponChild
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0340(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                      Explosive_skel;                                           // 0x0348(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0350(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0348(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                      Explosive_skel;                                           // 0x0350(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0358(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,14 +30,13 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void NotifyReloadComplete();
 	void NotifyEndPrimaryFire();
 	void NotifyReloading();
 	void NotifyBeginPrimaryFire();
 	void OnEquip(class AFGCharacterPlayer** Character);
 	void NotifyPrimaryFireExecuted();
-	void ExecuteUbergraph_EquipChild_NobeliskDetonator(int EntryPoint);
+	void ExecuteUbergraph_EquipChild_NobeliskDetonator(int* EntryPoint);
 };
 
 

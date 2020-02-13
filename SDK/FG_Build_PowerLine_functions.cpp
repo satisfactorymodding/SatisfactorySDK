@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_PowerLine.Build_PowerLine_C.UserConstructionScript
-// ()
-
-void ABuild_PowerLine_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_PowerLine.Build_PowerLine_C.UserConstructionScript");
-
-	ABuild_PowerLine_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_PowerLine.Build_PowerLine_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_PowerLine_C::ReceiveBeginPlay()
 {
@@ -47,11 +30,11 @@ void ABuild_PowerLine_C::ReceiveBeginPlay()
 
 
 // Function Build_PowerLine.Build_PowerLine_C.ExecuteUbergraph_Build_PowerLine
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_PowerLine_C::ExecuteUbergraph_Build_PowerLine(int EntryPoint)
+void ABuild_PowerLine_C::ExecuteUbergraph_Build_PowerLine(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_PowerLine.Build_PowerLine_C.ExecuteUbergraph_Build_PowerLine");
 

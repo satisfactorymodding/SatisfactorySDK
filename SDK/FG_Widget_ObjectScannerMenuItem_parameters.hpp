@@ -29,7 +29,7 @@ struct UWidget_ObjectScannerMenuItem_C_GetTextColor_Params
 // Function Widget_ObjectScannerMenuItem.Widget_ObjectScannerMenuItem_C.OnItemSelected__DelegateSignature
 struct UWidget_ObjectScannerMenuItem_C_OnItemSelected__DelegateSignature_Params
 {
-	class UClass*                                      scannedActorClass;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     scannedActorClass;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

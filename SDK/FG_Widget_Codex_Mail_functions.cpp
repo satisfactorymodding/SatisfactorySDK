@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Codex_Mail.Widget_Codex_Mail_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Codex_Mail_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_Codex_Mail_C::Construct()
 
 
 // Function Widget_Codex_Mail.Widget_Codex_Mail_C.ExecuteUbergraph_Widget_Codex_Mail
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Codex_Mail_C::ExecuteUbergraph_Widget_Codex_Mail(int EntryPoint)
+void UWidget_Codex_Mail_C::ExecuteUbergraph_Widget_Codex_Mail(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Codex_Mail.Widget_Codex_Mail_C.ExecuteUbergraph_Widget_Codex_Mail");
 

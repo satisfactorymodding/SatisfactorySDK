@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.UserConstructionScript
-// ()
-
-void ABP_ConsumeableEquipment_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.UserConstructionScript");
-
-	ABP_ConsumeableEquipment_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.PlayConsumeEffects
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UFGConsumableDescriptor** consumable                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -49,25 +32,8 @@ void ABP_ConsumeableEquipment_C::PlayConsumeEffects(class UFGConsumableDescripto
 }
 
 
-// Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.WasEquipped
-// ()
-
-void ABP_ConsumeableEquipment_C::WasEquipped()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.WasEquipped");
-
-	ABP_ConsumeableEquipment_C_WasEquipped_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -86,12 +52,29 @@ void ABP_ConsumeableEquipment_C::ReceiveTick(float* DeltaSeconds)
 }
 
 
-// Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.ExecuteUbergraph_BP_ConsumeableEquipment
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.WasEquipped
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ConsumeableEquipment_C::ExecuteUbergraph_BP_ConsumeableEquipment(int EntryPoint)
+void ABP_ConsumeableEquipment_C::WasEquipped()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.WasEquipped");
+
+	ABP_ConsumeableEquipment_C_WasEquipped_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.ExecuteUbergraph_BP_ConsumeableEquipment
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_ConsumeableEquipment_C::ExecuteUbergraph_BP_ConsumeableEquipment(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ConsumeableEquipment.BP_ConsumeableEquipment_C.ExecuteUbergraph_BP_ConsumeableEquipment");
 

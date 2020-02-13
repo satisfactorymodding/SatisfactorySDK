@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_CheckForFoliage.BTS_CheckForFoliage_C.ReceiveTickAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -37,11 +37,11 @@ void UBTS_CheckForFoliage_C::ReceiveTickAI(class AAIController** OwnerController
 
 
 // Function BTS_CheckForFoliage.BTS_CheckForFoliage_C.ExecuteUbergraph_BTS_CheckForFoliage
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_CheckForFoliage_C::ExecuteUbergraph_BTS_CheckForFoliage(int EntryPoint)
+void UBTS_CheckForFoliage_C::ExecuteUbergraph_BTS_CheckForFoliage(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_CheckForFoliage.BTS_CheckForFoliage_C.ExecuteUbergraph_BTS_CheckForFoliage");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Compass_new.Widget_Compass_new_C.GetCompassObjectWidgetClass
-// ()
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -36,7 +36,7 @@ class UClass* UWidget_Compass_new_C::GetCompassObjectWidgetClass(class UFGActorR
 
 
 // Function Widget_Compass_new.Widget_Compass_new_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Compass_new_C::Construct()
 {
@@ -52,12 +52,46 @@ void UWidget_Compass_new_C::Construct()
 }
 
 
-// Function Widget_Compass_new.Widget_Compass_new_C.ExecuteUbergraph_Widget_Compass_new
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_Compass_new.Widget_Compass_new_C.EventUpdateBackgroundOpacity
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_Compass_new_C::ExecuteUbergraph_Widget_Compass_new(int EntryPoint)
+void UWidget_Compass_new_C::EventUpdateBackgroundOpacity()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Compass_new.Widget_Compass_new_C.EventUpdateBackgroundOpacity");
+
+	UWidget_Compass_new_C_EventUpdateBackgroundOpacity_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Compass_new.Widget_Compass_new_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_Compass_new_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Compass_new.Widget_Compass_new_C.Destruct");
+
+	UWidget_Compass_new_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Compass_new.Widget_Compass_new_C.ExecuteUbergraph_Widget_Compass_new
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Compass_new_C::ExecuteUbergraph_Widget_Compass_new(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Compass_new.Widget_Compass_new_C.ExecuteUbergraph_Widget_Compass_new");
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Desc_CartridgeStandard.Desc_CartridgeStandard_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0148 - 0x0148)
 class UDesc_CartridgeStandard_C : public UFGItemDescriptor
 {
 public:

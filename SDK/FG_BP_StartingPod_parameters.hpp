@@ -32,10 +32,23 @@ struct ABP_StartingPod_C_ShouldSave_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function BP_StartingPod.BP_StartingPod_C.GetActorCompassViewDistance
+struct ABP_StartingPod_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_StartingPod.BP_StartingPod_C.SetActorCompassViewDistance
+struct ABP_StartingPod_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_StartingPod.BP_StartingPod_C.SetActorRepresentationText
 struct ABP_StartingPod_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -123,37 +136,44 @@ struct ABP_StartingPod_C_RemoveAsRepresentation_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BP_StartingPod.BP_StartingPod_C.UserConstructionScript
-struct ABP_StartingPod_C_UserConstructionScript_Params
+// Function BP_StartingPod.BP_StartingPod_C.OnLoaded_8586F6D040F0FFE03962849F398DB59A
+struct ABP_StartingPod_C_OnLoaded_8586F6D040F0FFE03962849F398DB59A_Params
 {
+	class UObject**                                    Loaded;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_StartingPod.BP_StartingPod_C.PostLoadGame
 struct ABP_StartingPod_C_PostLoadGame_Params
 {
-	int                                                SaveVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                GameVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               SaveVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               GameVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_StartingPod.BP_StartingPod_C.PostSaveGame
 struct ABP_StartingPod_C_PostSaveGame_Params
 {
-	int                                                SaveVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                GameVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               SaveVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               GameVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_StartingPod.BP_StartingPod_C.PreLoadGame
 struct ABP_StartingPod_C_PreLoadGame_Params
 {
-	int                                                SaveVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                GameVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               SaveVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               GameVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_StartingPod.BP_StartingPod_C.PreSaveGame
 struct ABP_StartingPod_C_PreSaveGame_Params
 {
-	int                                                SaveVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                GameVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               SaveVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               GameVersion;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_StartingPod.BP_StartingPod_C.SetActorRepresentationColor
+struct ABP_StartingPod_C_SetActorRepresentationColor_Params
+{
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_StartingPod.BP_StartingPod_C.StartIsLookedAtForDismantle
@@ -229,10 +249,15 @@ struct ABP_StartingPod_C_BlockSkipIntro_Params
 {
 };
 
+// Function BP_StartingPod.BP_StartingPod_C.ReceiveBeginPlay
+struct ABP_StartingPod_C_ReceiveBeginPlay_Params
+{
+};
+
 // Function BP_StartingPod.BP_StartingPod_C.ExecuteUbergraph_BP_StartingPod
 struct ABP_StartingPod_C_ExecuteUbergraph_BP_StartingPod_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

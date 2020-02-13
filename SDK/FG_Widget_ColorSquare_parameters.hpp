@@ -28,7 +28,7 @@ struct UWidget_ColorSquare_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_5_OnBut
 // Function Widget_ColorSquare.Widget_ColorSquare_C.ExecuteUbergraph_Widget_ColorSquare
 struct UWidget_ColorSquare_C_ExecuteUbergraph_Widget_ColorSquare_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -28,7 +28,7 @@ struct UBTT_CircleMove_C_FinishCircleMove_Params
 // Function BTT_CircleMove.BTT_CircleMove_C.ExecuteUbergraph_BTT_CircleMove
 struct UBTT_CircleMove_C_ExecuteUbergraph_BTT_CircleMove_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

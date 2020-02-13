@@ -27,7 +27,8 @@ struct FMovieSceneMediaSectionParams
 	struct FFrameNumber                                SectionStartFrame;                                        // 0x0020(0x0004)
 	struct FFrameNumber                                SectionEndFrame;                                          // 0x0024(0x0004)
 	bool                                               bLooping;                                                 // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
+	struct FFrameNumber                                StartFrameOffset;                                         // 0x002C(0x0004)
 };
 
 // ScriptStruct MediaCompositing.MovieSceneMediaSectionTemplate

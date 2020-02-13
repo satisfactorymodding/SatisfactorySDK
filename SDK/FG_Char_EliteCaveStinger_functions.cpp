@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.OnRep_bSpawnGass
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_EliteCaveStinger_C::OnRep_bSpawnGass()
 {
@@ -29,25 +29,8 @@ void AChar_EliteCaveStinger_C::OnRep_bSpawnGass()
 }
 
 
-// Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.UserConstructionScript
-// ()
-
-void AChar_EliteCaveStinger_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.UserConstructionScript");
-
-	AChar_EliteCaveStinger_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.SpawnGas
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_EliteCaveStinger_C::SpawnGas()
 {
@@ -64,7 +47,7 @@ void AChar_EliteCaveStinger_C::SpawnGas()
 
 
 // Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.GasEffect
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_EliteCaveStinger_C::GasEffect()
 {
@@ -81,11 +64,11 @@ void AChar_EliteCaveStinger_C::GasEffect()
 
 
 // Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.ExecuteUbergraph_Char_EliteCaveStinger
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_EliteCaveStinger_C::ExecuteUbergraph_Char_EliteCaveStinger(int EntryPoint)
+void AChar_EliteCaveStinger_C::ExecuteUbergraph_Char_EliteCaveStinger(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_EliteCaveStinger.Char_EliteCaveStinger_C.ExecuteUbergraph_Char_EliteCaveStinger");
 

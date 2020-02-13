@@ -42,7 +42,7 @@ struct UWidget_HUDCameraShake_C_Tick_Params
 // Function Widget_HUDCameraShake.Widget_HUDCameraShake_C.ExecuteUbergraph_Widget_HUDCameraShake
 struct UWidget_HUDCameraShake_C_ExecuteUbergraph_Widget_HUDCameraShake_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -32,7 +32,7 @@ struct UWidget_Anim_Up_Slide_C_Destruct_Params
 // Function Widget_Anim_Up_Slide.Widget_Anim_Up_Slide_C.ExecuteUbergraph_Widget_Anim_Up_Slide
 struct UWidget_Anim_Up_Slide_C_ExecuteUbergraph_Widget_Anim_Up_Slide_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

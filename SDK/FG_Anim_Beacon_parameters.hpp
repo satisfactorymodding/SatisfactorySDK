@@ -17,7 +17,7 @@ namespace SDK
 // Function Anim_Beacon.Anim_Beacon_C.ExecuteUbergraph_Anim_Beacon
 struct UAnim_Beacon_C_ExecuteUbergraph_Anim_Beacon_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

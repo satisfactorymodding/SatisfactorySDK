@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_OptionsRow.Widget_OptionsRow_C.OnMouseEnter
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -35,7 +35,7 @@ void UWidget_OptionsRow_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPo
 
 
 // Function Widget_OptionsRow.Widget_OptionsRow_C.OnMouseLeave
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -55,7 +55,7 @@ void UWidget_OptionsRow_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 
 
 // Function Widget_OptionsRow.Widget_OptionsRow_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -75,7 +75,7 @@ void UWidget_OptionsRow_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_OptionsRow.Widget_OptionsRow_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_OptionsRow_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -92,7 +92,7 @@ void UWidget_OptionsRow_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButton
 
 
 // Function Widget_OptionsRow.Widget_OptionsRow_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_OptionsRow_C::BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -109,11 +109,11 @@ void UWidget_OptionsRow_C::BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButton
 
 
 // Function Widget_OptionsRow.Widget_OptionsRow_C.ExecuteUbergraph_Widget_OptionsRow
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_OptionsRow_C::ExecuteUbergraph_Widget_OptionsRow(int EntryPoint)
+void UWidget_OptionsRow_C::ExecuteUbergraph_Widget_OptionsRow(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsRow.Widget_OptionsRow_C.ExecuteUbergraph_Widget_OptionsRow");
 
@@ -129,7 +129,7 @@ void UWidget_OptionsRow_C::ExecuteUbergraph_Widget_OptionsRow(int EntryPoint)
 
 
 // Function Widget_OptionsRow.Widget_OptionsRow_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_OptionsRow_C::OnClicked__DelegateSignature()
 {

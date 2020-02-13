@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CostSlot.Widget_CostSlot_C.GetDividerTopVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_CostSlot_C::GetDividerTopVisibility()
 
 
 // Function Widget_CostSlot.Widget_CostSlot_C.GetItemName
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,11 +55,11 @@ struct FText UWidget_CostSlot_C::GetItemName()
 
 
 // Function Widget_CostSlot.Widget_CostSlot_C.SetCostSlot
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            SlotIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SlotIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CostSlot_C::SetCostSlot(int SlotIdx)
+void UWidget_CostSlot_C::SetCostSlot(int* SlotIdx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CostSlot.Widget_CostSlot_C.SetCostSlot");
 
@@ -75,7 +75,7 @@ void UWidget_CostSlot_C::SetCostSlot(int SlotIdx)
 
 
 // Function Widget_CostSlot.Widget_CostSlot_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -97,11 +97,11 @@ void UWidget_CostSlot_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_CostSlot.Widget_CostSlot_C.ExecuteUbergraph_Widget_CostSlot
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CostSlot_C::ExecuteUbergraph_Widget_CostSlot(int EntryPoint)
+void UWidget_CostSlot_C::ExecuteUbergraph_Widget_CostSlot(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CostSlot.Widget_CostSlot_C.ExecuteUbergraph_Widget_CostSlot");
 

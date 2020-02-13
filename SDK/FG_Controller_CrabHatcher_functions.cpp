@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Controller_CrabHatcher.Controller_CrabHatcher_C.UpdateThreatNearby
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void AController_CrabHatcher_C::UpdateThreatNearby()
 {
@@ -29,30 +29,13 @@ void AController_CrabHatcher_C::UpdateThreatNearby()
 }
 
 
-// Function Controller_CrabHatcher.Controller_CrabHatcher_C.UserConstructionScript
-// ()
-
-void AController_CrabHatcher_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_CrabHatcher.Controller_CrabHatcher_C.UserConstructionScript");
-
-	AController_CrabHatcher_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Controller_CrabHatcher.Controller_CrabHatcher_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIStimulus             Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class AActor**                 Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIStimulus*            Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AController_CrabHatcher_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus)
+void AController_CrabHatcher_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_CrabHatcher.Controller_CrabHatcher_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature");
 
@@ -69,11 +52,11 @@ void AController_CrabHatcher_C::BndEvt__PerceptionComponent_K2Node_ComponentBoun
 
 
 // Function Controller_CrabHatcher.Controller_CrabHatcher_C.TryRemovePlayer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      inPlayer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     inPlayer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_CrabHatcher_C::TryRemovePlayer(class AFGCharacterPlayer* inPlayer)
+void AController_CrabHatcher_C::TryRemovePlayer(class AFGCharacterPlayer** inPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_CrabHatcher.Controller_CrabHatcher_C.TryRemovePlayer");
 
@@ -89,11 +72,11 @@ void AController_CrabHatcher_C::TryRemovePlayer(class AFGCharacterPlayer* inPlay
 
 
 // Function Controller_CrabHatcher.Controller_CrabHatcher_C.TryAddPlayer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      inPlayer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     inPlayer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_CrabHatcher_C::TryAddPlayer(class AFGCharacterPlayer* inPlayer)
+void AController_CrabHatcher_C::TryAddPlayer(class AFGCharacterPlayer** inPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_CrabHatcher.Controller_CrabHatcher_C.TryAddPlayer");
 
@@ -109,11 +92,11 @@ void AController_CrabHatcher_C::TryAddPlayer(class AFGCharacterPlayer* inPlayer)
 
 
 // Function Controller_CrabHatcher.Controller_CrabHatcher_C.ExecuteUbergraph_Controller_CrabHatcher
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_CrabHatcher_C::ExecuteUbergraph_Controller_CrabHatcher(int EntryPoint)
+void AController_CrabHatcher_C::ExecuteUbergraph_Controller_CrabHatcher(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_CrabHatcher.Controller_CrabHatcher_C.ExecuteUbergraph_Controller_CrabHatcher");
 

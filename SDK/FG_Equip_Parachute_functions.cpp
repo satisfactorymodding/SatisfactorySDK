@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_Parachute.Equip_Parachute_C.UserConstructionScript
-// ()
-
-void AEquip_Parachute_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_Parachute.Equip_Parachute_C.UserConstructionScript");
-
-	AEquip_Parachute_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_Parachute.Equip_Parachute_C.OnDeployed
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Parachute_C::OnDeployed()
 {
@@ -47,7 +30,7 @@ void AEquip_Parachute_C::OnDeployed()
 
 
 // Function Equip_Parachute.Equip_Parachute_C.OnDeployStop
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Parachute_C::OnDeployStop()
 {
@@ -64,11 +47,11 @@ void AEquip_Parachute_C::OnDeployStop()
 
 
 // Function Equip_Parachute.Equip_Parachute_C.ExecuteUbergraph_Equip_Parachute
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_Parachute_C::ExecuteUbergraph_Equip_Parachute(int EntryPoint)
+void AEquip_Parachute_C::ExecuteUbergraph_Equip_Parachute(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_Parachute.Equip_Parachute_C.ExecuteUbergraph_Equip_Parachute");
 

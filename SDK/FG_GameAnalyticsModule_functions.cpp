@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function GameAnalyticsModule.AnalyticsService.GetPagePrefix
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -24,6 +24,7 @@ class FString UAnalyticsService::GetPagePrefix()
 	UAnalyticsService_GetPagePrefix_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ class FString UAnalyticsService::GetPagePrefix()
 
 
 // Function GameAnalyticsModule.AnalyticsService.GetBuildPrefix
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -45,6 +46,7 @@ class FString UAnalyticsService::GetBuildPrefix()
 	UAnalyticsService_GetBuildPrefix_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +57,7 @@ class FString UAnalyticsService::GetBuildPrefix()
 
 
 // Function GameAnalyticsModule.StatHatJsonRequest.SendRequest
-// ()
+// (Native, Public)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -66,6 +68,7 @@ bool UStatHatJsonRequest::SendRequest()
 	UStatHatJsonRequest_SendRequest_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

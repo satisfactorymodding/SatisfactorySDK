@@ -14,8 +14,8 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Equip_ShockShank.Equip_ShockShank_C.UserConstructionScript
-struct AEquip_ShockShank_C_UserConstructionScript_Params
+// Function Equip_ShockShank.Equip_ShockShank_C.WasEquipped
+struct AEquip_ShockShank_C_WasEquipped_Params
 {
 };
 
@@ -34,15 +34,10 @@ struct AEquip_ShockShank_C_OnHitTarget_Params
 {
 };
 
-// Function Equip_ShockShank.Equip_ShockShank_C.WasEquipped
-struct AEquip_ShockShank_C_WasEquipped_Params
-{
-};
-
 // Function Equip_ShockShank.Equip_ShockShank_C.ExecuteUbergraph_Equip_ShockShank
 struct AEquip_ShockShank_C_ExecuteUbergraph_Equip_ShockShank_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

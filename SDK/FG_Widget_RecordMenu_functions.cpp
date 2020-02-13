@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.SetNameAtIndex
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// int                            Int                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// int*                           Int                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RecordMenu_C::SetNameAtIndex(const struct FText& Name, int Int)
+void UWidget_RecordMenu_C::SetNameAtIndex(struct FText* Name, int* Int)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RecordMenu.Widget_RecordMenu_C.SetNameAtIndex");
 
@@ -35,7 +35,7 @@ void UWidget_RecordMenu_C::SetNameAtIndex(const struct FText& Name, int Int)
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.UpdateLabels
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecordMenu_C::UpdateLabels()
 {
@@ -52,12 +52,12 @@ void UWidget_RecordMenu_C::UpdateLabels()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.GetPositionInCircle
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Translation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RecordMenu_C::GetPositionInCircle(int Index, struct FVector2D* Translation)
+void UWidget_RecordMenu_C::GetPositionInCircle(int* Index, struct FVector2D* Translation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RecordMenu.Widget_RecordMenu_C.GetPositionInCircle");
 
@@ -76,7 +76,7 @@ void UWidget_RecordMenu_C::GetPositionInCircle(int Index, struct FVector2D* Tran
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.GetPauseEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,7 +97,7 @@ bool UWidget_RecordMenu_C::GetPauseEnabled()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RecordMenu_C::Construct()
 {
@@ -114,7 +114,7 @@ void UWidget_RecordMenu_C::Construct()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.ToggleRecording
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecordMenu_C::ToggleRecording()
 {
@@ -131,7 +131,7 @@ void UWidget_RecordMenu_C::ToggleRecording()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RecordMenu_C::Destruct()
 {
@@ -148,7 +148,7 @@ void UWidget_RecordMenu_C::Destruct()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.ClearPathRecording
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecordMenu_C::ClearPathRecording()
 {
@@ -165,7 +165,7 @@ void UWidget_RecordMenu_C::ClearPathRecording()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.PauseClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecordMenu_C::PauseClicked()
 {
@@ -182,7 +182,7 @@ void UWidget_RecordMenu_C::PauseClicked()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.AutoPilotClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecordMenu_C::AutoPilotClicked()
 {
@@ -199,7 +199,7 @@ void UWidget_RecordMenu_C::AutoPilotClicked()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.PathVisibilityClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecordMenu_C::PathVisibilityClicked()
 {
@@ -216,7 +216,7 @@ void UWidget_RecordMenu_C::PathVisibilityClicked()
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -238,11 +238,11 @@ void UWidget_RecordMenu_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime
 
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.ExecuteUbergraph_Widget_RecordMenu
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RecordMenu_C::ExecuteUbergraph_Widget_RecordMenu(int EntryPoint)
+void UWidget_RecordMenu_C::ExecuteUbergraph_Widget_RecordMenu(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RecordMenu.Widget_RecordMenu_C.ExecuteUbergraph_Widget_RecordMenu");
 

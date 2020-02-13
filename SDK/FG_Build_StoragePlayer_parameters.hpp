@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_StoragePlayer.Build_StoragePlayer_C.UserConstructionScript
-struct ABuild_StoragePlayer_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

@@ -65,7 +65,7 @@ struct UWidget_ImageTabButton_C_Destruct_Params
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.ExecuteUbergraph_Widget_ImageTabButton
 struct UWidget_ImageTabButton_C_ExecuteUbergraph_Widget_ImageTabButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ImageTabButton.Widget_ImageTabButton_C.TabButtonClicked__DelegateSignature

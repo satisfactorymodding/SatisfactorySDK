@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.UserConstructionScript
-// ()
-
-void ABP_ItemPickup_Spawnable_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.UserConstructionScript");
-
-	ABP_ItemPickup_Spawnable_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.PlayPickupEffect
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_ItemPickup_Spawnable_C::PlayPickupEffect()
 {
@@ -47,7 +30,7 @@ void ABP_ItemPickup_Spawnable_C::PlayPickupEffect()
 
 
 // Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.PlaySpawnEffect
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_ItemPickup_Spawnable_C::PlaySpawnEffect()
 {
@@ -64,11 +47,11 @@ void ABP_ItemPickup_Spawnable_C::PlaySpawnEffect()
 
 
 // Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.ExecuteUbergraph_BP_ItemPickup_Spawnable
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ItemPickup_Spawnable_C::ExecuteUbergraph_BP_ItemPickup_Spawnable(int EntryPoint)
+void ABP_ItemPickup_Spawnable_C::ExecuteUbergraph_BP_ItemPickup_Spawnable(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemPickup_Spawnable.BP_ItemPickup_Spawnable_C.ExecuteUbergraph_BP_ItemPickup_Spawnable");
 

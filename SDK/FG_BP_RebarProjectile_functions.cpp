@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_RebarProjectile.BP_RebarProjectile_C.UserConstructionScript
-// ()
-
-void ABP_RebarProjectile_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RebarProjectile.BP_RebarProjectile_C.UserConstructionScript");
-
-	ABP_RebarProjectile_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_RebarProjectile.BP_RebarProjectile_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_RebarProjectile_C::ReceiveBeginPlay()
 {
@@ -47,7 +30,7 @@ void ABP_RebarProjectile_C::ReceiveBeginPlay()
 
 
 // Function BP_RebarProjectile.BP_RebarProjectile_C.PlayAttachEffect
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_RebarProjectile_C::PlayAttachEffect()
 {
@@ -64,7 +47,7 @@ void ABP_RebarProjectile_C::PlayAttachEffect()
 
 
 // Function BP_RebarProjectile.BP_RebarProjectile_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,7 +67,7 @@ void ABP_RebarProjectile_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_RebarProjectile.BP_RebarProjectile_C.ReceiveHit
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent**    MyComp                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor**                 Other                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -118,12 +101,12 @@ void ABP_RebarProjectile_C::ReceiveHit(class UPrimitiveComponent** MyComp, class
 
 
 // Function BP_RebarProjectile.BP_RebarProjectile_C.Shot Player
-// ()
+// (Net, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HitNormal                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                HitNormal                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RebarProjectile_C::Shot_Player(class AFGCharacterPlayer* Player, const struct FVector& HitNormal)
+void ABP_RebarProjectile_C::Shot_Player(class AFGCharacterPlayer** Player, struct FVector* HitNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RebarProjectile.BP_RebarProjectile_C.Shot Player");
 
@@ -140,11 +123,11 @@ void ABP_RebarProjectile_C::Shot_Player(class AFGCharacterPlayer* Player, const 
 
 
 // Function BP_RebarProjectile.BP_RebarProjectile_C.ExecuteUbergraph_BP_RebarProjectile
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RebarProjectile_C::ExecuteUbergraph_BP_RebarProjectile(int EntryPoint)
+void ABP_RebarProjectile_C::ExecuteUbergraph_BP_RebarProjectile(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RebarProjectile.BP_RebarProjectile_C.ExecuteUbergraph_BP_RebarProjectile");
 

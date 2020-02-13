@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.GetSplineData
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBelt_C::GetSplineData()
 {
@@ -30,12 +30,12 @@ void ABP_BuildEffect_ConveyorBelt_C::GetSplineData()
 
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.SpawnSplineSegment
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            LoopIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            SplineLength                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           LoopIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SplineLength                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BuildEffect_ConveyorBelt_C::SpawnSplineSegment(int LoopIndex, int SplineLength)
+void ABP_BuildEffect_ConveyorBelt_C::SpawnSplineSegment(int* LoopIndex, int* SplineLength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.SpawnSplineSegment");
 
@@ -52,7 +52,7 @@ void ABP_BuildEffect_ConveyorBelt_C::SpawnSplineSegment(int LoopIndex, int Splin
 
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.InitiateSpline
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBelt_C::InitiateSpline()
 {
@@ -68,25 +68,8 @@ void ABP_BuildEffect_ConveyorBelt_C::InitiateSpline()
 }
 
 
-// Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.UserConstructionScript
-// ()
-
-void ABP_BuildEffect_ConveyorBelt_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.UserConstructionScript");
-
-	ABP_BuildEffect_ConveyorBelt_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.MoveParticleEffect__FinishedFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBelt_C::MoveParticleEffect__FinishedFunc()
 {
@@ -103,7 +86,7 @@ void ABP_BuildEffect_ConveyorBelt_C::MoveParticleEffect__FinishedFunc()
 
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.MoveParticleEffect__UpdateFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBelt_C::MoveParticleEffect__UpdateFunc()
 {
@@ -120,7 +103,7 @@ void ABP_BuildEffect_ConveyorBelt_C::MoveParticleEffect__UpdateFunc()
 
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBelt_C::ReceiveBeginPlay()
 {
@@ -137,7 +120,7 @@ void ABP_BuildEffect_ConveyorBelt_C::ReceiveBeginPlay()
 
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.BeginEffect
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBelt_C::BeginEffect()
 {
@@ -154,7 +137,7 @@ void ABP_BuildEffect_ConveyorBelt_C::BeginEffect()
 
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -174,11 +157,11 @@ void ABP_BuildEffect_ConveyorBelt_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.ExecuteUbergraph_BP_BuildEffect_ConveyorBelt
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BuildEffect_ConveyorBelt_C::ExecuteUbergraph_BP_BuildEffect_ConveyorBelt(int EntryPoint)
+void ABP_BuildEffect_ConveyorBelt_C::ExecuteUbergraph_BP_BuildEffect_ConveyorBelt(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildEffect_ConveyorBelt.BP_BuildEffect_ConveyorBelt_C.ExecuteUbergraph_BP_BuildEffect_ConveyorBelt");
 

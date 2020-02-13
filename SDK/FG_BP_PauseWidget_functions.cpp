@@ -12,8 +12,51 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_PauseWidget.BP_PauseWidget_C.CanDoServerAdministration
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                           canAdminister                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_PauseWidget_C::CanDoServerAdministration(bool* canAdminister)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PauseWidget.BP_PauseWidget_C.CanDoServerAdministration");
+
+	UBP_PauseWidget_C_CanDoServerAdministration_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (canAdminister != nullptr)
+		*canAdminister = params.canAdminister;
+}
+
+
+// Function BP_PauseWidget.BP_PauseWidget_C.IsIntroSequenceDone
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBP_PauseWidget_C::IsIntroSequenceDone()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PauseWidget.BP_PauseWidget_C.IsIntroSequenceDone");
+
+	UBP_PauseWidget_C_IsIntroSequenceDone_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_PauseWidget.BP_PauseWidget_C.UpdateMenuItemVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::UpdateMenuItemVisibility()
 {
@@ -29,50 +72,8 @@ void UBP_PauseWidget_C::UpdateMenuItemVisibility()
 }
 
 
-// Function BP_PauseWidget.BP_PauseWidget_C.Get_bRespawn_Visibility_1
-// ()
-// Parameters:
-// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-ESlateVisibility UBP_PauseWidget_C::Get_bRespawn_Visibility_1()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PauseWidget.BP_PauseWidget_C.Get_bRespawn_Visibility_1");
-
-	UBP_PauseWidget_C_Get_bRespawn_Visibility_1_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_PauseWidget.BP_PauseWidget_C.Get_bSkipIntro_bIsEnabled_1
-// ()
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBP_PauseWidget_C::Get_bSkipIntro_bIsEnabled_1()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PauseWidget.BP_PauseWidget_C.Get_bSkipIntro_bIsEnabled_1");
-
-	UBP_PauseWidget_C_Get_bSkipIntro_bIsEnabled_1_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function BP_PauseWidget.BP_PauseWidget_C.UpdateHostNATText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::UpdateHostNATText()
 {
@@ -89,7 +90,7 @@ void UBP_PauseWidget_C::UpdateHostNATText()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.GetPlayDurationText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -110,7 +111,7 @@ struct FText UBP_PauseWidget_C::GetPlayDurationText()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.GetSessionNameText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -131,7 +132,7 @@ struct FText UBP_PauseWidget_C::GetSessionNameText()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.DoResume
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::DoResume()
 {
@@ -148,7 +149,7 @@ void UBP_PauseWidget_C::DoResume()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.OnEscape
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::OnEscape()
 {
@@ -165,7 +166,7 @@ void UBP_PauseWidget_C::OnEscape()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bResume_K2Node_ComponentBoundEvent_152_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__bResume_K2Node_ComponentBoundEvent_152_OnClicked__DelegateSignature()
 {
@@ -182,7 +183,7 @@ void UBP_PauseWidget_C::BndEvt__bResume_K2Node_ComponentBoundEvent_152_OnClicked
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bLoadGame_K2Node_ComponentBoundEvent_166_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__bLoadGame_K2Node_ComponentBoundEvent_166_OnClicked__DelegateSignature()
 {
@@ -199,7 +200,7 @@ void UBP_PauseWidget_C::BndEvt__bLoadGame_K2Node_ComponentBoundEvent_166_OnClick
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bRespawn_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__bRespawn_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -216,7 +217,7 @@ void UBP_PauseWidget_C::BndEvt__bRespawn_K2Node_ComponentBoundEvent_0_OnClicked_
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bSaveGame_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__bSaveGame_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature()
 {
@@ -233,7 +234,7 @@ void UBP_PauseWidget_C::BndEvt__bSaveGame_K2Node_ComponentBoundEvent_3_OnClicked
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBP_PauseWidget_C::Construct()
 {
@@ -250,7 +251,7 @@ void UBP_PauseWidget_C::Construct()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bFeedback_K2Node_ComponentBoundEvent_53_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__bFeedback_K2Node_ComponentBoundEvent_53_OnClicked__DelegateSignature()
 {
@@ -267,11 +268,11 @@ void UBP_PauseWidget_C::BndEvt__bFeedback_K2Node_ComponentBoundEvent_53_OnClicke
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.Event ExitToMainMenu
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_PauseWidget_C::Event_ExitToMainMenu(bool confirm)
+void UBP_PauseWidget_C::Event_ExitToMainMenu(bool* confirm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PauseWidget.BP_PauseWidget_C.Event ExitToMainMenu");
 
@@ -287,11 +288,11 @@ void UBP_PauseWidget_C::Event_ExitToMainMenu(bool confirm)
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.Event ExitToDesktop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_PauseWidget_C::Event_ExitToDesktop(bool confirm)
+void UBP_PauseWidget_C::Event_ExitToDesktop(bool* confirm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PauseWidget.BP_PauseWidget_C.Event ExitToDesktop");
 
@@ -307,7 +308,7 @@ void UBP_PauseWidget_C::Event_ExitToDesktop(bool confirm)
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bExitMainMenu_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__bExitMainMenu_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -324,7 +325,7 @@ void UBP_PauseWidget_C::BndEvt__bExitMainMenu_K2Node_ComponentBoundEvent_1_OnCli
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bExitDesktop_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__bExitDesktop_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature()
 {
@@ -341,7 +342,7 @@ void UBP_PauseWidget_C::BndEvt__bExitDesktop_K2Node_ComponentBoundEvent_2_OnClic
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__mOptions_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__mOptions_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature()
 {
@@ -358,7 +359,7 @@ void UBP_PauseWidget_C::BndEvt__mOptions_K2Node_ComponentBoundEvent_4_OnClicked_
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.BndEvt__bSkipIntro_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UBP_PauseWidget_C::BndEvt__bSkipIntro_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature()
 {
@@ -375,7 +376,7 @@ void UBP_PauseWidget_C::BndEvt__bSkipIntro_K2Node_ComponentBoundEvent_5_OnClicke
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBP_PauseWidget_C::Destruct()
 {
@@ -392,11 +393,11 @@ void UBP_PauseWidget_C::Destruct()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.ExecuteUbergraph_BP_PauseWidget
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_PauseWidget_C::ExecuteUbergraph_BP_PauseWidget(int EntryPoint)
+void UBP_PauseWidget_C::ExecuteUbergraph_BP_PauseWidget(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PauseWidget.BP_PauseWidget_C.ExecuteUbergraph_BP_PauseWidget");
 
@@ -412,7 +413,7 @@ void UBP_PauseWidget_C::ExecuteUbergraph_BP_PauseWidget(int EntryPoint)
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.OnBackClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::OnBackClicked__DelegateSignature()
 {
@@ -429,7 +430,7 @@ void UBP_PauseWidget_C::OnBackClicked__DelegateSignature()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.OnManagePlayersClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::OnManagePlayersClicked__DelegateSignature()
 {
@@ -446,7 +447,7 @@ void UBP_PauseWidget_C::OnManagePlayersClicked__DelegateSignature()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.OnOptionsClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::OnOptionsClicked__DelegateSignature()
 {
@@ -463,7 +464,7 @@ void UBP_PauseWidget_C::OnOptionsClicked__DelegateSignature()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.OnLoadClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::OnLoadClicked__DelegateSignature()
 {
@@ -480,7 +481,7 @@ void UBP_PauseWidget_C::OnLoadClicked__DelegateSignature()
 
 
 // Function BP_PauseWidget.BP_PauseWidget_C.OnSaveClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBP_PauseWidget_C::OnSaveClicked__DelegateSignature()
 {

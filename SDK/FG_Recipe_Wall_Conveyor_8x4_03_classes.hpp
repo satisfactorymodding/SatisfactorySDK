@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_Wall_Conveyor_8x4_03.Recipe_Wall_Conveyor_8x4_03_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_Wall_Conveyor_8x4_03_C : public UFGRecipe
 {
 public:

@@ -31,7 +31,7 @@ public:
 
 	void ReverseComplete();
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_ReverseToFreedom(int EntryPoint);
+	void ExecuteUbergraph_BTT_ReverseToFreedom(int* EntryPoint);
 };
 
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ObjectScannerMenuItem.Widget_ObjectScannerMenuItem_C.GetButtonFeedback
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FLinearColor UWidget_ObjectScannerMenuItem_C::GetButtonFeedback()
 
 
 // Function Widget_ObjectScannerMenuItem.Widget_ObjectScannerMenuItem_C.GetTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,11 +55,11 @@ struct FSlateColor UWidget_ObjectScannerMenuItem_C::GetTextColor()
 
 
 // Function Widget_ObjectScannerMenuItem.Widget_ObjectScannerMenuItem_C.OnItemSelected__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  scannedActorClass              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 scannedActorClass              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ObjectScannerMenuItem_C::OnItemSelected__DelegateSignature(class UClass* scannedActorClass)
+void UWidget_ObjectScannerMenuItem_C::OnItemSelected__DelegateSignature(class UClass** scannedActorClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ObjectScannerMenuItem.Widget_ObjectScannerMenuItem_C.OnItemSelected__DelegateSignature");
 

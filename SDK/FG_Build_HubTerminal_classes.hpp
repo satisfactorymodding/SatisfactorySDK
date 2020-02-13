@@ -31,7 +31,6 @@ public:
 	bool CanDismantle();
 	void UpdateUseState(class AFGCharacterPlayer** byCharacter, struct FVector* atLocation, class UPrimitiveComponent** componentHit, struct FUseState* out_useState);
 	struct FText GetLookAtDecription(class AFGCharacterPlayer** byCharacter, struct FUseState* State);
-	void UserConstructionScript();
 };
 
 

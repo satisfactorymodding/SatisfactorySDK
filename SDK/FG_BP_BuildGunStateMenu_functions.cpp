@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BuildGunStateMenu.BP_BuildGunStateMenu_C.EndState
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildGunStateMenu_C::EndState()
 {
@@ -30,7 +30,7 @@ void UBP_BuildGunStateMenu_C::EndState()
 
 
 // Function BP_BuildGunStateMenu.BP_BuildGunStateMenu_C.SecondaryFire
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildGunStateMenu_C::SecondaryFire()
 {
@@ -47,7 +47,7 @@ void UBP_BuildGunStateMenu_C::SecondaryFire()
 
 
 // Function BP_BuildGunStateMenu.BP_BuildGunStateMenu_C.BeginState
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildGunStateMenu_C::BeginState()
 {
@@ -64,11 +64,11 @@ void UBP_BuildGunStateMenu_C::BeginState()
 
 
 // Function BP_BuildGunStateMenu.BP_BuildGunStateMenu_C.ExecuteUbergraph_BP_BuildGunStateMenu
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_BuildGunStateMenu_C::ExecuteUbergraph_BP_BuildGunStateMenu(int EntryPoint)
+void UBP_BuildGunStateMenu_C::ExecuteUbergraph_BP_BuildGunStateMenu(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildGunStateMenu.BP_BuildGunStateMenu_C.ExecuteUbergraph_BP_BuildGunStateMenu");
 

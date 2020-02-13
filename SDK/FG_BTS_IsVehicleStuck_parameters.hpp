@@ -25,7 +25,7 @@ struct UBTS_IsVehicleStuck_C_ReceiveTickAI_Params
 // Function BTS_IsVehicleStuck.BTS_IsVehicleStuck_C.ExecuteUbergraph_BTS_IsVehicleStuck
 struct UBTS_IsVehicleStuck_C_ExecuteUbergraph_BTS_IsVehicleStuck_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

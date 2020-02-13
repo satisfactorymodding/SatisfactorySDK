@@ -12,29 +12,12 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_DebugCameraController.BP_DebugCameraController_C.UserConstructionScript
-// ()
-
-void ABP_DebugCameraController_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCameraController.BP_DebugCameraController_C.UserConstructionScript");
-
-	ABP_DebugCameraController_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_DebugCameraController.BP_DebugCameraController_C.InpActEvt_Shift_P_K2Node_InputKeyEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_DebugCameraController_C::InpActEvt_Shift_P_K2Node_InputKeyEvent_1(const struct FKey& Key)
+void ABP_DebugCameraController_C::InpActEvt_Shift_P_K2Node_InputKeyEvent_1(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCameraController.BP_DebugCameraController_C.InpActEvt_Shift_P_K2Node_InputKeyEvent_1");
 
@@ -50,7 +33,7 @@ void ABP_DebugCameraController_C::InpActEvt_Shift_P_K2Node_InputKeyEvent_1(const
 
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.ReceiveOnActivate
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class APlayerController**      OriginalPC                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,7 +53,7 @@ void ABP_DebugCameraController_C::ReceiveOnActivate(class APlayerController** Or
 
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.ReceiveOnDeactivate
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class APlayerController**      RestoredPC                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -90,11 +73,11 @@ void ABP_DebugCameraController_C::ReceiveOnDeactivate(class APlayerController** 
 
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.ExecuteUbergraph_BP_DebugCameraController
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DebugCameraController_C::ExecuteUbergraph_BP_DebugCameraController(int EntryPoint)
+void ABP_DebugCameraController_C::ExecuteUbergraph_BP_DebugCameraController(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCameraController.BP_DebugCameraController_C.ExecuteUbergraph_BP_DebugCameraController");
 

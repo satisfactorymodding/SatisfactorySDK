@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BuildingPointLight.BP_BuildingPointLight_C
-// 0x0008 (0x0398 - 0x0390)
+// 0x0008 (0x03C8 - 0x03C0)
 class UBP_BuildingPointLight_C : public UPointLightComponent
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0390(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -29,8 +29,8 @@ public:
 
 
 	void ReceiveBeginPlay();
-	void HasPowerChanged(bool State);
-	void ExecuteUbergraph_BP_BuildingPointLight(int EntryPoint);
+	void HasPowerChanged(bool* State);
+	void ExecuteUbergraph_BP_BuildingPointLight(int* EntryPoint);
 };
 
 

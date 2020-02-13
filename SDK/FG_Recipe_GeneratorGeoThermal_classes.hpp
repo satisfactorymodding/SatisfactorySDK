@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_GeneratorGeoThermal.Recipe_GeneratorGeoThermal_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_GeneratorGeoThermal_C : public UFGRecipe
 {
 public:

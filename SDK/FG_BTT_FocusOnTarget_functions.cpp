@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_FocusOnTarget.BTT_FocusOnTarget_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_FocusOnTarget_C::ReceiveExecuteAI(class AAIController** OwnerControlle
 
 
 // Function BTT_FocusOnTarget.BTT_FocusOnTarget_C.ExecuteUbergraph_BTT_FocusOnTarget
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_FocusOnTarget_C::ExecuteUbergraph_BTT_FocusOnTarget(int EntryPoint)
+void UBTT_FocusOnTarget_C::ExecuteUbergraph_BTT_FocusOnTarget(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_FocusOnTarget.BTT_FocusOnTarget_C.ExecuteUbergraph_BTT_FocusOnTarget");
 

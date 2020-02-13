@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Holo_ConveyorBelt.Holo_ConveyorBelt_C
-// 0x0000 (0x0458 - 0x0458)
+// 0x0000 (0x0508 - 0x0508)
 class AHolo_ConveyorBelt_C : public AFGConveyorBeltHologram
 {
 public:

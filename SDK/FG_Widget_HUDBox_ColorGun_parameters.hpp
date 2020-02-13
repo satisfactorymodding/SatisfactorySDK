@@ -27,7 +27,7 @@ struct UWidget_HUDBox_ColorGun_C_UpdateColors_Params
 // Function Widget_HUDBox_ColorGun.Widget_HUDBox_ColorGun_C.ExecuteUbergraph_Widget_HUDBox_ColorGun
 struct UWidget_HUDBox_ColorGun_C_ExecuteUbergraph_Widget_HUDBox_ColorGun_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

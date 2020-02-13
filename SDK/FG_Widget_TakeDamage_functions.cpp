@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TakeDamage.Widget_TakeDamage_C.GetIsHealthCritical
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsHealthCritical               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +35,7 @@ void UWidget_TakeDamage_C::GetIsHealthCritical(bool* IsHealthCritical)
 
 
 // Function Widget_TakeDamage.Widget_TakeDamage_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TakeDamage_C::Construct()
 {
@@ -52,24 +52,24 @@ void UWidget_TakeDamage_C::Construct()
 
 
 // Function Widget_TakeDamage.Widget_TakeDamage_C.SpawnPointer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UDamageType*             DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TakeDamage_C::SpawnPointer(class AActor* damagedActor, float Damage, class UDamageType* DamageType, class AController* instigatedBy, class AActor* damageCauser)
+void UWidget_TakeDamage_C::SpawnPointer(class AActor** DamagedActor, float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TakeDamage.Widget_TakeDamage_C.SpawnPointer");
 
 	UWidget_TakeDamage_C_SpawnPointer_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.Damage = Damage;
 	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -80,7 +80,7 @@ void UWidget_TakeDamage_C::SpawnPointer(class AActor* damagedActor, float Damage
 
 
 // Function Widget_TakeDamage.Widget_TakeDamage_C.OnRadiationDamage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TakeDamage_C::OnRadiationDamage()
 {
@@ -97,7 +97,7 @@ void UWidget_TakeDamage_C::OnRadiationDamage()
 
 
 // Function Widget_TakeDamage.Widget_TakeDamage_C.SetPlayerPawn
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TakeDamage_C::SetPlayerPawn()
 {
@@ -114,7 +114,7 @@ void UWidget_TakeDamage_C::SetPlayerPawn()
 
 
 // Function Widget_TakeDamage.Widget_TakeDamage_C.ShowWarningMessage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TakeDamage_C::ShowWarningMessage()
 {
@@ -131,12 +131,12 @@ void UWidget_TakeDamage_C::ShowWarningMessage()
 
 
 // Function Widget_TakeDamage.Widget_TakeDamage_C.UpdateRadiation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           RadiationActive                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          RadiationActive                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TakeDamage_C::UpdateRadiation(bool RadiationActive, float amount)
+void UWidget_TakeDamage_C::UpdateRadiation(bool* RadiationActive, float* amount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TakeDamage.Widget_TakeDamage_C.UpdateRadiation");
 
@@ -153,11 +153,11 @@ void UWidget_TakeDamage_C::UpdateRadiation(bool RadiationActive, float amount)
 
 
 // Function Widget_TakeDamage.Widget_TakeDamage_C.ExecuteUbergraph_Widget_TakeDamage
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TakeDamage_C::ExecuteUbergraph_Widget_TakeDamage(int EntryPoint)
+void UWidget_TakeDamage_C::ExecuteUbergraph_Widget_TakeDamage(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TakeDamage.Widget_TakeDamage_C.ExecuteUbergraph_Widget_TakeDamage");
 

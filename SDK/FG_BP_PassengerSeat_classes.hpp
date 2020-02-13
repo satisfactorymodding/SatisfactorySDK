@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PassengerSeat.BP_PassengerSeat_C
-// 0x0020 (0x03F0 - 0x03D0)
+// 0x0020 (0x03F8 - 0x03D8)
 class ABP_PassengerSeat_C : public AFGPassengerSeat
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USpringArmComponent*                         SpringArm;                                                // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UPostProcessComponent*                       PostProcess;                                              // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UCameraComponent*                            Camera;                                                   // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USpringArmComponent*                         SpringArm;                                                // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPostProcessComponent*                       PostProcess;                                              // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCameraComponent*                            Camera;                                                   // 0x03F0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,13 +31,12 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void InpActEvt_Use_K2Node_InputActionEvent_1(const struct FKey& Key);
+	void InpActEvt_Use_K2Node_InputActionEvent_1(struct FKey* Key);
 	void UpdateCamera();
 	void ReceivePossessed(class AController** NewController);
 	void ReceiveUnpossessed(class AController** OldController);
 	void Server_Leave();
-	void ExecuteUbergraph_BP_PassengerSeat(int EntryPoint);
+	void ExecuteUbergraph_BP_PassengerSeat(int* EntryPoint);
 };
 
 

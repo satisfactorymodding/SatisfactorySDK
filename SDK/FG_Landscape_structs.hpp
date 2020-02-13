@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
+#include "FG_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -218,8 +218,8 @@ struct FLandscapeSplineSegmentConnection
 {
 	class ULandscapeSplineControlPoint*                ControlPoint;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	float                                              TangentLen;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	struct FName                                       SocketName;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SocketName;                                               // 0x000C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Landscape.GrassInput
@@ -228,25 +228,44 @@ struct FGrassInput
 {
 	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class ULandscapeGrassType*                         GrassType;                                                // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FExpressionInput                            Input;                                                    // 0x0010(0x0010)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0020(0x0008) MISSED OFFSET
+	struct FExpressionInput                            Input;                                                    // 0x0010(0x000C)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x001C(0x000C) MISSED OFFSET
 };
 
 // ScriptStruct Landscape.LayerBlendInput
-// 0x0058
+// 0x0048
 struct FLayerBlendInput
 {
 	struct FName                                       LayerName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ELandscapeLayerBlendType>              BlendType;                                                // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-	struct FExpressionInput                            LayerInput;                                               // 0x0010(0x0010)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0020(0x0008) MISSED OFFSET
-	struct FExpressionInput                            HeightInput;                                              // 0x0028(0x0010)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
-	float                                              PreviewWeight;                                            // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ConstLayerInput;                                          // 0x0044(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ConstHeightInput;                                         // 0x0050(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	struct FExpressionInput                            LayerInput;                                               // 0x000C(0x000C)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
+	struct FExpressionInput                            HeightInput;                                              // 0x0020(0x000C)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x002C(0x0008) MISSED OFFSET
+	float                                              PreviewWeight;                                            // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ConstLayerInput;                                          // 0x0038(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ConstHeightInput;                                         // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Landscape.LandscapeProceduralLayerBrush
+// 0x0008
+struct FLandscapeProceduralLayerBrush
+{
+	class ALandscapeBlueprintCustomBrush*              BPCustomBrush;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Landscape.ProceduralLayer
+// 0x0040
+struct FProceduralLayer
+{
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               visible;                                                  // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	float                                              Weight;                                                   // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FLandscapeProceduralLayerBrush>      Brushes;                                                  // 0x0010(0x0010) (ZeroConstructor)
+	TArray<int8_t>                                     HeightmapBrushOrderIndices;                               // 0x0020(0x0010) (ZeroConstructor)
+	TArray<int8_t>                                     WeightmapBrushOrderIndices;                               // 0x0030(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Landscape.LandscapeEditToolRenderData
@@ -275,6 +294,23 @@ struct FLandscapeInfoLayerSettings
 {
 	class ULandscapeLayerInfoObject*                   LayerInfoObj;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       LayerName;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Landscape.ProceduralLayerData
+// 0x0050
+struct FProceduralLayerData
+{
+	TMap<class UTexture2D*, class UTexture2D*>         Heightmaps;                                               // 0x0000(0x0050) (ZeroConstructor)
+};
+
+// ScriptStruct Landscape.RenderDataPerHeightmap
+// 0x0028
+struct FRenderDataPerHeightmap
+{
+	class UTexture2D*                                  OriginalHeightmap;                                        // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
+	TArray<class ULandscapeComponent*>                 Components;                                               // 0x0010(0x0010) (ExportObject, ZeroConstructor, Transient)
+	struct FIntPoint                                   TopLeftSectionBase;                                       // 0x0020(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 };
 
 // ScriptStruct Landscape.LandscapeImportLayerInfo

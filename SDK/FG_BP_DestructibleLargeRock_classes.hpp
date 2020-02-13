@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DestructibleLargeRock.BP_DestructibleLargeRock_C
-// 0x0000 (0x0370 - 0x0370)
+// 0x0008 (0x0380 - 0x0378)
 class ABP_DestructibleLargeRock_C : public AFGDestructibleActor
 {
 public:
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0378(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,9 @@ public:
 		return ptr;
 	}
 
+
+	void PlayDestructEffects();
+	void ExecuteUbergraph_BP_DestructibleLargeRock(int* EntryPoint);
 };
 
 

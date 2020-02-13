@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Persistent_Level.Persistent_Level_C.PartyMode
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void APersistent_Level_C::PartyMode()
 {
@@ -30,7 +30,7 @@ void APersistent_Level_C::PartyMode()
 
 
 // Function Persistent_Level.Persistent_Level_C.TeleportPlayer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void APersistent_Level_C::TeleportPlayer()
 {
@@ -47,11 +47,11 @@ void APersistent_Level_C::TeleportPlayer()
 
 
 // Function Persistent_Level.Persistent_Level_C.ExecuteUbergraph_Persistent_Level
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APersistent_Level_C::ExecuteUbergraph_Persistent_Level(int EntryPoint)
+void APersistent_Level_C::ExecuteUbergraph_Persistent_Level(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Persistent_Level.Persistent_Level_C.ExecuteUbergraph_Persistent_Level");
 

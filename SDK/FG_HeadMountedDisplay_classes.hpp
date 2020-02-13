@@ -27,58 +27,58 @@ public:
 	}
 
 
-	void UpdateExternalTrackingHMDPosition(const struct FTransform& ExternalTrackingTransform);
-	void SetWorldToMetersScale(class UObject* WorldContext, float NewScale);
-	void SetTrackingOrigin(TEnumAsByte<EHMDTrackingOrigin> Origin);
-	void SetSpectatorScreenTexture(class UTexture* InTexture);
-	void SetSpectatorScreenModeTexturePlusEyeLayout(const struct FVector2D& EyeRectMin, const struct FVector2D& EyeRectMax, const struct FVector2D& TextureRectMin, const struct FVector2D& TextureRectMax, bool bDrawEyeFirst, bool bClearBlack, bool bUseAlpha);
-	void SetSpectatorScreenMode(ESpectatorScreenMode Mode);
-	void SetClippingPlanes(float Near, float Far);
-	void ResetOrientationAndPosition(float Yaw, TEnumAsByte<EOrientPositionSelector> options);
-	bool IsSpectatorScreenModeControllable();
-	bool IsInLowPersistenceMode();
-	bool IsHeadMountedDisplayEnabled();
-	bool IsHeadMountedDisplayConnected();
-	bool IsDeviceTracking(const struct FXRDeviceId& XRDeviceId);
-	bool HasValidTrackingPosition();
-	float GetWorldToMetersScale(class UObject* WorldContext);
-	void GetVRFocusState(bool* bUseFocus, bool* bHasFocus);
-	struct FTransform GetTrackingToWorldTransform(class UObject* WorldContext);
-	void GetTrackingSensorParameters(int Index, struct FVector* Origin, struct FRotator* Rotation, float* LeftFOV, float* RightFOV, float* TopFOV, float* BottomFOV, float* Distance, float* NearPlane, float* FarPlane, bool* IsActive);
-	TEnumAsByte<EHMDTrackingOrigin> GetTrackingOrigin();
-	float GetScreenPercentage();
-	void GetPositionalTrackingCameraParameters(struct FVector* CameraOrigin, struct FRotator* CameraRotation, float* HFOV, float* VFOV, float* CameraDistance, float* NearPlane, float* FarPlane);
-	float GetPixelDensity();
-	void GetOrientationAndPosition(struct FRotator* DeviceRotation, struct FVector* DevicePosition);
-	int GetNumOfTrackingSensors();
-	TEnumAsByte<EHMDWornState> GetHMDWornState();
-	struct FName GetHMDDeviceName();
-	void GetDeviceWorldPose(class UObject* WorldContext, const struct FXRDeviceId& XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position);
-	void GetDevicePose(const struct FXRDeviceId& XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position);
-	TArray<struct FXRDeviceId> EnumerateTrackedDevices(const struct FName& SystemId, EXRTrackedDeviceType DeviceType);
-	void EnableLowPersistenceMode(bool bEnable);
-	bool EnableHMD(bool bEnable);
-	void CalibrateExternalTrackingToHMD(const struct FTransform& ExternalTrackingTransform);
+	void STATIC_UpdateExternalTrackingHMDPosition(struct FTransform* ExternalTrackingTransform);
+	void STATIC_SetWorldToMetersScale(class UObject** WorldContext, float* NewScale);
+	void STATIC_SetTrackingOrigin(TEnumAsByte<EHMDTrackingOrigin>* Origin);
+	void STATIC_SetSpectatorScreenTexture(class UTexture** InTexture);
+	void STATIC_SetSpectatorScreenModeTexturePlusEyeLayout(struct FVector2D* EyeRectMin, struct FVector2D* EyeRectMax, struct FVector2D* TextureRectMin, struct FVector2D* TextureRectMax, bool* bDrawEyeFirst, bool* bClearBlack, bool* bUseAlpha);
+	void STATIC_SetSpectatorScreenMode(ESpectatorScreenMode* Mode);
+	void STATIC_SetClippingPlanes(float* Near, float* Far);
+	void STATIC_ResetOrientationAndPosition(float* Yaw, TEnumAsByte<EOrientPositionSelector>* options);
+	bool STATIC_IsSpectatorScreenModeControllable();
+	bool STATIC_IsInLowPersistenceMode();
+	bool STATIC_IsHeadMountedDisplayEnabled();
+	bool STATIC_IsHeadMountedDisplayConnected();
+	bool STATIC_IsDeviceTracking(struct FXRDeviceId* XRDeviceId);
+	bool STATIC_HasValidTrackingPosition();
+	float STATIC_GetWorldToMetersScale(class UObject** WorldContext);
+	void STATIC_GetVRFocusState(bool* bUseFocus, bool* bHasFocus);
+	struct FTransform STATIC_GetTrackingToWorldTransform(class UObject** WorldContext);
+	void STATIC_GetTrackingSensorParameters(int* Index, struct FVector* Origin, struct FRotator* Rotation, float* LeftFOV, float* RightFOV, float* TopFOV, float* BottomFOV, float* Distance, float* NearPlane, float* FarPlane, bool* IsActive);
+	TEnumAsByte<EHMDTrackingOrigin> STATIC_GetTrackingOrigin();
+	float STATIC_GetScreenPercentage();
+	void STATIC_GetPositionalTrackingCameraParameters(struct FVector* CameraOrigin, struct FRotator* CameraRotation, float* HFOV, float* VFOV, float* CameraDistance, float* NearPlane, float* FarPlane);
+	float STATIC_GetPixelDensity();
+	void STATIC_GetOrientationAndPosition(struct FRotator* DeviceRotation, struct FVector* DevicePosition);
+	int STATIC_GetNumOfTrackingSensors();
+	TEnumAsByte<EHMDWornState> STATIC_GetHMDWornState();
+	struct FName STATIC_GetHMDDeviceName();
+	void STATIC_GetDeviceWorldPose(class UObject** WorldContext, struct FXRDeviceId* XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position);
+	void STATIC_GetDevicePose(struct FXRDeviceId* XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position);
+	TArray<struct FXRDeviceId> STATIC_EnumerateTrackedDevices(struct FName* SystemId, EXRTrackedDeviceType* DeviceType);
+	void STATIC_EnableLowPersistenceMode(bool* bEnable);
+	bool STATIC_EnableHMD(bool* bEnable);
+	void STATIC_CalibrateExternalTrackingToHMD(struct FTransform* ExternalTrackingTransform);
 };
 
 
 // Class HeadMountedDisplay.MotionControllerComponent
-// 0x00B0 (0x0610 - 0x0560)
+// 0x00B0 (0x0630 - 0x0580)
 class UMotionControllerComponent : public UPrimitiveComponent
 {
 public:
-	struct FName                                       MotionSource;                                             // 0x0560(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bDisableLowLatencyUpdate : 1;                             // 0x0568(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0569(0x0003) MISSED OFFSET
-	ETrackingStatus                                    CurrentTrackingStatus;                                    // 0x056C(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bDisplayDeviceModel;                                      // 0x056D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x056E(0x0002) MISSED OFFSET
-	struct FName                                       DisplayModelSource;                                       // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 CustomDisplayMesh;                                        // 0x0578(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInterface*>                  DisplayMeshMaterialOverrides;                             // 0x0580(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x60];                                      // 0x0590(0x0060) MISSED OFFSET
-	class UPrimitiveComponent*                         DisplayComponent;                                         // 0x05F0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x18];                                      // 0x05F8(0x0018) MISSED OFFSET
+	struct FName                                       MotionSource;                                             // 0x0580(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bDisableLowLatencyUpdate : 1;                             // 0x0588(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0589(0x0003) MISSED OFFSET
+	ETrackingStatus                                    CurrentTrackingStatus;                                    // 0x058C(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bDisplayDeviceModel;                                      // 0x058D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x058E(0x0002) MISSED OFFSET
+	struct FName                                       DisplayModelSource;                                       // 0x0590(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 CustomDisplayMesh;                                        // 0x0598(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UMaterialInterface*>                  DisplayMeshMaterialOverrides;                             // 0x05A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x60];                                      // 0x05B0(0x0060) MISSED OFFSET
+	class UPrimitiveComponent*                         DisplayComponent;                                         // 0x0610(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x18];                                      // 0x0618(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -87,16 +87,16 @@ public:
 	}
 
 
-	void SetTrackingSource(EControllerHand NewSource);
-	void SetTrackingMotionSource(const struct FName& NewSource);
-	void SetShowDeviceModel(bool bShowControllerModel);
-	void SetDisplayModelSource(const struct FName& NewDisplayModelSource);
-	void SetCustomDisplayMesh(class UStaticMesh* NewDisplayMesh);
-	void SetAssociatedPlayerIndex(int NewPlayer);
+	void SetTrackingSource(EControllerHand* NewSource);
+	void SetTrackingMotionSource(struct FName* NewSource);
+	void SetShowDeviceModel(bool* bShowControllerModel);
+	void SetDisplayModelSource(struct FName* NewDisplayModelSource);
+	void SetCustomDisplayMesh(class UStaticMesh** NewDisplayMesh);
+	void SetAssociatedPlayerIndex(int* NewPlayer);
 	void OnMotionControllerUpdated();
 	bool IsTracked();
 	EControllerHand GetTrackingSource();
-	float GetParameterValue(const struct FName& InName, bool* bValueFound);
+	float GetParameterValue(struct FName* InName, bool* bValueFound);
 };
 
 
@@ -113,41 +113,41 @@ public:
 	}
 
 
-	void SetIsControllerMotionTrackingEnabledByDefault(bool enable);
-	bool IsMotionTrackingEnabledForSource(int PlayerIndex, const struct FName& SourceName);
-	bool IsMotionTrackingEnabledForDevice(int PlayerIndex, EControllerHand Hand);
-	bool IsMotionTrackingEnabledForComponent(class UMotionControllerComponent* MotionControllerComponent);
-	bool IsMotionTrackedDeviceCountManagementNecessary();
-	bool IsMotionSourceTracking(int PlayerIndex, const struct FName& SourceName);
-	int GetMotionTrackingEnabledControllerCount();
-	int GetMaximumMotionTrackedControllerCount();
-	struct FName GetActiveTrackingSystemName();
-	TArray<struct FName> EnumerateMotionSources();
-	bool EnableMotionTrackingOfSource(int PlayerIndex, const struct FName& SourceName);
-	bool EnableMotionTrackingOfDevice(int PlayerIndex, EControllerHand Hand);
-	bool EnableMotionTrackingForComponent(class UMotionControllerComponent* MotionControllerComponent);
-	void DisableMotionTrackingOfSource(int PlayerIndex, const struct FName& SourceName);
-	void DisableMotionTrackingOfDevice(int PlayerIndex, EControllerHand Hand);
-	void DisableMotionTrackingOfControllersForPlayer(int PlayerIndex);
-	void DisableMotionTrackingOfAllControllers();
-	void DisableMotionTrackingForComponent(class UMotionControllerComponent* MotionControllerComponent);
+	void STATIC_SetIsControllerMotionTrackingEnabledByDefault(bool* enable);
+	bool STATIC_IsMotionTrackingEnabledForSource(int* PlayerIndex, struct FName* SourceName);
+	bool STATIC_IsMotionTrackingEnabledForDevice(int* PlayerIndex, EControllerHand* Hand);
+	bool STATIC_IsMotionTrackingEnabledForComponent(class UMotionControllerComponent** MotionControllerComponent);
+	bool STATIC_IsMotionTrackedDeviceCountManagementNecessary();
+	bool STATIC_IsMotionSourceTracking(int* PlayerIndex, struct FName* SourceName);
+	int STATIC_GetMotionTrackingEnabledControllerCount();
+	int STATIC_GetMaximumMotionTrackedControllerCount();
+	struct FName STATIC_GetActiveTrackingSystemName();
+	TArray<struct FName> STATIC_EnumerateMotionSources();
+	bool STATIC_EnableMotionTrackingOfSource(int* PlayerIndex, struct FName* SourceName);
+	bool STATIC_EnableMotionTrackingOfDevice(int* PlayerIndex, EControllerHand* Hand);
+	bool STATIC_EnableMotionTrackingForComponent(class UMotionControllerComponent** MotionControllerComponent);
+	void STATIC_DisableMotionTrackingOfSource(int* PlayerIndex, struct FName* SourceName);
+	void STATIC_DisableMotionTrackingOfDevice(int* PlayerIndex, EControllerHand* Hand);
+	void STATIC_DisableMotionTrackingOfControllersForPlayer(int* PlayerIndex);
+	void STATIC_DisableMotionTrackingOfAllControllers();
+	void STATIC_DisableMotionTrackingForComponent(class UMotionControllerComponent** MotionControllerComponent);
 };
 
 
 // Class HeadMountedDisplay.VRNotificationsComponent
-// 0x0090 (0x0180 - 0x00F0)
+// 0x0090 (0x0188 - 0x00F8)
 class UVRNotificationsComponent : public UActorComponent
 {
 public:
-	struct FScriptMulticastDelegate                    HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate;    // 0x00F0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDTrackingInitializedDelegate;                           // 0x0100(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDRecenteredDelegate;                                    // 0x0110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDLostDelegate;                                          // 0x0120(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDReconnectedDelegate;                                   // 0x0130(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDConnectCanceledDelegate;                               // 0x0140(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDPutOnHeadDelegate;                                     // 0x0150(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDRemovedFromHeadDelegate;                               // 0x0160(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    VRControllerRecenteredDelegate;                           // 0x0170(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate;    // 0x00F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    HMDTrackingInitializedDelegate;                           // 0x0108(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    HMDRecenteredDelegate;                                    // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    HMDLostDelegate;                                          // 0x0128(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    HMDReconnectedDelegate;                                   // 0x0138(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    HMDConnectCanceledDelegate;                               // 0x0148(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    HMDPutOnHeadDelegate;                                     // 0x0158(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    HMDRemovedFromHeadDelegate;                               // 0x0168(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    VRControllerRecenteredDelegate;                           // 0x0178(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -171,8 +171,8 @@ public:
 	}
 
 
-	class UPrimitiveComponent* AddNamedDeviceVisualizationComponentBlocking(class AActor* Target, const struct FName& SystemName, const struct FName& DeviceName, bool bManualAttachment, const struct FTransform& RelativeTransform, struct FXRDeviceId* XRDeviceId);
-	class UPrimitiveComponent* AddDeviceVisualizationComponentBlocking(class AActor* Target, const struct FXRDeviceId& XRDeviceId, bool bManualAttachment, const struct FTransform& RelativeTransform);
+	class UPrimitiveComponent* STATIC_AddNamedDeviceVisualizationComponentBlocking(class AActor** Target, struct FName* SystemName, struct FName* DeviceName, bool* bManualAttachment, struct FTransform* RelativeTransform, struct FXRDeviceId* XRDeviceId);
+	class UPrimitiveComponent* STATIC_AddDeviceVisualizationComponentBlocking(class AActor** Target, struct FXRDeviceId* XRDeviceId, bool* bManualAttachment, struct FTransform* RelativeTransform);
 };
 
 
@@ -193,8 +193,8 @@ public:
 	}
 
 
-	class UAsyncTask_LoadXRDeviceVisComponent* AddNamedDeviceVisualizationComponentAsync(class AActor* Target, const struct FName& SystemName, const struct FName& DeviceName, bool bManualAttachment, const struct FTransform& RelativeTransform, struct FXRDeviceId* XRDeviceId, class UPrimitiveComponent** NewComponent);
-	class UAsyncTask_LoadXRDeviceVisComponent* AddDeviceVisualizationComponentAsync(class AActor* Target, const struct FXRDeviceId& XRDeviceId, bool bManualAttachment, const struct FTransform& RelativeTransform, class UPrimitiveComponent** NewComponent);
+	class UAsyncTask_LoadXRDeviceVisComponent* STATIC_AddNamedDeviceVisualizationComponentAsync(class AActor** Target, struct FName* SystemName, struct FName* DeviceName, bool* bManualAttachment, struct FTransform* RelativeTransform, struct FXRDeviceId* XRDeviceId, class UPrimitiveComponent** NewComponent);
+	class UAsyncTask_LoadXRDeviceVisComponent* STATIC_AddDeviceVisualizationComponentAsync(class AActor** Target, struct FXRDeviceId* XRDeviceId, bool* bManualAttachment, struct FTransform* RelativeTransform, class UPrimitiveComponent** NewComponent);
 };
 
 

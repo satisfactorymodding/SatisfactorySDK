@@ -34,7 +34,7 @@ struct UBTT_WalkBackSlowly_C_ReceiveAbort_Params
 // Function BTT_WalkBackSlowly.BTT_WalkBackSlowly_C.ExecuteUbergraph_BTT_WalkBackSlowly
 struct UBTT_WalkBackSlowly_C_ExecuteUbergraph_BTT_WalkBackSlowly_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

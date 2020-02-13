@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_DebrisActor_03.BP_DebrisActor_03_C.UserConstructionScript
-struct ABP_DebrisActor_03_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

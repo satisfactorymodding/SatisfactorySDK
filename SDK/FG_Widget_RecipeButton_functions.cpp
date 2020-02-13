@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.ClearButtonSelection
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecipeButton_C::ClearButtonSelection()
 {
@@ -30,7 +30,7 @@ void UWidget_RecipeButton_C::ClearButtonSelection()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetCustomTooltip
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -51,7 +51,7 @@ class UWidget* UWidget_RecipeButton_C::GetCustomTooltip()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetRightClickMenuVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -72,7 +72,7 @@ ESlateVisibility UWidget_RecipeButton_C::GetRightClickMenuVisibility()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.CreateRightClickMenu
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -93,7 +93,7 @@ class UWidget* UWidget_RecipeButton_C::CreateRightClickMenu()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetButtonHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -114,7 +114,7 @@ struct FLinearColor UWidget_RecipeButton_C::GetButtonHoverColor()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetTextHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -135,7 +135,7 @@ struct FSlateColor UWidget_RecipeButton_C::GetTextHoverColor()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.IsButtonEnabled
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -156,7 +156,7 @@ bool UWidget_RecipeButton_C::IsButtonEnabled()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetNumCanProduce
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -178,7 +178,7 @@ void UWidget_RecipeButton_C::GetNumCanProduce(int* Result)
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetNumCanProduceVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -199,7 +199,7 @@ ESlateVisibility UWidget_RecipeButton_C::GetNumCanProduceVisibility()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetNumCanProduceText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -220,7 +220,7 @@ struct FText UWidget_RecipeButton_C::GetNumCanProduceText()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.CheckIngredients
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecipeButton_C::CheckIngredients()
 {
@@ -237,7 +237,7 @@ void UWidget_RecipeButton_C::CheckIngredients()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetRecipeIcon
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -258,7 +258,7 @@ struct FSlateBrush UWidget_RecipeButton_C::GetRecipeIcon()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetIconColor
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -279,7 +279,7 @@ struct FLinearColor UWidget_RecipeButton_C::GetIconColor()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.OnMouseButtonDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -304,7 +304,7 @@ struct FEventReply UWidget_RecipeButton_C::OnMouseButtonDown(struct FGeometry* M
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.GetRecipeDisplayName
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -325,7 +325,7 @@ struct FText UWidget_RecipeButton_C::GetRecipeDisplayName()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RecipeButton_C::Construct()
 {
@@ -342,7 +342,7 @@ void UWidget_RecipeButton_C::Construct()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -364,7 +364,7 @@ void UWidget_RecipeButton_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTi
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.OnClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecipeButton_C::OnClicked()
 {
@@ -381,7 +381,7 @@ void UWidget_RecipeButton_C::OnClicked()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.OnHovered
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecipeButton_C::OnHovered()
 {
@@ -398,7 +398,7 @@ void UWidget_RecipeButton_C::OnHovered()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.OnPressed
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecipeButton_C::OnPressed()
 {
@@ -415,7 +415,7 @@ void UWidget_RecipeButton_C::OnPressed()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.OnMouseLeave
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -435,7 +435,7 @@ void UWidget_RecipeButton_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.UpdateWindowWidgetOffset_Event
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecipeButton_C::UpdateWindowWidgetOffset_Event()
 {
@@ -452,12 +452,12 @@ void UWidget_RecipeButton_C::UpdateWindowWidgetOffset_Event()
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_RecipeButton_C::BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_RecipeButton_C::BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RecipeButton.Widget_RecipeButton_C.BndEvt__Widget_ListButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
 
@@ -474,11 +474,11 @@ void UWidget_RecipeButton_C::BndEvt__Widget_ListButton_K2Node_ComponentBoundEven
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.ExecuteUbergraph_Widget_RecipeButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RecipeButton_C::ExecuteUbergraph_Widget_RecipeButton(int EntryPoint)
+void UWidget_RecipeButton_C::ExecuteUbergraph_Widget_RecipeButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RecipeButton.Widget_RecipeButton_C.ExecuteUbergraph_Widget_RecipeButton");
 
@@ -494,11 +494,11 @@ void UWidget_RecipeButton_C::ExecuteUbergraph_Widget_RecipeButton(int EntryPoint
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.OnRecipeButtonClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_RecipeButton_C*  ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_RecipeButton_C** ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_RecipeButton_C::OnRecipeButtonClicked__DelegateSignature(class UWidget_RecipeButton_C* ClickedButton)
+void UWidget_RecipeButton_C::OnRecipeButtonClicked__DelegateSignature(class UWidget_RecipeButton_C** ClickedButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RecipeButton.Widget_RecipeButton_C.OnRecipeButtonClicked__DelegateSignature");
 
@@ -514,7 +514,7 @@ void UWidget_RecipeButton_C::OnRecipeButtonClicked__DelegateSignature(class UWid
 
 
 // Function Widget_RecipeButton.Widget_RecipeButton_C.UpdateWindowWidgetOffset__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RecipeButton_C::UpdateWindowWidgetOffset__DelegateSignature()
 {

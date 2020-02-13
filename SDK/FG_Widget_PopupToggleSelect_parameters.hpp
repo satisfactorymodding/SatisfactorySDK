@@ -36,7 +36,7 @@ struct UWidget_PopupToggleSelect_C_SetInstigatorAndInitialize_Params
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.OnChildSelected
 struct UWidget_PopupToggleSelect_C_OnChildSelected_Params
 {
-	int                                                ChildIndex;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ChildIndex;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.NotifyPopupConfirmed
@@ -52,7 +52,7 @@ struct UWidget_PopupToggleSelect_C_NotifyPopupCanceled_Params
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.ExecuteUbergraph_Widget_PopupToggleSelect
 struct UWidget_PopupToggleSelect_C_ExecuteUbergraph_Widget_PopupToggleSelect_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

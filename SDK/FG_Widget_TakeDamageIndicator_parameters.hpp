@@ -39,7 +39,7 @@ struct UWidget_TakeDamageIndicator_C_Tick_Params
 // Function Widget_TakeDamageIndicator.Widget_TakeDamageIndicator_C.ExecuteUbergraph_Widget_TakeDamageIndicator
 struct UWidget_TakeDamageIndicator_C_ExecuteUbergraph_Widget_TakeDamageIndicator_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

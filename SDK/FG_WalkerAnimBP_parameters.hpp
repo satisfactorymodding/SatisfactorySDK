@@ -23,7 +23,7 @@ struct UWalkerAnimBP_C_BlueprintUpdateAnimation_Params
 // Function WalkerAnimBP.WalkerAnimBP_C.ExecuteUbergraph_WalkerAnimBP
 struct UWalkerAnimBP_C_ExecuteUbergraph_WalkerAnimBP_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

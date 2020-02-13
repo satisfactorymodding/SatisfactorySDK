@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.UserConstructionScript
-// ()
-
-void ABP_SpitterProjectileVolley_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.UserConstructionScript");
-
-	ABP_SpitterProjectileVolley_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_SpitterProjectileVolley_C::ReceiveBeginPlay()
 {
@@ -47,7 +30,7 @@ void ABP_SpitterProjectileVolley_C::ReceiveBeginPlay()
 
 
 // Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.PlayExplosionEffects
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_SpitterProjectileVolley_C::PlayExplosionEffects()
 {
@@ -64,11 +47,11 @@ void ABP_SpitterProjectileVolley_C::PlayExplosionEffects()
 
 
 // Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.ExecuteUbergraph_BP_SpitterProjectileVolley
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterProjectileVolley_C::ExecuteUbergraph_BP_SpitterProjectileVolley(int EntryPoint)
+void ABP_SpitterProjectileVolley_C::ExecuteUbergraph_BP_SpitterProjectileVolley(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.ExecuteUbergraph_BP_SpitterProjectileVolley");
 

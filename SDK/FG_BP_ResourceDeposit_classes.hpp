@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResourceDeposit.BP_ResourceDeposit_C
-// 0x0008 (0x0408 - 0x0400)
+// 0x0008 (0x0418 - 0x0410)
 class ABP_ResourceDeposit_C : public AFGResourceDeposit
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0400(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0410(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -28,10 +28,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void PlayDepletedEffect(class UClass** Descriptor);
-	void ExecuteUbergraph_BP_ResourceDeposit(int EntryPoint);
+	void ExecuteUbergraph_BP_ResourceDeposit(int* EntryPoint);
 };
 
 

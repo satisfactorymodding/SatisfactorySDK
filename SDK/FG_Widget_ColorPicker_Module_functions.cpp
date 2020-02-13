@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.SetAndUpdateColor
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorPicker_Module_C::SetAndUpdateColor()
 {
@@ -30,7 +30,7 @@ void UWidget_ColorPicker_Module_C::SetAndUpdateColor()
 
 
 // Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ColorPicker_Module_C::Construct()
 {
@@ -47,11 +47,11 @@ void UWidget_ColorPicker_Module_C::Construct()
 
 
 // Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.BndEvt__Widget_ColorPicker_Slider_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Module_C::BndEvt__Widget_ColorPicker_Slider_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(float Value)
+void UWidget_ColorPicker_Module_C::BndEvt__Widget_ColorPicker_Slider_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.BndEvt__Widget_ColorPicker_Slider_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
 
@@ -67,11 +67,11 @@ void UWidget_ColorPicker_Module_C::BndEvt__Widget_ColorPicker_Slider_K2Node_Comp
 
 
 // Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.BndEvt__mBrightnessSlider_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Module_C::BndEvt__mBrightnessSlider_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(float Value)
+void UWidget_ColorPicker_Module_C::BndEvt__mBrightnessSlider_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.BndEvt__mBrightnessSlider_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
 
@@ -87,11 +87,11 @@ void UWidget_ColorPicker_Module_C::BndEvt__mBrightnessSlider_K2Node_ComponentBou
 
 
 // Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.BndEvt__mSaturationSlider_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Module_C::BndEvt__mSaturationSlider_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(float Value)
+void UWidget_ColorPicker_Module_C::BndEvt__mSaturationSlider_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.BndEvt__mSaturationSlider_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
 
@@ -107,11 +107,11 @@ void UWidget_ColorPicker_Module_C::BndEvt__mSaturationSlider_K2Node_ComponentBou
 
 
 // Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.SetupColorAndSliders
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Module_C::SetupColorAndSliders(const struct FLinearColor& Color)
+void UWidget_ColorPicker_Module_C::SetupColorAndSliders(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.SetupColorAndSliders");
 
@@ -127,11 +127,11 @@ void UWidget_ColorPicker_Module_C::SetupColorAndSliders(const struct FLinearColo
 
 
 // Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.ExecuteUbergraph_Widget_ColorPicker_Module
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_Module_C::ExecuteUbergraph_Widget_ColorPicker_Module(int EntryPoint)
+void UWidget_ColorPicker_Module_C::ExecuteUbergraph_Widget_ColorPicker_Module(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.ExecuteUbergraph_Widget_ColorPicker_Module");
 
@@ -147,7 +147,7 @@ void UWidget_ColorPicker_Module_C::ExecuteUbergraph_Widget_ColorPicker_Module(in
 
 
 // Function Widget_ColorPicker_Module.Widget_ColorPicker_Module_C.OnValueChanged__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorPicker_Module_C::OnValueChanged__DelegateSignature()
 {

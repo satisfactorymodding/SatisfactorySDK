@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.UserConstructionScript
-// ()
-
-void AEquip_RebarGun_Projectile_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.UserConstructionScript");
-
-	AEquip_RebarGun_Projectile_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.PlayFireEffect
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_RebarGun_Projectile_C::PlayFireEffect()
 {
@@ -47,7 +30,7 @@ void AEquip_RebarGun_Projectile_C::PlayFireEffect()
 
 
 // Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.PlayReloadEffects
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_RebarGun_Projectile_C::PlayReloadEffects()
 {
@@ -64,7 +47,7 @@ void AEquip_RebarGun_Projectile_C::PlayReloadEffects()
 
 
 // Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_RebarGun_Projectile_C::WasEquipped()
 {
@@ -81,7 +64,7 @@ void AEquip_RebarGun_Projectile_C::WasEquipped()
 
 
 // Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_RebarGun_Projectile_C::WasUnEquipped()
 {
@@ -98,7 +81,7 @@ void AEquip_RebarGun_Projectile_C::WasUnEquipped()
 
 
 // Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.PlayFailedToFireEffects
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_RebarGun_Projectile_C::PlayFailedToFireEffects()
 {
@@ -115,11 +98,11 @@ void AEquip_RebarGun_Projectile_C::PlayFailedToFireEffects()
 
 
 // Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.ExecuteUbergraph_Equip_RebarGun_Projectile
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_RebarGun_Projectile_C::ExecuteUbergraph_Equip_RebarGun_Projectile(int EntryPoint)
+void AEquip_RebarGun_Projectile_C::ExecuteUbergraph_Equip_RebarGun_Projectile(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_RebarGun_Projectile.Equip_RebarGun_Projectile_C.ExecuteUbergraph_Equip_RebarGun_Projectile");
 

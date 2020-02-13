@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_TutorialSubsystem.BP_TutorialSubsystem_C.UserConstructionScript
-struct UBP_TutorialSubsystem_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

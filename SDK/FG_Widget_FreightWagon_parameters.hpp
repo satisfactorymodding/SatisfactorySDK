@@ -84,7 +84,7 @@ struct UWidget_FreightWagon_C_BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_O
 // Function Widget_FreightWagon.Widget_FreightWagon_C.ExecuteUbergraph_Widget_FreightWagon
 struct UWidget_FreightWagon_C_ExecuteUbergraph_Widget_FreightWagon_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

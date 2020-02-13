@@ -22,11 +22,11 @@ struct AChar_NonFlyingBird_C_OnRep_mIsLuring_Params
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.SetLuring
 struct AChar_NonFlyingBird_C_SetLuring_Params
 {
-	bool                                               isLuring;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              isLuring;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Char_NonFlyingBird.Char_NonFlyingBird_C.UserConstructionScript
-struct AChar_NonFlyingBird_C_UserConstructionScript_Params
+// Function Char_NonFlyingBird.Char_NonFlyingBird_C.ReceiveBeginPlay
+struct AChar_NonFlyingBird_C_ReceiveBeginPlay_Params
 {
 };
 
@@ -55,23 +55,39 @@ struct AChar_NonFlyingBird_C_ReceiveDied_Params
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.NotifyOnTakeDamage
 struct AChar_NonFlyingBird_C_NotifyOnTakeDamage_Params
 {
-	class AActor**                                     damagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             damageAmount;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UDamageType**                                DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AController**                                instigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AActor**                                     damageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AController**                                InstigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_NonFlyingBird.Char_NonFlyingBird_C.ReceiveEndPlay
+struct AChar_NonFlyingBird_C_ReceiveEndPlay_Params
+{
+	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_NonFlyingBird.Char_NonFlyingBird_C.GainedSignificance
+struct AChar_NonFlyingBird_C_GainedSignificance_Params
+{
+};
+
+// Function Char_NonFlyingBird.Char_NonFlyingBird_C.LostSignificance
+struct AChar_NonFlyingBird_C_LostSignificance_Params
+{
 };
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.ExecuteUbergraph_Char_NonFlyingBird
 struct AChar_NonFlyingBird_C_ExecuteUbergraph_Char_NonFlyingBird_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.OnLandedDelegate__DelegateSignature
 struct AChar_NonFlyingBird_C_OnLandedDelegate__DelegateSignature_Params
 {
-	class AChar_NonFlyingBird_C*                       selfPawn;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AChar_NonFlyingBird_C**                      selfPawn;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

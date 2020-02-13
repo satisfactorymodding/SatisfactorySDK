@@ -14,23 +14,8 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.BeginState
-struct UBP_BuildGunStateBuild_C_BeginState_Params
-{
-};
-
-// Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.EndState
-struct UBP_BuildGunStateBuild_C_EndState_Params
-{
-};
-
 // Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.SecondaryFire
 struct UBP_BuildGunStateBuild_C_SecondaryFire_Params
-{
-};
-
-// Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.OnActiveDescriptorChanged
-struct UBP_BuildGunStateBuild_C_OnActiveDescriptorChanged_Params
 {
 };
 
@@ -50,10 +35,35 @@ struct UBP_BuildGunStateBuild_C_PrimaryFire_Params
 {
 };
 
+// Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.EndState
+struct UBP_BuildGunStateBuild_C_EndState_Params
+{
+};
+
+// Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.ShowSplineModeSelectUI
+struct UBP_BuildGunStateBuild_C_ShowSplineModeSelectUI_Params
+{
+};
+
+// Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.CloseSplineModeSelectUI
+struct UBP_BuildGunStateBuild_C_CloseSplineModeSelectUI_Params
+{
+};
+
+// Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.BeginState
+struct UBP_BuildGunStateBuild_C_BeginState_Params
+{
+};
+
+// Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.OpenBuildModeUI
+struct UBP_BuildGunStateBuild_C_OpenBuildModeUI_Params
+{
+};
+
 // Function BP_BuildGunStateBuild.BP_BuildGunStateBuild_C.ExecuteUbergraph_BP_BuildGunStateBuild
 struct UBP_BuildGunStateBuild_C_ExecuteUbergraph_BP_BuildGunStateBuild_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

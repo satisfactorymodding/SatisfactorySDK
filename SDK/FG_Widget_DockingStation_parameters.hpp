@@ -34,13 +34,13 @@ struct UWidget_DockingStation_C_GetLoadingModeButton_Params
 // Function Widget_DockingStation.Widget_DockingStation_C.DumpAllToInventory
 struct UWidget_DockingStation_C_DumpAllToInventory_Params
 {
-	class UFGInventoryComponent*                       SourceComponent;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      SourceComponent;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_DockingStation.Widget_DockingStation_C.GrabAllFromInventory
 struct UWidget_DockingStation_C_GrabAllFromInventory_Params
 {
-	class UFGInventoryComponent*                       SourceComponent;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      SourceComponent;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_DockingStation.Widget_DockingStation_C.Init
@@ -85,10 +85,16 @@ struct UWidget_DockingStation_C_BndEvt__mSortButton_K2Node_ComponentBoundEvent_0
 {
 };
 
+// Function Widget_DockingStation.Widget_DockingStation_C.OnReplicationDetailActorReplicated
+struct UWidget_DockingStation_C_OnReplicationDetailActorReplicated_Params
+{
+	class AActor**                                     ReplicationDetailOwner;                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_DockingStation.Widget_DockingStation_C.ExecuteUbergraph_Widget_DockingStation
 struct UWidget_DockingStation_C_ExecuteUbergraph_Widget_DockingStation_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

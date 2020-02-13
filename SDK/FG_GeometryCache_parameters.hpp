@@ -23,10 +23,10 @@ struct AGeometryCacheActor_GetGeometryCacheComponent_Params
 // Function GeometryCache.GeometryCacheComponent.TickAtThisTime
 struct UGeometryCacheComponent_TickAtThisTime_Params
 {
-	float                                              Time;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bInIsRunning;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bInBackwards;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bInIsLooping;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Time;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bInIsRunning;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bInBackwards;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bInIsLooping;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.Stop
@@ -37,25 +37,25 @@ struct UGeometryCacheComponent_Stop_Params
 // Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset
 struct UGeometryCacheComponent_SetStartTimeOffset_Params
 {
-	float                                              NewStartTimeOffset;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             NewStartTimeOffset;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
 struct UGeometryCacheComponent_SetPlaybackSpeed_Params
 {
-	float                                              NewPlaybackSpeed;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             NewPlaybackSpeed;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.SetLooping
 struct UGeometryCacheComponent_SetLooping_Params
 {
-	bool                                               bNewLooping;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bNewLooping;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.SetGeometryCache
 struct UGeometryCacheComponent_SetGeometryCache_Params
 {
-	class UGeometryCache*                              NewGeomCache;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class UGeometryCache**                             NewGeomCache;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -141,20 +141,20 @@ struct UGeometryCacheComponent_GetAnimationTime_Params
 // Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
 struct UGeometryCacheTrack_FlipbookAnimation_AddMeshSample_Params
 {
-	struct FGeometryCacheMeshData                      MeshData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	float                                              SampleTime;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FGeometryCacheMeshData*                     MeshData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	float*                                             SampleTime;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
 struct UGeometryCacheTrack_TransformAnimation_SetMesh_Params
 {
-	struct FGeometryCacheMeshData                      NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FGeometryCacheMeshData*                     NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
 struct UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Params
 {
-	struct FGeometryCacheMeshData                      NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FGeometryCacheMeshData*                     NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 }

@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Storage.Widget_Storage_C.SetInventoryComp
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent*   InventoryComp                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  InventoryComp                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Storage_C::SetInventoryComp(class UFGInventoryComponent* InventoryComp)
+void UWidget_Storage_C::SetInventoryComp(class UFGInventoryComponent** InventoryComp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Storage.Widget_Storage_C.SetInventoryComp");
 
@@ -33,7 +33,7 @@ void UWidget_Storage_C::SetInventoryComp(class UFGInventoryComponent* InventoryC
 
 
 // Function Widget_Storage.Widget_Storage_C.OnSortClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Storage_C::OnSortClicked()
 {
@@ -50,7 +50,7 @@ void UWidget_Storage_C::OnSortClicked()
 
 
 // Function Widget_Storage.Widget_Storage_C.OnDumpAllClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Storage_C::OnDumpAllClicked()
 {
@@ -67,7 +67,7 @@ void UWidget_Storage_C::OnDumpAllClicked()
 
 
 // Function Widget_Storage.Widget_Storage_C.OnGrabAllClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Storage_C::OnGrabAllClicked()
 {
@@ -84,7 +84,7 @@ void UWidget_Storage_C::OnGrabAllClicked()
 
 
 // Function Widget_Storage.Widget_Storage_C.BindStorageButtons
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Storage_C::BindStorageButtons()
 {
@@ -101,7 +101,7 @@ void UWidget_Storage_C::BindStorageButtons()
 
 
 // Function Widget_Storage.Widget_Storage_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -125,7 +125,7 @@ void UWidget_Storage_C::DropInventorySlotStack(class UWidget_InventorySlot_C** I
 
 
 // Function Widget_Storage.Widget_Storage_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Storage_C::Cleanup()
 {
@@ -142,7 +142,7 @@ void UWidget_Storage_C::Cleanup()
 
 
 // Function Widget_Storage.Widget_Storage_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_Storage_C::Init()
 {
@@ -159,7 +159,7 @@ void UWidget_Storage_C::Init()
 
 
 // Function Widget_Storage.Widget_Storage_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Storage_C::Destruct()
 {
@@ -176,7 +176,7 @@ void UWidget_Storage_C::Destruct()
 
 
 // Function Widget_Storage.Widget_Storage_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Storage_C::Construct()
 {
@@ -193,7 +193,7 @@ void UWidget_Storage_C::Construct()
 
 
 // Function Widget_Storage.Widget_Storage_C.DumpAllInStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Storage_C::DumpAllInStorage()
 {
@@ -210,7 +210,7 @@ void UWidget_Storage_C::DumpAllInStorage()
 
 
 // Function Widget_Storage.Widget_Storage_C.GrabAllFromStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Storage_C::GrabAllFromStorage()
 {
@@ -227,7 +227,7 @@ void UWidget_Storage_C::GrabAllFromStorage()
 
 
 // Function Widget_Storage.Widget_Storage_C.BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Storage_C::BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -244,11 +244,11 @@ void UWidget_Storage_C::BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClick
 
 
 // Function Widget_Storage.Widget_Storage_C.OnInventoryComponentReplicated
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  replicationDetailActorOwner    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 replicationDetailActorOwner    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Storage_C::OnInventoryComponentReplicated(class AActor* replicationDetailActorOwner)
+void UWidget_Storage_C::OnInventoryComponentReplicated(class AActor** replicationDetailActorOwner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Storage.Widget_Storage_C.OnInventoryComponentReplicated");
 
@@ -264,11 +264,11 @@ void UWidget_Storage_C::OnInventoryComponentReplicated(class AActor* replication
 
 
 // Function Widget_Storage.Widget_Storage_C.ExecuteUbergraph_Widget_Storage
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Storage_C::ExecuteUbergraph_Widget_Storage(int EntryPoint)
+void UWidget_Storage_C::ExecuteUbergraph_Widget_Storage(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Storage.Widget_Storage_C.ExecuteUbergraph_Widget_Storage");
 

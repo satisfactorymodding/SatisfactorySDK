@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.UserConstructionScript
-struct AAttach_RebarGunProjectile_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.PlayFireEffect
 struct AAttach_RebarGunProjectile_C_PlayFireEffect_Params
 {
@@ -38,7 +33,7 @@ struct AAttach_RebarGunProjectile_C_PlayAttachEffects3P_Params
 // Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.ExecuteUbergraph_Attach_RebarGunProjectile
 struct AAttach_RebarGunProjectile_C_ExecuteUbergraph_Attach_RebarGunProjectile_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

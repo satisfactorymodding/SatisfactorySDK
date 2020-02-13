@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Holo_ConveyorAttachment.Holo_ConveyorAttachment_C.UserConstructionScript
-struct AHolo_ConveyorAttachment_C_UserConstructionScript_Params
-{
-};
-
 // Function Holo_ConveyorAttachment.Holo_ConveyorAttachment_C.ReceiveConfigureComponents
 struct AHolo_ConveyorAttachment_C_ReceiveConfigureComponents_Params
 {
@@ -28,7 +23,7 @@ struct AHolo_ConveyorAttachment_C_ReceiveConfigureComponents_Params
 // Function Holo_ConveyorAttachment.Holo_ConveyorAttachment_C.ExecuteUbergraph_Holo_ConveyorAttachment
 struct AHolo_ConveyorAttachment_C_ExecuteUbergraph_Holo_ConveyorAttachment_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

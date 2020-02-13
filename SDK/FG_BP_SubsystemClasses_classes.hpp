@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SubsystemClasses.BP_SubsystemClasses_C
-// 0x0000 (0x0098 - 0x0098)
+// 0x0000 (0x00B8 - 0x00B8)
 class UBP_SubsystemClasses_C : public UFGSubsystemClasses
 {
 public:

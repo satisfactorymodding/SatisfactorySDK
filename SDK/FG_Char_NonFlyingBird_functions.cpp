@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.OnRep_mIsLuring
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_NonFlyingBird_C::OnRep_mIsLuring()
 {
@@ -30,11 +30,11 @@ void AChar_NonFlyingBird_C::OnRep_mIsLuring()
 
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.SetLuring
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           isLuring                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          isLuring                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_NonFlyingBird_C::SetLuring(bool isLuring)
+void AChar_NonFlyingBird_C::SetLuring(bool* isLuring)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.SetLuring");
 
@@ -49,14 +49,14 @@ void AChar_NonFlyingBird_C::SetLuring(bool isLuring)
 }
 
 
-// Function Char_NonFlyingBird.Char_NonFlyingBird_C.UserConstructionScript
-// ()
+// Function Char_NonFlyingBird.Char_NonFlyingBird_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AChar_NonFlyingBird_C::UserConstructionScript()
+void AChar_NonFlyingBird_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.ReceiveBeginPlay");
 
-	AChar_NonFlyingBird_C_UserConstructionScript_Params params;
+	AChar_NonFlyingBird_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -67,7 +67,7 @@ void AChar_NonFlyingBird_C::UserConstructionScript()
 
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -87,7 +87,7 @@ void AChar_NonFlyingBird_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.TryToJump
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AChar_NonFlyingBird_C::TryToJump()
 {
@@ -104,7 +104,7 @@ void AChar_NonFlyingBird_C::TryToJump()
 
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.OnLanded
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FHitResult*             Hit                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
@@ -124,7 +124,7 @@ void AChar_NonFlyingBird_C::OnLanded(struct FHitResult* Hit)
 
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.ReceiveDied
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AChar_NonFlyingBird_C::ReceiveDied()
 {
@@ -141,24 +141,78 @@ void AChar_NonFlyingBird_C::ReceiveDied()
 
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.NotifyOnTakeDamage
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor**                 damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         damageAmount                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController**            instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor**                 damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_NonFlyingBird_C::NotifyOnTakeDamage(class AActor** damagedActor, float* damageAmount, class UDamageType** DamageType, class AController** instigatedBy, class AActor** damageCauser)
+void AChar_NonFlyingBird_C::NotifyOnTakeDamage(class AActor** DamagedActor, float* damageAmount, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.NotifyOnTakeDamage");
 
 	AChar_NonFlyingBird_C_NotifyOnTakeDamage_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.damageAmount = damageAmount;
 	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_NonFlyingBird.Char_NonFlyingBird_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AChar_NonFlyingBird_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.ReceiveEndPlay");
+
+	AChar_NonFlyingBird_C_ReceiveEndPlay_Params params;
+	params.EndPlayReason = EndPlayReason;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_NonFlyingBird.Char_NonFlyingBird_C.GainedSignificance
+// (Event, Public, BlueprintEvent)
+
+void AChar_NonFlyingBird_C::GainedSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.GainedSignificance");
+
+	AChar_NonFlyingBird_C_GainedSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Char_NonFlyingBird.Char_NonFlyingBird_C.LostSignificance
+// (Event, Public, BlueprintEvent)
+
+void AChar_NonFlyingBird_C::LostSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.LostSignificance");
+
+	AChar_NonFlyingBird_C_LostSignificance_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -169,11 +223,11 @@ void AChar_NonFlyingBird_C::NotifyOnTakeDamage(class AActor** damagedActor, floa
 
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.ExecuteUbergraph_Char_NonFlyingBird
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_NonFlyingBird_C::ExecuteUbergraph_Char_NonFlyingBird(int EntryPoint)
+void AChar_NonFlyingBird_C::ExecuteUbergraph_Char_NonFlyingBird(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.ExecuteUbergraph_Char_NonFlyingBird");
 
@@ -189,11 +243,11 @@ void AChar_NonFlyingBird_C::ExecuteUbergraph_Char_NonFlyingBird(int EntryPoint)
 
 
 // Function Char_NonFlyingBird.Char_NonFlyingBird_C.OnLandedDelegate__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AChar_NonFlyingBird_C*   selfPawn                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AChar_NonFlyingBird_C**  selfPawn                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChar_NonFlyingBird_C::OnLandedDelegate__DelegateSignature(class AChar_NonFlyingBird_C* selfPawn)
+void AChar_NonFlyingBird_C::OnLandedDelegate__DelegateSignature(class AChar_NonFlyingBird_C** selfPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Char_NonFlyingBird.Char_NonFlyingBird_C.OnLandedDelegate__DelegateSignature");
 

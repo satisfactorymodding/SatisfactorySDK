@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.OnKeyDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -38,7 +38,7 @@ struct FEventReply UWidget_SequenceHelper_C::OnKeyDown(struct FGeometry* MyGeome
 
 
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SequenceHelper_C::Construct()
 {
@@ -55,7 +55,7 @@ void UWidget_SequenceHelper_C::Construct()
 
 
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SequenceHelper_C::Destruct()
 {
@@ -72,11 +72,11 @@ void UWidget_SequenceHelper_C::Destruct()
 
 
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.OnClickedWithRef_Event_1
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Button_C*        ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Button_C**       ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SequenceHelper_C::OnClickedWithRef_Event_1(class UWidget_Button_C* ClickedButton)
+void UWidget_SequenceHelper_C::OnClickedWithRef_Event_1(class UWidget_Button_C** ClickedButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SequenceHelper.Widget_SequenceHelper_C.OnClickedWithRef_Event_1");
 
@@ -92,7 +92,7 @@ void UWidget_SequenceHelper_C::OnClickedWithRef_Event_1(class UWidget_Button_C* 
 
 
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.CustomEvent_1
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SequenceHelper_C::CustomEvent_1()
 {
@@ -109,11 +109,11 @@ void UWidget_SequenceHelper_C::CustomEvent_1()
 
 
 // Function Widget_SequenceHelper.Widget_SequenceHelper_C.ExecuteUbergraph_Widget_SequenceHelper
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SequenceHelper_C::ExecuteUbergraph_Widget_SequenceHelper(int EntryPoint)
+void UWidget_SequenceHelper_C::ExecuteUbergraph_Widget_SequenceHelper(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SequenceHelper.Widget_SequenceHelper_C.ExecuteUbergraph_Widget_SequenceHelper");
 

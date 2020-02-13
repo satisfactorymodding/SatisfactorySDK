@@ -63,7 +63,7 @@ struct UWidget_PlayerHealthBar_C_SetupHealthComponent_Params
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.ExecuteUbergraph_Widget_PlayerHealthBar
 struct UWidget_PlayerHealthBar_C_ExecuteUbergraph_Widget_PlayerHealthBar_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

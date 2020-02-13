@@ -24,11 +24,6 @@ struct ABP_GameState_C_DumpActorRepresentations_Params
 {
 };
 
-// Function BP_GameState.BP_GameState_C.UserConstructionScript
-struct ABP_GameState_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_GameState.BP_GameState_C.ReceiveTick
 struct ABP_GameState_C_ReceiveTick_Params
 {
@@ -38,7 +33,7 @@ struct ABP_GameState_C_ReceiveTick_Params
 // Function BP_GameState.BP_GameState_C.ExecuteUbergraph_BP_GameState
 struct ABP_GameState_C_ExecuteUbergraph_BP_GameState_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

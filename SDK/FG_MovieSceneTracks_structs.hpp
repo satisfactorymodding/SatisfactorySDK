@@ -8,8 +8,8 @@
 
 #include "FG_Basic.hpp"
 #include "FG_MovieScene_classes.hpp"
-#include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -190,19 +190,23 @@ struct FMovieSceneParticleChannel : public FMovieSceneByteChannel
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneSkeletalAnimationParams
-// 0x00C8
+// 0x00D0
 struct FMovieSceneSkeletalAnimationParams
 {
-	class UAnimSequenceBase*                           Animation;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              StartOffset;                                              // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              EndOffset;                                                // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PlayRate;                                                 // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bReverse : 1;                                             // 0x0014(0x0001) (Edit)
+	class UAnimSequenceBase*                           Animation;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FFrameNumber                                StartFrameOffset;                                         // 0x0008(0x0004) (Edit, BlueprintVisible)
+	struct FFrameNumber                                EndFrameOffset;                                           // 0x000C(0x0004) (Edit, BlueprintVisible)
+	float                                              PlayRate;                                                 // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bReverse : 1;                                             // 0x0014(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
-	struct FName                                       SlotName;                                                 // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SlotName;                                                 // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FMovieSceneFloatChannel                     Weight;                                                   // 0x0020(0x00A0)
-	bool                                               bSkipAnimNotifiers;                                       // 0x00C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
+	bool                                               bSkipAnimNotifiers;                                       // 0x00C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bForceCustomMode;                                         // 0x00C1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x00C2(0x0002) MISSED OFFSET
+	float                                              StartOffset;                                              // 0x00C4(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              EndOffset;                                                // 0x00C8(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x00CC(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneStringChannel
@@ -320,7 +324,7 @@ struct FMovieSceneActorReferenceSectionTemplate : public FMovieSceneEvalTemplate
 struct FMovieSceneAudioSectionTemplateData
 {
 	class USoundBase*                                  Sound;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              AudioStartOffset;                                         // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FFrameNumber                                AudioStartOffset;                                         // 0x0008(0x0004)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	double                                             SectionStartTimeSeconds;                                  // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FMovieSceneFloatChannel                     AudioPitchMultiplierCurve;                                // 0x0018(0x00A0)
@@ -462,6 +466,13 @@ struct FMovieSceneMaterialParameterCollectionTemplate : public FMovieSceneParame
 	class UMaterialParameterCollection*                MPC;                                                      // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct MovieSceneTracks.MovieSceneObjectPropertyTemplate
+// 0x00C0 (0x0108 - 0x0048)
+struct FMovieSceneObjectPropertyTemplate : public FMovieScenePropertySectionTemplate
+{
+	struct FMovieSceneObjectPathChannel                ObjectChannel;                                            // 0x0048(0x00C0)
+};
+
 // ScriptStruct MovieSceneTracks.MovieSceneComponentMaterialSectionTemplate
 // 0x0008 (0x0058 - 0x0050)
 struct FMovieSceneComponentMaterialSectionTemplate : public FMovieSceneParameterSectionTemplate
@@ -482,6 +493,15 @@ struct FMovieSceneParticleParameterSectionTemplate : public FMovieSceneParameter
 struct FMovieSceneParticleSectionTemplate : public FMovieSceneEvalTemplate
 {
 	struct FMovieSceneParticleChannel                  ParticleKeys;                                             // 0x0020(0x0098)
+};
+
+// ScriptStruct MovieSceneTracks.MovieScenePrimitiveMaterialTemplate
+// 0x00C8 (0x00E8 - 0x0020)
+struct FMovieScenePrimitiveMaterialTemplate : public FMovieSceneEvalTemplate
+{
+	int                                                MaterialIndex;                                            // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+	struct FMovieSceneObjectPathChannel                MaterialChannel;                                          // 0x0028(0x00C0)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneEulerTransformPropertySectionTemplate
@@ -555,18 +575,18 @@ struct FMovieSceneBoolPropertySectionTemplate : public FMovieScenePropertySectio
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneSkeletalAnimationSectionTemplateParameters
-// 0x0008 (0x00D0 - 0x00C8)
+// 0x0008 (0x00D8 - 0x00D0)
 struct FMovieSceneSkeletalAnimationSectionTemplateParameters : public FMovieSceneSkeletalAnimationParams
 {
-	struct FFrameNumber                                SectionStartTime;                                         // 0x00C8(0x0004)
-	struct FFrameNumber                                SectionEndTime;                                           // 0x00CC(0x0004)
+	struct FFrameNumber                                SectionStartTime;                                         // 0x00D0(0x0004)
+	struct FFrameNumber                                SectionEndTime;                                           // 0x00D4(0x0004)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneSkeletalAnimationSectionTemplate
-// 0x00D0 (0x00F0 - 0x0020)
+// 0x00D8 (0x00F8 - 0x0020)
 struct FMovieSceneSkeletalAnimationSectionTemplate : public FMovieSceneEvalTemplate
 {
-	struct FMovieSceneSkeletalAnimationSectionTemplateParameters Params;                                                   // 0x0020(0x00D0)
+	struct FMovieSceneSkeletalAnimationSectionTemplateParameters Params;                                                   // 0x0020(0x00D8)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneSlomoSectionTemplate

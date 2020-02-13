@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NutBush.BP_NutBush_C.GetDestroyAudioEvent
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAkAudioEvent*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ class UAkAudioEvent* ABP_NutBush_C::GetDestroyAudioEvent()
 
 
 // Function BP_NutBush.BP_NutBush_C.GetDestroyEffect
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UParticleSystem*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ class UParticleSystem* ABP_NutBush_C::GetDestroyEffect()
 
 
 // Function BP_NutBush.BP_NutBush_C.GetForceThreshold
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ float ABP_NutBush_C::GetForceThreshold()
 
 
 // Function BP_NutBush.BP_NutBush_C.GetMeshComponent
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMeshComponent*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -97,7 +97,7 @@ class UStaticMeshComponent* ABP_NutBush_C::GetMeshComponent()
 
 
 // Function BP_NutBush.BP_NutBush_C.IsChainsawable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -114,23 +114,6 @@ bool ABP_NutBush_C::IsChainsawable()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function BP_NutBush.BP_NutBush_C.UserConstructionScript
-// ()
-
-void ABP_NutBush_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_NutBush.BP_NutBush_C.UserConstructionScript");
-
-	ABP_NutBush_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

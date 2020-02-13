@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.GetHealthFillColor
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FLinearColor UWidget_PlayerHealthBar_C::GetHealthFillColor()
 
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.IsValidHealthComponent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Valid                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -56,7 +56,7 @@ void UWidget_PlayerHealthBar_C::IsValidHealthComponent(bool* Valid)
 
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.GetHealthbar
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -77,7 +77,7 @@ ESlateVisibility UWidget_PlayerHealthBar_C::GetHealthbar()
 
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.GetProgressbarPercent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -98,7 +98,7 @@ float UWidget_PlayerHealthBar_C::GetProgressbarPercent()
 
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PlayerHealthBar_C::Construct()
 {
@@ -115,7 +115,7 @@ void UWidget_PlayerHealthBar_C::Construct()
 
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -137,7 +137,7 @@ void UWidget_PlayerHealthBar_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.ResetAnimGate
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PlayerHealthBar_C::ResetAnimGate()
 {
@@ -154,7 +154,7 @@ void UWidget_PlayerHealthBar_C::ResetAnimGate()
 
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.SetupHealthComponent
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PlayerHealthBar_C::SetupHealthComponent()
 {
@@ -171,11 +171,11 @@ void UWidget_PlayerHealthBar_C::SetupHealthComponent()
 
 
 // Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.ExecuteUbergraph_Widget_PlayerHealthBar
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PlayerHealthBar_C::ExecuteUbergraph_Widget_PlayerHealthBar(int EntryPoint)
+void UWidget_PlayerHealthBar_C::ExecuteUbergraph_Widget_PlayerHealthBar(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerHealthBar.Widget_PlayerHealthBar_C.ExecuteUbergraph_Widget_PlayerHealthBar");
 

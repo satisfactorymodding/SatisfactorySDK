@@ -12,23 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_AssemblerMk1.Build_AssemblerMk1_C.UserConstructionScript
-// ()
-
-void ABuild_AssemblerMk1_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_AssemblerMk1.Build_AssemblerMk1_C.UserConstructionScript");
-
-	ABuild_AssemblerMk1_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 }
 
 #ifdef _MSC_VER

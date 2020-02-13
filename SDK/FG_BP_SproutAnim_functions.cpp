@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SproutAnim.BP_SproutAnim_C.BlueprintInitializeAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_SproutAnim_C::BlueprintInitializeAnimation()
 {
@@ -30,11 +30,11 @@ void UBP_SproutAnim_C::BlueprintInitializeAnimation()
 
 
 // Function BP_SproutAnim.BP_SproutAnim_C.ExecuteUbergraph_BP_SproutAnim
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_SproutAnim_C::ExecuteUbergraph_BP_SproutAnim(int EntryPoint)
+void UBP_SproutAnim_C::ExecuteUbergraph_BP_SproutAnim(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SproutAnim.BP_SproutAnim_C.ExecuteUbergraph_BP_SproutAnim");
 

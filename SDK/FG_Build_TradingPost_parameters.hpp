@@ -14,10 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Build_TradingPost.Build_TradingPost_C.GetActorCompassViewDistance
+struct ABuild_TradingPost_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Build_TradingPost.Build_TradingPost_C.SetActorCompassViewDistance
+struct ABuild_TradingPost_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Build_TradingPost.Build_TradingPost_C.SetActorRepresentationText
 struct ABuild_TradingPost_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -115,14 +128,15 @@ struct ABuild_TradingPost_C_UpdateMainMesh_Params
 {
 };
 
-// Function Build_TradingPost.Build_TradingPost_C.UserConstructionScript
-struct ABuild_TradingPost_C_UserConstructionScript_Params
-{
-};
-
 // Function Build_TradingPost.Build_TradingPost_C.ReceiveDestroyed
 struct ABuild_TradingPost_C_ReceiveDestroyed_Params
 {
+};
+
+// Function Build_TradingPost.Build_TradingPost_C.SetActorRepresentationColor
+struct ABuild_TradingPost_C_SetActorRepresentationColor_Params
+{
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_TradingPost.Build_TradingPost_C.ReceiveBeginPlay
@@ -140,7 +154,7 @@ struct ABuild_TradingPost_C_OnTradingPostUpgraded_Params
 // Function Build_TradingPost.Build_TradingPost_C.ExecuteUbergraph_Build_TradingPost
 struct ABuild_TradingPost_C_ExecuteUbergraph_Build_TradingPost_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

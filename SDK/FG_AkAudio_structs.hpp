@@ -7,10 +7,10 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_Engine_classes.hpp"
-#include "FG_SlateCore_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
+#include "FG_Engine_classes.hpp"
 #include "FG_UMG_classes.hpp"
+#include "FG_SlateCore_classes.hpp"
 #include "FG_MovieScene_classes.hpp"
 
 namespace SDK
@@ -268,6 +268,36 @@ enum class EAkMidiEventType : uint8_t
 };
 
 
+// Enum AkAudio.EAkCurveInterpolation
+enum class EAkCurveInterpolation : uint8_t
+{
+	Log3                           = 0,
+	Sine                           = 1,
+	Log1                           = 2,
+	InvSCurve                      = 3,
+	Linear                         = 4,
+	SCurve                         = 5,
+	Exp1                           = 6,
+	SineRecip                      = 7,
+	Exp3                           = 8,
+	LastFadeCurve                  = 9,
+	Constant                       = 10,
+	EAkCurveInterpolation_MAX      = 11
+};
+
+
+// Enum AkAudio.AkActionOnEventType
+enum class EAkActionOnEventType : uint8_t
+{
+	Stop                           = 0,
+	Pause                          = 1,
+	Resume                         = 2,
+	Break                          = 3,
+	ReleaseEnvelope                = 4,
+	AkActionOnEventType_MAX        = 5
+};
+
+
 // Enum AkAudio.AkMultiPositionType
 enum class EAkMultiPositionType : uint8_t
 {
@@ -437,15 +467,6 @@ struct FAkSegmentInfo
 struct FAkPropertyToControl
 {
 	class FString                                      ItemProperty;                                             // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-};
-
-// ScriptStruct AkAudio.AkPoly
-// 0x0010
-struct FAkPoly
-{
-	class UAkAcousticTexture*                          Texture;                                                  // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               EnableSurface;                                            // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct AkAudio.AkWaapiSubscriptionId

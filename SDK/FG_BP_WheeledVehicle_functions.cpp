@@ -12,13 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorRepresentationText
-// ()
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_WheeledVehicle_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorCompassViewDistance");
+
+	ABP_WheeledVehicle_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_WheeledVehicle_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorCompassViewDistance");
+
+	ABP_WheeledVehicle_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABP_WheeledVehicle_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABP_WheeledVehicle_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorRepresentationText");
 
@@ -36,7 +80,7 @@ struct FText ABP_WheeledVehicle_C::SetActorRepresentationText(const struct FText
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +101,7 @@ bool ABP_WheeledVehicle_C::UpdateRepresentation()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +122,7 @@ struct FLinearColor ABP_WheeledVehicle_C::GetActorRepresentationColor()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -99,7 +143,7 @@ struct FText ABP_WheeledVehicle_C::GetActorRepresentationText()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -120,7 +164,7 @@ class UTexture2D* ABP_WheeledVehicle_C::GetActorRepresentationTexture()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -141,7 +185,7 @@ ERepresentationType ABP_WheeledVehicle_C::GetActorRepresentationType()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +206,7 @@ bool ABP_WheeledVehicle_C::GetActorShouldShowInCompass()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -183,7 +227,7 @@ float ABP_WheeledVehicle_C::GetActorFogOfWarRevealRadius()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +248,7 @@ EFogOfWarRevealType ABP_WheeledVehicle_C::GetActorFogOfWarRevealType()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +269,7 @@ bool ABP_WheeledVehicle_C::RemoveAsRepresentation()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -246,7 +290,7 @@ bool ABP_WheeledVehicle_C::AddAsRepresentation()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -267,7 +311,7 @@ bool ABP_WheeledVehicle_C::GetActorShouldShowOnMap()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -288,7 +332,7 @@ struct FVector ABP_WheeledVehicle_C::GetRealActorLocation()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -309,7 +353,7 @@ struct FRotator ABP_WheeledVehicle_C::GetRealActorRotation()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -329,8 +373,65 @@ bool ABP_WheeledVehicle_C::IsActorStatic()
 }
 
 
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateOutline
+// (Protected, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// bool*                          aimingAtWorkbench              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_WheeledVehicle_C::UpdateOutline(bool* aimingAtWorkbench)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateOutline");
+
+	ABP_WheeledVehicle_C_UpdateOutline_Params params;
+	params.aimingAtWorkbench = aimingAtWorkbench;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateTireSound
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_WheeledVehicle_C::UpdateTireSound()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateTireSound");
+
+	ABP_WheeledVehicle_C_UpdateTireSound_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.BurnOutSound
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float*                         ForwardInputInput              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_WheeledVehicle_C::BurnOutSound(float* ForwardInputInput)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.BurnOutSound");
+
+	ABP_WheeledVehicle_C_BurnOutSound_Params params;
+	params.ForwardInputInput = ForwardInputInput;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetDriftForceOffset
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -351,7 +452,7 @@ struct FVector ABP_WheeledVehicle_C::GetDriftForceOffset()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ShouldStopVehicle
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ShouldStop                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -373,7 +474,7 @@ void ABP_WheeledVehicle_C::ShouldStopVehicle(bool* ShouldStop)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.TurnOverVehicle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::TurnOverVehicle()
 {
@@ -390,12 +491,12 @@ void ABP_WheeledVehicle_C::TurnOverVehicle()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.AdjustThrottle
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          Throttle                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Throttle                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          adjustedThrottle               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::AdjustThrottle(float Throttle, float* adjustedThrottle)
+void ABP_WheeledVehicle_C::AdjustThrottle(float* Throttle, float* adjustedThrottle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.AdjustThrottle");
 
@@ -414,7 +515,7 @@ void ABP_WheeledVehicle_C::AdjustThrottle(float Throttle, float* adjustedThrottl
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.TogglePathVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::TogglePathVisibility()
 {
@@ -431,7 +532,7 @@ void ABP_WheeledVehicle_C::TogglePathVisibility()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ToggleAutoPilot
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ToggleAutoPilot()
 {
@@ -448,7 +549,7 @@ void ABP_WheeledVehicle_C::ToggleAutoPilot()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.TogglePauseRecording
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::TogglePauseRecording()
 {
@@ -465,7 +566,7 @@ void ABP_WheeledVehicle_C::TogglePauseRecording()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickSimulationMovement
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::TickSimulationMovement()
 {
@@ -482,7 +583,7 @@ void ABP_WheeledVehicle_C::TickSimulationMovement()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.CalculateReverseSteering
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::CalculateReverseSteering()
 {
@@ -499,7 +600,7 @@ void ABP_WheeledVehicle_C::CalculateReverseSteering()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.StopVehicle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::StopVehicle()
 {
@@ -516,7 +617,7 @@ void ABP_WheeledVehicle_C::StopVehicle()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.CanMove
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           CanMove                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -538,11 +639,11 @@ void ABP_WheeledVehicle_C::CanMove(bool* CanMove)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateEngineLoadSound
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          dt                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         dt                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::UpdateEngineLoadSound(float dt)
+void ABP_WheeledVehicle_C::UpdateEngineLoadSound(float* dt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateEngineLoadSound");
 
@@ -558,7 +659,7 @@ void ABP_WheeledVehicle_C::UpdateEngineLoadSound(float dt)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateAccelerationSound
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::UpdateAccelerationSound()
 {
@@ -575,7 +676,7 @@ void ABP_WheeledVehicle_C::UpdateAccelerationSound()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateThrottleState
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::UpdateThrottleState()
 {
@@ -592,7 +693,7 @@ void ABP_WheeledVehicle_C::UpdateThrottleState()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.DidGearDown
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::DidGearDown()
 {
@@ -609,7 +710,7 @@ void ABP_WheeledVehicle_C::DidGearDown()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.DidGearUp
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::DidGearUp()
 {
@@ -626,7 +727,7 @@ void ABP_WheeledVehicle_C::DidGearUp()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.CheckCurrentGear
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::CheckCurrentGear()
 {
@@ -643,7 +744,7 @@ void ABP_WheeledVehicle_C::CheckCurrentGear()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.StopSoundLoops
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::StopSoundLoops()
 {
@@ -660,7 +761,7 @@ void ABP_WheeledVehicle_C::StopSoundLoops()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.StartSoundLoops
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::StartSoundLoops()
 {
@@ -677,7 +778,7 @@ void ABP_WheeledVehicle_C::StartSoundLoops()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ToggleFreeCamera
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ToggleFreeCamera()
 {
@@ -694,7 +795,7 @@ void ABP_WheeledVehicle_C::ToggleFreeCamera()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -718,32 +819,12 @@ struct FText ABP_WheeledVehicle_C::GetLookAtDecription(class AFGCharacterPlayer*
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseVehicleUI
-// ()
-// Parameters:
-// class AFGCharacterPlayer*      inCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_WheeledVehicle_C::CloseVehicleUI(class AFGCharacterPlayer* inCharacter)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseVehicleUI");
-
-	ABP_WheeledVehicle_C_CloseVehicleUI_Params params;
-	params.inCharacter = inCharacter;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenVehicleUI
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      inCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     inCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::OpenVehicleUI(class AFGCharacterPlayer* inCharacter)
+void ABP_WheeledVehicle_C::OpenVehicleUI(class AFGCharacterPlayer** inCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenVehicleUI");
 
@@ -759,11 +840,11 @@ void ABP_WheeledVehicle_C::OpenVehicleUI(class AFGCharacterPlayer* inCharacter)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.PonderOpeningTrunk
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      inCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     inCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::PonderOpeningTrunk(class AFGCharacterPlayer* inCharacter)
+void ABP_WheeledVehicle_C::PonderOpeningTrunk(class AFGCharacterPlayer** inCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.PonderOpeningTrunk");
 
@@ -779,7 +860,7 @@ void ABP_WheeledVehicle_C::PonderOpeningTrunk(class AFGCharacterPlayer* inCharac
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateUseState
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                atLocation                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -807,7 +888,7 @@ void ABP_WheeledVehicle_C::UpdateUseState(class AFGCharacterPlayer** byCharacter
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.OnRep_mIsFollowingPath
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::OnRep_mIsFollowingPath()
 {
@@ -824,11 +905,11 @@ void ABP_WheeledVehicle_C::OnRep_mIsFollowingPath()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateSpeedLimit
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_VehicleTargetPoint_C* TargetPoint                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ABP_VehicleTargetPoint_C** TargetPoint                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::UpdateSpeedLimit(class ABP_VehicleTargetPoint_C* TargetPoint)
+void ABP_WheeledVehicle_C::UpdateSpeedLimit(class ABP_VehicleTargetPoint_C** TargetPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateSpeedLimit");
 
@@ -844,7 +925,7 @@ void ABP_WheeledVehicle_C::UpdateSpeedLimit(class ABP_VehicleTargetPoint_C* Targ
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.DoReverseToFreedom
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::DoReverseToFreedom()
 {
@@ -861,7 +942,7 @@ void ABP_WheeledVehicle_C::DoReverseToFreedom()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReverseToFreedom
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ReverseToFreedom()
 {
@@ -878,7 +959,7 @@ void ABP_WheeledVehicle_C::ReverseToFreedom()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.CacheSpeedInKMH
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::CacheSpeedInKMH()
 {
@@ -895,7 +976,7 @@ void ABP_WheeledVehicle_C::CacheSpeedInKMH()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.OnRep_mIsRecording
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::OnRep_mIsRecording()
 {
@@ -912,7 +993,7 @@ void ABP_WheeledVehicle_C::OnRep_mIsRecording()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.MoveToLocation
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::MoveToLocation()
 {
@@ -929,11 +1010,11 @@ void ABP_WheeledVehicle_C::MoveToLocation()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickRecording
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          dt                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         dt                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::TickRecording(float dt)
+void ABP_WheeledVehicle_C::TickRecording(float* dt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickRecording");
 
@@ -949,7 +1030,7 @@ void ABP_WheeledVehicle_C::TickRecording(float dt)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateVehicleMovement
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::UpdateVehicleMovement()
 {
@@ -966,7 +1047,7 @@ void ABP_WheeledVehicle_C::UpdateVehicleMovement()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.StartRecording
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::StartRecording()
 {
@@ -983,7 +1064,7 @@ void ABP_WheeledVehicle_C::StartRecording()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.StopRecording
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::StopRecording()
 {
@@ -1000,7 +1081,7 @@ void ABP_WheeledVehicle_C::StopRecording()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GatherData
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::GatherData()
 {
@@ -1017,7 +1098,7 @@ void ABP_WheeledVehicle_C::GatherData()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.RemoveOldTargets
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::RemoveOldTargets()
 {
@@ -1034,7 +1115,7 @@ void ABP_WheeledVehicle_C::RemoveOldTargets()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.PlaceTargetPoint
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::PlaceTargetPoint()
 {
@@ -1051,7 +1132,7 @@ void ABP_WheeledVehicle_C::PlaceTargetPoint()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.TargetReached
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::TargetReached()
 {
@@ -1068,7 +1149,7 @@ void ABP_WheeledVehicle_C::TargetReached()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetNewPath
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_VehicleTargetPoint_C* newTarget                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1090,7 +1171,7 @@ void ABP_WheeledVehicle_C::SetNewPath(class ABP_VehicleTargetPoint_C** newTarget
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.GetTargetDistance
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1112,7 +1193,7 @@ void ABP_WheeledVehicle_C::GetTargetDistance(float* Distance)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateThrottle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::UpdateThrottle()
 {
@@ -1129,7 +1210,7 @@ void ABP_WheeledVehicle_C::UpdateThrottle()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateSteering
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::UpdateSteering()
 {
@@ -1145,33 +1226,16 @@ void ABP_WheeledVehicle_C::UpdateSteering()
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.UserConstructionScript
-// ()
-
-void ABP_WheeledVehicle_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.UserConstructionScript");
-
-	ABP_WheeledVehicle_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Reload_K2Node_InputActionEvent_7
-// ()
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Use_K2Node_InputActionEvent_7
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WheeledVehicle_C::InpActEvt_Reload_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_WheeledVehicle_C::InpActEvt_Use_K2Node_InputActionEvent_7(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Reload_K2Node_InputActionEvent_7");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Use_K2Node_InputActionEvent_7");
 
-	ABP_WheeledVehicle_C_InpActEvt_Reload_K2Node_InputActionEvent_7_Params params;
+	ABP_WheeledVehicle_C_InpActEvt_Use_K2Node_InputActionEvent_7_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -1182,16 +1246,16 @@ void ABP_WheeledVehicle_C::InpActEvt_Reload_K2Node_InputActionEvent_7(const stru
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Use_K2Node_InputActionEvent_6
-// ()
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Reload_K2Node_InputActionEvent_6
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WheeledVehicle_C::InpActEvt_Use_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_WheeledVehicle_C::InpActEvt_Reload_K2Node_InputActionEvent_6(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Use_K2Node_InputActionEvent_6");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Reload_K2Node_InputActionEvent_6");
 
-	ABP_WheeledVehicle_C_InpActEvt_Use_K2Node_InputActionEvent_6_Params params;
+	ABP_WheeledVehicle_C_InpActEvt_Reload_K2Node_InputActionEvent_6_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -1203,11 +1267,11 @@ void ABP_WheeledVehicle_C::InpActEvt_Use_K2Node_InputActionEvent_6(const struct 
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_5
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WheeledVehicle_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_5(const struct FKey& Key)
+void ABP_WheeledVehicle_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_5(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_5");
 
@@ -1223,11 +1287,11 @@ void ABP_WheeledVehicle_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_5(const 
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_4
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WheeledVehicle_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_4(const struct FKey& Key)
+void ABP_WheeledVehicle_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_4(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_4");
 
@@ -1243,11 +1307,11 @@ void ABP_WheeledVehicle_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_4(const 
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_3
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WheeledVehicle_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_3(const struct FKey& Key)
+void ABP_WheeledVehicle_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_3(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_3");
 
@@ -1263,11 +1327,11 @@ void ABP_WheeledVehicle_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2No
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_2
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WheeledVehicle_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_2(const struct FKey& Key)
+void ABP_WheeledVehicle_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_2(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_2");
 
@@ -1283,11 +1347,11 @@ void ABP_WheeledVehicle_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2No
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WheeledVehicle_C::InpActEvt_PrimaryFire_K2Node_InputActionEvent_1(const struct FKey& Key)
+void ABP_WheeledVehicle_C::InpActEvt_PrimaryFire_K2Node_InputActionEvent_1(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_1");
 
@@ -1302,8 +1366,65 @@ void ABP_WheeledVehicle_C::InpActEvt_PrimaryFire_K2Node_InputActionEvent_1(const
 }
 
 
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_WheeledVehicle_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveBeginPlay");
+
+	ABP_WheeledVehicle_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_WheeledVehicle_C::ReceiveTick(float* DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveTick");
+
+	ABP_WheeledVehicle_C_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickVehicleSound
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float*                         dt                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_WheeledVehicle_C::TickVehicleSound(float* dt)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickVehicleSound");
+
+	ABP_WheeledVehicle_C_TickVehicleSound_Params params;
+	params.dt = dt;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerToggleRecording
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ServerToggleRecording()
 {
@@ -1320,7 +1441,7 @@ void ABP_WheeledVehicle_C::ServerToggleRecording()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveUnpossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            OldController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1340,7 +1461,7 @@ void ABP_WheeledVehicle_C::ReceiveUnpossessed(class AController** OldController)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveHit
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent**    MyComp                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor**                 Other                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1374,7 +1495,7 @@ void ABP_WheeledVehicle_C::ReceiveHit(class UPrimitiveComponent** MyComp, class 
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ReceiveDestroyed()
 {
@@ -1391,7 +1512,7 @@ void ABP_WheeledVehicle_C::ReceiveDestroyed()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ResetImpactSound
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ResetImpactSound()
 {
@@ -1408,7 +1529,7 @@ void ABP_WheeledVehicle_C::ResetImpactSound()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.OnUse
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -1429,45 +1550,8 @@ void ABP_WheeledVehicle_C::OnUse(class AFGCharacterPlayer** byCharacter, struct 
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerSetTrunkUser
-// ()
-// Parameters:
-// class AFGCharacterPlayer*      inCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_WheeledVehicle_C::ServerSetTrunkUser(class AFGCharacterPlayer* inCharacter)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerSetTrunkUser");
-
-	ABP_WheeledVehicle_C_ServerSetTrunkUser_Params params;
-	params.inCharacter = inCharacter;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenTrunk
-// ()
-
-void ABP_WheeledVehicle_C::OpenTrunk()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenTrunk");
-
-	ABP_WheeledVehicle_C_OpenTrunk_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.Multicast_OpenTrunk
-// ()
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::Multicast_OpenTrunk()
 {
@@ -1483,25 +1567,8 @@ void ABP_WheeledVehicle_C::Multicast_OpenTrunk()
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseTrunk
-// ()
-
-void ABP_WheeledVehicle_C::CloseTrunk()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseTrunk");
-
-	ABP_WheeledVehicle_C_CloseTrunk_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.Multicast_CloseTrunk
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::Multicast_CloseTrunk()
 {
@@ -1518,7 +1585,7 @@ void ABP_WheeledVehicle_C::Multicast_CloseTrunk()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceivePossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            NewController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1538,7 +1605,7 @@ void ABP_WheeledVehicle_C::ReceivePossessed(class AController** NewController)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ClientClearAIMovment
-// ()
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ClientClearAIMovment()
 {
@@ -1555,7 +1622,7 @@ void ABP_WheeledVehicle_C::ClientClearAIMovment()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.StartAccelerating
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::StartAccelerating()
 {
@@ -1572,7 +1639,7 @@ void ABP_WheeledVehicle_C::StartAccelerating()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.StopAccelerating
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::StopAccelerating()
 {
@@ -1588,48 +1655,8 @@ void ABP_WheeledVehicle_C::StopAccelerating()
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickVehicleSound
-// ()
-// Parameters:
-// float                          dt                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_WheeledVehicle_C::TickVehicleSound(float dt)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.TickVehicleSound");
-
-	ABP_WheeledVehicle_C_TickVehicleSound_Params params;
-	params.dt = dt;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveTick
-// ()
-// Parameters:
-// float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_WheeledVehicle_C::ReceiveTick(float* DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveTick");
-
-	ABP_WheeledVehicle_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.UpdateCamera
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::UpdateCamera()
 {
@@ -1645,25 +1672,8 @@ void ABP_WheeledVehicle_C::UpdateCamera()
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveBeginPlay
-// ()
-
-void ABP_WheeledVehicle_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveBeginPlay");
-
-	ABP_WheeledVehicle_C_ReceiveBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.WasDocked
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFGBuildableDockingStation** atStation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1683,11 +1693,11 @@ void ABP_WheeledVehicle_C::WasDocked(class AFGBuildableDockingStation** atStatio
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerSetMenuOpen
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           menuOpen                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          menuOpen                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::ServerSetMenuOpen(bool menuOpen)
+void ABP_WheeledVehicle_C::ServerSetMenuOpen(bool* menuOpen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerSetMenuOpen");
 
@@ -1703,7 +1713,7 @@ void ABP_WheeledVehicle_C::ServerSetMenuOpen(bool menuOpen)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerClearPathRecording
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ServerClearPathRecording()
 {
@@ -1720,7 +1730,7 @@ void ABP_WheeledVehicle_C::ServerClearPathRecording()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.WasUndocked
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::WasUndocked()
 {
@@ -1737,7 +1747,7 @@ void ABP_WheeledVehicle_C::WasUndocked()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerTogglePauseRecording
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ServerTogglePauseRecording()
 {
@@ -1754,7 +1764,7 @@ void ABP_WheeledVehicle_C::ServerTogglePauseRecording()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerToggleAutoPilot
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ServerToggleAutoPilot()
 {
@@ -1771,7 +1781,7 @@ void ABP_WheeledVehicle_C::ServerToggleAutoPilot()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ServerTogglePathVisibility
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ServerTogglePathVisibility()
 {
@@ -1788,7 +1798,7 @@ void ABP_WheeledVehicle_C::ServerTogglePathVisibility()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.Server_Leave
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::Server_Leave()
 {
@@ -1805,7 +1815,7 @@ void ABP_WheeledVehicle_C::Server_Leave()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveOnVehicleStartup
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ReceiveOnVehicleStartup()
 {
@@ -1822,7 +1832,7 @@ void ABP_WheeledVehicle_C::ReceiveOnVehicleStartup()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveOnVehicleShutDown
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ReceiveOnVehicleShutDown()
 {
@@ -1839,7 +1849,7 @@ void ABP_WheeledVehicle_C::ReceiveOnVehicleShutDown()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveOnDriverEnter
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ReceiveOnDriverEnter()
 {
@@ -1856,7 +1866,7 @@ void ABP_WheeledVehicle_C::ReceiveOnDriverEnter()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.ReceiveOnDriverLeave
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::ReceiveOnDriverLeave()
 {
@@ -1872,36 +1882,12 @@ void ABP_WheeledVehicle_C::ReceiveOnDriverLeave()
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.PlayFoliageDestroyedEffect
-// ()
-// Parameters:
-// class UParticleSystem**        destroyEffect                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UAkAudioEvent**          destroyAudioEvent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector*                Location                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_WheeledVehicle_C::PlayFoliageDestroyedEffect(class UParticleSystem** destroyEffect, class UAkAudioEvent** destroyAudioEvent, struct FVector* Location)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.PlayFoliageDestroyedEffect");
-
-	ABP_WheeledVehicle_C_PlayFoliageDestroyedEffect_Params params;
-	params.destroyEffect = destroyEffect;
-	params.destroyAudioEvent = destroyAudioEvent;
-	params.Location = Location;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2(float AxisValue)
+void ABP_WheeledVehicle_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2(float* AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2");
 
@@ -1917,11 +1903,11 @@ void ABP_WheeledVehicle_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2(float 
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float AxisValue)
+void ABP_WheeledVehicle_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float* AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3");
 
@@ -1937,7 +1923,7 @@ void ABP_WheeledVehicle_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float Ax
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.Server_Honk
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::Server_Honk()
 {
@@ -1954,7 +1940,7 @@ void ABP_WheeledVehicle_C::Server_Honk()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.Multicast_Honk
-// ()
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::Multicast_Honk()
 {
@@ -1970,12 +1956,96 @@ void ABP_WheeledVehicle_C::Multicast_Honk()
 }
 
 
-// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ExecuteUbergraph_BP_WheeledVehicle
-// ()
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.Client_PlayFoliageDestroyedEffect
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystem**        destroyEffect                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent**          destroyAudioEvent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                Location                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WheeledVehicle_C::ExecuteUbergraph_BP_WheeledVehicle(int EntryPoint)
+void ABP_WheeledVehicle_C::Client_PlayFoliageDestroyedEffect(class UParticleSystem** destroyEffect, class UAkAudioEvent** destroyAudioEvent, struct FVector* Location)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.Client_PlayFoliageDestroyedEffect");
+
+	ABP_WheeledVehicle_C_Client_PlayFoliageDestroyedEffect_Params params;
+	params.destroyEffect = destroyEffect;
+	params.destroyAudioEvent = destroyAudioEvent;
+	params.Location = Location;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenVehicleTrunk
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_WheeledVehicle_C::OpenVehicleTrunk(class AFGCharacterPlayer** Player)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.OpenVehicleTrunk");
+
+	ABP_WheeledVehicle_C_OpenVehicleTrunk_Params params;
+	params.Player = Player;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseVehicleTrunk
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFGCharacterPlayer**     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_WheeledVehicle_C::CloseVehicleTrunk(class AFGCharacterPlayer** Player)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.CloseVehicleTrunk");
+
+	ABP_WheeledVehicle_C_CloseVehicleTrunk_Params params;
+	params.Player = Player;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_WheeledVehicle_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.SetActorRepresentationColor");
+
+	ABP_WheeledVehicle_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_WheeledVehicle.BP_WheeledVehicle_C.ExecuteUbergraph_BP_WheeledVehicle
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_WheeledVehicle_C::ExecuteUbergraph_BP_WheeledVehicle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WheeledVehicle.BP_WheeledVehicle_C.ExecuteUbergraph_BP_WheeledVehicle");
 
@@ -1991,7 +2061,7 @@ void ABP_WheeledVehicle_C::ExecuteUbergraph_BP_WheeledVehicle(int EntryPoint)
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.OnStartRecording__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::OnStartRecording__DelegateSignature()
 {
@@ -2008,7 +2078,7 @@ void ABP_WheeledVehicle_C::OnStartRecording__DelegateSignature()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.OnStopRecording__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::OnStopRecording__DelegateSignature()
 {
@@ -2025,7 +2095,7 @@ void ABP_WheeledVehicle_C::OnStopRecording__DelegateSignature()
 
 
 // Function BP_WheeledVehicle.BP_WheeledVehicle_C.LocationReached__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_WheeledVehicle_C::LocationReached__DelegateSignature()
 {

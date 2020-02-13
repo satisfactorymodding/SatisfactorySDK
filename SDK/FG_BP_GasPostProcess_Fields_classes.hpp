@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GasPostProcess_Fields.BP_GasPostProcess_Fields_C
-// 0x0000 (0x0520 - 0x0520)
+// 0x0000 (0x0570 - 0x0570)
 class UBP_GasPostProcess_Fields_C : public UFGSharedPostProcessSettings
 {
 public:

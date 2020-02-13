@@ -12,28 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.BlueprintUpdateAnimation
-// ()
-// Parameters:
-// float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnim_GeneratorCoal_C::BlueprintUpdateAnimation(float* DeltaTimeX)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.BlueprintUpdateAnimation");
-
-	UAnim_GeneratorCoal_C_BlueprintUpdateAnimation_Params params;
-	params.DeltaTimeX = DeltaTimeX;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.AnimNotify_steamVfxNotify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorCoal_C::AnimNotify_steamVfxNotify()
 {
@@ -50,7 +30,7 @@ void UAnim_GeneratorCoal_C::AnimNotify_steamVfxNotify()
 
 
 // Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.AnimNotify_CoalGenEnteredProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorCoal_C::AnimNotify_CoalGenEnteredProducingState()
 {
@@ -67,7 +47,7 @@ void UAnim_GeneratorCoal_C::AnimNotify_CoalGenEnteredProducingState()
 
 
 // Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.AnimNotify_CoalGenLeftProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorCoal_C::AnimNotify_CoalGenLeftProducingState()
 {
@@ -84,7 +64,7 @@ void UAnim_GeneratorCoal_C::AnimNotify_CoalGenLeftProducingState()
 
 
 // Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.AnimNotify_CoalGenEnteredOfflineState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorCoal_C::AnimNotify_CoalGenEnteredOfflineState()
 {
@@ -101,7 +81,7 @@ void UAnim_GeneratorCoal_C::AnimNotify_CoalGenEnteredOfflineState()
 
 
 // Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.AnimNotify_CoalGenLeftOfflineState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorCoal_C::AnimNotify_CoalGenLeftOfflineState()
 {
@@ -118,11 +98,11 @@ void UAnim_GeneratorCoal_C::AnimNotify_CoalGenLeftOfflineState()
 
 
 // Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.ExecuteUbergraph_Anim_GeneratorCoal
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_GeneratorCoal_C::ExecuteUbergraph_Anim_GeneratorCoal(int EntryPoint)
+void UAnim_GeneratorCoal_C::ExecuteUbergraph_Anim_GeneratorCoal(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.ExecuteUbergraph_Anim_GeneratorCoal");
 

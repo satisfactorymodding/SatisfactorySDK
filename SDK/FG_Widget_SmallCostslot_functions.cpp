@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SmallCostslot.Widget_SmallCostSlot_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UWidget_SmallCostSlot_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 
 
 // Function Widget_SmallCostslot.Widget_SmallCostSlot_C.ExecuteUbergraph_Widget_SmallCostSlot
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SmallCostSlot_C::ExecuteUbergraph_Widget_SmallCostSlot(int EntryPoint)
+void UWidget_SmallCostSlot_C::ExecuteUbergraph_Widget_SmallCostSlot(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SmallCostslot.Widget_SmallCostSlot_C.ExecuteUbergraph_Widget_SmallCostSlot");
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_InteractablesMarker.BP_InteractablesMarker_C
-// 0x0000 (0x0350 - 0x0350)
+// 0x0000 (0x0358 - 0x0358)
 class ABP_InteractablesMarker_C : public AFGInteractableMarker
 {
 public:

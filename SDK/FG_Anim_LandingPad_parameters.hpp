@@ -27,7 +27,7 @@ struct UAnim_LandingPad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Landi
 // Function Anim_LandingPad.Anim_LandingPad_C.HasPowerChanged
 struct UAnim_LandingPad_C_HasPowerChanged_Params
 {
-	bool                                               State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Anim_LandingPad.Anim_LandingPad_C.BlueprintInitializeAnimation
@@ -38,7 +38,7 @@ struct UAnim_LandingPad_C_BlueprintInitializeAnimation_Params
 // Function Anim_LandingPad.Anim_LandingPad_C.ExecuteUbergraph_Anim_LandingPad
 struct UAnim_LandingPad_C_ExecuteUbergraph_Anim_LandingPad_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

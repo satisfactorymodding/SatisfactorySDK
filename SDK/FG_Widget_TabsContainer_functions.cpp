@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.SetActiveButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SlidingTabs_Button_C* ActiveButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SlidingTabs_Button_C** ActiveButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_TabsContainer_C::SetActiveButton(class UWidget_SlidingTabs_Button_C* ActiveButton)
+void UWidget_TabsContainer_C::SetActiveButton(class UWidget_SlidingTabs_Button_C** ActiveButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TabsContainer.Widget_TabsContainer_C.SetActiveButton");
 
@@ -33,11 +33,11 @@ void UWidget_TabsContainer_C::SetActiveButton(class UWidget_SlidingTabs_Button_C
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.IfButtonClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SlidingTabs_Button_C* Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SlidingTabs_Button_C** Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_TabsContainer_C::IfButtonClicked(class UWidget_SlidingTabs_Button_C* Instigator)
+void UWidget_TabsContainer_C::IfButtonClicked(class UWidget_SlidingTabs_Button_C** Instigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TabsContainer.Widget_TabsContainer_C.IfButtonClicked");
 
@@ -53,11 +53,11 @@ void UWidget_TabsContainer_C::IfButtonClicked(class UWidget_SlidingTabs_Button_C
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.IfButtonUnhovered
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SlidingTabs_Button_C* Insitagor                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SlidingTabs_Button_C** Insitagor                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_TabsContainer_C::IfButtonUnhovered(class UWidget_SlidingTabs_Button_C* Insitagor)
+void UWidget_TabsContainer_C::IfButtonUnhovered(class UWidget_SlidingTabs_Button_C** Insitagor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TabsContainer.Widget_TabsContainer_C.IfButtonUnhovered");
 
@@ -73,11 +73,11 @@ void UWidget_TabsContainer_C::IfButtonUnhovered(class UWidget_SlidingTabs_Button
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.IfButtonHovered
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SlidingTabs_Button_C* Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SlidingTabs_Button_C** Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_TabsContainer_C::IfButtonHovered(class UWidget_SlidingTabs_Button_C* Instigator)
+void UWidget_TabsContainer_C::IfButtonHovered(class UWidget_SlidingTabs_Button_C** Instigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TabsContainer.Widget_TabsContainer_C.IfButtonHovered");
 
@@ -93,7 +93,7 @@ void UWidget_TabsContainer_C::IfButtonHovered(class UWidget_SlidingTabs_Button_C
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.GenerateButtons
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TabsContainer_C::GenerateButtons()
 {
@@ -110,7 +110,7 @@ void UWidget_TabsContainer_C::GenerateButtons()
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -130,7 +130,7 @@ void UWidget_TabsContainer_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.Init
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TabsContainer_C::Init()
 {
@@ -147,7 +147,7 @@ void UWidget_TabsContainer_C::Init()
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TabsContainer_C::Destruct()
 {
@@ -164,11 +164,11 @@ void UWidget_TabsContainer_C::Destruct()
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.ExecuteUbergraph_Widget_TabsContainer
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TabsContainer_C::ExecuteUbergraph_Widget_TabsContainer(int EntryPoint)
+void UWidget_TabsContainer_C::ExecuteUbergraph_Widget_TabsContainer(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TabsContainer.Widget_TabsContainer_C.ExecuteUbergraph_Widget_TabsContainer");
 
@@ -184,7 +184,7 @@ void UWidget_TabsContainer_C::ExecuteUbergraph_Widget_TabsContainer(int EntryPoi
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.OnTabsGenerated__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TabsContainer_C::OnTabsGenerated__DelegateSignature()
 {
@@ -201,7 +201,7 @@ void UWidget_TabsContainer_C::OnTabsGenerated__DelegateSignature()
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.OnNoTabsGenerated__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TabsContainer_C::OnNoTabsGenerated__DelegateSignature()
 {
@@ -218,11 +218,11 @@ void UWidget_TabsContainer_C::OnNoTabsGenerated__DelegateSignature()
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.OnButtonClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TabsContainer_C::OnButtonClicked__DelegateSignature(int ButtonIndex)
+void UWidget_TabsContainer_C::OnButtonClicked__DelegateSignature(int* ButtonIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TabsContainer.Widget_TabsContainer_C.OnButtonClicked__DelegateSignature");
 
@@ -238,11 +238,11 @@ void UWidget_TabsContainer_C::OnButtonClicked__DelegateSignature(int ButtonIndex
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.OnButtonUnhovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           IsActiveButton                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          IsActiveButton                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TabsContainer_C::OnButtonUnhovered__DelegateSignature(bool IsActiveButton)
+void UWidget_TabsContainer_C::OnButtonUnhovered__DelegateSignature(bool* IsActiveButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TabsContainer.Widget_TabsContainer_C.OnButtonUnhovered__DelegateSignature");
 
@@ -258,11 +258,11 @@ void UWidget_TabsContainer_C::OnButtonUnhovered__DelegateSignature(bool IsActive
 
 
 // Function Widget_TabsContainer.Widget_TabsContainer_C.OnButtonHovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           IsActiveButton                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          IsActiveButton                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TabsContainer_C::OnButtonHovered__DelegateSignature(bool IsActiveButton)
+void UWidget_TabsContainer_C::OnButtonHovered__DelegateSignature(bool* IsActiveButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TabsContainer.Widget_TabsContainer_C.OnButtonHovered__DelegateSignature");
 

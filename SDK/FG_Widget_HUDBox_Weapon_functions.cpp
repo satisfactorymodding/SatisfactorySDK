@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HUDBox_Weapon.Widget_HUDBox_Weapon_C.UpdateAmmoSlot
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Weapon_C::UpdateAmmoSlot()
 {
@@ -30,7 +30,7 @@ void UWidget_HUDBox_Weapon_C::UpdateAmmoSlot()
 
 
 // Function Widget_HUDBox_Weapon.Widget_HUDBox_Weapon_C.UpdateContent
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_Weapon_C::UpdateContent()
 {
@@ -47,7 +47,7 @@ void UWidget_HUDBox_Weapon_C::UpdateContent()
 
 
 // Function Widget_HUDBox_Weapon.Widget_HUDBox_Weapon_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -69,7 +69,7 @@ void UWidget_HUDBox_Weapon_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 
 
 // Function Widget_HUDBox_Weapon.Widget_HUDBox_Weapon_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HUDBox_Weapon_C::Construct()
 {
@@ -86,11 +86,11 @@ void UWidget_HUDBox_Weapon_C::Construct()
 
 
 // Function Widget_HUDBox_Weapon.Widget_HUDBox_Weapon_C.ExecuteUbergraph_Widget_HUDBox_Weapon
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HUDBox_Weapon_C::ExecuteUbergraph_Widget_HUDBox_Weapon(int EntryPoint)
+void UWidget_HUDBox_Weapon_C::ExecuteUbergraph_Widget_HUDBox_Weapon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HUDBox_Weapon.Widget_HUDBox_Weapon_C.ExecuteUbergraph_Widget_HUDBox_Weapon");
 

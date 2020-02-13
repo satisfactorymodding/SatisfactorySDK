@@ -12,30 +12,13 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.ClearRelevantRewards
-// ()
-
-void UWidget_SchematicPopUp_C::ClearRelevantRewards()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.ClearRelevantRewards");
-
-	UWidget_SchematicPopUp_C_ClearRelevantRewards_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.CreateRewardIcon
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTexture*                Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Icon_Text                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UTexture**               Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Icon_Text                      (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SchematicPopUp_C::CreateRewardIcon(class UTexture* Icon, const struct FText& Icon_Text)
+void UWidget_SchematicPopUp_C::CreateRewardIcon(class UTexture** Icon, struct FText* Icon_Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.CreateRewardIcon");
 
@@ -52,7 +35,7 @@ void UWidget_SchematicPopUp_C::CreateRewardIcon(class UTexture* Icon, const stru
 
 
 // Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.GenerateSchematicRewardIcons
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SchematicPopUp_C::GenerateSchematicRewardIcons()
 {
@@ -68,14 +51,14 @@ void UWidget_SchematicPopUp_C::GenerateSchematicRewardIcons()
 }
 
 
-// Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.SetRelevantRewards
-// ()
+// Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.GetRelevantRewardData
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 
-void UWidget_SchematicPopUp_C::SetRelevantRewards()
+void UWidget_SchematicPopUp_C::GetRelevantRewardData()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.SetRelevantRewards");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.GetRelevantRewardData");
 
-	UWidget_SchematicPopUp_C_SetRelevantRewards_Params params;
+	UWidget_SchematicPopUp_C_GetRelevantRewardData_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -86,7 +69,7 @@ void UWidget_SchematicPopUp_C::SetRelevantRewards()
 
 
 // Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.Set Stinger Content
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SchematicPopUp_C::Set_Stinger_Content()
 {
@@ -103,7 +86,7 @@ void UWidget_SchematicPopUp_C::Set_Stinger_Content()
 
 
 // Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.GetSchematicUnlockedText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -124,7 +107,7 @@ struct FText UWidget_SchematicPopUp_C::GetSchematicUnlockedText()
 
 
 // Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SchematicPopUp_C::Construct()
 {
@@ -141,16 +124,16 @@ void UWidget_SchematicPopUp_C::Construct()
 
 
 // Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.OnSchematicPurchased
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Schematic                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 schematic                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SchematicPopUp_C::OnSchematicPurchased(class UClass* Schematic)
+void UWidget_SchematicPopUp_C::OnSchematicPurchased(class UClass** schematic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.OnSchematicPurchased");
 
 	UWidget_SchematicPopUp_C_OnSchematicPurchased_Params params;
-	params.Schematic = Schematic;
+	params.schematic = schematic;
 
 	auto flags = fn->FunctionFlags;
 
@@ -161,11 +144,11 @@ void UWidget_SchematicPopUp_C::OnSchematicPurchased(class UClass* Schematic)
 
 
 // Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.ExecuteUbergraph_Widget_SchematicPopUp
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SchematicPopUp_C::ExecuteUbergraph_Widget_SchematicPopUp(int EntryPoint)
+void UWidget_SchematicPopUp_C::ExecuteUbergraph_Widget_SchematicPopUp(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicPopUp.Widget_SchematicPopUp_C.ExecuteUbergraph_Widget_SchematicPopUp");
 

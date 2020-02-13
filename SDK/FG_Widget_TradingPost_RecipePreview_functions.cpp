@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.GetLightGrayColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FLinearColor UWidget_TradingPost_RecipePreview_C::GetLightGrayColor()
 
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.GetLightGrayText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +55,7 @@ struct FSlateColor UWidget_TradingPost_RecipePreview_C::GetLightGrayText()
 
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.GetCostVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ ESlateVisibility UWidget_TradingPost_RecipePreview_C::GetCostVisibility()
 
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.GetRewardsVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,7 +97,7 @@ ESlateVisibility UWidget_TradingPost_RecipePreview_C::GetRewardsVisibility()
 
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.ClearSchematicContents
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_RecipePreview_C::ClearSchematicContents()
 {
@@ -114,7 +114,7 @@ void UWidget_TradingPost_RecipePreview_C::ClearSchematicContents()
 
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.PositionRewards
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_RecipePreview_C::PositionRewards()
 {
@@ -131,7 +131,7 @@ void UWidget_TradingPost_RecipePreview_C::PositionRewards()
 
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.GetActivateButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -151,16 +151,16 @@ ESlateVisibility UWidget_TradingPost_RecipePreview_C::GetActivateButtonVisibilit
 }
 
 
-// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.GetSchematicContents
-// ()
+// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.SetupSchematicContents
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  mSchematic                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 mSchematic                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_RecipePreview_C::GetSchematicContents(class UClass* mSchematic)
+void UWidget_TradingPost_RecipePreview_C::SetupSchematicContents(class UClass** mSchematic)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.GetSchematicContents");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.SetupSchematicContents");
 
-	UWidget_TradingPost_RecipePreview_C_GetSchematicContents_Params params;
+	UWidget_TradingPost_RecipePreview_C_SetupSchematicContents_Params params;
 	params.mSchematic = mSchematic;
 
 	auto flags = fn->FunctionFlags;
@@ -171,25 +171,8 @@ void UWidget_TradingPost_RecipePreview_C::GetSchematicContents(class UClass* mSc
 }
 
 
-// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.Construct
-// ()
-
-void UWidget_TradingPost_RecipePreview_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.Construct");
-
-	UWidget_TradingPost_RecipePreview_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.AnimateRewards
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_RecipePreview_C::AnimateRewards()
 {
@@ -205,14 +188,14 @@ void UWidget_TradingPost_RecipePreview_C::AnimateRewards()
 }
 
 
-// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.AnimateCostSlots
-// ()
+// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.AnimateCostslots
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_TradingPost_RecipePreview_C::AnimateCostSlots()
+void UWidget_TradingPost_RecipePreview_C::AnimateCostslots()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.AnimateCostSlots");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.AnimateCostslots");
 
-	UWidget_TradingPost_RecipePreview_C_AnimateCostSlots_Params params;
+	UWidget_TradingPost_RecipePreview_C_AnimateCostslots_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -223,11 +206,11 @@ void UWidget_TradingPost_RecipePreview_C::AnimateCostSlots()
 
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.ExecuteUbergraph_Widget_TradingPost_RecipePreview
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_RecipePreview_C::ExecuteUbergraph_Widget_TradingPost_RecipePreview(int EntryPoint)
+void UWidget_TradingPost_RecipePreview_C::ExecuteUbergraph_Widget_TradingPost_RecipePreview(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.ExecuteUbergraph_Widget_TradingPost_RecipePreview");
 

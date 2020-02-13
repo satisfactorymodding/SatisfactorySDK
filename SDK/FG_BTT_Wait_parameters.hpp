@@ -38,7 +38,7 @@ struct UBTT_Wait_C_ReceiveAbort_Params
 // Function BTT_Wait.BTT_Wait_C.ExecuteUbergraph_BTT_Wait
 struct UBTT_Wait_C_ExecuteUbergraph_BTT_Wait_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

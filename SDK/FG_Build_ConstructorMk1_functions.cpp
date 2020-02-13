@@ -12,29 +12,12 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_ConstructorMk1.Build_ConstructorMk1_C.UserConstructionScript
-// ()
-
-void ABuild_ConstructorMk1_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_ConstructorMk1.Build_ConstructorMk1_C.UserConstructionScript");
-
-	ABuild_ConstructorMk1_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_ConstructorMk1.Build_ConstructorMk1_C.ExecuteUbergraph_Build_ConstructorMk1
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_ConstructorMk1_C::ExecuteUbergraph_Build_ConstructorMk1(int EntryPoint)
+void ABuild_ConstructorMk1_C::ExecuteUbergraph_Build_ConstructorMk1(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_ConstructorMk1.Build_ConstructorMk1_C.ExecuteUbergraph_Build_ConstructorMk1");
 

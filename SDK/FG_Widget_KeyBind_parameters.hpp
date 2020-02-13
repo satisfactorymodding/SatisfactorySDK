@@ -42,7 +42,7 @@ struct UWidget_KeyBind_C_BndEvt__mResetButton_K2Node_ComponentBoundEvent_0_OnCli
 // Function Widget_KeyBind.Widget_KeyBind_C.ExecuteUbergraph_Widget_KeyBind
 struct UWidget_KeyBind_C_ExecuteUbergraph_Widget_KeyBind_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

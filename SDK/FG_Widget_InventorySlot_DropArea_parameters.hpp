@@ -17,16 +17,16 @@ namespace SDK
 // Function Widget_InventorySlot_DropArea.Widget_InventorySlot_DropArea_C.OnDropInventorySlot
 struct UWidget_InventorySlot_DropArea_C_OnDropInventorySlot_Params
 {
-	class UWidget_InventorySlot_C*                     InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_InventorySlot_C**                    InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot_DropArea.Widget_InventorySlot_DropArea_C.FindCorrectSlot
 struct UWidget_InventorySlot_DropArea_C_FindCorrectSlot_Params
 {
-	class UWidget_InventorySlot_C*                     payload;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_InventorySlot_C**                    payload;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UWidget_InventorySlot_C*                     InventorySlot;                                            // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot_DropArea.Widget_InventorySlot_DropArea_C.OnDrop

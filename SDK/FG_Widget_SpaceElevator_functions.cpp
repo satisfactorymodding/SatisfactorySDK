@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.DisplayEarlyAccessBlocker
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::DisplayEarlyAccessBlocker()
 {
@@ -30,7 +30,7 @@ void UWidget_SpaceElevator_C::DisplayEarlyAccessBlocker()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.UpdateHeaderText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::UpdateHeaderText()
 {
@@ -47,12 +47,12 @@ void UWidget_SpaceElevator_C::UpdateHeaderText()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.SetStatusText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           Pulsing                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          Pulsing                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SpaceElevator_C::SetStatusText(const struct FText& Text, bool Pulsing)
+void UWidget_SpaceElevator_C::SetStatusText(struct FText* Text, bool* Pulsing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceElevator.Widget_SpaceElevator_C.SetStatusText");
 
@@ -69,7 +69,7 @@ void UWidget_SpaceElevator_C::SetStatusText(const struct FText& Text, bool Pulsi
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.UpdatePhaseInfo
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::UpdatePhaseInfo()
 {
@@ -86,7 +86,7 @@ void UWidget_SpaceElevator_C::UpdatePhaseInfo()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.SetUnlockTiers
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            FirstUnlockTier                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            LastUnlockTier                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -111,11 +111,11 @@ void UWidget_SpaceElevator_C::SetUnlockTiers(int* FirstUnlockTier, int* LastUnlo
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.ClearInactiveLeverSelections
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidgetAnimation*        ActiveAnimation                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidgetAnimation**       ActiveAnimation                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SpaceElevator_C::ClearInactiveLeverSelections(class UWidgetAnimation* ActiveAnimation)
+void UWidget_SpaceElevator_C::ClearInactiveLeverSelections(class UWidgetAnimation** ActiveAnimation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceElevator.Widget_SpaceElevator_C.ClearInactiveLeverSelections");
 
@@ -131,7 +131,7 @@ void UWidget_SpaceElevator_C::ClearInactiveLeverSelections(class UWidgetAnimatio
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -155,7 +155,7 @@ void UWidget_SpaceElevator_C::DropInventorySlotStack(class UWidget_InventorySlot
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.GetPayOffContainerVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -176,7 +176,7 @@ ESlateVisibility UWidget_SpaceElevator_C::GetPayOffContainerVisibility()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.SetupPayOffWidgets
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::SetupPayOffWidgets()
 {
@@ -193,7 +193,7 @@ void UWidget_SpaceElevator_C::SetupPayOffWidgets()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::Construct()
 {
@@ -210,7 +210,7 @@ void UWidget_SpaceElevator_C::Construct()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::Init()
 {
@@ -227,7 +227,7 @@ void UWidget_SpaceElevator_C::Init()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.PollAndSetupInventory
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::PollAndSetupInventory()
 {
@@ -244,11 +244,11 @@ void UWidget_SpaceElevator_C::PollAndSetupInventory()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.OnGamePhaseChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EGamePhase>        NewGamePhase                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EGamePhase>*       NewGamePhase                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SpaceElevator_C::OnGamePhaseChanged(TEnumAsByte<EGamePhase> NewGamePhase)
+void UWidget_SpaceElevator_C::OnGamePhaseChanged(TEnumAsByte<EGamePhase>* NewGamePhase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceElevator.Widget_SpaceElevator_C.OnGamePhaseChanged");
 
@@ -264,11 +264,11 @@ void UWidget_SpaceElevator_C::OnGamePhaseChanged(TEnumAsByte<EGamePhase> NewGame
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.On Lever Select
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            SelectionIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SelectionIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SpaceElevator_C::On_Lever_Select(int SelectionIndex)
+void UWidget_SpaceElevator_C::On_Lever_Select(int* SelectionIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceElevator.Widget_SpaceElevator_C.On Lever Select");
 
@@ -284,7 +284,7 @@ void UWidget_SpaceElevator_C::On_Lever_Select(int SelectionIndex)
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.OnUpgrade
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::OnUpgrade()
 {
@@ -301,7 +301,7 @@ void UWidget_SpaceElevator_C::OnUpgrade()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -323,7 +323,7 @@ void UWidget_SpaceElevator_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.ActivateSend
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::ActivateSend()
 {
@@ -340,7 +340,7 @@ void UWidget_SpaceElevator_C::ActivateSend()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.SpawnSmoke
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::SpawnSmoke()
 {
@@ -357,7 +357,7 @@ void UWidget_SpaceElevator_C::SpawnSmoke()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.SpawnSparksRight
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::SpawnSparksRight()
 {
@@ -374,7 +374,7 @@ void UWidget_SpaceElevator_C::SpawnSparksRight()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.SpawnSparksLeft
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::SpawnSparksLeft()
 {
@@ -391,7 +391,7 @@ void UWidget_SpaceElevator_C::SpawnSparksLeft()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.StartShake
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::StartShake()
 {
@@ -408,7 +408,7 @@ void UWidget_SpaceElevator_C::StartShake()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.StopShake
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::StopShake()
 {
@@ -425,7 +425,7 @@ void UWidget_SpaceElevator_C::StopShake()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.ResetLever
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::ResetLever()
 {
@@ -442,7 +442,7 @@ void UWidget_SpaceElevator_C::ResetLever()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::Destruct()
 {
@@ -459,7 +459,7 @@ void UWidget_SpaceElevator_C::Destruct()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.AnimNotify_Chime
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceElevator_C::AnimNotify_Chime()
 {
@@ -476,11 +476,11 @@ void UWidget_SpaceElevator_C::AnimNotify_Chime()
 
 
 // Function Widget_SpaceElevator.Widget_SpaceElevator_C.ExecuteUbergraph_Widget_SpaceElevator
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SpaceElevator_C::ExecuteUbergraph_Widget_SpaceElevator(int EntryPoint)
+void UWidget_SpaceElevator_C::ExecuteUbergraph_Widget_SpaceElevator(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceElevator.Widget_SpaceElevator_C.ExecuteUbergraph_Widget_SpaceElevator");
 

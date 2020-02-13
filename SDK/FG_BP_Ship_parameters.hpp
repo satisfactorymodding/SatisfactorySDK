@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_Ship.BP_Ship_C.UserConstructionScript
-struct ABP_Ship_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_Ship.BP_Ship_C.GainedSignificance
 struct ABP_Ship_C_GainedSignificance_Params
 {
@@ -43,7 +38,7 @@ struct ABP_Ship_C_ReceiveEndPlay_Params
 // Function BP_Ship.BP_Ship_C.ExecuteUbergraph_BP_Ship
 struct ABP_Ship_C_ExecuteUbergraph_BP_Ship_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

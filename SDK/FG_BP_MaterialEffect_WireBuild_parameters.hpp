@@ -22,7 +22,7 @@ struct UBP_MaterialEffect_WireBuild_C_OnStarted_Params
 // Function BP_MaterialEffect_WireBuild.BP_MaterialEffect_WireBuild_C.ExecuteUbergraph_BP_MaterialEffect_WireBuild
 struct UBP_MaterialEffect_WireBuild_C_ExecuteUbergraph_BP_MaterialEffect_WireBuild_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

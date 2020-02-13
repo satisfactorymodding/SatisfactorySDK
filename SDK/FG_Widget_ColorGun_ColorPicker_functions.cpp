@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.CompressValue
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MinValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         MinValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Out_Value                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorGun_ColorPicker_C::CompressValue(float Value, float MinValue, float* Out_Value)
+void UWidget_ColorGun_ColorPicker_C::CompressValue(float* Value, float* MinValue, float* Out_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.CompressValue");
 
@@ -39,13 +39,13 @@ void UWidget_ColorGun_ColorPicker_C::CompressValue(float Value, float MinValue, 
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.ConvertColorToPreviewColor
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FLinearColor            InputColor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MinValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           InputColor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         MinValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            OutputColor                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorGun_ColorPicker_C::ConvertColorToPreviewColor(const struct FLinearColor& InputColor, float MinValue, struct FLinearColor* OutputColor)
+void UWidget_ColorGun_ColorPicker_C::ConvertColorToPreviewColor(struct FLinearColor* InputColor, float* MinValue, struct FLinearColor* OutputColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.ConvertColorToPreviewColor");
 
@@ -65,7 +65,7 @@ void UWidget_ColorGun_ColorPicker_C::ConvertColorToPreviewColor(const struct FLi
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.UpdatePreview
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorGun_ColorPicker_C::UpdatePreview()
 {
@@ -82,7 +82,7 @@ void UWidget_ColorGun_ColorPicker_C::UpdatePreview()
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.SetupSlots
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorGun_ColorPicker_C::SetupSlots()
 {
@@ -99,7 +99,7 @@ void UWidget_ColorGun_ColorPicker_C::SetupSlots()
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ColorGun_ColorPicker_C::Construct()
 {
@@ -116,11 +116,11 @@ void UWidget_ColorGun_ColorPicker_C::Construct()
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_ColorPicker_Slot_C* Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_ColorPicker_Slot_C** Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ColorGun_ColorPicker_C::OnSlotClicked(class UWidget_ColorPicker_Slot_C* Slot)
+void UWidget_ColorGun_ColorPicker_C::OnSlotClicked(class UWidget_ColorPicker_Slot_C** Slot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotClicked");
 
@@ -136,11 +136,11 @@ void UWidget_ColorGun_ColorPicker_C::OnSlotClicked(class UWidget_ColorPicker_Slo
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotHovered
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_ColorPicker_Slot_C* Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_ColorPicker_Slot_C** Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ColorGun_ColorPicker_C::OnSlotHovered(class UWidget_ColorPicker_Slot_C* Slot)
+void UWidget_ColorGun_ColorPicker_C::OnSlotHovered(class UWidget_ColorPicker_Slot_C** Slot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotHovered");
 
@@ -156,11 +156,11 @@ void UWidget_ColorGun_ColorPicker_C::OnSlotHovered(class UWidget_ColorPicker_Slo
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotUnhovered
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_ColorPicker_Slot_C* Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_ColorPicker_Slot_C** Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ColorGun_ColorPicker_C::OnSlotUnhovered(class UWidget_ColorPicker_Slot_C* Slot)
+void UWidget_ColorGun_ColorPicker_C::OnSlotUnhovered(class UWidget_ColorPicker_Slot_C** Slot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotUnhovered");
 
@@ -176,7 +176,7 @@ void UWidget_ColorGun_ColorPicker_C::OnSlotUnhovered(class UWidget_ColorPicker_S
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorGun_ColorPicker_C::BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -193,7 +193,7 @@ void UWidget_ColorGun_ColorPicker_C::BndEvt__Widget_StandardButton_K2Node_Compon
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.BndEvt__mCancel_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorGun_ColorPicker_C::BndEvt__mCancel_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -210,11 +210,11 @@ void UWidget_ColorGun_ColorPicker_C::BndEvt__mCancel_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotEditClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_ColorPicker_Slot_C* Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_ColorPicker_Slot_C** Slot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ColorGun_ColorPicker_C::OnSlotEditClicked(class UWidget_ColorPicker_Slot_C* Slot)
+void UWidget_ColorGun_ColorPicker_C::OnSlotEditClicked(class UWidget_ColorPicker_Slot_C** Slot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotEditClicked");
 
@@ -230,12 +230,12 @@ void UWidget_ColorGun_ColorPicker_C::OnSlotEditClicked(class UWidget_ColorPicker
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnUpdatePreset
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            PrimaryColor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            SecondaryColor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           PrimaryColor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           SecondaryColor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorGun_ColorPicker_C::OnUpdatePreset(const struct FLinearColor& PrimaryColor, const struct FLinearColor& SecondaryColor)
+void UWidget_ColorGun_ColorPicker_C::OnUpdatePreset(struct FLinearColor* PrimaryColor, struct FLinearColor* SecondaryColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnUpdatePreset");
 
@@ -252,11 +252,11 @@ void UWidget_ColorGun_ColorPicker_C::OnUpdatePreset(const struct FLinearColor& P
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.ExecuteUbergraph_Widget_ColorGun_ColorPicker
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorGun_ColorPicker_C::ExecuteUbergraph_Widget_ColorGun_ColorPicker(int EntryPoint)
+void UWidget_ColorGun_ColorPicker_C::ExecuteUbergraph_Widget_ColorGun_ColorPicker(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.ExecuteUbergraph_Widget_ColorGun_ColorPicker");
 
@@ -272,7 +272,7 @@ void UWidget_ColorGun_ColorPicker_C::ExecuteUbergraph_Widget_ColorGun_ColorPicke
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnCancel__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorGun_ColorPicker_C::OnCancel__DelegateSignature()
 {
@@ -289,7 +289,7 @@ void UWidget_ColorGun_ColorPicker_C::OnCancel__DelegateSignature()
 
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnAccept__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ColorGun_ColorPicker_C::OnAccept__DelegateSignature()
 {

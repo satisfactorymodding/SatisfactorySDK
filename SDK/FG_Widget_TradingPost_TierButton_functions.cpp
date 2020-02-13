@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.SetLockedText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_TierButton_C::SetLockedText()
 {
@@ -30,7 +30,7 @@ void UWidget_TradingPost_TierButton_C::SetLockedText()
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.GetTierNumVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -51,7 +51,7 @@ ESlateVisibility UWidget_TradingPost_TierButton_C::GetTierNumVisibility()
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.GetCheckVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -71,16 +71,16 @@ ESlateVisibility UWidget_TradingPost_TierButton_C::GetCheckVisibility()
 }
 
 
-// Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.IsSelectable
-// ()
+// Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.isSelectable
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           IsSelectable                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           isSelectable                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_TierButton_C::IsSelectable(bool* IsSelectable)
+void UWidget_TradingPost_TierButton_C::isSelectable(bool* isSelectable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.IsSelectable");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.isSelectable");
 
-	UWidget_TradingPost_TierButton_C_IsSelectable_Params params;
+	UWidget_TradingPost_TierButton_C_isSelectable_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -88,13 +88,13 @@ void UWidget_TradingPost_TierButton_C::IsSelectable(bool* IsSelectable)
 
 	fn->FunctionFlags = flags;
 
-	if (IsSelectable != nullptr)
-		*IsSelectable = params.IsSelectable;
+	if (isSelectable != nullptr)
+		*isSelectable = params.isSelectable;
 }
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.GetWidgetClickable
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -115,7 +115,7 @@ ESlateVisibility UWidget_TradingPost_TierButton_C::GetWidgetClickable()
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.GetTextHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -136,7 +136,7 @@ struct FSlateColor UWidget_TradingPost_TierButton_C::GetTextHoverColor()
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.GetButtonColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -157,7 +157,7 @@ struct FLinearColor UWidget_TradingPost_TierButton_C::GetButtonColor()
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.UpdateTier
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_TierButton_C::UpdateTier()
 {
@@ -174,12 +174,12 @@ void UWidget_TradingPost_TierButton_C::UpdateTier()
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.SetTierNumber
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            TierNumber                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_TradingPost_C*   Tradingpost                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           TierNumber                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_TradingPost_C**  Tradingpost                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_TradingPost_TierButton_C::SetTierNumber(int TierNumber, class UWidget_TradingPost_C* Tradingpost)
+void UWidget_TradingPost_TierButton_C::SetTierNumber(int* TierNumber, class UWidget_TradingPost_C** Tradingpost)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.SetTierNumber");
 
@@ -196,7 +196,7 @@ void UWidget_TradingPost_TierButton_C::SetTierNumber(int TierNumber, class UWidg
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.BndEvt__Button_2_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_TierButton_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature()
 {
@@ -213,11 +213,11 @@ void UWidget_TradingPost_TierButton_C::BndEvt__Button_2_K2Node_ComponentBoundEve
 
 
 // Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.ExecuteUbergraph_Widget_TradingPost_TierButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_TierButton_C::ExecuteUbergraph_Widget_TradingPost_TierButton(int EntryPoint)
+void UWidget_TradingPost_TierButton_C::ExecuteUbergraph_Widget_TradingPost_TierButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_TierButton.Widget_TradingPost_TierButton_C.ExecuteUbergraph_Widget_TradingPost_TierButton");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.DeslectAllRules
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::DeslectAllRules()
 {
@@ -30,7 +30,7 @@ void UWidget_SplitterProgrammable_C::DeslectAllRules()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.SetAddButtonVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::SetAddButtonVisibility()
 {
@@ -47,7 +47,7 @@ void UWidget_SplitterProgrammable_C::SetAddButtonVisibility()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.CheckIfSmartSplitter
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::CheckIfSmartSplitter()
 {
@@ -64,7 +64,7 @@ void UWidget_SplitterProgrammable_C::CheckIfSmartSplitter()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.GetLastRuleIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -85,7 +85,7 @@ int UWidget_SplitterProgrammable_C::GetLastRuleIndex()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.UpdateRuleIndexes
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::UpdateRuleIndexes()
 {
@@ -102,7 +102,7 @@ void UWidget_SplitterProgrammable_C::UpdateRuleIndexes()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.GenerateRules
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::GenerateRules()
 {
@@ -119,12 +119,12 @@ void UWidget_SplitterProgrammable_C::GenerateRules()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.GetOutputFromIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UVerticalBox*            List                           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SplitterProgrammable_C::GetOutputFromIndex(int Index, class UVerticalBox** List)
+void UWidget_SplitterProgrammable_C::GetOutputFromIndex(int* Index, class UVerticalBox** List)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.GetOutputFromIndex");
 
@@ -143,12 +143,12 @@ void UWidget_SplitterProgrammable_C::GetOutputFromIndex(int Index, class UVertic
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.AddRuleToOutput
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSplitterSortRule       SplitterSortRule               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// int                            RuleIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FSplitterSortRule*      SplitterSortRule               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int*                           RuleIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterProgrammable_C::AddRuleToOutput(const struct FSplitterSortRule& SplitterSortRule, int RuleIndex)
+void UWidget_SplitterProgrammable_C::AddRuleToOutput(struct FSplitterSortRule* SplitterSortRule, int* RuleIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.AddRuleToOutput");
 
@@ -165,7 +165,7 @@ void UWidget_SplitterProgrammable_C::AddRuleToOutput(const struct FSplitterSortR
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.SetWindowTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::SetWindowTitle()
 {
@@ -182,7 +182,7 @@ void UWidget_SplitterProgrammable_C::SetWindowTitle()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.SetSortRuleWidgetBindings
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_SplitterProgrammableRule_C* Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
 
@@ -204,7 +204,7 @@ void UWidget_SplitterProgrammable_C::SetSortRuleWidgetBindings(class UWidget_Spl
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.GetNumSortRules
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +225,7 @@ int UWidget_SplitterProgrammable_C::GetNumSortRules()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.InitWindow
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::InitWindow()
 {
@@ -242,11 +242,11 @@ void UWidget_SplitterProgrammable_C::InitWindow()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleRemoved
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SplitterProgrammableRule_C* SplitterRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SplitterProgrammableRule_C** SplitterRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SplitterProgrammable_C::OnRuleRemoved(class UWidget_SplitterProgrammableRule_C* SplitterRule)
+void UWidget_SplitterProgrammable_C::OnRuleRemoved(class UWidget_SplitterProgrammableRule_C** SplitterRule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleRemoved");
 
@@ -262,12 +262,12 @@ void UWidget_SplitterProgrammable_C::OnRuleRemoved(class UWidget_SplitterProgram
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleUpdated
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            RuleIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FSplitterSortRule       RuleData                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// int*                           RuleIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FSplitterSortRule*      RuleData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SplitterProgrammable_C::OnRuleUpdated(int RuleIndex, const struct FSplitterSortRule& RuleData)
+void UWidget_SplitterProgrammable_C::OnRuleUpdated(int* RuleIndex, struct FSplitterSortRule* RuleData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleUpdated");
 
@@ -284,11 +284,11 @@ void UWidget_SplitterProgrammable_C::OnRuleUpdated(int RuleIndex, const struct F
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleAdded
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSplitterSortRule       RuleData                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSplitterSortRule*      RuleData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_SplitterProgrammable_C::OnRuleAdded(const struct FSplitterSortRule& RuleData)
+void UWidget_SplitterProgrammable_C::OnRuleAdded(struct FSplitterSortRule* RuleData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleAdded");
 
@@ -304,7 +304,7 @@ void UWidget_SplitterProgrammable_C::OnRuleAdded(const struct FSplitterSortRule&
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -324,11 +324,11 @@ void UWidget_SplitterProgrammable_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.ShowDescriptors
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SplitterProgrammableRule_C* SplitterRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SplitterProgrammableRule_C** SplitterRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SplitterProgrammable_C::ShowDescriptors(class UWidget_SplitterProgrammableRule_C* SplitterRule)
+void UWidget_SplitterProgrammable_C::ShowDescriptors(class UWidget_SplitterProgrammableRule_C** SplitterRule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.ShowDescriptors");
 
@@ -344,7 +344,7 @@ void UWidget_SplitterProgrammable_C::ShowDescriptors(class UWidget_SplitterProgr
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.HideDescriptors
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::HideDescriptors()
 {
@@ -361,11 +361,11 @@ void UWidget_SplitterProgrammable_C::HideDescriptors()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.UpdateRuleFromDescriptorList
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  SelectedDescriptor             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 SelectedDescriptor             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterProgrammable_C::UpdateRuleFromDescriptorList(class UClass* SelectedDescriptor)
+void UWidget_SplitterProgrammable_C::UpdateRuleFromDescriptorList(class UClass** SelectedDescriptor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.UpdateRuleFromDescriptorList");
 
@@ -381,7 +381,7 @@ void UWidget_SplitterProgrammable_C::UpdateRuleFromDescriptorList(class UClass* 
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::Construct()
 {
@@ -398,7 +398,7 @@ void UWidget_SplitterProgrammable_C::Construct()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.UpdateListFromServer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::UpdateListFromServer()
 {
@@ -415,7 +415,7 @@ void UWidget_SplitterProgrammable_C::UpdateListFromServer()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::Destruct()
 {
@@ -432,7 +432,7 @@ void UWidget_SplitterProgrammable_C::Destruct()
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.BndEvt__mLeftOutputList_K2Node_ComponentBoundEvent_0_OnAddClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::BndEvt__mLeftOutputList_K2Node_ComponentBoundEvent_0_OnAddClicked__DelegateSignature()
 {
@@ -449,7 +449,7 @@ void UWidget_SplitterProgrammable_C::BndEvt__mLeftOutputList_K2Node_ComponentBou
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.BndEvt__mCenterOutputList_K2Node_ComponentBoundEvent_1_OnAddClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::BndEvt__mCenterOutputList_K2Node_ComponentBoundEvent_1_OnAddClicked__DelegateSignature()
 {
@@ -466,7 +466,7 @@ void UWidget_SplitterProgrammable_C::BndEvt__mCenterOutputList_K2Node_ComponentB
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.BndEvt__mRightOutputList_K2Node_ComponentBoundEvent_2_OnAddClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SplitterProgrammable_C::BndEvt__mRightOutputList_K2Node_ComponentBoundEvent_2_OnAddClicked__DelegateSignature()
 {
@@ -483,11 +483,11 @@ void UWidget_SplitterProgrammable_C::BndEvt__mRightOutputList_K2Node_ComponentBo
 
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.ExecuteUbergraph_Widget_SplitterProgrammable
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterProgrammable_C::ExecuteUbergraph_Widget_SplitterProgrammable(int EntryPoint)
+void UWidget_SplitterProgrammable_C::ExecuteUbergraph_Widget_SplitterProgrammable(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.ExecuteUbergraph_Widget_SplitterProgrammable");
 

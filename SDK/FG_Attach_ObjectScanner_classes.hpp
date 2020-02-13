@@ -31,12 +31,11 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float* DeltaSeconds);
 	void UpdateScannerVisuals();
 	void PlayAttachEffects3P();
-	void ExecuteUbergraph_Attach_ObjectScanner(int EntryPoint);
+	void ExecuteUbergraph_Attach_ObjectScanner(int* EntryPoint);
 };
 
 

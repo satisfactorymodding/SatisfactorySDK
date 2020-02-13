@@ -23,7 +23,7 @@ struct UAnim_Rifle_C_BlueprintUpdateAnimation_Params
 // Function Anim_Rifle.Anim_Rifle_C.ExecuteUbergraph_Anim_Rifle
 struct UAnim_Rifle_C_ExecuteUbergraph_Anim_Rifle_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

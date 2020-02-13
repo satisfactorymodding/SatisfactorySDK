@@ -30,10 +30,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void PlayAttachEffects3P();
 	void PlayDetachEffects3P();
-	void ExecuteUbergraph_Attach_PortableMinerDispenser(int EntryPoint);
+	void ExecuteUbergraph_Attach_PortableMinerDispenser(int* EntryPoint);
 };
 
 

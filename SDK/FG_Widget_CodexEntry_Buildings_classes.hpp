@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_CodexEntry_Buildings.Widget_CodexEntry_Buildings_C
-// 0x0010 (0x0270 - 0x0260)
+// 0x0010 (0x0298 - 0x0288)
 class UWidget_CodexEntry_Buildings_C : public UWidget_CodexEntryParent_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0260(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UClass*                                      BuildingType;                                             // 0x0268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0288(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UClass*                                      BuildingType;                                             // 0x0290(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,7 +30,7 @@ public:
 
 
 	void PreConstruct(bool* IsDesignTime);
-	void ExecuteUbergraph_Widget_CodexEntry_Buildings(int EntryPoint);
+	void ExecuteUbergraph_Widget_CodexEntry_Buildings(int* EntryPoint);
 };
 
 

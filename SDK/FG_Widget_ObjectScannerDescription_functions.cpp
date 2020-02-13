@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ObjectScannerDescription.Widget_ObjectScannerDescription_C.Get_mDescription_Text_1
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -34,7 +34,7 @@ struct FText UWidget_ObjectScannerDescription_C::Get_mDescription_Text_1()
 
 
 // Function Widget_ObjectScannerDescription.Widget_ObjectScannerDescription_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ObjectScannerDescription_C::Construct()
 {
@@ -51,11 +51,11 @@ void UWidget_ObjectScannerDescription_C::Construct()
 
 
 // Function Widget_ObjectScannerDescription.Widget_ObjectScannerDescription_C.ExecuteUbergraph_Widget_ObjectScannerDescription
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ObjectScannerDescription_C::ExecuteUbergraph_Widget_ObjectScannerDescription(int EntryPoint)
+void UWidget_ObjectScannerDescription_C::ExecuteUbergraph_Widget_ObjectScannerDescription(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ObjectScannerDescription.Widget_ObjectScannerDescription_C.ExecuteUbergraph_Widget_ObjectScannerDescription");
 

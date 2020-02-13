@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_GeneratorFuelInventorySlot.Widget_GeneratorFuelInventorySlot_C.Init
 struct UWidget_GeneratorFuelInventorySlot_C_Init_Params
 {
-	class AFGBuildableGeneratorFuel*                   Generator;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGBuildableGeneratorFuel**                  Generator;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_GeneratorFuelInventorySlot.Widget_GeneratorFuelInventorySlot_C.GetFuelPercent

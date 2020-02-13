@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_Wait.BTT_Wait_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,7 +35,7 @@ void UBTT_Wait_C::ReceiveExecuteAI(class AAIController** OwnerController, class 
 
 
 // Function BTT_Wait.BTT_Wait_C.ReceiveTickAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -59,7 +59,7 @@ void UBTT_Wait_C::ReceiveTickAI(class AAIController** OwnerController, class APa
 
 
 // Function BTT_Wait.BTT_Wait_C.ReceiveAbort
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -79,11 +79,11 @@ void UBTT_Wait_C::ReceiveAbort(class AActor** OwnerActor)
 
 
 // Function BTT_Wait.BTT_Wait_C.ExecuteUbergraph_BTT_Wait
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_Wait_C::ExecuteUbergraph_BTT_Wait(int EntryPoint)
+void UBTT_Wait_C::ExecuteUbergraph_BTT_Wait(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_Wait.BTT_Wait_C.ExecuteUbergraph_BTT_Wait");
 

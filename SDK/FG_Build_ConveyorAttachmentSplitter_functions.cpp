@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_ConveyorAttachmentSplitter.Build_ConveyorAttachmentSplitter_C.UserConstructionScript
-// ()
-
-void ABuild_ConveyorAttachmentSplitter_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_ConveyorAttachmentSplitter.Build_ConveyorAttachmentSplitter_C.UserConstructionScript");
-
-	ABuild_ConveyorAttachmentSplitter_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_ConveyorAttachmentSplitter.Build_ConveyorAttachmentSplitter_C.PlayConstructSound
-// ()
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
 void ABuild_ConveyorAttachmentSplitter_C::PlayConstructSound()
 {
@@ -47,11 +30,11 @@ void ABuild_ConveyorAttachmentSplitter_C::PlayConstructSound()
 
 
 // Function Build_ConveyorAttachmentSplitter.Build_ConveyorAttachmentSplitter_C.ExecuteUbergraph_Build_ConveyorAttachmentSplitter
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_ConveyorAttachmentSplitter_C::ExecuteUbergraph_Build_ConveyorAttachmentSplitter(int EntryPoint)
+void ABuild_ConveyorAttachmentSplitter_C::ExecuteUbergraph_Build_ConveyorAttachmentSplitter(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_ConveyorAttachmentSplitter.Build_ConveyorAttachmentSplitter_C.ExecuteUbergraph_Build_ConveyorAttachmentSplitter");
 

@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.SetupStartColor
 struct UWidget_ColorPicker_SingleColor_C_SetupStartColor_Params
 {
-	struct FLinearColor                                Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.PreConstruct
@@ -39,13 +39,13 @@ struct UWidget_ColorPicker_SingleColor_C_BndEvt__mEditPresetCanel_K2Node_Compone
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.ExecuteUbergraph_Widget_ColorPicker_SingleColor
 struct UWidget_ColorPicker_SingleColor_C_ExecuteUbergraph_Widget_ColorPicker_SingleColor_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ColorPicker_SingleColor.Widget_ColorPicker_SingleColor_C.OnClose__DelegateSignature
 struct UWidget_ColorPicker_SingleColor_C_OnClose__DelegateSignature_Params
 {
-	struct FLinearColor                                Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

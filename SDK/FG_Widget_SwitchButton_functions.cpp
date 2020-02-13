@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SwitchButton.Widget_SwitchButton_C.SetIcon
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTexture*                TextureSending                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UTexture*                TextureReceiving               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture**               TextureSending                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture**               TextureReceiving               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SwitchButton_C::SetIcon(class UTexture* TextureSending, class UTexture* TextureReceiving)
+void UWidget_SwitchButton_C::SetIcon(class UTexture** TextureSending, class UTexture** TextureReceiving)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SwitchButton.Widget_SwitchButton_C.SetIcon");
 
@@ -35,11 +35,11 @@ void UWidget_SwitchButton_C::SetIcon(class UTexture* TextureSending, class UText
 
 
 // Function Widget_SwitchButton.Widget_SwitchButton_C.SetButtonBrush
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           mButtonState                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          mButtonState                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SwitchButton_C::SetButtonBrush(bool mButtonState)
+void UWidget_SwitchButton_C::SetButtonBrush(bool* mButtonState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SwitchButton.Widget_SwitchButton_C.SetButtonBrush");
 
@@ -55,7 +55,7 @@ void UWidget_SwitchButton_C::SetButtonBrush(bool mButtonState)
 
 
 // Function Widget_SwitchButton.Widget_SwitchButton_C.BndEvt__Button_2_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SwitchButton_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -72,7 +72,7 @@ void UWidget_SwitchButton_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_0_OnBut
 
 
 // Function Widget_SwitchButton.Widget_SwitchButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SwitchButton_C::Construct()
 {
@@ -89,7 +89,7 @@ void UWidget_SwitchButton_C::Construct()
 
 
 // Function Widget_SwitchButton.Widget_SwitchButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -109,11 +109,11 @@ void UWidget_SwitchButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SwitchButton.Widget_SwitchButton_C.ExecuteUbergraph_Widget_SwitchButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SwitchButton_C::ExecuteUbergraph_Widget_SwitchButton(int EntryPoint)
+void UWidget_SwitchButton_C::ExecuteUbergraph_Widget_SwitchButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SwitchButton.Widget_SwitchButton_C.ExecuteUbergraph_Widget_SwitchButton");
 
@@ -129,7 +129,7 @@ void UWidget_SwitchButton_C::ExecuteUbergraph_Widget_SwitchButton(int EntryPoint
 
 
 // Function Widget_SwitchButton.Widget_SwitchButton_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SwitchButton_C::OnClicked__DelegateSignature()
 {

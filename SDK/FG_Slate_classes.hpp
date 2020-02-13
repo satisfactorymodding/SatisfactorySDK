@@ -79,11 +79,11 @@ public:
 
 
 // Class Slate.EditableTextBoxWidgetStyle
-// 0x07F8 (0x0828 - 0x0030)
+// 0x07F0 (0x0820 - 0x0030)
 class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                     // 0x0030(0x07F8) (Edit)
+	struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                     // 0x0030(0x07F0) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -95,11 +95,11 @@ public:
 
 
 // Class Slate.EditableTextWidgetStyle
-// 0x0220 (0x0250 - 0x0030)
+// 0x0218 (0x0248 - 0x0030)
 class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FEditableTextStyle                          EditableTextStyle;                                        // 0x0030(0x0220) (Edit)
+	struct FEditableTextStyle                          EditableTextStyle;                                        // 0x0030(0x0218) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -192,11 +192,11 @@ public:
 
 
 // Class Slate.TextBlockWidgetStyle
-// 0x01E8 (0x0218 - 0x0030)
+// 0x0268 (0x0298 - 0x0030)
 class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FTextBlockStyle                             TextBlockStyle;                                           // 0x0030(0x01E8) (Edit)
+	struct FTextBlockStyle                             TextBlockStyle;                                           // 0x0030(0x0268) (Edit)
 
 	static UClass* StaticClass()
 	{

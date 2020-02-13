@@ -44,7 +44,7 @@ struct UWidget_ActorDetails_RadarTower_C_Destruct_Params
 // Function Widget_ActorDetails_RadarTower.Widget_ActorDetails_RadarTower_C.ExecuteUbergraph_Widget_ActorDetails_RadarTower
 struct UWidget_ActorDetails_RadarTower_C_ExecuteUbergraph_Widget_ActorDetails_RadarTower_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

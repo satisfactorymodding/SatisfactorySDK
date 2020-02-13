@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.UserConstructionScript
-// ()
-
-void AAttach_PortableMinerDispenser_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.UserConstructionScript");
-
-	AAttach_PortableMinerDispenser_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.PlayAttachEffects3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_PortableMinerDispenser_C::PlayAttachEffects3P()
 {
@@ -47,7 +30,7 @@ void AAttach_PortableMinerDispenser_C::PlayAttachEffects3P()
 
 
 // Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.PlayDetachEffects3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_PortableMinerDispenser_C::PlayDetachEffects3P()
 {
@@ -64,11 +47,11 @@ void AAttach_PortableMinerDispenser_C::PlayDetachEffects3P()
 
 
 // Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.ExecuteUbergraph_Attach_PortableMinerDispenser
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_PortableMinerDispenser_C::ExecuteUbergraph_Attach_PortableMinerDispenser(int EntryPoint)
+void AAttach_PortableMinerDispenser_C::ExecuteUbergraph_Attach_PortableMinerDispenser(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_PortableMinerDispenser.Attach_PortableMinerDispenser_C.ExecuteUbergraph_Attach_PortableMinerDispenser");
 

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Foliage.FoliageInstancedStaticMeshComponent
-// 0x0020 (0x0790 - 0x0770)
+// 0x0020 (0x07B0 - 0x0790)
 class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
 {
 public:
-	struct FScriptMulticastDelegate                    OnInstanceTakePointDamage;                                // 0x0770(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                               // 0x0780(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnInstanceTakePointDamage;                                // 0x0790(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                               // 0x07A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -44,13 +44,13 @@ public:
 	}
 
 
-	int FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius);
-	int FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box);
+	int STATIC_FoliageOverlappingSphereCount(class UObject** WorldContextObject, class UStaticMesh** StaticMesh, struct FVector* CenterPosition, float* Radius);
+	int STATIC_FoliageOverlappingBoxCount(class UObject** WorldContextObject, class UStaticMesh** StaticMesh, struct FBox* Box);
 };
 
 
 // Class Foliage.FoliageType
-// 0x0330 (0x0358 - 0x0028)
+// 0x0338 (0x0360 - 0x0028)
 class UFoliageType : public UObject
 {
 public:
@@ -108,48 +108,48 @@ public:
 	unsigned char                                      UnknownData10[0x3];                                       // 0x0139(0x0003) MISSED OFFSET
 	unsigned char                                      bUseAsOccluder : 1;                                       // 0x013C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      UnknownData11[0x3];                                       // 0x013D(0x0003) MISSED OFFSET
-	struct FBodyInstance                               BodyInstance;                                             // 0x0140(0x0150) (Edit)
-	TEnumAsByte<EHasCustomNavigableGeometry>           CustomNavigableGeometry;                                  // 0x0290(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FLightingChannels                           LightingChannels;                                         // 0x0291(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData12[0x2];                                       // 0x0292(0x0002) MISSED OFFSET
-	unsigned char                                      bRenderCustomDepth : 1;                                   // 0x0294(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData13[0x3];                                       // 0x0295(0x0003) MISSED OFFSET
-	int                                                CustomDepthStencilValue;                                  // 0x0298(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              CollisionRadius;                                          // 0x029C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ShadeRadius;                                              // 0x02A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                NumSteps;                                                 // 0x02A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InitialSeedDensity;                                       // 0x02A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              AverageSpreadDistance;                                    // 0x02AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SpreadVariance;                                           // 0x02B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                SeedsPerStep;                                             // 0x02B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                DistributionSeed;                                         // 0x02B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxInitialSeedOffset;                                     // 0x02BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bCanGrowInShade;                                          // 0x02C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bSpawnsInShade;                                           // 0x02C1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x2];                                       // 0x02C2(0x0002) MISSED OFFSET
-	float                                              MaxInitialAge;                                            // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxAge;                                                   // 0x02C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              OverlapPriority;                                          // 0x02CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FFloatInterval                              ProceduralScale;                                          // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FRuntimeFloatCurve                          ScaleCurve;                                               // 0x02D8(0x0078) (Edit)
-	int                                                ChangeCount;                                              // 0x0350(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      ReapplyDensity : 1;                                       // 0x0354(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyRadius : 1;                                        // 0x0354(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyAlignToNormal : 1;                                 // 0x0354(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyRandomYaw : 1;                                     // 0x0354(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyScaling : 1;                                       // 0x0354(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyScaleX : 1;                                        // 0x0354(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyScaleY : 1;                                        // 0x0354(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyScaleZ : 1;                                        // 0x0354(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyRandomPitchAngle : 1;                              // 0x0355(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyGroundSlope : 1;                                   // 0x0355(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyHeight : 1;                                        // 0x0355(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyLandscapeLayers : 1;                               // 0x0355(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyZOffset : 1;                                       // 0x0355(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyCollisionWithWorld : 1;                            // 0x0355(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      ReapplyVertexColorMask : 1;                               // 0x0355(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bEnableDensityScaling : 1;                                // 0x0355(0x0001) (Edit)
-	unsigned char                                      UnknownData15[0x2];                                       // 0x0356(0x0002) MISSED OFFSET
+	struct FBodyInstance                               BodyInstance;                                             // 0x0140(0x0148) (Edit)
+	TEnumAsByte<EHasCustomNavigableGeometry>           CustomNavigableGeometry;                                  // 0x0288(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FLightingChannels                           LightingChannels;                                         // 0x0289(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData12[0x2];                                       // 0x028A(0x0002) MISSED OFFSET
+	unsigned char                                      bRenderCustomDepth : 1;                                   // 0x028C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData13[0x3];                                       // 0x028D(0x0003) MISSED OFFSET
+	int                                                CustomDepthStencilValue;                                  // 0x0290(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              CollisionRadius;                                          // 0x0294(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ShadeRadius;                                              // 0x0298(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                NumSteps;                                                 // 0x029C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InitialSeedDensity;                                       // 0x02A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AverageSpreadDistance;                                    // 0x02A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SpreadVariance;                                           // 0x02A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                SeedsPerStep;                                             // 0x02AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                DistributionSeed;                                         // 0x02B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxInitialSeedOffset;                                     // 0x02B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bCanGrowInShade;                                          // 0x02B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bSpawnsInShade;                                           // 0x02B9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x2];                                       // 0x02BA(0x0002) MISSED OFFSET
+	float                                              MaxInitialAge;                                            // 0x02BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxAge;                                                   // 0x02C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OverlapPriority;                                          // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatInterval                              ProceduralScale;                                          // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FRuntimeFloatCurve                          ScaleCurve;                                               // 0x02D0(0x0088) (Edit)
+	int                                                ChangeCount;                                              // 0x0358(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      ReapplyDensity : 1;                                       // 0x035C(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyRadius : 1;                                        // 0x035C(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyAlignToNormal : 1;                                 // 0x035C(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyRandomYaw : 1;                                     // 0x035C(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyScaling : 1;                                       // 0x035C(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyScaleX : 1;                                        // 0x035C(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyScaleY : 1;                                        // 0x035C(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyScaleZ : 1;                                        // 0x035C(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyRandomPitchAngle : 1;                              // 0x035D(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyGroundSlope : 1;                                   // 0x035D(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyHeight : 1;                                        // 0x035D(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyLandscapeLayers : 1;                               // 0x035D(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyZOffset : 1;                                       // 0x035D(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyCollisionWithWorld : 1;                            // 0x035D(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      ReapplyVertexColorMask : 1;                               // 0x035D(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bEnableDensityScaling : 1;                                // 0x035D(0x0001) (Edit)
+	unsigned char                                      UnknownData15[0x2];                                       // 0x035E(0x0002) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -161,13 +161,13 @@ public:
 
 
 // Class Foliage.FoliageType_InstancedStaticMesh
-// 0x0020 (0x0378 - 0x0358)
+// 0x0020 (0x0380 - 0x0360)
 class UFoliageType_InstancedStaticMesh : public UFoliageType
 {
 public:
-	class UStaticMesh*                                 Mesh;                                                     // 0x0358(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInterface*>                  OverrideMaterials;                                        // 0x0360(0x0010) (Edit, ZeroConstructor)
-	class UClass*                                      ComponentClass;                                           // 0x0370(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 Mesh;                                                     // 0x0360(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UMaterialInterface*>                  OverrideMaterials;                                        // 0x0368(0x0010) (Edit, ZeroConstructor)
+	class UClass*                                      ComponentClass;                                           // 0x0378(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -179,11 +179,11 @@ public:
 
 
 // Class Foliage.InstancedFoliageActor
-// 0x0050 (0x0378 - 0x0328)
+// 0x0050 (0x0380 - 0x0330)
 class AInstancedFoliageActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0328(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0330(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -195,25 +195,25 @@ public:
 
 
 // Class Foliage.InteractiveFoliageActor
-// 0x0060 (0x0398 - 0x0338)
+// 0x0060 (0x03A0 - 0x0340)
 class AInteractiveFoliageActor : public AStaticMeshActor
 {
 public:
-	class UCapsuleComponent*                           CapsuleComponent;                                         // 0x0338(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FVector                                     TouchingActorEntryPosition;                               // 0x0340(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     FoliageVelocity;                                          // 0x034C(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     FoliageForce;                                             // 0x0358(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     FoliagePosition;                                          // 0x0364(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              FoliageDamageImpulseScale;                                // 0x0370(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FoliageTouchImpulseScale;                                 // 0x0374(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FoliageStiffness;                                         // 0x0378(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FoliageStiffnessQuadratic;                                // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FoliageDamping;                                           // 0x0380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxDamageImpulse;                                         // 0x0384(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxTouchImpulse;                                          // 0x0388(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxForce;                                                 // 0x038C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Mass;                                                     // 0x0390(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0394(0x0004) MISSED OFFSET
+	class UCapsuleComponent*                           CapsuleComponent;                                         // 0x0340(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FVector                                     TouchingActorEntryPosition;                               // 0x0348(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     FoliageVelocity;                                          // 0x0354(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     FoliageForce;                                             // 0x0360(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     FoliagePosition;                                          // 0x036C(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              FoliageDamageImpulseScale;                                // 0x0378(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FoliageTouchImpulseScale;                                 // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FoliageStiffness;                                         // 0x0380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FoliageStiffnessQuadratic;                                // 0x0384(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FoliageDamping;                                           // 0x0388(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDamageImpulse;                                         // 0x038C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxTouchImpulse;                                          // 0x0390(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxForce;                                                 // 0x0394(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Mass;                                                     // 0x0398(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x039C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -222,12 +222,12 @@ public:
 	}
 
 
-	void CapsuleTouched(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo);
+	void CapsuleTouched(class UPrimitiveComponent** OverlappedComp, class AActor** Other, class UPrimitiveComponent** OtherComp, int* OtherBodyIndex, bool* bFromSweep, struct FHitResult* OverlapInfo);
 };
 
 
 // Class Foliage.InteractiveFoliageComponent
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x0610 - 0x0610)
 class UInteractiveFoliageComponent : public UStaticMeshComponent
 {
 public:
@@ -242,11 +242,11 @@ public:
 
 
 // Class Foliage.ProceduralFoliageBlockingVolume
-// 0x0008 (0x0368 - 0x0360)
+// 0x0008 (0x0370 - 0x0368)
 class AProceduralFoliageBlockingVolume : public AVolume
 {
 public:
-	class AProceduralFoliageVolume*                    ProceduralFoliageVolume;                                  // 0x0360(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AProceduralFoliageVolume*                    ProceduralFoliageVolume;                                  // 0x0368(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -258,15 +258,15 @@ public:
 
 
 // Class Foliage.ProceduralFoliageComponent
-// 0x0028 (0x0118 - 0x00F0)
+// 0x0028 (0x0120 - 0x00F8)
 class UProceduralFoliageComponent : public UActorComponent
 {
 public:
-	class UProceduralFoliageSpawner*                   FoliageSpawner;                                           // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TileOverlap;                                              // 0x00F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00FC(0x0004) MISSED OFFSET
-	class AVolume*                                     SpawningVolume;                                           // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       ProceduralGuid;                                           // 0x0108(0x0010) (ZeroConstructor, IsPlainOldData)
+	class UProceduralFoliageSpawner*                   FoliageSpawner;                                           // 0x00F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TileOverlap;                                              // 0x0100(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0104(0x0004) MISSED OFFSET
+	class AVolume*                                     SpawningVolume;                                           // 0x0108(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       ProceduralGuid;                                           // 0x0110(0x0010) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -298,7 +298,7 @@ public:
 	}
 
 
-	void Simulate(int NumSteps);
+	void Simulate(int* NumSteps);
 };
 
 
@@ -322,11 +322,11 @@ public:
 
 
 // Class Foliage.ProceduralFoliageVolume
-// 0x0008 (0x0368 - 0x0360)
+// 0x0008 (0x0370 - 0x0368)
 class AProceduralFoliageVolume : public AVolume
 {
 public:
-	class UProceduralFoliageComponent*                 ProceduralComponent;                                      // 0x0360(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UProceduralFoliageComponent*                 ProceduralComponent;                                      // 0x0368(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

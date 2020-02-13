@@ -37,7 +37,7 @@ struct UAnim_SmelterMk1_C_AnimNotify_SmelterLeftOfflineState_Params
 // Function Anim_SmelterMk1.Anim_SmelterMk1_C.ExecuteUbergraph_Anim_SmelterMk1
 struct UAnim_SmelterMk1_C_ExecuteUbergraph_Anim_SmelterMk1_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

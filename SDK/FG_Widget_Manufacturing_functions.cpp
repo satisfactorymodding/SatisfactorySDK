@@ -12,8 +12,120 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_Manufacturing.Widget_Manufacturing_C.GetCylceProducedAndNameText
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UWidget_Manufacturing_C::GetCylceProducedAndNameText(class UClass** Recipe)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.GetCylceProducedAndNameText");
+
+	UWidget_Manufacturing_C_GetCylceProducedAndNameText_Params params;
+	params.Recipe = Recipe;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_Manufacturing.Widget_Manufacturing_C.CreateCategoryHeader
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPanelWidget**           Container                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FText*                  CategoryName                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          IsCollapsed                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_CraftBench_Category_C* Category_Widget                (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Manufacturing_C::CreateCategoryHeader(class UPanelWidget** Container, struct FText* CategoryName, bool* IsCollapsed, class UWidget_CraftBench_Category_C** Category_Widget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.CreateCategoryHeader");
+
+	UWidget_Manufacturing_C_CreateCategoryHeader_Params params;
+	params.Container = Container;
+	params.CategoryName = CategoryName;
+	params.IsCollapsed = IsCollapsed;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Category_Widget != nullptr)
+		*Category_Widget = params.Category_Widget;
+}
+
+
+// Function Widget_Manufacturing.Widget_Manufacturing_C.AddUniqueRecipe
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FItemCategoryRecipeStruct> CategorizedRecipes             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Manufacturing_C::AddUniqueRecipe(class UClass** Recipe, TArray<struct FItemCategoryRecipeStruct>* CategorizedRecipes)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.AddUniqueRecipe");
+
+	UWidget_Manufacturing_C_AddUniqueRecipe_Params params;
+	params.Recipe = Recipe;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CategorizedRecipes != nullptr)
+		*CategorizedRecipes = params.CategorizedRecipes;
+}
+
+
+// Function Widget_Manufacturing.Widget_Manufacturing_C.GenerateOutputSlots
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Manufacturing_C::GenerateOutputSlots()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.GenerateOutputSlots");
+
+	UWidget_Manufacturing_C_GenerateOutputSlots_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Manufacturing.Widget_Manufacturing_C.SetActivatedRecipe
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass**                 mActivatedRecipe               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Manufacturing_C::SetActivatedRecipe(class UClass** mActivatedRecipe)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.SetActivatedRecipe");
+
+	UWidget_Manufacturing_C_SetActivatedRecipe_Params params;
+	params.mActivatedRecipe = mActivatedRecipe;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Manufacturing.Widget_Manufacturing_C.ReconstructIOSlots
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_C::ReconstructIOSlots()
 {
@@ -30,7 +142,7 @@ void UWidget_Manufacturing_C::ReconstructIOSlots()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -54,7 +166,7 @@ void UWidget_Manufacturing_C::DropInventorySlotStack(class UWidget_InventorySlot
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.UpdateWindowText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_C::UpdateWindowText()
 {
@@ -71,12 +183,12 @@ void UWidget_Manufacturing_C::UpdateWindowText()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.GetItemAmount
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FItemAmount             ItemAmount                     (Parm, OutParm)
 
-void UWidget_Manufacturing_C::GetItemAmount(class UClass* Recipe, struct FItemAmount* ItemAmount)
+void UWidget_Manufacturing_C::GetItemAmount(class UClass** Recipe, struct FItemAmount* ItemAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.GetItemAmount");
 
@@ -95,11 +207,11 @@ void UWidget_Manufacturing_C::GetItemAmount(class UClass* Recipe, struct FItemAm
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.GetManufacturingWarningVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGBuildableManufacturer* buildableManufacturer          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGBuildableManufacturer** buildableManufacturer          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::GetManufacturingWarningVisibility(class AFGBuildableManufacturer* buildableManufacturer)
+void UWidget_Manufacturing_C::GetManufacturingWarningVisibility(class AFGBuildableManufacturer** buildableManufacturer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.GetManufacturingWarningVisibility");
 
@@ -115,7 +227,7 @@ void UWidget_Manufacturing_C::GetManufacturingWarningVisibility(class AFGBuildab
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.UpdateProductionStats
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_C::UpdateProductionStats()
 {
@@ -132,11 +244,11 @@ void UWidget_Manufacturing_C::UpdateProductionStats()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.UpdateOutputSlotInfo
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::UpdateOutputSlotInfo(class UClass* Recipe)
+void UWidget_Manufacturing_C::UpdateOutputSlotInfo(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.UpdateOutputSlotInfo");
 
@@ -152,7 +264,7 @@ void UWidget_Manufacturing_C::UpdateOutputSlotInfo(class UClass* Recipe)
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.UpdateProductivityPercentage
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_C::UpdateProductivityPercentage()
 {
@@ -169,7 +281,7 @@ void UWidget_Manufacturing_C::UpdateProductivityPercentage()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.GetPotentialButton
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -190,11 +302,11 @@ ESlateVisibility UWidget_Manufacturing_C::GetPotentialButton()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.CreateInfoBox
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::CreateInfoBox(class UClass* Recipe)
+void UWidget_Manufacturing_C::CreateInfoBox(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.CreateInfoBox");
 
@@ -210,11 +322,11 @@ void UWidget_Manufacturing_C::CreateInfoBox(class UClass* Recipe)
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.OnManufacturingRecipeClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::OnManufacturingRecipeClicked(class UClass* Recipe)
+void UWidget_Manufacturing_C::OnManufacturingRecipeClicked(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnManufacturingRecipeClicked");
 
@@ -230,11 +342,11 @@ void UWidget_Manufacturing_C::OnManufacturingRecipeClicked(class UClass* Recipe)
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.OnStopHoveringManufacturingRecipe
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::OnStopHoveringManufacturingRecipe(class UClass* Recipe)
+void UWidget_Manufacturing_C::OnStopHoveringManufacturingRecipe(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnStopHoveringManufacturingRecipe");
 
@@ -250,11 +362,11 @@ void UWidget_Manufacturing_C::OnStopHoveringManufacturingRecipe(class UClass* Re
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.OnManufacturingRecipeHovered
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::OnManufacturingRecipeHovered(class UClass* Recipe)
+void UWidget_Manufacturing_C::OnManufacturingRecipeHovered(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnManufacturingRecipeHovered");
 
@@ -270,7 +382,7 @@ void UWidget_Manufacturing_C::OnManufacturingRecipeHovered(class UClass* Recipe)
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.GetIsInfoButtonTabEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -291,7 +403,7 @@ bool UWidget_Manufacturing_C::GetIsInfoButtonTabEnabled()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.RemoveInputSlot
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_C::RemoveInputSlot()
 {
@@ -308,7 +420,7 @@ void UWidget_Manufacturing_C::RemoveInputSlot()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.AddInputSlot
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_C::AddInputSlot()
 {
@@ -325,7 +437,7 @@ void UWidget_Manufacturing_C::AddInputSlot()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.UpdateIOSlots
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_C::UpdateIOSlots()
 {
@@ -342,11 +454,11 @@ void UWidget_Manufacturing_C::UpdateIOSlots()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.SetSelectedRecipe
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::SetSelectedRecipe(class UClass* Recipe)
+void UWidget_Manufacturing_C::SetSelectedRecipe(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.SetSelectedRecipe");
 
@@ -362,7 +474,7 @@ void UWidget_Manufacturing_C::SetSelectedRecipe(class UClass* Recipe)
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.InitRecipeList
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Manufacturing_C::InitRecipeList()
 {
@@ -378,28 +490,8 @@ void UWidget_Manufacturing_C::InitRecipeList()
 }
 
 
-// Function Widget_Manufacturing.Widget_Manufacturing_C.OnNewRecipeSet
-// ()
-// Parameters:
-// class UClass*                  newRecipe                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidget_Manufacturing_C::OnNewRecipeSet(class UClass* newRecipe)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnNewRecipeSet");
-
-	UWidget_Manufacturing_C_OnNewRecipeSet_Params params;
-	params.newRecipe = newRecipe;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Manufacturing.Widget_Manufacturing_C.BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_12_OnStandbyClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Manufacturing_C::BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_12_OnStandbyClicked__DelegateSignature()
 {
@@ -415,25 +507,8 @@ void UWidget_Manufacturing_C::BndEvt__Widget_StandbyButton_K2Node_ComponentBound
 }
 
 
-// Function Widget_Manufacturing.Widget_Manufacturing_C.Init
-// ()
-
-void UWidget_Manufacturing_C::Init()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.Init");
-
-	UWidget_Manufacturing_C_Init_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_Manufacturing.Widget_Manufacturing_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -454,8 +529,28 @@ void UWidget_Manufacturing_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 }
 
 
+// Function Widget_Manufacturing.Widget_Manufacturing_C.OnNewRecipeSet
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass**                 newRecipe                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Manufacturing_C::OnNewRecipeSet(class UClass** newRecipe)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnNewRecipeSet");
+
+	UWidget_Manufacturing_C_OnNewRecipeSet_Params params;
+	params.newRecipe = newRecipe;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Manufacturing.Widget_Manufacturing_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Manufacturing_C::Construct()
 {
@@ -472,7 +567,7 @@ void UWidget_Manufacturing_C::Construct()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Manufacturing_C::Destruct()
 {
@@ -489,7 +584,7 @@ void UWidget_Manufacturing_C::Destruct()
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Manufacturing_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_0_OnClose__DelegateSignature()
 {
@@ -506,11 +601,11 @@ void UWidget_Manufacturing_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBou
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature(int ButtonIndex)
+void UWidget_Manufacturing_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature(int* ButtonIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature");
 
@@ -526,11 +621,11 @@ void UWidget_Manufacturing_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBou
 
 
 // Function Widget_Manufacturing.Widget_Manufacturing_C.OnReplicationDetailActorReplicated
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  replicationDetailActorOwner    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 replicationDetailActorOwner    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Manufacturing_C::OnReplicationDetailActorReplicated(class AActor* replicationDetailActorOwner)
+void UWidget_Manufacturing_C::OnReplicationDetailActorReplicated(class AActor** replicationDetailActorOwner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnReplicationDetailActorReplicated");
 
@@ -545,12 +640,89 @@ void UWidget_Manufacturing_C::OnReplicationDetailActorReplicated(class AActor* r
 }
 
 
-// Function Widget_Manufacturing.Widget_Manufacturing_C.ExecuteUbergraph_Widget_Manufacturing
-// ()
+// Function Widget_Manufacturing.Widget_Manufacturing_C.OnCategoryClicked
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_CraftBench_Category_C** Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Manufacturing_C::ExecuteUbergraph_Widget_Manufacturing(int EntryPoint)
+void UWidget_Manufacturing_C::OnCategoryClicked(class UWidget_CraftBench_Category_C** Instigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnCategoryClicked");
+
+	UWidget_Manufacturing_C_OnCategoryClicked_Params params;
+	params.Instigator = Instigator;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Manufacturing.Widget_Manufacturing_C.OnModifierPressed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFGInteractWidget**      owningWidget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Manufacturing_C::OnModifierPressed(class UFGInteractWidget** owningWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnModifierPressed");
+
+	UWidget_Manufacturing_C_OnModifierPressed_Params params;
+	params.owningWidget = owningWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Manufacturing.Widget_Manufacturing_C.Init
+// (Event, Public, BlueprintEvent)
+
+void UWidget_Manufacturing_C::Init()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.Init");
+
+	UWidget_Manufacturing_C_Init_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Manufacturing.Widget_Manufacturing_C.OnModifierReleased
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFGInteractWidget**      owningWidget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Manufacturing_C::OnModifierReleased(class UFGInteractWidget** owningWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.OnModifierReleased");
+
+	UWidget_Manufacturing_C_OnModifierReleased_Params params;
+	params.owningWidget = owningWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Manufacturing.Widget_Manufacturing_C.ExecuteUbergraph_Widget_Manufacturing
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Manufacturing_C::ExecuteUbergraph_Widget_Manufacturing(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Manufacturing.Widget_Manufacturing_C.ExecuteUbergraph_Widget_Manufacturing");
 

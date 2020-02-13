@@ -12,8 +12,32 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_ProfileSpline.BP_ProfileSpline_C.GetConsoleVariableByName
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString*                 VariableName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString                  VariableInput                  (Parm, OutParm, ZeroConstructor)
+
+void ABP_ProfileSpline_C::GetConsoleVariableByName(class FString* VariableName, class FString* VariableInput)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileSpline.BP_ProfileSpline_C.GetConsoleVariableByName");
+
+	ABP_ProfileSpline_C_GetConsoleVariableByName_Params params;
+	params.VariableName = VariableName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (VariableInput != nullptr)
+		*VariableInput = params.VariableInput;
+}
+
+
 // Function BP_ProfileSpline.BP_ProfileSpline_C.CheckDoneRespawning
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bDoneSpawning                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +59,7 @@ void ABP_ProfileSpline_C::CheckDoneRespawning(bool* bDoneSpawning)
 
 
 // Function BP_ProfileSpline.BP_ProfileSpline_C.GetPlayerController
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bIsValid                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class APlayerController*       PlayerController               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -59,14 +83,14 @@ void ABP_ProfileSpline_C::GetPlayerController(bool* bIsValid, class APlayerContr
 }
 
 
-// Function BP_ProfileSpline.BP_ProfileSpline_C.UserConstructionScript
-// ()
+// Function BP_ProfileSpline.BP_ProfileSpline_C.StartProfile
+// (Event, Public, BlueprintEvent)
 
-void ABP_ProfileSpline_C::UserConstructionScript()
+void ABP_ProfileSpline_C::StartProfile()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileSpline.BP_ProfileSpline_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileSpline.BP_ProfileSpline_C.StartProfile");
 
-	ABP_ProfileSpline_C_UserConstructionScript_Params params;
+	ABP_ProfileSpline_C_StartProfile_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -77,7 +101,7 @@ void ABP_ProfileSpline_C::UserConstructionScript()
 
 
 // Function BP_ProfileSpline.BP_ProfileSpline_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -97,7 +121,7 @@ void ABP_ProfileSpline_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_ProfileSpline.BP_ProfileSpline_C.FetchPlayerPawn
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_ProfileSpline_C::FetchPlayerPawn()
 {
@@ -113,25 +137,8 @@ void ABP_ProfileSpline_C::FetchPlayerPawn()
 }
 
 
-// Function BP_ProfileSpline.BP_ProfileSpline_C.StartProfile
-// ()
-
-void ABP_ProfileSpline_C::StartProfile()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileSpline.BP_ProfileSpline_C.StartProfile");
-
-	ABP_ProfileSpline_C_StartProfile_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ProfileSpline.BP_ProfileSpline_C.EnsurePlayerDoneSpawning
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_ProfileSpline_C::EnsurePlayerDoneSpawning()
 {
@@ -147,12 +154,29 @@ void ABP_ProfileSpline_C::EnsurePlayerDoneSpawning()
 }
 
 
-// Function BP_ProfileSpline.BP_ProfileSpline_C.ExecuteUbergraph_BP_ProfileSpline
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_ProfileSpline.BP_ProfileSpline_C.DebugStart
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ProfileSpline_C::ExecuteUbergraph_BP_ProfileSpline(int EntryPoint)
+void ABP_ProfileSpline_C::DebugStart()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileSpline.BP_ProfileSpline_C.DebugStart");
+
+	ABP_ProfileSpline_C_DebugStart_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ProfileSpline.BP_ProfileSpline_C.ExecuteUbergraph_BP_ProfileSpline
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_ProfileSpline_C::ExecuteUbergraph_BP_ProfileSpline(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileSpline.BP_ProfileSpline_C.ExecuteUbergraph_BP_ProfileSpline");
 

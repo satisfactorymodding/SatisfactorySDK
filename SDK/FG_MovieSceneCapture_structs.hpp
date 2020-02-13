@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
 #include "FG_ImageWriteQueue_classes.hpp"
 
 namespace SDK
@@ -62,7 +62,7 @@ struct FCaptureResolution
 };
 
 // ScriptStruct MovieSceneCapture.MovieSceneCaptureSettings
-// 0x0050
+// 0x0060
 struct FMovieSceneCaptureSettings
 {
 	struct FDirectoryPath                              OutputDirectory;                                          // 0x0000(0x0010) (Edit, BlueprintVisible, Config)
@@ -72,18 +72,34 @@ struct FMovieSceneCaptureSettings
 	bool                                               bUseRelativeFrameNumbers;                                 // 0x0029(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x002A(0x0002) MISSED OFFSET
 	int                                                HandleFrames;                                             // 0x002C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      ZeroPadFrameNumbers;                                      // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
-	struct FFrameRate                                  FrameRate;                                                // 0x0034(0x0008) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	struct FCaptureResolution                          Resolution;                                               // 0x003C(0x0008) (Edit, BlueprintVisible, Config)
-	bool                                               bEnableTextureStreaming;                                  // 0x0044(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bCinematicEngineScalability;                              // 0x0045(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bCinematicMode;                                           // 0x0046(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bAllowMovement;                                           // 0x0047(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bAllowTurning;                                            // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bShowPlayer;                                              // 0x0049(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bShowHUD;                                                 // 0x004A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x5];                                       // 0x004B(0x0005) MISSED OFFSET
+	class FString                                      MovieExtension;                                           // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor, Config)
+	unsigned char                                      ZeroPadFrameNumbers;                                      // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
+	struct FFrameRate                                  FrameRate;                                                // 0x0044(0x0008) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	struct FCaptureResolution                          Resolution;                                               // 0x004C(0x0008) (Edit, BlueprintVisible, Config)
+	bool                                               bEnableTextureStreaming;                                  // 0x0054(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bCinematicEngineScalability;                              // 0x0055(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bCinematicMode;                                           // 0x0056(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bAllowMovement;                                           // 0x0057(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bAllowTurning;                                            // 0x0058(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bShowPlayer;                                              // 0x0059(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bShowHUD;                                                 // 0x005A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bUsePathTracer;                                           // 0x005B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	int                                                PathTracerSamplePerPixel;                                 // 0x005C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+};
+
+// ScriptStruct MovieSceneCapture.CapturedPixelsID
+// 0x0050
+struct FCapturedPixelsID
+{
+	TMap<struct FName, struct FName>                   Identifiers;                                              // 0x0000(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct MovieSceneCapture.CapturedPixels
+// 0x0010
+struct FCapturedPixels
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct MovieSceneCapture.FrameMetrics
@@ -94,13 +110,6 @@ struct FFrameMetrics
 	float                                              FrameDelta;                                               // 0x0004(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                FrameNumber;                                              // 0x0008(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                NumDroppedFrames;                                         // 0x000C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct MovieSceneCapture.CapturedPixels
-// 0x0010
-struct FCapturedPixels
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 }

@@ -23,7 +23,7 @@ struct UWidget_LetterSpacedText_C_PreConstruct_Params
 // Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.SetTitle
 struct UWidget_LetterSpacedText_C_SetTitle_Params
 {
-	class FString                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class FString*                                     Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.OnAnimateText
@@ -39,7 +39,7 @@ struct UWidget_LetterSpacedText_C_Construct_Params
 // Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.ExecuteUbergraph_Widget_LetterSpacedText
 struct UWidget_LetterSpacedText_C_ExecuteUbergraph_Widget_LetterSpacedText_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

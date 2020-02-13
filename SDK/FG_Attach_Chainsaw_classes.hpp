@@ -35,11 +35,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void OnAttachmentUseStateUpdated(int* newUseState);
 	void PlayAttachEffects3P();
 	void PlayDetachEffects3P();
-	void ExecuteUbergraph_Attach_Chainsaw(int EntryPoint);
+	void ExecuteUbergraph_Attach_Chainsaw(int* EntryPoint);
 };
 
 

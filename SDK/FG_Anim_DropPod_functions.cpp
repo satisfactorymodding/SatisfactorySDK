@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_DropPod.Anim_DropPod_C.ExecuteUbergraph_Anim_DropPod
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_DropPod_C::ExecuteUbergraph_Anim_DropPod(int EntryPoint)
+void UAnim_DropPod_C::ExecuteUbergraph_Anim_DropPod(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_DropPod.Anim_DropPod_C.ExecuteUbergraph_Anim_DropPod");
 

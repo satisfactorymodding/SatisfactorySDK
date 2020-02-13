@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -82,7 +82,8 @@ enum class EUpdateClockSource : uint8_t
 	Tick                           = 0,
 	Platform                       = 1,
 	Audio                          = 2,
-	EUpdateClockSource_MAX         = 3
+	Timecode                       = 3,
+	EUpdateClockSource_MAX         = 4
 };
 
 
@@ -135,6 +136,16 @@ enum class ESectionEvaluationFlags : uint8_t
 	PreRoll                        = 1,
 	PostRoll                       = 2,
 	ESectionEvaluationFlags_MAX    = 3
+};
+
+
+// Enum MovieScene.EUpdatePositionMethod
+enum class EUpdatePositionMethod : uint8_t
+{
+	Play                           = 0,
+	Jump                           = 1,
+	Scrub                          = 2,
+	EUpdatePositionMethod_MAX      = 3
 };
 
 
@@ -446,26 +457,31 @@ struct FMovieSceneEvaluationTemplate
 	struct FMovieSceneSubSectionFieldData              SubSectionFieldData;                                      // 0x0290(0x0060)
 };
 
+// ScriptStruct MovieScene.MovieSceneSequenceLoopCount
+// 0x0004
+struct FMovieSceneSequenceLoopCount
+{
+	int                                                Value;                                                    // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct MovieScene.MovieSceneSequencePlaybackSettings
-// 0x0040
+// 0x0014
 struct FMovieSceneSequencePlaybackSettings
 {
-	int                                                LoopCount;                                                // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PlayRate;                                                 // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bRandomStartTime;                                         // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	unsigned char                                      bAutoPlay : 1;                                            // 0x0000(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	struct FMovieSceneSequenceLoopCount                LoopCount;                                                // 0x0004(0x0004) (Edit, BlueprintVisible)
+	float                                              PlayRate;                                                 // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              StartTime;                                                // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bRestoreState;                                            // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDisableMovementInput;                                    // 0x0011(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDisableLookAtInput;                                      // 0x0012(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bHidePlayer;                                              // 0x0013(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bHideHud;                                                 // 0x0014(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDisableCameraCuts;                                       // 0x0015(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bPauseAtEnd;                                              // 0x0016(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1];                                       // 0x0017(0x0001) MISSED OFFSET
-	class UObject*                                     InstanceData;                                             // 0x0018(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TScriptInterface<class UMovieSceneBindingOverridesInterface> BindingOverrides;                                         // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0030(0x0010) MISSED OFFSET
+	unsigned char                                      bRandomStartTime : 1;                                     // 0x0010(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bRestoreState : 1;                                        // 0x0010(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bDisableMovementInput : 1;                                // 0x0010(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bDisableLookAtInput : 1;                                  // 0x0010(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bHidePlayer : 1;                                          // 0x0010(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bHideHud : 1;                                             // 0x0010(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bDisableCameraCuts : 1;                                   // 0x0010(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bPauseAtEnd : 1;                                          // 0x0010(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct MovieScene.MovieSceneRootEvaluationTemplateInstance
@@ -475,6 +491,16 @@ struct FMovieSceneRootEvaluationTemplateInstance
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 	TMap<struct FMovieSceneSequenceID, class UObject*> DirectorInstances;                                        // 0x0018(0x0050) (ZeroConstructor)
 	unsigned char                                      UnknownData01[0x298];                                     // 0x0068(0x0298) MISSED OFFSET
+};
+
+// ScriptStruct MovieScene.MovieSceneSequenceReplProperties
+// 0x0010
+struct FMovieSceneSequenceReplProperties
+{
+	struct FFrameTime                                  LastKnownPosition;                                        // 0x0000(0x0008)
+	TEnumAsByte<EMovieScenePlayerStatus>               LastKnownStatus;                                          // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	int                                                LastKnownNumLoops;                                        // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct MovieScene.MovieSceneObjectBindingID
@@ -498,9 +524,9 @@ struct FMovieSceneSpawnable
 	class UObject*                                     ObjectTemplate;                                           // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
 	TArray<struct FGuid>                               ChildPossessables;                                        // 0x0068(0x0010) (ZeroConstructor)
 	ESpawnOwnership                                    Ownership;                                                // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
-	struct FName                                       LevelName;                                                // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0088(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0079(0x0003) MISSED OFFSET
+	struct FName                                       LevelName;                                                // 0x007C(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0084(0x000C) MISSED OFFSET
 };
 
 // ScriptStruct MovieScene.MovieScenePossessable
@@ -523,6 +549,15 @@ struct FMovieSceneBinding
 	TArray<class UMovieSceneTrack*>                    TRACKS;                                                   // 0x0020(0x0010) (ExportObject, ZeroConstructor)
 };
 
+// ScriptStruct MovieScene.MovieSceneMarkedFrame
+// 0x0018
+struct FMovieSceneMarkedFrame
+{
+	struct FFrameNumber                                FrameNumber;                                              // 0x0000(0x0004) (Edit)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class FString                                      Label;                                                    // 0x0008(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct MovieScene.MovieSceneBindingOverrideData
 // 0x0024
 struct FMovieSceneBindingOverrideData
@@ -537,9 +572,9 @@ struct FMovieSceneBindingOverrideData
 // 0x0018
 struct FMovieSceneSectionParameters
 {
-	struct FFrameNumber                                StartFrameOffset;                                         // 0x0000(0x0004) (Edit)
-	float                                              TimeScale;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                HierarchicalBias;                                         // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFrameNumber                                StartFrameOffset;                                         // 0x0000(0x0004) (Edit, BlueprintVisible)
+	float                                              TimeScale;                                                // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                HierarchicalBias;                                         // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              StartOffset;                                              // 0x000C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              PrerollTime;                                              // 0x0010(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              PostrollTime;                                             // 0x0014(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
@@ -557,8 +592,9 @@ struct FMovieSceneEvalTemplateBase
 struct FMovieSceneEvalTemplate : public FMovieSceneEvalTemplateBase
 {
 	EMovieSceneCompletionMode                          CompletionMode;                                           // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-	class UMovieSceneSection*                          SourceSection;                                            // 0x0018(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	TWeakObjectPtr<class UMovieSceneSection>           SourceSectionPtr;                                         // 0x0014(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct MovieScene.MovieScenePropertySectionData
@@ -605,7 +641,7 @@ struct FMovieSceneFloatValue
 	TEnumAsByte<ERichCurveInterpMode>                  InterpMode;                                               // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ERichCurveTangentMode>                 TangentMode;                                              // 0x0005(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0006(0x0002) MISSED OFFSET
-	struct FMovieSceneTangentData                      Tangent;                                                  // 0x0008(0x0014) (Edit)
+	struct FMovieSceneTangentData                      Tangent;                                                  // 0x0008(0x0014) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct MovieScene.MovieSceneKeyHandleMap
@@ -663,8 +699,8 @@ struct FMovieSceneEditorData
 // 0x0018
 struct FMovieSceneTimecodeSource
 {
-	struct FTimecode                                   Timecode;                                                 // 0x0000(0x0014) (ZeroConstructor, IsPlainOldData)
-	struct FFrameNumber                                DeltaFrame;                                               // 0x0014(0x0004)
+	struct FTimecode                                   Timecode;                                                 // 0x0000(0x0014) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFrameNumber                                DeltaFrame;                                               // 0x0014(0x0004) (Edit, EditConst)
 };
 
 // ScriptStruct MovieScene.MovieSceneBoolChannel
@@ -744,6 +780,32 @@ struct FMovieSceneKeyTimeStruct : public FMovieSceneKeyStruct
 	unsigned char                                      UnknownData00[0x1C];                                      // 0x000C(0x001C) MISSED OFFSET
 };
 
+// ScriptStruct MovieScene.GeneratedMovieSceneKeyStruct
+// 0x0050
+struct FGeneratedMovieSceneKeyStruct
+{
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
+};
+
+// ScriptStruct MovieScene.MovieSceneObjectPathChannelKeyValue
+// 0x0030
+struct FMovieSceneObjectPathChannelKeyValue
+{
+	TSoftObjectPtr<class UObject>                      SoftPtr;                                                  // 0x0000(0x0028)
+	class UObject*                                     HardPtr;                                                  // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct MovieScene.MovieSceneObjectPathChannel
+// 0x00B8 (0x00C0 - 0x0008)
+struct FMovieSceneObjectPathChannel : public FMovieSceneChannel
+{
+	class UClass*                                      PropertyClass;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FFrameNumber>                        Times;                                                    // 0x0010(0x0010) (ZeroConstructor)
+	TArray<struct FMovieSceneObjectPathChannelKeyValue> Values;                                                   // 0x0020(0x0010) (ZeroConstructor)
+	struct FMovieSceneObjectPathChannelKeyValue        DefaultValue;                                             // 0x0030(0x0030)
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0060(0x0060) MISSED OFFSET
+};
+
 // ScriptStruct MovieScene.SectionEvaluationData
 // 0x000C
 struct FSectionEvaluationData
@@ -766,6 +828,14 @@ struct FMovieSceneSequenceInstanceData
 struct FTestMovieSceneEvalTemplate : public FMovieSceneEvalTemplate
 {
 
+};
+
+// ScriptStruct MovieScene.MovieSceneTrackDisplayOptions
+// 0x0004
+struct FMovieSceneTrackDisplayOptions
+{
+	unsigned char                                      bShowVerticalFrames : 1;                                  // 0x0000(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct MovieScene.MovieSceneTrackImplementation

@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_MinimapCaptureActor.BP_MinimapCaptureActor_C.UserConstructionScript
-struct ABP_MinimapCaptureActor_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

@@ -35,7 +35,7 @@ struct UBP_DragNDropInventory_C_Drop_Params
 // Function BP_DragNDropInventory.BP_DragNDropInventory_C.ExecuteUbergraph_BP_DragNDropInventory
 struct UBP_DragNDropInventory_C_ExecuteUbergraph_BP_DragNDropInventory_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

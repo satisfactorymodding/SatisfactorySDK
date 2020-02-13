@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.GetScannableIcon
 struct UWidget_ObjectScannerMenu_C_GetScannableIcon_Params
 {
-	struct FScannableDetails                           ScannableDetails;                                         // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FScannableDetails*                          ScannableDetails;                                         // (BlueprintVisible, BlueprintReadOnly, Parm)
 	class UTexture*                                    Texture;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -30,20 +30,20 @@ struct UWidget_ObjectScannerMenu_C_Get_RingHighlighter_Visibility_1_Params
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.GetPositionInCircle
 struct UWidget_ObjectScannerMenu_C_GetPositionInCircle_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector2D                                   Translation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.OnAnimationFinished
 struct UWidget_ObjectScannerMenu_C_OnAnimationFinished_Params
 {
-	class UWidgetAnimation**                           Animation;                                                // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidgetAnimation**                           Animation;                                                // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.OnItemSelected
 struct UWidget_ObjectScannerMenu_C_OnItemSelected_Params
 {
-	class UClass*                                      scannedActorClass;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     scannedActorClass;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.Destruct
@@ -66,7 +66,7 @@ struct UWidget_ObjectScannerMenu_C_Tick_Params
 // Function Widget_ObjectScannerMenu.Widget_ObjectScannerMenu_C.ExecuteUbergraph_Widget_ObjectScannerMenu
 struct UWidget_ObjectScannerMenu_C_ExecuteUbergraph_Widget_ObjectScannerMenu_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

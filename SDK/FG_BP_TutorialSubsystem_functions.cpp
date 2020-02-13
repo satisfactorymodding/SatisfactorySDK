@@ -12,23 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_TutorialSubsystem.BP_TutorialSubsystem_C.UserConstructionScript
-// ()
-
-void UBP_TutorialSubsystem_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TutorialSubsystem.BP_TutorialSubsystem_C.UserConstructionScript");
-
-	UBP_TutorialSubsystem_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 }
 
 #ifdef _MSC_VER

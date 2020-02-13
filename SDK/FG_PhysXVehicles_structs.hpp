@@ -7,9 +7,9 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_AnimGraphRuntime_classes.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
+#include "FG_Engine_classes.hpp"
+#include "FG_AnimGraphRuntime_classes.hpp"
 
 namespace SDK
 {
@@ -85,16 +85,16 @@ struct FTireConfigMaterialFriction
 };
 
 // ScriptStruct PhysXVehicles.VehicleEngineData
-// 0x0090
+// 0x00A0
 struct FVehicleEngineData
 {
-	struct FRuntimeFloatCurve                          TorqueCurve;                                              // 0x0000(0x0078) (Edit)
-	float                                              MaxRPM;                                                   // 0x0078(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MOI;                                                      // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateFullThrottle;                                  // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateZeroThrottleClutchEngaged;                     // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DampingRateZeroThrottleClutchDisengaged;                  // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
+	struct FRuntimeFloatCurve                          TorqueCurve;                                              // 0x0000(0x0088) (Edit)
+	float                                              MaxRPM;                                                   // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MOI;                                                      // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DampingRateFullThrottle;                                  // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DampingRateZeroThrottleClutchEngaged;                     // 0x0094(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DampingRateZeroThrottleClutchDisengaged;                  // 0x0098(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct PhysXVehicles.VehicleDifferential4WData
@@ -137,17 +137,17 @@ struct FVehicleTransmissionData
 };
 
 // ScriptStruct PhysXVehicles.AnimNode_WheelHandler
-// 0x0018 (0x0108 - 0x00F0)
+// 0x0018 (0x00E0 - 0x00C8)
 struct FAnimNode_WheelHandler : public FAnimNode_SkeletalControlBase
 {
-	unsigned char                                      UnknownData00[0x18];                                      // 0x00F0(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x00C8(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct PhysXVehicles.VehicleAnimInstanceProxy
-// 0x0010 (0x05F0 - 0x05E0)
+// 0x0010 (0x06A0 - 0x0690)
 struct FVehicleAnimInstanceProxy : public FAnimInstanceProxy
 {
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05E0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0690(0x0010) MISSED OFFSET
 };
 
 }

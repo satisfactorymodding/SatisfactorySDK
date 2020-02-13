@@ -17,7 +17,7 @@ namespace SDK
 // Function Anim_GeneratorGeoThermal.Anim_GeneratorGeoThermal_C.ExecuteUbergraph_Anim_GeneratorGeoThermal
 struct UAnim_GeneratorGeoThermal_C_ExecuteUbergraph_Anim_GeneratorGeoThermal_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

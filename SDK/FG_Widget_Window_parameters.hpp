@@ -56,7 +56,7 @@ struct UWidget_Window_C_OnDrop_Params
 // Function Widget_Window.Widget_Window_C.SetTitle
 struct UWidget_Window_C_SetTitle_Params
 {
-	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_Window.Widget_Window_C.Construct
@@ -94,7 +94,7 @@ struct UWidget_Window_C_OnConstructAnimFinished_Params
 // Function Widget_Window.Widget_Window_C.ExecuteUbergraph_Widget_Window
 struct UWidget_Window_C_ExecuteUbergraph_Widget_Window_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Window.Widget_Window_C.OnClose__DelegateSignature

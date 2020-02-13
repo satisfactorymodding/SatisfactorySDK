@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Equip_Rifle.Equip_Rifle_C.UserConstructionScript
-struct AEquip_Rifle_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_Rifle.Equip_Rifle_C.ReceiveBeginPlay
 struct AEquip_Rifle_C_ReceiveBeginPlay_Params
 {
@@ -47,7 +42,7 @@ struct AEquip_Rifle_C_WasEquipped_Params
 // Function Equip_Rifle.Equip_Rifle_C.ExecuteUbergraph_Equip_Rifle
 struct AEquip_Rifle_C_ExecuteUbergraph_Equip_Rifle_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Equip_Rifle.Equip_Rifle_C.Fire__DelegateSignature

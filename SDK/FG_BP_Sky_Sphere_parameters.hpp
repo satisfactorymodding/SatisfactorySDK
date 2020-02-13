@@ -17,15 +17,15 @@ namespace SDK
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.SetLightAsDominant
 struct ABP_Sky_Sphere_C_SetLightAsDominant_Params
 {
-	class ADirectionalLight*                           Light;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               newDominant;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class ADirectionalLight**                          Light;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              newDominant;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_Sky_Sphere.BP_Sky_Sphere_C.newDominantLight
-struct ABP_Sky_Sphere_C_newDominantLight_Params
+// Function BP_Sky_Sphere.BP_Sky_Sphere_C.NewDominantLight
+struct ABP_Sky_Sphere_C_NewDominantLight_Params
 {
-	class ADirectionalLight*                           oldDominantLight;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class ADirectionalLight*                           newDominantLight;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class ADirectionalLight**                          oldDominantLight;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class ADirectionalLight**                          NewDominantLight;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateDominantLight
@@ -36,8 +36,8 @@ struct ABP_Sky_Sphere_C_CalculateDominantLight_Params
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateDiscBrightness
 struct ABP_Sky_Sphere_C_CalculateDiscBrightness_Params
 {
-	class ALight*                                      Light;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FFBrightnessAdjustment                      brightnessAdjustment;                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class ALight**                                     Light;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FFBrightnessAdjustment*                     brightnessAdjustment;                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              discBrightness;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -50,9 +50,9 @@ struct ABP_Sky_Sphere_C_CalculateBrightness_Params
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateLightRotation
 struct ABP_Sky_Sphere_C_CalculateLightRotation_Params
 {
-	struct FRotator                                    OriginalRotation;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    RotationAxis;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FRuntimeFloatCurve                          LightRotationCurve;                                       // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FRotator*                                   OriginalRotation;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator*                                   RotationAxis;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FRuntimeFloatCurve*                         LightRotationCurve;                                       // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FRotator                                    NewRotation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -106,7 +106,7 @@ struct ABP_Sky_Sphere_C_ApplySkySphereSettings_Params
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.ExecuteUbergraph_BP_Sky_Sphere
 struct ABP_Sky_Sphere_C_ExecuteUbergraph_BP_Sky_Sphere_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

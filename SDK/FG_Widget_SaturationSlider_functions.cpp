@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SaturationSlider.Widget_SaturationSlider_C.GetSliderValue
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ float UWidget_SaturationSlider_C::GetSliderValue()
 
 
 // Function Widget_SaturationSlider.Widget_SaturationSlider_C.GetInputText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +55,7 @@ struct FText UWidget_SaturationSlider_C::GetInputText()
 
 
 // Function Widget_SaturationSlider.Widget_SaturationSlider_C.OnPaint
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FPaintContext           Context                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -77,11 +77,11 @@ void UWidget_SaturationSlider_C::OnPaint(struct FPaintContext* Context)
 
 
 // Function Widget_SaturationSlider.Widget_SaturationSlider_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloatValueChangedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaturationSlider_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWidget_SaturationSlider_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloatValueChangedEvent__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaturationSlider.Widget_SaturationSlider_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_109_OnFloatValueChangedEvent__DelegateSignature");
 
@@ -97,12 +97,12 @@ void UWidget_SaturationSlider_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_109
 
 
 // Function Widget_SaturationSlider.Widget_SaturationSlider_C.BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEditableTextBoxCommittedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaturationSlider_C::BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_SaturationSlider_C::BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEditableTextBoxCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaturationSlider.Widget_SaturationSlider_C.BndEvt__mInputText_K2Node_ComponentBoundEvent_270_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
@@ -119,11 +119,11 @@ void UWidget_SaturationSlider_C::BndEvt__mInputText_K2Node_ComponentBoundEvent_2
 
 
 // Function Widget_SaturationSlider.Widget_SaturationSlider_C.ExecuteUbergraph_Widget_SaturationSlider
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaturationSlider_C::ExecuteUbergraph_Widget_SaturationSlider(int EntryPoint)
+void UWidget_SaturationSlider_C::ExecuteUbergraph_Widget_SaturationSlider(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaturationSlider.Widget_SaturationSlider_C.ExecuteUbergraph_Widget_SaturationSlider");
 

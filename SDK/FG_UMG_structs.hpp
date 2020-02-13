@@ -7,14 +7,14 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_MovieSceneTracks_classes.hpp"
-#include "FG_SlateCore_classes.hpp"
-#include "FG_CoreUObject_classes.hpp"
-#include "FG_InputCore_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
+#include "FG_SlateCore_classes.hpp"
 #include "FG_MovieScene_classes.hpp"
 #include "FG_Slate_classes.hpp"
 #include "FG_PropertyPath_classes.hpp"
+#include "FG_InputCore_classes.hpp"
+#include "FG_MovieSceneTracks_classes.hpp"
 
 namespace SDK
 {
@@ -44,6 +44,15 @@ enum class EVirtualKeyboardType : uint8_t
 	Password                       = 4,
 	AlphaNumeric                   = 5,
 	EVirtualKeyboardType_MAX       = 6
+};
+
+
+// Enum UMG.EWidgetAnimationEvent
+enum class EWidgetAnimationEvent : uint8_t
+{
+	Started                        = 0,
+	Finished                       = 1,
+	EWidgetAnimationEvent_MAX      = 2
 };
 
 
@@ -201,6 +210,18 @@ struct FNamedSlotBinding
 	class UWidget*                                     Content;                                                  // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
+// ScriptStruct UMG.AnimationEventBinding
+// 0x0028
+struct FAnimationEventBinding
+{
+	class UWidgetAnimation*                            Animation;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FScriptDelegate                             Delegate;                                                 // 0x0008(0x0014) (ZeroConstructor, InstancedReference)
+	EWidgetAnimationEvent                              AnimationEvent;                                           // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
+	struct FName                                       UserTag;                                                  // 0x001C(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct UMG.PaintContext
 // 0x0030
 struct FPaintContext
@@ -265,14 +286,25 @@ struct FSlateMeshVertex
 };
 
 // ScriptStruct UMG.WidgetAnimationBinding
-// 0x0028
+// 0x0024
 struct FWidgetAnimationBinding
 {
 	struct FName                                       WidgetName;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       SlotWidgetName;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FGuid                                       AnimationGuid;                                            // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 	bool                                               bIsRootWidget;                                            // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct UMG.BlueprintWidgetAnimationDelegateBinding
+// 0x001C
+struct FBlueprintWidgetAnimationDelegateBinding
+{
+	EWidgetAnimationEvent                              Action;                                                   // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	struct FName                                       AnimationToBind;                                          // 0x0004(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       FunctionNameToBind;                                       // 0x000C(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       UserTag;                                                  // 0x0014(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct UMG.DelegateRuntimeBinding
@@ -288,14 +320,14 @@ struct FDelegateRuntimeBinding
 };
 
 // ScriptStruct UMG.WidgetNavigationData
-// 0x0028
+// 0x0024
 struct FWidgetNavigationData
 {
 	EUINavigationRule                                  Rule;                                                     // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FName                                       WidgetToFocus;                                            // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UWidget>                      Widget;                                                   // 0x0010(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FScriptDelegate                             CustomDelegate;                                           // 0x0018(0x0014) (ZeroConstructor, InstancedReference)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	struct FName                                       WidgetToFocus;                                            // 0x0004(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UWidget>                      Widget;                                                   // 0x000C(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FScriptDelegate                             CustomDelegate;                                           // 0x0014(0x0014) (ZeroConstructor, InstancedReference)
 };
 
 // ScriptStruct UMG.MovieScene2DTransformSectionTemplate
@@ -331,10 +363,10 @@ struct FMovieSceneWidgetMaterialSectionTemplate : public FMovieSceneParameterSec
 };
 
 // ScriptStruct UMG.RichTextStyleRow
-// 0x01E8 (0x01F0 - 0x0008)
+// 0x0268 (0x0270 - 0x0008)
 struct FRichTextStyleRow : public FTableRowBase
 {
-	struct FTextBlockStyle                             TextStyle;                                                // 0x0008(0x01E8) (Edit)
+	struct FTextBlockStyle                             TextStyle;                                                // 0x0008(0x0268) (Edit)
 };
 
 // ScriptStruct UMG.RichImageRow
@@ -342,6 +374,13 @@ struct FRichTextStyleRow : public FTableRowBase
 struct FRichImageRow : public FTableRowBase
 {
 	struct FSlateBrush                                 Brush;                                                    // 0x0008(0x0088) (Edit)
+};
+
+// ScriptStruct UMG.WidgetComponentInstanceData
+// 0x0010 (0x00B8 - 0x00A8)
+struct FWidgetComponentInstanceData : public FSceneComponentInstanceData
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00A8(0x0010) MISSED OFFSET
 };
 
 }

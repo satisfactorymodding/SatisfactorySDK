@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.SetBrush
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManufacturingStat_C::SetBrush()
 {
@@ -30,7 +30,7 @@ void UWidget_ManufacturingStat_C::SetBrush()
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.SetIconColor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManufacturingStat_C::SetIconColor()
 {
@@ -47,7 +47,7 @@ void UWidget_ManufacturingStat_C::SetIconColor()
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.GetStatText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -68,7 +68,7 @@ struct FText UWidget_ManufacturingStat_C::GetStatText()
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -88,7 +88,7 @@ void UWidget_ManufacturingStat_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.OnDragEnter
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -112,7 +112,7 @@ void UWidget_ManufacturingStat_C::OnDragEnter(struct FGeometry* MyGeometry, stru
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.OnDragLeave
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UDragDropOperation**     Operation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -134,7 +134,7 @@ void UWidget_ManufacturingStat_C::OnDragLeave(struct FPointerEvent* PointerEvent
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManufacturingStat_C::Construct()
 {
@@ -151,7 +151,7 @@ void UWidget_ManufacturingStat_C::Construct()
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.UpdateStat
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManufacturingStat_C::UpdateStat()
 {
@@ -168,7 +168,7 @@ void UWidget_ManufacturingStat_C::UpdateStat()
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManufacturingStat_C::Destruct()
 {
@@ -185,11 +185,11 @@ void UWidget_ManufacturingStat_C::Destruct()
 
 
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.ExecuteUbergraph_Widget_ManufacturingStat
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManufacturingStat_C::ExecuteUbergraph_Widget_ManufacturingStat(int EntryPoint)
+void UWidget_ManufacturingStat_C::ExecuteUbergraph_Widget_ManufacturingStat(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.ExecuteUbergraph_Widget_ManufacturingStat");
 

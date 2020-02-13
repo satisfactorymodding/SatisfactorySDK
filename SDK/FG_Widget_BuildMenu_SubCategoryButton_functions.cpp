@@ -12,17 +12,17 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_BuildMenu_SubCategoryButton.Widget_BuildMenu_SubCategoryButton_C.PreConstruct
-// ()
+// Function Widget_BuildMenu_SubCategoryButton.Widget_BuildMenu_SubCategoryButton_C.GetSubcategoryNameTest
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 inClass                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_SubCategoryButton_C::PreConstruct(bool* IsDesignTime)
+void UWidget_BuildMenu_SubCategoryButton_C::GetSubcategoryNameTest(class UClass** inClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_SubCategoryButton.Widget_BuildMenu_SubCategoryButton_C.PreConstruct");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_SubCategoryButton.Widget_BuildMenu_SubCategoryButton_C.GetSubcategoryNameTest");
 
-	UWidget_BuildMenu_SubCategoryButton_C_PreConstruct_Params params;
-	params.IsDesignTime = IsDesignTime;
+	UWidget_BuildMenu_SubCategoryButton_C_GetSubcategoryNameTest_Params params;
+	params.inClass = inClass;
 
 	auto flags = fn->FunctionFlags;
 
@@ -33,11 +33,11 @@ void UWidget_BuildMenu_SubCategoryButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_BuildMenu_SubCategoryButton.Widget_BuildMenu_SubCategoryButton_C.ExecuteUbergraph_Widget_BuildMenu_SubCategoryButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_SubCategoryButton_C::ExecuteUbergraph_Widget_BuildMenu_SubCategoryButton(int EntryPoint)
+void UWidget_BuildMenu_SubCategoryButton_C::ExecuteUbergraph_Widget_BuildMenu_SubCategoryButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_SubCategoryButton.Widget_BuildMenu_SubCategoryButton_C.ExecuteUbergraph_Widget_BuildMenu_SubCategoryButton");
 

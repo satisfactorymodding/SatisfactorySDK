@@ -12,23 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_EQSTestingPawn.BP_EQSTestingPawn_C.UserConstructionScript
-// ()
-
-void ABP_EQSTestingPawn_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EQSTestingPawn.BP_EQSTestingPawn_C.UserConstructionScript");
-
-	ABP_EQSTestingPawn_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 }
 
 #ifdef _MSC_VER

@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_JumpingStilts.Equip_JumpingStilts_C.UserConstructionScript
-// ()
-
-void AEquip_JumpingStilts_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_JumpingStilts.Equip_JumpingStilts_C.UserConstructionScript");
-
-	AEquip_JumpingStilts_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_JumpingStilts.Equip_JumpingStilts_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_JumpingStilts_C::WasEquipped()
 {
@@ -47,7 +30,7 @@ void AEquip_JumpingStilts_C::WasEquipped()
 
 
 // Function Equip_JumpingStilts.Equip_JumpingStilts_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_JumpingStilts_C::WasUnEquipped()
 {
@@ -64,7 +47,7 @@ void AEquip_JumpingStilts_C::WasUnEquipped()
 
 
 // Function Equip_JumpingStilts.Equip_JumpingStilts_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_JumpingStilts_C::ReceiveBeginPlay()
 {
@@ -81,11 +64,11 @@ void AEquip_JumpingStilts_C::ReceiveBeginPlay()
 
 
 // Function Equip_JumpingStilts.Equip_JumpingStilts_C.ExecuteUbergraph_Equip_JumpingStilts
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_JumpingStilts_C::ExecuteUbergraph_Equip_JumpingStilts(int EntryPoint)
+void AEquip_JumpingStilts_C::ExecuteUbergraph_Equip_JumpingStilts(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_JumpingStilts.Equip_JumpingStilts_C.ExecuteUbergraph_Equip_JumpingStilts");
 

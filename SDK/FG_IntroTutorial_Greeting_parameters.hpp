@@ -22,7 +22,7 @@ struct UIntroTutorial_Greeting_C_Destruct_Params
 // Function IntroTutorial_Greeting.IntroTutorial_Greeting_C.ExecuteUbergraph_IntroTutorial_Greeting
 struct UIntroTutorial_Greeting_C_ExecuteUbergraph_IntroTutorial_Greeting_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

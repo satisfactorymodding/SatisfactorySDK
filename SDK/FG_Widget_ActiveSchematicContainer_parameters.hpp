@@ -66,13 +66,13 @@ struct UWidget_ActiveSchematicContainer_C_Construct_Params
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.UpdateSchematic
 struct UWidget_ActiveSchematicContainer_C_UpdateSchematic_Params
 {
-	class UClass*                                      activeSchematic;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     activeSchematic;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ExecuteUbergraph_Widget_ActiveSchematicContainer
 struct UWidget_ActiveSchematicContainer_C_ExecuteUbergraph_Widget_ActiveSchematicContainer_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

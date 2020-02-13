@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_MinerMk1.Build_MinerMk1_C.GetExtractedResource
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UClass*                  Resource                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +35,7 @@ void ABuild_MinerMk1_C::GetExtractedResource(class UClass** Resource)
 
 
 // Function Build_MinerMk1.Build_MinerMk1_C.GetMiningParticles
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UParticleSystem*         FirstParticle                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UParticleSystem*         SecondParticle                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -62,25 +62,8 @@ void ABuild_MinerMk1_C::GetMiningParticles(class UParticleSystem** FirstParticle
 }
 
 
-// Function Build_MinerMk1.Build_MinerMk1_C.UserConstructionScript
-// ()
-
-void ABuild_MinerMk1_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_MinerMk1.Build_MinerMk1_C.UserConstructionScript");
-
-	ABuild_MinerMk1_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_MinerMk1.Build_MinerMk1_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_MinerMk1_C::GainedSignificance()
 {
@@ -97,13 +80,16 @@ void ABuild_MinerMk1_C::GainedSignificance()
 
 
 // Function Build_MinerMk1.Build_MinerMk1_C.StartProductionLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_MinerMk1_C::StartProductionLoopEffects()
+void ABuild_MinerMk1_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_MinerMk1.Build_MinerMk1_C.StartProductionLoopEffects");
 
 	ABuild_MinerMk1_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -114,13 +100,16 @@ void ABuild_MinerMk1_C::StartProductionLoopEffects()
 
 
 // Function Build_MinerMk1.Build_MinerMk1_C.StopProductionLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_MinerMk1_C::StopProductionLoopEffects()
+void ABuild_MinerMk1_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_MinerMk1.Build_MinerMk1_C.StopProductionLoopEffects");
 
 	ABuild_MinerMk1_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -131,7 +120,7 @@ void ABuild_MinerMk1_C::StopProductionLoopEffects()
 
 
 // Function Build_MinerMk1.Build_MinerMk1_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_MinerMk1_C::LostSignificance()
 {
@@ -148,7 +137,7 @@ void ABuild_MinerMk1_C::LostSignificance()
 
 
 // Function Build_MinerMk1.Build_MinerMk1_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_MinerMk1_C::ReceiveDestroyed()
 {
@@ -165,11 +154,11 @@ void ABuild_MinerMk1_C::ReceiveDestroyed()
 
 
 // Function Build_MinerMk1.Build_MinerMk1_C.ExecuteUbergraph_Build_MinerMk1
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_MinerMk1_C::ExecuteUbergraph_Build_MinerMk1(int EntryPoint)
+void ABuild_MinerMk1_C::ExecuteUbergraph_Build_MinerMk1(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_MinerMk1.Build_MinerMk1_C.ExecuteUbergraph_Build_MinerMk1");
 

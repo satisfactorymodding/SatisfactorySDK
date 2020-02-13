@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AudioCapture.AudioCaptureComponent
-// 0x00B0 (0x0670 - 0x05C0)
+// 0x00B0 (0x0720 - 0x0670)
 class UAudioCaptureComponent : public USynthComponent
 {
 public:
-	int                                                JitterLatencyFrames;                                      // 0x05C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xAC];                                      // 0x05C4(0x00AC) MISSED OFFSET
+	int                                                JitterLatencyFrames;                                      // 0x0670(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xAC];                                      // 0x0674(0x00AC) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

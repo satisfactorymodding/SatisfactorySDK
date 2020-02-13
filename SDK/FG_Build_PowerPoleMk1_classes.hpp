@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_PowerPoleMk1.Build_PowerPoleMk1_C
-// 0x0010 (0x0598 - 0x0588)
+// 0x0010 (0x05A0 - 0x0590)
 class ABuild_PowerPoleMk1_C : public AFGBuildablePowerPole
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0588(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                               Clearance;                                                // 0x0590(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0590(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                               Clearance;                                                // 0x0598(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,11 +29,11 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void OnHasPowerChanged_2(bool newHasPower);
+	void OnHasPowerChanged_2(bool* newHasPower);
 	void PlayConstructSound();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_Build_PowerPoleMk1(int EntryPoint);
+	void OnShowConnectionFeedback();
+	void ExecuteUbergraph_Build_PowerPoleMk1(int* EntryPoint);
 };
 
 

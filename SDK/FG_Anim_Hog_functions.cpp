@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Hog.Anim_Hog_C.CalculateAnimGraphVariables
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_Hog_C::CalculateAnimGraphVariables()
 {
@@ -30,7 +30,7 @@ void UAnim_Hog_C::CalculateAnimGraphVariables()
 
 
 // Function Anim_Hog.Anim_Hog_C.OnPointDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector*                shootDIrection                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +50,7 @@ void UAnim_Hog_C::OnPointDamageTaken(struct FVector* shootDIrection)
 
 
 // Function Anim_Hog.Anim_Hog_C.OnAnyDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_Hog_C::OnAnyDamageTaken()
 {
@@ -67,7 +67,7 @@ void UAnim_Hog_C::OnAnyDamageTaken()
 
 
 // Function Anim_Hog.Anim_Hog_C.OnRadialDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_Hog_C::OnRadialDamageTaken()
 {
@@ -84,7 +84,7 @@ void UAnim_Hog_C::OnRadialDamageTaken()
 
 
 // Function Anim_Hog.Anim_Hog_C.AnimNotify_Notify_Hog_LeftIdle
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Hog_C::AnimNotify_Notify_Hog_LeftIdle()
 {
@@ -101,7 +101,7 @@ void UAnim_Hog_C::AnimNotify_Notify_Hog_LeftIdle()
 
 
 // Function Anim_Hog.Anim_Hog_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,11 +121,11 @@ void UAnim_Hog_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_Hog.Anim_Hog_C.ExecuteUbergraph_Anim_Hog
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Hog_C::ExecuteUbergraph_Anim_Hog(int EntryPoint)
+void UAnim_Hog_C::ExecuteUbergraph_Anim_Hog(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Hog.Anim_Hog_C.ExecuteUbergraph_Anim_Hog");
 

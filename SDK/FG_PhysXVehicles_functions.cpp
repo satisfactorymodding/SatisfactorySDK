@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetUseAutoGears
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bUseAuto                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bUseAuto                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetUseAutoGears(bool bUseAuto)
+void UWheeledVehicleMovementComponent::SetUseAutoGears(bool* bUseAuto)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetUseAutoGears");
 
@@ -25,6 +25,7 @@ void UWheeledVehicleMovementComponent::SetUseAutoGears(bool bUseAuto)
 	params.bUseAuto = bUseAuto;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33,11 +34,11 @@ void UWheeledVehicleMovementComponent::SetUseAutoGears(bool bUseAuto)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetThrottleInput
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Throttle                       (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Throttle                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetThrottleInput(float Throttle)
+void UWheeledVehicleMovementComponent::SetThrottleInput(float* Throttle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetThrottleInput");
 
@@ -45,6 +46,7 @@ void UWheeledVehicleMovementComponent::SetThrottleInput(float Throttle)
 	params.Throttle = Throttle;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,12 +55,12 @@ void UWheeledVehicleMovementComponent::SetThrottleInput(float Throttle)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetTargetGear
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GearNum                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GearNum                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetTargetGear(int GearNum, bool bImmediate)
+void UWheeledVehicleMovementComponent::SetTargetGear(int* GearNum, bool* bImmediate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetTargetGear");
 
@@ -67,6 +69,7 @@ void UWheeledVehicleMovementComponent::SetTargetGear(int GearNum, bool bImmediat
 	params.bImmediate = bImmediate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,11 +78,11 @@ void UWheeledVehicleMovementComponent::SetTargetGear(int GearNum, bool bImmediat
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetSteeringInput
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Steering                       (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Steering                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetSteeringInput(float Steering)
+void UWheeledVehicleMovementComponent::SetSteeringInput(float* Steering)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetSteeringInput");
 
@@ -87,6 +90,7 @@ void UWheeledVehicleMovementComponent::SetSteeringInput(float Steering)
 	params.Steering = Steering;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,11 +99,11 @@ void UWheeledVehicleMovementComponent::SetSteeringInput(float Steering)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetHandbrakeInput
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewHandbrake                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bNewHandbrake                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool bNewHandbrake)
+void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool* bNewHandbrake)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetHandbrakeInput");
 
@@ -107,6 +111,7 @@ void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool bNewHandbrake)
 	params.bNewHandbrake = bNewHandbrake;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,11 +120,11 @@ void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool bNewHandbrake)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnoreMask
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FNavAvoidanceMask       GroupMask                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FNavAvoidanceMask*      GroupMask                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(const struct FNavAvoidanceMask& GroupMask)
+void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(struct FNavAvoidanceMask* GroupMask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnoreMask");
 
@@ -127,6 +132,7 @@ void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(const struct FNavAv
 	params.GroupMask = GroupMask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -135,11 +141,11 @@ void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(const struct FNavAv
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnore
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetGroupsToIgnore(int GroupFlags)
+void UWheeledVehicleMovementComponent::SetGroupsToIgnore(int* GroupFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnore");
 
@@ -147,6 +153,7 @@ void UWheeledVehicleMovementComponent::SetGroupsToIgnore(int GroupFlags)
 	params.GroupFlags = GroupFlags;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,11 +162,11 @@ void UWheeledVehicleMovementComponent::SetGroupsToIgnore(int GroupFlags)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoidMask
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FNavAvoidanceMask       GroupMask                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FNavAvoidanceMask*      GroupMask                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(const struct FNavAvoidanceMask& GroupMask)
+void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(struct FNavAvoidanceMask* GroupMask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoidMask");
 
@@ -167,6 +174,7 @@ void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(const struct FNavAvo
 	params.GroupMask = GroupMask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,11 +183,11 @@ void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(const struct FNavAvo
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoid
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetGroupsToAvoid(int GroupFlags)
+void UWheeledVehicleMovementComponent::SetGroupsToAvoid(int* GroupFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoid");
 
@@ -187,6 +195,7 @@ void UWheeledVehicleMovementComponent::SetGroupsToAvoid(int GroupFlags)
 	params.GroupFlags = GroupFlags;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,11 +204,11 @@ void UWheeledVehicleMovementComponent::SetGroupsToAvoid(int GroupFlags)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearUp
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewGearUp                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bNewGearUp                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetGearUp(bool bNewGearUp)
+void UWheeledVehicleMovementComponent::SetGearUp(bool* bNewGearUp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearUp");
 
@@ -207,6 +216,7 @@ void UWheeledVehicleMovementComponent::SetGearUp(bool bNewGearUp)
 	params.bNewGearUp = bNewGearUp;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,11 +225,11 @@ void UWheeledVehicleMovementComponent::SetGearUp(bool bNewGearUp)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearDown
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewGearDown                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bNewGearDown                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetGearDown(bool bNewGearDown)
+void UWheeledVehicleMovementComponent::SetGearDown(bool* bNewGearDown)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearDown");
 
@@ -227,6 +237,7 @@ void UWheeledVehicleMovementComponent::SetGearDown(bool bNewGearDown)
 	params.bNewGearDown = bNewGearDown;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,11 +246,11 @@ void UWheeledVehicleMovementComponent::SetGearDown(bool bNewGearDown)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetBrakeInput
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Brake                          (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Brake                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetBrakeInput(float Brake)
+void UWheeledVehicleMovementComponent::SetBrakeInput(float* Brake)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetBrakeInput");
 
@@ -247,6 +258,7 @@ void UWheeledVehicleMovementComponent::SetBrakeInput(float Brake)
 	params.Brake = Brake;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -255,11 +267,11 @@ void UWheeledVehicleMovementComponent::SetBrakeInput(float Brake)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroupMask
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FNavAvoidanceMask       GroupMask                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FNavAvoidanceMask*      GroupMask                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(const struct FNavAvoidanceMask& GroupMask)
+void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(struct FNavAvoidanceMask* GroupMask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroupMask");
 
@@ -267,6 +279,7 @@ void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(const struct FNavAv
 	params.GroupMask = GroupMask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,11 +288,11 @@ void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(const struct FNavAv
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroup
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetAvoidanceGroup(int GroupFlags)
+void UWheeledVehicleMovementComponent::SetAvoidanceGroup(int* GroupFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroup");
 
@@ -287,6 +300,7 @@ void UWheeledVehicleMovementComponent::SetAvoidanceGroup(int GroupFlags)
 	params.GroupFlags = GroupFlags;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -295,11 +309,11 @@ void UWheeledVehicleMovementComponent::SetAvoidanceGroup(int GroupFlags)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceEnabled
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(bool bEnable)
+void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(bool* bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceEnabled");
 
@@ -307,6 +321,7 @@ void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -315,15 +330,15 @@ void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(bool bEnable)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.ServerUpdateState
-// ()
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// float                          InSteeringInput                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InThrottleInput                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InBrakeInput                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InHandbrakeInput               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CurrentGear                    (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InSteeringInput                (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InThrottleInput                (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InBrakeInput                   (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InHandbrakeInput               (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           CurrentGear                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int CurrentGear)
+void UWheeledVehicleMovementComponent::ServerUpdateState(float* InSteeringInput, float* InThrottleInput, float* InBrakeInput, float* InHandbrakeInput, int* CurrentGear)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.ServerUpdateState");
 
@@ -335,6 +350,7 @@ void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, 
 	params.CurrentGear = CurrentGear;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -343,7 +359,7 @@ void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, 
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetUseAutoGears
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -354,6 +370,7 @@ bool UWheeledVehicleMovementComponent::GetUseAutoGears()
 	UWheeledVehicleMovementComponent_GetUseAutoGears_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -364,7 +381,7 @@ bool UWheeledVehicleMovementComponent::GetUseAutoGears()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetThrottle
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -375,6 +392,7 @@ float UWheeledVehicleMovementComponent::GetThrottle()
 	UWheeledVehicleMovementComponent_GetThrottle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -385,7 +403,7 @@ float UWheeledVehicleMovementComponent::GetThrottle()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetTargetGear
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -396,6 +414,51 @@ int UWheeledVehicleMovementComponent::GetTargetGear()
 	UWheeledVehicleMovementComponent_GetTargetGear_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PhysXVehicles.WheeledVehicleMovementComponent.GetSteering
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UWheeledVehicleMovementComponent::GetSteering()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetSteering");
+
+	UWheeledVehicleMovementComponent_GetSteering_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PhysXVehicles.WheeledVehicleMovementComponent.GetHandBrake
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UWheeledVehicleMovementComponent::GetHandBrake()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetHandBrake");
+
+	UWheeledVehicleMovementComponent_GetHandBrake_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -406,7 +469,7 @@ int UWheeledVehicleMovementComponent::GetTargetGear()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetForwardSpeed
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -417,6 +480,7 @@ float UWheeledVehicleMovementComponent::GetForwardSpeed()
 	UWheeledVehicleMovementComponent_GetForwardSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -427,7 +491,7 @@ float UWheeledVehicleMovementComponent::GetForwardSpeed()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetEngineRotationSpeed
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -438,6 +502,7 @@ float UWheeledVehicleMovementComponent::GetEngineRotationSpeed()
 	UWheeledVehicleMovementComponent_GetEngineRotationSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -448,7 +513,7 @@ float UWheeledVehicleMovementComponent::GetEngineRotationSpeed()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetEngineMaxRotationSpeed
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -459,6 +524,7 @@ float UWheeledVehicleMovementComponent::GetEngineMaxRotationSpeed()
 	UWheeledVehicleMovementComponent_GetEngineMaxRotationSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -469,7 +535,7 @@ float UWheeledVehicleMovementComponent::GetEngineMaxRotationSpeed()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetCurrentGear
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -480,6 +546,29 @@ int UWheeledVehicleMovementComponent::GetCurrentGear()
 	UWheeledVehicleMovementComponent_GetCurrentGear_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PhysXVehicles.WheeledVehicleMovementComponent.GetBrake
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UWheeledVehicleMovementComponent::GetBrake()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetBrake");
+
+	UWheeledVehicleMovementComponent_GetBrake_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -490,12 +579,12 @@ int UWheeledVehicleMovementComponent::GetCurrentGear()
 
 
 // Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetSteerAngle
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          SteerAngle                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         SteerAngle                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void USimpleWheeledVehicleMovementComponent::SetSteerAngle(float SteerAngle, int WheelIndex)
+void USimpleWheeledVehicleMovementComponent::SetSteerAngle(float* SteerAngle, int* WheelIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetSteerAngle");
 
@@ -504,6 +593,7 @@ void USimpleWheeledVehicleMovementComponent::SetSteerAngle(float SteerAngle, int
 	params.WheelIndex = WheelIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -512,12 +602,12 @@ void USimpleWheeledVehicleMovementComponent::SetSteerAngle(float SteerAngle, int
 
 
 // Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetDriveTorque
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DriveTorque                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         DriveTorque                    (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void USimpleWheeledVehicleMovementComponent::SetDriveTorque(float DriveTorque, int WheelIndex)
+void USimpleWheeledVehicleMovementComponent::SetDriveTorque(float* DriveTorque, int* WheelIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetDriveTorque");
 
@@ -526,6 +616,7 @@ void USimpleWheeledVehicleMovementComponent::SetDriveTorque(float DriveTorque, i
 	params.WheelIndex = WheelIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -534,12 +625,12 @@ void USimpleWheeledVehicleMovementComponent::SetDriveTorque(float DriveTorque, i
 
 
 // Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetBrakeTorque
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          BrakeTorque                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         BrakeTorque                    (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void USimpleWheeledVehicleMovementComponent::SetBrakeTorque(float BrakeTorque, int WheelIndex)
+void USimpleWheeledVehicleMovementComponent::SetBrakeTorque(float* BrakeTorque, int* WheelIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetBrakeTorque");
 
@@ -548,6 +639,7 @@ void USimpleWheeledVehicleMovementComponent::SetBrakeTorque(float BrakeTorque, i
 	params.WheelIndex = WheelIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -556,7 +648,7 @@ void USimpleWheeledVehicleMovementComponent::SetBrakeTorque(float BrakeTorque, i
 
 
 // Function PhysXVehicles.VehicleAnimInstance.GetVehicle
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class AWheeledVehicle*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -567,6 +659,7 @@ class AWheeledVehicle* UVehicleAnimInstance::GetVehicle()
 	UVehicleAnimInstance_GetVehicle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -577,7 +670,7 @@ class AWheeledVehicle* UVehicleAnimInstance::GetVehicle()
 
 
 // Function PhysXVehicles.VehicleWheel.IsInAir
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -588,6 +681,7 @@ bool UVehicleWheel::IsInAir()
 	UVehicleWheel_IsInAir_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -598,7 +692,7 @@ bool UVehicleWheel::IsInAir()
 
 
 // Function PhysXVehicles.VehicleWheel.GetSuspensionOffset
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -609,6 +703,7 @@ float UVehicleWheel::GetSuspensionOffset()
 	UVehicleWheel_GetSuspensionOffset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -619,7 +714,7 @@ float UVehicleWheel::GetSuspensionOffset()
 
 
 // Function PhysXVehicles.VehicleWheel.GetSteerAngle
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -630,6 +725,7 @@ float UVehicleWheel::GetSteerAngle()
 	UVehicleWheel_GetSteerAngle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -640,7 +736,7 @@ float UVehicleWheel::GetSteerAngle()
 
 
 // Function PhysXVehicles.VehicleWheel.GetRotationAngle
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -651,6 +747,7 @@ float UVehicleWheel::GetRotationAngle()
 	UVehicleWheel_GetRotationAngle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

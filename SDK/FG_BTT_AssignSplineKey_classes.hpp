@@ -30,7 +30,7 @@ public:
 
 
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_AssignSplineKey(int EntryPoint);
+	void ExecuteUbergraph_BTT_AssignSplineKey(int* EntryPoint);
 };
 
 

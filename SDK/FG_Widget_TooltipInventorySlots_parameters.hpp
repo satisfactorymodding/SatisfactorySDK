@@ -34,7 +34,7 @@ struct UWidget_TooltipInventorySlots_C_Construct_Params
 // Function Widget_TooltipInventorySlots.Widget_TooltipInventorySlots_C.ExecuteUbergraph_Widget_TooltipInventorySlots
 struct UWidget_TooltipInventorySlots_C_ExecuteUbergraph_Widget_TooltipInventorySlots_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

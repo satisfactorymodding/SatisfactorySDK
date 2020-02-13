@@ -22,24 +22,24 @@ struct UWidget_Multiplayer_ListButton_C_UpdateNATWarningForClient_Params
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetHostingNATIsse
 struct UWidget_Multiplayer_ListButton_C_GetHostingNATIsse_Params
 {
-	ECachedNATType                                     HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	ECachedNATType                                     clientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       ToolTip;                                                  // (Parm, OutParm)
+	ECachedNATType*                                    HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECachedNATType*                                    ClientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Tooltip;                                                  // (Parm, OutParm)
 };
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.GetConnectingNATIsse
 struct UWidget_Multiplayer_ListButton_C_GetConnectingNATIsse_Params
 {
-	ECachedNATType                                     HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	ECachedNATType                                     clientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       ToolTip;                                                  // (Parm, OutParm)
+	ECachedNATType*                                    HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECachedNATType*                                    ClientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Tooltip;                                                  // (Parm, OutParm)
 };
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.IsNATIssue
 struct UWidget_Multiplayer_ListButton_C_IsNATIssue_Params
 {
-	ECachedNATType                                     HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	ECachedNATType                                     clientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECachedNATType*                                    HostNAT;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECachedNATType*                                    ClientNat;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isIssue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -51,7 +51,7 @@ struct UWidget_Multiplayer_ListButton_C_UpdateNATWarningForHost_Params
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetupForManagePlayers
 struct UWidget_Multiplayer_ListButton_C_SetupForManagePlayers_Params
 {
-	class AFGPlayerState*                              PlayerState;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGPlayerState**                             PlayerState;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetupForJoinInvite
@@ -69,26 +69,27 @@ struct UWidget_Multiplayer_ListButton_C_SetupForSendInvite_Params
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.Internal_UpdateButton
 struct UWidget_Multiplayer_ListButton_C_Internal_UpdateButton_Params
 {
-	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               IsOnline;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       AdditionalInfo;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
-	int                                                PlayersInSession;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               privateSession;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                TimePlayed;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       ActionButtonText;                                         // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               hideSessionInfo;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               isPlayingSatisfactory;                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               hideActionButton;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               hideSecondaryActionButton;                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               disableActionButton;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       actionButtonTooltip;                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               inAGame;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FBlueprintSessionResult                     session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               IsSelectable;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsNonInteractable;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	ECachedNATType                                     natType;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsHost;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               careAboutNAT;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              IsOnline;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      AdditionalInfo;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
+	int*                                               playersInSession;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              privateSession;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               TimePlayed;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      ActionButtonText;                                         // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              hideSessionInfo;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              isPlayingSatisfactory;                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              hideActionButton;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              hideSecondaryActionButton;                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              disableActionButton;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      actionButtonTooltip;                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              inAGame;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FBlueprintSessionResult*                    session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              isSelectable;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              IsNonInteractable;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECachedNATType*                                    natType;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              IsHost;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              careAboutNAT;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              ShowWarning;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetupForJoinGame
@@ -100,7 +101,7 @@ struct UWidget_Multiplayer_ListButton_C_SetupForJoinGame_Params
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.SetButtonColor
 struct UWidget_Multiplayer_ListButton_C_SetButtonColor_Params
 {
-	struct FLinearColor                                Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.ClearListSelection
@@ -142,7 +143,7 @@ struct UWidget_Multiplayer_ListButton_C_BndEvt__mButton_K2Node_ComponentBoundEve
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.ExecuteUbergraph_Widget_Multiplayer_ListButton
 struct UWidget_Multiplayer_ListButton_C_ExecuteUbergraph_Widget_Multiplayer_ListButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnSessionDeselected__DelegateSignature
@@ -158,13 +159,13 @@ struct UWidget_Multiplayer_ListButton_C_OnButtonClicked__DelegateSignature_Param
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnSessionSelected__DelegateSignature
 struct UWidget_Multiplayer_ListButton_C_OnSessionSelected__DelegateSignature_Params
 {
-	struct FBlueprintSessionResult                     session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FBlueprintSessionResult*                    session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_Multiplayer_ListButton.Widget_Multiplayer_ListButton_C.OnActionButtonClicked__DelegateSignature
 struct UWidget_Multiplayer_ListButton_C_OnActionButtonClicked__DelegateSignature_Params
 {
-	class UWidget_Multiplayer_ListButton_C*            ClickedButton;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Multiplayer_ListButton_C**           ClickedButton;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 }

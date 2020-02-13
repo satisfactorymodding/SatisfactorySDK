@@ -22,7 +22,7 @@ struct UWidget_Scrollbox_C_Construct_Params
 // Function Widget_Scrollbox.Widget_Scrollbox_C.ExecuteUbergraph_Widget_Scrollbox
 struct UWidget_Scrollbox_C_ExecuteUbergraph_Widget_Scrollbox_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

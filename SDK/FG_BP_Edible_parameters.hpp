@@ -19,11 +19,6 @@ struct ABP_Edible_C_UpdateVisiblityState_Params
 {
 };
 
-// Function BP_Edible.BP_Edible_C.UserConstructionScript
-struct ABP_Edible_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_Edible.BP_Edible_C.PlayPickupEffect
 struct ABP_Edible_C_PlayPickupEffect_Params
 {
@@ -37,7 +32,7 @@ struct ABP_Edible_C_ReceiveBeginPlay_Params
 // Function BP_Edible.BP_Edible_C.ExecuteUbergraph_BP_Edible
 struct ABP_Edible_C_ExecuteUbergraph_BP_Edible_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

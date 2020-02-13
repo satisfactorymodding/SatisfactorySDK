@@ -17,25 +17,25 @@ namespace SDK
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.SetBackgroundVisibility
 struct UWidget_SlidingTabs_Button_C_SetBackgroundVisibility_Params
 {
-	bool                                               Visible;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              visible;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.SetIcon
 struct UWidget_SlidingTabs_Button_C_SetIcon_Params
 {
-	class UTexture*                                    Texture;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UTexture**                                   Texture;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.SetTitle
 struct UWidget_SlidingTabs_Button_C_SetTitle_Params
 {
-	struct FText                                       mTitle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      mTitle;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.SetActive
 struct UWidget_SlidingTabs_Button_C_SetActive_Params
 {
-	bool                                               IsActive;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              IsActive;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
@@ -72,25 +72,25 @@ struct UWidget_SlidingTabs_Button_C_StartAutoScroll_Params
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.ExecuteUbergraph_Widget_SlidingTabs_Button
 struct UWidget_SlidingTabs_Button_C_ExecuteUbergraph_Widget_SlidingTabs_Button_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.OnUnhovered__DelegateSignature
 struct UWidget_SlidingTabs_Button_C_OnUnhovered__DelegateSignature_Params
 {
-	class UWidget_SlidingTabs_Button_C*                Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SlidingTabs_Button_C**               Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.OnHovered__DelegateSignature
 struct UWidget_SlidingTabs_Button_C_OnHovered__DelegateSignature_Params
 {
-	class UWidget_SlidingTabs_Button_C*                Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SlidingTabs_Button_C**               Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_SlidingTabs_Button.Widget_SlidingTabs_Button_C.OnClicked__DelegateSignature
 struct UWidget_SlidingTabs_Button_C_OnClicked__DelegateSignature_Params
 {
-	class UWidget_SlidingTabs_Button_C*                Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SlidingTabs_Button_C**               Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_RotateToTarget.BTT_RotateToTarget_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_RotateToTarget_C::ReceiveExecuteAI(class AAIController** OwnerControll
 
 
 // Function BTT_RotateToTarget.BTT_RotateToTarget_C.RotationComplete
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APawn*                   PawnRotated                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class APawn**                  PawnRotated                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_RotateToTarget_C::RotationComplete(class APawn* PawnRotated)
+void UBTT_RotateToTarget_C::RotationComplete(class APawn** PawnRotated)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_RotateToTarget.BTT_RotateToTarget_C.RotationComplete");
 
@@ -55,7 +55,7 @@ void UBTT_RotateToTarget_C::RotationComplete(class APawn* PawnRotated)
 
 
 // Function BTT_RotateToTarget.BTT_RotateToTarget_C.ReceiveAbortAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -77,11 +77,11 @@ void UBTT_RotateToTarget_C::ReceiveAbortAI(class AAIController** OwnerController
 
 
 // Function BTT_RotateToTarget.BTT_RotateToTarget_C.ExecuteUbergraph_BTT_RotateToTarget
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_RotateToTarget_C::ExecuteUbergraph_BTT_RotateToTarget(int EntryPoint)
+void UBTT_RotateToTarget_C::ExecuteUbergraph_BTT_RotateToTarget(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_RotateToTarget.BTT_RotateToTarget_C.ExecuteUbergraph_BTT_RotateToTarget");
 

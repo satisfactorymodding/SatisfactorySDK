@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.UpdateVisibility
+struct UWidget_SchematicRewardItem_C_UpdateVisibility_Params
+{
+};
+
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.SetCategoryIconColor
 struct UWidget_SchematicRewardItem_C_SetCategoryIconColor_Params
 {
@@ -28,7 +33,7 @@ struct UWidget_SchematicRewardItem_C_GetLockedIcon_Params
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.SetCategoryTexture
 struct UWidget_SchematicRewardItem_C_SetCategoryTexture_Params
 {
-	class UClass*                                      ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.GetCategoryIcon
@@ -84,13 +89,13 @@ struct UWidget_SchematicRewardItem_C_GetIcon_Params
 	struct FSlateBrush                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-struct UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params
+// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.Construct
+struct UWidget_SchematicRewardItem_C_Construct_Params
 {
 };
 
-// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-struct UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params
+// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+struct UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params
 {
 };
 
@@ -99,15 +104,10 @@ struct UWidget_SchematicRewardItem_C_BndEvt__mSchematicRecipeButton_K2Node_Compo
 {
 };
 
-// Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.Construct
-struct UWidget_SchematicRewardItem_C_Construct_Params
-{
-};
-
 // Function Widget_SchematicRewardItem.Widget_SchematicRewardItem_C.ExecuteUbergraph_Widget_SchematicRewardItem
 struct UWidget_SchematicRewardItem_C_ExecuteUbergraph_Widget_SchematicRewardItem_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

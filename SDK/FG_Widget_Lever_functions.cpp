@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Lever.Widget_Lever_C.LeverShake
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            MaxOrMinSelectionIndex         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           MaxOrMinSelectionIndex         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Lever_C::LeverShake(int MaxOrMinSelectionIndex)
+void UWidget_Lever_C::LeverShake(int* MaxOrMinSelectionIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Lever.Widget_Lever_C.LeverShake");
 
@@ -33,7 +33,7 @@ void UWidget_Lever_C::LeverShake(int MaxOrMinSelectionIndex)
 
 
 // Function Widget_Lever.Widget_Lever_C.OnShake
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Lever_C::OnShake()
 {
@@ -50,11 +50,11 @@ void UWidget_Lever_C::OnShake()
 
 
 // Function Widget_Lever.Widget_Lever_C.SetShowButton
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ShowButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ShowButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Lever_C::SetShowButton(bool ShowButton)
+void UWidget_Lever_C::SetShowButton(bool* ShowButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Lever.Widget_Lever_C.SetShowButton");
 
@@ -70,7 +70,7 @@ void UWidget_Lever_C::SetShowButton(bool ShowButton)
 
 
 // Function Widget_Lever.Widget_Lever_C.StartLerp
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Lever_C::StartLerp()
 {
@@ -87,7 +87,7 @@ void UWidget_Lever_C::StartLerp()
 
 
 // Function Widget_Lever.Widget_Lever_C.GetCurrentSelectionPosOnSlider
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -108,13 +108,13 @@ float UWidget_Lever_C::GetCurrentSelectionPosOnSlider()
 
 
 // Function Widget_Lever.Widget_Lever_C.GetCalculatedCurve
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UCurveFloat*             CurveFloat                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          InTime                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UCurveFloat**            CurveFloat                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InTime                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UWidget_Lever_C::GetCalculatedCurve(class UCurveFloat* CurveFloat, float InTime)
+float UWidget_Lever_C::GetCalculatedCurve(class UCurveFloat** CurveFloat, float* InTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Lever.Widget_Lever_C.GetCalculatedCurve");
 
@@ -133,7 +133,7 @@ float UWidget_Lever_C::GetCalculatedCurve(class UCurveFloat* CurveFloat, float I
 
 
 // Function Widget_Lever.Widget_Lever_C.GetSliderMinClamp
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -154,7 +154,7 @@ float UWidget_Lever_C::GetSliderMinClamp()
 
 
 // Function Widget_Lever.Widget_Lever_C.GetSliderMaxClamp
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -175,11 +175,11 @@ float UWidget_Lever_C::GetSliderMaxClamp()
 
 
 // Function Widget_Lever.Widget_Lever_C.SetHandle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Lever_C::SetHandle(float Value)
+void UWidget_Lever_C::SetHandle(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Lever.Widget_Lever_C.SetHandle");
 
@@ -195,7 +195,7 @@ void UWidget_Lever_C::SetHandle(float Value)
 
 
 // Function Widget_Lever.Widget_Lever_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -215,7 +215,7 @@ void UWidget_Lever_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Lever.Widget_Lever_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Lever_C::Construct()
 {
@@ -232,11 +232,11 @@ void UWidget_Lever_C::Construct()
 
 
 // Function Widget_Lever.Widget_Lever_C.BndEvt__LeverHandle_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Lever.Widget_Lever_C.BndEvt__LeverHandle_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
 
@@ -252,7 +252,7 @@ void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_0_OnFloatVa
 
 
 // Function Widget_Lever.Widget_Lever_C.BndEvt__LeverHandle_K2Node_ComponentBoundEvent_3_OnMouseCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_3_OnMouseCaptureEndEvent__DelegateSignature()
 {
@@ -269,7 +269,7 @@ void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_3_OnMouseCa
 
 
 // Function Widget_Lever.Widget_Lever_C.BndEvt__LeverHandle_K2Node_ComponentBoundEvent_4_OnControllerCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_4_OnControllerCaptureEndEvent__DelegateSignature()
 {
@@ -286,7 +286,7 @@ void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_4_OnControl
 
 
 // Function Widget_Lever.Widget_Lever_C.LerpLever
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Lever_C::LerpLever()
 {
@@ -303,7 +303,7 @@ void UWidget_Lever_C::LerpLever()
 
 
 // Function Widget_Lever.Widget_Lever_C.BndEvt__LeverHandle_K2Node_ComponentBoundEvent_5_OnMouseCaptureBeginEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_5_OnMouseCaptureBeginEvent__DelegateSignature()
 {
@@ -320,7 +320,7 @@ void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_5_OnMouseCa
 
 
 // Function Widget_Lever.Widget_Lever_C.BndEvt__LeverHandle_K2Node_ComponentBoundEvent_6_OnControllerCaptureBeginEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_6_OnControllerCaptureBeginEvent__DelegateSignature()
 {
@@ -337,11 +337,11 @@ void UWidget_Lever_C::BndEvt__LeverHandle_K2Node_ComponentBoundEvent_6_OnControl
 
 
 // Function Widget_Lever.Widget_Lever_C.ExecuteUbergraph_Widget_Lever
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Lever_C::ExecuteUbergraph_Widget_Lever(int EntryPoint)
+void UWidget_Lever_C::ExecuteUbergraph_Widget_Lever(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Lever.Widget_Lever_C.ExecuteUbergraph_Widget_Lever");
 
@@ -357,11 +357,11 @@ void UWidget_Lever_C::ExecuteUbergraph_Widget_Lever(int EntryPoint)
 
 
 // Function Widget_Lever.Widget_Lever_C.OnNewSelection__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            SelectionIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SelectionIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Lever_C::OnNewSelection__DelegateSignature(int SelectionIndex)
+void UWidget_Lever_C::OnNewSelection__DelegateSignature(int* SelectionIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Lever.Widget_Lever_C.OnNewSelection__DelegateSignature");
 

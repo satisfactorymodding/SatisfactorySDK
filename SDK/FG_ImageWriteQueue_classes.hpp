@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void ExportToDisk(class UTexture* Texture, const class FString& Filename, const struct FImageWriteOptions& options);
+	void STATIC_ExportToDisk(class UTexture** Texture, class FString* Filename, struct FImageWriteOptions* options);
 };
 
 

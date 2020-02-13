@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_OilPump.Build_OilPump_C.GetExtractedResource
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UClass*                  Resource                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,11 +35,11 @@ void ABuild_OilPump_C::GetExtractedResource(class UClass** Resource)
 
 
 // Function Build_OilPump.Build_OilPump_C.SetDisplayText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  newText                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABuild_OilPump_C::SetDisplayText(const struct FText& newText)
+void ABuild_OilPump_C::SetDisplayText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.SetDisplayText");
 
@@ -54,31 +54,17 @@ void ABuild_OilPump_C::SetDisplayText(const struct FText& newText)
 }
 
 
-// Function Build_OilPump.Build_OilPump_C.UserConstructionScript
-// ()
-
-void ABuild_OilPump_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.UserConstructionScript");
-
-	ABuild_OilPump_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_OilPump.Build_OilPump_C.StopIdlingLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didLosePower                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_OilPump_C::StopIdlingLoopEffects()
+void ABuild_OilPump_C::StopIdlingLoopEffects(bool* didLosePower)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.StopIdlingLoopEffects");
 
 	ABuild_OilPump_C_StopIdlingLoopEffects_Params params;
+	params.didLosePower = didLosePower;
 
 	auto flags = fn->FunctionFlags;
 
@@ -89,13 +75,16 @@ void ABuild_OilPump_C::StopIdlingLoopEffects()
 
 
 // Function Build_OilPump.Build_OilPump_C.StopProductionLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didStopProducing               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_OilPump_C::StopProductionLoopEffects()
+void ABuild_OilPump_C::StopProductionLoopEffects(bool* didStopProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.StopProductionLoopEffects");
 
 	ABuild_OilPump_C_StopProductionLoopEffects_Params params;
+	params.didStopProducing = didStopProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -106,7 +95,7 @@ void ABuild_OilPump_C::StopProductionLoopEffects()
 
 
 // Function Build_OilPump.Build_OilPump_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_OilPump_C::LostSignificance()
 {
@@ -123,7 +112,7 @@ void ABuild_OilPump_C::LostSignificance()
 
 
 // Function Build_OilPump.Build_OilPump_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_OilPump_C::GainedSignificance()
 {
@@ -140,13 +129,16 @@ void ABuild_OilPump_C::GainedSignificance()
 
 
 // Function Build_OilPump.Build_OilPump_C.StartIdlingLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didGainPower                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_OilPump_C::StartIdlingLoopEffects()
+void ABuild_OilPump_C::StartIdlingLoopEffects(bool* didGainPower)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.StartIdlingLoopEffects");
 
 	ABuild_OilPump_C_StartIdlingLoopEffects_Params params;
+	params.didGainPower = didGainPower;
 
 	auto flags = fn->FunctionFlags;
 
@@ -157,13 +149,16 @@ void ABuild_OilPump_C::StartIdlingLoopEffects()
 
 
 // Function Build_OilPump.Build_OilPump_C.StartProductionLoopEffects
-// ()
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          didStartProducing              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_OilPump_C::StartProductionLoopEffects()
+void ABuild_OilPump_C::StartProductionLoopEffects(bool* didStartProducing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.StartProductionLoopEffects");
 
 	ABuild_OilPump_C_StartProductionLoopEffects_Params params;
+	params.didStartProducing = didStartProducing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -174,11 +169,11 @@ void ABuild_OilPump_C::StartProductionLoopEffects()
 
 
 // Function Build_OilPump.Build_OilPump_C.ExecuteUbergraph_Build_OilPump
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_OilPump_C::ExecuteUbergraph_Build_OilPump(int EntryPoint)
+void ABuild_OilPump_C::ExecuteUbergraph_Build_OilPump(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_OilPump.Build_OilPump_C.ExecuteUbergraph_Build_OilPump");
 

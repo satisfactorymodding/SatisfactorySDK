@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Ship.BP_Ship_C.UserConstructionScript
-// ()
-
-void ABP_Ship_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Ship.BP_Ship_C.UserConstructionScript");
-
-	ABP_Ship_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Ship.BP_Ship_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_Ship_C::GainedSignificance()
 {
@@ -47,7 +30,7 @@ void ABP_Ship_C::GainedSignificance()
 
 
 // Function BP_Ship.BP_Ship_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_Ship_C::LostSignificance()
 {
@@ -64,7 +47,7 @@ void ABP_Ship_C::LostSignificance()
 
 
 // Function BP_Ship.BP_Ship_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Ship_C::ReceiveBeginPlay()
 {
@@ -81,7 +64,7 @@ void ABP_Ship_C::ReceiveBeginPlay()
 
 
 // Function BP_Ship.BP_Ship_C.ReceiveEndPlay
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -101,11 +84,11 @@ void ABP_Ship_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
 
 
 // Function BP_Ship.BP_Ship_C.ExecuteUbergraph_BP_Ship
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Ship_C::ExecuteUbergraph_BP_Ship(int EntryPoint)
+void ABP_Ship_C::ExecuteUbergraph_BP_Ship(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Ship.BP_Ship_C.ExecuteUbergraph_BP_Ship");
 

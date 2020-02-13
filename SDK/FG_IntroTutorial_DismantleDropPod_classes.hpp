@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass IntroTutorial_DismantleDropPod.IntroTutorial_DismantleDropPod_C
-// 0x0000 (0x02F0 - 0x02F0)
+// 0x0000 (0x0328 - 0x0328)
 class UIntroTutorial_DismantleDropPod_C : public UWidget_AudioMessage_C
 {
 public:

@@ -22,13 +22,18 @@ struct UWidget_InviteNotification_C_Construct_Params
 // Function Widget_InviteNotification.Widget_InviteNotification_C.OnInviteReceived
 struct UWidget_InviteNotification_C_OnInviteReceived_Params
 {
-	struct FPendingInvite                              receivedInvite;                                           // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FPendingInvite*                             receivedInvite;                                           // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function Widget_InviteNotification.Widget_InviteNotification_C.Destruct
+struct UWidget_InviteNotification_C_Destruct_Params
+{
 };
 
 // Function Widget_InviteNotification.Widget_InviteNotification_C.ExecuteUbergraph_Widget_InviteNotification
 struct UWidget_InviteNotification_C_ExecuteUbergraph_Widget_InviteNotification_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

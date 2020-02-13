@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Anim_Up_Slide.Widget_Anim_Up_Slide_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Anim_Up_Slide_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_Anim_Up_Slide_C::Construct()
 
 
 // Function Widget_Anim_Up_Slide.Widget_Anim_Up_Slide_C.CloseAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Anim_Up_Slide_C::CloseAnim()
 {
@@ -47,7 +47,7 @@ void UWidget_Anim_Up_Slide_C::CloseAnim()
 
 
 // Function Widget_Anim_Up_Slide.Widget_Anim_Up_Slide_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Anim_Up_Slide_C::Destruct()
 {
@@ -64,11 +64,11 @@ void UWidget_Anim_Up_Slide_C::Destruct()
 
 
 // Function Widget_Anim_Up_Slide.Widget_Anim_Up_Slide_C.ExecuteUbergraph_Widget_Anim_Up_Slide
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Anim_Up_Slide_C::ExecuteUbergraph_Widget_Anim_Up_Slide(int EntryPoint)
+void UWidget_Anim_Up_Slide_C::ExecuteUbergraph_Widget_Anim_Up_Slide(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Anim_Up_Slide.Widget_Anim_Up_Slide_C.ExecuteUbergraph_Widget_Anim_Up_Slide");
 

@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
+#include "FG_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -25,11 +25,12 @@ struct FConnectionAlwaysRelevantNodePair
 };
 
 // ScriptStruct ReplicationGraph.TearOffActorInfo
-// 0x0010
+// 0x0018
 struct FTearOffActorInfo
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	class AActor*                                      Actor;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
 };
 
 }

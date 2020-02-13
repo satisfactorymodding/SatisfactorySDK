@@ -54,15 +54,10 @@ struct UWidget_TradingPost_RecipePreview_C_GetActivateButtonVisibility_Params
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.GetSchematicContents
-struct UWidget_TradingPost_RecipePreview_C_GetSchematicContents_Params
+// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.SetupSchematicContents
+struct UWidget_TradingPost_RecipePreview_C_SetupSchematicContents_Params
 {
-	class UClass*                                      mSchematic;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.Construct
-struct UWidget_TradingPost_RecipePreview_C_Construct_Params
-{
+	class UClass**                                     mSchematic;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.AnimateRewards
@@ -70,15 +65,15 @@ struct UWidget_TradingPost_RecipePreview_C_AnimateRewards_Params
 {
 };
 
-// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.AnimateCostSlots
-struct UWidget_TradingPost_RecipePreview_C_AnimateCostSlots_Params
+// Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.AnimateCostslots
+struct UWidget_TradingPost_RecipePreview_C_AnimateCostslots_Params
 {
 };
 
 // Function Widget_TradingPost_RecipePreview.Widget_TradingPost_RecipePreview_C.ExecuteUbergraph_Widget_TradingPost_RecipePreview
 struct UWidget_TradingPost_RecipePreview_C_ExecuteUbergraph_Widget_TradingPost_RecipePreview_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

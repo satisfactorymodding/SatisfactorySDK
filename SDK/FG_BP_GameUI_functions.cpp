@@ -12,8 +12,31 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_GameUI.BP_GameUI_C.PopWidget
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFGInteractWidget**      WidgetToRemove                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBP_GameUI_C::PopWidget(class UFGInteractWidget** WidgetToRemove)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PopWidget");
+
+	UBP_GameUI_C_PopWidget_Params params;
+	params.WidgetToRemove = WidgetToRemove;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_GameUI.BP_GameUI_C.OnPreviewKeyDown
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -38,7 +61,7 @@ struct FEventReply UBP_GameUI_C::OnPreviewKeyDown(struct FGeometry* MyGeometry, 
 
 
 // Function BP_GameUI.BP_GameUI_C.SetVersionLabelPosition
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::SetVersionLabelPosition()
 {
@@ -55,7 +78,7 @@ void UBP_GameUI_C::SetVersionLabelPosition()
 
 
 // Function BP_GameUI.BP_GameUI_C.GetExperimentalVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::GetExperimentalVisibility()
 {
@@ -72,7 +95,7 @@ void UBP_GameUI_C::GetExperimentalVisibility()
 
 
 // Function BP_GameUI.BP_GameUI_C.GetChildUIVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -93,11 +116,11 @@ ESlateVisibility UBP_GameUI_C::GetChildUIVisibility()
 
 
 // Function BP_GameUI.BP_GameUI_C.PrePopWidget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInteractWidget*       WidgetBeingRemoved             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInteractWidget**      WidgetBeingRemoved             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBP_GameUI_C::PrePopWidget(class UFGInteractWidget* WidgetBeingRemoved)
+void UBP_GameUI_C::PrePopWidget(class UFGInteractWidget** WidgetBeingRemoved)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PrePopWidget");
 
@@ -113,7 +136,7 @@ void UBP_GameUI_C::PrePopWidget(class UFGInteractWidget* WidgetBeingRemoved)
 
 
 // Function BP_GameUI.BP_GameUI_C.ShowTutorialHint
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::ShowTutorialHint()
 {
@@ -129,16 +152,16 @@ void UBP_GameUI_C::ShowTutorialHint()
 }
 
 
-// Function BP_GameUI.BP_GameUI_C.GetFGHUD
-// ()
+// Function BP_GameUI.BP_GameUI_C.GetFGHud
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AFGHUD*                  HUD                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GameUI_C::GetFGHUD(class AFGHUD** HUD)
+void UBP_GameUI_C::GetFGHud(class AFGHUD** HUD)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.GetFGHUD");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.GetFGHud");
 
-	UBP_GameUI_C_GetFGHUD_Params params;
+	UBP_GameUI_C_GetFGHud_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -152,11 +175,11 @@ void UBP_GameUI_C::GetFGHUD(class AFGHUD** HUD)
 
 
 // Function BP_GameUI.BP_GameUI_C.SetPrototypeCameraVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           New_Visibility                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          New_Visibility                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GameUI_C::SetPrototypeCameraVisibility(bool New_Visibility)
+void UBP_GameUI_C::SetPrototypeCameraVisibility(bool* New_Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.SetPrototypeCameraVisibility");
 
@@ -172,11 +195,11 @@ void UBP_GameUI_C::SetPrototypeCameraVisibility(bool New_Visibility)
 
 
 // Function BP_GameUI.BP_GameUI_C.SetPrototypeVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           NewVisibility                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          NewVisibility                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GameUI_C::SetPrototypeVisibility(bool NewVisibility)
+void UBP_GameUI_C::SetPrototypeVisibility(bool* NewVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.SetPrototypeVisibility");
 
@@ -192,12 +215,12 @@ void UBP_GameUI_C::SetPrototypeVisibility(bool NewVisibility)
 
 
 // Function BP_GameUI.BP_GameUI_C.OnInventorySlotStackMove
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_InventorySlot_C* InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<EInteractionDirection> InteractionDirection           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<EInteractionDirection>* InteractionDirection           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GameUI_C::OnInventorySlotStackMove(class UWidget_InventorySlot_C* InventorySlot, TEnumAsByte<EInteractionDirection> InteractionDirection)
+void UBP_GameUI_C::OnInventorySlotStackMove(class UWidget_InventorySlot_C** InventorySlot, TEnumAsByte<EInteractionDirection>* InteractionDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.OnInventorySlotStackMove");
 
@@ -214,11 +237,12 @@ void UBP_GameUI_C::OnInventorySlotStackMove(class UWidget_InventorySlot_C* Inven
 
 
 // Function BP_GameUI.BP_GameUI_C.CreateAddOnPlayerInventory
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*            Container                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPanelWidget**           Container                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_PlayerInventoryAddon_C* CachedPlayerInventoryAddon     (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBP_GameUI_C::CreateAddOnPlayerInventory(class UPanelWidget* Container)
+void UBP_GameUI_C::CreateAddOnPlayerInventory(class UPanelWidget** Container, class UWidget_PlayerInventoryAddon_C** CachedPlayerInventoryAddon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.CreateAddOnPlayerInventory");
 
@@ -230,11 +254,14 @@ void UBP_GameUI_C::CreateAddOnPlayerInventory(class UPanelWidget* Container)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	if (CachedPlayerInventoryAddon != nullptr)
+		*CachedPlayerInventoryAddon = params.CachedPlayerInventoryAddon;
 }
 
 
 // Function BP_GameUI.BP_GameUI_C.IsChatWindowVisible
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -254,28 +281,8 @@ ESlateVisibility UBP_GameUI_C::IsChatWindowVisible()
 }
 
 
-// Function BP_GameUI.BP_GameUI_C.PlayAudioMessage
-// ()
-// Parameters:
-// class UClass*                  MessageClass                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UBP_GameUI_C::PlayAudioMessage(class UClass* MessageClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PlayAudioMessage");
-
-	UBP_GameUI_C_PlayAudioMessage_Params params;
-	params.MessageClass = MessageClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_GameUI.BP_GameUI_C.GetUIVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -296,17 +303,17 @@ ESlateVisibility UBP_GameUI_C::GetUIVisibility()
 
 
 // Function BP_GameUI.BP_GameUI_C.GetEquipmentHUDParent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EEquipmentSlot                 slotType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// EEquipmentSlot*                SlotType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UOverlay*                overlayParent                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBP_GameUI_C::GetEquipmentHUDParent(EEquipmentSlot slotType, class UOverlay** overlayParent)
+void UBP_GameUI_C::GetEquipmentHUDParent(EEquipmentSlot* SlotType, class UOverlay** overlayParent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.GetEquipmentHUDParent");
 
 	UBP_GameUI_C_GetEquipmentHUDParent_Params params;
-	params.slotType = slotType;
+	params.SlotType = SlotType;
 
 	auto flags = fn->FunctionFlags;
 
@@ -320,7 +327,7 @@ void UBP_GameUI_C::GetEquipmentHUDParent(EEquipmentSlot slotType, class UOverlay
 
 
 // Function BP_GameUI.BP_GameUI_C.OnKeyDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -345,7 +352,7 @@ struct FEventReply UBP_GameUI_C::OnKeyDown(struct FGeometry* MyGeometry, struct 
 
 
 // Function BP_GameUI.BP_GameUI_C.HUDPanelVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -366,7 +373,7 @@ ESlateVisibility UBP_GameUI_C::HUDPanelVisibility()
 
 
 // Function BP_GameUI.BP_GameUI_C.GetMessageNotifierVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -387,7 +394,7 @@ ESlateVisibility UBP_GameUI_C::GetMessageNotifierVisibility()
 
 
 // Function BP_GameUI.BP_GameUI_C.UpdateHUDVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::UpdateHUDVisibility()
 {
@@ -404,7 +411,7 @@ void UBP_GameUI_C::UpdateHUDVisibility()
 
 
 // Function BP_GameUI.BP_GameUI_C.GetSchematicPopupVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -425,11 +432,11 @@ ESlateVisibility UBP_GameUI_C::GetSchematicPopupVisibility()
 
 
 // Function BP_GameUI.BP_GameUI_C.AddMessageNotification
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  newMessage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 newMessage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GameUI_C::AddMessageNotification(class UClass* newMessage)
+void UBP_GameUI_C::AddMessageNotification(class UClass** newMessage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.AddMessageNotification");
 
@@ -445,7 +452,7 @@ void UBP_GameUI_C::AddMessageNotification(class UClass* newMessage)
 
 
 // Function BP_GameUI.BP_GameUI_C.GetItemDropLocation
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 dropLocation                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -467,7 +474,7 @@ void UBP_GameUI_C::GetItemDropLocation(struct FVector* dropLocation)
 
 
 // Function BP_GameUI.BP_GameUI_C.OnDrop
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -494,7 +501,7 @@ bool UBP_GameUI_C::OnDrop(struct FGeometry* MyGeometry, struct FPointerEvent* Po
 
 
 // Function BP_GameUI.BP_GameUI_C.RefreshInputMode
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::RefreshInputMode()
 {
@@ -511,7 +518,7 @@ void UBP_GameUI_C::RefreshInputMode()
 
 
 // Function BP_GameUI.BP_GameUI_C.CreatePopupWidget
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FPopupData*             PopupData                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UFGPopupWidget*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
@@ -534,7 +541,7 @@ class UFGPopupWidget* UBP_GameUI_C::CreatePopupWidget(struct FPopupData* PopupDa
 
 
 // Function BP_GameUI.BP_GameUI_C.GetReloadRespawnText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -555,7 +562,7 @@ struct FText UBP_GameUI_C::GetReloadRespawnText()
 
 
 // Function BP_GameUI.BP_GameUI_C.GetReloadRespawnTextVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -576,7 +583,7 @@ ESlateVisibility UBP_GameUI_C::GetReloadRespawnTextVisibility()
 
 
 // Function BP_GameUI.BP_GameUI_C.PopAllWidgets_Internal
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::PopAllWidgets_Internal()
 {
@@ -592,37 +599,13 @@ void UBP_GameUI_C::PopAllWidgets_Internal()
 }
 
 
-// Function BP_GameUI.BP_GameUI_C.FindWidgetByClass
-// ()
-// Parameters:
-// class UClass*                  WidgetClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UFGInteractWidget*       Widget                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UBP_GameUI_C::FindWidgetByClass(class UClass* WidgetClass, class UFGInteractWidget** Widget)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.FindWidgetByClass");
-
-	UBP_GameUI_C_FindWidgetByClass_Params params;
-	params.WidgetClass = WidgetClass;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (Widget != nullptr)
-		*Widget = params.Widget;
-}
-
-
 // Function BP_GameUI.BP_GameUI_C.DoesWidgetExist
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UClass*                  WidgetClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 WidgetClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           doesExist                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GameUI_C::DoesWidgetExist(class UClass* WidgetClass, bool* doesExist)
+void UBP_GameUI_C::DoesWidgetExist(class UClass** WidgetClass, bool* doesExist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.DoesWidgetExist");
 
@@ -641,11 +624,11 @@ void UBP_GameUI_C::DoesWidgetExist(class UClass* WidgetClass, bool* doesExist)
 
 
 // Function BP_GameUI.BP_GameUI_C.FindWidgetToPop
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInteractWidget*       WidgetToPop                    (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInteractWidget*       widgetToPop                    (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBP_GameUI_C::FindWidgetToPop(class UFGInteractWidget** WidgetToPop)
+void UBP_GameUI_C::FindWidgetToPop(class UFGInteractWidget** widgetToPop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.FindWidgetToPop");
 
@@ -657,33 +640,13 @@ void UBP_GameUI_C::FindWidgetToPop(class UFGInteractWidget** WidgetToPop)
 
 	fn->FunctionFlags = flags;
 
-	if (WidgetToPop != nullptr)
-		*WidgetToPop = params.WidgetToPop;
-}
-
-
-// Function BP_GameUI.BP_GameUI_C.PopWidget
-// ()
-// Parameters:
-// class UFGInteractWidget*       widgetToRemove                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UBP_GameUI_C::PopWidget(class UFGInteractWidget* widgetToRemove)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PopWidget");
-
-	UBP_GameUI_C_PopWidget_Params params;
-	params.widgetToRemove = widgetToRemove;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
+	if (widgetToPop != nullptr)
+		*widgetToPop = params.widgetToPop;
 }
 
 
 // Function BP_GameUI.BP_GameUI_C.GetPlayerInteractionVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -703,25 +666,8 @@ ESlateVisibility UBP_GameUI_C::GetPlayerInteractionVisibility()
 }
 
 
-// Function BP_GameUI.BP_GameUI_C.PopAllWidgets
-// ()
-
-void UBP_GameUI_C::PopAllWidgets()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PopAllWidgets");
-
-	UBP_GameUI_C_PopAllWidgets_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_GameUI.BP_GameUI_C.ClosePopup
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::ClosePopup()
 {
@@ -738,7 +684,7 @@ void UBP_GameUI_C::ClosePopup()
 
 
 // Function BP_GameUI.BP_GameUI_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBP_GameUI_C::Destruct()
 {
@@ -755,11 +701,11 @@ void UBP_GameUI_C::Destruct()
 
 
 // Function BP_GameUI.BP_GameUI_C.Play Landed Effect
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Velocity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Velocity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GameUI_C::Play_Landed_Effect(float Velocity)
+void UBP_GameUI_C::Play_Landed_Effect(float* Velocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.Play Landed Effect");
 
@@ -774,17 +720,14 @@ void UBP_GameUI_C::Play_Landed_Effect(float Velocity)
 }
 
 
-// Function BP_GameUI.BP_GameUI_C.PushWidget
-// ()
-// Parameters:
-// class UFGInteractWidget*       Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// Function BP_GameUI.BP_GameUI_C.PopAllWidgets
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_GameUI_C::PushWidget(class UFGInteractWidget* Widget)
+void UBP_GameUI_C::PopAllWidgets()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PushWidget");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PopAllWidgets");
 
-	UBP_GameUI_C_PushWidget_Params params;
-	params.Widget = Widget;
+	UBP_GameUI_C_PopAllWidgets_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -795,7 +738,7 @@ void UBP_GameUI_C::PushWidget(class UFGInteractWidget* Widget)
 
 
 // Function BP_GameUI.BP_GameUI_C.ReceivedMessage
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UClass**                 inMessage                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -815,7 +758,7 @@ void UBP_GameUI_C::ReceivedMessage(class UClass** inMessage)
 
 
 // Function BP_GameUI.BP_GameUI_C.RemoveAudioMessage
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_GameUI_C::RemoveAudioMessage()
 {
@@ -832,7 +775,7 @@ void UBP_GameUI_C::RemoveAudioMessage()
 
 
 // Function BP_GameUI.BP_GameUI_C.AddIntroTutorialInfo
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FTutorialHintData*      TutorialHintData               (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -852,11 +795,11 @@ void UBP_GameUI_C::AddIntroTutorialInfo(struct FTutorialHintData* TutorialHintDa
 
 
 // Function BP_GameUI.BP_GameUI_C.UpdateTutorialInfo
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FTutorialHintData       hintData                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FTutorialHintData*      hintData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_GameUI_C::UpdateTutorialInfo(const struct FTutorialHintData& hintData)
+void UBP_GameUI_C::UpdateTutorialInfo(struct FTutorialHintData* hintData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.UpdateTutorialInfo");
 
@@ -872,7 +815,7 @@ void UBP_GameUI_C::UpdateTutorialInfo(const struct FTutorialHintData& hintData)
 
 
 // Function BP_GameUI.BP_GameUI_C.HandleFocusLost
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::HandleFocusLost()
 {
@@ -889,7 +832,7 @@ void UBP_GameUI_C::HandleFocusLost()
 
 
 // Function BP_GameUI.BP_GameUI_C.AddPawnHUD
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UUserWidget**            newContent                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -909,7 +852,7 @@ void UBP_GameUI_C::AddPawnHUD(class UUserWidget** newContent)
 
 
 // Function BP_GameUI.BP_GameUI_C.RemovePawnHUD
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::RemovePawnHUD()
 {
@@ -926,7 +869,7 @@ void UBP_GameUI_C::RemovePawnHUD()
 
 
 // Function BP_GameUI.BP_GameUI_C.AddInteractWidget
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFGInteractWidget**      widgetToAdd                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -946,7 +889,7 @@ void UBP_GameUI_C::AddInteractWidget(class UFGInteractWidget** widgetToAdd)
 
 
 // Function BP_GameUI.BP_GameUI_C.OnPlayerBeginTypeMessage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::OnPlayerBeginTypeMessage()
 {
@@ -963,7 +906,7 @@ void UBP_GameUI_C::OnPlayerBeginTypeMessage()
 
 
 // Function BP_GameUI.BP_GameUI_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBP_GameUI_C::Construct()
 {
@@ -980,7 +923,7 @@ void UBP_GameUI_C::Construct()
 
 
 // Function BP_GameUI.BP_GameUI_C.OnChatMessageReceived
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::OnChatMessageReceived()
 {
@@ -997,7 +940,7 @@ void UBP_GameUI_C::OnChatMessageReceived()
 
 
 // Function BP_GameUI.BP_GameUI_C.ClearHintOnTutorialStepCompleted
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_GameUI_C::ClearHintOnTutorialStepCompleted()
 {
@@ -1013,25 +956,8 @@ void UBP_GameUI_C::ClearHintOnTutorialStepCompleted()
 }
 
 
-// Function BP_GameUI.BP_GameUI_C.ResetInput
-// ()
-
-void UBP_GameUI_C::ResetInput()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.ResetInput");
-
-	UBP_GameUI_C_ResetInput_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_GameUI.BP_GameUI_C.ShowRespawnMessage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::ShowRespawnMessage()
 {
@@ -1047,8 +973,25 @@ void UBP_GameUI_C::ShowRespawnMessage()
 }
 
 
+// Function BP_GameUI.BP_GameUI_C.ResetInput
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_GameUI_C::ResetInput()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.ResetInput");
+
+	UBP_GameUI_C_ResetInput_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_GameUI.BP_GameUI_C.OnReceiveRadiationStart
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_GameUI_C::OnReceiveRadiationStart()
 {
@@ -1065,7 +1008,7 @@ void UBP_GameUI_C::OnReceiveRadiationStart()
 
 
 // Function BP_GameUI.BP_GameUI_C.OnReceiveRadiationStop
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_GameUI_C::OnReceiveRadiationStop()
 {
@@ -1082,7 +1025,7 @@ void UBP_GameUI_C::OnReceiveRadiationStop()
 
 
 // Function BP_GameUI.BP_GameUI_C.OnRadiationIntensityUpdated
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         radiationIntensity             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         radiationImmunity              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1104,7 +1047,7 @@ void UBP_GameUI_C::OnRadiationIntensityUpdated(float* radiationIntensity, float*
 
 
 // Function BP_GameUI.BP_GameUI_C.ForceStopRadiationUI
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_GameUI_C::ForceStopRadiationUI()
 {
@@ -1120,12 +1063,152 @@ void UBP_GameUI_C::ForceStopRadiationUI()
 }
 
 
-// Function BP_GameUI.BP_GameUI_C.ExecuteUbergraph_BP_GameUI
-// ()
+// Function BP_GameUI.BP_GameUI_C.StopSubtitle_dep
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 Instigator                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UBP_GameUI_C::ExecuteUbergraph_BP_GameUI(int EntryPoint)
+void UBP_GameUI_C::StopSubtitle_dep(class AActor** Instigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.StopSubtitle_dep");
+
+	UBP_GameUI_C_StopSubtitle_dep_Params params;
+	params.Instigator = Instigator;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameUI.BP_GameUI_C.PushWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFGInteractWidget**      Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UBP_GameUI_C::PushWidget(class UFGInteractWidget** Widget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PushWidget");
+
+	UBP_GameUI_C_PushWidget_Params params;
+	params.Widget = Widget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameUI.BP_GameUI_C.ShowDirectionalSubtitle
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  Subtitle                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AActor**                 Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bUseDuration                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_GameUI_C::ShowDirectionalSubtitle(struct FText* Subtitle, class AActor** Instigator, float* Duration, bool* bUseDuration)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.ShowDirectionalSubtitle");
+
+	UBP_GameUI_C_ShowDirectionalSubtitle_Params params;
+	params.Subtitle = Subtitle;
+	params.Instigator = Instigator;
+	params.Duration = Duration;
+	params.bUseDuration = bUseDuration;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameUI.BP_GameUI_C.StopSubtitle
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor**                 Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_GameUI_C::StopSubtitle(class AActor** Instigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.StopSubtitle");
+
+	UBP_GameUI_C_StopSubtitle_Params params;
+	params.Instigator = Instigator;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameUI.BP_GameUI_C.EventUpdateHUDScaling
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_GameUI_C::EventUpdateHUDScaling()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.EventUpdateHUDScaling");
+
+	UBP_GameUI_C_EventUpdateHUDScaling_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameUI.BP_GameUI_C.PlayAudioMessage
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass**                 MessageClass                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_GameUI_C::PlayAudioMessage(class UClass** MessageClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.PlayAudioMessage");
+
+	UBP_GameUI_C_PlayAudioMessage_Params params;
+	params.MessageClass = MessageClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameUI.BP_GameUI_C.OnResumeGame
+// (Event, Public, BlueprintEvent)
+
+void UBP_GameUI_C::OnResumeGame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.OnResumeGame");
+
+	UBP_GameUI_C_OnResumeGame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameUI.BP_GameUI_C.ExecuteUbergraph_BP_GameUI
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_GameUI_C::ExecuteUbergraph_BP_GameUI(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameUI.BP_GameUI_C.ExecuteUbergraph_BP_GameUI");
 

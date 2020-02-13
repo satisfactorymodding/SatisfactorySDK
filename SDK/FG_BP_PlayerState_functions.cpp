@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_PlayerState.BP_PlayerState_C.ClearShoppingList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerState_C::ClearShoppingList()
 {
@@ -30,7 +30,7 @@ void ABP_PlayerState_C::ClearShoppingList()
 
 
 // Function BP_PlayerState.BP_PlayerState_C.ShoppingListUpdated
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerState_C::ShoppingListUpdated()
 {
@@ -47,7 +47,7 @@ void ABP_PlayerState_C::ShoppingListUpdated()
 
 
 // Function BP_PlayerState.BP_PlayerState_C.OnRep_mShoppingList
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerState_C::OnRep_mShoppingList()
 {
@@ -64,7 +64,7 @@ void ABP_PlayerState_C::OnRep_mShoppingList()
 
 
 // Function BP_PlayerState.BP_PlayerState_C.GetShoppingListSortIndex
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FRecipeAmountStruct     RecipeAmountStruct             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -89,7 +89,7 @@ int ABP_PlayerState_C::GetShoppingListSortIndex(struct FRecipeAmountStruct* Reci
 
 
 // Function BP_PlayerState.BP_PlayerState_C.SortShoppingList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerState_C::SortShoppingList()
 {
@@ -106,12 +106,12 @@ void ABP_PlayerState_C::SortShoppingList()
 
 
 // Function BP_PlayerState.BP_PlayerState_C.SetNumRecipeInShoppingList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::SetNumRecipeInShoppingList(class UClass* Recipe, int NumRecipes)
+void ABP_PlayerState_C::SetNumRecipeInShoppingList(class UClass** Recipe, int* NumRecipes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.SetNumRecipeInShoppingList");
 
@@ -128,11 +128,11 @@ void ABP_PlayerState_C::SetNumRecipeInShoppingList(class UClass* Recipe, int Num
 
 
 // Function BP_PlayerState.BP_PlayerState_C.PonderUpdatingShoppingList
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::PonderUpdatingShoppingList(class UClass* InputPin)
+void ABP_PlayerState_C::PonderUpdatingShoppingList(class UClass** InputPin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.PonderUpdatingShoppingList");
 
@@ -148,12 +148,12 @@ void ABP_PlayerState_C::PonderUpdatingShoppingList(class UClass* InputPin)
 
 
 // Function BP_PlayerState.BP_PlayerState_C.AddRecipeToShoppingList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::AddRecipeToShoppingList(class UClass* Recipe, int NumRecipes)
+void ABP_PlayerState_C::AddRecipeToShoppingList(class UClass** Recipe, int* NumRecipes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.AddRecipeToShoppingList");
 
@@ -170,12 +170,12 @@ void ABP_PlayerState_C::AddRecipeToShoppingList(class UClass* Recipe, int NumRec
 
 
 // Function BP_PlayerState.BP_PlayerState_C.RemoveRecipeFromShoppingList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::RemoveRecipeFromShoppingList(class UClass* Recipe, int NumRecipes)
+void ABP_PlayerState_C::RemoveRecipeFromShoppingList(class UClass** Recipe, int* NumRecipes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.RemoveRecipeFromShoppingList");
 
@@ -191,25 +191,8 @@ void ABP_PlayerState_C::RemoveRecipeFromShoppingList(class UClass* Recipe, int N
 }
 
 
-// Function BP_PlayerState.BP_PlayerState_C.UserConstructionScript
-// ()
-
-void ABP_PlayerState_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.UserConstructionScript");
-
-	ABP_PlayerState_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_PlayerState.BP_PlayerState_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_PlayerState_C::ReceiveBeginPlay()
 {
@@ -226,11 +209,11 @@ void ABP_PlayerState_C::ReceiveBeginPlay()
 
 
 // Function BP_PlayerState.BP_PlayerState_C.BroadcastChatMessage
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   ChatMessageIn                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  ChatMessageIn                  (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerState_C::BroadcastChatMessage(const struct FText& ChatMessageIn)
+void ABP_PlayerState_C::BroadcastChatMessage(struct FText* ChatMessageIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.BroadcastChatMessage");
 
@@ -246,12 +229,12 @@ void ABP_PlayerState_C::BroadcastChatMessage(const struct FText& ChatMessageIn)
 
 
 // Function BP_PlayerState.BP_PlayerState_C.ReceiveChatMessage
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   ChatMessageIn                  (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   ChatSender                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  ChatMessageIn                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  ChatSender                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerState_C::ReceiveChatMessage(const struct FText& ChatMessageIn, const struct FText& ChatSender)
+void ABP_PlayerState_C::ReceiveChatMessage(struct FText* ChatMessageIn, struct FText* ChatSender)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.ReceiveChatMessage");
 
@@ -268,11 +251,11 @@ void ABP_PlayerState_C::ReceiveChatMessage(const struct FText& ChatMessageIn, co
 
 
 // Function BP_PlayerState.BP_PlayerState_C.OnBuildableConstructed
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  itemDescriptor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 itemDescriptor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::OnBuildableConstructed(class UClass* itemDescriptor)
+void ABP_PlayerState_C::OnBuildableConstructed(class UClass** itemDescriptor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.OnBuildableConstructed");
 
@@ -288,12 +271,12 @@ void ABP_PlayerState_C::OnBuildableConstructed(class UClass* itemDescriptor)
 
 
 // Function BP_PlayerState.BP_PlayerState_C.Server_AddRecipeToShoppingList
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::Server_AddRecipeToShoppingList(class UClass* Recipe, int NumRecipes)
+void ABP_PlayerState_C::Server_AddRecipeToShoppingList(class UClass** Recipe, int* NumRecipes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.Server_AddRecipeToShoppingList");
 
@@ -310,12 +293,12 @@ void ABP_PlayerState_C::Server_AddRecipeToShoppingList(class UClass* Recipe, int
 
 
 // Function BP_PlayerState.BP_PlayerState_C.Server_SetNumRecipesInShoppingList
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::Server_SetNumRecipesInShoppingList(class UClass* Recipe, int NumRecipes)
+void ABP_PlayerState_C::Server_SetNumRecipesInShoppingList(class UClass** Recipe, int* NumRecipes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.Server_SetNumRecipesInShoppingList");
 
@@ -332,12 +315,12 @@ void ABP_PlayerState_C::Server_SetNumRecipesInShoppingList(class UClass* Recipe,
 
 
 // Function BP_PlayerState.BP_PlayerState_C.Server_RemoveRecupeFromShoppingList
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumRecipes                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::Server_RemoveRecupeFromShoppingList(class UClass* Recipe, int NumRecipes)
+void ABP_PlayerState_C::Server_RemoveRecupeFromShoppingList(class UClass** Recipe, int* NumRecipes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.Server_RemoveRecupeFromShoppingList");
 
@@ -354,7 +337,7 @@ void ABP_PlayerState_C::Server_RemoveRecupeFromShoppingList(class UClass* Recipe
 
 
 // Function BP_PlayerState.BP_PlayerState_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -374,7 +357,7 @@ void ABP_PlayerState_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_PlayerState.BP_PlayerState_C.Server_ClearShoppingList
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerState_C::Server_ClearShoppingList()
 {
@@ -391,11 +374,11 @@ void ABP_PlayerState_C::Server_ClearShoppingList()
 
 
 // Function BP_PlayerState.BP_PlayerState_C.ExecuteUbergraph_BP_PlayerState
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerState_C::ExecuteUbergraph_BP_PlayerState(int EntryPoint)
+void ABP_PlayerState_C::ExecuteUbergraph_BP_PlayerState(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.ExecuteUbergraph_BP_PlayerState");
 
@@ -411,7 +394,7 @@ void ABP_PlayerState_C::ExecuteUbergraph_BP_PlayerState(int EntryPoint)
 
 
 // Function BP_PlayerState.BP_PlayerState_C.OnShoppingListUpdated__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerState_C::OnShoppingListUpdated__DelegateSignature()
 {
@@ -428,12 +411,12 @@ void ABP_PlayerState_C::OnShoppingListUpdated__DelegateSignature()
 
 
 // Function BP_PlayerState.BP_PlayerState_C.ReceivedChatMessage__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   ChatSender                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   ChatMessage                    (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  ChatSender                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  ChatMessage                    (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerState_C::ReceivedChatMessage__DelegateSignature(const struct FText& ChatSender, const struct FText& ChatMessage)
+void ABP_PlayerState_C::ReceivedChatMessage__DelegateSignature(struct FText* ChatSender, struct FText* ChatMessage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerState.BP_PlayerState_C.ReceivedChatMessage__DelegateSignature");
 

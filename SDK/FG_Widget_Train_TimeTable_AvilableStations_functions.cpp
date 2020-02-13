@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Train_TimeTable_AvilableStations.Widget_Train_TimeTable_AvilableStations_C.SetIsVisible
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           mIsVisible                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          mIsVisible                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Train_TimeTable_AvilableStations_C::SetIsVisible(bool mIsVisible)
+void UWidget_Train_TimeTable_AvilableStations_C::SetIsVisible(bool* mIsVisible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable_AvilableStations.Widget_Train_TimeTable_AvilableStations_C.SetIsVisible");
 

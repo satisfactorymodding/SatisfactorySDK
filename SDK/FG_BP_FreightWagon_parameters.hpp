@@ -14,10 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_FreightWagon.BP_FreightWagon_C.GetActorCompassViewDistance
+struct ABP_FreightWagon_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_FreightWagon.BP_FreightWagon_C.SetActorCompassViewDistance
+struct ABP_FreightWagon_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_FreightWagon.BP_FreightWagon_C.SetActorRepresentationText
 struct ABP_FreightWagon_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -113,9 +126,10 @@ struct ABP_FreightWagon_C_GetLookAtDecription_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function BP_FreightWagon.BP_FreightWagon_C.UserConstructionScript
-struct ABP_FreightWagon_C_UserConstructionScript_Params
+// Function BP_FreightWagon.BP_FreightWagon_C.SetActorRepresentationColor
+struct ABP_FreightWagon_C_SetActorRepresentationColor_Params
 {
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_FreightWagon.BP_FreightWagon_C.OnUse
@@ -138,7 +152,7 @@ struct ABP_FreightWagon_C_ReceiveDestroyed_Params
 // Function BP_FreightWagon.BP_FreightWagon_C.ExecuteUbergraph_BP_FreightWagon
 struct ABP_FreightWagon_C_ExecuteUbergraph_BP_FreightWagon_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

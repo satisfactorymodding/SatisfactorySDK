@@ -17,7 +17,7 @@ namespace SDK
 // Function BTS_TargetLedgeCheck.BTS_TargetLedgeCheck_C.GetKeyLocation
 struct UBTS_TargetLedgeCheck_C_GetKeyLocation_Params
 {
-	struct FBlackboardKeySelector                      Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FBlackboardKeySelector*                     Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -32,7 +32,7 @@ struct UBTS_TargetLedgeCheck_C_ReceiveTickAI_Params
 // Function BTS_TargetLedgeCheck.BTS_TargetLedgeCheck_C.ExecuteUbergraph_BTS_TargetLedgeCheck
 struct UBTS_TargetLedgeCheck_C_ExecuteUbergraph_BTS_TargetLedgeCheck_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

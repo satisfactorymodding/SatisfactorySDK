@@ -14,9 +14,15 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_GasPillar_02.BP_GasPillar_02_C.UserConstructionScript
-struct ABP_GasPillar_02_C_UserConstructionScript_Params
+// Function BP_GasPillar_02.BP_GasPillar_02_C.ReceiveDestroyed
+struct ABP_GasPillar_02_C_ReceiveDestroyed_Params
 {
+};
+
+// Function BP_GasPillar_02.BP_GasPillar_02_C.ExecuteUbergraph_BP_GasPillar_02
+struct ABP_GasPillar_02_C_ExecuteUbergraph_BP_GasPillar_02_Params
+{
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

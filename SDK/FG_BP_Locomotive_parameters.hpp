@@ -14,10 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Locomotive.BP_Locomotive_C.GetActorCompassViewDistance
+struct ABP_Locomotive_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.SetActorCompassViewDistance
+struct ABP_Locomotive_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_Locomotive.BP_Locomotive_C.SetActorRepresentationText
 struct ABP_Locomotive_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -105,69 +118,46 @@ struct ABP_Locomotive_C_RemoveAsRepresentation_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BP_Locomotive.BP_Locomotive_C.UserConstructionScript
-struct ABP_Locomotive_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Use_K2Node_InputActionEvent_4
 struct ABP_Locomotive_C_InpActEvt_Use_K2Node_InputActionEvent_4_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_3
 struct ABP_Locomotive_C_InpActEvt_Jump_Drift_K2Node_InputActionEvent_3_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_2
 struct ABP_Locomotive_C_InpActEvt_Jump_Drift_K2Node_InputActionEvent_2_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_Locomotive.BP_Locomotive_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_1
 struct ABP_Locomotive_C_InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_1_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_6
-struct ABP_Locomotive_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_6_Params
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2
+struct ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5
-struct ABP_Locomotive_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5_Params
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1
+struct ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4
-struct ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4_Params
+// Function BP_Locomotive.BP_Locomotive_C.SetActorRepresentationColor
+struct ABP_Locomotive_C_SetActorRepresentationColor_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3
-struct ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3_Params
-{
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadThree_K2Node_InputKeyEvent_2
-struct ABP_Locomotive_C_InpActEvt_NumPadThree_K2Node_InputKeyEvent_2_Params
-{
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadFour_K2Node_InputKeyEvent_1
-struct ABP_Locomotive_C_InpActEvt_NumPadFour_K2Node_InputKeyEvent_1_Params
-{
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Locomotive.BP_Locomotive_C.ReceiveTick
@@ -199,13 +189,13 @@ struct ABP_Locomotive_C_Server_Leave_Params
 // Function BP_Locomotive.BP_Locomotive_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_1
 struct ABP_Locomotive_C_InpAxisEvt_MoveRight_K2Node_InputAxisEvent_1_Params
 {
-	float                                              AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Locomotive.BP_Locomotive_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2
 struct ABP_Locomotive_C_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2_Params
 {
-	float                                              AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Locomotive.BP_Locomotive_C.ReceiveUnpossessed
@@ -260,10 +250,30 @@ struct ABP_Locomotive_C_Server_Horn_02_Stop_Params
 {
 };
 
+// Function BP_Locomotive.BP_Locomotive_C.OnNameChanged
+struct ABP_Locomotive_C_OnNameChanged_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.UpdateTrainName
+struct ABP_Locomotive_C_UpdateTrainName_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.GainedSignificance
+struct ABP_Locomotive_C_GainedSignificance_Params
+{
+};
+
+// Function BP_Locomotive.BP_Locomotive_C.LostSignificance
+struct ABP_Locomotive_C_LostSignificance_Params
+{
+};
+
 // Function BP_Locomotive.BP_Locomotive_C.ExecuteUbergraph_BP_Locomotive
 struct ABP_Locomotive_C_ExecuteUbergraph_BP_Locomotive_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

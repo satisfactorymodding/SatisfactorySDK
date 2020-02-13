@@ -23,7 +23,7 @@ struct UWidget_CodexEntry_Buildings_C_PreConstruct_Params
 // Function Widget_CodexEntry_Buildings.Widget_CodexEntry_Buildings_C.ExecuteUbergraph_Widget_CodexEntry_Buildings
 struct UWidget_CodexEntry_Buildings_C_ExecuteUbergraph_Widget_CodexEntry_Buildings_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

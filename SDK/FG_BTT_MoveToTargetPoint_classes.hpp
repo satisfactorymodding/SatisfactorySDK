@@ -31,7 +31,7 @@ public:
 	void OnLocationReached();
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
 	void ReceiveAbortAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_MoveToTargetPoint(int EntryPoint);
+	void ExecuteUbergraph_BTT_MoveToTargetPoint(int* EntryPoint);
 };
 
 

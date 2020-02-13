@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_VineLadder.BP_VineLadder_C.UserConstructionScript
-struct ABP_VineLadder_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

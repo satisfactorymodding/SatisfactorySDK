@@ -52,7 +52,7 @@ struct UWidget_HotbarEntry_C_OnHotbarUpdated_Params
 // Function Widget_HotbarEntry.Widget_HotbarEntry_C.ExecuteUbergraph_Widget_HotbarEntry
 struct UWidget_HotbarEntry_C_ExecuteUbergraph_Widget_HotbarEntry_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

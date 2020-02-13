@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LadderComponent.BP_LadderComponent_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x05D0 - 0x05D0)
 class UBP_LadderComponent_C : public UFGLadderComponent
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.GetClearListButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_ShoppingList_C::GetClearListButtonVisibility()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.GetInteractiveBoxVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ ESlateVisibility UWidget_ShoppingList_C::GetInteractiveBoxVisibility()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.GetDivVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ ESlateVisibility UWidget_ShoppingList_C::GetDivVisibility()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.MatchWidgetWithIngredients
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ShoppingList_C::MatchWidgetWithIngredients()
 {
@@ -93,7 +93,7 @@ void UWidget_ShoppingList_C::MatchWidgetWithIngredients()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.CalculateIngredients
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ShoppingList_C::CalculateIngredients()
 {
@@ -110,7 +110,7 @@ void UWidget_ShoppingList_C::CalculateIngredients()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.RemoveIngredientRow
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ShoppingList_C::RemoveIngredientRow()
 {
@@ -127,7 +127,7 @@ void UWidget_ShoppingList_C::RemoveIngredientRow()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.AddIngredientRow
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ShoppingList_C::AddIngredientRow()
 {
@@ -144,7 +144,7 @@ void UWidget_ShoppingList_C::AddIngredientRow()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.RemoveRecipeRow
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ShoppingList_C::RemoveRecipeRow()
 {
@@ -161,7 +161,7 @@ void UWidget_ShoppingList_C::RemoveRecipeRow()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.AddRecipeRow
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ShoppingList_C::AddRecipeRow()
 {
@@ -178,7 +178,7 @@ void UWidget_ShoppingList_C::AddRecipeRow()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.MatchWidgetsWithRecipes
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ShoppingList_C::MatchWidgetsWithRecipes()
 {
@@ -195,7 +195,7 @@ void UWidget_ShoppingList_C::MatchWidgetsWithRecipes()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.Get ShoppingListText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -216,7 +216,7 @@ struct FText UWidget_ShoppingList_C::Get_ShoppingListText()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ShoppingList_C::Construct()
 {
@@ -233,7 +233,7 @@ void UWidget_ShoppingList_C::Construct()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.UpdateShoppingListRows
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ShoppingList_C::UpdateShoppingListRows()
 {
@@ -250,7 +250,7 @@ void UWidget_ShoppingList_C::UpdateShoppingListRows()
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ShoppingList_C::BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -267,11 +267,11 @@ void UWidget_ShoppingList_C::BndEvt__Widget_StandardButton_K2Node_ComponentBound
 
 
 // Function Widget_ShoppingList.Widget_ShoppingList_C.ExecuteUbergraph_Widget_ShoppingList
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ShoppingList_C::ExecuteUbergraph_Widget_ShoppingList(int EntryPoint)
+void UWidget_ShoppingList_C::ExecuteUbergraph_Widget_ShoppingList(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ShoppingList.Widget_ShoppingList_C.ExecuteUbergraph_Widget_ShoppingList");
 

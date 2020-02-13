@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Holo_PowerLine.Holo_PowerLine_C.UserConstructionScript
-struct AHolo_PowerLine_C_UserConstructionScript_Params
-{
-};
-
 // Function Holo_PowerLine.Holo_PowerLine_C.OnAutomaticPoleDisableToggle
 struct AHolo_PowerLine_C_OnAutomaticPoleDisableToggle_Params
 {
@@ -28,7 +23,7 @@ struct AHolo_PowerLine_C_OnAutomaticPoleDisableToggle_Params
 // Function Holo_PowerLine.Holo_PowerLine_C.ExecuteUbergraph_Holo_PowerLine
 struct AHolo_PowerLine_C_ExecuteUbergraph_Holo_PowerLine_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

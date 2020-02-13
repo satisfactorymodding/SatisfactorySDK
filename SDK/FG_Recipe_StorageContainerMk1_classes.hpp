@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_StorageContainerMk1.Recipe_StorageContainerMk1_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_StorageContainerMk1_C : public UFGRecipe
 {
 public:

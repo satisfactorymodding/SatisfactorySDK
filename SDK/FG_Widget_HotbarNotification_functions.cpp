@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HotbarNotification.Widget_HotbarNotification_C.GetDarkGrayColour
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -33,14 +33,14 @@ struct FSlateColor UWidget_HotbarNotification_C::GetDarkGrayColour()
 }
 
 
-// Function Widget_HotbarNotification.Widget_HotbarNotification_C.BndEvt__HotbarPopUp_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// ()
+// Function Widget_HotbarNotification.Widget_HotbarNotification_C.WidgetAnimationEvt_HotbarPopUp_K2Node_WidgetAnimationEvent_1
+// (BlueprintEvent)
 
-void UWidget_HotbarNotification_C::BndEvt__HotbarPopUp_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void UWidget_HotbarNotification_C::WidgetAnimationEvt_HotbarPopUp_K2Node_WidgetAnimationEvent_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarNotification.Widget_HotbarNotification_C.BndEvt__HotbarPopUp_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarNotification.Widget_HotbarNotification_C.WidgetAnimationEvt_HotbarPopUp_K2Node_WidgetAnimationEvent_1");
 
-	UWidget_HotbarNotification_C_BndEvt__HotbarPopUp_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
+	UWidget_HotbarNotification_C_WidgetAnimationEvt_HotbarPopUp_K2Node_WidgetAnimationEvent_1_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -50,14 +50,14 @@ void UWidget_HotbarNotification_C::BndEvt__HotbarPopUp_K2Node_ComponentBoundEven
 }
 
 
-// Function Widget_HotbarNotification.Widget_HotbarNotification_C.BndEvt__HotbarPopUp_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// ()
+// Function Widget_HotbarNotification.Widget_HotbarNotification_C.WidgetAnimationEvt_HotbarPopUp_K2Node_WidgetAnimationEvent_2
+// (BlueprintEvent)
 
-void UWidget_HotbarNotification_C::BndEvt__HotbarPopUp_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void UWidget_HotbarNotification_C::WidgetAnimationEvt_HotbarPopUp_K2Node_WidgetAnimationEvent_2()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarNotification.Widget_HotbarNotification_C.BndEvt__HotbarPopUp_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarNotification.Widget_HotbarNotification_C.WidgetAnimationEvt_HotbarPopUp_K2Node_WidgetAnimationEvent_2");
 
-	UWidget_HotbarNotification_C_BndEvt__HotbarPopUp_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
+	UWidget_HotbarNotification_C_WidgetAnimationEvt_HotbarPopUp_K2Node_WidgetAnimationEvent_2_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -68,11 +68,11 @@ void UWidget_HotbarNotification_C::BndEvt__HotbarPopUp_K2Node_ComponentBoundEven
 
 
 // Function Widget_HotbarNotification.Widget_HotbarNotification_C.ExecuteUbergraph_Widget_HotbarNotification
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HotbarNotification_C::ExecuteUbergraph_Widget_HotbarNotification(int EntryPoint)
+void UWidget_HotbarNotification_C::ExecuteUbergraph_Widget_HotbarNotification(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HotbarNotification.Widget_HotbarNotification_C.ExecuteUbergraph_Widget_HotbarNotification");
 

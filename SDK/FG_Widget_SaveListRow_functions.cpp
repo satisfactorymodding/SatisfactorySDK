@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.SetColorForImage
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UImage*                  ImageBG                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UImage**                 ImageBG                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaveListRow_C::SetColorForImage(class UImage* ImageBG, const struct FLinearColor& Color)
+void UWidget_SaveListRow_C::SetColorForImage(class UImage** ImageBG, struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveListRow.Widget_SaveListRow_C.SetColorForImage");
 
@@ -35,7 +35,7 @@ void UWidget_SaveListRow_C::SetColorForImage(class UImage* ImageBG, const struct
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetNewSaveGameVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -56,7 +56,7 @@ ESlateVisibility UWidget_SaveListRow_C::GetNewSaveGameVisibility()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetLoadDeleteVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -77,7 +77,7 @@ ESlateVisibility UWidget_SaveListRow_C::GetLoadDeleteVisibility()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.OnFocusReceived
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FFocusEvent*            InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -102,7 +102,7 @@ struct FEventReply UWidget_SaveListRow_C::OnFocusReceived(struct FGeometry* MyGe
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetSaveNameTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -123,7 +123,7 @@ struct FSlateColor UWidget_SaveListRow_C::GetSaveNameTextColor()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -144,7 +144,7 @@ struct FSlateColor UWidget_SaveListRow_C::GetTextColor()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetIconBGColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -165,7 +165,7 @@ struct FLinearColor UWidget_SaveListRow_C::GetIconBGColor()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetIconColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -186,7 +186,7 @@ struct FLinearColor UWidget_SaveListRow_C::GetIconColor()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetButtonColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -207,7 +207,7 @@ struct FLinearColor UWidget_SaveListRow_C::GetButtonColor()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetNewSaveVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -228,7 +228,7 @@ ESlateVisibility UWidget_SaveListRow_C::GetNewSaveVisibility()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetSessionName
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -249,7 +249,7 @@ struct FText UWidget_SaveListRow_C::GetSessionName()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetSaveDuration
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -270,7 +270,7 @@ struct FText UWidget_SaveListRow_C::GetSaveDuration()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetDesiredFileName
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FString                  desiredFileName                (Parm, OutParm, ZeroConstructor)
 
@@ -292,7 +292,7 @@ void UWidget_SaveListRow_C::GetDesiredFileName(class FString* desiredFileName)
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.Clicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SaveListRow_C::Clicked()
 {
@@ -309,7 +309,7 @@ void UWidget_SaveListRow_C::Clicked()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetSaveMap
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -330,7 +330,7 @@ struct FText UWidget_SaveListRow_C::GetSaveMap()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.GetSaveVersion
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -350,8 +350,25 @@ struct FText UWidget_SaveListRow_C::GetSaveVersion()
 }
 
 
+// Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_SaveListRow_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_SaveListRow_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SaveListRow_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
@@ -368,7 +385,7 @@ void UWidget_SaveListRow_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButt
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SaveListRow_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -385,7 +402,7 @@ void UWidget_SaveListRow_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButt
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SaveListRow_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 {
@@ -402,17 +419,17 @@ void UWidget_SaveListRow_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButt
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.OnWorldSave
-// ()
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           wasSuccessful                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   errorMessage                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          WasSuccessful                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  errorMessage                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_SaveListRow_C::OnWorldSave(bool wasSuccessful, const struct FText& errorMessage)
+void UWidget_SaveListRow_C::OnWorldSave(bool* WasSuccessful, struct FText* errorMessage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveListRow.Widget_SaveListRow_C.OnWorldSave");
 
 	UWidget_SaveListRow_C_OnWorldSave_Params params;
-	params.wasSuccessful = wasSuccessful;
+	params.WasSuccessful = WasSuccessful;
 	params.errorMessage = errorMessage;
 
 	auto flags = fn->FunctionFlags;
@@ -424,7 +441,7 @@ void UWidget_SaveListRow_C::OnWorldSave(bool wasSuccessful, const struct FText& 
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.ConfirmDeleteSessionPopUp
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SaveListRow_C::ConfirmDeleteSessionPopUp()
 {
@@ -440,31 +457,17 @@ void UWidget_SaveListRow_C::ConfirmDeleteSessionPopUp()
 }
 
 
-// Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
-
-void UWidget_SaveListRow_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
-
-	UWidget_SaveListRow_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_SaveListRow.Widget_SaveListRow_C.DeleteSave
-// ()
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                          confirmed                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaveListRow_C::DeleteSave()
+void UWidget_SaveListRow_C::DeleteSave(bool* confirmed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveListRow.Widget_SaveListRow_C.DeleteSave");
 
 	UWidget_SaveListRow_C_DeleteSave_Params params;
+	params.confirmed = confirmed;
 
 	auto flags = fn->FunctionFlags;
 
@@ -475,7 +478,7 @@ void UWidget_SaveListRow_C::DeleteSave()
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SaveListRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 {
@@ -492,7 +495,7 @@ void UWidget_SaveListRow_C::BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_4_
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SaveListRow_C::Construct()
 {
@@ -508,12 +511,32 @@ void UWidget_SaveListRow_C::Construct()
 }
 
 
-// Function Widget_SaveListRow.Widget_SaveListRow_C.ExecuteUbergraph_Widget_SaveListRow
-// ()
+// Function Widget_SaveListRow.Widget_SaveListRow_C.OnDeleteSaveDone
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SaveListRow_C::ExecuteUbergraph_Widget_SaveListRow(int EntryPoint)
+void UWidget_SaveListRow_C::OnDeleteSaveDone(bool* success)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveListRow.Widget_SaveListRow_C.OnDeleteSaveDone");
+
+	UWidget_SaveListRow_C_OnDeleteSaveDone_Params params;
+	params.success = success;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_SaveListRow.Widget_SaveListRow_C.ExecuteUbergraph_Widget_SaveListRow
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_SaveListRow_C::ExecuteUbergraph_Widget_SaveListRow(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveListRow.Widget_SaveListRow_C.ExecuteUbergraph_Widget_SaveListRow");
 
@@ -529,11 +552,11 @@ void UWidget_SaveListRow_C::ExecuteUbergraph_Widget_SaveListRow(int EntryPoint)
 
 
 // Function Widget_SaveListRow.Widget_SaveListRow_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_SaveListRow_C*   clickedRow                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_SaveListRow_C**  clickedRow                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SaveListRow_C::OnClicked__DelegateSignature(class UWidget_SaveListRow_C* clickedRow)
+void UWidget_SaveListRow_C::OnClicked__DelegateSignature(class UWidget_SaveListRow_C** clickedRow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SaveListRow.Widget_SaveListRow_C.OnClicked__DelegateSignature");
 

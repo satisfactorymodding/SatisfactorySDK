@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_Biomass_Mycelia.Recipe_Biomass_Mycelia_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_Biomass_Mycelia_C : public UFGRecipe
 {
 public:

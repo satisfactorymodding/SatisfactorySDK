@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SignificanceManager.BP_SignificanceManager_C
-// 0x0000 (0x0170 - 0x0170)
+// 0x0000 (0x0180 - 0x0180)
 class UBP_SignificanceManager_C : public UFGSignificanceManager
 {
 public:

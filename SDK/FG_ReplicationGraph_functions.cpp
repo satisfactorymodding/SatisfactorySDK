@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerStopDebugging
-// ()
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 
 void AReplicationGraphDebugActor::ServerStopDebugging()
 {
@@ -22,6 +22,7 @@ void AReplicationGraphDebugActor::ServerStopDebugging()
 	AReplicationGraphDebugActor_ServerStopDebugging_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -30,7 +31,7 @@ void AReplicationGraphDebugActor::ServerStopDebugging()
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerStartDebugging
-// ()
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 
 void AReplicationGraphDebugActor::ServerStartDebugging()
 {
@@ -39,6 +40,7 @@ void AReplicationGraphDebugActor::ServerStartDebugging()
 	AReplicationGraphDebugActor_ServerStartDebugging_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -47,12 +49,12 @@ void AReplicationGraphDebugActor::ServerStartDebugging()
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetPeriodFrameForClass
-// ()
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// class UClass*                  Class                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PeriodFrame                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Class                          (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           PeriodFrame                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void AReplicationGraphDebugActor::ServerSetPeriodFrameForClass(class UClass* Class, int PeriodFrame)
+void AReplicationGraphDebugActor::ServerSetPeriodFrameForClass(class UClass** Class, int* PeriodFrame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetPeriodFrameForClass");
 
@@ -61,6 +63,7 @@ void AReplicationGraphDebugActor::ServerSetPeriodFrameForClass(class UClass* Cla
 	params.PeriodFrame = PeriodFrame;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,12 +72,12 @@ void AReplicationGraphDebugActor::ServerSetPeriodFrameForClass(class UClass* Cla
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetCullDistanceForClass
-// ()
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// class UClass*                  Class                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CullDistance                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Class                          (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         CullDistance                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AReplicationGraphDebugActor::ServerSetCullDistanceForClass(class UClass* Class, float CullDistance)
+void AReplicationGraphDebugActor::ServerSetCullDistanceForClass(class UClass** Class, float* CullDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetCullDistanceForClass");
 
@@ -83,6 +86,28 @@ void AReplicationGraphDebugActor::ServerSetCullDistanceForClass(class UClass* Cl
 	params.CullDistance = CullDistance;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetConditionalActorBreakpoint
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// class AActor**                 Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AReplicationGraphDebugActor::ServerSetConditionalActorBreakpoint(class AActor** Actor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetConditionalActorBreakpoint");
+
+	AReplicationGraphDebugActor_ServerSetConditionalActorBreakpoint_Params params;
+	params.Actor = Actor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,11 +116,11 @@ void AReplicationGraphDebugActor::ServerSetCullDistanceForClass(class UClass* Cl
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo
-// ()
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// class FString                  str                            (Parm, ZeroConstructor)
+// class FString*                 str                            (Parm, ZeroConstructor)
 
-void AReplicationGraphDebugActor::ServerPrintAllActorInfo(const class FString& str)
+void AReplicationGraphDebugActor::ServerPrintAllActorInfo(class FString* str)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo");
 
@@ -103,6 +128,7 @@ void AReplicationGraphDebugActor::ServerPrintAllActorInfo(const class FString& s
 	params.str = str;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,11 +137,11 @@ void AReplicationGraphDebugActor::ServerPrintAllActorInfo(const class FString& s
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorDependencies
-// ()
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// class FString                  str                            (Parm, ZeroConstructor)
+// class FString*                 str                            (Parm, ZeroConstructor)
 
-void AReplicationGraphDebugActor::ServerPrintAllActorDependencies(const class FString& str)
+void AReplicationGraphDebugActor::ServerPrintAllActorDependencies(class FString* str)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorDependencies");
 
@@ -123,6 +149,7 @@ void AReplicationGraphDebugActor::ServerPrintAllActorDependencies(const class FS
 	params.str = str;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,7 +158,7 @@ void AReplicationGraphDebugActor::ServerPrintAllActorDependencies(const class FS
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerCellInfo
-// ()
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 
 void AReplicationGraphDebugActor::ServerCellInfo()
 {
@@ -140,6 +167,7 @@ void AReplicationGraphDebugActor::ServerCellInfo()
 	AReplicationGraphDebugActor_ServerCellInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -148,13 +176,13 @@ void AReplicationGraphDebugActor::ServerCellInfo()
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ClientCellInfo
-// ()
+// (Net, NetReliable, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// struct FVector                 CellLocation                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 CellExtent                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          Actors                         (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// struct FVector*                CellLocation                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                CellExtent                     (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*>*         Actors                         (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
-void AReplicationGraphDebugActor::ClientCellInfo(const struct FVector& CellLocation, const struct FVector& CellExtent, TArray<class AActor*> Actors)
+void AReplicationGraphDebugActor::ClientCellInfo(struct FVector* CellLocation, struct FVector* CellExtent, TArray<class AActor*>* Actors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ClientCellInfo");
 
@@ -164,6 +192,7 @@ void AReplicationGraphDebugActor::ClientCellInfo(const struct FVector& CellLocat
 	params.Actors = Actors;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

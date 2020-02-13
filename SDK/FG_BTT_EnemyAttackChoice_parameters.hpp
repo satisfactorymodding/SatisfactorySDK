@@ -47,7 +47,7 @@ struct UBTT_EnemyAttackChoice_C_ReceiveAbortAI_Params
 // Function BTT_EnemyAttackChoice.BTT_EnemyAttackChoice_C.ExecuteUbergraph_BTT_EnemyAttackChoice
 struct UBTT_EnemyAttackChoice_C_ExecuteUbergraph_BTT_EnemyAttackChoice_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

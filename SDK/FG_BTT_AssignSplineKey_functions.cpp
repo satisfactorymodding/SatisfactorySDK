@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_AssignSplineKey.BTT_AssignSplineKey_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_AssignSplineKey_C::ReceiveExecuteAI(class AAIController** OwnerControl
 
 
 // Function BTT_AssignSplineKey.BTT_AssignSplineKey_C.ExecuteUbergraph_BTT_AssignSplineKey
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_AssignSplineKey_C::ExecuteUbergraph_BTT_AssignSplineKey(int EntryPoint)
+void UBTT_AssignSplineKey_C::ExecuteUbergraph_BTT_AssignSplineKey(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_AssignSplineKey.BTT_AssignSplineKey_C.ExecuteUbergraph_BTT_AssignSplineKey");
 

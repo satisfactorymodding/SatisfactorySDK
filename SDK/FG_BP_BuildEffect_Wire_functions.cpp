@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_BuildEffect_Wire.BP_BuildEffect_Wire_C.UserConstructionScript
-// ()
-
-void ABP_BuildEffect_Wire_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildEffect_Wire.BP_BuildEffect_Wire_C.UserConstructionScript");
-
-	ABP_BuildEffect_Wire_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_BuildEffect_Wire.BP_BuildEffect_Wire_C.Timeline_0__FinishedFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_BuildEffect_Wire_C::Timeline_0__FinishedFunc()
 {
@@ -47,7 +30,7 @@ void ABP_BuildEffect_Wire_C::Timeline_0__FinishedFunc()
 
 
 // Function BP_BuildEffect_Wire.BP_BuildEffect_Wire_C.Timeline_0__UpdateFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_BuildEffect_Wire_C::Timeline_0__UpdateFunc()
 {
@@ -64,7 +47,7 @@ void ABP_BuildEffect_Wire_C::Timeline_0__UpdateFunc()
 
 
 // Function BP_BuildEffect_Wire.BP_BuildEffect_Wire_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_BuildEffect_Wire_C::ReceiveBeginPlay()
 {
@@ -81,11 +64,11 @@ void ABP_BuildEffect_Wire_C::ReceiveBeginPlay()
 
 
 // Function BP_BuildEffect_Wire.BP_BuildEffect_Wire_C.ExecuteUbergraph_BP_BuildEffect_Wire
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BuildEffect_Wire_C::ExecuteUbergraph_BP_BuildEffect_Wire(int EntryPoint)
+void ABP_BuildEffect_Wire_C::ExecuteUbergraph_BP_BuildEffect_Wire(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildEffect_Wire.BP_BuildEffect_Wire_C.ExecuteUbergraph_BP_BuildEffect_Wire");
 

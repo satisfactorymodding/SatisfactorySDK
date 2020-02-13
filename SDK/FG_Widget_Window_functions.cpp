@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Window.Widget_Window_C.GetDividerButtonSlotVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_Window_C::GetDividerButtonSlotVisibility()
 
 
 // Function Widget_Window.Widget_Window_C.GetNavigationVisibiliy
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ ESlateVisibility UWidget_Window_C::GetNavigationVisibiliy()
 
 
 // Function Widget_Window.Widget_Window_C.GetCloseButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ ESlateVisibility UWidget_Window_C::GetCloseButtonVisibility()
 
 
 // Function Widget_Window.Widget_Window_C.GetInventoryBodyVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,7 +97,7 @@ ESlateVisibility UWidget_Window_C::GetInventoryBodyVisibility()
 
 
 // Function Widget_Window.Widget_Window_C.GetTopButtonSlotVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -118,7 +118,7 @@ ESlateVisibility UWidget_Window_C::GetTopButtonSlotVisibility()
 
 
 // Function Widget_Window.Widget_Window_C.OnDrop
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -145,11 +145,11 @@ bool UWidget_Window_C::OnDrop(struct FGeometry* MyGeometry, struct FPointerEvent
 
 
 // Function Widget_Window.Widget_Window_C.SetTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Window_C::SetTitle(const struct FText& Title)
+void UWidget_Window_C::SetTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window.Widget_Window_C.SetTitle");
 
@@ -165,7 +165,7 @@ void UWidget_Window_C::SetTitle(const struct FText& Title)
 
 
 // Function Widget_Window.Widget_Window_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Window_C::Construct()
 {
@@ -182,7 +182,7 @@ void UWidget_Window_C::Construct()
 
 
 // Function Widget_Window.Widget_Window_C.OnEscapePressed
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_C::OnEscapePressed()
 {
@@ -199,7 +199,7 @@ void UWidget_Window_C::OnEscapePressed()
 
 
 // Function Widget_Window.Widget_Window_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Window_C::Destruct()
 {
@@ -216,7 +216,7 @@ void UWidget_Window_C::Destruct()
 
 
 // Function Widget_Window.Widget_Window_C.BndEvt__mCloseButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Window_C::BndEvt__mCloseButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -233,7 +233,7 @@ void UWidget_Window_C::BndEvt__mCloseButton_K2Node_ComponentBoundEvent_0_OnClick
 
 
 // Function Widget_Window.Widget_Window_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -255,7 +255,7 @@ void UWidget_Window_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Window.Widget_Window_C.OnConstructAnimFinished
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_C::OnConstructAnimFinished()
 {
@@ -272,11 +272,11 @@ void UWidget_Window_C::OnConstructAnimFinished()
 
 
 // Function Widget_Window.Widget_Window_C.ExecuteUbergraph_Widget_Window
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Window_C::ExecuteUbergraph_Widget_Window(int EntryPoint)
+void UWidget_Window_C::ExecuteUbergraph_Widget_Window(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Window.Widget_Window_C.ExecuteUbergraph_Widget_Window");
 
@@ -292,7 +292,7 @@ void UWidget_Window_C::ExecuteUbergraph_Widget_Window(int EntryPoint)
 
 
 // Function Widget_Window.Widget_Window_C.OnClose__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Window_C::OnClose__DelegateSignature()
 {

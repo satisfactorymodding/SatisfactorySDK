@@ -14,6 +14,18 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetNobeliskBarVisibility
+struct UWidget_PlayerHUD_C_GetNobeliskBarVisibility_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetNobeliskBarPercent
+struct UWidget_PlayerHUD_C_GetNobeliskBarPercent_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.Get_mCollectBar_Percent
 struct UWidget_PlayerHUD_C_Get_mCollectBar_Percent_Params
 {
@@ -29,27 +41,27 @@ struct UWidget_PlayerHUD_C_Get_CollectBarContainer_Visibility_Params
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnToggleInteractUI
 struct UWidget_PlayerHUD_C_OnToggleInteractUI_Params
 {
-	bool                                               IsOpen;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      InteractWidgetClass;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              IsOpen;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     InteractWidgetClass;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnToggleInventory
 struct UWidget_PlayerHUD_C_OnToggleInventory_Params
 {
-	bool                                               IsOpen;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              IsOpen;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.SetImageVisibility
 struct UWidget_PlayerHUD_C_SetImageVisibility_Params
 {
-	bool                                               Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      Image;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool*                                              Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UImage**                                     Image;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.OnDisabledInputGateChanged
 struct UWidget_PlayerHUD_C_OnDisabledInputGateChanged_Params
 {
-	struct FDisabledInputGate                          NewValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FDisabledInputGate*                         NewValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.GetVisibility_1
@@ -92,15 +104,30 @@ struct UWidget_PlayerHUD_C_StopRadiationAnimation_Params
 {
 };
 
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.CreateTimeWarning
+struct UWidget_PlayerHUD_C_CreateTimeWarning_Params
+{
+};
+
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.Construct
 struct UWidget_PlayerHUD_C_Construct_Params
+{
+};
+
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.EventUpdateQuickslotBackgroundOpacity
+struct UWidget_PlayerHUD_C_EventUpdateQuickslotBackgroundOpacity_Params
+{
+};
+
+// Function Widget_PlayerHUD.Widget_PlayerHUD_C.Destruct
+struct UWidget_PlayerHUD_C_Destruct_Params
 {
 };
 
 // Function Widget_PlayerHUD.Widget_PlayerHUD_C.ExecuteUbergraph_Widget_PlayerHUD
 struct UWidget_PlayerHUD_C_ExecuteUbergraph_Widget_PlayerHUD_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

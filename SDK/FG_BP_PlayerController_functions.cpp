@@ -12,8 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_PlayerController.BP_PlayerController_C.DismantleGolfCart
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFGWheeledVehicle**      GolfCart                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PlayerController_C::DismantleGolfCart(class AFGWheeledVehicle** GolfCart)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.DismantleGolfCart");
+
+	ABP_PlayerController_C_DismantleGolfCart_Params params;
+	params.GolfCart = GolfCart;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_PlayerController.BP_PlayerController_C.OnSetupMovementWind
-// ()
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAkComponent*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -34,7 +54,7 @@ class UAkComponent* ABP_PlayerController_C::OnSetupMovementWind()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.OnDisabledInputChanged
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerController_C::OnDisabledInputChanged()
 {
@@ -51,7 +71,7 @@ void ABP_PlayerController_C::OnDisabledInputChanged()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.ToggleMiniMap
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerController_C::ToggleMiniMap()
 {
@@ -68,11 +88,11 @@ void ABP_PlayerController_C::ToggleMiniMap()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.DismantlePortableMiner
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_PortableMiner_C*     PortableMiner                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGPortableMiner**       PortableMiner                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerController_C::DismantlePortableMiner(class ABP_PortableMiner_C* PortableMiner)
+void ABP_PlayerController_C::DismantlePortableMiner(class AFGPortableMiner** PortableMiner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.DismantlePortableMiner");
 
@@ -87,29 +107,12 @@ void ABP_PlayerController_C::DismantlePortableMiner(class ABP_PortableMiner_C* P
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.UserConstructionScript
-// ()
-
-void ABP_PlayerController_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.UserConstructionScript");
-
-	ABP_PlayerController_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Chat_K2Node_InputActionEvent_17
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Chat_K2Node_InputActionEvent_17(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Chat_K2Node_InputActionEvent_17(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Chat_K2Node_InputActionEvent_17");
 
@@ -125,11 +128,11 @@ void ABP_PlayerController_C::InpActEvt_Chat_K2Node_InputActionEvent_17(const str
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut1_K2Node_InputActionEvent_16
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut1_K2Node_InputActionEvent_16(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut1_K2Node_InputActionEvent_16(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut1_K2Node_InputActionEvent_16");
 
@@ -145,11 +148,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut1_K2Node_InputActionEvent_16(cons
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut2_K2Node_InputActionEvent_15
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut2_K2Node_InputActionEvent_15(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut2_K2Node_InputActionEvent_15(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut2_K2Node_InputActionEvent_15");
 
@@ -165,11 +168,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut2_K2Node_InputActionEvent_15(cons
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut3_K2Node_InputActionEvent_14
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut3_K2Node_InputActionEvent_14(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut3_K2Node_InputActionEvent_14(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut3_K2Node_InputActionEvent_14");
 
@@ -185,11 +188,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut3_K2Node_InputActionEvent_14(cons
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut4_K2Node_InputActionEvent_13
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut4_K2Node_InputActionEvent_13(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut4_K2Node_InputActionEvent_13(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut4_K2Node_InputActionEvent_13");
 
@@ -205,11 +208,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut4_K2Node_InputActionEvent_13(cons
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut5_K2Node_InputActionEvent_12
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut5_K2Node_InputActionEvent_12(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut5_K2Node_InputActionEvent_12(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut5_K2Node_InputActionEvent_12");
 
@@ -225,11 +228,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut5_K2Node_InputActionEvent_12(cons
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut6_K2Node_InputActionEvent_11
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut6_K2Node_InputActionEvent_11(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut6_K2Node_InputActionEvent_11(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut6_K2Node_InputActionEvent_11");
 
@@ -245,11 +248,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut6_K2Node_InputActionEvent_11(cons
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut7_K2Node_InputActionEvent_10
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut7_K2Node_InputActionEvent_10(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut7_K2Node_InputActionEvent_10(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut7_K2Node_InputActionEvent_10");
 
@@ -265,11 +268,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut7_K2Node_InputActionEvent_10(cons
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut8_K2Node_InputActionEvent_9
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut8_K2Node_InputActionEvent_9(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut8_K2Node_InputActionEvent_9(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut8_K2Node_InputActionEvent_9");
 
@@ -285,11 +288,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut8_K2Node_InputActionEvent_9(const
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut9_K2Node_InputActionEvent_8
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut9_K2Node_InputActionEvent_8(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut9_K2Node_InputActionEvent_8(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut9_K2Node_InputActionEvent_8");
 
@@ -305,11 +308,11 @@ void ABP_PlayerController_C::InpActEvt_Shortcut9_K2Node_InputActionEvent_8(const
 
 
 // Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut10_K2Node_InputActionEvent_7
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Shortcut10_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Shortcut10_K2Node_InputActionEvent_7(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Shortcut10_K2Node_InputActionEvent_7");
 
@@ -324,16 +327,16 @@ void ABP_PlayerController_C::InpActEvt_Shortcut10_K2Node_InputActionEvent_7(cons
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_PauseGame_K2Node_InputActionEvent_6
-// ()
+// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_PhotoMode_K2Node_InputActionEvent_6
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_PauseGame_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_PhotoMode_K2Node_InputActionEvent_6(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_PauseGame_K2Node_InputActionEvent_6");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_PhotoMode_K2Node_InputActionEvent_6");
 
-	ABP_PlayerController_C_InpActEvt_PauseGame_K2Node_InputActionEvent_6_Params params;
+	ABP_PlayerController_C_InpActEvt_PhotoMode_K2Node_InputActionEvent_6_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -344,16 +347,16 @@ void ABP_PlayerController_C::InpActEvt_PauseGame_K2Node_InputActionEvent_6(const
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_PhotoMode_K2Node_InputActionEvent_5
-// ()
+// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_InputActionEvent_5
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_PhotoMode_K2Node_InputActionEvent_5(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_InputActionEvent_5(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_PhotoMode_K2Node_InputActionEvent_5");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_InputActionEvent_5");
 
-	ABP_PlayerController_C_InpActEvt_PhotoMode_K2Node_InputActionEvent_5_Params params;
+	ABP_PlayerController_C_InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_InputActionEvent_5_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -364,16 +367,16 @@ void ABP_PlayerController_C::InpActEvt_PhotoMode_K2Node_InputActionEvent_5(const
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_InputActionEvent_4
-// ()
+// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Prototype_RagdollPlayer_K2Node_InputActionEvent_4
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_InputActionEvent_4(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_Prototype_RagdollPlayer_K2Node_InputActionEvent_4(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_InputActionEvent_4");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Prototype_RagdollPlayer_K2Node_InputActionEvent_4");
 
-	ABP_PlayerController_C_InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_InputActionEvent_4_Params params;
+	ABP_PlayerController_C_InpActEvt_Prototype_RagdollPlayer_K2Node_InputActionEvent_4_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -384,16 +387,16 @@ void ABP_PlayerController_C::InpActEvt_ToggleMap_BuildGunNoSnapMode_K2Node_Input
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Prototype_RagdollPlayer_K2Node_InputActionEvent_3
-// ()
+// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_SecondaryFire_K2Node_InputActionEvent_3
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_Prototype_RagdollPlayer_K2Node_InputActionEvent_3(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_SecondaryFire_K2Node_InputActionEvent_3(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_Prototype_RagdollPlayer_K2Node_InputActionEvent_3");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_SecondaryFire_K2Node_InputActionEvent_3");
 
-	ABP_PlayerController_C_InpActEvt_Prototype_RagdollPlayer_K2Node_InputActionEvent_3_Params params;
+	ABP_PlayerController_C_InpActEvt_SecondaryFire_K2Node_InputActionEvent_3_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -404,16 +407,16 @@ void ABP_PlayerController_C::InpActEvt_Prototype_RagdollPlayer_K2Node_InputActio
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_SecondaryFire_K2Node_InputActionEvent_2
-// ()
+// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_TogglePhotoModeUIVisibility_K2Node_InputActionEvent_2
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_SecondaryFire_K2Node_InputActionEvent_2(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_TogglePhotoModeUIVisibility_K2Node_InputActionEvent_2(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_SecondaryFire_K2Node_InputActionEvent_2");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_TogglePhotoModeUIVisibility_K2Node_InputActionEvent_2");
 
-	ABP_PlayerController_C_InpActEvt_SecondaryFire_K2Node_InputActionEvent_2_Params params;
+	ABP_PlayerController_C_InpActEvt_TogglePhotoModeUIVisibility_K2Node_InputActionEvent_2_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -424,105 +427,17 @@ void ABP_PlayerController_C::InpActEvt_SecondaryFire_K2Node_InputActionEvent_2(c
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_TogglePhotoModeUIVisibility_K2Node_InputActionEvent_1
-// ()
+// Function BP_PlayerController.BP_PlayerController_C.InpActEvt_PauseGame_K2Node_InputActionEvent_1
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_PlayerController_C::InpActEvt_TogglePhotoModeUIVisibility_K2Node_InputActionEvent_1(const struct FKey& Key)
+void ABP_PlayerController_C::InpActEvt_PauseGame_K2Node_InputActionEvent_1(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_TogglePhotoModeUIVisibility_K2Node_InputActionEvent_1");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.InpActEvt_PauseGame_K2Node_InputActionEvent_1");
 
-	ABP_PlayerController_C_InpActEvt_TogglePhotoModeUIVisibility_K2Node_InputActionEvent_1_Params params;
+	ABP_PlayerController_C_InpActEvt_PauseGame_K2Node_InputActionEvent_1_Params params;
 	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_PlayerController.BP_PlayerController_C.OnFinishRespawn
-// ()
-
-void ABP_PlayerController_C::OnFinishRespawn()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.OnFinishRespawn");
-
-	ABP_PlayerController_C_OnFinishRespawn_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_PlayerController.BP_PlayerController_C.OnStartRespawn
-// ()
-// Parameters:
-// bool*                          isJoining                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_PlayerController_C::OnStartRespawn(bool* isJoining)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.OnStartRespawn");
-
-	ABP_PlayerController_C_OnStartRespawn_Params params;
-	params.isJoining = isJoining;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_PlayerController.BP_PlayerController_C.DoPause
-// ()
-
-void ABP_PlayerController_C::DoPause()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.DoPause");
-
-	ABP_PlayerController_C_DoPause_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_PlayerController.BP_PlayerController_C.CheckAndUpdateGamepad
-// ()
-
-void ABP_PlayerController_C::CheckAndUpdateGamepad()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.CheckAndUpdateGamepad");
-
-	ABP_PlayerController_C_CheckAndUpdateGamepad_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_PlayerController.BP_PlayerController_C.LocalAudioBeginPlay
-// ()
-
-void ABP_PlayerController_C::LocalAudioBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.LocalAudioBeginPlay");
-
-	ABP_PlayerController_C_LocalAudioBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -533,7 +448,7 @@ void ABP_PlayerController_C::LocalAudioBeginPlay()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -552,14 +467,34 @@ void ABP_PlayerController_C::ReceiveTick(float* DeltaSeconds)
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.Server_ForceRagdoll
-// ()
+// Function BP_PlayerController.BP_PlayerController_C.OnStartRespawn
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool*                          isJoining                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerController_C::Server_ForceRagdoll()
+void ABP_PlayerController_C::OnStartRespawn(bool* isJoining)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.Server_ForceRagdoll");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.OnStartRespawn");
 
-	ABP_PlayerController_C_Server_ForceRagdoll_Params params;
+	ABP_PlayerController_C_OnStartRespawn_Params params;
+	params.isJoining = isJoining;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PlayerController.BP_PlayerController_C.OnFinishRespawn
+// (Event, Protected, BlueprintEvent)
+
+void ABP_PlayerController_C::OnFinishRespawn()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.OnFinishRespawn");
+
+	ABP_PlayerController_C_OnFinishRespawn_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -570,7 +505,7 @@ void ABP_PlayerController_C::Server_ForceRagdoll()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_PlayerController_C::ReceiveBeginPlay()
 {
@@ -586,8 +521,42 @@ void ABP_PlayerController_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_PlayerController.BP_PlayerController_C.CheckAndUpdateGamepad
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerController_C::CheckAndUpdateGamepad()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.CheckAndUpdateGamepad");
+
+	ABP_PlayerController_C_CheckAndUpdateGamepad_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PlayerController.BP_PlayerController_C.Server_ForceRagdoll
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerController_C::Server_ForceRagdoll()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.Server_ForceRagdoll");
+
+	ABP_PlayerController_C_Server_ForceRagdoll_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_PlayerController.BP_PlayerController_C.OnDisabledInputGateChanged
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_PlayerController_C::OnDisabledInputGateChanged()
 {
@@ -604,7 +573,7 @@ void ABP_PlayerController_C::OnDisabledInputGateChanged()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.CreateSequenceList
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_PlayerController_C::CreateSequenceList()
 {
@@ -621,7 +590,7 @@ void ABP_PlayerController_C::CreateSequenceList()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.TogglePhotoModeInstructionsWidget
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_PlayerController_C::TogglePhotoModeInstructionsWidget()
 {
@@ -638,7 +607,7 @@ void ABP_PlayerController_C::TogglePhotoModeInstructionsWidget()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.PlayPhotoSound
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerController_C::PlayPhotoSound()
 {
@@ -655,7 +624,7 @@ void ABP_PlayerController_C::PlayPhotoSound()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.TakePhoto
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_PlayerController_C::TakePhoto()
 {
@@ -671,12 +640,69 @@ void ABP_PlayerController_C::TakePhoto()
 }
 
 
-// Function BP_PlayerController.BP_PlayerController_C.ExecuteUbergraph_BP_PlayerController
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_PlayerController.BP_PlayerController_C.DoPause
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerController_C::ExecuteUbergraph_BP_PlayerController(int EntryPoint)
+void ABP_PlayerController_C::DoPause()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.DoPause");
+
+	ABP_PlayerController_C_DoPause_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PlayerController.BP_PlayerController_C.OnDismantlePortableMiner
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFGPortableMiner**       PortableMiner                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PlayerController_C::OnDismantlePortableMiner(class AFGPortableMiner** PortableMiner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.OnDismantlePortableMiner");
+
+	ABP_PlayerController_C_OnDismantlePortableMiner_Params params;
+	params.PortableMiner = PortableMiner;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PlayerController.BP_PlayerController_C.OnDismantleGolfCart
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFGWheeledVehicle**      inGolfCart                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PlayerController_C::OnDismantleGolfCart(class AFGWheeledVehicle** inGolfCart)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.OnDismantleGolfCart");
+
+	ABP_PlayerController_C_OnDismantleGolfCart_Params params;
+	params.inGolfCart = inGolfCart;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PlayerController.BP_PlayerController_C.ExecuteUbergraph_BP_PlayerController
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_PlayerController_C::ExecuteUbergraph_BP_PlayerController(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.ExecuteUbergraph_BP_PlayerController");
 
@@ -692,7 +718,7 @@ void ABP_PlayerController_C::ExecuteUbergraph_BP_PlayerController(int EntryPoint
 
 
 // Function BP_PlayerController.BP_PlayerController_C.OnRespawnEnd__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerController_C::OnRespawnEnd__DelegateSignature()
 {
@@ -709,7 +735,7 @@ void ABP_PlayerController_C::OnRespawnEnd__DelegateSignature()
 
 
 // Function BP_PlayerController.BP_PlayerController_C.OnBeginTypeChat__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerController_C::OnBeginTypeChat__DelegateSignature()
 {

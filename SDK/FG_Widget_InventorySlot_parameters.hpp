@@ -14,28 +14,49 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_InventorySlot.Widget_InventorySlot_C.ShowSplitStackWidget
+struct UWidget_InventorySlot_C_ShowSplitStackWidget_Params
+{
+};
+
+// Function Widget_InventorySlot.Widget_InventorySlot_C.OnMouseButtonDoubleClick
+struct UWidget_InventorySlot_C_OnMouseButtonDoubleClick_Params
+{
+	struct FGeometry*                                  InMyGeometry;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FPointerEvent*                              InMouseEvent;                                             // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Widget_InventorySlot.Widget_InventorySlot_C.GetItemForm
+struct UWidget_InventorySlot_C_GetItemForm_Params
+{
+	EResourceForm                                      form;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsValidClass;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_InventorySlot.Widget_InventorySlot_C.CheckForNuclearWaste
 struct UWidget_InventorySlot_C_CheckForNuclearWaste_Params
 {
-	class UClass*                                      Object;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Object;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.QuickMoveInventory
 struct UWidget_InventorySlot_C_QuickMoveInventory_Params
 {
+	bool*                                              MoveAllItemsOfSameType;                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.SetSlotSize
 struct UWidget_InventorySlot_C_SetSlotSize_Params
 {
-	bool                                               SmallSlot;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               BigSlot;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              SmallSlot;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              BigSlot;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.DropOntoInventorySlot
 struct UWidget_InventorySlot_C_DropOntoInventorySlot_Params
 {
-	class UWidget_InventorySlot_C*                     OtherInventorySlot;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_InventorySlot_C**                    OtherInventorySlot;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -89,7 +110,7 @@ struct UWidget_InventorySlot_C_OnKeyDown_Params
 // Function Widget_InventorySlot.Widget_InventorySlot_C.GetSlotStateColor
 struct UWidget_InventorySlot_C_GetSlotStateColor_Params
 {
-	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.GetBorderVisibility
@@ -128,14 +149,6 @@ struct UWidget_InventorySlot_C_GetStack_Params
 	struct FInventoryStack                             stack;                                                    // (Parm, OutParm)
 };
 
-// Function Widget_InventorySlot.Widget_InventorySlot_C.OnMouseDoubleClick
-struct UWidget_InventorySlot_C_OnMouseDoubleClick_Params
-{
-	struct FGeometry                                   MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	struct FPointerEvent                               MouseEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
 // Function Widget_InventorySlot.Widget_InventorySlot_C.GetTooltipWidget
 struct UWidget_InventorySlot_C_GetTooltipWidget_Params
 {
@@ -151,7 +164,7 @@ struct UWidget_InventorySlot_C_GetNumLabelVisibility_Params
 // Function Widget_InventorySlot.Widget_InventorySlot_C.GetFilterImageVisibility
 struct UWidget_InventorySlot_C_GetFilterImageVisibility_Params
 {
-	bool                                               Visible;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               visible;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.CreateSplitSlider
@@ -239,44 +252,23 @@ struct UWidget_InventorySlot_C_CacheSlotData_Params
 {
 };
 
+// Function Widget_InventorySlot.Widget_InventorySlot_C.OnMouseEnter
+struct UWidget_InventorySlot_C_OnMouseEnter_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FPointerEvent*                              MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
 // Function Widget_InventorySlot.Widget_InventorySlot_C.OnMouseLeave
 struct UWidget_InventorySlot_C_OnMouseLeave_Params
 {
 	struct FPointerEvent*                              MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
-// Function Widget_InventorySlot.Widget_InventorySlot_C.OnDragLeave
-struct UWidget_InventorySlot_C_OnDragLeave_Params
-{
-	struct FPointerEvent*                              PointerEvent;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
-	class UDragDropOperation**                         Operation;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Widget_InventorySlot.Widget_InventorySlot_C.OnDragEnter
-struct UWidget_InventorySlot_C_OnDragEnter_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	struct FPointerEvent*                              PointerEvent;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
-	class UDragDropOperation**                         Operation;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Widget_InventorySlot.Widget_InventorySlot_C.OnFocusLost
 struct UWidget_InventorySlot_C_OnFocusLost_Params
 {
 	struct FFocusEvent*                                InFocusEvent;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function Widget_InventorySlot.Widget_InventorySlot_C.Tick
-struct UWidget_InventorySlot_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Widget_InventorySlot.Widget_InventorySlot_C.SubscribeToParentWindow
-struct UWidget_InventorySlot_C_SubscribeToParentWindow_Params
-{
-	class UWidget_Window_C*                            ParentWindow;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.PreConstruct
@@ -303,38 +295,58 @@ struct UWidget_InventorySlot_C_Construct_Params
 // Function Widget_InventorySlot.Widget_InventorySlot_C.Event CreateNuclearWastePopup
 struct UWidget_InventorySlot_C_Event_CreateNuclearWastePopup_Params
 {
-	bool                                               isNuclearWaste;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              isNuclearWaste;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.CloseNuclearWastePopup
 struct UWidget_InventorySlot_C_CloseNuclearWastePopup_Params
 {
-	bool                                               ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Widget_InventorySlot.Widget_InventorySlot_C.OnMouseEnter
-struct UWidget_InventorySlot_C_OnMouseEnter_Params
+// Function Widget_InventorySlot.Widget_InventorySlot_C.OnDragLeave
+struct UWidget_InventorySlot_C_OnDragLeave_Params
+{
+	struct FPointerEvent*                              PointerEvent;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
+	class UDragDropOperation**                         Operation;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_InventorySlot.Widget_InventorySlot_C.CloseSplitStack
+struct UWidget_InventorySlot_C_CloseSplitStack_Params
+{
+};
+
+// Function Widget_InventorySlot.Widget_InventorySlot_C.OnDragEnter
+struct UWidget_InventorySlot_C_OnDragEnter_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	struct FPointerEvent*                              MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FPointerEvent*                              PointerEvent;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
+	class UDragDropOperation**                         Operation;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_InventorySlot.Widget_InventorySlot_C.Tick
+struct UWidget_InventorySlot_C_Tick_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.ExecuteUbergraph_Widget_InventorySlot
 struct UWidget_InventorySlot_C_ExecuteUbergraph_Widget_InventorySlot_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.OnMoveStack__DelegateSignature
 struct UWidget_InventorySlot_C_OnMoveStack__DelegateSignature_Params
 {
-	class UWidget_InventorySlot_C*                     Sender;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_InventorySlot_C**                    Sender;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_InventorySlot.Widget_InventorySlot_C.OnSlotHovered__DelegateSignature
 struct UWidget_InventorySlot_C_OnSlotHovered__DelegateSignature_Params
 {
-	class UWidget_InventorySlot_C*                     SelfInventorySlot;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_InventorySlot_C**                    SelfInventorySlot;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 }

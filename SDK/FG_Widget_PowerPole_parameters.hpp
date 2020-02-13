@@ -71,7 +71,7 @@ struct UWidget_PowerPole_C_ResetFuse_Params
 // Function Widget_PowerPole.Widget_PowerPole_C.ExecuteUbergraph_Widget_PowerPole
 struct UWidget_PowerPole_C_ExecuteUbergraph_Widget_PowerPole_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function LensDistortion.LensDistortionBlueprintLibrary.NotEqual_CompareLensDistortionModels
-// ()
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FLensDistortionCameraModel A                              (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLensDistortionCameraModel B                              (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FLensDistortionCameraModel* A                              (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FLensDistortionCameraModel* B                              (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULensDistortionBlueprintLibrary::NotEqual_CompareLensDistortionModels(const struct FLensDistortionCameraModel& A, const struct FLensDistortionCameraModel& B)
+bool ULensDistortionBlueprintLibrary::STATIC_NotEqual_CompareLensDistortionModels(struct FLensDistortionCameraModel* A, struct FLensDistortionCameraModel* B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LensDistortion.LensDistortionBlueprintLibrary.NotEqual_CompareLensDistortionModels");
 
@@ -28,6 +28,7 @@ bool ULensDistortionBlueprintLibrary::NotEqual_CompareLensDistortionModels(const
 	params.B = B;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,14 +39,14 @@ bool ULensDistortionBlueprintLibrary::NotEqual_CompareLensDistortionModels(const
 
 
 // Function LensDistortion.LensDistortionBlueprintLibrary.GetUndistortOverscanFactor
-// ()
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FLensDistortionCameraModel CameraModel                    (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          DistortedHorizontalFOV         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DistortedAspectRatio           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLensDistortionCameraModel* CameraModel                    (ConstParm, Parm, OutParm, ReferenceParm)
+// float*                         DistortedHorizontalFOV         (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         DistortedAspectRatio           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          UndistortOverscanFactor        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ULensDistortionBlueprintLibrary::GetUndistortOverscanFactor(const struct FLensDistortionCameraModel& CameraModel, float DistortedHorizontalFOV, float DistortedAspectRatio, float* UndistortOverscanFactor)
+void ULensDistortionBlueprintLibrary::STATIC_GetUndistortOverscanFactor(struct FLensDistortionCameraModel* CameraModel, float* DistortedHorizontalFOV, float* DistortedAspectRatio, float* UndistortOverscanFactor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LensDistortion.LensDistortionBlueprintLibrary.GetUndistortOverscanFactor");
 
@@ -55,6 +56,7 @@ void ULensDistortionBlueprintLibrary::GetUndistortOverscanFactor(const struct FL
 	params.DistortedAspectRatio = DistortedAspectRatio;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -66,13 +68,13 @@ void ULensDistortionBlueprintLibrary::GetUndistortOverscanFactor(const struct FL
 
 
 // Function LensDistortion.LensDistortionBlueprintLibrary.EqualEqual_CompareLensDistortionModels
-// ()
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FLensDistortionCameraModel A                              (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLensDistortionCameraModel B                              (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FLensDistortionCameraModel* A                              (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FLensDistortionCameraModel* B                              (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULensDistortionBlueprintLibrary::EqualEqual_CompareLensDistortionModels(const struct FLensDistortionCameraModel& A, const struct FLensDistortionCameraModel& B)
+bool ULensDistortionBlueprintLibrary::STATIC_EqualEqual_CompareLensDistortionModels(struct FLensDistortionCameraModel* A, struct FLensDistortionCameraModel* B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LensDistortion.LensDistortionBlueprintLibrary.EqualEqual_CompareLensDistortionModels");
 
@@ -81,6 +83,7 @@ bool ULensDistortionBlueprintLibrary::EqualEqual_CompareLensDistortionModels(con
 	params.B = B;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,18 +94,18 @@ bool ULensDistortionBlueprintLibrary::EqualEqual_CompareLensDistortionModels(con
 
 
 // Function LensDistortion.LensDistortionBlueprintLibrary.DrawUVDisplacementToRenderTarget
-// ()
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FLensDistortionCameraModel CameraModel                    (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          DistortedHorizontalFOV         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DistortedAspectRatio           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          UndistortOverscanFactor        (Parm, ZeroConstructor, IsPlainOldData)
-// class UTextureRenderTarget2D*  OutputRenderTarget             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OutputMultiply                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OutputAdd                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject**                WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLensDistortionCameraModel* CameraModel                    (ConstParm, Parm, OutParm, ReferenceParm)
+// float*                         DistortedHorizontalFOV         (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         DistortedAspectRatio           (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         UndistortOverscanFactor        (Parm, ZeroConstructor, IsPlainOldData)
+// class UTextureRenderTarget2D** OutputRenderTarget             (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         OutputMultiply                 (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         OutputAdd                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULensDistortionBlueprintLibrary::DrawUVDisplacementToRenderTarget(class UObject* WorldContextObject, const struct FLensDistortionCameraModel& CameraModel, float DistortedHorizontalFOV, float DistortedAspectRatio, float UndistortOverscanFactor, class UTextureRenderTarget2D* OutputRenderTarget, float OutputMultiply, float OutputAdd)
+void ULensDistortionBlueprintLibrary::STATIC_DrawUVDisplacementToRenderTarget(class UObject** WorldContextObject, struct FLensDistortionCameraModel* CameraModel, float* DistortedHorizontalFOV, float* DistortedAspectRatio, float* UndistortOverscanFactor, class UTextureRenderTarget2D** OutputRenderTarget, float* OutputMultiply, float* OutputAdd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LensDistortion.LensDistortionBlueprintLibrary.DrawUVDisplacementToRenderTarget");
 
@@ -117,6 +120,7 @@ void ULensDistortionBlueprintLibrary::DrawUVDisplacementToRenderTarget(class UOb
 	params.OutputAdd = OutputAdd;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

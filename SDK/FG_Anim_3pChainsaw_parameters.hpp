@@ -23,7 +23,7 @@ struct UAnim_3pChainsaw_C_BlueprintUpdateAnimation_Params
 // Function Anim_3pChainsaw.Anim_3pChainsaw_C.ExecuteUbergraph_Anim_3pChainsaw
 struct UAnim_3pChainsaw_C_ExecuteUbergraph_Anim_3pChainsaw_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

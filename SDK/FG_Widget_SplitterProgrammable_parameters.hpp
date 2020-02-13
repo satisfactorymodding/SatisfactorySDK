@@ -48,15 +48,15 @@ struct UWidget_SplitterProgrammable_C_GenerateRules_Params
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.GetOutputFromIndex
 struct UWidget_SplitterProgrammable_C_GetOutputFromIndex_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UVerticalBox*                                List;                                                     // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.AddRuleToOutput
 struct UWidget_SplitterProgrammable_C_AddRuleToOutput_Params
 {
-	struct FSplitterSortRule                           SplitterSortRule;                                         // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int                                                RuleIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FSplitterSortRule*                          SplitterSortRule;                                         // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int*                                               RuleIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.SetWindowTitle
@@ -84,20 +84,20 @@ struct UWidget_SplitterProgrammable_C_InitWindow_Params
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleRemoved
 struct UWidget_SplitterProgrammable_C_OnRuleRemoved_Params
 {
-	class UWidget_SplitterProgrammableRule_C*          SplitterRule;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SplitterProgrammableRule_C**         SplitterRule;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleUpdated
 struct UWidget_SplitterProgrammable_C_OnRuleUpdated_Params
 {
-	int                                                RuleIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FSplitterSortRule                           RuleData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+	int*                                               RuleIndex;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FSplitterSortRule*                          RuleData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.OnRuleAdded
 struct UWidget_SplitterProgrammable_C_OnRuleAdded_Params
 {
-	struct FSplitterSortRule                           RuleData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSplitterSortRule*                          RuleData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.PreConstruct
@@ -109,7 +109,7 @@ struct UWidget_SplitterProgrammable_C_PreConstruct_Params
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.ShowDescriptors
 struct UWidget_SplitterProgrammable_C_ShowDescriptors_Params
 {
-	class UWidget_SplitterProgrammableRule_C*          SplitterRule;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_SplitterProgrammableRule_C**         SplitterRule;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.HideDescriptors
@@ -120,7 +120,7 @@ struct UWidget_SplitterProgrammable_C_HideDescriptors_Params
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.UpdateRuleFromDescriptorList
 struct UWidget_SplitterProgrammable_C_UpdateRuleFromDescriptorList_Params
 {
-	class UClass*                                      SelectedDescriptor;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     SelectedDescriptor;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.Construct
@@ -156,7 +156,7 @@ struct UWidget_SplitterProgrammable_C_BndEvt__mRightOutputList_K2Node_ComponentB
 // Function Widget_SplitterProgrammable.Widget_SplitterProgrammable_C.ExecuteUbergraph_Widget_SplitterProgrammable
 struct UWidget_SplitterProgrammable_C_ExecuteUbergraph_Widget_SplitterProgrammable_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

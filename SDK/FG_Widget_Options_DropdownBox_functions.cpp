@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.SetDropdownColor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_DropdownBox_C::SetDropdownColor(const struct FLinearColor& Color)
+void UWidget_Options_DropdownBox_C::SetDropdownColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.SetDropdownColor");
 
@@ -33,12 +33,12 @@ void UWidget_Options_DropdownBox_C::SetDropdownColor(const struct FLinearColor& 
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.IsValidIndex
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Valid                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_DropdownBox_C::IsValidIndex(int Index, bool* Valid)
+void UWidget_Options_DropdownBox_C::IsValidIndex(int* Index, bool* Valid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.IsValidIndex");
 
@@ -57,7 +57,7 @@ void UWidget_Options_DropdownBox_C::IsValidIndex(int Index, bool* Valid)
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.BndEvt__mDropDownButton_K2Node_ComponentBoundEvent_172_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Options_DropdownBox_C::BndEvt__mDropDownButton_K2Node_ComponentBoundEvent_172_OnButtonClickedEvent__DelegateSignature()
 {
@@ -74,7 +74,7 @@ void UWidget_Options_DropdownBox_C::BndEvt__mDropDownButton_K2Node_ComponentBoun
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.BndEvt__mDropdownBox_K2Node_ComponentBoundEvent_2_OnOpeningEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Options_DropdownBox_C::BndEvt__mDropdownBox_K2Node_ComponentBoundEvent_2_OnOpeningEvent__DelegateSignature()
 {
@@ -91,7 +91,7 @@ void UWidget_Options_DropdownBox_C::BndEvt__mDropdownBox_K2Node_ComponentBoundEv
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.BndEvt__mFakeButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Options_DropdownBox_C::BndEvt__mFakeButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
@@ -108,12 +108,12 @@ void UWidget_Options_DropdownBox_C::BndEvt__mFakeButton_K2Node_ComponentBoundEve
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.BndEvt__mDropdownBox_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class FString                  SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class FString*                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// TEnumAsByte<ESelectInfo>*      SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_DropdownBox_C::BndEvt__mDropdownBox_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+void UWidget_Options_DropdownBox_C::BndEvt__mDropdownBox_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(class FString* SelectedItem, TEnumAsByte<ESelectInfo>* SelectionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.BndEvt__mDropdownBox_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
 
@@ -130,7 +130,7 @@ void UWidget_Options_DropdownBox_C::BndEvt__mDropdownBox_K2Node_ComponentBoundEv
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -150,7 +150,7 @@ void UWidget_Options_DropdownBox_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.OnRowHovered
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_DropdownBox_C::OnRowHovered()
 {
@@ -167,7 +167,7 @@ void UWidget_Options_DropdownBox_C::OnRowHovered()
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.OnRowUnhovered
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Options_DropdownBox_C::OnRowUnhovered()
 {
@@ -184,11 +184,11 @@ void UWidget_Options_DropdownBox_C::OnRowUnhovered()
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.ExecuteUbergraph_Widget_Options_DropdownBox
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Options_DropdownBox_C::ExecuteUbergraph_Widget_Options_DropdownBox(int EntryPoint)
+void UWidget_Options_DropdownBox_C::ExecuteUbergraph_Widget_Options_DropdownBox(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.ExecuteUbergraph_Widget_Options_DropdownBox");
 
@@ -204,11 +204,11 @@ void UWidget_Options_DropdownBox_C::ExecuteUbergraph_Widget_Options_DropdownBox(
 
 
 // Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.onSelectionChanged__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                  SelectedOption                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString*                 SelectedOption                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UWidget_Options_DropdownBox_C::onSelectionChanged__DelegateSignature(const class FString& SelectedOption)
+void UWidget_Options_DropdownBox_C::onSelectionChanged__DelegateSignature(class FString* SelectedOption)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Options_DropdownBox.Widget_Options_DropdownBox_C.onSelectionChanged__DelegateSignature");
 

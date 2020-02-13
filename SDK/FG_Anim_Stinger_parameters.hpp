@@ -49,7 +49,7 @@ struct UAnim_Stinger_C_BlueprintUpdateAnimation_Params
 // Function Anim_Stinger.Anim_Stinger_C.ExecuteUbergraph_Anim_Stinger
 struct UAnim_Stinger_C_ExecuteUbergraph_Anim_Stinger_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

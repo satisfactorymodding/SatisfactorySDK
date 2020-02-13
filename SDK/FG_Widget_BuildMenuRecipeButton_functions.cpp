@@ -12,8 +12,25 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.SetFontScaleForLanguage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_BuildMenuRecipeButton_C::SetFontScaleForLanguage()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.SetFontScaleForLanguage");
+
+	UWidget_BuildMenuRecipeButton_C_SetFontScaleForLanguage_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.UpdateNewItemOverlayVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::UpdateNewItemOverlayVisibility()
 {
@@ -30,7 +47,7 @@ void UWidget_BuildMenuRecipeButton_C::UpdateNewItemOverlayVisibility()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnKeyDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -55,7 +72,7 @@ struct FEventReply UWidget_BuildMenuRecipeButton_C::OnKeyDown(struct FGeometry* 
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.GetRightClickMenuVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +93,7 @@ ESlateVisibility UWidget_BuildMenuRecipeButton_C::GetRightClickMenuVisibility()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.CreateRightClickMenu
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -97,7 +114,7 @@ class UWidget* UWidget_BuildMenuRecipeButton_C::CreateRightClickMenu()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnMouseButtonDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -122,7 +139,7 @@ struct FEventReply UWidget_BuildMenuRecipeButton_C::OnMouseButtonDown(struct FGe
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.GetTextHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -143,7 +160,7 @@ struct FSlateColor UWidget_BuildMenuRecipeButton_C::GetTextHoverColor()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.GetGraphicsHoverColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -164,7 +181,7 @@ struct FLinearColor UWidget_BuildMenuRecipeButton_C::GetGraphicsHoverColor()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.ResolveHotkeyIndex
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::ResolveHotkeyIndex()
 {
@@ -181,7 +198,7 @@ void UWidget_BuildMenuRecipeButton_C::ResolveHotkeyIndex()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.CreateShoppingListButtons
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::CreateShoppingListButtons()
 {
@@ -198,7 +215,7 @@ void UWidget_BuildMenuRecipeButton_C::CreateShoppingListButtons()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.GetBuildingIcon
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::GetBuildingIcon()
 {
@@ -215,7 +232,7 @@ void UWidget_BuildMenuRecipeButton_C::GetBuildingIcon()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnFocusReceived
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FFocusEvent*            InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -240,7 +257,7 @@ struct FEventReply UWidget_BuildMenuRecipeButton_C::OnFocusReceived(struct FGeom
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.GetRecipeName
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::GetRecipeName()
 {
@@ -257,7 +274,7 @@ void UWidget_BuildMenuRecipeButton_C::GetRecipeName()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::Construct()
 {
@@ -274,7 +291,7 @@ void UWidget_BuildMenuRecipeButton_C::Construct()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.BndEvt__mRecipeOverlay_K2Node_ComponentBoundEvent_35_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::BndEvt__mRecipeOverlay_K2Node_ComponentBoundEvent_35_OnButtonHoverEvent__DelegateSignature()
 {
@@ -291,7 +308,7 @@ void UWidget_BuildMenuRecipeButton_C::BndEvt__mRecipeOverlay_K2Node_ComponentBou
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.BndEvt__mRecipeOverlay_K2Node_ComponentBoundEvent_439_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::BndEvt__mRecipeOverlay_K2Node_ComponentBoundEvent_439_OnButtonClickedEvent__DelegateSignature()
 {
@@ -308,7 +325,7 @@ void UWidget_BuildMenuRecipeButton_C::BndEvt__mRecipeOverlay_K2Node_ComponentBou
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.BndEvt__mRecipeOverlay_K2Node_ComponentBoundEvent_16_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::BndEvt__mRecipeOverlay_K2Node_ComponentBoundEvent_16_OnButtonHoverEvent__DelegateSignature()
 {
@@ -325,7 +342,7 @@ void UWidget_BuildMenuRecipeButton_C::BndEvt__mRecipeOverlay_K2Node_ComponentBou
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.SimulateOnHovered
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::SimulateOnHovered()
 {
@@ -342,7 +359,7 @@ void UWidget_BuildMenuRecipeButton_C::SimulateOnHovered()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.SimulateOnUnhovered
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenuRecipeButton_C::SimulateOnUnhovered()
 {
@@ -359,7 +376,7 @@ void UWidget_BuildMenuRecipeButton_C::SimulateOnUnhovered()
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -379,11 +396,11 @@ void UWidget_BuildMenuRecipeButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.ExecuteUbergraph_Widget_BuildMenuRecipeButton
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenuRecipeButton_C::ExecuteUbergraph_Widget_BuildMenuRecipeButton(int EntryPoint)
+void UWidget_BuildMenuRecipeButton_C::ExecuteUbergraph_Widget_BuildMenuRecipeButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.ExecuteUbergraph_Widget_BuildMenuRecipeButton");
 
@@ -399,12 +416,12 @@ void UWidget_BuildMenuRecipeButton_C::ExecuteUbergraph_Widget_BuildMenuRecipeBut
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnStopHoveringRecipe__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_BuildMenuRecipeButton_C* RecipeButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_BuildMenuRecipeButton_C** RecipeButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_BuildMenuRecipeButton_C::OnStopHoveringRecipe__DelegateSignature(class UClass* Recipe, class UWidget_BuildMenuRecipeButton_C* RecipeButton)
+void UWidget_BuildMenuRecipeButton_C::OnStopHoveringRecipe__DelegateSignature(class UClass** Recipe, class UWidget_BuildMenuRecipeButton_C** RecipeButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnStopHoveringRecipe__DelegateSignature");
 
@@ -421,12 +438,12 @@ void UWidget_BuildMenuRecipeButton_C::OnStopHoveringRecipe__DelegateSignature(cl
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnRecipeHovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  RecipeHover                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_BuildMenuRecipeButton_C* RecipeButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UClass**                 RecipeHover                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_BuildMenuRecipeButton_C** RecipeButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_BuildMenuRecipeButton_C::OnRecipeHovered__DelegateSignature(class UClass* RecipeHover, class UWidget_BuildMenuRecipeButton_C* RecipeButton)
+void UWidget_BuildMenuRecipeButton_C::OnRecipeHovered__DelegateSignature(class UClass** RecipeHover, class UWidget_BuildMenuRecipeButton_C** RecipeButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnRecipeHovered__DelegateSignature");
 
@@ -443,11 +460,11 @@ void UWidget_BuildMenuRecipeButton_C::OnRecipeHovered__DelegateSignature(class U
 
 
 // Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnRecipeClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenuRecipeButton_C::OnRecipeClicked__DelegateSignature(class UClass* Recipe)
+void UWidget_BuildMenuRecipeButton_C::OnRecipeClicked__DelegateSignature(class UClass** Recipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenuRecipeButton.Widget_BuildMenuRecipeButton_C.OnRecipeClicked__DelegateSignature");
 

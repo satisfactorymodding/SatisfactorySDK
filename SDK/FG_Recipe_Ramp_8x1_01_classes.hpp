@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_Ramp_8x1_01.Recipe_Ramp_8x1_01_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_Ramp_8x1_01_C : public UFGRecipe
 {
 public:

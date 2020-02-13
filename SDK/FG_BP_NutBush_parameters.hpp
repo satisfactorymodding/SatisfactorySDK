@@ -44,11 +44,6 @@ struct ABP_NutBush_C_IsChainsawable_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BP_NutBush.BP_NutBush_C.UserConstructionScript
-struct ABP_NutBush_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

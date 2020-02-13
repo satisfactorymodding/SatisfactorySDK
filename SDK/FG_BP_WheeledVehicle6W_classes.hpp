@@ -15,11 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WheeledVehicle6W.BP_WheeledVehicle6W_C
-// 0x0008 (0x0860 - 0x0858)
+// 0x000C (0x0930 - 0x0924)
 class ABP_WheeledVehicle6W_C : public ABP_WheeledVehicle_C
 {
 public:
-	class UFGWheeledVehicleMovementComponent6W*        FGWheeledVehicleMovementComponent6W;                      // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0924(0x0004) MISSED OFFSET
+	class UFGWheeledVehicleMovementComponent6W*        FGWheeledVehicleMovementComponent6W;                      // 0x0928(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.isThreat
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FName                   inTag                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  inTag                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isThreat                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AController_SpaceRabbit_C::isThreat(const struct FName& inTag, bool* isThreat)
+void AController_SpaceRabbit_C::isThreat(struct FName* inTag, bool* isThreat)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.isThreat");
 
@@ -37,19 +37,19 @@ void AController_SpaceRabbit_C::isThreat(const struct FName& inTag, bool* isThre
 
 
 // Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.ReactToSound
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  inActor                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 soundLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   Tag                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 InActor                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector*                soundLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  Tag                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           didReact                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AController_SpaceRabbit_C::ReactToSound(class AActor* inActor, const struct FVector& soundLocation, const struct FName& Tag, bool* didReact)
+void AController_SpaceRabbit_C::ReactToSound(class AActor** InActor, struct FVector* soundLocation, struct FName* Tag, bool* didReact)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.ReactToSound");
 
 	AController_SpaceRabbit_C_ReactToSound_Params params;
-	params.inActor = inActor;
+	params.InActor = InActor;
 	params.soundLocation = soundLocation;
 	params.Tag = Tag;
 
@@ -65,11 +65,11 @@ void AController_SpaceRabbit_C::ReactToSound(class AActor* inActor, const struct
 
 
 // Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.SetNewThreat
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      newThreat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     newThreat                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_SpaceRabbit_C::SetNewThreat(class AFGCharacterPlayer* newThreat)
+void AController_SpaceRabbit_C::SetNewThreat(class AFGCharacterPlayer** newThreat)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.SetNewThreat");
 
@@ -85,7 +85,7 @@ void AController_SpaceRabbit_C::SetNewThreat(class AFGCharacterPlayer* newThreat
 
 
 // Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.GetCurrentThreat
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AFGCharacterPlayer*      outThreat                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -106,33 +106,16 @@ void AController_SpaceRabbit_C::GetCurrentThreat(class AFGCharacterPlayer** outT
 }
 
 
-// Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.UserConstructionScript
-// ()
-
-void AController_SpaceRabbit_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.UserConstructionScript");
-
-	AController_SpaceRabbit_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.OnPossess
-// ()
+// Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.ReceivePossess
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class APawn**                  PossessedPawn                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_SpaceRabbit_C::OnPossess(class APawn** PossessedPawn)
+void AController_SpaceRabbit_C::ReceivePossess(class APawn** PossessedPawn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.OnPossess");
+	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.ReceivePossess");
 
-	AController_SpaceRabbit_C_OnPossess_Params params;
+	AController_SpaceRabbit_C_ReceivePossess_Params params;
 	params.PossessedPawn = PossessedPawn;
 
 	auto flags = fn->FunctionFlags;
@@ -144,12 +127,12 @@ void AController_SpaceRabbit_C::OnPossess(class APawn** PossessedPawn)
 
 
 // Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIStimulus             Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class AActor**                 Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIStimulus*            Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AController_SpaceRabbit_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus)
+void AController_SpaceRabbit_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature");
 
@@ -166,7 +149,7 @@ void AController_SpaceRabbit_C::BndEvt__PerceptionComponent_K2Node_ComponentBoun
 
 
 // Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.StartPanic
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AController_SpaceRabbit_C::StartPanic()
 {
@@ -183,11 +166,11 @@ void AController_SpaceRabbit_C::StartPanic()
 
 
 // Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.ExecuteUbergraph_Controller_SpaceRabbit
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_SpaceRabbit_C::ExecuteUbergraph_Controller_SpaceRabbit(int EntryPoint)
+void AController_SpaceRabbit_C::ExecuteUbergraph_Controller_SpaceRabbit(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_SpaceRabbit.Controller_SpaceRabbit_C.ExecuteUbergraph_Controller_SpaceRabbit");
 

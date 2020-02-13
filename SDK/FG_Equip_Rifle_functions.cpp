@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_Rifle.Equip_Rifle_C.UserConstructionScript
-// ()
-
-void AEquip_Rifle_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_Rifle.Equip_Rifle_C.UserConstructionScript");
-
-	AEquip_Rifle_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_Rifle.Equip_Rifle_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Rifle_C::ReceiveBeginPlay()
 {
@@ -47,7 +30,7 @@ void AEquip_Rifle_C::ReceiveBeginPlay()
 
 
 // Function Equip_Rifle.Equip_Rifle_C.PlayReloadEffects
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Rifle_C::PlayReloadEffects()
 {
@@ -64,7 +47,7 @@ void AEquip_Rifle_C::PlayReloadEffects()
 
 
 // Function Equip_Rifle.Equip_Rifle_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Rifle_C::WasUnEquipped()
 {
@@ -81,7 +64,7 @@ void AEquip_Rifle_C::WasUnEquipped()
 
 
 // Function Equip_Rifle.Equip_Rifle_C.PlayFireEffect
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Rifle_C::PlayFireEffect()
 {
@@ -98,7 +81,7 @@ void AEquip_Rifle_C::PlayFireEffect()
 
 
 // Function Equip_Rifle.Equip_Rifle_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_Rifle_C::WasEquipped()
 {
@@ -115,11 +98,11 @@ void AEquip_Rifle_C::WasEquipped()
 
 
 // Function Equip_Rifle.Equip_Rifle_C.ExecuteUbergraph_Equip_Rifle
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_Rifle_C::ExecuteUbergraph_Equip_Rifle(int EntryPoint)
+void AEquip_Rifle_C::ExecuteUbergraph_Equip_Rifle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_Rifle.Equip_Rifle_C.ExecuteUbergraph_Equip_Rifle");
 
@@ -135,7 +118,7 @@ void AEquip_Rifle_C::ExecuteUbergraph_Equip_Rifle(int EntryPoint)
 
 
 // Function Equip_Rifle.Equip_Rifle_C.Fire__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void AEquip_Rifle_C::Fire__DelegateSignature()
 {

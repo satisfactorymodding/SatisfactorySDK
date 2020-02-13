@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_GeneratorFuel.Anim_GeneratorFuel_C.AnimNotify_FuelGenEnteredProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorFuel_C::AnimNotify_FuelGenEnteredProducingState()
 {
@@ -30,7 +30,7 @@ void UAnim_GeneratorFuel_C::AnimNotify_FuelGenEnteredProducingState()
 
 
 // Function Anim_GeneratorFuel.Anim_GeneratorFuel_C.AnimNotify_FuelGenLeftProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorFuel_C::AnimNotify_FuelGenLeftProducingState()
 {
@@ -47,11 +47,11 @@ void UAnim_GeneratorFuel_C::AnimNotify_FuelGenLeftProducingState()
 
 
 // Function Anim_GeneratorFuel.Anim_GeneratorFuel_C.ExecuteUbergraph_Anim_GeneratorFuel
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_GeneratorFuel_C::ExecuteUbergraph_Anim_GeneratorFuel(int EntryPoint)
+void UAnim_GeneratorFuel_C::ExecuteUbergraph_Anim_GeneratorFuel(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_GeneratorFuel.Anim_GeneratorFuel_C.ExecuteUbergraph_Anim_GeneratorFuel");
 

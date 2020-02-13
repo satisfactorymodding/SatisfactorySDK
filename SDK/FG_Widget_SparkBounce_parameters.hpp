@@ -27,7 +27,7 @@ struct UWidget_SparkBounce_C_OnAnimFinished_Params
 // Function Widget_SparkBounce.Widget_SparkBounce_C.ExecuteUbergraph_Widget_SparkBounce
 struct UWidget_SparkBounce_C_ExecuteUbergraph_Widget_SparkBounce_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

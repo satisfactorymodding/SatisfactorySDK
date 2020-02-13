@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_3pRebargun.Anim_3pRebargun_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UAnim_3pRebargun_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_3pRebargun.Anim_3pRebargun_C.AnimNotify_RebarGunIsLoaded3p
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_3pRebargun_C::AnimNotify_RebarGunIsLoaded3p()
 {
@@ -50,7 +50,7 @@ void UAnim_3pRebargun_C::AnimNotify_RebarGunIsLoaded3p()
 
 
 // Function Anim_3pRebargun.Anim_3pRebargun_C.AnimNotify_RebarGunIsNotLoaded3p
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_3pRebargun_C::AnimNotify_RebarGunIsNotLoaded3p()
 {
@@ -67,11 +67,11 @@ void UAnim_3pRebargun_C::AnimNotify_RebarGunIsNotLoaded3p()
 
 
 // Function Anim_3pRebargun.Anim_3pRebargun_C.ExecuteUbergraph_Anim_3pRebargun
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_3pRebargun_C::ExecuteUbergraph_Anim_3pRebargun(int EntryPoint)
+void UAnim_3pRebargun_C::ExecuteUbergraph_Anim_3pRebargun(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_3pRebargun.Anim_3pRebargun_C.ExecuteUbergraph_Anim_3pRebargun");
 

@@ -24,7 +24,7 @@ struct UBTT_RotateToTarget_C_ReceiveExecuteAI_Params
 // Function BTT_RotateToTarget.BTT_RotateToTarget_C.RotationComplete
 struct UBTT_RotateToTarget_C_RotationComplete_Params
 {
-	class APawn*                                       PawnRotated;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class APawn**                                      PawnRotated;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BTT_RotateToTarget.BTT_RotateToTarget_C.ReceiveAbortAI
@@ -37,7 +37,7 @@ struct UBTT_RotateToTarget_C_ReceiveAbortAI_Params
 // Function BTT_RotateToTarget.BTT_RotateToTarget_C.ExecuteUbergraph_BTT_RotateToTarget
 struct UBTT_RotateToTarget_C_ExecuteUbergraph_BTT_RotateToTarget_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_StingerGas.BP_StingerGas_C.UserConstructionScript
-struct ABP_StingerGas_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_StingerGas.BP_StingerGas_C.Timeline_1__FinishedFunc
 struct ABP_StingerGas_C_Timeline_1__FinishedFunc_Params
 {
@@ -47,7 +42,7 @@ struct ABP_StingerGas_C_ReceiveBeginPlay_Params
 // Function BP_StingerGas.BP_StingerGas_C.ExecuteUbergraph_BP_StingerGas
 struct ABP_StingerGas_C_ExecuteUbergraph_BP_StingerGas_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

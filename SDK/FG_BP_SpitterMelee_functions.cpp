@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpitterMelee.BP_SpitterMelee_C.GetNewTarget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SpitterMelee_C::GetNewTarget()
 {
@@ -29,25 +29,8 @@ void ABP_SpitterMelee_C::GetNewTarget()
 }
 
 
-// Function BP_SpitterMelee.BP_SpitterMelee_C.UserConstructionScript
-// ()
-
-void ABP_SpitterMelee_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterMelee.BP_SpitterMelee_C.UserConstructionScript");
-
-	ABP_SpitterMelee_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_SpitterMelee.BP_SpitterMelee_C.ReceiveActorBeginOverlap
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AActor**                 OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,11 +50,11 @@ void ABP_SpitterMelee_C::ReceiveActorBeginOverlap(class AActor** OtherActor)
 
 
 // Function BP_SpitterMelee.BP_SpitterMelee_C.DestroyOnParticleDone
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UParticleSystemComponent* PSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UParticleSystemComponent** PSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SpitterMelee_C::DestroyOnParticleDone(class UParticleSystemComponent* PSystem)
+void ABP_SpitterMelee_C::DestroyOnParticleDone(class UParticleSystemComponent** PSystem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterMelee.BP_SpitterMelee_C.DestroyOnParticleDone");
 
@@ -87,11 +70,11 @@ void ABP_SpitterMelee_C::DestroyOnParticleDone(class UParticleSystemComponent* P
 
 
 // Function BP_SpitterMelee.BP_SpitterMelee_C.DestroyWithRagdoll
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UParticleSystemComponent* PSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UParticleSystemComponent** PSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SpitterMelee_C::DestroyWithRagdoll(class UParticleSystemComponent* PSystem)
+void ABP_SpitterMelee_C::DestroyWithRagdoll(class UParticleSystemComponent** PSystem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterMelee.BP_SpitterMelee_C.DestroyWithRagdoll");
 
@@ -107,11 +90,11 @@ void ABP_SpitterMelee_C::DestroyWithRagdoll(class UParticleSystemComponent* PSys
 
 
 // Function BP_SpitterMelee.BP_SpitterMelee_C.DestroyWithAirC
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UParticleSystemComponent* PSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UParticleSystemComponent** PSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SpitterMelee_C::DestroyWithAirC(class UParticleSystemComponent* PSystem)
+void ABP_SpitterMelee_C::DestroyWithAirC(class UParticleSystemComponent** PSystem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterMelee.BP_SpitterMelee_C.DestroyWithAirC");
 
@@ -127,7 +110,7 @@ void ABP_SpitterMelee_C::DestroyWithAirC(class UParticleSystemComponent* PSystem
 
 
 // Function BP_SpitterMelee.BP_SpitterMelee_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_SpitterMelee_C::ReceiveBeginPlay()
 {
@@ -144,11 +127,11 @@ void ABP_SpitterMelee_C::ReceiveBeginPlay()
 
 
 // Function BP_SpitterMelee.BP_SpitterMelee_C.ExecuteUbergraph_BP_SpitterMelee
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterMelee_C::ExecuteUbergraph_BP_SpitterMelee(int EntryPoint)
+void ABP_SpitterMelee_C::ExecuteUbergraph_BP_SpitterMelee(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterMelee.BP_SpitterMelee_C.ExecuteUbergraph_BP_SpitterMelee");
 

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Qos.QosBeaconClient
-// 0x0038 (0x03D8 - 0x03A0)
+// 0x0038 (0x03E8 - 0x03B0)
 class AQosBeaconClient : public AOnlineBeaconClient
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x03A0(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x03B0(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -28,17 +28,17 @@ public:
 	}
 
 
-	void ServerQosRequest(const class FString& InSessionId);
-	void ClientQosResponse(EQosResponseType Response);
+	void ServerQosRequest(class FString* InSessionId);
+	void ClientQosResponse(EQosResponseType* Response);
 };
 
 
 // Class Qos.QosBeaconHost
-// 0x0010 (0x0360 - 0x0350)
+// 0x0010 (0x0368 - 0x0358)
 class AQosBeaconHost : public AOnlineBeaconHostObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0350(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0358(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

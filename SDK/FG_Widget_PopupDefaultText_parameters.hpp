@@ -22,7 +22,7 @@ struct UWidget_PopupDefaultText_C_Construct_Params
 // Function Widget_PopupDefaultText.Widget_PopupDefaultText_C.ExecuteUbergraph_Widget_PopupDefaultText
 struct UWidget_PopupDefaultText_C_ExecuteUbergraph_Widget_PopupDefaultText_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

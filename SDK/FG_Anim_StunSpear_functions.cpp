@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_StunSpear.Anim_StunSpear_C.AnimNotify_Notify_StunSpearAttack
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_StunSpear_C::AnimNotify_Notify_StunSpearAttack()
 {
@@ -30,11 +30,11 @@ void UAnim_StunSpear_C::AnimNotify_Notify_StunSpearAttack()
 
 
 // Function Anim_StunSpear.Anim_StunSpear_C.ExecuteUbergraph_Anim_StunSpear
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_StunSpear_C::ExecuteUbergraph_Anim_StunSpear(int EntryPoint)
+void UAnim_StunSpear_C::ExecuteUbergraph_Anim_StunSpear(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_StunSpear.Anim_StunSpear_C.ExecuteUbergraph_Anim_StunSpear");
 

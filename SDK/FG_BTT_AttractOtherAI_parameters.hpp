@@ -24,7 +24,7 @@ struct UBTT_AttractOtherAI_C_ReceiveExecuteAI_Params
 // Function BTT_AttractOtherAI.BTT_AttractOtherAI_C.ExecuteUbergraph_BTT_AttractOtherAI
 struct UBTT_AttractOtherAI_C_ExecuteUbergraph_BTT_AttractOtherAI_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

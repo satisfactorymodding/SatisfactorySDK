@@ -12,16 +12,67 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetPercent
-// ()
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.UpdateSliderValue
+// (Public, BlueprintCallable, BlueprintEvent)
 
-float UWidget_OptionsSlider_C::GetPercent()
+void UWidget_OptionsSlider_C::UpdateSliderValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetPercent");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.UpdateSliderValue");
 
-	UWidget_OptionsSlider_C_GetPercent_Params params;
+	UWidget_OptionsSlider_C_UpdateSliderValue_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.HandleSlider
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_OptionsSlider_C::HandleSlider()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.HandleSlider");
+
+	UWidget_OptionsSlider_C_HandleSlider_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.SetupSlider
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_OptionsSlider_C::SetupSlider()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.SetupSlider");
+
+	UWidget_OptionsSlider_C_SetupSlider_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetDisplayValue
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                          DisplayValue                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_OptionsSlider_C::GetDisplayValue(float* DisplayValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetDisplayValue");
+
+	UWidget_OptionsSlider_C_GetDisplayValue_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,16 +80,17 @@ float UWidget_OptionsSlider_C::GetPercent()
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	if (DisplayValue != nullptr)
+		*DisplayValue = params.DisplayValue;
 }
 
 
 // Function Widget_OptionsSlider.Widget_OptionsSlider_C.SetNormalizedValue
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          CurrentUnadjustedValue         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         CurrentUnadjustedValue         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_OptionsSlider_C::SetNormalizedValue(float CurrentUnadjustedValue)
+void UWidget_OptionsSlider_C::SetNormalizedValue(float* CurrentUnadjustedValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.SetNormalizedValue");
 
@@ -54,17 +106,15 @@ void UWidget_OptionsSlider_C::SetNormalizedValue(float CurrentUnadjustedValue)
 
 
 // Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetAdjustedValue
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          Normalized_Value               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Adjusted_Value                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          AdjustedValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_OptionsSlider_C::GetAdjustedValue(float Normalized_Value, float* Adjusted_Value)
+void UWidget_OptionsSlider_C::GetAdjustedValue(float* AdjustedValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetAdjustedValue");
 
 	UWidget_OptionsSlider_C_GetAdjustedValue_Params params;
-	params.Normalized_Value = Normalized_Value;
 
 	auto flags = fn->FunctionFlags;
 
@@ -72,17 +122,17 @@ void UWidget_OptionsSlider_C::GetAdjustedValue(float Normalized_Value, float* Ad
 
 	fn->FunctionFlags = flags;
 
-	if (Adjusted_Value != nullptr)
-		*Adjusted_Value = params.Adjusted_Value;
+	if (AdjustedValue != nullptr)
+		*AdjustedValue = params.AdjustedValue;
 }
 
 
 // Function Widget_OptionsSlider.Widget_OptionsSlider_C.SetProgressBarPercentage
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Percent                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Percent                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_OptionsSlider_C::SetProgressBarPercentage(float Percent)
+void UWidget_OptionsSlider_C::SetProgressBarPercentage(float* Percent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.SetProgressBarPercentage");
 
@@ -98,7 +148,7 @@ void UWidget_OptionsSlider_C::SetProgressBarPercentage(float Percent)
 
 
 // Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetProgressBarPercentage
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -119,7 +169,7 @@ float UWidget_OptionsSlider_C::GetProgressBarPercentage()
 
 
 // Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetValueText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -139,34 +189,14 @@ struct FText UWidget_OptionsSlider_C::GetValueText()
 }
 
 
-// Function Widget_OptionsSlider.Widget_OptionsSlider_C.BndEvt__OptionSlider_K2Node_ComponentBoundEvent_104_OnFloatValueChangedEvent__DelegateSignature
-// ()
-// Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnInitValueController
+// (Event, Public, BlueprintEvent)
 
-void UWidget_OptionsSlider_C::BndEvt__OptionSlider_K2Node_ComponentBoundEvent_104_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWidget_OptionsSlider_C::OnInitValueController()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.BndEvt__OptionSlider_K2Node_ComponentBoundEvent_104_OnFloatValueChangedEvent__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnInitValueController");
 
-	UWidget_OptionsSlider_C_BndEvt__OptionSlider_K2Node_ComponentBoundEvent_104_OnFloatValueChangedEvent__DelegateSignature_Params params;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnRowHovered
-// ()
-
-void UWidget_OptionsSlider_C::OnRowHovered()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnRowHovered");
-
-	UWidget_OptionsSlider_C_OnRowHovered_Params params;
+	UWidget_OptionsSlider_C_OnInitValueController_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -177,7 +207,7 @@ void UWidget_OptionsSlider_C::OnRowHovered()
 
 
 // Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnRowUnhovered
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_OptionsSlider_C::OnRowUnhovered()
 {
@@ -193,12 +223,88 @@ void UWidget_OptionsSlider_C::OnRowUnhovered()
 }
 
 
-// Function Widget_OptionsSlider.Widget_OptionsSlider_C.ExecuteUbergraph_Widget_OptionsSlider
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnRowHovered
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_OptionsSlider_C::ExecuteUbergraph_Widget_OptionsSlider(int EntryPoint)
+void UWidget_OptionsSlider_C::OnRowHovered()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnRowHovered");
+
+	UWidget_OptionsSlider_C_OnRowHovered_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.BndEvt__EditableTextBox_0_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature
+// (HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_OptionsSlider_C::BndEvt__EditableTextBox_0_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.BndEvt__EditableTextBox_0_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
+
+	UWidget_OptionsSlider_C_BndEvt__EditableTextBox_0_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
+	params.Text = Text;
+	params.CommitMethod = CommitMethod;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.BndEvt__OptionSlider_K2Node_ComponentBoundEvent_104_OnFloatValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_OptionsSlider_C::BndEvt__OptionSlider_K2Node_ComponentBoundEvent_104_OnFloatValueChangedEvent__DelegateSignature(float* Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.BndEvt__OptionSlider_K2Node_ComponentBoundEvent_104_OnFloatValueChangedEvent__DelegateSignature");
+
+	UWidget_OptionsSlider_C_BndEvt__OptionSlider_K2Node_ComponentBoundEvent_104_OnFloatValueChangedEvent__DelegateSignature_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnOptionValueUpdated
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_OptionsSlider_C::OnOptionValueUpdated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.OnOptionValueUpdated");
+
+	UWidget_OptionsSlider_C_OnOptionValueUpdated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_OptionsSlider.Widget_OptionsSlider_C.ExecuteUbergraph_Widget_OptionsSlider
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_OptionsSlider_C::ExecuteUbergraph_Widget_OptionsSlider(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.ExecuteUbergraph_Widget_OptionsSlider");
 
@@ -214,16 +320,16 @@ void UWidget_OptionsSlider_C::ExecuteUbergraph_Widget_OptionsSlider(int EntryPoi
 
 
 // Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetNewValue__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          VolumeLevel                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_OptionsSlider_C::GetNewValue__DelegateSignature(float VolumeLevel)
+void UWidget_OptionsSlider_C::GetNewValue__DelegateSignature(float* NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionsSlider.Widget_OptionsSlider_C.GetNewValue__DelegateSignature");
 
 	UWidget_OptionsSlider_C_GetNewValue__DelegateSignature_Params params;
-	params.VolumeLevel = VolumeLevel;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 

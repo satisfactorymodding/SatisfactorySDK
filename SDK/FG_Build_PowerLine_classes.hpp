@@ -28,9 +28,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_Build_PowerLine(int EntryPoint);
+	void ExecuteUbergraph_Build_PowerLine(int* EntryPoint);
 };
 
 

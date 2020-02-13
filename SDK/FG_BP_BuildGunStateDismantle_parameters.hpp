@@ -48,7 +48,7 @@ struct UBP_BuildGunStateDismantle_C_OnStopDismantle_Params
 // Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.ExecuteUbergraph_BP_BuildGunStateDismantle
 struct UBP_BuildGunStateDismantle_C_ExecuteUbergraph_BP_BuildGunStateDismantle_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

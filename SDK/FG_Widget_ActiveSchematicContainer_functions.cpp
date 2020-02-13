@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.GetPodTimerText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -34,7 +34,7 @@ struct FText UWidget_ActiveSchematicContainer_C::GetPodTimerText()
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ShowPodTimerText
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ ESlateVisibility UWidget_ActiveSchematicContainer_C::ShowPodTimerText()
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.RemoveSchematicCostWidget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActiveSchematicContainer_C::RemoveSchematicCostWidget()
 {
@@ -72,7 +72,7 @@ void UWidget_ActiveSchematicContainer_C::RemoveSchematicCostWidget()
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.AddSchematicCostWidget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActiveSchematicContainer_C::AddSchematicCostWidget()
 {
@@ -89,7 +89,7 @@ void UWidget_ActiveSchematicContainer_C::AddSchematicCostWidget()
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.MatchWidgetWithSchematicCost
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActiveSchematicContainer_C::MatchWidgetWithSchematicCost()
 {
@@ -106,7 +106,7 @@ void UWidget_ActiveSchematicContainer_C::MatchWidgetWithSchematicCost()
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ShowSchematicWidget
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -127,7 +127,7 @@ ESlateVisibility UWidget_ActiveSchematicContainer_C::ShowSchematicWidget()
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ShouldShowSchematic
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ShouldShow                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -149,7 +149,7 @@ void UWidget_ActiveSchematicContainer_C::ShouldShowSchematic(bool* ShouldShow)
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.GetSchematicName
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActiveSchematicContainer_C::GetSchematicName()
 {
@@ -166,7 +166,7 @@ void UWidget_ActiveSchematicContainer_C::GetSchematicName()
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActiveSchematicContainer_C::Construct()
 {
@@ -183,11 +183,11 @@ void UWidget_ActiveSchematicContainer_C::Construct()
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.UpdateSchematic
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  activeSchematic                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 activeSchematic                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActiveSchematicContainer_C::UpdateSchematic(class UClass* activeSchematic)
+void UWidget_ActiveSchematicContainer_C::UpdateSchematic(class UClass** activeSchematic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.UpdateSchematic");
 
@@ -203,11 +203,11 @@ void UWidget_ActiveSchematicContainer_C::UpdateSchematic(class UClass* activeSch
 
 
 // Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ExecuteUbergraph_Widget_ActiveSchematicContainer
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActiveSchematicContainer_C::ExecuteUbergraph_Widget_ActiveSchematicContainer(int EntryPoint)
+void UWidget_ActiveSchematicContainer_C::ExecuteUbergraph_Widget_ActiveSchematicContainer(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActiveSchematicContainer.Widget_ActiveSchematicContainer_C.ExecuteUbergraph_Widget_ActiveSchematicContainer");
 

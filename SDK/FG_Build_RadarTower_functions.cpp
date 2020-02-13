@@ -12,13 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_RadarTower.Build_RadarTower_C.SetActorRepresentationText
-// ()
+// Function Build_RadarTower.Build_RadarTower_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABuild_RadarTower_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.GetActorCompassViewDistance");
+
+	ABuild_RadarTower_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Build_RadarTower.Build_RadarTower_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABuild_RadarTower_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.SetActorCompassViewDistance");
+
+	ABuild_RadarTower_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Build_RadarTower.Build_RadarTower_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABuild_RadarTower_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABuild_RadarTower_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.SetActorRepresentationText");
 
@@ -36,7 +80,7 @@ struct FText ABuild_RadarTower_C::SetActorRepresentationText(const struct FText&
 
 
 // Function Build_RadarTower.Build_RadarTower_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +101,7 @@ bool ABuild_RadarTower_C::UpdateRepresentation()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +122,7 @@ struct FLinearColor ABuild_RadarTower_C::GetActorRepresentationColor()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -99,7 +143,7 @@ struct FText ABuild_RadarTower_C::GetActorRepresentationText()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -120,7 +164,7 @@ class UTexture2D* ABuild_RadarTower_C::GetActorRepresentationTexture()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -141,7 +185,7 @@ ERepresentationType ABuild_RadarTower_C::GetActorRepresentationType()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +206,7 @@ bool ABuild_RadarTower_C::GetActorShouldShowInCompass()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -183,7 +227,7 @@ bool ABuild_RadarTower_C::AddAsRepresentation()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +248,7 @@ float ABuild_RadarTower_C::GetActorFogOfWarRevealRadius()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +269,7 @@ EFogOfWarRevealType ABuild_RadarTower_C::GetActorFogOfWarRevealType()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -246,7 +290,7 @@ bool ABuild_RadarTower_C::GetActorShouldShowOnMap()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -267,7 +311,7 @@ struct FVector ABuild_RadarTower_C::GetRealActorLocation()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -288,7 +332,7 @@ struct FRotator ABuild_RadarTower_C::GetRealActorRotation()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -309,7 +353,7 @@ bool ABuild_RadarTower_C::IsActorStatic()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -329,14 +373,17 @@ bool ABuild_RadarTower_C::RemoveAsRepresentation()
 }
 
 
-// Function Build_RadarTower.Build_RadarTower_C.UserConstructionScript
-// ()
+// Function Build_RadarTower.Build_RadarTower_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_RadarTower_C::UserConstructionScript()
+void ABuild_RadarTower_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.SetActorRepresentationColor");
 
-	ABuild_RadarTower_C_UserConstructionScript_Params params;
+	ABuild_RadarTower_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -347,7 +394,7 @@ void ABuild_RadarTower_C::UserConstructionScript()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_RadarTower_C::ReceiveBeginPlay()
 {
@@ -364,7 +411,7 @@ void ABuild_RadarTower_C::ReceiveBeginPlay()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.ReceiveEndPlay
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -383,31 +430,14 @@ void ABuild_RadarTower_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayRea
 }
 
 
-// Function Build_RadarTower.Build_RadarTower_C.OnRadiusExpansionTriggered
-// ()
+// Function Build_RadarTower.Build_RadarTower_C.OnRadiusUpdateTriggered
+// (BlueprintCallable, BlueprintEvent)
 
-void ABuild_RadarTower_C::OnRadiusExpansionTriggered()
+void ABuild_RadarTower_C::OnRadiusUpdateTriggered()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.OnRadiusExpansionTriggered");
+	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.OnRadiusUpdateTriggered");
 
-	ABuild_RadarTower_C_OnRadiusExpansionTriggered_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Build_RadarTower.Build_RadarTower_C.Factory_ReceiveStartProducing
-// ()
-
-void ABuild_RadarTower_C::Factory_ReceiveStartProducing()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.Factory_ReceiveStartProducing");
-
-	ABuild_RadarTower_C_Factory_ReceiveStartProducing_Params params;
+	ABuild_RadarTower_C_OnRadiusUpdateTriggered_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -418,11 +448,11 @@ void ABuild_RadarTower_C::Factory_ReceiveStartProducing()
 
 
 // Function Build_RadarTower.Build_RadarTower_C.ExecuteUbergraph_Build_RadarTower
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_RadarTower_C::ExecuteUbergraph_Build_RadarTower(int EntryPoint)
+void ABuild_RadarTower_C::ExecuteUbergraph_Build_RadarTower(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_RadarTower.Build_RadarTower_C.ExecuteUbergraph_Build_RadarTower");
 

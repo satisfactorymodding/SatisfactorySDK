@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_AggroText.Widget_AggroText_C.Get_Text_Text_1
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -34,13 +34,13 @@ struct FText UWidget_AggroText_C::Get_Text_Text_1()
 
 
 // Function Widget_AggroText.Widget_AggroText_C.SetAggroData
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Aggro                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class FString                  ActorName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// class FString                  Status                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// float*                         Aggro                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class FString*                 ActorName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString*                 Status                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UWidget_AggroText_C::SetAggroData(float Aggro, const class FString& ActorName, const class FString& Status)
+void UWidget_AggroText_C::SetAggroData(float* Aggro, class FString* ActorName, class FString* Status)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_AggroText.Widget_AggroText_C.SetAggroData");
 
@@ -58,7 +58,7 @@ void UWidget_AggroText_C::SetAggroData(float Aggro, const class FString& ActorNa
 
 
 // Function Widget_AggroText.Widget_AggroText_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -80,11 +80,11 @@ void UWidget_AggroText_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_AggroText.Widget_AggroText_C.ExecuteUbergraph_Widget_AggroText
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_AggroText_C::ExecuteUbergraph_Widget_AggroText(int EntryPoint)
+void UWidget_AggroText_C::ExecuteUbergraph_Widget_AggroText(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_AggroText.Widget_AggroText_C.ExecuteUbergraph_Widget_AggroText");
 

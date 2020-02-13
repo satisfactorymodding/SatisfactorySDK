@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_Label.Widget_Label_C.SetLabelText
 struct UWidget_Label_C_SetLabelText_Params
 {
-	struct FText                                       LabelText;                                                // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      LabelText;                                                // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_Label.Widget_Label_C.PreConstruct
@@ -29,7 +29,7 @@ struct UWidget_Label_C_PreConstruct_Params
 // Function Widget_Label.Widget_Label_C.ExecuteUbergraph_Widget_Label
 struct UWidget_Label_C_ExecuteUbergraph_Widget_Label_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

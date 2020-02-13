@@ -14,16 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Widget_OptionValueController.Widget_OptionValueController_C.OnRowHovered
-struct UWidget_OptionValueController_C_OnRowHovered_Params
-{
-};
-
-// Function Widget_OptionValueController.Widget_OptionValueController_C.OnRowUnhovered
-struct UWidget_OptionValueController_C_OnRowUnhovered_Params
-{
-};
-
 // Function Widget_OptionValueController.Widget_OptionValueController_C.Construct
 struct UWidget_OptionValueController_C_Construct_Params
 {
@@ -32,7 +22,7 @@ struct UWidget_OptionValueController_C_Construct_Params
 // Function Widget_OptionValueController.Widget_OptionValueController_C.ExecuteUbergraph_Widget_OptionValueController
 struct UWidget_OptionValueController_C_ExecuteUbergraph_Widget_OptionValueController_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

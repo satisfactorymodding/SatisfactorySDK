@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.OnFail_FB4697D6429DCDB2C971F1AA11DB20A1
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPathFollowingResult>* MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveWithinAttackRange_C::OnFail_FB4697D6429DCDB2C971F1AA11DB20A1(TEnumAsByte<EPathFollowingResult> MovementResult)
+void UBTT_MoveWithinAttackRange_C::OnFail_FB4697D6429DCDB2C971F1AA11DB20A1(TEnumAsByte<EPathFollowingResult>* MovementResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.OnFail_FB4697D6429DCDB2C971F1AA11DB20A1");
 
@@ -33,11 +33,11 @@ void UBTT_MoveWithinAttackRange_C::OnFail_FB4697D6429DCDB2C971F1AA11DB20A1(TEnum
 
 
 // Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.OnSuccess_FB4697D6429DCDB2C971F1AA11DB20A1
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPathFollowingResult>* MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveWithinAttackRange_C::OnSuccess_FB4697D6429DCDB2C971F1AA11DB20A1(TEnumAsByte<EPathFollowingResult> MovementResult)
+void UBTT_MoveWithinAttackRange_C::OnSuccess_FB4697D6429DCDB2C971F1AA11DB20A1(TEnumAsByte<EPathFollowingResult>* MovementResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.OnSuccess_FB4697D6429DCDB2C971F1AA11DB20A1");
 
@@ -53,11 +53,11 @@ void UBTT_MoveWithinAttackRange_C::OnSuccess_FB4697D6429DCDB2C971F1AA11DB20A1(TE
 
 
 // Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.OnFail_2F8CAD6F41C7875D308D88AD97B454B9
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPathFollowingResult>* MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveWithinAttackRange_C::OnFail_2F8CAD6F41C7875D308D88AD97B454B9(TEnumAsByte<EPathFollowingResult> MovementResult)
+void UBTT_MoveWithinAttackRange_C::OnFail_2F8CAD6F41C7875D308D88AD97B454B9(TEnumAsByte<EPathFollowingResult>* MovementResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.OnFail_2F8CAD6F41C7875D308D88AD97B454B9");
 
@@ -73,11 +73,11 @@ void UBTT_MoveWithinAttackRange_C::OnFail_2F8CAD6F41C7875D308D88AD97B454B9(TEnum
 
 
 // Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.OnSuccess_2F8CAD6F41C7875D308D88AD97B454B9
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPathFollowingResult>* MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveWithinAttackRange_C::OnSuccess_2F8CAD6F41C7875D308D88AD97B454B9(TEnumAsByte<EPathFollowingResult> MovementResult)
+void UBTT_MoveWithinAttackRange_C::OnSuccess_2F8CAD6F41C7875D308D88AD97B454B9(TEnumAsByte<EPathFollowingResult>* MovementResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.OnSuccess_2F8CAD6F41C7875D308D88AD97B454B9");
 
@@ -93,7 +93,7 @@ void UBTT_MoveWithinAttackRange_C::OnSuccess_2F8CAD6F41C7875D308D88AD97B454B9(TE
 
 
 // Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -115,11 +115,11 @@ void UBTT_MoveWithinAttackRange_C::ReceiveExecuteAI(class AAIController** OwnerC
 
 
 // Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.ExecuteUbergraph_BTT_MoveWithinAttackRange
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_MoveWithinAttackRange_C::ExecuteUbergraph_BTT_MoveWithinAttackRange(int EntryPoint)
+void UBTT_MoveWithinAttackRange_C::ExecuteUbergraph_BTT_MoveWithinAttackRange(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_MoveWithinAttackRange.BTT_MoveWithinAttackRange_C.ExecuteUbergraph_BTT_MoveWithinAttackRange");
 

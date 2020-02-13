@@ -31,9 +31,9 @@ public:
 	}
 
 
-	void GetKeyLocation(const struct FBlackboardKeySelector& Key, struct FVector* Location);
+	void GetKeyLocation(struct FBlackboardKeySelector* Key, struct FVector* Location);
 	void ReceiveTickAI(class AAIController** OwnerController, class APawn** ControlledPawn, float* DeltaSeconds);
-	void ExecuteUbergraph_BTS_DistanceBetweenKeys(int EntryPoint);
+	void ExecuteUbergraph_BTS_DistanceBetweenKeys(int* EntryPoint);
 };
 
 

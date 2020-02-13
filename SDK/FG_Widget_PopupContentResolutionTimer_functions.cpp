@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.GetShouldOkayBeEnabled
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ bool UWidget_PopupContentResolutionTimer_C::GetShouldOkayBeEnabled()
 
 
 // Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.Get_TimerText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +55,7 @@ struct FText UWidget_PopupContentResolutionTimer_C::Get_TimerText()
 
 
 // Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PopupContentResolutionTimer_C::Construct()
 {
@@ -72,7 +72,7 @@ void UWidget_PopupContentResolutionTimer_C::Construct()
 
 
 // Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.TriggerCancel
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PopupContentResolutionTimer_C::TriggerCancel()
 {
@@ -89,7 +89,7 @@ void UWidget_PopupContentResolutionTimer_C::TriggerCancel()
 
 
 // Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.SetOptionalTextElements
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText*                  Title                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText*                  Desc                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -111,7 +111,7 @@ void UWidget_PopupContentResolutionTimer_C::SetOptionalTextElements(struct FText
 
 
 // Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PopupContentResolutionTimer_C::Destruct()
 {
@@ -128,11 +128,11 @@ void UWidget_PopupContentResolutionTimer_C::Destruct()
 
 
 // Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.ExecuteUbergraph_Widget_PopupContentResolutionTimer
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PopupContentResolutionTimer_C::ExecuteUbergraph_Widget_PopupContentResolutionTimer(int EntryPoint)
+void UWidget_PopupContentResolutionTimer_C::ExecuteUbergraph_Widget_PopupContentResolutionTimer(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PopupContentResolutionTimer.Widget_PopupContentResolutionTimer_C.ExecuteUbergraph_Widget_PopupContentResolutionTimer");
 

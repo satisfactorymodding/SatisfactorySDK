@@ -17,8 +17,8 @@ namespace SDK
 // Function Widget_Vehicle.Widget_Vehicle_C.OnItemAddedOrRemoved
 struct UWidget_Vehicle_C_OnItemAddedOrRemoved_Params
 {
-	class UClass*                                      ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                NumAddedRemoved;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     ItemClass;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               NumAddedRemoved;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Vehicle.Widget_Vehicle_C.UpdateTransferStatus
@@ -65,7 +65,7 @@ struct UWidget_Vehicle_C_GetRPMText_Params
 // Function Widget_Vehicle.Widget_Vehicle_C.Init
 struct UWidget_Vehicle_C_Init_Params
 {
-	class ABP_WheeledVehicle_C*                        Vehicle;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class ABP_WheeledVehicle_C**                       Vehicle;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Vehicle.Widget_Vehicle_C.StopRecording
@@ -98,7 +98,7 @@ struct UWidget_Vehicle_C_AutoPilotCheck_Params
 // Function Widget_Vehicle.Widget_Vehicle_C.ExecuteUbergraph_Widget_Vehicle
 struct UWidget_Vehicle_C_ExecuteUbergraph_Widget_Vehicle_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

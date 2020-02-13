@@ -32,12 +32,12 @@ public:
 	}
 
 
-	void OnFail_FB4697D6429DCDB2C971F1AA11DB20A1(TEnumAsByte<EPathFollowingResult> MovementResult);
-	void OnSuccess_FB4697D6429DCDB2C971F1AA11DB20A1(TEnumAsByte<EPathFollowingResult> MovementResult);
-	void OnFail_2F8CAD6F41C7875D308D88AD97B454B9(TEnumAsByte<EPathFollowingResult> MovementResult);
-	void OnSuccess_2F8CAD6F41C7875D308D88AD97B454B9(TEnumAsByte<EPathFollowingResult> MovementResult);
+	void OnFail_FB4697D6429DCDB2C971F1AA11DB20A1(TEnumAsByte<EPathFollowingResult>* MovementResult);
+	void OnSuccess_FB4697D6429DCDB2C971F1AA11DB20A1(TEnumAsByte<EPathFollowingResult>* MovementResult);
+	void OnFail_2F8CAD6F41C7875D308D88AD97B454B9(TEnumAsByte<EPathFollowingResult>* MovementResult);
+	void OnSuccess_2F8CAD6F41C7875D308D88AD97B454B9(TEnumAsByte<EPathFollowingResult>* MovementResult);
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_MoveWithinAttackRange(int EntryPoint);
+	void ExecuteUbergraph_BTT_MoveWithinAttackRange(int* EntryPoint);
 };
 
 

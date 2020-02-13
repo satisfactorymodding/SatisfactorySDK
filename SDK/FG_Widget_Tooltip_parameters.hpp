@@ -14,12 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Widget_Tooltip.Widget_Tooltip_C.GetColorAndOpacity_1
-struct UWidget_Tooltip_C_GetColorAndOpacity_1_Params
-{
-	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Widget_Tooltip.Widget_Tooltip_C.GetItemDescription
 struct UWidget_Tooltip_C_GetItemDescription_Params
 {
@@ -40,7 +34,7 @@ struct UWidget_Tooltip_C_Construct_Params
 // Function Widget_Tooltip.Widget_Tooltip_C.ExecuteUbergraph_Widget_Tooltip
 struct UWidget_Tooltip_C_ExecuteUbergraph_Widget_Tooltip_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

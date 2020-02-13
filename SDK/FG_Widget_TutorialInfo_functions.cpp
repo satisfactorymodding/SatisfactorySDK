@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TutorialInfo.Widget_TutorialInfo_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TutorialInfo_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_TutorialInfo_C::Construct()
 
 
 // Function Widget_TutorialInfo.Widget_TutorialInfo_C.ExecuteUbergraph_Widget_TutorialInfo
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TutorialInfo_C::ExecuteUbergraph_Widget_TutorialInfo(int EntryPoint)
+void UWidget_TutorialInfo_C::ExecuteUbergraph_Widget_TutorialInfo(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TutorialInfo.Widget_TutorialInfo_C.ExecuteUbergraph_Widget_TutorialInfo");
 

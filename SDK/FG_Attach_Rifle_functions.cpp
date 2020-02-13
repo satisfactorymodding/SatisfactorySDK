@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_Rifle.Attach_Rifle_C.UserConstructionScript
-// ()
-
-void AAttach_Rifle_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_Rifle.Attach_Rifle_C.UserConstructionScript");
-
-	AAttach_Rifle_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_Rifle.Attach_Rifle_C.ClientPlayReloadEffect
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_Rifle_C::ClientPlayReloadEffect()
 {
@@ -47,7 +30,7 @@ void AAttach_Rifle_C::ClientPlayReloadEffect()
 
 
 // Function Attach_Rifle.Attach_Rifle_C.PlayAttachEffects3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_Rifle_C::PlayAttachEffects3P()
 {
@@ -64,7 +47,7 @@ void AAttach_Rifle_C::PlayAttachEffects3P()
 
 
 // Function Attach_Rifle.Attach_Rifle_C.PlayFireEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector*                flashLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,11 +67,11 @@ void AAttach_Rifle_C::PlayFireEffect(struct FVector* flashLocation)
 
 
 // Function Attach_Rifle.Attach_Rifle_C.ExecuteUbergraph_Attach_Rifle
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_Rifle_C::ExecuteUbergraph_Attach_Rifle(int EntryPoint)
+void AAttach_Rifle_C::ExecuteUbergraph_Attach_Rifle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_Rifle.Attach_Rifle_C.ExecuteUbergraph_Attach_Rifle");
 

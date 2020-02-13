@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AnimGraphRuntime.AnimCustomInstance
-// 0x0000 (0x0360 - 0x0360)
+// 0x0000 (0x0270 - 0x0270)
 class UAnimCustomInstance : public UAnimInstance
 {
 public:
@@ -62,7 +62,7 @@ public:
 
 
 // Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0000 (0x0360 - 0x0360)
+// 0x0000 (0x0270 - 0x0270)
 class UAnimSequencerInstance : public UAnimCustomInstance
 {
 public:
@@ -89,12 +89,12 @@ public:
 	}
 
 
-	void K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale, struct FVector* OutJointPos, struct FVector* OutEndPos);
-	struct FVector K2_MakePerlinNoiseVectorAndRemap(float X, float Y, float Z, float RangeOutMinX, float RangeOutMaxX, float RangeOutMinY, float RangeOutMaxY, float RangeOutMinZ, float RangeOutMaxZ);
-	float K2_MakePerlinNoiseAndRemap(float Value, float RangeOutMin, float RangeOutMax);
-	struct FTransform K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree);
-	float K2_DistanceBetweenTwoSocketsAndMapRange(class USkeletalMeshComponent* component, const struct FName& SocketOrBoneNameA, TEnumAsByte<ERelativeTransformSpace> SocketSpaceA, const struct FName& SocketOrBoneNameB, TEnumAsByte<ERelativeTransformSpace> SocketSpaceB, bool bRemapRange, float InRangeMin, float InRangeMax, float OutRangeMin, float OutRangeMax);
-	struct FVector K2_DirectionBetweenSockets(class USkeletalMeshComponent* component, const struct FName& SocketOrBoneNameFrom, const struct FName& SocketOrBoneNameTo);
+	void STATIC_K2_TwoBoneIK(struct FVector* RootPos, struct FVector* JointPos, struct FVector* EndPos, struct FVector* JointTarget, struct FVector* Effector, bool* bAllowStretching, float* StartStretchRatio, float* MaxStretchScale, struct FVector* OutJointPos, struct FVector* OutEndPos);
+	struct FVector STATIC_K2_MakePerlinNoiseVectorAndRemap(float* X, float* Y, float* Z, float* RangeOutMinX, float* RangeOutMaxX, float* RangeOutMinY, float* RangeOutMaxY, float* RangeOutMinZ, float* RangeOutMaxZ);
+	float STATIC_K2_MakePerlinNoiseAndRemap(float* Value, float* RangeOutMin, float* RangeOutMax);
+	struct FTransform STATIC_K2_LookAt(struct FTransform* CurrentTransform, struct FVector* TargetPosition, struct FVector* LookAtVector, bool* bUseUpVector, struct FVector* UpVector, float* ClampConeInDegree);
+	float STATIC_K2_DistanceBetweenTwoSocketsAndMapRange(class USkeletalMeshComponent** component, struct FName* SocketOrBoneNameA, TEnumAsByte<ERelativeTransformSpace>* SocketSpaceA, struct FName* SocketOrBoneNameB, TEnumAsByte<ERelativeTransformSpace>* SocketSpaceB, bool* bRemapRange, float* InRangeMin, float* InRangeMax, float* OutRangeMin, float* OutRangeMax);
+	struct FVector STATIC_K2_DirectionBetweenSockets(class USkeletalMeshComponent** component, struct FName* SocketOrBoneNameFrom, struct FName* SocketOrBoneNameTo);
 };
 
 
@@ -117,11 +117,11 @@ public:
 	}
 
 
-	void OnNotifyEndReceived(const struct FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
-	void OnNotifyBeginReceived(const struct FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
-	void OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted);
-	void OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted);
-	class UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, const struct FName& StartingSection);
+	void OnNotifyEndReceived(struct FName* NotifyName, struct FBranchingPointNotifyPayload* BranchingPointNotifyPayload);
+	void OnNotifyBeginReceived(struct FName* NotifyName, struct FBranchingPointNotifyPayload* BranchingPointNotifyPayload);
+	void OnMontageEnded(class UAnimMontage** Montage, bool* bInterrupted);
+	void OnMontageBlendingOut(class UAnimMontage** Montage, bool* bInterrupted);
+	class UPlayMontageCallbackProxy* STATIC_CreateProxyObjectForPlayMontage(class USkeletalMeshComponent** InSkeletalMeshComponent, class UAnimMontage** MontageToPlay, float* PlayRate, float* StartingPosition, struct FName* StartingSection);
 };
 
 

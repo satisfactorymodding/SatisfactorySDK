@@ -12,8 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.SetSelectedSchematic
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass**                 SelectedSchematic              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_TradingPost_ActivateSchematicButton_C::SetSelectedSchematic(class UClass** SelectedSchematic)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.SetSelectedSchematic");
+
+	UWidget_TradingPost_ActivateSchematicButton_C_SetSelectedSchematic_Params params;
+	params.SelectedSchematic = SelectedSchematic;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.GetClickable
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +54,7 @@ ESlateVisibility UWidget_TradingPost_ActivateSchematicButton_C::GetClickable()
 
 
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.GetText
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +75,7 @@ struct FText UWidget_TradingPost_ActivateSchematicButton_C::GetText()
 
 
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.GetColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +96,7 @@ struct FLinearColor UWidget_TradingPost_ActivateSchematicButton_C::GetColor()
 
 
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_ActivateSchematicButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature()
 {
@@ -93,7 +113,7 @@ void UWidget_TradingPost_ActivateSchematicButton_C::BndEvt__Button_26_K2Node_Com
 
 
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_ActivateSchematicButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -110,7 +130,7 @@ void UWidget_TradingPost_ActivateSchematicButton_C::BndEvt__mButton_K2Node_Compo
 
 
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TradingPost_ActivateSchematicButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -127,11 +147,11 @@ void UWidget_TradingPost_ActivateSchematicButton_C::BndEvt__mButton_K2Node_Compo
 
 
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.ExecuteUbergraph_Widget_TradingPost_ActivateSchematicButton
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_ActivateSchematicButton_C::ExecuteUbergraph_Widget_TradingPost_ActivateSchematicButton(int EntryPoint)
+void UWidget_TradingPost_ActivateSchematicButton_C::ExecuteUbergraph_Widget_TradingPost_ActivateSchematicButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.ExecuteUbergraph_Widget_TradingPost_ActivateSchematicButton");
 
@@ -147,7 +167,7 @@ void UWidget_TradingPost_ActivateSchematicButton_C::ExecuteUbergraph_Widget_Trad
 
 
 // Function Widget_TradingPost_ActivateSchematicButton.Widget_TradingPost_ActivateSchematicButton_C.onSchematicActivateButtonClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPost_ActivateSchematicButton_C::onSchematicActivateButtonClicked__DelegateSignature()
 {

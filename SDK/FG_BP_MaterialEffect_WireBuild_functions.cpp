@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MaterialEffect_WireBuild.BP_MaterialEffect_WireBuild_C.OnStarted
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_MaterialEffect_WireBuild_C::OnStarted()
 {
@@ -30,11 +30,11 @@ void UBP_MaterialEffect_WireBuild_C::OnStarted()
 
 
 // Function BP_MaterialEffect_WireBuild.BP_MaterialEffect_WireBuild_C.ExecuteUbergraph_BP_MaterialEffect_WireBuild
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MaterialEffect_WireBuild_C::ExecuteUbergraph_BP_MaterialEffect_WireBuild(int EntryPoint)
+void UBP_MaterialEffect_WireBuild_C::ExecuteUbergraph_BP_MaterialEffect_WireBuild(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MaterialEffect_WireBuild.BP_MaterialEffect_WireBuild_C.ExecuteUbergraph_BP_MaterialEffect_WireBuild");
 

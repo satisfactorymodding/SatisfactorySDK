@@ -12,42 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_OptionValueController.Widget_OptionValueController_C.OnRowHovered
-// ()
-
-void UWidget_OptionValueController_C::OnRowHovered()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionValueController.Widget_OptionValueController_C.OnRowHovered");
-
-	UWidget_OptionValueController_C_OnRowHovered_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Widget_OptionValueController.Widget_OptionValueController_C.OnRowUnhovered
-// ()
-
-void UWidget_OptionValueController_C::OnRowUnhovered()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionValueController.Widget_OptionValueController_C.OnRowUnhovered");
-
-	UWidget_OptionValueController_C_OnRowUnhovered_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_OptionValueController.Widget_OptionValueController_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_OptionValueController_C::Construct()
 {
@@ -64,11 +30,11 @@ void UWidget_OptionValueController_C::Construct()
 
 
 // Function Widget_OptionValueController.Widget_OptionValueController_C.ExecuteUbergraph_Widget_OptionValueController
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_OptionValueController_C::ExecuteUbergraph_Widget_OptionValueController(int EntryPoint)
+void UWidget_OptionValueController_C::ExecuteUbergraph_Widget_OptionValueController(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_OptionValueController.Widget_OptionValueController_C.ExecuteUbergraph_Widget_OptionValueController");
 

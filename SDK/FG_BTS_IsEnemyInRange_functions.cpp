@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_IsEnemyInRange.BTS_IsEnemyInRange_C.ReceiveTick
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,7 +35,7 @@ void UBTS_IsEnemyInRange_C::ReceiveTick(class AActor** OwnerActor, float* DeltaS
 
 
 // Function BTS_IsEnemyInRange.BTS_IsEnemyInRange_C.ReceiveActivationAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -57,11 +57,11 @@ void UBTS_IsEnemyInRange_C::ReceiveActivationAI(class AAIController** OwnerContr
 
 
 // Function BTS_IsEnemyInRange.BTS_IsEnemyInRange_C.ExecuteUbergraph_BTS_IsEnemyInRange
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_IsEnemyInRange_C::ExecuteUbergraph_BTS_IsEnemyInRange(int EntryPoint)
+void UBTS_IsEnemyInRange_C::ExecuteUbergraph_BTS_IsEnemyInRange(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_IsEnemyInRange.BTS_IsEnemyInRange_C.ExecuteUbergraph_BTS_IsEnemyInRange");
 

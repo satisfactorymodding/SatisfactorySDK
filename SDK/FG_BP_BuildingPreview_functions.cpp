@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_BuildingPreview.BP_BuildingPreview_C.UserConstructionScript
-// ()
-
-void ABP_BuildingPreview_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildingPreview.BP_BuildingPreview_C.UserConstructionScript");
-
-	ABP_BuildingPreview_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_BuildingPreview.BP_BuildingPreview_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,11 +33,11 @@ void ABP_BuildingPreview_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_BuildingPreview.BP_BuildingPreview_C.ExecuteUbergraph_BP_BuildingPreview
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BuildingPreview_C::ExecuteUbergraph_BP_BuildingPreview(int EntryPoint)
+void ABP_BuildingPreview_C::ExecuteUbergraph_BP_BuildingPreview(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildingPreview.BP_BuildingPreview_C.ExecuteUbergraph_BP_BuildingPreview");
 

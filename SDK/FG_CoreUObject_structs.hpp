@@ -222,7 +222,11 @@ enum class EPixelFormat : uint8_t
 	PF_R8G8B8A8_UINT               = 60,
 	PF_R8G8B8A8_SNORM              = 61,
 	PF_R16G16B16A16_UNORM          = 62,
-	PF_R16G16B16A16_SNORM          = 63
+	PF_R16G16B16A16_SNORM          = 63,
+	PF_PLATFORM_HDR                = 64,
+	PF_PLATFORM_HDR01              = 65,
+	PF_PLATFORM_HDR02              = 66,
+	PF_NV12                        = 67
 };
 
 
@@ -272,7 +276,7 @@ enum class ESearchCase : uint8_t
 //---------------------------------------------------------------------------
 
 // ScriptStruct CoreUObject.JoinabilitySettings
-// 0x0018
+// 0x0014
 struct FJoinabilitySettings
 {
 	struct FName                                       SessionName;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -282,7 +286,6 @@ struct FJoinabilitySettings
 	bool                                               bJoinViaPresenceFriendsOnly;                              // 0x000B(0x0001) (ZeroConstructor, IsPlainOldData)
 	int                                                MaxPlayers;                                               // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaxPartySize;                                             // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.UniqueNetIdWrapper
@@ -719,15 +722,15 @@ struct FSoftClassPath : public FSoftObjectPath
 // 0x0008
 struct FPrimaryAssetType
 {
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
 // ScriptStruct CoreUObject.PrimaryAssetId
 // 0x0010
 struct FPrimaryAssetId
 {
-	struct FPrimaryAssetType                           PrimaryAssetType;                                         // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FName                                       PrimaryAssetName;                                         // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPrimaryAssetType                           PrimaryAssetType;                                         // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame)
+	struct FName                                       PrimaryAssetName;                                         // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
 // ScriptStruct CoreUObject.FallbackStruct
@@ -788,7 +791,7 @@ struct FInt32Interval
 };
 
 // ScriptStruct CoreUObject.PolyglotTextData
-// 0x00B0
+// 0x00B8
 struct FPolyglotTextData
 {
 	ELocalizedTextSourceCategory                       Category;                                                 // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -798,7 +801,9 @@ struct FPolyglotTextData
 	class FString                                      Key;                                                      // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	class FString                                      NativeString;                                             // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TMap<class FString, class FString>                 LocalizedStrings;                                         // 0x0048(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FText                                       CachedText;                                               // 0x0098(0x0028) (Transient)
+	bool                                               bIsMinimalPatch;                                          // 0x0098(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
+	struct FText                                       CachedText;                                               // 0x00A0(0x0028) (Transient)
 };
 
 // ScriptStruct CoreUObject.AutomationEvent

@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.DropOntoInventorySlot
 struct UWidget_MAMResearchSlot_C_DropOntoInventorySlot_Params
 {
-	class UWidget_InventorySlot_C*                     InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_InventorySlot_C**                    InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -94,7 +94,7 @@ struct UWidget_MAMResearchSlot_C_Tick_Params
 // Function Widget_MAMResearchSlot.Widget_MAMResearchSlot_C.ExecuteUbergraph_Widget_MAMResearchSlot
 struct UWidget_MAMResearchSlot_C_ExecuteUbergraph_Widget_MAMResearchSlot_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -14,12 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.BlueprintUpdateAnimation
-struct UAnim_GeneratorCoal_C_BlueprintUpdateAnimation_Params
-{
-	float*                                             DeltaTimeX;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.AnimNotify_steamVfxNotify
 struct UAnim_GeneratorCoal_C_AnimNotify_steamVfxNotify_Params
 {
@@ -48,7 +42,7 @@ struct UAnim_GeneratorCoal_C_AnimNotify_CoalGenLeftOfflineState_Params
 // Function Anim_GeneratorCoal.Anim_GeneratorCoal_C.ExecuteUbergraph_Anim_GeneratorCoal
 struct UAnim_GeneratorCoal_C_ExecuteUbergraph_Anim_GeneratorCoal_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

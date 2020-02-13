@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.SetLightAsDominant
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ADirectionalLight*       Light                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           newDominant                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ADirectionalLight**      Light                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          newDominant                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Sky_Sphere_C::SetLightAsDominant(class ADirectionalLight* Light, bool newDominant)
+void ABP_Sky_Sphere_C::SetLightAsDominant(class ADirectionalLight** Light, bool* newDominant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere.BP_Sky_Sphere_C.SetLightAsDominant");
 
@@ -34,19 +34,19 @@ void ABP_Sky_Sphere_C::SetLightAsDominant(class ADirectionalLight* Light, bool n
 }
 
 
-// Function BP_Sky_Sphere.BP_Sky_Sphere_C.newDominantLight
-// ()
+// Function BP_Sky_Sphere.BP_Sky_Sphere_C.NewDominantLight
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ADirectionalLight*       oldDominantLight               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class ADirectionalLight*       newDominantLight               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ADirectionalLight**      oldDominantLight               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ADirectionalLight**      NewDominantLight               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Sky_Sphere_C::newDominantLight(class ADirectionalLight* oldDominantLight, class ADirectionalLight* newDominantLight)
+void ABP_Sky_Sphere_C::NewDominantLight(class ADirectionalLight** oldDominantLight, class ADirectionalLight** NewDominantLight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere.BP_Sky_Sphere_C.newDominantLight");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere.BP_Sky_Sphere_C.NewDominantLight");
 
-	ABP_Sky_Sphere_C_newDominantLight_Params params;
+	ABP_Sky_Sphere_C_NewDominantLight_Params params;
 	params.oldDominantLight = oldDominantLight;
-	params.newDominantLight = newDominantLight;
+	params.NewDominantLight = NewDominantLight;
 
 	auto flags = fn->FunctionFlags;
 
@@ -57,7 +57,7 @@ void ABP_Sky_Sphere_C::newDominantLight(class ADirectionalLight* oldDominantLigh
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateDominantLight
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Sky_Sphere_C::CalculateDominantLight()
 {
@@ -74,13 +74,13 @@ void ABP_Sky_Sphere_C::CalculateDominantLight()
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateDiscBrightness
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class ALight*                  Light                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FFBrightnessAdjustment  brightnessAdjustment           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ALight**                 Light                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FFBrightnessAdjustment* brightnessAdjustment           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          discBrightness                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Sky_Sphere_C::CalculateDiscBrightness(class ALight* Light, const struct FFBrightnessAdjustment& brightnessAdjustment, float* discBrightness)
+void ABP_Sky_Sphere_C::CalculateDiscBrightness(class ALight** Light, struct FFBrightnessAdjustment* brightnessAdjustment, float* discBrightness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateDiscBrightness");
 
@@ -100,7 +100,7 @@ void ABP_Sky_Sphere_C::CalculateDiscBrightness(class ALight* Light, const struct
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateBrightness
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Brightness                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -122,14 +122,14 @@ void ABP_Sky_Sphere_C::CalculateBrightness(float* Brightness)
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateLightRotation
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FRotator                OriginalRotation               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                RotationAxis                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FRuntimeFloatCurve      LightRotationCurve             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FRotator*               OriginalRotation               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator*               RotationAxis                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FRuntimeFloatCurve*     LightRotationCurve             (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FRotator                NewRotation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Sky_Sphere_C::CalculateLightRotation(const struct FRotator& OriginalRotation, const struct FRotator& RotationAxis, const struct FRuntimeFloatCurve& LightRotationCurve, struct FRotator* NewRotation)
+void ABP_Sky_Sphere_C::CalculateLightRotation(struct FRotator* OriginalRotation, struct FRotator* RotationAxis, struct FRuntimeFloatCurve* LightRotationCurve, struct FRotator* NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere.BP_Sky_Sphere_C.CalculateLightRotation");
 
@@ -150,7 +150,7 @@ void ABP_Sky_Sphere_C::CalculateLightRotation(const struct FRotator& OriginalRot
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.UpdateGlobalParameters
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Sky_Sphere_C::UpdateGlobalParameters()
 {
@@ -167,7 +167,7 @@ void ABP_Sky_Sphere_C::UpdateGlobalParameters()
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.UpdateCurvesFromTime
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Sky_Sphere_C::UpdateCurvesFromTime()
 {
@@ -184,7 +184,7 @@ void ABP_Sky_Sphere_C::UpdateCurvesFromTime()
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.UpdateLightRotation
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Sky_Sphere_C::UpdateLightRotation()
 {
@@ -201,7 +201,7 @@ void ABP_Sky_Sphere_C::UpdateLightRotation()
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.UpdateMaterialParameters
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Sky_Sphere_C::UpdateMaterialParameters()
 {
@@ -218,7 +218,7 @@ void ABP_Sky_Sphere_C::UpdateMaterialParameters()
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.UserConstructionScript
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Sky_Sphere_C::UserConstructionScript()
 {
@@ -235,7 +235,7 @@ void ABP_Sky_Sphere_C::UserConstructionScript()
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -255,7 +255,7 @@ void ABP_Sky_Sphere_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Sky_Sphere_C::ReceiveBeginPlay()
 {
@@ -272,7 +272,7 @@ void ABP_Sky_Sphere_C::ReceiveBeginPlay()
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.UpdatePreview
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Sky_Sphere_C::UpdatePreview()
 {
@@ -289,7 +289,7 @@ void ABP_Sky_Sphere_C::UpdatePreview()
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.ApplySkySphereSettings
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FSkySphereSettings*     Settings                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -309,11 +309,11 @@ void ABP_Sky_Sphere_C::ApplySkySphereSettings(struct FSkySphereSettings* Setting
 
 
 // Function BP_Sky_Sphere.BP_Sky_Sphere_C.ExecuteUbergraph_BP_Sky_Sphere
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Sky_Sphere_C::ExecuteUbergraph_BP_Sky_Sphere(int EntryPoint)
+void ABP_Sky_Sphere_C::ExecuteUbergraph_BP_Sky_Sphere(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere.BP_Sky_Sphere_C.ExecuteUbergraph_BP_Sky_Sphere");
 

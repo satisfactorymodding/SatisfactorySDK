@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_StorageIntegrated.Build_StorageIntegrated_C.CanDismantle
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -30,23 +30,6 @@ bool ABuild_StorageIntegrated_C::CanDismantle()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function Build_StorageIntegrated.Build_StorageIntegrated_C.UserConstructionScript
-// ()
-
-void ABuild_StorageIntegrated_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_StorageIntegrated.Build_StorageIntegrated_C.UserConstructionScript");
-
-	ABuild_StorageIntegrated_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 

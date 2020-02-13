@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SwitchingImage.Widget_SwitchingImage_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UWidget_SwitchingImage_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SwitchingImage.Widget_SwitchingImage_C.EventImageSwitch
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SwitchingImage_C::EventImageSwitch()
 {
@@ -50,11 +50,11 @@ void UWidget_SwitchingImage_C::EventImageSwitch()
 
 
 // Function Widget_SwitchingImage.Widget_SwitchingImage_C.SwitchImage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTexture*                newTexture                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture**               newTexture                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SwitchingImage_C::SwitchImage(class UTexture* newTexture)
+void UWidget_SwitchingImage_C::SwitchImage(class UTexture** newTexture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SwitchingImage.Widget_SwitchingImage_C.SwitchImage");
 
@@ -69,14 +69,14 @@ void UWidget_SwitchingImage_C::SwitchImage(class UTexture* newTexture)
 }
 
 
-// Function Widget_SwitchingImage.Widget_SwitchingImage_C.BndEvt__mSwitchImageAnim_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// ()
+// Function Widget_SwitchingImage.Widget_SwitchingImage_C.WidgetAnimationEvt_mSwitchImageAnim_K2Node_WidgetAnimationEvent_1
+// (BlueprintEvent)
 
-void UWidget_SwitchingImage_C::BndEvt__mSwitchImageAnim_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void UWidget_SwitchingImage_C::WidgetAnimationEvt_mSwitchImageAnim_K2Node_WidgetAnimationEvent_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SwitchingImage.Widget_SwitchingImage_C.BndEvt__mSwitchImageAnim_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SwitchingImage.Widget_SwitchingImage_C.WidgetAnimationEvt_mSwitchImageAnim_K2Node_WidgetAnimationEvent_1");
 
-	UWidget_SwitchingImage_C_BndEvt__mSwitchImageAnim_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
+	UWidget_SwitchingImage_C_WidgetAnimationEvt_mSwitchImageAnim_K2Node_WidgetAnimationEvent_1_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -87,11 +87,11 @@ void UWidget_SwitchingImage_C::BndEvt__mSwitchImageAnim_K2Node_ComponentBoundEve
 
 
 // Function Widget_SwitchingImage.Widget_SwitchingImage_C.ExecuteUbergraph_Widget_SwitchingImage
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SwitchingImage_C::ExecuteUbergraph_Widget_SwitchingImage(int EntryPoint)
+void UWidget_SwitchingImage_C::ExecuteUbergraph_Widget_SwitchingImage(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SwitchingImage.Widget_SwitchingImage_C.ExecuteUbergraph_Widget_SwitchingImage");
 
@@ -107,7 +107,7 @@ void UWidget_SwitchingImage_C::ExecuteUbergraph_Widget_SwitchingImage(int EntryP
 
 
 // Function Widget_SwitchingImage.Widget_SwitchingImage_C.OnSwitchAnimationFinished__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SwitchingImage_C::OnSwitchAnimationFinished__DelegateSignature()
 {

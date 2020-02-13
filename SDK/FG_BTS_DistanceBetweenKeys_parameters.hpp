@@ -17,7 +17,7 @@ namespace SDK
 // Function BTS_DistanceBetweenKeys.BTS_DistanceBetweenKeys_C.GetKeyLocation
 struct UBTS_DistanceBetweenKeys_C_GetKeyLocation_Params
 {
-	struct FBlackboardKeySelector                      Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FBlackboardKeySelector*                     Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -32,7 +32,7 @@ struct UBTS_DistanceBetweenKeys_C_ReceiveTickAI_Params
 // Function BTS_DistanceBetweenKeys.BTS_DistanceBetweenKeys_C.ExecuteUbergraph_BTS_DistanceBetweenKeys
 struct UBTS_DistanceBetweenKeys_C_ExecuteUbergraph_BTS_DistanceBetweenKeys_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

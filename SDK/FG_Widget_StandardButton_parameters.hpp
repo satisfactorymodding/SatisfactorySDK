@@ -14,6 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_StandardButton.Widget_StandardButton_C.SetIconSize
+struct UWidget_StandardButton_C_SetIconSize_Params
+{
+};
+
+// Function Widget_StandardButton.Widget_StandardButton_C.SetIconBrush
+struct UWidget_StandardButton_C_SetIconBrush_Params
+{
+	struct FSlateBrush*                                mIconBrush;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function Widget_StandardButton.Widget_StandardButton_C.SetText
+struct UWidget_StandardButton_C_SetText_Params
+{
+	struct FText*                                      mText;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
 // Function Widget_StandardButton.Widget_StandardButton_C.SetFocused
 struct UWidget_StandardButton_C_SetFocused_Params
 {
@@ -38,7 +55,7 @@ struct UWidget_StandardButton_C_BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnB
 // Function Widget_StandardButton.Widget_StandardButton_C.ExecuteUbergraph_Widget_StandardButton
 struct UWidget_StandardButton_C_ExecuteUbergraph_Widget_StandardButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_StandardButton.Widget_StandardButton_C.OnClicked__DelegateSignature

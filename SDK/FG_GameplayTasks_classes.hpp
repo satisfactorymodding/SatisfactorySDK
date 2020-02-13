@@ -72,8 +72,8 @@ public:
 	}
 
 
-	class UGameplayTask_ClaimResource* ClaimResources(const TScriptInterface<class UGameplayTaskOwnerInterface>& InTaskOwner, TArray<class UClass*> ResourceClasses, unsigned char Priority, const struct FName& TaskInstanceName);
-	class UGameplayTask_ClaimResource* ClaimResource(const TScriptInterface<class UGameplayTaskOwnerInterface>& InTaskOwner, class UClass* ResourceClass, unsigned char Priority, const struct FName& TaskInstanceName);
+	class UGameplayTask_ClaimResource* STATIC_ClaimResources(TScriptInterface<class UGameplayTaskOwnerInterface>* InTaskOwner, TArray<class UClass*>* ResourceClasses, unsigned char* Priority, struct FName* TaskInstanceName);
+	class UGameplayTask_ClaimResource* STATIC_ClaimResource(TScriptInterface<class UGameplayTaskOwnerInterface>* InTaskOwner, class UClass** ResourceClass, unsigned char* Priority, struct FName* TaskInstanceName);
 };
 
 
@@ -82,7 +82,7 @@ public:
 class UGameplayTask_SpawnActor : public UGameplayTask
 {
 public:
-	struct FScriptMulticastDelegate                    Success;                                                  // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    success;                                                  // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    DidNotSpawn;                                              // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0088(0x0018) MISSED OFFSET
 	class UClass*                                      ClassToSpawn;                                             // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -94,9 +94,9 @@ public:
 	}
 
 
-	class UGameplayTask_SpawnActor* SpawnActor(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& spawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority);
-	void FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor);
-	bool BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor);
+	class UGameplayTask_SpawnActor* STATIC_SpawnActor(TScriptInterface<class UGameplayTaskOwnerInterface>* TaskOwner, struct FVector* SpawnLocation, struct FRotator* spawnRotation, class UClass** Class, bool* bSpawnOnlyOnAuthority);
+	void FinishSpawningActor(class UObject** WorldContextObject, class AActor** SpawnedActor);
+	bool BeginSpawningActor(class UObject** WorldContextObject, class AActor** SpawnedActor);
 };
 
 
@@ -133,7 +133,7 @@ public:
 	}
 
 
-	class UGameplayTask_WaitDelay* TaskWaitDelay(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, float Time, unsigned char Priority);
+	class UGameplayTask_WaitDelay* STATIC_TaskWaitDelay(TScriptInterface<class UGameplayTaskOwnerInterface>* TaskOwner, float* Time, unsigned char* Priority);
 	void TaskDelayDelegate__DelegateSignature();
 };
 
@@ -154,20 +154,20 @@ public:
 
 
 // Class GameplayTasks.GameplayTasksComponent
-// 0x0070 (0x0160 - 0x00F0)
+// 0x0070 (0x0168 - 0x00F8)
 class UGameplayTasksComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0xC];                                       // 0x00F0(0x000C) MISSED OFFSET
-	unsigned char                                      UnknownData01 : 1;                                        // 0x00FC(0x0001)
-	unsigned char                                      bIsNetDirty : 1;                                          // 0x00FC(0x0001)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x00FD(0x0003) MISSED OFFSET
-	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x0100(0x0010) (Net, ZeroConstructor)
-	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x0110(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x0120(0x0010) MISSED OFFSET
-	TArray<class UGameplayTask*>                       TickingTasks;                                             // 0x0130(0x0010) (ZeroConstructor)
-	TArray<class UGameplayTask*>                       KnownTasks;                                               // 0x0140(0x0010) (ZeroConstructor, Transient)
-	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x0150(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x00F8(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData01 : 1;                                        // 0x0104(0x0001)
+	unsigned char                                      bIsNetDirty : 1;                                          // 0x0104(0x0001)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0105(0x0003) MISSED OFFSET
+	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x0108(0x0010) (Net, ZeroConstructor)
+	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x0118(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0128(0x0010) MISSED OFFSET
+	TArray<class UGameplayTask*>                       TickingTasks;                                             // 0x0138(0x0010) (ZeroConstructor)
+	TArray<class UGameplayTask*>                       KnownTasks;                                               // 0x0148(0x0010) (ZeroConstructor, Transient)
+	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x0158(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
 
 	static UClass* StaticClass()
 	{
@@ -177,7 +177,7 @@ public:
 
 
 	void OnRep_SimulatedTasks();
-	EGameplayTaskRunResult K2_RunGameplayTask(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources);
+	EGameplayTaskRunResult STATIC_K2_RunGameplayTask(TScriptInterface<class UGameplayTaskOwnerInterface>* TaskOwner, class UGameplayTask** Task, unsigned char* Priority, TArray<class UClass*>* AdditionalRequiredResources, TArray<class UClass*>* AdditionalClaimedResources);
 };
 
 

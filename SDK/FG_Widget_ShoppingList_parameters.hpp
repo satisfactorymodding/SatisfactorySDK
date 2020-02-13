@@ -91,7 +91,7 @@ struct UWidget_ShoppingList_C_BndEvt__Widget_StandardButton_K2Node_ComponentBoun
 // Function Widget_ShoppingList.Widget_ShoppingList_C.ExecuteUbergraph_Widget_ShoppingList
 struct UWidget_ShoppingList_C_ExecuteUbergraph_Widget_ShoppingList_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

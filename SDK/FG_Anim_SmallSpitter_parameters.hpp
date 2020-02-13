@@ -59,7 +59,7 @@ struct UAnim_SmallSpitter_C_BlueprintUpdateAnimation_Params
 // Function Anim_SmallSpitter.Anim_SmallSpitter_C.ExecuteUbergraph_Anim_SmallSpitter
 struct UAnim_SmallSpitter_C_ExecuteUbergraph_Anim_SmallSpitter_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

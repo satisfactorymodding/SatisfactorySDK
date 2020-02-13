@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResearchManager.BP_ResearchManager_C
-// 0x0000 (0x0440 - 0x0440)
+// 0x0000 (0x03E0 - 0x03E0)
 class ABP_ResearchManager_C : public AFGResearchManager
 {
 public:

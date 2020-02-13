@@ -39,7 +39,7 @@ struct UWidget_MessageNotifier_C_RemoveNotifier_Params
 // Function Widget_MessageNotifier.Widget_MessageNotifier_C.ExecuteUbergraph_Widget_MessageNotifier
 struct UWidget_MessageNotifier_C_ExecuteUbergraph_Widget_MessageNotifier_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

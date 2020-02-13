@@ -76,7 +76,7 @@ struct UWidget_HUDBox_Equipment_C_Destruct_Params
 // Function Widget_HUDBox_Equipment.Widget_HUDBox_Equipment_C.ExecuteUbergraph_Widget_HUDBox_Equipment
 struct UWidget_HUDBox_Equipment_C_ExecuteUbergraph_Widget_HUDBox_Equipment_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

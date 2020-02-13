@@ -12,23 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_MinimapCaptureActor.BP_MinimapCaptureActor_C.UserConstructionScript
-// ()
-
-void ABP_MinimapCaptureActor_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MinimapCaptureActor.BP_MinimapCaptureActor_C.UserConstructionScript");
-
-	ABP_MinimapCaptureActor_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 }
 
 #ifdef _MSC_VER

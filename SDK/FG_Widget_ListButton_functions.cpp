@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ListButton.Widget_ListButton_C.GetIconColor
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FLinearColor UWidget_ListButton_C::GetIconColor()
 
 
 // Function Widget_ListButton.Widget_ListButton_C.ClearListSelection
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ListButton_C::ClearListSelection()
 {
@@ -51,7 +51,7 @@ void UWidget_ListButton_C::ClearListSelection()
 
 
 // Function Widget_ListButton.Widget_ListButton_C.GetIndexInList
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -73,7 +73,7 @@ void UWidget_ListButton_C::GetIndexInList(int* Index)
 
 
 // Function Widget_ListButton.Widget_ListButton_C.GetTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -94,7 +94,7 @@ struct FSlateColor UWidget_ListButton_C::GetTextColor()
 
 
 // Function Widget_ListButton.Widget_ListButton_C.GetButtonBackground
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -114,38 +114,8 @@ struct FLinearColor UWidget_ListButton_C::GetButtonBackground()
 }
 
 
-// Function Widget_ListButton.Widget_ListButton_C.UpdateButton
-// ()
-// Parameters:
-// class UTexture*                Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   Description                    (BlueprintVisible, BlueprintReadOnly, Parm)
-// ESlateVisibility               descVisibility                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// ESlateVisibility               iconVisibility                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   AdditionalInfo                 (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWidget_ListButton_C::UpdateButton(class UTexture* Icon, const struct FText& Title, const struct FText& Description, ESlateVisibility descVisibility, ESlateVisibility iconVisibility, const struct FText& AdditionalInfo)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_ListButton.Widget_ListButton_C.UpdateButton");
-
-	UWidget_ListButton_C_UpdateButton_Params params;
-	params.Icon = Icon;
-	params.Title = Title;
-	params.Description = Description;
-	params.descVisibility = descVisibility;
-	params.iconVisibility = iconVisibility;
-	params.AdditionalInfo = AdditionalInfo;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_ListButton.Widget_ListButton_C.BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ListButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -162,7 +132,7 @@ void UWidget_ListButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_0_On
 
 
 // Function Widget_ListButton.Widget_ListButton_C.mSetDisabled
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ListButton_C::mSetDisabled()
 {
@@ -179,7 +149,7 @@ void UWidget_ListButton_C::mSetDisabled()
 
 
 // Function Widget_ListButton.Widget_ListButton_C.mSetEnabled
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ListButton_C::mSetEnabled()
 {
@@ -196,7 +166,7 @@ void UWidget_ListButton_C::mSetEnabled()
 
 
 // Function Widget_ListButton.Widget_ListButton_C.BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ListButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -213,7 +183,7 @@ void UWidget_ListButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_1_On
 
 
 // Function Widget_ListButton.Widget_ListButton_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -233,7 +203,7 @@ void UWidget_ListButton_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ListButton.Widget_ListButton_C.BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ListButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
@@ -250,7 +220,7 @@ void UWidget_ListButton_C::BndEvt__mRecipeButton_K2Node_ComponentBoundEvent_2_On
 
 
 // Function Widget_ListButton.Widget_ListButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ListButton_C::Construct()
 {
@@ -267,7 +237,7 @@ void UWidget_ListButton_C::Construct()
 
 
 // Function Widget_ListButton.Widget_ListButton_C.SendClick
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ListButton_C::SendClick()
 {
@@ -283,12 +253,42 @@ void UWidget_ListButton_C::SendClick()
 }
 
 
-// Function Widget_ListButton.Widget_ListButton_C.ExecuteUbergraph_Widget_ListButton
-// ()
+// Function Widget_ListButton.Widget_ListButton_C.UpdateButton
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture**               Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Description                    (BlueprintVisible, BlueprintReadOnly, Parm)
+// ESlateVisibility*              descVisibility                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ESlateVisibility*              iconVisibility                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  AdditionalInfo                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_ListButton_C::ExecuteUbergraph_Widget_ListButton(int EntryPoint)
+void UWidget_ListButton_C::UpdateButton(class UTexture** Icon, struct FText* Title, struct FText* Description, ESlateVisibility* descVisibility, ESlateVisibility* iconVisibility, struct FText* AdditionalInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ListButton.Widget_ListButton_C.UpdateButton");
+
+	UWidget_ListButton_C_UpdateButton_Params params;
+	params.Icon = Icon;
+	params.Title = Title;
+	params.Description = Description;
+	params.descVisibility = descVisibility;
+	params.iconVisibility = iconVisibility;
+	params.AdditionalInfo = AdditionalInfo;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ListButton.Widget_ListButton_C.ExecuteUbergraph_Widget_ListButton
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ListButton_C::ExecuteUbergraph_Widget_ListButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ListButton.Widget_ListButton_C.ExecuteUbergraph_Widget_ListButton");
 
@@ -304,13 +304,18 @@ void UWidget_ListButton_C::ExecuteUbergraph_Widget_ListButton(int EntryPoint)
 
 
 // Function Widget_ListButton.Widget_ListButton_C.OnUnhovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ListButton_C::OnUnhovered__DelegateSignature()
+void UWidget_ListButton_C::OnUnhovered__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ListButton.Widget_ListButton_C.OnUnhovered__DelegateSignature");
 
 	UWidget_ListButton_C_OnUnhovered__DelegateSignature_Params params;
+	params.Index = Index;
+	params.ListButton = ListButton;
 
 	auto flags = fn->FunctionFlags;
 
@@ -321,13 +326,18 @@ void UWidget_ListButton_C::OnUnhovered__DelegateSignature()
 
 
 // Function Widget_ListButton.Widget_ListButton_C.OnHovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ListButton_C::OnHovered__DelegateSignature()
+void UWidget_ListButton_C::OnHovered__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ListButton.Widget_ListButton_C.OnHovered__DelegateSignature");
 
 	UWidget_ListButton_C_OnHovered__DelegateSignature_Params params;
+	params.Index = Index;
+	params.ListButton = ListButton;
 
 	auto flags = fn->FunctionFlags;
 
@@ -338,12 +348,12 @@ void UWidget_ListButton_C::OnHovered__DelegateSignature()
 
 
 // Function Widget_ListButton.Widget_ListButton_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ListButton_C::OnClicked__DelegateSignature(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_ListButton_C::OnClicked__DelegateSignature(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ListButton.Widget_ListButton_C.OnClicked__DelegateSignature");
 

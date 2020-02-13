@@ -17,13 +17,13 @@ namespace SDK
 // Function Qos.QosBeaconClient.ServerQosRequest
 struct AQosBeaconClient_ServerQosRequest_Params
 {
-	class FString                                      InSessionId;                                              // (Parm, ZeroConstructor)
+	class FString*                                     InSessionId;                                              // (Parm, ZeroConstructor)
 };
 
 // Function Qos.QosBeaconClient.ClientQosResponse
 struct AQosBeaconClient_ClientQosResponse_Params
 {
-	EQosResponseType                                   Response;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	EQosResponseType*                                  Response;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

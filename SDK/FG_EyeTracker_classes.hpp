@@ -27,11 +27,11 @@ public:
 	}
 
 
-	void SetEyeTrackedPlayer(class APlayerController* PlayerController);
-	bool IsStereoGazeDataAvailable();
-	bool IsEyeTrackerConnected();
-	bool GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
-	bool GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
+	void STATIC_SetEyeTrackedPlayer(class APlayerController** PlayerController);
+	bool STATIC_IsStereoGazeDataAvailable();
+	bool STATIC_IsEyeTrackerConnected();
+	bool STATIC_GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
+	bool STATIC_GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
 };
 
 

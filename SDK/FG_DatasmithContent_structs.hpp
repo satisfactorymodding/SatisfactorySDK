@@ -7,15 +7,25 @@
 #endif
 
 #include "FG_Basic.hpp"
+#include "FG_Engine_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_CinematicCamera_classes.hpp"
-#include "FG_Engine_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Enums
 //---------------------------------------------------------------------------
+
+// Enum DatasmithContent.EDatasmithAreaLightActorType
+enum class EDatasmithAreaLightActorType : uint8_t
+{
+	Point                          = 0,
+	Spot                           = 1,
+	Rect                           = 2,
+	EDatasmithAreaLightActorType_MAX = 3
+};
+
 
 // Enum DatasmithContent.EDatasmithAreaLightActorShape
 enum class EDatasmithAreaLightActorShape : uint8_t
@@ -24,7 +34,8 @@ enum class EDatasmithAreaLightActorShape : uint8_t
 	Disc                           = 1,
 	Sphere                         = 2,
 	Cylinder                       = 3,
-	EDatasmithAreaLightActorShape_MAX = 4
+	None                           = 4,
+	EDatasmithAreaLightActorShape_MAX = 5
 };
 
 
@@ -32,10 +43,19 @@ enum class EDatasmithAreaLightActorShape : uint8_t
 enum class EVREDDataTableType : uint8_t
 {
 	NotDatatable                   = 0,
-	Variants                       = 1,
-	AnimClips                      = 2,
-	AnimNodes                      = 3,
-	EVREDDataTableType_MAX         = 4
+	AnimClips                      = 1,
+	AnimNodes                      = 2,
+	EVREDDataTableType_MAX         = 3
+};
+
+
+// Enum DatasmithContent.EDatasmithCADStitchingTechnique
+enum class EDatasmithCADStitchingTechnique : uint8_t
+{
+	StitchingNone                  = 0,
+	StitchingHeal                  = 1,
+	StitchingSew                   = 2,
+	EDatasmithCADStitchingTechnique_MAX = 3
 };
 
 
@@ -131,6 +151,15 @@ enum class EDatasmithImportSearchPackagePolicy : uint8_t
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct DatasmithContent.DatasmithCameraLookatTrackingSettingsTemplate
+// 0x0030
+struct FDatasmithCameraLookatTrackingSettingsTemplate
+{
+	unsigned char                                      bEnableLookAtTracking : 1;                                // 0x0000(0x0001)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	TSoftObjectPtr<class AActor>                       ActorToTrack;                                             // 0x0008(0x0028)
+};
+
 // ScriptStruct DatasmithContent.DatasmithCameraFilmbackSettingsTemplate
 // 0x0008
 struct FDatasmithCameraFilmbackSettingsTemplate
@@ -165,16 +194,19 @@ struct FDatasmithPostProcessSettingsTemplate
 	unsigned char                                      bOverride_FilmWhitePoint : 1;                             // 0x0000(0x0001)
 	unsigned char                                      bOverride_AutoExposureMethod : 1;                         // 0x0000(0x0001)
 	unsigned char                                      bOverride_CameraISO : 1;                                  // 0x0000(0x0001)
+	unsigned char                                      bOverride_CameraShutterSpeed : 1;                         // 0x0000(0x0001)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	float                                              WhiteTemp;                                                // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              VignetteIntensity;                                        // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                FilmWhitePoint;                                           // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	unsigned char                                      bOverride_DepthOfFieldFstop : 1;                          // 0x0004(0x0001)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+	float                                              WhiteTemp;                                                // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              VignetteIntensity;                                        // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                FilmWhitePoint;                                           // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 	struct FVector4                                    ColorSaturation;                                          // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAutoExposureMethod>                   AutoExposureMethod;                                       // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
 	float                                              CameraISO;                                                // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
+	float                                              CameraShutterSpeed;                                       // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              DepthOfFieldFstop;                                        // 0x003C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct DatasmithContent.DatasmithAssetImportOptions
@@ -195,7 +227,7 @@ struct FDatasmithStaticMeshImportOptions
 };
 
 // ScriptStruct DatasmithContent.DatasmithImportBaseOptions
-// 0x0018
+// 0x0014
 struct FDatasmithImportBaseOptions
 {
 	EDatasmithImportScene                              SceneHandling;                                            // 0x0000(0x0001) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
@@ -203,19 +235,21 @@ struct FDatasmithImportBaseOptions
 	bool                                               bIncludeMaterial;                                         // 0x0002(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bIncludeLight;                                            // 0x0003(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bIncludeCamera;                                           // 0x0004(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+	bool                                               bIncludeAnimation;                                        // 0x0005(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0006(0x0002) MISSED OFFSET
 	struct FDatasmithAssetImportOptions                AssetOptions;                                             // 0x0008(0x0008) (BlueprintVisible)
 	struct FDatasmithStaticMeshImportOptions           StaticMeshOptions;                                        // 0x0010(0x0004) (Edit, BlueprintVisible, Config)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct DatasmithContent.DatasmithTessellationOptions
-// 0x000C
+// 0x0010
 struct FDatasmithTessellationOptions
 {
 	float                                              ChordTolerance;                                           // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	float                                              MaxEdgeLength;                                            // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	float                                              NormalTolerance;                                          // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	EDatasmithCADStitchingTechnique                    StitchingTechnique;                                       // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct DatasmithContent.DatasmithReimportOptions
@@ -224,6 +258,13 @@ struct FDatasmithReimportOptions
 {
 	bool                                               bUpdateActors;                                            // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bRespawnDeletedActors;                                    // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct DatasmithContent.DatasmithStaticParameterSetTemplate
+// 0x0050
+struct FDatasmithStaticParameterSetTemplate
+{
+	TMap<struct FName, bool>                           StaticSwitchParameters;                                   // 0x0000(0x0050) (ZeroConstructor)
 };
 
 // ScriptStruct DatasmithContent.DatasmithMeshSectionInfoTemplate

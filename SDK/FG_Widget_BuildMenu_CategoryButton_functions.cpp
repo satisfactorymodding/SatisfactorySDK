@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.UpdateButtonStyle
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_CategoryButton_C::UpdateButtonStyle()
 {
@@ -30,7 +30,7 @@ void UWidget_BuildMenu_CategoryButton_C::UpdateButtonStyle()
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.CheckIsSelected
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           mIsSelected                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -52,7 +52,7 @@ void UWidget_BuildMenu_CategoryButton_C::CheckIsSelected(bool* mIsSelected)
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.GetBuildCategoryIcon
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_CategoryButton_C::GetBuildCategoryIcon()
 {
@@ -69,7 +69,7 @@ void UWidget_BuildMenu_CategoryButton_C::GetBuildCategoryIcon()
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.GetBuildCategoryName
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_CategoryButton_C::GetBuildCategoryName()
 {
@@ -86,7 +86,7 @@ void UWidget_BuildMenu_CategoryButton_C::GetBuildCategoryName()
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenu_CategoryButton_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature()
 {
@@ -103,7 +103,7 @@ void UWidget_BuildMenu_CategoryButton_C::BndEvt__Button_26_K2Node_ComponentBound
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenu_CategoryButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -120,7 +120,7 @@ void UWidget_BuildMenu_CategoryButton_C::BndEvt__mButton_K2Node_ComponentBoundEv
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenu_CategoryButton_C::BndEvt__mButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -137,7 +137,7 @@ void UWidget_BuildMenu_CategoryButton_C::BndEvt__mButton_K2Node_ComponentBoundEv
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_BuildMenu_CategoryButton_C::Construct()
 {
@@ -154,7 +154,7 @@ void UWidget_BuildMenu_CategoryButton_C::Construct()
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_BuildMenu_CategoryButton_C::Destruct()
 {
@@ -171,16 +171,33 @@ void UWidget_BuildMenu_CategoryButton_C::Destruct()
 
 
 // Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.ExecuteUbergraph_Widget_BuildMenu_CategoryButton
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_CategoryButton_C::ExecuteUbergraph_Widget_BuildMenu_CategoryButton(int EntryPoint)
+void UWidget_BuildMenu_CategoryButton_C::ExecuteUbergraph_Widget_BuildMenu_CategoryButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.ExecuteUbergraph_Widget_BuildMenu_CategoryButton");
 
 	UWidget_BuildMenu_CategoryButton_C_ExecuteUbergraph_Widget_BuildMenu_CategoryButton_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.OnCategoryButtonClicked__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UWidget_BuildMenu_CategoryButton_C::OnCategoryButtonClicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_CategoryButton.Widget_BuildMenu_CategoryButton_C.OnCategoryButtonClicked__DelegateSignature");
+
+	UWidget_BuildMenu_CategoryButton_C_OnCategoryButtonClicked__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

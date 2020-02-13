@@ -17,7 +17,7 @@ namespace SDK
 // Function Anim_ObjectScanner.Anim_ObjectScanner_C.ExecuteUbergraph_Anim_ObjectScanner
 struct UAnim_ObjectScanner_C_ExecuteUbergraph_Anim_ObjectScanner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

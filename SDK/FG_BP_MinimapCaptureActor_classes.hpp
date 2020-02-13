@@ -15,11 +15,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MinimapCaptureActor.BP_MinimapCaptureActor_C
-// 0x0008 (0x0348 - 0x0340)
+// 0x0000 (0x0350 - 0x0350)
 class ABP_MinimapCaptureActor_C : public AFGMinimapCaptureActor
 {
 public:
-	class UTexture2D*                                  mMapTexture;                                              // 0x0340(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,8 +26,6 @@ public:
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
 };
 
 

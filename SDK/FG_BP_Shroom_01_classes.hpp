@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shroom_01.BP_Shroom_01_C
-// 0x0010 (0x03C8 - 0x03B8)
+// 0x0010 (0x0400 - 0x03F0)
 class ABP_Shroom_01_C : public ABP_Edible_C
 {
 public:
-	TArray<class UStaticMesh*>                         mMeshAlternatives;                                        // 0x03B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UStaticMesh*>                         mMeshAlternatives;                                        // 0x03F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

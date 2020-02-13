@@ -89,7 +89,7 @@ struct UAnim_NonFlyingBird_C_AnimNotify_AnimNotify_NFB_JumpLoop_Params
 // Function Anim_NonFlyingBird.Anim_NonFlyingBird_C.ExecuteUbergraph_Anim_NonFlyingBird
 struct UAnim_NonFlyingBird_C_ExecuteUbergraph_Anim_NonFlyingBird_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

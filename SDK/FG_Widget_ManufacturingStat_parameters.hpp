@@ -69,7 +69,7 @@ struct UWidget_ManufacturingStat_C_Destruct_Params
 // Function Widget_ManufacturingStat.Widget_ManufacturingStat_C.ExecuteUbergraph_Widget_ManufacturingStat
 struct UWidget_ManufacturingStat_C_ExecuteUbergraph_Widget_ManufacturingStat_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

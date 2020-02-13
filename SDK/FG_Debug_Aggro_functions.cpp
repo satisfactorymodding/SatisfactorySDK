@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Debug_Aggro.Debug_Aggro_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UDebug_Aggro_C::Construct()
 {
@@ -30,11 +30,11 @@ void UDebug_Aggro_C::Construct()
 
 
 // Function Debug_Aggro.Debug_Aggro_C.ExecuteUbergraph_Debug_Aggro
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UDebug_Aggro_C::ExecuteUbergraph_Debug_Aggro(int EntryPoint)
+void UDebug_Aggro_C::ExecuteUbergraph_Debug_Aggro(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Debug_Aggro.Debug_Aggro_C.ExecuteUbergraph_Debug_Aggro");
 

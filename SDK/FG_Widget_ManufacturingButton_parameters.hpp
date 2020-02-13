@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.GetByProductIcon
+struct UWidget_ManufacturingButton_C_GetByProductIcon_Params
+{
+};
+
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.UpdateButtonStyle
 struct UWidget_ManufacturingButton_C_UpdateButtonStyle_Params
 {
@@ -77,25 +82,25 @@ struct UWidget_ManufacturingButton_C_Destruct_Params
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.ExecuteUbergraph_Widget_ManufacturingButton
 struct UWidget_ManufacturingButton_C_ExecuteUbergraph_Widget_ManufacturingButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnStopHoveringManufacturingRecipe__DelegateSignature
 struct UWidget_ManufacturingButton_C_OnStopHoveringManufacturingRecipe__DelegateSignature_Params
 {
-	class UClass*                                      UnhoveredRecipe;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     UnhoveredRecipe;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnManufacturingRecipeHovered__DelegateSignature
 struct UWidget_ManufacturingButton_C_OnManufacturingRecipeHovered__DelegateSignature_Params
 {
-	class UClass*                                      RecipeHover;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     RecipeHover;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManufacturingButton.Widget_ManufacturingButton_C.OnManufacturingRecipeClicked__DelegateSignature
 struct UWidget_ManufacturingButton_C_OnManufacturingRecipeClicked__DelegateSignature_Params
 {
-	class UClass*                                      Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

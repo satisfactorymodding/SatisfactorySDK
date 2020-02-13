@@ -22,13 +22,13 @@ struct UBP_BuildingSpotLight_C_ReceiveBeginPlay_Params
 // Function BP_BuildingSpotLight.BP_BuildingSpotLight_C.HasPowerChanged
 struct UBP_BuildingSpotLight_C_HasPowerChanged_Params
 {
-	bool                                               State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_BuildingSpotLight.BP_BuildingSpotLight_C.ExecuteUbergraph_BP_BuildingSpotLight
 struct UBP_BuildingSpotLight_C_ExecuteUbergraph_BP_BuildingSpotLight_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

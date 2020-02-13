@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MenuBase.BP_MenuBase_C.GatherBackgrounds
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MenuBase_C::GatherBackgrounds()
 {
@@ -30,7 +30,7 @@ void UBP_MenuBase_C::GatherBackgrounds()
 
 
 // Function BP_MenuBase.BP_MenuBase_C.PlayBackgroundEnterAnimation
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MenuBase_C::PlayBackgroundEnterAnimation()
 {
@@ -47,11 +47,11 @@ void UBP_MenuBase_C::PlayBackgroundEnterAnimation()
 
 
 // Function BP_MenuBase.BP_MenuBase_C.PlayEnterAnimation
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget*                 prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget**                prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBP_MenuBase_C::PlayEnterAnimation(class UWidget* prevMenu)
+void UBP_MenuBase_C::PlayEnterAnimation(class UWidget** prevMenu)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuBase.BP_MenuBase_C.PlayEnterAnimation");
 
@@ -67,12 +67,12 @@ void UBP_MenuBase_C::PlayEnterAnimation(class UWidget* prevMenu)
 
 
 // Function BP_MenuBase.BP_MenuBase_C.ShouldAnimateBackground
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UWidget*                 prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget**                prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Animate                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MenuBase_C::ShouldAnimateBackground(class UWidget* prevMenu, bool* Animate)
+void UBP_MenuBase_C::ShouldAnimateBackground(class UWidget** prevMenu, bool* Animate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuBase.BP_MenuBase_C.ShouldAnimateBackground");
 
@@ -91,11 +91,11 @@ void UBP_MenuBase_C::ShouldAnimateBackground(class UWidget* prevMenu, bool* Anim
 
 
 // Function BP_MenuBase.BP_MenuBase_C.RestoreFocusOnPopupClosed
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          confirm                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MenuBase_C::RestoreFocusOnPopupClosed(bool confirm)
+void UBP_MenuBase_C::RestoreFocusOnPopupClosed(bool* confirm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuBase.BP_MenuBase_C.RestoreFocusOnPopupClosed");
 
@@ -111,7 +111,7 @@ void UBP_MenuBase_C::RestoreFocusOnPopupClosed(bool confirm)
 
 
 // Function BP_MenuBase.BP_MenuBase_C.OnKeyDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -136,7 +136,7 @@ struct FEventReply UBP_MenuBase_C::OnKeyDown(struct FGeometry* MyGeometry, struc
 
 
 // Function BP_MenuBase.BP_MenuBase_C.OnEscape
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MenuBase_C::OnEscape()
 {
@@ -152,45 +152,8 @@ void UBP_MenuBase_C::OnEscape()
 }
 
 
-// Function BP_MenuBase.BP_MenuBase_C.MenuExit
-// ()
-
-void UBP_MenuBase_C::MenuExit()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuBase.BP_MenuBase_C.MenuExit");
-
-	UBP_MenuBase_C_MenuExit_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MenuBase.BP_MenuBase_C.MenuEnter
-// ()
-// Parameters:
-// class UBP_MenuBase_C*          inOwner                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UBP_MenuBase_C::MenuEnter(class UBP_MenuBase_C* inOwner)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuBase.BP_MenuBase_C.MenuEnter");
-
-	UBP_MenuBase_C_MenuEnter_Params params;
-	params.inOwner = inOwner;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_MenuBase.BP_MenuBase_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBP_MenuBase_C::Destruct()
 {
@@ -207,7 +170,7 @@ void UBP_MenuBase_C::Destruct()
 
 
 // Function BP_MenuBase.BP_MenuBase_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBP_MenuBase_C::Construct()
 {
@@ -224,11 +187,11 @@ void UBP_MenuBase_C::Construct()
 
 
 // Function BP_MenuBase.BP_MenuBase_C.SpawnAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           PlayBackgroundAnim             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          PlayBackgroundAnim             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MenuBase_C::SpawnAnim(bool PlayBackgroundAnim)
+void UBP_MenuBase_C::SpawnAnim(bool* PlayBackgroundAnim)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuBase.BP_MenuBase_C.SpawnAnim");
 
@@ -244,7 +207,7 @@ void UBP_MenuBase_C::SpawnAnim(bool PlayBackgroundAnim)
 
 
 // Function BP_MenuBase.BP_MenuBase_C.OnMenuEnter
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UWidget**                prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -264,9 +227,9 @@ void UBP_MenuBase_C::OnMenuEnter(class UWidget** prevMenu)
 
 
 // Function BP_MenuBase.BP_MenuBase_C.OnAnimationFinished
-// ()
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 // Parameters:
-// class UWidgetAnimation**       Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidgetAnimation**       Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
 void UBP_MenuBase_C::OnAnimationFinished(class UWidgetAnimation** Animation)
 {
@@ -284,7 +247,7 @@ void UBP_MenuBase_C::OnAnimationFinished(class UWidgetAnimation** Animation)
 
 
 // Function BP_MenuBase.BP_MenuBase_C.OnMenuExit
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UWidget**                prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool*                          noAnimation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -306,11 +269,11 @@ void UBP_MenuBase_C::OnMenuExit(class UWidget** prevMenu, bool* noAnimation)
 
 
 // Function BP_MenuBase.BP_MenuBase_C.ExecuteUbergraph_BP_MenuBase
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MenuBase_C::ExecuteUbergraph_BP_MenuBase(int EntryPoint)
+void UBP_MenuBase_C::ExecuteUbergraph_BP_MenuBase(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuBase.BP_MenuBase_C.ExecuteUbergraph_BP_MenuBase");
 

@@ -17,7 +17,7 @@ namespace SDK
 // Function ImgMedia.ImgMediaSource.SetSequencePath
 struct UImgMediaSource_SetSequencePath_Params
 {
-	class FString                                      Path;                                                     // (Parm, ZeroConstructor)
+	class FString*                                     Path;                                                     // (Parm, ZeroConstructor)
 };
 
 // Function ImgMedia.ImgMediaSource.GetSequencePath

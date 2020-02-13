@@ -19,11 +19,6 @@ struct AEquip_Beacon_C_SpawnBeacon_Params
 {
 };
 
-// Function Equip_Beacon.Equip_Beacon_C.UserConstructionScript
-struct AEquip_Beacon_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_Beacon.Equip_Beacon_C.WasEquipped
 struct AEquip_Beacon_C_WasEquipped_Params
 {
@@ -34,10 +29,16 @@ struct AEquip_Beacon_C_WasUnEquipped_Params
 {
 };
 
+// Function Equip_Beacon.Equip_Beacon_C.PlayConsumeEffects
+struct AEquip_Beacon_C_PlayConsumeEffects_Params
+{
+	class UFGConsumableDescriptor**                    consumable;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Equip_Beacon.Equip_Beacon_C.ExecuteUbergraph_Equip_Beacon
 struct AEquip_Beacon_C_ExecuteUbergraph_Equip_Beacon_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

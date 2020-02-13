@@ -7,9 +7,9 @@
 #endif
 
 #include "FG_Basic.hpp"
+#include "FG_Engine_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_MovieScene_classes.hpp"
-#include "FG_Engine_classes.hpp"
 #include "FG_UMG_classes.hpp"
 
 namespace SDK
@@ -69,7 +69,7 @@ struct FLevelSequenceSnapshotSettings
 };
 
 // ScriptStruct LevelSequence.LevelSequencePlayerSnapshot
-// 0x0088
+// 0x0098
 struct FLevelSequencePlayerSnapshot
 {
 	class FString                                      MasterName;                                               // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
@@ -81,7 +81,10 @@ struct FLevelSequencePlayerSnapshot
 	class FString                                      SourceTimecode;                                           // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 	class UCameraComponent*                            CameraComponent;                                          // 0x0070(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	struct FLevelSequenceSnapshotSettings              Settings;                                                 // 0x0078(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
-	struct FMovieSceneSequenceID                       ShotID;                                                   // 0x0084(0x0004)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	class ULevelSequence*                              ActiveShot;                                               // 0x0088(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	struct FMovieSceneSequenceID                       ShotID;                                                   // 0x0090(0x0004)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct LevelSequence.BoundActorProxy

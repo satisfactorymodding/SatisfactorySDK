@@ -13,20 +13,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TradingPostSchematicCostInfo.Widget_TradingPostSchematicCostInfo_C.UpdateSchematicCosts
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGSchematicManager*     mSchematicManager              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  mSchematic                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_TradingPost_RecipePreview_C* mSchematicPreview              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UClass**                 mSchematic                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPostSchematicCostInfo_C::UpdateSchematicCosts(class AFGSchematicManager* mSchematicManager, class UClass* mSchematic, class UWidget_TradingPost_RecipePreview_C* mSchematicPreview)
+void UWidget_TradingPostSchematicCostInfo_C::UpdateSchematicCosts(class UClass** mSchematic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPostSchematicCostInfo.Widget_TradingPostSchematicCostInfo_C.UpdateSchematicCosts");
 
 	UWidget_TradingPostSchematicCostInfo_C_UpdateSchematicCosts_Params params;
-	params.mSchematicManager = mSchematicManager;
 	params.mSchematic = mSchematic;
-	params.mSchematicPreview = mSchematicPreview;
 
 	auto flags = fn->FunctionFlags;
 

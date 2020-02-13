@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_Alternate_ModularFrame.Recipe_Alternate_ModularFrame_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_Alternate_ModularFrame_C : public UFGRecipe
 {
 public:

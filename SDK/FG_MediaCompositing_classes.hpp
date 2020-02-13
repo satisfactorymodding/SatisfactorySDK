@@ -21,7 +21,8 @@ class UMovieSceneMediaSection : public UMovieSceneSection
 public:
 	class UMediaSource*                                MediaSource;                                              // 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bLooping;                                                 // 0x00E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x00E9(0x0003) MISSED OFFSET
+	struct FFrameNumber                                StartFrameOffset;                                         // 0x00EC(0x0004) (Edit, BlueprintVisible)
 	class UMediaTexture*                               MediaTexture;                                             // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UMediaSoundComponent*                        MediaSoundComponent;                                      // 0x00F8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               bUseExternalMediaPlayer;                                  // 0x0100(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)

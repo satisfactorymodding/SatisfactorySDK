@@ -31,7 +31,7 @@ public:
 
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
 	void ReceiveTickAI(class AAIController** OwnerController, class APawn** ControlledPawn, float* DeltaSeconds);
-	void ExecuteUbergraph_BTT_StopVehicle(int EntryPoint);
+	void ExecuteUbergraph_BTT_StopVehicle(int* EntryPoint);
 };
 
 

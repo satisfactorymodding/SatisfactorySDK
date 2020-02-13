@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_RewardProduct.Widget_RewardProduct_C.GetFirstProductItemClass
+struct UWidget_RewardProduct_C_GetFirstProductItemClass_Params
+{
+	class UClass*                                      ItemClass;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_RewardProduct.Widget_RewardProduct_C.IsValidRewardItem
 struct UWidget_RewardProduct_C_IsValidRewardItem_Params
 {
@@ -32,11 +38,6 @@ struct UWidget_RewardProduct_C_GetIcon_Params
 	struct FSlateBrush                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Widget_RewardProduct.Widget_RewardProduct_C.OnRewardClicked
-struct UWidget_RewardProduct_C_OnRewardClicked_Params
-{
-};
-
 // Function Widget_RewardProduct.Widget_RewardProduct_C.Construct
 struct UWidget_RewardProduct_C_Construct_Params
 {
@@ -45,7 +46,7 @@ struct UWidget_RewardProduct_C_Construct_Params
 // Function Widget_RewardProduct.Widget_RewardProduct_C.ExecuteUbergraph_Widget_RewardProduct
 struct UWidget_RewardProduct_C_ExecuteUbergraph_Widget_RewardProduct_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

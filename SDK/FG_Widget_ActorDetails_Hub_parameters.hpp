@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.FromSecondsToText
 struct UWidget_ActorDetails_Hub_C_FromSecondsToText_Params
 {
-	float                                              Seconds;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Seconds;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Result;                                                   // (Parm, OutParm)
 };
 
@@ -44,7 +44,7 @@ struct UWidget_ActorDetails_Hub_C_UpdateMAMInfo_Params
 // Function Widget_ActorDetails_Hub.Widget_ActorDetails_Hub_C.ExecuteUbergraph_Widget_ActorDetails_Hub
 struct UWidget_ActorDetails_Hub_C_ExecuteUbergraph_Widget_ActorDetails_Hub_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.UserConstructionScript
-// ()
-
-void ABP_ResourceNodeGeyser_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.UserConstructionScript");
-
-	ABP_ResourceNodeGeyser_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.OnIsOccupiedChanged
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          newIsOccupied                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +33,7 @@ void ABP_ResourceNodeGeyser_C::OnIsOccupiedChanged(bool* newIsOccupied)
 
 
 // Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.GainedSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_ResourceNodeGeyser_C::GainedSignificance()
 {
@@ -67,7 +50,7 @@ void ABP_ResourceNodeGeyser_C::GainedSignificance()
 
 
 // Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.LostSignificance
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_ResourceNodeGeyser_C::LostSignificance()
 {
@@ -84,7 +67,7 @@ void ABP_ResourceNodeGeyser_C::LostSignificance()
 
 
 // Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.EruptLoop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_ResourceNodeGeyser_C::EruptLoop()
 {
@@ -101,11 +84,11 @@ void ABP_ResourceNodeGeyser_C::EruptLoop()
 
 
 // Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.ExecuteUbergraph_BP_ResourceNodeGeyser
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ResourceNodeGeyser_C::ExecuteUbergraph_BP_ResourceNodeGeyser(int EntryPoint)
+void ABP_ResourceNodeGeyser_C::ExecuteUbergraph_BP_ResourceNodeGeyser(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ResourceNodeGeyser.BP_ResourceNodeGeyser_C.ExecuteUbergraph_BP_ResourceNodeGeyser");
 

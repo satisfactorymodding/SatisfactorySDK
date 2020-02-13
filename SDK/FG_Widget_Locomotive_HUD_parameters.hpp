@@ -76,7 +76,7 @@ struct UWidget_Locomotive_HUD_C_UpdateStats_Params
 // Function Widget_Locomotive_HUD.Widget_Locomotive_HUD_C.ExecuteUbergraph_Widget_Locomotive_HUD
 struct UWidget_Locomotive_HUD_C_ExecuteUbergraph_Widget_Locomotive_HUD_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

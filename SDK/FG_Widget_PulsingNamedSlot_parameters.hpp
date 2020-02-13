@@ -27,7 +27,7 @@ struct UWidget_PulsingNamedSlot_C_mStopPulseAnim_Params
 // Function Widget_PulsingNamedSlot.Widget_PulsingNamedSlot_C.ExecuteUbergraph_Widget_PulsingNamedSlot
 struct UWidget_PulsingNamedSlot_C_ExecuteUbergraph_Widget_PulsingNamedSlot_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

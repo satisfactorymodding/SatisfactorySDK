@@ -27,7 +27,7 @@ struct ABP_CrabEggParts_C_ReceiveBeginPlay_Params
 // Function BP_CrabEggParts.BP_CrabEggParts_C.ExecuteUbergraph_BP_CrabEggParts
 struct ABP_CrabEggParts_C_ExecuteUbergraph_BP_CrabEggParts_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

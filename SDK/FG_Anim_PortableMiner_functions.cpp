@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_PortableMiner.Anim_PortableMiner_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_PortableMiner_AnimGraphNode_TransitionResult_15450DBB48F88D37E85553A4CB1AD445
-// ()
+// (BlueprintEvent)
 
 void UAnim_PortableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_PortableMiner_AnimGraphNode_TransitionResult_15450DBB48F88D37E85553A4CB1AD445()
 {
@@ -30,7 +30,7 @@ void UAnim_PortableMiner_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Por
 
 
 // Function Anim_PortableMiner.Anim_PortableMiner_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +50,7 @@ void UAnim_PortableMiner_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_PortableMiner.Anim_PortableMiner_C.AnimNotify_StartMiningVfxNotify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_PortableMiner_C::AnimNotify_StartMiningVfxNotify()
 {
@@ -67,7 +67,7 @@ void UAnim_PortableMiner_C::AnimNotify_StartMiningVfxNotify()
 
 
 // Function Anim_PortableMiner.Anim_PortableMiner_C.AnimNotify_PortableMinerEnteredOfflineState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_PortableMiner_C::AnimNotify_PortableMinerEnteredOfflineState()
 {
@@ -84,7 +84,7 @@ void UAnim_PortableMiner_C::AnimNotify_PortableMinerEnteredOfflineState()
 
 
 // Function Anim_PortableMiner.Anim_PortableMiner_C.AnimNotify_PortableMinerLeftOfflineState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_PortableMiner_C::AnimNotify_PortableMinerLeftOfflineState()
 {
@@ -101,7 +101,7 @@ void UAnim_PortableMiner_C::AnimNotify_PortableMinerLeftOfflineState()
 
 
 // Function Anim_PortableMiner.Anim_PortableMiner_C.AnimNotify_StartBurnerVfxNotify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_PortableMiner_C::AnimNotify_StartBurnerVfxNotify()
 {
@@ -118,11 +118,11 @@ void UAnim_PortableMiner_C::AnimNotify_StartBurnerVfxNotify()
 
 
 // Function Anim_PortableMiner.Anim_PortableMiner_C.ExecuteUbergraph_Anim_PortableMiner
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_PortableMiner_C::ExecuteUbergraph_Anim_PortableMiner(int EntryPoint)
+void UAnim_PortableMiner_C::ExecuteUbergraph_Anim_PortableMiner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_PortableMiner.Anim_PortableMiner_C.ExecuteUbergraph_Anim_PortableMiner");
 

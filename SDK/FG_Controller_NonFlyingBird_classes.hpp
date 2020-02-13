@@ -30,12 +30,11 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void OnPossess(class APawn** PossessedPawn);
+	void ReceivePossess(class APawn** PossessedPawn);
 	void TryToJump();
-	void BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus);
+	void BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus);
 	void StartPanic();
-	void ExecuteUbergraph_Controller_NonFlyingBird(int EntryPoint);
+	void ExecuteUbergraph_Controller_NonFlyingBird(int* EntryPoint);
 };
 
 

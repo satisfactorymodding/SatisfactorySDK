@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_LetterSpacedLetter.Widget_LetterSpacedLetter_C.SetTextAndFont
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FSlateFontInfo          Font                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSlateFontInfo*         Font                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_LetterSpacedLetter_C::SetTextAndFont(const struct FText& Text, const struct FSlateFontInfo& Font)
+void UWidget_LetterSpacedLetter_C::SetTextAndFont(struct FText* Text, struct FSlateFontInfo* Font)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_LetterSpacedLetter.Widget_LetterSpacedLetter_C.SetTextAndFont");
 
@@ -35,7 +35,7 @@ void UWidget_LetterSpacedLetter_C::SetTextAndFont(const struct FText& Text, cons
 
 
 // Function Widget_LetterSpacedLetter.Widget_LetterSpacedLetter_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -55,11 +55,11 @@ void UWidget_LetterSpacedLetter_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_LetterSpacedLetter.Widget_LetterSpacedLetter_C.ExecuteUbergraph_Widget_LetterSpacedLetter
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_LetterSpacedLetter_C::ExecuteUbergraph_Widget_LetterSpacedLetter(int EntryPoint)
+void UWidget_LetterSpacedLetter_C::ExecuteUbergraph_Widget_LetterSpacedLetter(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_LetterSpacedLetter.Widget_LetterSpacedLetter_C.ExecuteUbergraph_Widget_LetterSpacedLetter");
 

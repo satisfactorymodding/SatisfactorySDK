@@ -22,7 +22,7 @@ struct UAnim_StunSpear_C_AnimNotify_Notify_StunSpearAttack_Params
 // Function Anim_StunSpear.Anim_StunSpear_C.ExecuteUbergraph_Anim_StunSpear
 struct UAnim_StunSpear_C_ExecuteUbergraph_Anim_StunSpear_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

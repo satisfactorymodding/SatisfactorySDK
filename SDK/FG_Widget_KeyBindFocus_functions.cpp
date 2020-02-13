@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.OnKeyUp
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -38,13 +38,13 @@ struct FEventReply UWidget_KeyBindFocus_C::OnKeyUp(struct FGeometry* MyGeometry,
 
 
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.HandleInput
-// ()
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FInputEvent             InputEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FKey                    keyPressed                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FInputEvent*            InputEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   keyPressed                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             Handled                        (Parm, OutParm)
 
-void UWidget_KeyBindFocus_C::HandleInput(const struct FInputEvent& InputEvent, const struct FKey& keyPressed, struct FEventReply* Handled)
+void UWidget_KeyBindFocus_C::HandleInput(struct FInputEvent* InputEvent, struct FKey* keyPressed, struct FEventReply* Handled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.HandleInput");
 
@@ -64,7 +64,7 @@ void UWidget_KeyBindFocus_C::HandleInput(const struct FInputEvent& InputEvent, c
 
 
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.OnMouseWheel
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -89,7 +89,7 @@ struct FEventReply UWidget_KeyBindFocus_C::OnMouseWheel(struct FGeometry* MyGeom
 
 
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.GetKeyRebindText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -110,7 +110,7 @@ struct FText UWidget_KeyBindFocus_C::GetKeyRebindText()
 
 
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.OnKeyDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -135,7 +135,7 @@ struct FEventReply UWidget_KeyBindFocus_C::OnKeyDown(struct FGeometry* MyGeometr
 
 
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.OnMouseButtonDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -160,7 +160,7 @@ struct FEventReply UWidget_KeyBindFocus_C::OnMouseButtonDown(struct FGeometry* M
 
 
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_KeyBindFocus_C::Construct()
 {
@@ -177,11 +177,11 @@ void UWidget_KeyBindFocus_C::Construct()
 
 
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.ExecuteUbergraph_Widget_KeyBindFocus
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_KeyBindFocus_C::ExecuteUbergraph_Widget_KeyBindFocus(int EntryPoint)
+void UWidget_KeyBindFocus_C::ExecuteUbergraph_Widget_KeyBindFocus(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.ExecuteUbergraph_Widget_KeyBindFocus");
 

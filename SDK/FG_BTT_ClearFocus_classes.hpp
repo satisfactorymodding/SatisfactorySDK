@@ -29,7 +29,7 @@ public:
 
 
 	void ReceiveExecute(class AActor** OwnerActor);
-	void ExecuteUbergraph_BTT_ClearFocus(int EntryPoint);
+	void ExecuteUbergraph_BTT_ClearFocus(int* EntryPoint);
 };
 
 

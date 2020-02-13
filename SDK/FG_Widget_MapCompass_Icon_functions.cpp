@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.UpdateRadarTowerTime
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_MapCompass_Icon_C::UpdateRadarTowerTime()
 {
@@ -30,11 +30,11 @@ void UWidget_MapCompass_Icon_C::UpdateRadarTowerTime()
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetScale
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::SetScale(float Scale)
+void UWidget_MapCompass_Icon_C::SetScale(float* Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetScale");
 
@@ -50,12 +50,12 @@ void UWidget_MapCompass_Icon_C::SetScale(float Scale)
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.UpdateActor
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGActorRepresentation*  actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           mIsCompassObject               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          mIsCompassObject               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::UpdateActor(class UFGActorRepresentation* actorRepresentation, bool mIsCompassObject)
+void UWidget_MapCompass_Icon_C::UpdateActor(class UFGActorRepresentation** actorRepresentation, bool* mIsCompassObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.UpdateActor");
 
@@ -72,11 +72,11 @@ void UWidget_MapCompass_Icon_C::UpdateActor(class UFGActorRepresentation* actorR
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetIconType
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ERepresentationType            mRepresentationType            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ERepresentationType*           mRepresentationType            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::SetIconType(ERepresentationType mRepresentationType)
+void UWidget_MapCompass_Icon_C::SetIconType(ERepresentationType* mRepresentationType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetIconType");
 
@@ -92,13 +92,13 @@ void UWidget_MapCompass_Icon_C::SetIconType(ERepresentationType mRepresentationT
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.TestFunction
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// ERepresentationType            mRepresentationType            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UTexture2D*              Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ERepresentationType*           mRepresentationType            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D**             Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::TestFunction(const struct FLinearColor& Color, ERepresentationType mRepresentationType, class UTexture2D* Icon)
+void UWidget_MapCompass_Icon_C::TestFunction(struct FLinearColor* Color, ERepresentationType* mRepresentationType, class UTexture2D** Icon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.TestFunction");
 
@@ -116,11 +116,11 @@ void UWidget_MapCompass_Icon_C::TestFunction(const struct FLinearColor& Color, E
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetDescription
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   mDescriptionText               (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  mDescriptionText               (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_MapCompass_Icon_C::SetDescription(const struct FText& mDescriptionText)
+void UWidget_MapCompass_Icon_C::SetDescription(struct FText* mDescriptionText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetDescription");
 
@@ -136,11 +136,11 @@ void UWidget_MapCompass_Icon_C::SetDescription(const struct FText& mDescriptionT
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetRepresentatoinType
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ERepresentationType            mRepresentationType            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ERepresentationType*           mRepresentationType            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::SetRepresentatoinType(ERepresentationType mRepresentationType)
+void UWidget_MapCompass_Icon_C::SetRepresentatoinType(ERepresentationType* mRepresentationType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetRepresentatoinType");
 
@@ -156,11 +156,11 @@ void UWidget_MapCompass_Icon_C::SetRepresentatoinType(ERepresentationType mRepre
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetRotation
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Angle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Angle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::SetRotation(float Angle)
+void UWidget_MapCompass_Icon_C::SetRotation(float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetRotation");
 
@@ -176,11 +176,11 @@ void UWidget_MapCompass_Icon_C::SetRotation(float Angle)
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetIcon
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTexture2D*              Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D**             Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::SetIcon(class UTexture2D* Texture)
+void UWidget_MapCompass_Icon_C::SetIcon(class UTexture2D** Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetIcon");
 
@@ -196,11 +196,11 @@ void UWidget_MapCompass_Icon_C::SetIcon(class UTexture2D* Texture)
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetColor
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            InColorAndOpacity              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           InColorAndOpacity              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::SetColor(const struct FLinearColor& InColorAndOpacity)
+void UWidget_MapCompass_Icon_C::SetColor(struct FLinearColor* InColorAndOpacity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.SetColor");
 
@@ -216,7 +216,7 @@ void UWidget_MapCompass_Icon_C::SetColor(const struct FLinearColor& InColorAndOp
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_MapCompass_Icon_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
@@ -233,7 +233,7 @@ void UWidget_MapCompass_Icon_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_1_On
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -253,7 +253,7 @@ void UWidget_MapCompass_Icon_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.DynamicDescriptionUpdate
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_MapCompass_Icon_C::DynamicDescriptionUpdate()
 {
@@ -270,7 +270,7 @@ void UWidget_MapCompass_Icon_C::DynamicDescriptionUpdate()
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_MapCompass_Icon_C::Construct()
 {
@@ -287,7 +287,7 @@ void UWidget_MapCompass_Icon_C::Construct()
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_MapCompass_Icon_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
@@ -304,11 +304,11 @@ void UWidget_MapCompass_Icon_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_0_On
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.ExecuteUbergraph_Widget_MapCompass_Icon
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MapCompass_Icon_C::ExecuteUbergraph_Widget_MapCompass_Icon(int EntryPoint)
+void UWidget_MapCompass_Icon_C::ExecuteUbergraph_Widget_MapCompass_Icon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.ExecuteUbergraph_Widget_MapCompass_Icon");
 
@@ -324,7 +324,7 @@ void UWidget_MapCompass_Icon_C::ExecuteUbergraph_Widget_MapCompass_Icon(int Entr
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.OnUnhovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_MapCompass_Icon_C::OnUnhovered__DelegateSignature()
 {
@@ -341,7 +341,7 @@ void UWidget_MapCompass_Icon_C::OnUnhovered__DelegateSignature()
 
 
 // Function Widget_MapCompass_Icon.Widget_MapCompass_Icon_C.OnHovered__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_MapCompass_Icon_C::OnHovered__DelegateSignature()
 {

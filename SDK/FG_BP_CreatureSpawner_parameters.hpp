@@ -19,11 +19,6 @@ struct ABP_CreatureSpawner_C_CallCalculateSpawnLocations_Params
 {
 };
 
-// Function BP_CreatureSpawner.BP_CreatureSpawner_C.UserConstructionScript
-struct ABP_CreatureSpawner_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

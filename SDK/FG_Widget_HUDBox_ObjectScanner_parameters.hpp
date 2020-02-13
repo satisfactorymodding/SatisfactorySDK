@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Widget_HUDBox_ObjectScanner.Widget_HUDBox_ObjectScanner_C.Construct
-struct UWidget_HUDBox_ObjectScanner_C_Construct_Params
-{
-};
-
 // Function Widget_HUDBox_ObjectScanner.Widget_HUDBox_ObjectScanner_C.Tick
 struct UWidget_HUDBox_ObjectScanner_C_Tick_Params
 {
@@ -26,10 +21,15 @@ struct UWidget_HUDBox_ObjectScanner_C_Tick_Params
 	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Widget_HUDBox_ObjectScanner.Widget_HUDBox_ObjectScanner_C.Construct
+struct UWidget_HUDBox_ObjectScanner_C_Construct_Params
+{
+};
+
 // Function Widget_HUDBox_ObjectScanner.Widget_HUDBox_ObjectScanner_C.ExecuteUbergraph_Widget_HUDBox_ObjectScanner
 struct UWidget_HUDBox_ObjectScanner_C_ExecuteUbergraph_Widget_HUDBox_ObjectScanner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

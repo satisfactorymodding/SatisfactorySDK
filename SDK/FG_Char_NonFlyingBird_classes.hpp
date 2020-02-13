@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Char_NonFlyingBird.Char_NonFlyingBird_C
-// 0x0019 (0x0989 - 0x0970)
+// 0x0019 (0x09A9 - 0x0990)
 class AChar_NonFlyingBird_C : public AFGCreature
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0970(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FScriptMulticastDelegate                    OnLandedDelegate;                                         // 0x0978(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	bool                                               mIsLuring;                                                // 0x0988(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0990(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FScriptMulticastDelegate                    OnLandedDelegate;                                         // 0x0998(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	bool                                               mIsLuring;                                                // 0x09A8(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,15 +31,18 @@ public:
 
 
 	void OnRep_mIsLuring();
-	void SetLuring(bool isLuring);
-	void UserConstructionScript();
+	void SetLuring(bool* isLuring);
+	void ReceiveBeginPlay();
 	void ReceiveTick(float* DeltaSeconds);
 	void TryToJump();
 	void OnLanded(struct FHitResult* Hit);
 	void ReceiveDied();
-	void NotifyOnTakeDamage(class AActor** damagedActor, float* damageAmount, class UDamageType** DamageType, class AController** instigatedBy, class AActor** damageCauser);
-	void ExecuteUbergraph_Char_NonFlyingBird(int EntryPoint);
-	void OnLandedDelegate__DelegateSignature(class AChar_NonFlyingBird_C* selfPawn);
+	void NotifyOnTakeDamage(class AActor** DamagedActor, float* damageAmount, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason);
+	void GainedSignificance();
+	void LostSignificance();
+	void ExecuteUbergraph_Char_NonFlyingBird(int* EntryPoint);
+	void OnLandedDelegate__DelegateSignature(class AChar_NonFlyingBird_C** selfPawn);
 };
 
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_ShockShank.Anim_ShockShank_C.AnimNotify_Notify_ShockShankAttack
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_ShockShank_C::AnimNotify_Notify_ShockShankAttack()
 {
@@ -30,11 +30,11 @@ void UAnim_ShockShank_C::AnimNotify_Notify_ShockShankAttack()
 
 
 // Function Anim_ShockShank.Anim_ShockShank_C.ExecuteUbergraph_Anim_ShockShank
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_ShockShank_C::ExecuteUbergraph_Anim_ShockShank(int EntryPoint)
+void UAnim_ShockShank_C::ExecuteUbergraph_Anim_ShockShank(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_ShockShank.Anim_ShockShank_C.ExecuteUbergraph_Anim_ShockShank");
 

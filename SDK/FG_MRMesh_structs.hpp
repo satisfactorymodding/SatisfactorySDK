@@ -7,11 +7,26 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum MRMesh.EMeshTrackerVertexColorMode
+enum class EMeshTrackerVertexColorMode : uint8_t
+{
+	None                           = 0,
+	Confidence                     = 1,
+	Block                          = 2,
+	EMeshTrackerVertexColorMode_MAX = 3
+};
+
+
+
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

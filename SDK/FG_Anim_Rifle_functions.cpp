@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Rifle.Anim_Rifle_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UAnim_Rifle_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_Rifle.Anim_Rifle_C.ExecuteUbergraph_Anim_Rifle
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Rifle_C::ExecuteUbergraph_Anim_Rifle(int EntryPoint)
+void UAnim_Rifle_C::ExecuteUbergraph_Anim_Rifle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Rifle.Anim_Rifle_C.ExecuteUbergraph_Anim_Rifle");
 

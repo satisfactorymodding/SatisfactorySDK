@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.SetNewWaitTime
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTargetPoint_C::SetNewWaitTime()
 {
@@ -30,7 +30,7 @@ void UWidget_VehicleTargetPoint_C::SetNewWaitTime()
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.GetNodeTypeAndSetWindowTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTargetPoint_C::GetNodeTypeAndSetWindowTitle()
 {
@@ -47,7 +47,7 @@ void UWidget_VehicleTargetPoint_C::GetNodeTypeAndSetWindowTitle()
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_VehicleTargetPoint_C::Init()
 {
@@ -64,7 +64,7 @@ void UWidget_VehicleTargetPoint_C::Init()
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_VehicleTargetPoint_C::Destruct()
 {
@@ -81,7 +81,7 @@ void UWidget_VehicleTargetPoint_C::Destruct()
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.BndEvt__Widget_StandardButton_C_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_VehicleTargetPoint_C::BndEvt__Widget_StandardButton_C_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature()
 {
@@ -98,7 +98,7 @@ void UWidget_VehicleTargetPoint_C::BndEvt__Widget_StandardButton_C_0_K2Node_Comp
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.BndEvt__mDeleteButton2_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_VehicleTargetPoint_C::BndEvt__mDeleteButton2_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature()
 {
@@ -115,7 +115,7 @@ void UWidget_VehicleTargetPoint_C::BndEvt__mDeleteButton2_K2Node_ComponentBoundE
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.BndEvt__mWaitButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_VehicleTargetPoint_C::BndEvt__mWaitButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -132,11 +132,11 @@ void UWidget_VehicleTargetPoint_C::BndEvt__mWaitButton_K2Node_ComponentBoundEven
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.SetWaitTimePopup
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           mPopUpConfirm                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          mPopUpConfirm                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_VehicleTargetPoint_C::SetWaitTimePopup(bool mPopUpConfirm)
+void UWidget_VehicleTargetPoint_C::SetWaitTimePopup(bool* mPopUpConfirm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.SetWaitTimePopup");
 
@@ -152,11 +152,11 @@ void UWidget_VehicleTargetPoint_C::SetWaitTimePopup(bool mPopUpConfirm)
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.DoDeleteNode
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ConfirmClicked                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ConfirmClicked                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_VehicleTargetPoint_C::DoDeleteNode(bool ConfirmClicked)
+void UWidget_VehicleTargetPoint_C::DoDeleteNode(bool* ConfirmClicked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.DoDeleteNode");
 
@@ -172,7 +172,7 @@ void UWidget_VehicleTargetPoint_C::DoDeleteNode(bool ConfirmClicked)
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_VehicleTargetPoint_C::Construct()
 {
@@ -189,12 +189,12 @@ void UWidget_VehicleTargetPoint_C::Construct()
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_6_OnTextComitted__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_VehicleTargetPoint_C::BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_6_OnTextComitted__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_VehicleTargetPoint_C::BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_6_OnTextComitted__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.BndEvt__Widget_InputBox_K2Node_ComponentBoundEvent_6_OnTextComitted__DelegateSignature");
 
@@ -211,7 +211,7 @@ void UWidget_VehicleTargetPoint_C::BndEvt__Widget_InputBox_K2Node_ComponentBound
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -231,11 +231,11 @@ void UWidget_VehicleTargetPoint_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.ExecuteUbergraph_Widget_VehicleTargetPoint
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_VehicleTargetPoint_C::ExecuteUbergraph_Widget_VehicleTargetPoint(int EntryPoint)
+void UWidget_VehicleTargetPoint_C::ExecuteUbergraph_Widget_VehicleTargetPoint(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_VehicleTargetPoint.Widget_VehicleTargetPoint_C.ExecuteUbergraph_Widget_VehicleTargetPoint");
 

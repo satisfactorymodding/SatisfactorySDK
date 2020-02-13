@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_GasMask.Attach_GasMask_C.UserConstructionScript
-// ()
-
-void AAttach_GasMask_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_GasMask.Attach_GasMask_C.UserConstructionScript");
-
-	AAttach_GasMask_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_GasMask.Attach_GasMask_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +33,7 @@ void AAttach_GasMask_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Attach_GasMask.Attach_GasMask_C.PlayAttachEffects3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_GasMask_C::PlayAttachEffects3P()
 {
@@ -67,11 +50,11 @@ void AAttach_GasMask_C::PlayAttachEffects3P()
 
 
 // Function Attach_GasMask.Attach_GasMask_C.ExecuteUbergraph_Attach_GasMask
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_GasMask_C::ExecuteUbergraph_Attach_GasMask(int EntryPoint)
+void AAttach_GasMask_C::ExecuteUbergraph_Attach_GasMask(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_GasMask.Attach_GasMask_C.ExecuteUbergraph_Attach_GasMask");
 

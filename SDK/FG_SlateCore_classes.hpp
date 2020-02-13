@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class SlateCore.FontBulkData
-// 0x0098 (0x00C0 - 0x0028)
+// 0x00B8 (0x00E0 - 0x0028)
 class UFontBulkData : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x98];                                      // 0x0028(0x0098) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x0028(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

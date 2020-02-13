@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Vehicle.Widget_Vehicle_C.OnItemAddedOrRemoved
-// ()
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumAddedRemoved                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           NumAddedRemoved                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Vehicle_C::OnItemAddedOrRemoved(class UClass* ItemClass, int NumAddedRemoved)
+void UWidget_Vehicle_C::OnItemAddedOrRemoved(class UClass** ItemClass, int* NumAddedRemoved)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Vehicle.Widget_Vehicle_C.OnItemAddedOrRemoved");
 
@@ -35,7 +35,7 @@ void UWidget_Vehicle_C::OnItemAddedOrRemoved(class UClass* ItemClass, int NumAdd
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.UpdateTransferStatus
-// ()
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Vehicle_C::UpdateTransferStatus()
 {
@@ -52,7 +52,7 @@ void UWidget_Vehicle_C::UpdateTransferStatus()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.GetSelfDrivingText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -73,7 +73,7 @@ struct FText UWidget_Vehicle_C::GetSelfDrivingText()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.GetVehicleHealthPercent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -94,7 +94,7 @@ float UWidget_Vehicle_C::GetVehicleHealthPercent()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.GetCurrentSpeedVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -115,7 +115,7 @@ ESlateVisibility UWidget_Vehicle_C::GetCurrentSpeedVisibility()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.GetCurrentGearText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -136,7 +136,7 @@ struct FText UWidget_Vehicle_C::GetCurrentGearText()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.GetCurrentSpeedinKMHText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -157,7 +157,7 @@ struct FText UWidget_Vehicle_C::GetCurrentSpeedinKMHText()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.GetRPMText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -178,11 +178,11 @@ struct FText UWidget_Vehicle_C::GetRPMText()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.Init
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_WheeledVehicle_C*    Vehicle                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ABP_WheeledVehicle_C**   Vehicle                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Vehicle_C::Init(class ABP_WheeledVehicle_C* Vehicle)
+void UWidget_Vehicle_C::Init(class ABP_WheeledVehicle_C** Vehicle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Vehicle.Widget_Vehicle_C.Init");
 
@@ -198,7 +198,7 @@ void UWidget_Vehicle_C::Init(class ABP_WheeledVehicle_C* Vehicle)
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.StopRecording
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Vehicle_C::StopRecording()
 {
@@ -215,7 +215,7 @@ void UWidget_Vehicle_C::StopRecording()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.StartRecording
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Vehicle_C::StartRecording()
 {
@@ -232,7 +232,7 @@ void UWidget_Vehicle_C::StartRecording()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Vehicle_C::Construct()
 {
@@ -249,7 +249,7 @@ void UWidget_Vehicle_C::Construct()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -271,7 +271,7 @@ void UWidget_Vehicle_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.AutoPilotCheck
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Vehicle_C::AutoPilotCheck()
 {
@@ -288,11 +288,11 @@ void UWidget_Vehicle_C::AutoPilotCheck()
 
 
 // Function Widget_Vehicle.Widget_Vehicle_C.ExecuteUbergraph_Widget_Vehicle
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Vehicle_C::ExecuteUbergraph_Widget_Vehicle(int EntryPoint)
+void UWidget_Vehicle_C::ExecuteUbergraph_Widget_Vehicle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Vehicle.Widget_Vehicle_C.ExecuteUbergraph_Widget_Vehicle");
 

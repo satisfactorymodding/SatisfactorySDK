@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorSquare.Widget_ColorSquare_C.GetBorderColor
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FLinearColor UWidget_ColorSquare_C::GetBorderColor()
 
 
 // Function Widget_ColorSquare.Widget_ColorSquare_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorSquare_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
 {
@@ -51,11 +51,11 @@ void UWidget_ColorSquare_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_5_OnButt
 
 
 // Function Widget_ColorSquare.Widget_ColorSquare_C.ExecuteUbergraph_Widget_ColorSquare
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorSquare_C::ExecuteUbergraph_Widget_ColorSquare(int EntryPoint)
+void UWidget_ColorSquare_C::ExecuteUbergraph_Widget_ColorSquare(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorSquare.Widget_ColorSquare_C.ExecuteUbergraph_Widget_ColorSquare");
 

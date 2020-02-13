@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_RandomLocation.BTT_RandomLocation_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_RandomLocation_C::ReceiveExecuteAI(class AAIController** OwnerControll
 
 
 // Function BTT_RandomLocation.BTT_RandomLocation_C.ExecuteUbergraph_BTT_RandomLocation
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_RandomLocation_C::ExecuteUbergraph_BTT_RandomLocation(int EntryPoint)
+void UBTT_RandomLocation_C::ExecuteUbergraph_BTT_RandomLocation(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_RandomLocation.BTT_RandomLocation_C.ExecuteUbergraph_BTT_RandomLocation");
 

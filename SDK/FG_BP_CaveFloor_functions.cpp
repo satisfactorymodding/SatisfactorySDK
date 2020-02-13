@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CaveFloor.BP_CaveFloor_C.GetEntrenceAndExitIndex
-// ()
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            entrence                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Exit                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,12 +38,12 @@ void ABP_CaveFloor_C::GetEntrenceAndExitIndex(int* entrence, int* Exit)
 
 
 // Function BP_CaveFloor.BP_CaveFloor_C.GetStaticMeshForIndex
-// ()
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UStaticMesh*             NewParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CaveFloor_C::GetStaticMeshForIndex(int Index, class UStaticMesh** NewParam)
+void ABP_CaveFloor_C::GetStaticMeshForIndex(int* Index, class UStaticMesh** NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CaveFloor.BP_CaveFloor_C.GetStaticMeshForIndex");
 
@@ -62,7 +62,7 @@ void ABP_CaveFloor_C::GetStaticMeshForIndex(int Index, class UStaticMesh** NewPa
 
 
 // Function BP_CaveFloor.BP_CaveFloor_C.BuildCaveElement
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_CaveFloor_C::BuildCaveElement()
 {
@@ -79,7 +79,7 @@ void ABP_CaveFloor_C::BuildCaveElement()
 
 
 // Function BP_CaveFloor.BP_CaveFloor_C.UserConstructionScript
-// ()
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_CaveFloor_C::UserConstructionScript()
 {

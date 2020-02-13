@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_PoleConnections.Widget_PoleConnections_C.SetStyle
 struct UWidget_PoleConnections_C_SetStyle_Params
 {
-	bool                                               UseBackground;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              UseBackground;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_PoleConnections.Widget_PoleConnections_C.GetColorAndOpacity_1
@@ -56,7 +56,7 @@ struct UWidget_PoleConnections_C_PreConstruct_Params
 // Function Widget_PoleConnections.Widget_PoleConnections_C.ExecuteUbergraph_Widget_PoleConnections
 struct UWidget_PoleConnections_C_ExecuteUbergraph_Widget_PoleConnections_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

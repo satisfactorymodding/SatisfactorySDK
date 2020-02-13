@@ -30,7 +30,7 @@ public:
 	}
 
 
-	void SetSequencePath(const class FString& Path);
+	void SetSequencePath(class FString* Path);
 	class FString GetSequencePath();
 	void GetProxies(TArray<class FString>* OutProxies);
 };

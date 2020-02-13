@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.UserConstructionScript
-// ()
-
-void ABP_BuildEffect_ConveyorBeltSegment_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.UserConstructionScript");
-
-	ABP_BuildEffect_ConveyorBeltSegment_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.Materialize__FinishedFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBeltSegment_C::Materialize__FinishedFunc()
 {
@@ -47,7 +30,7 @@ void ABP_BuildEffect_ConveyorBeltSegment_C::Materialize__FinishedFunc()
 
 
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.Materialize__UpdateFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBeltSegment_C::Materialize__UpdateFunc()
 {
@@ -64,7 +47,7 @@ void ABP_BuildEffect_ConveyorBeltSegment_C::Materialize__UpdateFunc()
 
 
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.Finalize__FinishedFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBeltSegment_C::Finalize__FinishedFunc()
 {
@@ -81,7 +64,7 @@ void ABP_BuildEffect_ConveyorBeltSegment_C::Finalize__FinishedFunc()
 
 
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.Finalize__UpdateFunc
-// ()
+// (BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBeltSegment_C::Finalize__UpdateFunc()
 {
@@ -98,7 +81,7 @@ void ABP_BuildEffect_ConveyorBeltSegment_C::Finalize__UpdateFunc()
 
 
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.PlayFinishEffect
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBeltSegment_C::PlayFinishEffect()
 {
@@ -115,7 +98,7 @@ void ABP_BuildEffect_ConveyorBeltSegment_C::PlayFinishEffect()
 
 
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.AddMesh
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_BuildEffect_ConveyorBeltSegment_C::AddMesh()
 {
@@ -132,11 +115,11 @@ void ABP_BuildEffect_ConveyorBeltSegment_C::AddMesh()
 
 
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.ExecuteUbergraph_BP_BuildEffect_ConveyorBeltSegment
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BuildEffect_ConveyorBeltSegment_C::ExecuteUbergraph_BP_BuildEffect_ConveyorBeltSegment(int EntryPoint)
+void ABP_BuildEffect_ConveyorBeltSegment_C::ExecuteUbergraph_BP_BuildEffect_ConveyorBeltSegment(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.ExecuteUbergraph_BP_BuildEffect_ConveyorBeltSegment");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.StopEmptyAnim
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPostPayOffSlot_C::StopEmptyAnim()
 {
@@ -30,12 +30,12 @@ void UWidget_TradingPostPayOffSlot_C::StopEmptyAnim()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.DropOntoInventorySlot
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_InventorySlot_C* InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPostPayOffSlot_C::DropOntoInventorySlot(class UWidget_InventorySlot_C* InventorySlot, bool* Result)
+void UWidget_TradingPostPayOffSlot_C::DropOntoInventorySlot(class UWidget_InventorySlot_C** InventorySlot, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.DropOntoInventorySlot");
 
@@ -54,7 +54,7 @@ void UWidget_TradingPostPayOffSlot_C::DropOntoInventorySlot(class UWidget_Invent
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetSlotBackgroundBrush
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -75,7 +75,7 @@ struct FSlateBrush UWidget_TradingPostPayOffSlot_C::GetSlotBackgroundBrush()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetDarkGrayColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -96,7 +96,7 @@ struct FLinearColor UWidget_TradingPostPayOffSlot_C::GetDarkGrayColor()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressbarPercent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -117,7 +117,7 @@ float UWidget_TradingPostPayOffSlot_C::GetProgressbarPercent()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.SetTextboxFormating
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TradingPostPayOffSlot_C::SetTextboxFormating()
 {
@@ -134,7 +134,7 @@ void UWidget_TradingPostPayOffSlot_C::SetTextboxFormating()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetCustomTooltip
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -155,7 +155,7 @@ class UWidget* UWidget_TradingPostPayOffSlot_C::GetCustomTooltip()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetPaidOffSlotVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -176,7 +176,7 @@ ESlateVisibility UWidget_TradingPostPayOffSlot_C::GetPaidOffSlotVisibility()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetProgressbarVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -197,7 +197,7 @@ ESlateVisibility UWidget_TradingPostPayOffSlot_C::GetProgressbarVisibility()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetPaidOffColorFeedback
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -218,7 +218,7 @@ struct FSlateColor UWidget_TradingPostPayOffSlot_C::GetPaidOffColorFeedback()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetPaidOffFeedbackImage
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -239,7 +239,7 @@ ESlateVisibility UWidget_TradingPostPayOffSlot_C::GetPaidOffFeedbackImage()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.OnDrop
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -266,7 +266,7 @@ bool UWidget_TradingPostPayOffSlot_C::OnDrop(struct FGeometry* MyGeometry, struc
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetItemQuotaText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -287,7 +287,7 @@ struct FText UWidget_TradingPostPayOffSlot_C::GetItemQuotaText()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetItemText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -308,7 +308,7 @@ struct FText UWidget_TradingPostPayOffSlot_C::GetItemText()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.GetItemImage
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -329,7 +329,7 @@ struct FSlateBrush UWidget_TradingPostPayOffSlot_C::GetItemImage()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPostPayOffSlot_C::Construct()
 {
@@ -346,11 +346,11 @@ void UWidget_TradingPostPayOffSlot_C::Construct()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.OnSchematicPaidOff
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGSchematicManager*     schematicManager               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGSchematicManager**    schematicManager               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPostPayOffSlot_C::OnSchematicPaidOff(class AFGSchematicManager* schematicManager)
+void UWidget_TradingPostPayOffSlot_C::OnSchematicPaidOff(class AFGSchematicManager** schematicManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.OnSchematicPaidOff");
 
@@ -366,7 +366,7 @@ void UWidget_TradingPostPayOffSlot_C::OnSchematicPaidOff(class AFGSchematicManag
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPostPayOffSlot_C::Destruct()
 {
@@ -383,7 +383,7 @@ void UWidget_TradingPostPayOffSlot_C::Destruct()
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -405,7 +405,7 @@ void UWidget_TradingPostPayOffSlot_C::Tick(struct FGeometry* MyGeometry, float* 
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.OnMouseEnter
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -427,11 +427,11 @@ void UWidget_TradingPostPayOffSlot_C::OnMouseEnter(struct FGeometry* MyGeometry,
 
 
 // Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.ExecuteUbergraph_Widget_TradingPostPayOffSlot
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPostPayOffSlot_C::ExecuteUbergraph_Widget_TradingPostPayOffSlot(int EntryPoint)
+void UWidget_TradingPostPayOffSlot_C::ExecuteUbergraph_Widget_TradingPostPayOffSlot(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPostPayOffSlot.Widget_TradingPostPayOffSlot_C.ExecuteUbergraph_Widget_TradingPostPayOffSlot");
 

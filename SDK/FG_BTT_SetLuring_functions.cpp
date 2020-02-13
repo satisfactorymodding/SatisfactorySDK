@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_SetLuring.BTT_SetLuring_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,11 +35,11 @@ void UBTT_SetLuring_C::ReceiveExecuteAI(class AAIController** OwnerController, c
 
 
 // Function BTT_SetLuring.BTT_SetLuring_C.ExecuteUbergraph_BTT_SetLuring
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_SetLuring_C::ExecuteUbergraph_BTT_SetLuring(int EntryPoint)
+void UBTT_SetLuring_C::ExecuteUbergraph_BTT_SetLuring(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_SetLuring.BTT_SetLuring_C.ExecuteUbergraph_BTT_SetLuring");
 

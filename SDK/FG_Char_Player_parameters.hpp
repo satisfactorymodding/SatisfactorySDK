@@ -14,10 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Char_Player.Char_Player_C.GetActorCompassViewDistance
+struct AChar_Player_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.SetActorCompassViewDistance
+struct AChar_Player_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Char_Player.Char_Player_C.SetActorRepresentationText
 struct AChar_Player_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -105,6 +118,37 @@ struct AChar_Player_C_IsActorStatic_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Char_Player.Char_Player_C.TubeTravelHardCorners
+struct AChar_Player_C_TubeTravelHardCorners_Params
+{
+	float*                                             CurveFloatValue;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.AudioWindDirectionSpeedUpdate
+struct AChar_Player_C_AudioWindDirectionSpeedUpdate_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.SlideVFX
+struct AChar_Player_C_SlideVFX_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.TubeTravelSpeedUpdate
+struct AChar_Player_C_TubeTravelSpeedUpdate_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.SlideSpeedWindUpdate
+struct AChar_Player_C_SlideSpeedWindUpdate_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.SlideVelocityUpdate
+struct AChar_Player_C_SlideVelocityUpdate_Params
+{
+};
+
 // Function Char_Player.Char_Player_C.ToggleCodex
 struct AChar_Player_C_ToggleCodex_Params
 {
@@ -123,13 +167,13 @@ struct AChar_Player_C_ToggleFlashlight_Params
 // Function Char_Player.Char_Player_C.RemovePlayerHUD
 struct AChar_Player_C_RemovePlayerHUD_Params
 {
-	class AFGPlayerController*                         OldController;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGPlayerController**                        OldController;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.SetupPlayerHUD
 struct AChar_Player_C_SetupPlayerHUD_Params
 {
-	class AFGPlayerController*                         PlayerController;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGPlayerController**                        PlayerController;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.HandleFlashlight
@@ -156,7 +200,7 @@ struct AChar_Player_C_UpdateDamageIndicator_Params
 // Function Char_Player.Char_Player_C.PlayDamageVO
 struct AChar_Player_C_PlayDamageVO_Params
 {
-	class UDamageType*                                 Damage_Type;                                              // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UDamageType**                                Damage_Type;                                              // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.PlayDamageCameraShake
@@ -172,7 +216,7 @@ struct AChar_Player_C_ApplyDamagePP_Params
 // Function Char_Player.Char_Player_C.PlayImpactEffectSound
 struct AChar_Player_C_PlayImpactEffectSound_Params
 {
-	class UDamageType*                                 DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UDamageType**                                DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.CalculateOnscreenEffectBlendWeight
@@ -207,45 +251,40 @@ struct AChar_Player_C_TickPlayerNameText_Params
 {
 };
 
-// Function Char_Player.Char_Player_C.UserConstructionScript
-struct AChar_Player_C_UserConstructionScript_Params
-{
-};
-
 // Function Char_Player.Char_Player_C.InpActEvt_OpenCodex_K2Node_InputActionEvent_6
 struct AChar_Player_C_InpActEvt_OpenCodex_K2Node_InputActionEvent_6_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Char_Player.Char_Player_C.InpActEvt_Flashlight_K2Node_InputActionEvent_5
 struct AChar_Player_C_InpActEvt_Flashlight_K2Node_InputActionEvent_5_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function Char_Player.Char_Player_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_4
-struct AChar_Player_C_InpActEvt_PrimaryFire_K2Node_InputActionEvent_4_Params
+// Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_4
+struct AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_4_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function Char_Player.Char_Player_C.InpActEvt_Inventory_K2Node_InputActionEvent_3
-struct AChar_Player_C_InpActEvt_Inventory_K2Node_InputActionEvent_3_Params
+// Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_3
+struct AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_3_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_2
-struct AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_2_Params
+// Function Char_Player.Char_Player_C.InpActEvt_PrimaryFire_K2Node_InputActionEvent_2
+struct AChar_Player_C_InpActEvt_PrimaryFire_K2Node_InputActionEvent_2_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function Char_Player.Char_Player_C.InpActEvt_EmoteWheel_K2Node_InputActionEvent_1
-struct AChar_Player_C_InpActEvt_EmoteWheel_K2Node_InputActionEvent_1_Params
+// Function Char_Player.Char_Player_C.InpActEvt_Inventory_K2Node_InputActionEvent_1
+struct AChar_Player_C_InpActEvt_Inventory_K2Node_InputActionEvent_1_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Char_Player.Char_Player_C.SetFirstPersonMode
@@ -293,11 +332,6 @@ struct AChar_Player_C_ReceiveDied_Params
 {
 };
 
-// Function Char_Player.Char_Player_C.CameraTick
-struct AChar_Player_C_CameraTick_Params
-{
-};
-
 // Function Char_Player.Char_Player_C.PlayPickupEffects
 struct AChar_Player_C_PlayPickupEffects_Params
 {
@@ -313,16 +347,10 @@ struct AChar_Player_C_OnReviveComplete_Params
 {
 };
 
-// Function Char_Player.Char_Player_C.OnLanded
-struct AChar_Player_C_OnLanded_Params
-{
-	struct FHitResult*                                 Hit;                                                      // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
-};
-
 // Function Char_Player.Char_Player_C.ClientSetupPlayerHUD
 struct AChar_Player_C_ClientSetupPlayerHUD_Params
 {
-	class AController*                                 InController;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AController**                                InController;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.ReceiveUnpossessed
@@ -341,38 +369,6 @@ struct AChar_Player_C_OnReceiveRadiationStop_Params
 {
 };
 
-// Function Char_Player.Char_Player_C.ReceivePossessed
-struct AChar_Player_C_ReceivePossessed_Params
-{
-	class AController**                                NewController;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Char_Player.Char_Player_C.ReceiveDestroyed
-struct AChar_Player_C_ReceiveDestroyed_Params
-{
-};
-
-// Function Char_Player.Char_Player_C.TakeDamageEvent
-struct AChar_Player_C_TakeDamageEvent_Params
-{
-	class AActor*                                      damagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              damageAmount;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UDamageType*                                 DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AController*                                 instigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      damageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Char_Player.Char_Player_C.ReceiveBeginPlay
-struct AChar_Player_C_ReceiveBeginPlay_Params
-{
-};
-
-// Function Char_Player.Char_Player_C.ReceiveTick
-struct AChar_Player_C_ReceiveTick_Params
-{
-	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Char_Player.Char_Player_C.Server_PlayClap
 struct AChar_Player_C_Server_PlayClap_Params
 {
@@ -386,25 +382,19 @@ struct AChar_Player_C_Multicast_PlayClap_Params
 // Function Char_Player.Char_Player_C.Server_SetFlashlightOn
 struct AChar_Player_C_Server_SetFlashlightOn_Params
 {
-	bool                                               FlashlightOn;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              FlashlightOn;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.OnDisabledInputGateChanged
 struct AChar_Player_C_OnDisabledInputGateChanged_Params
 {
-	struct FDisabledInputGate*                         NewValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Char_Player.Char_Player_C.AudioTickEvent
-struct AChar_Player_C_AudioTickEvent_Params
-{
-	float                                              AudioTick;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FDisabledInputGate*                         NewValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Char_Player.Char_Player_C.LimitLook
 struct AChar_Player_C_LimitLook_Params
 {
-	bool                                               doLimit;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              doLimit;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.StartCinematic
@@ -419,6 +409,11 @@ struct AChar_Player_C_EndCinematic_Params
 
 // Function Char_Player.Char_Player_C.DisableGravity
 struct AChar_Player_C_DisableGravity_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.CameraTick
+struct AChar_Player_C_CameraTick_Params
 {
 };
 
@@ -445,7 +440,7 @@ struct AChar_Player_C_OnSpawnDeathMarker_Params
 // Function Char_Player.Char_Player_C.ShowEmote
 struct AChar_Player_C_ShowEmote_Params
 {
-	int                                                EmoteIndex;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EmoteIndex;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.SkipIntro
@@ -461,6 +456,18 @@ struct AChar_Player_C_Server_playSignsEmote_Params
 // Function Char_Player.Char_Player_C.Multicast_PlaySignsEmote
 struct AChar_Player_C_Multicast_PlaySignsEmote_Params
 {
+};
+
+// Function Char_Player.Char_Player_C.OnLanded
+struct AChar_Player_C_OnLanded_Params
+{
+	struct FHitResult*                                 Hit;                                                      // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.ReceivePossessed
+struct AChar_Player_C_ReceivePossessed_Params
+{
+	class AController**                                NewController;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.StartIsLookedAt
@@ -484,10 +491,83 @@ struct AChar_Player_C_OnRadiationIntensityUpdated_Params
 	float*                                             radiationImmunity;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Char_Player.Char_Player_C.TickVisuals
+struct AChar_Player_C_TickVisuals_Params
+{
+	float*                                             dt;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.ReceiveDestroyed
+struct AChar_Player_C_ReceiveDestroyed_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.OnSlideStartLocal
+struct AChar_Player_C_OnSlideStartLocal_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.OnSlideEndLocal
+struct AChar_Player_C_OnSlideEndLocal_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.TakeDamageEvent
+struct AChar_Player_C_TakeDamageEvent_Params
+{
+	class AActor**                                     DamagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             damageAmount;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UDamageType**                                DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AController**                                InstigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.OnSlideEndSimulated
+struct AChar_Player_C_OnSlideEndSimulated_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.OnSlideStartSimulated
+struct AChar_Player_C_OnSlideStartSimulated_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.PlayJumpEffects
+struct AChar_Player_C_PlayJumpEffects_Params
+{
+	bool*                                              boostJump;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.ReceiveBeginPlay
+struct AChar_Player_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function Char_Player.Char_Player_C.K2_OnMovementModeChanged
+struct AChar_Player_C_K2_OnMovementModeChanged_Params
+{
+	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     PrevCustomMode;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.AudioTickEvent
+struct AChar_Player_C_AudioTickEvent_Params
+{
+	float*                                             AudioTick;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_Player.Char_Player_C.SetActorRepresentationColor
+struct AChar_Player_C_SetActorRepresentationColor_Params
+{
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Char_Player.Char_Player_C.ExecuteUbergraph_Char_Player
 struct AChar_Player_C_ExecuteUbergraph_Char_Player_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.EventFire__DelegateSignature
@@ -498,7 +578,7 @@ struct AChar_Player_C_EventFire__DelegateSignature_Params
 // Function Char_Player.Char_Player_C.EventScroll__DelegateSignature
 struct AChar_Player_C_EventScroll__DelegateSignature_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Player.Char_Player_C.EventScrollDown__DelegateSignature

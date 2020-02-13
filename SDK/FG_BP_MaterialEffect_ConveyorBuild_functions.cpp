@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MaterialEffect_ConveyorBuild.BP_MaterialEffect_ConveyorBuild_C.PreStarted
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_MaterialEffect_ConveyorBuild_C::PreStarted()
 {
@@ -30,7 +30,7 @@ void UBP_MaterialEffect_ConveyorBuild_C::PreStarted()
 
 
 // Function BP_MaterialEffect_ConveyorBuild.BP_MaterialEffect_ConveyorBuild_C.OnStarted
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_MaterialEffect_ConveyorBuild_C::OnStarted()
 {
@@ -47,11 +47,11 @@ void UBP_MaterialEffect_ConveyorBuild_C::OnStarted()
 
 
 // Function BP_MaterialEffect_ConveyorBuild.BP_MaterialEffect_ConveyorBuild_C.ExecuteUbergraph_BP_MaterialEffect_ConveyorBuild
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MaterialEffect_ConveyorBuild_C::ExecuteUbergraph_BP_MaterialEffect_ConveyorBuild(int EntryPoint)
+void UBP_MaterialEffect_ConveyorBuild_C::ExecuteUbergraph_BP_MaterialEffect_ConveyorBuild(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MaterialEffect_ConveyorBuild.BP_MaterialEffect_ConveyorBuild_C.ExecuteUbergraph_BP_MaterialEffect_ConveyorBuild");
 

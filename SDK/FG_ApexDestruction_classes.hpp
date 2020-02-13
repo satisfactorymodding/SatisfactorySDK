@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class ApexDestruction.DestructibleActor
-// 0x0020 (0x0348 - 0x0328)
+// 0x0020 (0x0350 - 0x0330)
 class ADestructibleActor : public AActor
 {
 public:
-	class UDestructibleComponent*                      DestructibleComponent;                                    // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      bAffectNavigation : 1;                                    // 0x0330(0x0001) (Edit, BlueprintVisible, Config)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnActorFracture;                                          // 0x0338(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class UDestructibleComponent*                      DestructibleComponent;                                    // 0x0330(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      bAffectNavigation : 1;                                    // 0x0338(0x0001) (Edit, BlueprintVisible, Config)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0339(0x0007) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnActorFracture;                                          // 0x0340(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -34,20 +34,20 @@ public:
 
 
 // Class ApexDestruction.DestructibleComponent
-// 0x00E0 (0x07A0 - 0x06C0)
+// 0x00E0 (0x07E0 - 0x0700)
 class UDestructibleComponent : public USkinnedMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x06C0(0x0008) MISSED OFFSET
-	unsigned char                                      bFractureEffectOverride : 1;                              // 0x06C8(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x06C9(0x0007) MISSED OFFSET
-	TArray<struct FFractureEffect>                     FractureEffects;                                          // 0x06D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, EditFixedSize, ZeroConstructor)
-	bool                                               bEnableHardSleeping;                                      // 0x06E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x06E1(0x0003) MISSED OFFSET
-	float                                              LargeChunkThreshold;                                      // 0x06E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x06E8(0x0010) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnComponentFracture;                                      // 0x06F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData04[0x98];                                      // 0x0708(0x0098) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0700(0x0008) MISSED OFFSET
+	unsigned char                                      bFractureEffectOverride : 1;                              // 0x0708(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0709(0x0007) MISSED OFFSET
+	TArray<struct FFractureEffect>                     FractureEffects;                                          // 0x0710(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, EditFixedSize, ZeroConstructor)
+	bool                                               bEnableHardSleeping;                                      // 0x0720(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0721(0x0003) MISSED OFFSET
+	float                                              LargeChunkThreshold;                                      // 0x0724(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0728(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnComponentFracture;                                      // 0x0738(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData04[0x98];                                      // 0x0748(0x0098) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -56,10 +56,10 @@ public:
 	}
 
 
-	void SetDestructibleMesh(class UDestructibleMesh* NewMesh);
+	void SetDestructibleMesh(class UDestructibleMesh** NewMesh);
 	class UDestructibleMesh* GetDestructibleMesh();
-	void ApplyRadiusDamage(float BaseDamage, const struct FVector& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage);
-	void ApplyDamage(float damageAmount, const struct FVector& HitLocation, const struct FVector& ImpulseDir, float ImpulseStrength);
+	void ApplyRadiusDamage(float* BaseDamage, struct FVector* HurtOrigin, float* DamageRadius, float* ImpulseStrength, bool* bFullDamage);
+	void ApplyDamage(float* damageAmount, struct FVector* HitLocation, struct FVector* ImpulseDir, float* ImpulseStrength);
 };
 
 
@@ -89,13 +89,13 @@ public:
 
 
 // Class ApexDestruction.DestructibleMesh
-// 0x00A0 (0x0398 - 0x02F8)
+// 0x00A0 (0x03F0 - 0x0350)
 class UDestructibleMesh : public USkeletalMesh
 {
 public:
-	struct FDestructibleParameters                     DefaultDestructibleParameters;                            // 0x02F8(0x0088) (Edit)
-	TArray<struct FFractureEffect>                     FractureEffects;                                          // 0x0380(0x0010) (Edit, EditFixedSize, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0390(0x0008) MISSED OFFSET
+	struct FDestructibleParameters                     DefaultDestructibleParameters;                            // 0x0350(0x0088) (Edit)
+	TArray<struct FFractureEffect>                     FractureEffects;                                          // 0x03D8(0x0010) (Edit, EditFixedSize, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03E8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

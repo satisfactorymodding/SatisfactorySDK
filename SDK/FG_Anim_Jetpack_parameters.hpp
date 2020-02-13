@@ -33,7 +33,7 @@ struct UAnim_Jetpack_C_BlueprintUpdateAnimation_Params
 // Function Anim_Jetpack.Anim_Jetpack_C.ExecuteUbergraph_Anim_Jetpack
 struct UAnim_Jetpack_C_ExecuteUbergraph_Anim_Jetpack_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

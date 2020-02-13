@@ -30,11 +30,10 @@ public:
 
 
 	void UpdateThreatNearby();
-	void UserConstructionScript();
-	void BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus);
-	void TryRemovePlayer(class AFGCharacterPlayer* inPlayer);
-	void TryAddPlayer(class AFGCharacterPlayer* inPlayer);
-	void ExecuteUbergraph_Controller_CrabHatcher(int EntryPoint);
+	void BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus);
+	void TryRemovePlayer(class AFGCharacterPlayer** inPlayer);
+	void TryAddPlayer(class AFGCharacterPlayer** inPlayer);
+	void ExecuteUbergraph_Controller_CrabHatcher(int* EntryPoint);
 };
 
 

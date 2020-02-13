@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.ShouldForceWarning
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ForceWarning                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   WarningText                    (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          ForceWarning                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  WarningText                    (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TrainWarning_C::ShouldForceWarning(bool ForceWarning, const struct FText& WarningText)
+void UWidget_TrainWarning_C::ShouldForceWarning(bool* ForceWarning, struct FText* WarningText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainWarning.Widget_TrainWarning_C.ShouldForceWarning");
 
@@ -35,7 +35,7 @@ void UWidget_TrainWarning_C::ShouldForceWarning(bool ForceWarning, const struct 
 
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.UpdateWarning
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TrainWarning_C::UpdateWarning()
 {
@@ -52,7 +52,7 @@ void UWidget_TrainWarning_C::UpdateWarning()
 
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.HideWarning
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TrainWarning_C::HideWarning()
 {
@@ -69,11 +69,11 @@ void UWidget_TrainWarning_C::HideWarning()
 
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.ShowWarning
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   WarningText                    (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  WarningText                    (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TrainWarning_C::ShowWarning(const struct FText& WarningText)
+void UWidget_TrainWarning_C::ShowWarning(struct FText* WarningText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainWarning.Widget_TrainWarning_C.ShowWarning");
 
@@ -89,11 +89,11 @@ void UWidget_TrainWarning_C::ShowWarning(const struct FText& WarningText)
 
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.Init
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGTrain*                Train                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGTrain**               Train                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TrainWarning_C::Init(class AFGTrain* Train)
+void UWidget_TrainWarning_C::Init(class AFGTrain** Train)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainWarning.Widget_TrainWarning_C.Init");
 
@@ -109,7 +109,7 @@ void UWidget_TrainWarning_C::Init(class AFGTrain* Train)
 
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.CheckErrors
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_TrainWarning_C::CheckErrors()
 {
@@ -126,7 +126,7 @@ void UWidget_TrainWarning_C::CheckErrors()
 
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TrainWarning_C::Destruct()
 {
@@ -143,11 +143,11 @@ void UWidget_TrainWarning_C::Destruct()
 
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.ExecuteUbergraph_Widget_TrainWarning
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TrainWarning_C::ExecuteUbergraph_Widget_TrainWarning(int EntryPoint)
+void UWidget_TrainWarning_C::ExecuteUbergraph_Widget_TrainWarning(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TrainWarning.Widget_TrainWarning_C.ExecuteUbergraph_Widget_TrainWarning");
 

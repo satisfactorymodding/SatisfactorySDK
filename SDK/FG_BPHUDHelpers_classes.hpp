@@ -27,10 +27,12 @@ public:
 	}
 
 
-	void ShowHideHUD(bool isMenuOpen, class APawn* OwningPawn, class AController* Controller, class UObject* __WorldContext);
-	void PopStackWidget(class AController* instigatingController, class UFGInteractWidget* Stack_Widget, class UObject* __WorldContext);
-	void PushStackWidget(class AController* instigatingController, class UFGInteractWidget* stackWidget, class UObject* __WorldContext);
-	void GetBPHUD(class AController* Controller, class UObject* __WorldContext, class ABP_HUD_C** outHUD);
+	void STATIC_GetDefaultRCO(class APlayerController** Controller, class UObject** __WorldContext, class UBP_RemoteCallObject_C** RCO);
+	void STATIC_FindWidgetOfClass(class UClass** Windget, class UFGGameUI** Target, class UObject** __WorldContext, class UFGInteractWidget** Widget);
+	void STATIC_GetFGHud(class AController** Controller, class UObject** __WorldContext, class AFGHUD** AsFGHUD);
+	void STATIC_ShowHideHUD(bool* isMenuOpen, class APawn** OwningPawn, class AController** Controller, class UObject** __WorldContext);
+	void STATIC_PopStackWidget(class AController** instigatingController, class UFGInteractWidget** Stack_Widget, class UObject** __WorldContext);
+	void STATIC_PushStackWidget(class AController** instigatingController, class UFGInteractWidget** stackWidget, class UObject** __WorldContext);
 };
 
 

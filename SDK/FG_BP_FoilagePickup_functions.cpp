@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_FoilagePickup.BP_FoilagePickup_C.UserConstructionScript
-// ()
-
-void ABP_FoilagePickup_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FoilagePickup.BP_FoilagePickup_C.UserConstructionScript");
-
-	ABP_FoilagePickup_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_FoilagePickup.BP_FoilagePickup_C.PlayPickupEffect
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // class UFGFoliageResourceUserData** foliageUserData                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector*                atLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,11 +35,11 @@ void ABP_FoilagePickup_C::PlayPickupEffect(class UFGFoliageResourceUserData** fo
 
 
 // Function BP_FoilagePickup.BP_FoilagePickup_C.ExecuteUbergraph_BP_FoilagePickup
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FoilagePickup_C::ExecuteUbergraph_BP_FoilagePickup(int EntryPoint)
+void ABP_FoilagePickup_C::ExecuteUbergraph_BP_FoilagePickup(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoilagePickup.BP_FoilagePickup_C.ExecuteUbergraph_BP_FoilagePickup");
 

@@ -17,8 +17,8 @@ namespace SDK
 // Function Widget_TrainWarning.Widget_TrainWarning_C.ShouldForceWarning
 struct UWidget_TrainWarning_C_ShouldForceWarning_Params
 {
-	bool                                               ForceWarning;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       WarningText;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              ForceWarning;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      WarningText;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.UpdateWarning
@@ -34,13 +34,13 @@ struct UWidget_TrainWarning_C_HideWarning_Params
 // Function Widget_TrainWarning.Widget_TrainWarning_C.ShowWarning
 struct UWidget_TrainWarning_C_ShowWarning_Params
 {
-	struct FText                                       WarningText;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      WarningText;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.Init
 struct UWidget_TrainWarning_C_Init_Params
 {
-	class AFGTrain*                                    Train;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGTrain**                                   Train;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TrainWarning.Widget_TrainWarning_C.CheckErrors
@@ -56,7 +56,7 @@ struct UWidget_TrainWarning_C_Destruct_Params
 // Function Widget_TrainWarning.Widget_TrainWarning_C.ExecuteUbergraph_Widget_TrainWarning
 struct UWidget_TrainWarning_C_ExecuteUbergraph_Widget_TrainWarning_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Rebargun.Anim_Rebargun_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Rebargun_AnimGraphNode_BlendListByBool_3B26FA7D4EDFCEFAB4460CA93417414C
-// ()
+// (BlueprintEvent)
 
 void UAnim_Rebargun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Rebargun_AnimGraphNode_BlendListByBool_3B26FA7D4EDFCEFAB4460CA93417414C()
 {
@@ -30,7 +30,7 @@ void UAnim_Rebargun_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Rebargun
 
 
 // Function Anim_Rebargun.Anim_Rebargun_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +50,7 @@ void UAnim_Rebargun_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_Rebargun.Anim_Rebargun_C.AnimNotify_RebargunIsLoaded_Notify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Rebargun_C::AnimNotify_RebargunIsLoaded_Notify()
 {
@@ -67,11 +67,11 @@ void UAnim_Rebargun_C::AnimNotify_RebargunIsLoaded_Notify()
 
 
 // Function Anim_Rebargun.Anim_Rebargun_C.ExecuteUbergraph_Anim_Rebargun
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Rebargun_C::ExecuteUbergraph_Anim_Rebargun(int EntryPoint)
+void UAnim_Rebargun_C::ExecuteUbergraph_Anim_Rebargun(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Rebargun.Anim_Rebargun_C.ExecuteUbergraph_Anim_Rebargun");
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_EquipmentDivider.Widget_EquipmentDivider_C
-// 0x0000 (0x0208 - 0x0208)
+// 0x0000 (0x0230 - 0x0230)
 class UWidget_EquipmentDivider_C : public UUserWidget
 {
 public:

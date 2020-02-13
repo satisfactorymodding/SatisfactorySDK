@@ -12,14 +12,34 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_GasPillar_01.BP_GasPillar_01_C.UserConstructionScript
-// ()
+// Function BP_GasPillar_01.BP_GasPillar_01_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
 
-void ABP_GasPillar_01_C::UserConstructionScript()
+void ABP_GasPillar_01_C::ReceiveDestroyed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar_01.BP_GasPillar_01_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar_01.BP_GasPillar_01_C.ReceiveDestroyed");
 
-	ABP_GasPillar_01_C_UserConstructionScript_Params params;
+	ABP_GasPillar_01_C_ReceiveDestroyed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GasPillar_01.BP_GasPillar_01_C.ExecuteUbergraph_BP_GasPillar_01
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_GasPillar_01_C::ExecuteUbergraph_BP_GasPillar_01(int* EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GasPillar_01.BP_GasPillar_01_C.ExecuteUbergraph_BP_GasPillar_01");
+
+	ABP_GasPillar_01_C_ExecuteUbergraph_BP_GasPillar_01_Params params;
+	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 

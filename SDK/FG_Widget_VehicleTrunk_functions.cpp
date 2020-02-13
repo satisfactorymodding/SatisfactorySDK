@@ -12,8 +12,25 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.UpdateRelevantClasses
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_VehicleTrunk_C::UpdateRelevantClasses()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.UpdateRelevantClasses");
+
+	UWidget_VehicleTrunk_C_UpdateRelevantClasses_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.OnPreviewKeyDown
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -38,7 +55,7 @@ struct FEventReply UWidget_VehicleTrunk_C::OnPreviewKeyDown(struct FGeometry* My
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.SetTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::SetTitle()
 {
@@ -55,7 +72,7 @@ void UWidget_VehicleTrunk_C::SetTitle()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.InitCallbacks
-// ()
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::InitCallbacks()
 {
@@ -72,7 +89,7 @@ void UWidget_VehicleTrunk_C::InitCallbacks()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -96,7 +113,7 @@ void UWidget_VehicleTrunk_C::DropInventorySlotStack(class UWidget_InventorySlot_
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.SetWindowAlignment
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::SetWindowAlignment()
 {
@@ -113,7 +130,7 @@ void UWidget_VehicleTrunk_C::SetWindowAlignment()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.CloseVehicle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::CloseVehicle()
 {
@@ -130,7 +147,7 @@ void UWidget_VehicleTrunk_C::CloseVehicle()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::Cleanup()
 {
@@ -147,7 +164,7 @@ void UWidget_VehicleTrunk_C::Cleanup()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::Destruct()
 {
@@ -164,7 +181,7 @@ void UWidget_VehicleTrunk_C::Destruct()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::Init()
 {
@@ -181,7 +198,7 @@ void UWidget_VehicleTrunk_C::Init()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::Construct()
 {
@@ -198,7 +215,7 @@ void UWidget_VehicleTrunk_C::Construct()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.GrabAllFromVehicleStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::GrabAllFromVehicleStorage()
 {
@@ -215,7 +232,7 @@ void UWidget_VehicleTrunk_C::GrabAllFromVehicleStorage()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.StoreAllInVehicleStorage
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::StoreAllInVehicleStorage()
 {
@@ -232,7 +249,7 @@ void UWidget_VehicleTrunk_C::StoreAllInVehicleStorage()
 
 
 // Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_VehicleTrunk_C::BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -248,12 +265,54 @@ void UWidget_VehicleTrunk_C::BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_On
 }
 
 
-// Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.ExecuteUbergraph_Widget_VehicleTrunk
-// ()
+// Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_VehicleTrunk_C::ExecuteUbergraph_Widget_VehicleTrunk(int EntryPoint)
+void UWidget_VehicleTrunk_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature(int* ButtonIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature");
+
+	UWidget_VehicleTrunk_C_BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_1_OnTabButtonClicked__DelegateSignature_Params params;
+	params.ButtonIndex = ButtonIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.BndEvt__mManualManufacturerWidget_K2Node_ComponentBoundEvent_2_OnRelevantClassesUpdated__DelegateSignature
+// (HasOutParms, BlueprintEvent)
+// Parameters:
+// TArray<class UClass*>          relevantClasses                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UWidget_VehicleTrunk_C::BndEvt__mManualManufacturerWidget_K2Node_ComponentBoundEvent_2_OnRelevantClassesUpdated__DelegateSignature(TArray<class UClass*>* relevantClasses)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.BndEvt__mManualManufacturerWidget_K2Node_ComponentBoundEvent_2_OnRelevantClassesUpdated__DelegateSignature");
+
+	UWidget_VehicleTrunk_C_BndEvt__mManualManufacturerWidget_K2Node_ComponentBoundEvent_2_OnRelevantClassesUpdated__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (relevantClasses != nullptr)
+		*relevantClasses = params.relevantClasses;
+}
+
+
+// Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.ExecuteUbergraph_Widget_VehicleTrunk
+// (Final)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_VehicleTrunk_C::ExecuteUbergraph_Widget_VehicleTrunk(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_VehicleTrunk.Widget_VehicleTrunk_C.ExecuteUbergraph_Widget_VehicleTrunk");
 

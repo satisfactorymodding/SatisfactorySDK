@@ -27,7 +27,7 @@ struct UWidget_ResourceScanner_C_Destruct_Params
 // Function Widget_ResourceScanner.Widget_ResourceScanner_C.ExecuteUbergraph_Widget_ResourceScanner
 struct UWidget_ResourceScanner_C_ExecuteUbergraph_Widget_ResourceScanner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

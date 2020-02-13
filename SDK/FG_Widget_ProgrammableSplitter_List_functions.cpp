@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ProgrammableSplitter_List.Widget_ProgrammableSplitter_List_C.GenerateDescriptorList
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGBuildableSplitterSmart* SmartSplitter                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGBuildableSplitterSmart** SmartSplitter                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ProgrammableSplitter_List_C::GenerateDescriptorList(class AFGBuildableSplitterSmart* SmartSplitter)
+void UWidget_ProgrammableSplitter_List_C::GenerateDescriptorList(class AFGBuildableSplitterSmart** SmartSplitter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgrammableSplitter_List.Widget_ProgrammableSplitter_List_C.GenerateDescriptorList");
 
@@ -33,12 +33,12 @@ void UWidget_ProgrammableSplitter_List_C::GenerateDescriptorList(class AFGBuilda
 
 
 // Function Widget_ProgrammableSplitter_List.Widget_ProgrammableSplitter_List_C.GetSelectedDescriptor
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ProgrammableSplitter_List_C::GetSelectedDescriptor(int ButtonIndex, class UWidget_ListButton_C* Button)
+void UWidget_ProgrammableSplitter_List_C::GetSelectedDescriptor(int* ButtonIndex, class UWidget_ListButton_C** Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgrammableSplitter_List.Widget_ProgrammableSplitter_List_C.GetSelectedDescriptor");
 
@@ -55,11 +55,11 @@ void UWidget_ProgrammableSplitter_List_C::GetSelectedDescriptor(int ButtonIndex,
 
 
 // Function Widget_ProgrammableSplitter_List.Widget_ProgrammableSplitter_List_C.ExecuteUbergraph_Widget_ProgrammableSplitter_List
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ProgrammableSplitter_List_C::ExecuteUbergraph_Widget_ProgrammableSplitter_List(int EntryPoint)
+void UWidget_ProgrammableSplitter_List_C::ExecuteUbergraph_Widget_ProgrammableSplitter_List(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgrammableSplitter_List.Widget_ProgrammableSplitter_List_C.ExecuteUbergraph_Widget_ProgrammableSplitter_List");
 
@@ -75,11 +75,11 @@ void UWidget_ProgrammableSplitter_List_C::ExecuteUbergraph_Widget_ProgrammableSp
 
 
 // Function Widget_ProgrammableSplitter_List.Widget_ProgrammableSplitter_List_C.onSelectionChanged__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Descriptor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Descriptor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ProgrammableSplitter_List_C::onSelectionChanged__DelegateSignature(class UClass* Descriptor)
+void UWidget_ProgrammableSplitter_List_C::onSelectionChanged__DelegateSignature(class UClass** Descriptor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ProgrammableSplitter_List.Widget_ProgrammableSplitter_List_C.onSelectionChanged__DelegateSignature");
 

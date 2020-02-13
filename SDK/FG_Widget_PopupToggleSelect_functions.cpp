@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.SetOptionalTextElements
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText*                  Title                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText*                  Desc                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -35,7 +35,7 @@ void UWidget_PopupToggleSelect_C::SetOptionalTextElements(struct FText* Title, s
 
 
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.GetShouldOkayBeEnabled
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -56,7 +56,7 @@ bool UWidget_PopupToggleSelect_C::GetShouldOkayBeEnabled()
 
 
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.SetInstigatorAndInitialize
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject**                Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -76,11 +76,11 @@ void UWidget_PopupToggleSelect_C::SetInstigatorAndInitialize(class UObject** Ins
 
 
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.OnChildSelected
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            ChildIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ChildIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PopupToggleSelect_C::OnChildSelected(int ChildIndex)
+void UWidget_PopupToggleSelect_C::OnChildSelected(int* ChildIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.OnChildSelected");
 
@@ -96,7 +96,7 @@ void UWidget_PopupToggleSelect_C::OnChildSelected(int ChildIndex)
 
 
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.NotifyPopupConfirmed
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PopupToggleSelect_C::NotifyPopupConfirmed()
 {
@@ -113,7 +113,7 @@ void UWidget_PopupToggleSelect_C::NotifyPopupConfirmed()
 
 
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.NotifyPopupCanceled
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PopupToggleSelect_C::NotifyPopupCanceled()
 {
@@ -130,11 +130,11 @@ void UWidget_PopupToggleSelect_C::NotifyPopupCanceled()
 
 
 // Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.ExecuteUbergraph_Widget_PopupToggleSelect
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PopupToggleSelect_C::ExecuteUbergraph_Widget_PopupToggleSelect(int EntryPoint)
+void UWidget_PopupToggleSelect_C::ExecuteUbergraph_Widget_PopupToggleSelect(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PopupToggleSelect.Widget_PopupToggleSelect_C.ExecuteUbergraph_Widget_PopupToggleSelect");
 

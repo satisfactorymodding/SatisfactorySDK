@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_PowerCrystalShard_4.Recipe_PowerCrystalShard_3_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_PowerCrystalShard_3_C : public UFGRecipe
 {
 public:

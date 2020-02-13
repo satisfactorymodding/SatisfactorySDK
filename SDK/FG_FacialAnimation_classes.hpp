@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class FacialAnimation.AudioCurveSourceComponent
-// 0x0040 (0x0690 - 0x0650)
+// 0x0040 (0x0790 - 0x0750)
 class UAudioCurveSourceComponent : public UAudioComponent
 {
 public:
-	struct FName                                       CurveSourceBindingName;                                   // 0x0650(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              CurveSyncOffset;                                          // 0x0658(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x34];                                      // 0x065C(0x0034) MISSED OFFSET
+	struct FName                                       CurveSourceBindingName;                                   // 0x0750(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CurveSyncOffset;                                          // 0x0758(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x34];                                      // 0x075C(0x0034) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

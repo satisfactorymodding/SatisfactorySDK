@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_ResourceMiner.Anim_ResourceMiner_C.AnimNotify_MineComplete
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_ResourceMiner_C::AnimNotify_MineComplete()
 {
@@ -30,7 +30,7 @@ void UAnim_ResourceMiner_C::AnimNotify_MineComplete()
 
 
 // Function Anim_ResourceMiner.Anim_ResourceMiner_C.AnimNotify_StopMining
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_ResourceMiner_C::AnimNotify_StopMining()
 {
@@ -47,7 +47,7 @@ void UAnim_ResourceMiner_C::AnimNotify_StopMining()
 
 
 // Function Anim_ResourceMiner.Anim_ResourceMiner_C.AnimNotify_MineVfx
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_ResourceMiner_C::AnimNotify_MineVfx()
 {
@@ -64,7 +64,7 @@ void UAnim_ResourceMiner_C::AnimNotify_MineVfx()
 
 
 // Function Anim_ResourceMiner.Anim_ResourceMiner_C.AnimNotify_StartCameraShake
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_ResourceMiner_C::AnimNotify_StartCameraShake()
 {
@@ -81,7 +81,7 @@ void UAnim_ResourceMiner_C::AnimNotify_StartCameraShake()
 
 
 // Function Anim_ResourceMiner.Anim_ResourceMiner_C.AnimNotify_PickRingSound
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_ResourceMiner_C::AnimNotify_PickRingSound()
 {
@@ -98,7 +98,7 @@ void UAnim_ResourceMiner_C::AnimNotify_PickRingSound()
 
 
 // Function Anim_ResourceMiner.Anim_ResourceMiner_C.AnimNotify_SecondMineVfx
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_ResourceMiner_C::AnimNotify_SecondMineVfx()
 {
@@ -115,11 +115,11 @@ void UAnim_ResourceMiner_C::AnimNotify_SecondMineVfx()
 
 
 // Function Anim_ResourceMiner.Anim_ResourceMiner_C.ExecuteUbergraph_Anim_ResourceMiner
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_ResourceMiner_C::ExecuteUbergraph_Anim_ResourceMiner(int EntryPoint)
+void UAnim_ResourceMiner_C::ExecuteUbergraph_Anim_ResourceMiner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_ResourceMiner.Anim_ResourceMiner_C.ExecuteUbergraph_Anim_ResourceMiner");
 

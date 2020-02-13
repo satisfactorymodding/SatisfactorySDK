@@ -52,7 +52,7 @@ struct UWidget_TitleButton_DarkMode_C_BndEvt__mButton_K2Node_ComponentBoundEvent
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.ExecuteUbergraph_Widget_TitleButton_DarkMode
 struct UWidget_TitleButton_DarkMode_C_ExecuteUbergraph_Widget_TitleButton_DarkMode_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.OnReleased__DelegateSignature

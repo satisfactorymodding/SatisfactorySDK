@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PopupDefaultText.Widget_PopupDefaultText_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PopupDefaultText_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_PopupDefaultText_C::Construct()
 
 
 // Function Widget_PopupDefaultText.Widget_PopupDefaultText_C.ExecuteUbergraph_Widget_PopupDefaultText
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PopupDefaultText_C::ExecuteUbergraph_Widget_PopupDefaultText(int EntryPoint)
+void UWidget_PopupDefaultText_C::ExecuteUbergraph_Widget_PopupDefaultText(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PopupDefaultText.Widget_PopupDefaultText_C.ExecuteUbergraph_Widget_PopupDefaultText");
 

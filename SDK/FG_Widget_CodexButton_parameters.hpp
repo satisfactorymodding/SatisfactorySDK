@@ -54,7 +54,7 @@ struct UWidget_CodexButton_C_Clicked_Params
 // Function Widget_CodexButton.Widget_CodexButton_C.ExecuteUbergraph_Widget_CodexButton
 struct UWidget_CodexButton_C_ExecuteUbergraph_Widget_CodexButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_CodexButton.Widget_CodexButton_C.OnReleased__DelegateSignature
@@ -70,7 +70,7 @@ struct UWidget_CodexButton_C_OnPressed__DelegateSignature_Params
 // Function Widget_CodexButton.Widget_CodexButton_C.OnClicked__DelegateSignature
 struct UWidget_CodexButton_C_OnClicked__DelegateSignature_Params
 {
-	class UWidget_CodexButton_C*                       ButtonPressed;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_CodexButton_C**                      ButtonPressed;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 }

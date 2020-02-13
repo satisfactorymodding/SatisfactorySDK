@@ -17,16 +17,16 @@ namespace SDK
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.CompressValue
 struct UWidget_ColorGun_ColorPicker_C_CompressValue_Params
 {
-	float                                              Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              MinValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             MinValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Out_Value;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.ConvertColorToPreviewColor
 struct UWidget_ColorGun_ColorPicker_C_ConvertColorToPreviewColor_Params
 {
-	struct FLinearColor                                InputColor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              MinValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               InputColor;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             MinValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                OutputColor;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -48,19 +48,19 @@ struct UWidget_ColorGun_ColorPicker_C_Construct_Params
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotClicked
 struct UWidget_ColorGun_ColorPicker_C_OnSlotClicked_Params
 {
-	class UWidget_ColorPicker_Slot_C*                  Slot;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_ColorPicker_Slot_C**                 Slot;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotHovered
 struct UWidget_ColorGun_ColorPicker_C_OnSlotHovered_Params
 {
-	class UWidget_ColorPicker_Slot_C*                  Slot;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_ColorPicker_Slot_C**                 Slot;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotUnhovered
 struct UWidget_ColorGun_ColorPicker_C_OnSlotUnhovered_Params
 {
-	class UWidget_ColorPicker_Slot_C*                  Slot;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_ColorPicker_Slot_C**                 Slot;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
@@ -76,20 +76,20 @@ struct UWidget_ColorGun_ColorPicker_C_BndEvt__mCancel_K2Node_ComponentBoundEvent
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnSlotEditClicked
 struct UWidget_ColorGun_ColorPicker_C_OnSlotEditClicked_Params
 {
-	class UWidget_ColorPicker_Slot_C*                  Slot;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_ColorPicker_Slot_C**                 Slot;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnUpdatePreset
 struct UWidget_ColorGun_ColorPicker_C_OnUpdatePreset_Params
 {
-	struct FLinearColor                                PrimaryColor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                SecondaryColor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               PrimaryColor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               SecondaryColor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.ExecuteUbergraph_Widget_ColorGun_ColorPicker
 struct UWidget_ColorGun_ColorPicker_C_ExecuteUbergraph_Widget_ColorGun_ColorPicker_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ColorGun_ColorPicker.Widget_ColorGun_ColorPicker_C.OnCancel__DelegateSignature

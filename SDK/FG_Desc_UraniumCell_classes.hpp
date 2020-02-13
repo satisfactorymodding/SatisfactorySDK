@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Desc_UraniumCell.Desc_UraniumCell_C
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01B0 - 0x01B0)
 class UDesc_UraniumCell_C : public UFGResourceDescriptor
 {
 public:

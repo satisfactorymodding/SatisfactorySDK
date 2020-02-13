@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Truck.Anim_Truck_C.ExecuteUbergraph_Anim_Truck
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Truck_C::ExecuteUbergraph_Anim_Truck(int EntryPoint)
+void UAnim_Truck_C::ExecuteUbergraph_Anim_Truck(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Truck.Anim_Truck_C.ExecuteUbergraph_Anim_Truck");
 

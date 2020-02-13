@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SchematicList.Widget_SchematicList_C.GetTradingPostWidget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UWidget_SchematicList_C::GetTradingPostWidget()
 {
@@ -30,12 +30,12 @@ void UWidget_SchematicList_C::GetTradingPostWidget()
 
 
 // Function Widget_SchematicList.Widget_SchematicList_C.PopulateSchematicForTier
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            inTier                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           inTier                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UClass*>          schematicsInRing               (Parm, OutParm, ZeroConstructor)
 
-void UWidget_SchematicList_C::PopulateSchematicForTier(int inTier, TArray<class UClass*>* schematicsInRing)
+void UWidget_SchematicList_C::PopulateSchematicForTier(int* inTier, TArray<class UClass*>* schematicsInRing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicList.Widget_SchematicList_C.PopulateSchematicForTier");
 
@@ -54,7 +54,7 @@ void UWidget_SchematicList_C::PopulateSchematicForTier(int inTier, TArray<class 
 
 
 // Function Widget_SchematicList.Widget_SchematicList_C.CreateSchematicButtons
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SchematicList_C::CreateSchematicButtons()
 {
@@ -71,7 +71,7 @@ void UWidget_SchematicList_C::CreateSchematicButtons()
 
 
 // Function Widget_SchematicList.Widget_SchematicList_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SchematicList_C::Construct()
 {
@@ -88,7 +88,7 @@ void UWidget_SchematicList_C::Construct()
 
 
 // Function Widget_SchematicList.Widget_SchematicList_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SchematicList_C::Destruct()
 {
@@ -105,11 +105,11 @@ void UWidget_SchematicList_C::Destruct()
 
 
 // Function Widget_SchematicList.Widget_SchematicList_C.ExecuteUbergraph_Widget_SchematicList
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SchematicList_C::ExecuteUbergraph_Widget_SchematicList(int EntryPoint)
+void UWidget_SchematicList_C::ExecuteUbergraph_Widget_SchematicList(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicList.Widget_SchematicList_C.ExecuteUbergraph_Widget_SchematicList");
 

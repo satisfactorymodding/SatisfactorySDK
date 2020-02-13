@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.CalculateValues
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::CalculateValues()
 {
@@ -30,7 +30,7 @@ void UAnim_Tradingpost_C::CalculateValues()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Tradingpost_AnimGraphNode_TransitionResult_22EEA86B4A2F634DDF22FCA3B594EEF4
-// ()
+// (BlueprintEvent)
 
 void UAnim_Tradingpost_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Tradingpost_AnimGraphNode_TransitionResult_22EEA86B4A2F634DDF22FCA3B594EEF4()
 {
@@ -47,7 +47,7 @@ void UAnim_Tradingpost_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Tradi
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,7 +67,7 @@ void UAnim_Tradingpost_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_SpawnExhaustVfx_01
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_SpawnExhaustVfx_01()
 {
@@ -84,7 +84,7 @@ void UAnim_Tradingpost_C::AnimNotify_SpawnExhaustVfx_01()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_SpawnExhaustVfx_02
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_SpawnExhaustVfx_02()
 {
@@ -101,7 +101,7 @@ void UAnim_Tradingpost_C::AnimNotify_SpawnExhaustVfx_02()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_SpawnExhaustVfx_03
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_SpawnExhaustVfx_03()
 {
@@ -118,7 +118,7 @@ void UAnim_Tradingpost_C::AnimNotify_SpawnExhaustVfx_03()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_SpawnExhaustVfx_04
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_SpawnExhaustVfx_04()
 {
@@ -135,7 +135,7 @@ void UAnim_Tradingpost_C::AnimNotify_SpawnExhaustVfx_04()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_SpawnThrustVfx_01
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_SpawnThrustVfx_01()
 {
@@ -152,7 +152,7 @@ void UAnim_Tradingpost_C::AnimNotify_SpawnThrustVfx_01()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_SpawnThrustVfx_02
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_SpawnThrustVfx_02()
 {
@@ -169,7 +169,7 @@ void UAnim_Tradingpost_C::AnimNotify_SpawnThrustVfx_02()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_ShipLeftTakeoffNotify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_ShipLeftTakeoffNotify()
 {
@@ -186,7 +186,7 @@ void UAnim_Tradingpost_C::AnimNotify_ShipLeftTakeoffNotify()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_StopThrustVfx_01
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_StopThrustVfx_01()
 {
@@ -203,7 +203,7 @@ void UAnim_Tradingpost_C::AnimNotify_StopThrustVfx_01()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_StopThrustVfx_02
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_StopThrustVfx_02()
 {
@@ -220,7 +220,7 @@ void UAnim_Tradingpost_C::AnimNotify_StopThrustVfx_02()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_StopThrustVfx_04
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_StopThrustVfx_04()
 {
@@ -237,7 +237,7 @@ void UAnim_Tradingpost_C::AnimNotify_StopThrustVfx_04()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_StopThrustVfx_03
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_StopThrustVfx_03()
 {
@@ -254,7 +254,7 @@ void UAnim_Tradingpost_C::AnimNotify_StopThrustVfx_03()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_StopExhaustVfx_01
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_StopExhaustVfx_01()
 {
@@ -271,7 +271,7 @@ void UAnim_Tradingpost_C::AnimNotify_StopExhaustVfx_01()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_StopExhaustVfx_02
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_StopExhaustVfx_02()
 {
@@ -288,7 +288,7 @@ void UAnim_Tradingpost_C::AnimNotify_StopExhaustVfx_02()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_StopExhaustVfx_03
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_StopExhaustVfx_03()
 {
@@ -305,7 +305,7 @@ void UAnim_Tradingpost_C::AnimNotify_StopExhaustVfx_03()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_StopExhaustVfx_04
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_StopExhaustVfx_04()
 {
@@ -322,7 +322,7 @@ void UAnim_Tradingpost_C::AnimNotify_StopExhaustVfx_04()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.BlueprintInitializeAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UAnim_Tradingpost_C::BlueprintInitializeAnimation()
 {
@@ -339,7 +339,7 @@ void UAnim_Tradingpost_C::BlueprintInitializeAnimation()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.AnimNotify_OnInitialLand
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Tradingpost_C::AnimNotify_OnInitialLand()
 {
@@ -356,11 +356,11 @@ void UAnim_Tradingpost_C::AnimNotify_OnInitialLand()
 
 
 // Function Anim_Tradingpost.Anim_Tradingpost_C.ExecuteUbergraph_Anim_Tradingpost
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Tradingpost_C::ExecuteUbergraph_Anim_Tradingpost(int EntryPoint)
+void UAnim_Tradingpost_C::ExecuteUbergraph_Anim_Tradingpost(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Tradingpost.Anim_Tradingpost_C.ExecuteUbergraph_Anim_Tradingpost");
 

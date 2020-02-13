@@ -34,7 +34,7 @@ public:
 
 	void ReceiveTick(class AActor** OwnerActor, float* DeltaSeconds);
 	void ReceiveActivationAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTS_IsEnemyInRange(int EntryPoint);
+	void ExecuteUbergraph_BTS_IsEnemyInRange(int* EntryPoint);
 };
 
 

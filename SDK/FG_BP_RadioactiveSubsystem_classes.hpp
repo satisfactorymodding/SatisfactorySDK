@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RadioactiveSubsystem.BP_RadioactiveSubsystem_C
-// 0x0000 (0x03C8 - 0x03C8)
+// 0x0000 (0x0400 - 0x0400)
 class ABP_RadioactiveSubsystem_C : public AFGRadioactivitySubsystem
 {
 public:

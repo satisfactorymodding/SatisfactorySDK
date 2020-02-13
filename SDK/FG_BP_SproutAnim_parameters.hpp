@@ -22,7 +22,7 @@ struct UBP_SproutAnim_C_BlueprintInitializeAnimation_Params
 // Function BP_SproutAnim.BP_SproutAnim_C.ExecuteUbergraph_BP_SproutAnim
 struct UBP_SproutAnim_C_ExecuteUbergraph_BP_SproutAnim_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

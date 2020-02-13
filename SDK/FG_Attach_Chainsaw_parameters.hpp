@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_Chainsaw.Attach_Chainsaw_C.UserConstructionScript
-struct AAttach_Chainsaw_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_Chainsaw.Attach_Chainsaw_C.OnAttachmentUseStateUpdated
 struct AAttach_Chainsaw_C_OnAttachmentUseStateUpdated_Params
 {
@@ -38,7 +33,7 @@ struct AAttach_Chainsaw_C_PlayDetachEffects3P_Params
 // Function Attach_Chainsaw.Attach_Chainsaw_C.ExecuteUbergraph_Attach_Chainsaw
 struct AAttach_Chainsaw_C_ExecuteUbergraph_Attach_Chainsaw_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

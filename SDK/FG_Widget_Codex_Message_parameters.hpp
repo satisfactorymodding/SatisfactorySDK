@@ -22,7 +22,7 @@ struct UWidget_Codex_Message_C_ClearMessage_Params
 // Function Widget_Codex_Message.Widget_Codex_Message_C.GenerateAudioMessage
 struct UWidget_Codex_Message_C_GenerateAudioMessage_Params
 {
-	class UClass*                                      inClass;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     inClass;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Text;                                                     // (Parm, OutParm)
 };
 
@@ -51,7 +51,7 @@ struct UWidget_Codex_Message_C_Construct_Params
 // Function Widget_Codex_Message.Widget_Codex_Message_C.AddContent
 struct UWidget_Codex_Message_C_AddContent_Params
 {
-	class UClass*                                      contentClass;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     contentClass;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Codex_Message.Widget_Codex_Message_C.BndEvt__mScrollButton_K2Node_ComponentBoundEvent_40_OnClicked__DelegateSignature
@@ -67,7 +67,7 @@ struct UWidget_Codex_Message_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnB
 // Function Widget_Codex_Message.Widget_Codex_Message_C.ExecuteUbergraph_Widget_Codex_Message
 struct UWidget_Codex_Message_C_ExecuteUbergraph_Widget_Codex_Message_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

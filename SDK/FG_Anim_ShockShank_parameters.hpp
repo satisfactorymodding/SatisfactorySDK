@@ -22,7 +22,7 @@ struct UAnim_ShockShank_C_AnimNotify_Notify_ShockShankAttack_Params
 // Function Anim_ShockShank.Anim_ShockShank_C.ExecuteUbergraph_Anim_ShockShank
 struct UAnim_ShockShank_C_ExecuteUbergraph_Anim_ShockShank_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

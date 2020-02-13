@@ -12,29 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_Tooltip.Widget_Tooltip_C.GetColorAndOpacity_1
-// ()
-// Parameters:
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FLinearColor UWidget_Tooltip_C::GetColorAndOpacity_1()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_Tooltip.Widget_Tooltip_C.GetColorAndOpacity_1");
-
-	UWidget_Tooltip_C_GetColorAndOpacity_1_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Widget_Tooltip.Widget_Tooltip_C.GetItemDescription
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +34,7 @@ struct FText UWidget_Tooltip_C::GetItemDescription()
 
 
 // Function Widget_Tooltip.Widget_Tooltip_C.GetItemName
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -76,7 +55,7 @@ struct FText UWidget_Tooltip_C::GetItemName()
 
 
 // Function Widget_Tooltip.Widget_Tooltip_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Tooltip_C::Construct()
 {
@@ -93,11 +72,11 @@ void UWidget_Tooltip_C::Construct()
 
 
 // Function Widget_Tooltip.Widget_Tooltip_C.ExecuteUbergraph_Widget_Tooltip
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Tooltip_C::ExecuteUbergraph_Widget_Tooltip(int EntryPoint)
+void UWidget_Tooltip_C::ExecuteUbergraph_Widget_Tooltip(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Tooltip.Widget_Tooltip_C.ExecuteUbergraph_Widget_Tooltip");
 

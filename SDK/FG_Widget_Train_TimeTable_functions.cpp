@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.SetCurrentStop
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Train_TimeTable_Rule_C* RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Train_TimeTable_Rule_C** RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::SetCurrentStop(class UWidget_Train_TimeTable_Rule_C* RuleWidget)
+void UWidget_Train_TimeTable_C::SetCurrentStop(class UWidget_Train_TimeTable_Rule_C** RuleWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.SetCurrentStop");
 
@@ -33,7 +33,7 @@ void UWidget_Train_TimeTable_C::SetCurrentStop(class UWidget_Train_TimeTable_Rul
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.ShowApplyChangesPrompt
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::ShowApplyChangesPrompt()
 {
@@ -50,7 +50,7 @@ void UWidget_Train_TimeTable_C::ShowApplyChangesPrompt()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.CloseAvailableStationsWidget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::CloseAvailableStationsWidget()
 {
@@ -67,12 +67,12 @@ void UWidget_Train_TimeTable_C::CloseAvailableStationsWidget()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.MoveRule
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Train_TimeTable_Rule_C* RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           MoveDown                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_Train_TimeTable_Rule_C** RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool*                          MoveDown                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::MoveRule(class UWidget_Train_TimeTable_Rule_C* RuleWidget, bool MoveDown)
+void UWidget_Train_TimeTable_C::MoveRule(class UWidget_Train_TimeTable_Rule_C** RuleWidget, bool* MoveDown)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.MoveRule");
 
@@ -89,11 +89,11 @@ void UWidget_Train_TimeTable_C::MoveRule(class UWidget_Train_TimeTable_Rule_C* R
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.SetSelectedRule
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Train_TimeTable_Rule_C* SelectedRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Train_TimeTable_Rule_C** SelectedRule                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::SetSelectedRule(class UWidget_Train_TimeTable_Rule_C* SelectedRule)
+void UWidget_Train_TimeTable_C::SetSelectedRule(class UWidget_Train_TimeTable_Rule_C** SelectedRule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.SetSelectedRule");
 
@@ -109,11 +109,11 @@ void UWidget_Train_TimeTable_C::SetSelectedRule(class UWidget_Train_TimeTable_Ru
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.AddRule
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGTrainStationIdentifier* mStation                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AFGTrainStationIdentifier** mStation                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::AddRule(class AFGTrainStationIdentifier* mStation)
+void UWidget_Train_TimeTable_C::AddRule(class AFGTrainStationIdentifier** mStation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.AddRule");
 
@@ -129,7 +129,7 @@ void UWidget_Train_TimeTable_C::AddRule(class AFGTrainStationIdentifier* mStatio
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.UpdateStopsOnServer
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::UpdateStopsOnServer()
 {
@@ -146,7 +146,7 @@ void UWidget_Train_TimeTable_C::UpdateStopsOnServer()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.GenerateNewStopArray
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::GenerateNewStopArray()
 {
@@ -163,7 +163,7 @@ void UWidget_Train_TimeTable_C::GenerateNewStopArray()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.PopulateAvailableStations
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::PopulateAvailableStations()
 {
@@ -180,7 +180,7 @@ void UWidget_Train_TimeTable_C::PopulateAvailableStations()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.PopulateTimeTable
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::PopulateTimeTable()
 {
@@ -197,7 +197,7 @@ void UWidget_Train_TimeTable_C::PopulateTimeTable()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.UpdateTrainStations
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::UpdateTrainStations()
 {
@@ -214,11 +214,11 @@ void UWidget_Train_TimeTable_C::UpdateTrainStations()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.Init
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGTrain*                Train                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGTrain**               Train                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::Init(class AFGTrain* Train)
+void UWidget_Train_TimeTable_C::Init(class AFGTrain** Train)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.Init");
 
@@ -234,7 +234,7 @@ void UWidget_Train_TimeTable_C::Init(class AFGTrain* Train)
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.BndEvt__Widget_Splitter_OutputList_K2Node_ComponentBoundEvent_0_OnAddClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::BndEvt__Widget_Splitter_OutputList_K2Node_ComponentBoundEvent_0_OnAddClicked__DelegateSignature()
 {
@@ -251,11 +251,11 @@ void UWidget_Train_TimeTable_C::BndEvt__Widget_Splitter_OutputList_K2Node_Compon
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.OnRuleClicked
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Train_TimeTable_Rule_C* RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Train_TimeTable_Rule_C** RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::OnRuleClicked(class UWidget_Train_TimeTable_Rule_C* RuleWidget)
+void UWidget_Train_TimeTable_C::OnRuleClicked(class UWidget_Train_TimeTable_Rule_C** RuleWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.OnRuleClicked");
 
@@ -271,7 +271,7 @@ void UWidget_Train_TimeTable_C::OnRuleClicked(class UWidget_Train_TimeTable_Rule
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.UpdateStation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::UpdateStation()
 {
@@ -288,12 +288,12 @@ void UWidget_Train_TimeTable_C::UpdateStation()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.UpdateAvailableStationsSelectedIndex
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_ListButton_C*    ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_ListButton_C**   ListButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::UpdateAvailableStationsSelectedIndex(int Index, class UWidget_ListButton_C* ListButton)
+void UWidget_Train_TimeTable_C::UpdateAvailableStationsSelectedIndex(int* Index, class UWidget_ListButton_C** ListButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.UpdateAvailableStationsSelectedIndex");
 
@@ -310,11 +310,11 @@ void UWidget_Train_TimeTable_C::UpdateAvailableStationsSelectedIndex(int Index, 
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.OnRuleDeleted
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Train_TimeTable_Rule_C* RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Train_TimeTable_Rule_C** RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::OnRuleDeleted(class UWidget_Train_TimeTable_Rule_C* RuleWidget)
+void UWidget_Train_TimeTable_C::OnRuleDeleted(class UWidget_Train_TimeTable_Rule_C** RuleWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.OnRuleDeleted");
 
@@ -330,7 +330,7 @@ void UWidget_Train_TimeTable_C::OnRuleDeleted(class UWidget_Train_TimeTable_Rule
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::Destruct()
 {
@@ -347,11 +347,11 @@ void UWidget_Train_TimeTable_C::Destruct()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.OnRuleMoveUp
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Train_TimeTable_Rule_C* RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Train_TimeTable_Rule_C** RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::OnRuleMoveUp(class UWidget_Train_TimeTable_Rule_C* RuleWidget)
+void UWidget_Train_TimeTable_C::OnRuleMoveUp(class UWidget_Train_TimeTable_Rule_C** RuleWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.OnRuleMoveUp");
 
@@ -367,11 +367,11 @@ void UWidget_Train_TimeTable_C::OnRuleMoveUp(class UWidget_Train_TimeTable_Rule_
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.OnRuleMoveDown
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Train_TimeTable_Rule_C* RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Train_TimeTable_Rule_C** RuleWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::OnRuleMoveDown(class UWidget_Train_TimeTable_Rule_C* RuleWidget)
+void UWidget_Train_TimeTable_C::OnRuleMoveDown(class UWidget_Train_TimeTable_Rule_C** RuleWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.OnRuleMoveDown");
 
@@ -387,7 +387,7 @@ void UWidget_Train_TimeTable_C::OnRuleMoveDown(class UWidget_Train_TimeTable_Rul
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.CheckCurrentStop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Train_TimeTable_C::CheckCurrentStop()
 {
@@ -404,11 +404,11 @@ void UWidget_Train_TimeTable_C::CheckCurrentStop()
 
 
 // Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.ExecuteUbergraph_Widget_Train_TimeTable
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Train_TimeTable_C::ExecuteUbergraph_Widget_Train_TimeTable(int EntryPoint)
+void UWidget_Train_TimeTable_C::ExecuteUbergraph_Widget_Train_TimeTable(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Train_TimeTable.Widget_Train_TimeTable_C.ExecuteUbergraph_Widget_Train_TimeTable");
 

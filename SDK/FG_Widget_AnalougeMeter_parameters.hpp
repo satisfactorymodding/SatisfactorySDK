@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.SetValue
 struct UWidget_AnalougeMeter_C_SetValue_Params
 {
-	float                                              Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.PreConstruct
@@ -44,7 +44,7 @@ struct UWidget_AnalougeMeter_C_Destruct_Params
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.ExecuteUbergraph_Widget_AnalougeMeter
 struct UWidget_AnalougeMeter_C_ExecuteUbergraph_Widget_AnalougeMeter_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

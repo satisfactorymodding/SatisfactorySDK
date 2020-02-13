@@ -22,7 +22,7 @@ struct UWidget_CodexStatItem_C_Construct_Params
 // Function Widget_CodexStatItem.Widget_CodexStatItem_C.ExecuteUbergraph_Widget_CodexStatItem
 struct UWidget_CodexStatItem_C_ExecuteUbergraph_Widget_CodexStatItem_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

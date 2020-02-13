@@ -24,7 +24,7 @@ struct UBTT_RandomLocation_C_ReceiveExecuteAI_Params
 // Function BTT_RandomLocation.BTT_RandomLocation_C.ExecuteUbergraph_BTT_RandomLocation
 struct UBTT_RandomLocation_C_ExecuteUbergraph_BTT_RandomLocation_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

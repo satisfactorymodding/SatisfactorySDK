@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.ShowHideAddButton
 struct UWidget_Splitter_OutputList_C_ShowHideAddButton_Params
 {
-	bool                                               ShouldShowAddButton;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              ShouldShowAddButton;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.GetDescriptorsForSearch
@@ -44,7 +44,7 @@ struct UWidget_Splitter_OutputList_C_Construct_Params
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.ExecuteUbergraph_Widget_Splitter_OutputList
 struct UWidget_Splitter_OutputList_C_ExecuteUbergraph_Widget_Splitter_OutputList_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Splitter_OutputList.Widget_Splitter_OutputList_C.OnAddClicked__DelegateSignature

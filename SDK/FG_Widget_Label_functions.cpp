@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Label.Widget_Label_C.SetLabelText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   LabelText                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  LabelText                      (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Label_C::SetLabelText(const struct FText& LabelText)
+void UWidget_Label_C::SetLabelText(struct FText* LabelText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Label.Widget_Label_C.SetLabelText");
 
@@ -33,7 +33,7 @@ void UWidget_Label_C::SetLabelText(const struct FText& LabelText)
 
 
 // Function Widget_Label.Widget_Label_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -53,11 +53,11 @@ void UWidget_Label_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Label.Widget_Label_C.ExecuteUbergraph_Widget_Label
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Label_C::ExecuteUbergraph_Widget_Label(int EntryPoint)
+void UWidget_Label_C::ExecuteUbergraph_Widget_Label(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Label.Widget_Label_C.ExecuteUbergraph_Widget_Label");
 

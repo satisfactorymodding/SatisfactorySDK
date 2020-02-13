@@ -66,7 +66,7 @@ struct UWidget_PortableMiner_C_BndEvt__mButtonPickUpMiner_K2Node_ComponentBoundE
 // Function Widget_PortableMiner.Widget_PortableMiner_C.ExecuteUbergraph_Widget_PortableMiner
 struct UWidget_PortableMiner_C_ExecuteUbergraph_Widget_PortableMiner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

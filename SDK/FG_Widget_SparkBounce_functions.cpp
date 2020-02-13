@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SparkBounce.Widget_SparkBounce_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SparkBounce_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_SparkBounce_C::Construct()
 
 
 // Function Widget_SparkBounce.Widget_SparkBounce_C.OnAnimFinished
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SparkBounce_C::OnAnimFinished()
 {
@@ -47,11 +47,11 @@ void UWidget_SparkBounce_C::OnAnimFinished()
 
 
 // Function Widget_SparkBounce.Widget_SparkBounce_C.ExecuteUbergraph_Widget_SparkBounce
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SparkBounce_C::ExecuteUbergraph_Widget_SparkBounce(int EntryPoint)
+void UWidget_SparkBounce_C::ExecuteUbergraph_Widget_SparkBounce(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SparkBounce.Widget_SparkBounce_C.ExecuteUbergraph_Widget_SparkBounce");
 

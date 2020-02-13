@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recipe_PowerPoleMk1.Recipe_PowerPoleMk1_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class URecipe_PowerPoleMk1_C : public UFGRecipe
 {
 public:

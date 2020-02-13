@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DropPod.BP_DropPod_C.Repair
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DropPod_C::Repair(class AFGCharacterPlayer* byCharacter)
+void ABP_DropPod_C::Repair(class AFGCharacterPlayer** byCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DropPod.BP_DropPod_C.Repair");
 
@@ -33,7 +33,7 @@ void ABP_DropPod_C::Repair(class AFGCharacterPlayer* byCharacter)
 
 
 // Function BP_DropPod.BP_DropPod_C.GetRepairAmount
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FItemAmount             amount                         (Parm, OutParm)
 
@@ -55,7 +55,7 @@ void ABP_DropPod_C::GetRepairAmount(struct FItemAmount* amount)
 
 
 // Function BP_DropPod.BP_DropPod_C.GetPowerConsumption
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          POWER                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -77,7 +77,7 @@ void ABP_DropPod_C::GetPowerConsumption(float* POWER)
 
 
 // Function BP_DropPod.BP_DropPod_C.NeedsPower
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           NeedsPower                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -99,7 +99,7 @@ void ABP_DropPod_C::NeedsPower(bool* NeedsPower)
 
 
 // Function BP_DropPod.BP_DropPod_C.NeedsRepair
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           NeedsRepair                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -120,25 +120,8 @@ void ABP_DropPod_C::NeedsRepair(bool* NeedsRepair)
 }
 
 
-// Function BP_DropPod.BP_DropPod_C.UserConstructionScript
-// ()
-
-void ABP_DropPod_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DropPod.BP_DropPod_C.UserConstructionScript");
-
-	ABP_DropPod_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_DropPod.BP_DropPod_C.RollLoot
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_DropPod_C::RollLoot()
 {
@@ -155,7 +138,7 @@ void ABP_DropPod_C::RollLoot()
 
 
 // Function BP_DropPod.BP_DropPod_C.OnOpened
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_DropPod_C::OnOpened()
 {
@@ -172,7 +155,7 @@ void ABP_DropPod_C::OnOpened()
 
 
 // Function BP_DropPod.BP_DropPod_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -194,7 +177,7 @@ void ABP_DropPod_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter, struc
 
 
 // Function BP_DropPod.BP_DropPod_C.StartIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -216,7 +199,7 @@ void ABP_DropPod_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, stru
 
 
 // Function BP_DropPod.BP_DropPod_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_DropPod_C::ReceiveBeginPlay()
 {
@@ -233,7 +216,7 @@ void ABP_DropPod_C::ReceiveBeginPlay()
 
 
 // Function BP_DropPod.BP_DropPod_C.OnUse
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -254,12 +237,32 @@ void ABP_DropPod_C::OnUse(class AFGCharacterPlayer** byCharacter, struct FUseSta
 }
 
 
-// Function BP_DropPod.BP_DropPod_C.ExecuteUbergraph_BP_DropPod
-// ()
+// Function BP_DropPod.BP_DropPod_C.OnRepair
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     InteractingCharacter           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DropPod_C::ExecuteUbergraph_BP_DropPod(int EntryPoint)
+void ABP_DropPod_C::OnRepair(class AFGCharacterPlayer** InteractingCharacter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DropPod.BP_DropPod_C.OnRepair");
+
+	ABP_DropPod_C_OnRepair_Params params;
+	params.InteractingCharacter = InteractingCharacter;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DropPod.BP_DropPod_C.ExecuteUbergraph_BP_DropPod
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_DropPod_C::ExecuteUbergraph_BP_DropPod(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DropPod.BP_DropPod_C.ExecuteUbergraph_BP_DropPod");
 

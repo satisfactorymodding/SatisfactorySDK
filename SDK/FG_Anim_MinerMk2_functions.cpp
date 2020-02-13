@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.SetupReloadTimer
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk2_C::SetupReloadTimer()
 {
@@ -30,7 +30,7 @@ void UAnim_MinerMk2_C::SetupReloadTimer()
 
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.ReloadTimer
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk2_C::ReloadTimer()
 {
@@ -47,7 +47,7 @@ void UAnim_MinerMk2_C::ReloadTimer()
 
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.AnimNotify_MinerEnteredReloadState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk2_C::AnimNotify_MinerEnteredReloadState()
 {
@@ -64,7 +64,7 @@ void UAnim_MinerMk2_C::AnimNotify_MinerEnteredReloadState()
 
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.AnimNotify_StartDrillVFX
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk2_C::AnimNotify_StartDrillVFX()
 {
@@ -81,7 +81,7 @@ void UAnim_MinerMk2_C::AnimNotify_StartDrillVFX()
 
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.BlueprintInitializeAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UAnim_MinerMk2_C::BlueprintInitializeAnimation()
 {
@@ -98,7 +98,7 @@ void UAnim_MinerMk2_C::BlueprintInitializeAnimation()
 
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.AnimNotify_OnResumeProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk2_C::AnimNotify_OnResumeProducing()
 {
@@ -115,7 +115,7 @@ void UAnim_MinerMk2_C::AnimNotify_OnResumeProducing()
 
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.AnimNotify_OnStopProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk2_C::AnimNotify_OnStopProducing()
 {
@@ -132,7 +132,7 @@ void UAnim_MinerMk2_C::AnimNotify_OnStopProducing()
 
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.AnimNotify_StartEngineLoop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_MinerMk2_C::AnimNotify_StartEngineLoop()
 {
@@ -149,11 +149,11 @@ void UAnim_MinerMk2_C::AnimNotify_StartEngineLoop()
 
 
 // Function Anim_MinerMk2.Anim_MinerMk2_C.ExecuteUbergraph_Anim_MinerMk2
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_MinerMk2_C::ExecuteUbergraph_Anim_MinerMk2(int EntryPoint)
+void UAnim_MinerMk2_C::ExecuteUbergraph_Anim_MinerMk2(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_MinerMk2.Anim_MinerMk2_C.ExecuteUbergraph_Anim_MinerMk2");
 

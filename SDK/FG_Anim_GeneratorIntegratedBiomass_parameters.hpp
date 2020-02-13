@@ -67,7 +67,7 @@ struct UAnim_GeneratorIntegratedBiomass_C_AnimNotify_BioGenEnteredFunnelShutdown
 // Function Anim_GeneratorIntegratedBiomass.Anim_GeneratorIntegratedBiomass_C.ExecuteUbergraph_Anim_GeneratorIntegratedBiomass
 struct UAnim_GeneratorIntegratedBiomass_C_ExecuteUbergraph_Anim_GeneratorIntegratedBiomass_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

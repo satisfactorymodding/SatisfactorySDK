@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_ResourceScanner.Attach_ResourceScanner_C.UserConstructionScript
-// ()
-
-void AAttach_ResourceScanner_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_ResourceScanner.Attach_ResourceScanner_C.UserConstructionScript");
-
-	AAttach_ResourceScanner_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_ResourceScanner.Attach_ResourceScanner_C.CustomEvent_1
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AAttach_ResourceScanner_C::CustomEvent_1()
 {
@@ -47,7 +30,7 @@ void AAttach_ResourceScanner_C::CustomEvent_1()
 
 
 // Function Attach_ResourceScanner.Attach_ResourceScanner_C.PlayUseEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector*                UseLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,11 +50,11 @@ void AAttach_ResourceScanner_C::PlayUseEffect(struct FVector* UseLocation)
 
 
 // Function Attach_ResourceScanner.Attach_ResourceScanner_C.ExecuteUbergraph_Attach_ResourceScanner
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_ResourceScanner_C::ExecuteUbergraph_Attach_ResourceScanner(int EntryPoint)
+void AAttach_ResourceScanner_C::ExecuteUbergraph_Attach_ResourceScanner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_ResourceScanner.Attach_ResourceScanner_C.ExecuteUbergraph_Attach_ResourceScanner");
 

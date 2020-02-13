@@ -26,10 +26,20 @@ struct UWidget_Compass_new_C_Construct_Params
 {
 };
 
+// Function Widget_Compass_new.Widget_Compass_new_C.EventUpdateBackgroundOpacity
+struct UWidget_Compass_new_C_EventUpdateBackgroundOpacity_Params
+{
+};
+
+// Function Widget_Compass_new.Widget_Compass_new_C.Destruct
+struct UWidget_Compass_new_C_Destruct_Params
+{
+};
+
 // Function Widget_Compass_new.Widget_Compass_new_C.ExecuteUbergraph_Widget_Compass_new
 struct UWidget_Compass_new_C_ExecuteUbergraph_Widget_Compass_new_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

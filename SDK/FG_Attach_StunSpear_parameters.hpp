@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_StunSpear.Attach_StunSpear_C.UserConstructionScript
-struct AAttach_StunSpear_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_StunSpear.Attach_StunSpear_C.PlayUseEffect
 struct AAttach_StunSpear_C_PlayUseEffect_Params
 {
@@ -33,7 +28,7 @@ struct AAttach_StunSpear_C_PlayAttachEffects3P_Params
 // Function Attach_StunSpear.Attach_StunSpear_C.ExecuteUbergraph_Attach_StunSpear
 struct AAttach_StunSpear_C_ExecuteUbergraph_Attach_StunSpear_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

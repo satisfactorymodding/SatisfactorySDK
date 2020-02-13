@@ -14,6 +14,26 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_Options.Widget_Options_C.UpdateDynamicSettings
+struct UWidget_Options_C_UpdateDynamicSettings_Params
+{
+};
+
+// Function Widget_Options.Widget_Options_C.SetupDynamicOptions
+struct UWidget_Options_C_SetupDynamicOptions_Params
+{
+};
+
+// Function Widget_Options.Widget_Options_C.ApplyVideoSettings
+struct UWidget_Options_C_ApplyVideoSettings_Params
+{
+};
+
+// Function Widget_Options.Widget_Options_C.SetCurrentShowBreakNotifications
+struct UWidget_Options_C_SetCurrentShowBreakNotifications_Params
+{
+};
+
 // Function Widget_Options.Widget_Options_C.BindEventsForGameplayOptions
 struct UWidget_Options_C_BindEventsForGameplayOptions_Params
 {
@@ -58,14 +78,14 @@ struct UWidget_Options_C_SetupSubmenuOptionsForSpawnAnim_Params
 // Function Widget_Options.Widget_Options_C.OnAudioValueChanged
 struct UWidget_Options_C_OnAudioValueChanged_Params
 {
-	float                                              NewParam;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             NewParam;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.OnResolutionChanged
 struct UWidget_Options_C_OnResolutionChanged_Params
 {
-	class FString                                      selected_item;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	TEnumAsByte<ESelectInfo>                           selection_type;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class FString*                                     selected_item;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	TEnumAsByte<ESelectInfo>*                          selection_type;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.OnDefaultKeybindPressed
@@ -126,7 +146,7 @@ struct UWidget_Options_C_BindEventsForVolumeSliders_Params
 // Function Widget_Options.Widget_Options_C.ClampedNextIndex
 struct UWidget_Options_C_ClampedNextIndex_Params
 {
-	int                                                currentIndex;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               currentIndex;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FText>                               settingsArray;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int                                                nextIndex;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -176,11 +196,6 @@ struct UWidget_Options_C_FoliagePrevious_Params
 {
 };
 
-// Function Widget_Options.Widget_Options_C.FoliageNext
-struct UWidget_Options_C_FoliageNext_Params
-{
-};
-
 // Function Widget_Options.Widget_Options_C.TextureQualityNext
 struct UWidget_Options_C_TextureQualityNext_Params
 {
@@ -188,6 +203,11 @@ struct UWidget_Options_C_TextureQualityNext_Params
 
 // Function Widget_Options.Widget_Options_C.TextureQualityPrevious
 struct UWidget_Options_C_TextureQualityPrevious_Params
+{
+};
+
+// Function Widget_Options.Widget_Options_C.FoliageNext
+struct UWidget_Options_C_FoliageNext_Params
 {
 };
 
@@ -214,19 +234,19 @@ struct UWidget_Options_C_VFXQualityPrevious_Params
 // Function Widget_Options.Widget_Options_C.OnVSyncChecked
 struct UWidget_Options_C_OnVSyncChecked_Params
 {
-	bool                                               bIsChecked;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bIsChecked;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.OnFullScreenChecked
 struct UWidget_Options_C_OnFullScreenChecked_Params
 {
-	bool                                               bIsChecked;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bIsChecked;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.ResetVideoSettings
 struct UWidget_Options_C_ResetVideoSettings_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.OnEscape
@@ -237,19 +257,19 @@ struct UWidget_Options_C_OnEscape_Params
 // Function Widget_Options.Widget_Options_C.SaveChanges
 struct UWidget_Options_C_SaveChanges_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.DoVolumeThings
 struct UWidget_Options_C_DoVolumeThings_Params
 {
-	float                                              VolumeThingsValue;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             VolumeThingsValue;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.OnFOVChanged
 struct UWidget_Options_C_OnFOVChanged_Params
 {
-	float                                              NewFOV;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             NewFOV;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.ShowConfirmResetPopup
@@ -285,7 +305,14 @@ struct UWidget_Options_C_Init_Params
 // Function Widget_Options.Widget_Options_C.OnMotionBlurChecked
 struct UWidget_Options_C_OnMotionBlurChecked_Params
 {
-	bool                                               Checked;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              Checked;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Options.Widget_Options_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature
+struct UWidget_Options_C_BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature_Params
+{
+	class UWidget**                                    oldWidget;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget**                                    newWidget;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.AntiAliasNext
@@ -296,13 +323,6 @@ struct UWidget_Options_C_AntiAliasNext_Params
 // Function Widget_Options.Widget_Options_C.AntiAliasPrevious
 struct UWidget_Options_C_AntiAliasPrevious_Params
 {
-};
-
-// Function Widget_Options.Widget_Options_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature
-struct UWidget_Options_C_BndEvt__mSwitcher_K2Node_ComponentBoundEvent_4_OnActiveWidgetSet__DelegateSignature_Params
-{
-	class UWidget*                                     oldWidget;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWidget*                                     newWidget;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.NetworkQualityPrevious
@@ -335,11 +355,27 @@ struct UWidget_Options_C_CheckResolutionChanges_Params
 // Function Widget_Options.Widget_Options_C.ResolutionChangedAccepted
 struct UWidget_Options_C_ResolutionChangedAccepted_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.OpenRequireRestartIfRequired
 struct UWidget_Options_C_OpenRequireRestartIfRequired_Params
+{
+};
+
+// Function Widget_Options.Widget_Options_C.PreConstruct
+struct UWidget_Options_C_PreConstruct_Params
+{
+	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Options.Widget_Options_C.Destruct
+struct UWidget_Options_C_Destruct_Params
+{
+};
+
+// Function Widget_Options.Widget_Options_C.RevertUnsavedChanges
+struct UWidget_Options_C_RevertUnsavedChanges_Params
 {
 };
 
@@ -351,7 +387,7 @@ struct UWidget_Options_C_Construct_Params
 // Function Widget_Options.Widget_Options_C.ExecuteUbergraph_Widget_Options
 struct UWidget_Options_C_ExecuteUbergraph_Widget_Options_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Options.Widget_Options_C.OnBackClicked__DelegateSignature

@@ -17,7 +17,7 @@ namespace SDK
 // Function BP_MantaAnim.BP_MantaAnim_C.ExecuteUbergraph_BP_MantaAnim
 struct UBP_MantaAnim_C_ExecuteUbergraph_BP_MantaAnim_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

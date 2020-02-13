@@ -14,10 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_LoadSession.Widget_LoadSession_C.OnSavesEnumerated
+struct UWidget_LoadSession_C_OnSavesEnumerated_Params
+{
+	bool*                                              success;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FSaveHeader>                         saves;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function Widget_LoadSession.Widget_LoadSession_C.PopulateSavesFromSession
 struct UWidget_LoadSession_C_PopulateSavesFromSession_Params
 {
-	struct FSessionSaveStruct                          session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSessionSaveStruct*                         session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_LoadSession.Widget_LoadSession_C.ShowLoadButtons
@@ -58,7 +65,7 @@ struct UWidget_LoadSession_C_IsValidCurrentSave_Params
 // Function Widget_LoadSession.Widget_LoadSession_C.OnSaveClicked
 struct UWidget_LoadSession_C_OnSaveClicked_Params
 {
-	struct FSaveHeader                                 SaveHeader;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSaveHeader*                                SaveHeader;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_LoadSession.Widget_LoadSession_C.PopulateSessionList
@@ -84,13 +91,13 @@ struct UWidget_LoadSession_C_ConfirmDeleteSessionPopUp_Params
 // Function Widget_LoadSession.Widget_LoadSession_C.EventDeleteSession
 struct UWidget_LoadSession_C_EventDeleteSession_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_LoadSession.Widget_LoadSession_C.EventDeleteSave
 struct UWidget_LoadSession_C_EventDeleteSave_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_LoadSession.Widget_LoadSession_C.ConfirmDeleteSavePopUp
@@ -145,17 +152,35 @@ struct UWidget_LoadSession_C_OnMenuEnter_Params
 	class UWidget**                                    prevMenu;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
+// Function Widget_LoadSession.Widget_LoadSession_C.SaveDeleted
+struct UWidget_LoadSession_C_SaveDeleted_Params
+{
+	bool*                                              success;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_LoadSession.Widget_LoadSession_C.SessionDeleted
+struct UWidget_LoadSession_C_SessionDeleted_Params
+{
+	bool*                                              success;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_LoadSession.Widget_LoadSession_C.ClosedLoadPopup
+struct UWidget_LoadSession_C_ClosedLoadPopup_Params
+{
+	bool*                                              ConfirmClicked;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_LoadSession.Widget_LoadSession_C.ExecuteUbergraph_Widget_LoadSession
 struct UWidget_LoadSession_C_ExecuteUbergraph_Widget_LoadSession_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_LoadSession.Widget_LoadSession_C.OnLoadClicked__DelegateSignature
 struct UWidget_LoadSession_C_OnLoadClicked__DelegateSignature_Params
 {
-	struct FSaveHeader                                 SaveGame;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               IsPrivateGame;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FSaveHeader*                                SaveGame;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              IsPrivateGame;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_LoadSession.Widget_LoadSession_C.OnBackClicked__DelegateSignature

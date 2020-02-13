@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_ConveyorPoleStackable.Build_ConveyorPoleStackable_C.UserConstructionScript
-struct ABuild_ConveyorPoleStackable_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GamePhaseManager.BP_GamePhaseManager_C
-// 0x0000 (0x0368 - 0x0368)
+// 0x0000 (0x0370 - 0x0370)
 class ABP_GamePhaseManager_C : public AFGGamePhaseManager
 {
 public:

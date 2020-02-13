@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.CalculateAnimGraphValues
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_SpaceGiraffe_C::CalculateAnimGraphValues()
 {
@@ -30,7 +30,7 @@ void UAnim_SpaceGiraffe_C::CalculateAnimGraphValues()
 
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SpaceGiraffe_AnimGraphNode_TransitionResult_5BBF92D944CF08F557873D8B5513CC19
-// ()
+// (BlueprintEvent)
 
 void UAnim_SpaceGiraffe_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SpaceGiraffe_AnimGraphNode_TransitionResult_5BBF92D944CF08F557873D8B5513CC19()
 {
@@ -47,7 +47,7 @@ void UAnim_SpaceGiraffe_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spac
 
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SpaceGiraffe_AnimGraphNode_TransitionResult_120EBA2A4C99D3C03736878049EF1F10
-// ()
+// (BlueprintEvent)
 
 void UAnim_SpaceGiraffe_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_SpaceGiraffe_AnimGraphNode_TransitionResult_120EBA2A4C99D3C03736878049EF1F10()
 {
@@ -64,7 +64,7 @@ void UAnim_SpaceGiraffe_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spac
 
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.OnPointDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector*                shootDIrection                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,7 +84,7 @@ void UAnim_SpaceGiraffe_C::OnPointDamageTaken(struct FVector* shootDIrection)
 
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.OnRadialDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_SpaceGiraffe_C::OnRadialDamageTaken()
 {
@@ -101,11 +101,11 @@ void UAnim_SpaceGiraffe_C::OnRadialDamageTaken()
 
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.StartRotation
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FRotator                Target_Rotation                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator*               Target_Rotation                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_SpaceGiraffe_C::StartRotation(const struct FRotator& Target_Rotation)
+void UAnim_SpaceGiraffe_C::StartRotation(struct FRotator* Target_Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.StartRotation");
 
@@ -121,7 +121,7 @@ void UAnim_SpaceGiraffe_C::StartRotation(const struct FRotator& Target_Rotation)
 
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -141,11 +141,11 @@ void UAnim_SpaceGiraffe_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.ExecuteUbergraph_Anim_SpaceGiraffe
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_SpaceGiraffe_C::ExecuteUbergraph_Anim_SpaceGiraffe(int EntryPoint)
+void UAnim_SpaceGiraffe_C::ExecuteUbergraph_Anim_SpaceGiraffe(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_SpaceGiraffe.Anim_SpaceGiraffe_C.ExecuteUbergraph_Anim_SpaceGiraffe");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Popup.Widget_Popup_C.CancelClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Popup_C::CancelClicked()
 {
@@ -30,7 +30,7 @@ void UWidget_Popup_C::CancelClicked()
 
 
 // Function Widget_Popup.Widget_Popup_C.OkClicked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Popup_C::OkClicked()
 {
@@ -47,7 +47,7 @@ void UWidget_Popup_C::OkClicked()
 
 
 // Function Widget_Popup.Widget_Popup_C.CheckButtonState
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Popup_C::CheckButtonState()
 {
@@ -64,7 +64,7 @@ void UWidget_Popup_C::CheckButtonState()
 
 
 // Function Widget_Popup.Widget_Popup_C.OnKeyUp
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -89,11 +89,11 @@ struct FEventReply UWidget_Popup_C::OnKeyUp(struct FGeometry* MyGeometry, struct
 
 
 // Function Widget_Popup.Widget_Popup_C.DoClosePopup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ConfirmClicked                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ConfirmClicked                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Popup_C::DoClosePopup(bool ConfirmClicked)
+void UWidget_Popup_C::DoClosePopup(bool* ConfirmClicked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Popup.Widget_Popup_C.DoClosePopup");
 
@@ -109,7 +109,7 @@ void UWidget_Popup_C::DoClosePopup(bool ConfirmClicked)
 
 
 // Function Widget_Popup.Widget_Popup_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_Popup_C::Init()
 {
@@ -126,7 +126,7 @@ void UWidget_Popup_C::Init()
 
 
 // Function Widget_Popup.Widget_Popup_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Popup_C::Construct()
 {
@@ -143,7 +143,7 @@ void UWidget_Popup_C::Construct()
 
 
 // Function Widget_Popup.Widget_Popup_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -165,7 +165,7 @@ void UWidget_Popup_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Popup.Widget_Popup_C.BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Popup_C::BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -182,11 +182,11 @@ void UWidget_Popup_C::BndEvt__Widget_StandardButton_K2Node_ComponentBoundEvent_1
 
 
 // Function Widget_Popup.Widget_Popup_C.ExecuteUbergraph_Widget_Popup
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Popup_C::ExecuteUbergraph_Widget_Popup(int EntryPoint)
+void UWidget_Popup_C::ExecuteUbergraph_Widget_Popup(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Popup.Widget_Popup_C.ExecuteUbergraph_Widget_Popup");
 

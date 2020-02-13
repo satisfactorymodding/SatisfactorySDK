@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_DistanceBetweenKeys.BTS_DistanceBetweenKeys_C.GetKeyLocation
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FBlackboardKeySelector  Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FBlackboardKeySelector* Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FVector                 Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_DistanceBetweenKeys_C::GetKeyLocation(const struct FBlackboardKeySelector& Key, struct FVector* Location)
+void UBTS_DistanceBetweenKeys_C::GetKeyLocation(struct FBlackboardKeySelector* Key, struct FVector* Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_DistanceBetweenKeys.BTS_DistanceBetweenKeys_C.GetKeyLocation");
 
@@ -37,7 +37,7 @@ void UBTS_DistanceBetweenKeys_C::GetKeyLocation(const struct FBlackboardKeySelec
 
 
 // Function BTS_DistanceBetweenKeys.BTS_DistanceBetweenKeys_C.ReceiveTickAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -61,11 +61,11 @@ void UBTS_DistanceBetweenKeys_C::ReceiveTickAI(class AAIController** OwnerContro
 
 
 // Function BTS_DistanceBetweenKeys.BTS_DistanceBetweenKeys_C.ExecuteUbergraph_BTS_DistanceBetweenKeys
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_DistanceBetweenKeys_C::ExecuteUbergraph_BTS_DistanceBetweenKeys(int EntryPoint)
+void UBTS_DistanceBetweenKeys_C::ExecuteUbergraph_BTS_DistanceBetweenKeys(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_DistanceBetweenKeys.BTS_DistanceBetweenKeys_C.ExecuteUbergraph_BTS_DistanceBetweenKeys");
 

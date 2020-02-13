@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Hotfix.OnlineHotfixManager.StartHotfixProcess
-// ()
+// (Native, Public, BlueprintCallable)
 
 void UOnlineHotfixManager::StartHotfixProcess()
 {
@@ -22,6 +22,7 @@ void UOnlineHotfixManager::StartHotfixProcess()
 	UOnlineHotfixManager_StartHotfixProcess_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

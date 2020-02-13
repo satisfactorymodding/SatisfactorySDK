@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_GeneratorFuelInventorySlot.Widget_GeneratorFuelInventorySlot_C.Init
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGBuildableGeneratorFuel* Generator                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGBuildableGeneratorFuel** Generator                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_GeneratorFuelInventorySlot_C::Init(class AFGBuildableGeneratorFuel* Generator)
+void UWidget_GeneratorFuelInventorySlot_C::Init(class AFGBuildableGeneratorFuel** Generator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_GeneratorFuelInventorySlot.Widget_GeneratorFuelInventorySlot_C.Init");
 
@@ -33,7 +33,7 @@ void UWidget_GeneratorFuelInventorySlot_C::Init(class AFGBuildableGeneratorFuel*
 
 
 // Function Widget_GeneratorFuelInventorySlot.Widget_GeneratorFuelInventorySlot_C.GetFuelPercent
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 

@@ -24,7 +24,7 @@ struct UBTS_LookAngleDiff_C_ReceiveTick_Params
 // Function BTS_LookAngleDiff.BTS_LookAngleDiff_C.ExecuteUbergraph_BTS_LookAngleDiff
 struct UBTS_LookAngleDiff_C_ExecuteUbergraph_BTS_LookAngleDiff_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

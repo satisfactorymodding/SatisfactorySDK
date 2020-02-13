@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_ExplorerAnim.BP_ExplorerAnim_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_ExplorerAnim_AnimGraphNode_ModifyBone_CAE5F4CD4693937037AB489F6E27CEAD
-struct UBP_ExplorerAnim_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_ExplorerAnim_AnimGraphNode_ModifyBone_CAE5F4CD4693937037AB489F6E27CEAD_Params
-{
-};
-
 // Function BP_ExplorerAnim.BP_ExplorerAnim_C.BlueprintUpdateAnimation
 struct UBP_ExplorerAnim_C_BlueprintUpdateAnimation_Params
 {
@@ -28,7 +23,7 @@ struct UBP_ExplorerAnim_C_BlueprintUpdateAnimation_Params
 // Function BP_ExplorerAnim.BP_ExplorerAnim_C.ExecuteUbergraph_BP_ExplorerAnim
 struct UBP_ExplorerAnim_C_ExecuteUbergraph_BP_ExplorerAnim_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

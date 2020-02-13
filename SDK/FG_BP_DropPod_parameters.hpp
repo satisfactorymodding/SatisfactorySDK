@@ -17,7 +17,7 @@ namespace SDK
 // Function BP_DropPod.BP_DropPod_C.Repair
 struct ABP_DropPod_C_Repair_Params
 {
-	class AFGCharacterPlayer*                          byCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGCharacterPlayer**                         byCharacter;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_DropPod.BP_DropPod_C.GetRepairAmount
@@ -42,11 +42,6 @@ struct ABP_DropPod_C_NeedsPower_Params
 struct ABP_DropPod_C_NeedsRepair_Params
 {
 	bool                                               NeedsRepair;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_DropPod.BP_DropPod_C.UserConstructionScript
-struct ABP_DropPod_C_UserConstructionScript_Params
-{
 };
 
 // Function BP_DropPod.BP_DropPod_C.RollLoot
@@ -85,10 +80,16 @@ struct ABP_DropPod_C_OnUse_Params
 	struct FUseState*                                  State;                                                    // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 
+// Function BP_DropPod.BP_DropPod_C.OnRepair
+struct ABP_DropPod_C_OnRepair_Params
+{
+	class AFGCharacterPlayer**                         InteractingCharacter;                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_DropPod.BP_DropPod_C.ExecuteUbergraph_BP_DropPod
 struct ABP_DropPod_C_ExecuteUbergraph_BP_DropPod_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

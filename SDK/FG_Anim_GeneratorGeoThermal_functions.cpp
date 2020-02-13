@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_GeneratorGeoThermal.Anim_GeneratorGeoThermal_C.ExecuteUbergraph_Anim_GeneratorGeoThermal
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_GeneratorGeoThermal_C::ExecuteUbergraph_Anim_GeneratorGeoThermal(int EntryPoint)
+void UAnim_GeneratorGeoThermal_C::ExecuteUbergraph_Anim_GeneratorGeoThermal(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_GeneratorGeoThermal.Anim_GeneratorGeoThermal_C.ExecuteUbergraph_Anim_GeneratorGeoThermal");
 

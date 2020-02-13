@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GameState.BP_GameState_C.DumpVisistedMapAreas
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_GameState_C::DumpVisistedMapAreas()
 {
@@ -30,7 +30,7 @@ void ABP_GameState_C::DumpVisistedMapAreas()
 
 
 // Function BP_GameState.BP_GameState_C.DumpActorRepresentations
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_GameState_C::DumpActorRepresentations()
 {
@@ -46,25 +46,8 @@ void ABP_GameState_C::DumpActorRepresentations()
 }
 
 
-// Function BP_GameState.BP_GameState_C.UserConstructionScript
-// ()
-
-void ABP_GameState_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.UserConstructionScript");
-
-	ABP_GameState_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_GameState.BP_GameState_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,11 +67,11 @@ void ABP_GameState_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_GameState.BP_GameState_C.ExecuteUbergraph_BP_GameState
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GameState_C::ExecuteUbergraph_BP_GameState(int EntryPoint)
+void ABP_GameState_C::ExecuteUbergraph_BP_GameState(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ExecuteUbergraph_BP_GameState");
 

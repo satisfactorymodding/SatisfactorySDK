@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HardDriveSettings.BP_HardDriveSettings_C
-// 0x0000 (0x0050 - 0x0050)
+// 0x0000 (0x0058 - 0x0058)
 class UBP_HardDriveSettings_C : public UFGHardDriveSettings
 {
 public:

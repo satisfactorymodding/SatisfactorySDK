@@ -12,13 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Locomotive.BP_Locomotive_C.SetActorRepresentationText
-// ()
+// Function BP_Locomotive.BP_Locomotive_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_Locomotive_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.GetActorCompassViewDistance");
+
+	ABP_Locomotive_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_Locomotive_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.SetActorCompassViewDistance");
+
+	ABP_Locomotive_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABP_Locomotive_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABP_Locomotive_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.SetActorRepresentationText");
 
@@ -36,7 +80,7 @@ struct FText ABP_Locomotive_C::SetActorRepresentationText(const struct FText& ne
 
 
 // Function BP_Locomotive.BP_Locomotive_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +101,7 @@ bool ABP_Locomotive_C::UpdateRepresentation()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +122,7 @@ float ABP_Locomotive_C::GetActorFogOfWarRevealRadius()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -99,7 +143,7 @@ EFogOfWarRevealType ABP_Locomotive_C::GetActorFogOfWarRevealType()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -120,7 +164,7 @@ struct FLinearColor ABP_Locomotive_C::GetActorRepresentationColor()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -141,7 +185,7 @@ struct FText ABP_Locomotive_C::GetActorRepresentationText()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +206,7 @@ class UTexture2D* ABP_Locomotive_C::GetActorRepresentationTexture()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -183,7 +227,7 @@ ERepresentationType ABP_Locomotive_C::GetActorRepresentationType()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +248,7 @@ bool ABP_Locomotive_C::GetActorShouldShowInCompass()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +269,7 @@ bool ABP_Locomotive_C::AddAsRepresentation()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -246,7 +290,7 @@ bool ABP_Locomotive_C::GetActorShouldShowOnMap()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -267,7 +311,7 @@ struct FVector ABP_Locomotive_C::GetRealActorLocation()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -288,7 +332,7 @@ struct FRotator ABP_Locomotive_C::GetRealActorRotation()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -309,7 +353,7 @@ bool ABP_Locomotive_C::IsActorStatic()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -329,29 +373,12 @@ bool ABP_Locomotive_C::RemoveAsRepresentation()
 }
 
 
-// Function BP_Locomotive.BP_Locomotive_C.UserConstructionScript
-// ()
-
-void ABP_Locomotive_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.UserConstructionScript");
-
-	ABP_Locomotive_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Use_K2Node_InputActionEvent_4
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Locomotive_C::InpActEvt_Use_K2Node_InputActionEvent_4(const struct FKey& Key)
+void ABP_Locomotive_C::InpActEvt_Use_K2Node_InputActionEvent_4(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Use_K2Node_InputActionEvent_4");
 
@@ -367,11 +394,11 @@ void ABP_Locomotive_C::InpActEvt_Use_K2Node_InputActionEvent_4(const struct FKey
 
 
 // Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_3
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Locomotive_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_3(const struct FKey& Key)
+void ABP_Locomotive_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_3(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_3");
 
@@ -387,11 +414,11 @@ void ABP_Locomotive_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_3(const stru
 
 
 // Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_2
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Locomotive_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_2(const struct FKey& Key)
+void ABP_Locomotive_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_2(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_2");
 
@@ -407,11 +434,11 @@ void ABP_Locomotive_C::InpActEvt_Jump_Drift_K2Node_InputActionEvent_2(const stru
 
 
 // Function BP_Locomotive.BP_Locomotive_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Locomotive_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_1(const struct FKey& Key)
+void ABP_Locomotive_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_1(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_InputActionEvent_1");
 
@@ -426,16 +453,16 @@ void ABP_Locomotive_C::InpActEvt_ResourceScanner_ToggleVehicleRecording_K2Node_I
 }
 
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_6
-// ()
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Locomotive_C::InpActEvt_NumPadOne_K2Node_InputKeyEvent_6(const struct FKey& Key)
+void ABP_Locomotive_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_6");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2");
 
-	ABP_Locomotive_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_6_Params params;
+	ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -446,16 +473,16 @@ void ABP_Locomotive_C::InpActEvt_NumPadOne_K2Node_InputKeyEvent_6(const struct F
 }
 
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5
-// ()
+// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Locomotive_C::InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5(const struct FKey& Key)
+void ABP_Locomotive_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1(struct FKey* Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1");
 
-	ABP_Locomotive_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5_Params params;
+	ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_1_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
@@ -466,77 +493,17 @@ void ABP_Locomotive_C::InpActEvt_NumPadTwo_K2Node_InputKeyEvent_5(const struct F
 }
 
 
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4
-// ()
+// Function BP_Locomotive.BP_Locomotive_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Locomotive_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4(const struct FKey& Key)
+void ABP_Locomotive_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.SetActorRepresentationColor");
 
-	ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_4_Params params;
-	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3
-// ()
-// Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ABP_Locomotive_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3(const struct FKey& Key)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3");
-
-	ABP_Locomotive_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3_Params params;
-	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadThree_K2Node_InputKeyEvent_2
-// ()
-// Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ABP_Locomotive_C::InpActEvt_NumPadThree_K2Node_InputKeyEvent_2(const struct FKey& Key)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadThree_K2Node_InputKeyEvent_2");
-
-	ABP_Locomotive_C_InpActEvt_NumPadThree_K2Node_InputKeyEvent_2_Params params;
-	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadFour_K2Node_InputKeyEvent_1
-// ()
-// Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ABP_Locomotive_C::InpActEvt_NumPadFour_K2Node_InputKeyEvent_1(const struct FKey& Key)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpActEvt_NumPadFour_K2Node_InputKeyEvent_1");
-
-	ABP_Locomotive_C_InpActEvt_NumPadFour_K2Node_InputKeyEvent_1_Params params;
-	params.Key = Key;
+	ABP_Locomotive_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -547,7 +514,7 @@ void ABP_Locomotive_C::InpActEvt_NumPadFour_K2Node_InputKeyEvent_1(const struct 
 
 
 // Function BP_Locomotive.BP_Locomotive_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -567,7 +534,7 @@ void ABP_Locomotive_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_Locomotive.BP_Locomotive_C.UpdateCamera
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::UpdateCamera()
 {
@@ -584,7 +551,7 @@ void ABP_Locomotive_C::UpdateCamera()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Locomotive_C::ReceiveBeginPlay()
 {
@@ -601,7 +568,7 @@ void ABP_Locomotive_C::ReceiveBeginPlay()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_Locomotive_C::ReceiveDestroyed()
 {
@@ -618,7 +585,7 @@ void ABP_Locomotive_C::ReceiveDestroyed()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.Server_Leave
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::Server_Leave()
 {
@@ -635,11 +602,11 @@ void ABP_Locomotive_C::Server_Leave()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Locomotive_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_Locomotive_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_1(float* AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_1");
 
@@ -655,11 +622,11 @@ void ABP_Locomotive_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_1(float AxisVa
 
 
 // Function BP_Locomotive.BP_Locomotive_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Locomotive_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2(float AxisValue)
+void ABP_Locomotive_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2(float* AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2");
 
@@ -675,7 +642,7 @@ void ABP_Locomotive_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_2(float Axis
 
 
 // Function BP_Locomotive.BP_Locomotive_C.ReceiveUnpossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            OldController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -695,7 +662,7 @@ void ABP_Locomotive_C::ReceiveUnpossessed(class AController** OldController)
 
 
 // Function BP_Locomotive.BP_Locomotive_C.ReceivePossessed
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AController**            NewController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -715,7 +682,7 @@ void ABP_Locomotive_C::ReceivePossessed(class AController** NewController)
 
 
 // Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_01
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::MultiCast_TrainHorn_01()
 {
@@ -732,7 +699,7 @@ void ABP_Locomotive_C::MultiCast_TrainHorn_01()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_01_Stop
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::MultiCast_TrainHorn_01_Stop()
 {
@@ -749,7 +716,7 @@ void ABP_Locomotive_C::MultiCast_TrainHorn_01_Stop()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_02
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::MultiCast_TrainHorn_02()
 {
@@ -766,7 +733,7 @@ void ABP_Locomotive_C::MultiCast_TrainHorn_02()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.MultiCast_TrainHorn_02_Stop
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::MultiCast_TrainHorn_02_Stop()
 {
@@ -783,7 +750,7 @@ void ABP_Locomotive_C::MultiCast_TrainHorn_02_Stop()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.Server_Horn_01
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::Server_Horn_01()
 {
@@ -800,7 +767,7 @@ void ABP_Locomotive_C::Server_Horn_01()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.Server_Horn_01_Stop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::Server_Horn_01_Stop()
 {
@@ -817,7 +784,7 @@ void ABP_Locomotive_C::Server_Horn_01_Stop()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.Server_Horn_02
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::Server_Horn_02()
 {
@@ -834,7 +801,7 @@ void ABP_Locomotive_C::Server_Horn_02()
 
 
 // Function BP_Locomotive.BP_Locomotive_C.Server_Horn_02_Stop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Locomotive_C::Server_Horn_02_Stop()
 {
@@ -850,12 +817,80 @@ void ABP_Locomotive_C::Server_Horn_02_Stop()
 }
 
 
-// Function BP_Locomotive.BP_Locomotive_C.ExecuteUbergraph_BP_Locomotive
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_Locomotive.BP_Locomotive_C.OnNameChanged
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Locomotive_C::ExecuteUbergraph_BP_Locomotive(int EntryPoint)
+void ABP_Locomotive_C::OnNameChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.OnNameChanged");
+
+	ABP_Locomotive_C_OnNameChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.UpdateTrainName
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Locomotive_C::UpdateTrainName()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.UpdateTrainName");
+
+	ABP_Locomotive_C_UpdateTrainName_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.GainedSignificance
+// (Event, Public, BlueprintEvent)
+
+void ABP_Locomotive_C::GainedSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.GainedSignificance");
+
+	ABP_Locomotive_C_GainedSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.LostSignificance
+// (Event, Public, BlueprintEvent)
+
+void ABP_Locomotive_C::LostSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.LostSignificance");
+
+	ABP_Locomotive_C_LostSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Locomotive.BP_Locomotive_C.ExecuteUbergraph_BP_Locomotive
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Locomotive_C::ExecuteUbergraph_BP_Locomotive(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Locomotive.BP_Locomotive_C.ExecuteUbergraph_BP_Locomotive");
 

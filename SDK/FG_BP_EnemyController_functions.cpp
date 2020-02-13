@@ -12,33 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_EnemyController.BP_EnemyController_C.UserConstructionScript
-// ()
-
-void ABP_EnemyController_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EnemyController.BP_EnemyController_C.UserConstructionScript");
-
-	ABP_EnemyController_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_EnemyController.BP_EnemyController_C.OnPossess
-// ()
+// Function BP_EnemyController.BP_EnemyController_C.ReceivePossess
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class APawn**                  PossessedPawn                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_EnemyController_C::OnPossess(class APawn** PossessedPawn)
+void ABP_EnemyController_C::ReceivePossess(class APawn** PossessedPawn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_EnemyController.BP_EnemyController_C.OnPossess");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_EnemyController.BP_EnemyController_C.ReceivePossess");
 
-	ABP_EnemyController_C_OnPossess_Params params;
+	ABP_EnemyController_C_ReceivePossess_Params params;
 	params.PossessedPawn = PossessedPawn;
 
 	auto flags = fn->FunctionFlags;
@@ -50,7 +33,7 @@ void ABP_EnemyController_C::OnPossess(class APawn** PossessedPawn)
 
 
 // Function BP_EnemyController.BP_EnemyController_C.OnAggroTargetLost
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AActor**                 lostActor                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,11 +53,11 @@ void ABP_EnemyController_C::OnAggroTargetLost(class AActor** lostActor)
 
 
 // Function BP_EnemyController.BP_EnemyController_C.ExecuteUbergraph_BP_EnemyController
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_EnemyController_C::ExecuteUbergraph_BP_EnemyController(int EntryPoint)
+void ABP_EnemyController_C::ExecuteUbergraph_BP_EnemyController(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EnemyController.BP_EnemyController_C.ExecuteUbergraph_BP_EnemyController");
 

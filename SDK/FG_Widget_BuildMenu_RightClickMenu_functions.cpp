@@ -12,8 +12,33 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.OnKeyUp
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_BuildMenu_RightClickMenu_C::OnKeyUp(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.OnKeyUp");
+
+	UWidget_BuildMenu_RightClickMenu_C_OnKeyUp_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.OnKeyDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -38,7 +63,7 @@ struct FEventReply UWidget_BuildMenu_RightClickMenu_C::OnKeyDown(struct FGeometr
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.GetHoverBindToHotbar
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -59,7 +84,7 @@ struct FLinearColor UWidget_BuildMenu_RightClickMenu_C::GetHoverBindToHotbar()
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.GetHoverColorCodex
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -80,7 +105,7 @@ struct FLinearColor UWidget_BuildMenu_RightClickMenu_C::GetHoverColorCodex()
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.GetHoverColorRemoveFromShoppingList
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -101,7 +126,7 @@ struct FLinearColor UWidget_BuildMenu_RightClickMenu_C::GetHoverColorRemoveFromS
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.GetHoverColorAddToShoppingList
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -122,7 +147,7 @@ struct FLinearColor UWidget_BuildMenu_RightClickMenu_C::GetHoverColorAddToShoppi
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.GetRemoveItemButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -143,7 +168,7 @@ ESlateVisibility UWidget_BuildMenu_RightClickMenu_C::GetRemoveItemButtonVisibili
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.GetAmount
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            NumberRecipes                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -165,7 +190,7 @@ void UWidget_BuildMenu_RightClickMenu_C::GetAmount(int* NumberRecipes)
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.GetNumberRecipesInShoppingList
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -186,7 +211,7 @@ struct FText UWidget_BuildMenu_RightClickMenu_C::GetNumberRecipesInShoppingList(
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_BuildMenu_RightClickMenu_C::Construct()
 {
@@ -203,7 +228,7 @@ void UWidget_BuildMenu_RightClickMenu_C::Construct()
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.BndEvt__Button0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenu_RightClickMenu_C::BndEvt__Button0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -220,7 +245,7 @@ void UWidget_BuildMenu_RightClickMenu_C::BndEvt__Button0_K2Node_ComponentBoundEv
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.BndEvt__mRemoveToDoListButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_BuildMenu_RightClickMenu_C::BndEvt__mRemoveToDoListButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
@@ -237,11 +262,11 @@ void UWidget_BuildMenu_RightClickMenu_C::BndEvt__mRemoveToDoListButton_K2Node_Co
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.ExecuteUbergraph_Widget_BuildMenu_RightClickMenu
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_RightClickMenu_C::ExecuteUbergraph_Widget_BuildMenu_RightClickMenu(int EntryPoint)
+void UWidget_BuildMenu_RightClickMenu_C::ExecuteUbergraph_Widget_BuildMenu_RightClickMenu(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.ExecuteUbergraph_Widget_BuildMenu_RightClickMenu");
 
@@ -257,7 +282,7 @@ void UWidget_BuildMenu_RightClickMenu_C::ExecuteUbergraph_Widget_BuildMenu_Right
 
 
 // Function Widget_BuildMenu_RightClickMenu.Widget_BuildMenu_RightClickMenu_C.UpdateWindowWidgetOffset__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BuildMenu_RightClickMenu_C::UpdateWindowWidgetOffset__DelegateSignature()
 {

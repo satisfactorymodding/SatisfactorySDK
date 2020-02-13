@@ -24,7 +24,7 @@ struct UBTT_SetLuring_C_ReceiveExecuteAI_Params
 // Function BTT_SetLuring.BTT_SetLuring_C.ExecuteUbergraph_BTT_SetLuring
 struct UBTT_SetLuring_C_ExecuteUbergraph_BTT_SetLuring_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

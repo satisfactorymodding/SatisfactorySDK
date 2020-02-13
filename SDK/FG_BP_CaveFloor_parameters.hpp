@@ -24,7 +24,7 @@ struct ABP_CaveFloor_C_GetEntrenceAndExitIndex_Params
 // Function BP_CaveFloor.BP_CaveFloor_C.GetStaticMeshForIndex
 struct ABP_CaveFloor_C_GetStaticMeshForIndex_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UStaticMesh*                                 NewParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

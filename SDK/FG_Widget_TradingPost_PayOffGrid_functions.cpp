@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TradingPost_PayOffGrid.Widget_TradingPost_PayOffGrid_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_InventorySlot_C* InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_PayOffGrid_C::DropInventorySlotStack(class UWidget_InventorySlot_C* InventorySlot, bool* Result)
+void UWidget_TradingPost_PayOffGrid_C::DropInventorySlotStack(class UWidget_InventorySlot_C** InventorySlot, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_PayOffGrid.Widget_TradingPost_PayOffGrid_C.DropInventorySlotStack");
 
@@ -37,11 +37,11 @@ void UWidget_TradingPost_PayOffGrid_C::DropInventorySlotStack(class UWidget_Inve
 
 
 // Function Widget_TradingPost_PayOffGrid.Widget_TradingPost_PayOffGrid_C.SetUpPayOffSlots
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  mSchematic                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 mSchematic                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_PayOffGrid_C::SetUpPayOffSlots(class UClass* mSchematic)
+void UWidget_TradingPost_PayOffGrid_C::SetUpPayOffSlots(class UClass** mSchematic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_PayOffGrid.Widget_TradingPost_PayOffGrid_C.SetUpPayOffSlots");
 
@@ -57,7 +57,7 @@ void UWidget_TradingPost_PayOffGrid_C::SetUpPayOffSlots(class UClass* mSchematic
 
 
 // Function Widget_TradingPost_PayOffGrid.Widget_TradingPost_PayOffGrid_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TradingPost_PayOffGrid_C::Construct()
 {
@@ -74,11 +74,11 @@ void UWidget_TradingPost_PayOffGrid_C::Construct()
 
 
 // Function Widget_TradingPost_PayOffGrid.Widget_TradingPost_PayOffGrid_C.ExecuteUbergraph_Widget_TradingPost_PayOffGrid
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TradingPost_PayOffGrid_C::ExecuteUbergraph_Widget_TradingPost_PayOffGrid(int EntryPoint)
+void UWidget_TradingPost_PayOffGrid_C::ExecuteUbergraph_Widget_TradingPost_PayOffGrid(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TradingPost_PayOffGrid.Widget_TradingPost_PayOffGrid_C.ExecuteUbergraph_Widget_TradingPost_PayOffGrid");
 

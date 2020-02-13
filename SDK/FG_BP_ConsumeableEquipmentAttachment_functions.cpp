@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.GetHandsItem
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UClass*                  Item                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -34,25 +34,8 @@ void ABP_ConsumeableEquipmentAttachment_C::GetHandsItem(class UClass** Item)
 }
 
 
-// Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.UserConstructionScript
-// ()
-
-void ABP_ConsumeableEquipmentAttachment_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.UserConstructionScript");
-
-	ABP_ConsumeableEquipmentAttachment_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -72,7 +55,7 @@ void ABP_ConsumeableEquipmentAttachment_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.PlayUseEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector*                UseLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -92,7 +75,7 @@ void ABP_ConsumeableEquipmentAttachment_C::PlayUseEffect(struct FVector* UseLoca
 
 
 // Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.OnAttach
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_ConsumeableEquipmentAttachment_C::OnAttach()
 {
@@ -109,11 +92,11 @@ void ABP_ConsumeableEquipmentAttachment_C::OnAttach()
 
 
 // Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.ExecuteUbergraph_BP_ConsumeableEquipmentAttachment
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ConsumeableEquipmentAttachment_C::ExecuteUbergraph_BP_ConsumeableEquipmentAttachment(int EntryPoint)
+void ABP_ConsumeableEquipmentAttachment_C::ExecuteUbergraph_BP_ConsumeableEquipmentAttachment(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ConsumeableEquipmentAttachment.BP_ConsumeableEquipmentAttachment_C.ExecuteUbergraph_BP_ConsumeableEquipmentAttachment");
 

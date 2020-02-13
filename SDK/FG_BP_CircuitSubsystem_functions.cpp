@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.UserConstructionScript
-// ()
-
-void ABP_CircuitSubsystem_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.UserConstructionScript");
-
-	ABP_CircuitSubsystem_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.PowerCircuit_OnFuseSet
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_CircuitSubsystem_C::PowerCircuit_OnFuseSet()
 {
@@ -47,7 +30,7 @@ void ABP_CircuitSubsystem_C::PowerCircuit_OnFuseSet()
 
 
 // Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.Multicast_PlayFuseSetSound
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABP_CircuitSubsystem_C::Multicast_PlayFuseSetSound()
 {
@@ -64,11 +47,11 @@ void ABP_CircuitSubsystem_C::Multicast_PlayFuseSetSound()
 
 
 // Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.ExecuteUbergraph_BP_CircuitSubsystem
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CircuitSubsystem_C::ExecuteUbergraph_BP_CircuitSubsystem(int EntryPoint)
+void ABP_CircuitSubsystem_C::ExecuteUbergraph_BP_CircuitSubsystem(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.ExecuteUbergraph_BP_CircuitSubsystem");
 

@@ -38,7 +38,7 @@ struct UAnim_TrainDockingStation_C_AnimNotify_EndOffset_Params
 // Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.ExecuteUbergraph_Anim_TrainDockingStation
 struct UAnim_TrainDockingStation_C_ExecuteUbergraph_Anim_TrainDockingStation_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

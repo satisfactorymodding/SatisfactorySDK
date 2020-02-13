@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.UserConstructionScript
-struct ABP_CircuitSubsystem_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.PowerCircuit_OnFuseSet
 struct ABP_CircuitSubsystem_C_PowerCircuit_OnFuseSet_Params
 {
@@ -32,7 +27,7 @@ struct ABP_CircuitSubsystem_C_Multicast_PlayFuseSetSound_Params
 // Function BP_CircuitSubsystem.BP_CircuitSubsystem_C.ExecuteUbergraph_BP_CircuitSubsystem
 struct ABP_CircuitSubsystem_C_ExecuteUbergraph_BP_CircuitSubsystem_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

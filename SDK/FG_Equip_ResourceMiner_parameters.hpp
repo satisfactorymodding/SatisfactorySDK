@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Equip_ResourceMiner.Equip_ResourceMiner_C.UserConstructionScript
-struct AEquip_ResourceMiner_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_ResourceMiner.Equip_ResourceMiner_C.StopMining
 struct AEquip_ResourceMiner_C_StopMining_Params
 {
@@ -54,17 +49,10 @@ struct AEquip_ResourceMiner_C_PlaySecondEffects_Params
 {
 };
 
-// Function Equip_ResourceMiner.Equip_ResourceMiner_C.HitDeposit
-struct AEquip_ResourceMiner_C_HitDeposit_Params
-{
-	class AActor*                                      Hit_Actor_Ref;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Hit_Location;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Equip_ResourceMiner.Equip_ResourceMiner_C.ExecuteUbergraph_Equip_ResourceMiner
 struct AEquip_ResourceMiner_C_ExecuteUbergraph_Equip_ResourceMiner_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

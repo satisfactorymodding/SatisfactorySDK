@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Smoke.Widget_Smoke_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Smoke_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_Smoke_C::Construct()
 
 
 // Function Widget_Smoke.Widget_Smoke_C.OnAnimEnd
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Smoke_C::OnAnimEnd()
 {
@@ -47,7 +47,7 @@ void UWidget_Smoke_C::OnAnimEnd()
 
 
 // Function Widget_Smoke.Widget_Smoke_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -69,7 +69,7 @@ void UWidget_Smoke_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Smoke.Widget_Smoke_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -89,11 +89,11 @@ void UWidget_Smoke_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Smoke.Widget_Smoke_C.ExecuteUbergraph_Widget_Smoke
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Smoke_C::ExecuteUbergraph_Widget_Smoke(int EntryPoint)
+void UWidget_Smoke_C::ExecuteUbergraph_Widget_Smoke(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Smoke.Widget_Smoke_C.ExecuteUbergraph_Widget_Smoke");
 

@@ -17,7 +17,7 @@ namespace SDK
 // Function Anim_VehicleWorkbench.Anim_VehicleWorkbench_C.ExecuteUbergraph_Anim_VehicleWorkbench
 struct UAnim_VehicleWorkbench_C_ExecuteUbergraph_Anim_VehicleWorkbench_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -29,9 +29,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus);
-	void ExecuteUbergraph_Controller_Spitter_Alternative(int EntryPoint);
+	void BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_0_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus);
+	void ExecuteUbergraph_Controller_Spitter_Alternative(int* EntryPoint);
 };
 
 

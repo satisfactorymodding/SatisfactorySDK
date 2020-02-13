@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Equip_ColorGun.Equip_ColorGun_C.UserConstructionScript
-// ()
-
-void AEquip_ColorGun_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_ColorGun.Equip_ColorGun_C.UserConstructionScript");
-
-	AEquip_ColorGun_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_ColorGun.Equip_ColorGun_C.ToggleColorPickerUI
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AEquip_ColorGun_C::ToggleColorPickerUI()
 {
@@ -47,7 +30,7 @@ void AEquip_ColorGun_C::ToggleColorPickerUI()
 
 
 // Function Equip_ColorGun.Equip_ColorGun_C.PlayFireEffect
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_ColorGun_C::PlayFireEffect()
 {
@@ -64,7 +47,7 @@ void AEquip_ColorGun_C::PlayFireEffect()
 
 
 // Function Equip_ColorGun.Equip_ColorGun_C.PlayReloadEffects
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_ColorGun_C::PlayReloadEffects()
 {
@@ -81,7 +64,7 @@ void AEquip_ColorGun_C::PlayReloadEffects()
 
 
 // Function Equip_ColorGun.Equip_ColorGun_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_ColorGun_C::WasEquipped()
 {
@@ -98,7 +81,7 @@ void AEquip_ColorGun_C::WasEquipped()
 
 
 // Function Equip_ColorGun.Equip_ColorGun_C.Event Clear Color Picker UI
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void AEquip_ColorGun_C::Event_Clear_Color_Picker_UI()
 {
@@ -115,7 +98,7 @@ void AEquip_ColorGun_C::Event_Clear_Color_Picker_UI()
 
 
 // Function Equip_ColorGun.Equip_ColorGun_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_ColorGun_C::WasUnEquipped()
 {
@@ -132,11 +115,11 @@ void AEquip_ColorGun_C::WasUnEquipped()
 
 
 // Function Equip_ColorGun.Equip_ColorGun_C.ExecuteUbergraph_Equip_ColorGun
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_ColorGun_C::ExecuteUbergraph_Equip_ColorGun(int EntryPoint)
+void AEquip_ColorGun_C::ExecuteUbergraph_Equip_ColorGun(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_ColorGun.Equip_ColorGun_C.ExecuteUbergraph_Equip_ColorGun");
 

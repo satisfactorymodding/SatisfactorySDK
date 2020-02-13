@@ -24,7 +24,7 @@ struct UWidget_WindowPan_C_Tick_Params
 // Function Widget_WindowPan.Widget_WindowPan_C.ExecuteUbergraph_Widget_WindowPan
 struct UWidget_WindowPan_C_ExecuteUbergraph_Widget_WindowPan_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

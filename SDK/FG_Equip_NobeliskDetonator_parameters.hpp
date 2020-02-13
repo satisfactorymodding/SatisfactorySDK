@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.UserConstructionScript
-struct AEquip_NobeliskDetonator_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.PlayReloadEffects
 struct AEquip_NobeliskDetonator_C_PlayReloadEffects_Params
 {
@@ -52,7 +47,7 @@ struct AEquip_NobeliskDetonator_C_PlayFireReleasedEffects_Params
 // Function Equip_NobeliskDetonator.Equip_NobeliskDetonator_C.ExecuteUbergraph_Equip_NobeliskDetonator
 struct AEquip_NobeliskDetonator_C_ExecuteUbergraph_Equip_NobeliskDetonator_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

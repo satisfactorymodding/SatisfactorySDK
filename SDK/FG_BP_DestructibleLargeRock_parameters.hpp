@@ -14,6 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_DestructibleLargeRock.BP_DestructibleLargeRock_C.PlayDestructEffects
+struct ABP_DestructibleLargeRock_C_PlayDestructEffects_Params
+{
+};
+
+// Function BP_DestructibleLargeRock.BP_DestructibleLargeRock_C.ExecuteUbergraph_BP_DestructibleLargeRock
+struct ABP_DestructibleLargeRock_C_ExecuteUbergraph_BP_DestructibleLargeRock_Params
+{
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

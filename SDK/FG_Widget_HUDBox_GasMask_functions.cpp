@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HUDBox_GasMask.Widget_HUDBox_GasMask_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HUDBox_GasMask_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_HUDBox_GasMask_C::Construct()
 
 
 // Function Widget_HUDBox_GasMask.Widget_HUDBox_GasMask_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,11 +52,11 @@ void UWidget_HUDBox_GasMask_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 
 
 // Function Widget_HUDBox_GasMask.Widget_HUDBox_GasMask_C.ExecuteUbergraph_Widget_HUDBox_GasMask
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HUDBox_GasMask_C::ExecuteUbergraph_Widget_HUDBox_GasMask(int EntryPoint)
+void UWidget_HUDBox_GasMask_C::ExecuteUbergraph_Widget_HUDBox_GasMask(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HUDBox_GasMask.Widget_HUDBox_GasMask_C.ExecuteUbergraph_Widget_HUDBox_GasMask");
 

@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_StandbyButton.Widget_StandbyButton_C.SetIsProductionPaused
+struct UWidget_StandbyButton_C_SetIsProductionPaused_Params
+{
+	bool*                                              IsPaused;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_StandbyButton.Widget_StandbyButton_C.BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
 struct UWidget_StandbyButton_C_BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params
 {
@@ -22,7 +28,7 @@ struct UWidget_StandbyButton_C_BndEvt__mStandbyButton_K2Node_ComponentBoundEvent
 // Function Widget_StandbyButton.Widget_StandbyButton_C.SetStandbyButtonBrush
 struct UWidget_StandbyButton_C_SetStandbyButtonBrush_Params
 {
-	bool                                               productionIsPaused;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              productionIsPaused;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_StandbyButton.Widget_StandbyButton_C.BndEvt__mStandbyButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
@@ -41,10 +47,15 @@ struct UWidget_StandbyButton_C_PreConstruct_Params
 	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Widget_StandbyButton.Widget_StandbyButton_C.Construct
+struct UWidget_StandbyButton_C_Construct_Params
+{
+};
+
 // Function Widget_StandbyButton.Widget_StandbyButton_C.ExecuteUbergraph_Widget_StandbyButton
 struct UWidget_StandbyButton_C_ExecuteUbergraph_Widget_StandbyButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_StandbyButton.Widget_StandbyButton_C.OnStandbyClicked__DelegateSignature

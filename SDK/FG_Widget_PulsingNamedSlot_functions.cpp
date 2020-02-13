@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PulsingNamedSlot.Widget_PulsingNamedSlot_C.mPlayPulseAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PulsingNamedSlot_C::mPlayPulseAnim()
 {
@@ -30,7 +30,7 @@ void UWidget_PulsingNamedSlot_C::mPlayPulseAnim()
 
 
 // Function Widget_PulsingNamedSlot.Widget_PulsingNamedSlot_C.mStopPulseAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PulsingNamedSlot_C::mStopPulseAnim()
 {
@@ -47,11 +47,11 @@ void UWidget_PulsingNamedSlot_C::mStopPulseAnim()
 
 
 // Function Widget_PulsingNamedSlot.Widget_PulsingNamedSlot_C.ExecuteUbergraph_Widget_PulsingNamedSlot
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PulsingNamedSlot_C::ExecuteUbergraph_Widget_PulsingNamedSlot(int EntryPoint)
+void UWidget_PulsingNamedSlot_C::ExecuteUbergraph_Widget_PulsingNamedSlot(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PulsingNamedSlot.Widget_PulsingNamedSlot_C.ExecuteUbergraph_Widget_PulsingNamedSlot");
 

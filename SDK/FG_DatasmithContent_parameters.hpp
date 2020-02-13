@@ -17,16 +17,16 @@ namespace SDK
 // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey
 struct UDatasmithContentBlueprintLibrary_GetDatasmithUserDataValueForKey_Params
 {
-	class UObject*                                     Object;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       Key;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject**                                    Object;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      Key;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	class FString                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue
 struct UDatasmithContentBlueprintLibrary_GetDatasmithUserDataKeysAndValuesForValue_Params
 {
-	class UObject*                                     Object;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	class FString                                      StringToMatch;                                            // (Parm, ZeroConstructor)
+	class UObject**                                    Object;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString*                                     StringToMatch;                                            // (Parm, ZeroConstructor)
 	TArray<struct FName>                               OutKeys;                                                  // (Parm, OutParm, ZeroConstructor)
 	TArray<class FString>                              OutValues;                                                // (Parm, OutParm, ZeroConstructor)
 };
@@ -34,7 +34,7 @@ struct UDatasmithContentBlueprintLibrary_GetDatasmithUserDataKeysAndValuesForVal
 // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData
 struct UDatasmithContentBlueprintLibrary_GetDatasmithUserData_Params
 {
-	class UObject*                                     Object;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject**                                    Object;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	class UDatasmithAssetUserData*                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 

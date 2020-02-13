@@ -13,16 +13,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.OnSpawnAnim
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*            OverwritePanelWidget           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPanelWidget**           OverwritePanelWIdget           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SubMenuBackground_C::OnSpawnAnim(class UPanelWidget* OverwritePanelWidget)
+void UWidget_SubMenuBackground_C::OnSpawnAnim(class UPanelWidget** OverwritePanelWIdget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.OnSpawnAnim");
 
 	UWidget_SubMenuBackground_C_OnSpawnAnim_Params params;
-	params.OverwritePanelWidget = OverwritePanelWidget;
+	params.OverwritePanelWIdget = OverwritePanelWIdget;
 
 	auto flags = fn->FunctionFlags;
 
@@ -33,7 +33,7 @@ void UWidget_SubMenuBackground_C::OnSpawnAnim(class UPanelWidget* OverwritePanel
 
 
 // Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SubMenuBackground_C::Construct()
 {
@@ -50,16 +50,16 @@ void UWidget_SubMenuBackground_C::Construct()
 
 
 // Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.PlayListSpawnAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*            OverwritePanelWidget           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPanelWidget**           OverwritePanelWIdget           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_SubMenuBackground_C::PlayListSpawnAnim(class UPanelWidget* OverwritePanelWidget)
+void UWidget_SubMenuBackground_C::PlayListSpawnAnim(class UPanelWidget** OverwritePanelWIdget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.PlayListSpawnAnim");
 
 	UWidget_SubMenuBackground_C_PlayListSpawnAnim_Params params;
-	params.OverwritePanelWidget = OverwritePanelWidget;
+	params.OverwritePanelWIdget = OverwritePanelWIdget;
 
 	auto flags = fn->FunctionFlags;
 
@@ -70,7 +70,7 @@ void UWidget_SubMenuBackground_C::PlayListSpawnAnim(class UPanelWidget* Overwrit
 
 
 // Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -90,7 +90,7 @@ void UWidget_SubMenuBackground_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.OnListSpawnAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SubMenuBackground_C::OnListSpawnAnim()
 {
@@ -107,7 +107,7 @@ void UWidget_SubMenuBackground_C::OnListSpawnAnim()
 
 
 // Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.PlayBackgroundSpawnAnim
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_SubMenuBackground_C::PlayBackgroundSpawnAnim()
 {
@@ -124,11 +124,11 @@ void UWidget_SubMenuBackground_C::PlayBackgroundSpawnAnim()
 
 
 // Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.ExecuteUbergraph_Widget_SubMenuBackground
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SubMenuBackground_C::ExecuteUbergraph_Widget_SubMenuBackground(int EntryPoint)
+void UWidget_SubMenuBackground_C::ExecuteUbergraph_Widget_SubMenuBackground(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SubMenuBackground.Widget_SubMenuBackground_C.ExecuteUbergraph_Widget_SubMenuBackground");
 

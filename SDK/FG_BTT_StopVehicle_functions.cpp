@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_StopVehicle.BTT_StopVehicle_C.ReceiveExecuteAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,7 +35,7 @@ void UBTT_StopVehicle_C::ReceiveExecuteAI(class AAIController** OwnerController,
 
 
 // Function BTT_StopVehicle.BTT_StopVehicle_C.ReceiveTickAI
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController**          OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn**                  ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -59,11 +59,11 @@ void UBTT_StopVehicle_C::ReceiveTickAI(class AAIController** OwnerController, cl
 
 
 // Function BTT_StopVehicle.BTT_StopVehicle_C.ExecuteUbergraph_BTT_StopVehicle
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_StopVehicle_C::ExecuteUbergraph_BTT_StopVehicle(int EntryPoint)
+void UBTT_StopVehicle_C::ExecuteUbergraph_BTT_StopVehicle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_StopVehicle.BTT_StopVehicle_C.ExecuteUbergraph_BTT_StopVehicle");
 

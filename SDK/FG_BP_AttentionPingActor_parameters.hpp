@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_AttentionPingActor.BP_AttentionPingActor_C.UserConstructionScript
-struct ABP_AttentionPingActor_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_AttentionPingActor.BP_AttentionPingActor_C.SpawnAttentionPingEffects
 struct ABP_AttentionPingActor_C_SpawnAttentionPingEffects_Params
 {
@@ -27,7 +22,7 @@ struct ABP_AttentionPingActor_C_SpawnAttentionPingEffects_Params
 // Function BP_AttentionPingActor.BP_AttentionPingActor_C.ExecuteUbergraph_BP_AttentionPingActor
 struct ABP_AttentionPingActor_C_ExecuteUbergraph_BP_AttentionPingActor_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

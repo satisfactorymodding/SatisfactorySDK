@@ -12,13 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_FreightWagon.BP_FreightWagon_C.SetActorRepresentationText
-// ()
+// Function BP_FreightWagon.BP_FreightWagon_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_FreightWagon_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FreightWagon.BP_FreightWagon_C.GetActorCompassViewDistance");
+
+	ABP_FreightWagon_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_FreightWagon.BP_FreightWagon_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_FreightWagon_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FreightWagon.BP_FreightWagon_C.SetActorCompassViewDistance");
+
+	ABP_FreightWagon_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_FreightWagon.BP_FreightWagon_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABP_FreightWagon_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABP_FreightWagon_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FreightWagon.BP_FreightWagon_C.SetActorRepresentationText");
 
@@ -36,7 +80,7 @@ struct FText ABP_FreightWagon_C::SetActorRepresentationText(const struct FText& 
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +101,7 @@ bool ABP_FreightWagon_C::UpdateRepresentation()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +122,7 @@ float ABP_FreightWagon_C::GetActorFogOfWarRevealRadius()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -99,7 +143,7 @@ EFogOfWarRevealType ABP_FreightWagon_C::GetActorFogOfWarRevealType()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -120,7 +164,7 @@ struct FLinearColor ABP_FreightWagon_C::GetActorRepresentationColor()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -141,7 +185,7 @@ struct FText ABP_FreightWagon_C::GetActorRepresentationText()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +206,7 @@ class UTexture2D* ABP_FreightWagon_C::GetActorRepresentationTexture()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -183,7 +227,7 @@ ERepresentationType ABP_FreightWagon_C::GetActorRepresentationType()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +248,7 @@ bool ABP_FreightWagon_C::GetActorShouldShowInCompass()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +269,7 @@ bool ABP_FreightWagon_C::AddAsRepresentation()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -246,7 +290,7 @@ bool ABP_FreightWagon_C::GetActorShouldShowOnMap()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -267,7 +311,7 @@ struct FVector ABP_FreightWagon_C::GetRealActorLocation()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -288,7 +332,7 @@ struct FRotator ABP_FreightWagon_C::GetRealActorRotation()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -309,7 +353,7 @@ bool ABP_FreightWagon_C::IsActorStatic()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -330,7 +374,7 @@ bool ABP_FreightWagon_C::RemoveAsRepresentation()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.GetLookAtDecription
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -354,14 +398,17 @@ struct FText ABP_FreightWagon_C::GetLookAtDecription(class AFGCharacterPlayer** 
 }
 
 
-// Function BP_FreightWagon.BP_FreightWagon_C.UserConstructionScript
-// ()
+// Function BP_FreightWagon.BP_FreightWagon_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FreightWagon_C::UserConstructionScript()
+void ABP_FreightWagon_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_FreightWagon.BP_FreightWagon_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FreightWagon.BP_FreightWagon_C.SetActorRepresentationColor");
 
-	ABP_FreightWagon_C_UserConstructionScript_Params params;
+	ABP_FreightWagon_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -372,7 +419,7 @@ void ABP_FreightWagon_C::UserConstructionScript()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.OnUse
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -394,7 +441,7 @@ void ABP_FreightWagon_C::OnUse(class AFGCharacterPlayer** byCharacter, struct FU
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_FreightWagon_C::ReceiveBeginPlay()
 {
@@ -411,7 +458,7 @@ void ABP_FreightWagon_C::ReceiveBeginPlay()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_FreightWagon_C::ReceiveDestroyed()
 {
@@ -428,11 +475,11 @@ void ABP_FreightWagon_C::ReceiveDestroyed()
 
 
 // Function BP_FreightWagon.BP_FreightWagon_C.ExecuteUbergraph_BP_FreightWagon
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FreightWagon_C::ExecuteUbergraph_BP_FreightWagon(int EntryPoint)
+void ABP_FreightWagon_C::ExecuteUbergraph_BP_FreightWagon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FreightWagon.BP_FreightWagon_C.ExecuteUbergraph_BP_FreightWagon");
 

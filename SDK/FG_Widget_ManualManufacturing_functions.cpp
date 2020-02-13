@@ -12,8 +12,114 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateRelevantClasses
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_ManualManufacturing_C::UpdateRelevantClasses()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateRelevantClasses");
+
+	UWidget_ManualManufacturing_C_UpdateRelevantClasses_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnMouseButtonDown
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_ManualManufacturing_C::OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnMouseButtonDown");
+
+	UWidget_ManualManufacturing_C_OnMouseButtonDown_Params params;
+	params.MyGeometry = MyGeometry;
+	params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateAffordableCategories
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_ManualManufacturing_C::UpdateAffordableCategories()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateAffordableCategories");
+
+	UWidget_ManualManufacturing_C_UpdateAffordableCategories_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.GetCategoryWidgetFromRecipe
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_CraftBench_Category_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidget_CraftBench_Category_C* UWidget_ManualManufacturing_C::GetCategoryWidgetFromRecipe(class UClass** Recipe)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.GetCategoryWidgetFromRecipe");
+
+	UWidget_ManualManufacturing_C_GetCategoryWidgetFromRecipe_Params params;
+	params.Recipe = Recipe;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.AddUniqueRecipe
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FItemCategoryRecipeStruct> CategorizedRecipes             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UClass**                 Recipe                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ManualManufacturing_C::AddUniqueRecipe(class UClass** Recipe, TArray<struct FItemCategoryRecipeStruct>* CategorizedRecipes)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.AddUniqueRecipe");
+
+	UWidget_ManualManufacturing_C_AddUniqueRecipe_Params params;
+	params.Recipe = Recipe;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CategorizedRecipes != nullptr)
+		*CategorizedRecipes = params.CategorizedRecipes;
+}
+
+
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ClearAndHideSearchResults
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::ClearAndHideSearchResults()
 {
@@ -30,11 +136,11 @@ void UWidget_ManualManufacturing_C::ClearAndHideSearchResults()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnSearchCreateResults
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_ManualManufacturing_C::OnSearchCreateResults(const struct FText& Text)
+void UWidget_ManualManufacturing_C::OnSearchCreateResults(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnSearchCreateResults");
 
@@ -50,11 +156,11 @@ void UWidget_ManualManufacturing_C::OnSearchCreateResults(const struct FText& Te
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ShowOnlyAffordableRecipes
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           OnlyShowAffordable             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          OnlyShowAffordable             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::ShowOnlyAffordableRecipes(bool OnlyShowAffordable)
+void UWidget_ManualManufacturing_C::ShowOnlyAffordableRecipes(bool* OnlyShowAffordable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ShowOnlyAffordableRecipes");
 
@@ -70,7 +176,7 @@ void UWidget_ManualManufacturing_C::ShowOnlyAffordableRecipes(bool OnlyShowAffor
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SpaceBarOverride
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::SpaceBarOverride()
 {
@@ -87,7 +193,7 @@ void UWidget_ManualManufacturing_C::SpaceBarOverride()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StopCraftingOverride
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::StopCraftingOverride()
 {
@@ -104,7 +210,7 @@ void UWidget_ManualManufacturing_C::StopCraftingOverride()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnPreviewKeyDown
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -129,29 +235,35 @@ struct FEventReply UWidget_ManualManufacturing_C::OnPreviewKeyDown(struct FGeome
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.CreateCategoryHeader
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPanelWidget*            InScrollbox                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UPanelWidget**           InScrollbox                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FText*                  Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                          mIsCollapsed                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_CraftBench_Category_C* Category_Widget                (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::CreateCategoryHeader(class UPanelWidget* InScrollbox, const struct FText& Name)
+void UWidget_ManualManufacturing_C::CreateCategoryHeader(class UPanelWidget** InScrollbox, struct FText* Name, bool* mIsCollapsed, class UWidget_CraftBench_Category_C** Category_Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.CreateCategoryHeader");
 
 	UWidget_ManualManufacturing_C_CreateCategoryHeader_Params params;
 	params.InScrollbox = InScrollbox;
 	params.Name = Name;
+	params.mIsCollapsed = mIsCollapsed;
 
 	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	if (Category_Widget != nullptr)
+		*Category_Widget = params.Category_Widget;
 }
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateLeds
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::UpdateLeds()
 {
@@ -168,7 +280,7 @@ void UWidget_ManualManufacturing_C::UpdateLeds()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateWarningWidget
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::UpdateWarningWidget()
 {
@@ -185,7 +297,7 @@ void UWidget_ManualManufacturing_C::UpdateWarningWidget()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.GetCalculatedCurve
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -207,7 +319,7 @@ void UWidget_ManualManufacturing_C::GetCalculatedCurve(float* Output)
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ShowCurrentOutput
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -228,7 +340,7 @@ ESlateVisibility UWidget_ManualManufacturing_C::ShowCurrentOutput()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateProductionStats
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::UpdateProductionStats()
 {
@@ -245,7 +357,7 @@ void UWidget_ManualManufacturing_C::UpdateProductionStats()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateProgressBar
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::UpdateProgressBar()
 {
@@ -262,7 +374,7 @@ void UWidget_ManualManufacturing_C::UpdateProgressBar()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.GetCraftButtonFeedback
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::GetCraftButtonFeedback()
 {
@@ -279,7 +391,7 @@ void UWidget_ManualManufacturing_C::GetCraftButtonFeedback()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.CloseVehicle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::CloseVehicle()
 {
@@ -296,7 +408,7 @@ void UWidget_ManualManufacturing_C::CloseVehicle()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.GetInfoboxVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -317,7 +429,7 @@ ESlateVisibility UWidget_ManualManufacturing_C::GetInfoboxVisibility()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.GetCraftingFeedbackVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -338,11 +450,11 @@ ESlateVisibility UWidget_ManualManufacturing_C::GetCraftingFeedbackVisibility()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SetWorkingAtWorkbenchOnServer
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGPlayerController*     FGPlayerController             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGPlayerController**    FGPlayerController             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::SetWorkingAtWorkbenchOnServer(class AFGPlayerController* FGPlayerController)
+void UWidget_ManualManufacturing_C::SetWorkingAtWorkbenchOnServer(class AFGPlayerController** FGPlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SetWorkingAtWorkbenchOnServer");
 
@@ -358,7 +470,7 @@ void UWidget_ManualManufacturing_C::SetWorkingAtWorkbenchOnServer(class AFGPlaye
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnCraftCompleted
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::OnCraftCompleted()
 {
@@ -375,11 +487,11 @@ void UWidget_ManualManufacturing_C::OnCraftCompleted()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.CreateInfoBox
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  mRecipe                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 mRecipe                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::CreateInfoBox(class UClass* mRecipe)
+void UWidget_ManualManufacturing_C::CreateInfoBox(class UClass** mRecipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.CreateInfoBox");
 
@@ -395,7 +507,7 @@ void UWidget_ManualManufacturing_C::CreateInfoBox(class UClass* mRecipe)
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::Cleanup()
 {
@@ -412,7 +524,7 @@ void UWidget_ManualManufacturing_C::Cleanup()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.GetAvailableRecipes
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<class UClass*>          AvailableRecipes               (Parm, OutParm, ZeroConstructor)
 
@@ -434,11 +546,11 @@ void UWidget_ManualManufacturing_C::GetAvailableRecipes(TArray<class UClass*>* A
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SetSelectedRecipe
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  mRecipe                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 mRecipe                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::SetSelectedRecipe(class UClass* mRecipe)
+void UWidget_ManualManufacturing_C::SetSelectedRecipe(class UClass** mRecipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SetSelectedRecipe");
 
@@ -454,7 +566,7 @@ void UWidget_ManualManufacturing_C::SetSelectedRecipe(class UClass* mRecipe)
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.InitRecipeList
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::InitRecipeList()
 {
@@ -471,7 +583,7 @@ void UWidget_ManualManufacturing_C::InitRecipeList()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::Destruct()
 {
@@ -488,7 +600,7 @@ void UWidget_ManualManufacturing_C::Destruct()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::Construct()
 {
@@ -505,7 +617,7 @@ void UWidget_ManualManufacturing_C::Construct()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SetupProductionMode
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::SetupProductionMode()
 {
@@ -522,11 +634,11 @@ void UWidget_ManualManufacturing_C::SetupProductionMode()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnNewRecipeSet
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  mNewRecipe                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 mNewRecipe                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::OnNewRecipeSet(class UClass* mNewRecipe)
+void UWidget_ManualManufacturing_C::OnNewRecipeSet(class UClass** mNewRecipe)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnNewRecipeSet");
 
@@ -542,7 +654,7 @@ void UWidget_ManualManufacturing_C::OnNewRecipeSet(class UClass* mNewRecipe)
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.Init
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::Init()
 {
@@ -559,16 +671,16 @@ void UWidget_ManualManufacturing_C::Init()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StartProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          produceSpeed                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         dt                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::StartProducing(float produceSpeed)
+void UWidget_ManualManufacturing_C::StartProducing(float* dt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StartProducing");
 
 	UWidget_ManualManufacturing_C_StartProducing_Params params;
-	params.produceSpeed = produceSpeed;
+	params.dt = dt;
 
 	auto flags = fn->FunctionFlags;
 
@@ -579,7 +691,7 @@ void UWidget_ManualManufacturing_C::StartProducing(float produceSpeed)
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.EndProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::EndProducing()
 {
@@ -596,7 +708,7 @@ void UWidget_ManualManufacturing_C::EndProducing()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -618,7 +730,7 @@ void UWidget_ManualManufacturing_C::Tick(struct FGeometry* MyGeometry, float* In
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnCraftingProgressbarAnimationLoop
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::OnCraftingProgressbarAnimationLoop()
 {
@@ -634,25 +746,8 @@ void UWidget_ManualManufacturing_C::OnCraftingProgressbarAnimationLoop()
 }
 
 
-// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StartHold
-// ()
-
-void UWidget_ManualManufacturing_C::StartHold()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StartHold");
-
-	UWidget_ManualManufacturing_C_StartHold_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StopSuperClick
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::StopSuperClick()
 {
@@ -669,7 +764,7 @@ void UWidget_ManualManufacturing_C::StopSuperClick()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StartSuperClick
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::StartSuperClick()
 {
@@ -686,7 +781,7 @@ void UWidget_ManualManufacturing_C::StartSuperClick()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.IncreaseGlow
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::IncreaseGlow()
 {
@@ -703,7 +798,7 @@ void UWidget_ManualManufacturing_C::IncreaseGlow()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.DecreseGlow
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::DecreseGlow()
 {
@@ -720,7 +815,7 @@ void UWidget_ManualManufacturing_C::DecreseGlow()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.Shake
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::Shake()
 {
@@ -737,7 +832,7 @@ void UWidget_ManualManufacturing_C::Shake()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.EmptyBar
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::EmptyBar()
 {
@@ -754,7 +849,7 @@ void UWidget_ManualManufacturing_C::EmptyBar()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.FadeBar
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::FadeBar()
 {
@@ -771,7 +866,7 @@ void UWidget_ManualManufacturing_C::FadeBar()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.WarningMessageCheck
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::WarningMessageCheck()
 {
@@ -788,16 +883,16 @@ void UWidget_ManualManufacturing_C::WarningMessageCheck()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ProductionStartupDelay
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          produceSpeed                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         ProduceSpeed                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::ProductionStartupDelay(float produceSpeed)
+void UWidget_ManualManufacturing_C::ProductionStartupDelay(float* ProduceSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ProductionStartupDelay");
 
 	UWidget_ManualManufacturing_C_ProductionStartupDelay_Params params;
-	params.produceSpeed = produceSpeed;
+	params.ProduceSpeed = ProduceSpeed;
 
 	auto flags = fn->FunctionFlags;
 
@@ -808,7 +903,7 @@ void UWidget_ManualManufacturing_C::ProductionStartupDelay(float produceSpeed)
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.PlayLEDSound
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::PlayLEDSound()
 {
@@ -825,7 +920,7 @@ void UWidget_ManualManufacturing_C::PlayLEDSound()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ShowAddedToInventory
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::ShowAddedToInventory()
 {
@@ -842,7 +937,7 @@ void UWidget_ManualManufacturing_C::ShowAddedToInventory()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.HideAddedToInventoryEvent
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::HideAddedToInventoryEvent()
 {
@@ -859,7 +954,7 @@ void UWidget_ManualManufacturing_C::HideAddedToInventoryEvent()
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ManualManufacturing_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -876,11 +971,11 @@ void UWidget_ManualManufacturing_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.BndEvt__mOnlyShowAffordableCheckbox_K2Node_ComponentBoundEvent_3_OnCheckChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// bool                           IsChecked                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          IsChecked                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManualManufacturing_C::BndEvt__mOnlyShowAffordableCheckbox_K2Node_ComponentBoundEvent_3_OnCheckChanged__DelegateSignature(bool IsChecked)
+void UWidget_ManualManufacturing_C::BndEvt__mOnlyShowAffordableCheckbox_K2Node_ComponentBoundEvent_3_OnCheckChanged__DelegateSignature(bool* IsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.BndEvt__mOnlyShowAffordableCheckbox_K2Node_ComponentBoundEvent_3_OnCheckChanged__DelegateSignature");
 
@@ -896,11 +991,11 @@ void UWidget_ManualManufacturing_C::BndEvt__mOnlyShowAffordableCheckbox_K2Node_C
 
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.BndEvt__mSearchbar_K2Node_ComponentBoundEvent_4_OnTextChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_ManualManufacturing_C::BndEvt__mSearchbar_K2Node_ComponentBoundEvent_4_OnTextChanged__DelegateSignature(const struct FText& Text)
+void UWidget_ManualManufacturing_C::BndEvt__mSearchbar_K2Node_ComponentBoundEvent_4_OnTextChanged__DelegateSignature(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.BndEvt__mSearchbar_K2Node_ComponentBoundEvent_4_OnTextChanged__DelegateSignature");
 
@@ -915,12 +1010,49 @@ void UWidget_ManualManufacturing_C::BndEvt__mSearchbar_K2Node_ComponentBoundEven
 }
 
 
-// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ExecuteUbergraph_Widget_ManualManufacturing
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.InitOnlyShowAffordable
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_ManualManufacturing_C::ExecuteUbergraph_Widget_ManualManufacturing(int EntryPoint)
+void UWidget_ManualManufacturing_C::InitOnlyShowAffordable()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.InitOnlyShowAffordable");
+
+	UWidget_ManualManufacturing_C_InitOnlyShowAffordable_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnCategoryClicked
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_CraftBench_Category_C** Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_ManualManufacturing_C::OnCategoryClicked(class UWidget_CraftBench_Category_C** Instigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnCategoryClicked");
+
+	UWidget_ManualManufacturing_C_OnCategoryClicked_Params params;
+	params.Instigator = Instigator;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ExecuteUbergraph_Widget_ManualManufacturing
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ManualManufacturing_C::ExecuteUbergraph_Widget_ManualManufacturing(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ExecuteUbergraph_Widget_ManualManufacturing");
 
@@ -932,6 +1064,28 @@ void UWidget_ManualManufacturing_C::ExecuteUbergraph_Widget_ManualManufacturing(
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnRelevantClassesUpdated__DelegateSignature
+// (Public, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UClass*>          relevantClasses                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UWidget_ManualManufacturing_C::OnRelevantClassesUpdated__DelegateSignature(TArray<class UClass*>* relevantClasses)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnRelevantClassesUpdated__DelegateSignature");
+
+	UWidget_ManualManufacturing_C_OnRelevantClassesUpdated__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (relevantClasses != nullptr)
+		*relevantClasses = params.relevantClasses;
 }
 
 

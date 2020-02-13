@@ -17,8 +17,8 @@ namespace SDK
 // Function Widget_RecordMenu.Widget_RecordMenu_C.SetNameAtIndex
 struct UWidget_RecordMenu_C_SetNameAtIndex_Params
 {
-	struct FText                                       Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	int                                                Int;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText*                                      Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	int*                                               Int;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_RecordMenu.Widget_RecordMenu_C.UpdateLabels
@@ -29,7 +29,7 @@ struct UWidget_RecordMenu_C_UpdateLabels_Params
 // Function Widget_RecordMenu.Widget_RecordMenu_C.GetPositionInCircle
 struct UWidget_RecordMenu_C_GetPositionInCircle_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector2D                                   Translation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -84,7 +84,7 @@ struct UWidget_RecordMenu_C_Tick_Params
 // Function Widget_RecordMenu.Widget_RecordMenu_C.ExecuteUbergraph_Widget_RecordMenu
 struct UWidget_RecordMenu_C_ExecuteUbergraph_Widget_RecordMenu_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

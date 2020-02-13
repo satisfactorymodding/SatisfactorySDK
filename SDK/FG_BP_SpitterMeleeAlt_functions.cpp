@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.GetNewTarget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SpitterMeleeAlt_C::GetNewTarget()
 {
@@ -29,25 +29,8 @@ void ABP_SpitterMeleeAlt_C::GetNewTarget()
 }
 
 
-// Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.UserConstructionScript
-// ()
-
-void ABP_SpitterMeleeAlt_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.UserConstructionScript");
-
-	ABP_SpitterMeleeAlt_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_SpitterMeleeAlt_C::ReceiveBeginPlay()
 {
@@ -64,7 +47,7 @@ void ABP_SpitterMeleeAlt_C::ReceiveBeginPlay()
 
 
 // Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.ReceiveActorBeginOverlap
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AActor**                 OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,11 +67,11 @@ void ABP_SpitterMeleeAlt_C::ReceiveActorBeginOverlap(class AActor** OtherActor)
 
 
 // Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.DestroyOnParticleDone
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UParticleSystemComponent* PSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UParticleSystemComponent** PSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SpitterMeleeAlt_C::DestroyOnParticleDone(class UParticleSystemComponent* PSystem)
+void ABP_SpitterMeleeAlt_C::DestroyOnParticleDone(class UParticleSystemComponent** PSystem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.DestroyOnParticleDone");
 
@@ -104,11 +87,11 @@ void ABP_SpitterMeleeAlt_C::DestroyOnParticleDone(class UParticleSystemComponent
 
 
 // Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.ExecuteUbergraph_BP_SpitterMeleeAlt
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterMeleeAlt_C::ExecuteUbergraph_BP_SpitterMeleeAlt(int EntryPoint)
+void ABP_SpitterMeleeAlt_C::ExecuteUbergraph_BP_SpitterMeleeAlt(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterMeleeAlt.BP_SpitterMeleeAlt_C.ExecuteUbergraph_BP_SpitterMeleeAlt");
 

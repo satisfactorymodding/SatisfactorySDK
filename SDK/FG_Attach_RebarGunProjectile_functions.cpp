@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.UserConstructionScript
-// ()
-
-void AAttach_RebarGunProjectile_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.UserConstructionScript");
-
-	AAttach_RebarGunProjectile_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.PlayFireEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector*                flashLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +33,7 @@ void AAttach_RebarGunProjectile_C::PlayFireEffect(struct FVector* flashLocation)
 
 
 // Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.ClientPlayReloadEffect
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_RebarGunProjectile_C::ClientPlayReloadEffect()
 {
@@ -67,7 +50,7 @@ void AAttach_RebarGunProjectile_C::ClientPlayReloadEffect()
 
 
 // Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.PlayAttachEffects3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_RebarGunProjectile_C::PlayAttachEffects3P()
 {
@@ -84,11 +67,11 @@ void AAttach_RebarGunProjectile_C::PlayAttachEffects3P()
 
 
 // Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.ExecuteUbergraph_Attach_RebarGunProjectile
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_RebarGunProjectile_C::ExecuteUbergraph_Attach_RebarGunProjectile(int EntryPoint)
+void AAttach_RebarGunProjectile_C::ExecuteUbergraph_Attach_RebarGunProjectile(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_RebarGunProjectile.Attach_RebarGunProjectile_C.ExecuteUbergraph_Attach_RebarGunProjectile");
 

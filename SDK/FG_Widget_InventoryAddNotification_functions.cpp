@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.BindOnInventoryAddAndCacheChar
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_InventoryAddNotification_C::BindOnInventoryAddAndCacheChar()
 {
@@ -30,11 +30,11 @@ void UWidget_InventoryAddNotification_C::BindOnInventoryAddAndCacheChar()
 
 
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.UnbindOnInventoryAdd
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      FromCharacter                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     FromCharacter                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventoryAddNotification_C::UnbindOnInventoryAdd(class AFGCharacterPlayer* FromCharacter)
+void UWidget_InventoryAddNotification_C::UnbindOnInventoryAdd(class AFGCharacterPlayer** FromCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.UnbindOnInventoryAdd");
 
@@ -49,16 +49,16 @@ void UWidget_InventoryAddNotification_C::UnbindOnInventoryAdd(class AFGCharacter
 }
 
 
-// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.IsInventoryOpen
-// ()
+// Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.IsInteractWidgetOpen
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsOpen                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventoryAddNotification_C::IsInventoryOpen(bool* IsOpen)
+void UWidget_InventoryAddNotification_C::IsInteractWidgetOpen(bool* IsOpen)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.IsInventoryOpen");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.IsInteractWidgetOpen");
 
-	UWidget_InventoryAddNotification_C_IsInventoryOpen_Params params;
+	UWidget_InventoryAddNotification_C_IsInteractWidgetOpen_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -72,12 +72,12 @@ void UWidget_InventoryAddNotification_C::IsInventoryOpen(bool* IsOpen)
 
 
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemADded
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            numAdded                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           numAdded                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventoryAddNotification_C::OnItemADded(class UClass* ItemClass, int numAdded)
+void UWidget_InventoryAddNotification_C::OnItemADded(class UClass** ItemClass, int* numAdded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.OnItemADded");
 
@@ -94,7 +94,7 @@ void UWidget_InventoryAddNotification_C::OnItemADded(class UClass* ItemClass, in
 
 
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_InventoryAddNotification_C::Construct()
 {
@@ -111,7 +111,7 @@ void UWidget_InventoryAddNotification_C::Construct()
 
 
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_InventoryAddNotification_C::Destruct()
 {
@@ -128,7 +128,7 @@ void UWidget_InventoryAddNotification_C::Destruct()
 
 
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -150,11 +150,11 @@ void UWidget_InventoryAddNotification_C::Tick(struct FGeometry* MyGeometry, floa
 
 
 // Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.ExecuteUbergraph_Widget_InventoryAddNotification
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventoryAddNotification_C::ExecuteUbergraph_Widget_InventoryAddNotification(int EntryPoint)
+void UWidget_InventoryAddNotification_C::ExecuteUbergraph_Widget_InventoryAddNotification(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventoryAddNotification.Widget_InventoryAddNotification_C.ExecuteUbergraph_Widget_InventoryAddNotification");
 

@@ -14,10 +14,23 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorCompassViewDistance
+struct ABuild_SpaceElevator_C_GetActorCompassViewDistance_Params
+{
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorCompassViewDistance
+struct ABuild_SpaceElevator_C_SetActorCompassViewDistance_Params
+{
+	ECompassViewDistance*                              compassViewDistance;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECompassViewDistance                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorRepresentationText
 struct ABuild_SpaceElevator_C_SetActorRepresentationText_Params
 {
-	struct FText                                       newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      newText;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
@@ -105,9 +118,10 @@ struct ABuild_SpaceElevator_C_RemoveAsRepresentation_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Build_SpaceElevator.Build_SpaceElevator_C.UserConstructionScript
-struct ABuild_SpaceElevator_C_UserConstructionScript_Params
+// Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorRepresentationColor
+struct ABuild_SpaceElevator_C_SetActorRepresentationColor_Params
 {
+	struct FLinearColor*                               NewColor;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.CamShake_01
@@ -148,7 +162,7 @@ struct ABuild_SpaceElevator_C_ReceiveBeginPlay_Params
 // Function Build_SpaceElevator.Build_SpaceElevator_C.OnPhaseChanged
 struct ABuild_SpaceElevator_C_OnPhaseChanged_Params
 {
-	TEnumAsByte<EGamePhase>                            gamePhase;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EGamePhase>*                           gamePhase;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.PlayUpgradeSequence
@@ -175,7 +189,7 @@ struct ABuild_SpaceElevator_C_ReceiveEndPlay_Params
 // Function Build_SpaceElevator.Build_SpaceElevator_C.ExecuteUbergraph_Build_SpaceElevator
 struct ABuild_SpaceElevator_C_ExecuteUbergraph_Build_SpaceElevator_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

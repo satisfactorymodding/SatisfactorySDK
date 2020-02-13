@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.UserConstructionScript
-// ()
-
-void ABP_SpitterProjectileSplitAlt_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.UserConstructionScript");
-
-	ABP_SpitterProjectileSplitAlt_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_SpitterProjectileSplitAlt_C::ReceiveBeginPlay()
 {
@@ -47,7 +30,7 @@ void ABP_SpitterProjectileSplitAlt_C::ReceiveBeginPlay()
 
 
 // Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.PlayExplosionEffects
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_SpitterProjectileSplitAlt_C::PlayExplosionEffects()
 {
@@ -64,11 +47,11 @@ void ABP_SpitterProjectileSplitAlt_C::PlayExplosionEffects()
 
 
 // Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.ExecuteUbergraph_BP_SpitterProjectileSplitAlt
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterProjectileSplitAlt_C::ExecuteUbergraph_BP_SpitterProjectileSplitAlt(int EntryPoint)
+void ABP_SpitterProjectileSplitAlt_C::ExecuteUbergraph_BP_SpitterProjectileSplitAlt(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileSplitAlt.BP_SpitterProjectileSplitAlt_C.ExecuteUbergraph_BP_SpitterProjectileSplitAlt");
 

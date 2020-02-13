@@ -27,7 +27,7 @@ struct UAnim_NobelsikDetonator_C_AnimNotify_NobeliskThrowRelease_Params
 // Function Anim_NobelsikDetonator.Anim_NobelsikDetonator_C.ExecuteUbergraph_Anim_NobelsikDetonator
 struct UAnim_NobelsikDetonator_C_ExecuteUbergraph_Anim_NobelsikDetonator_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

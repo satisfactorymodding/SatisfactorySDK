@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_MouseMoveChecker.Widget_MouseMoveChecker_C.CheckIfMouseMove
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_MouseMoveChecker_C::CheckIfMouseMove()
 {
@@ -30,7 +30,7 @@ void UWidget_MouseMoveChecker_C::CheckIfMouseMove()
 
 
 // Function Widget_MouseMoveChecker.Widget_MouseMoveChecker_C.StopCheckMouse
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_MouseMoveChecker_C::StopCheckMouse()
 {
@@ -47,7 +47,7 @@ void UWidget_MouseMoveChecker_C::StopCheckMouse()
 
 
 // Function Widget_MouseMoveChecker.Widget_MouseMoveChecker_C.StartCheckMouse
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_MouseMoveChecker_C::StartCheckMouse()
 {
@@ -64,11 +64,11 @@ void UWidget_MouseMoveChecker_C::StartCheckMouse()
 
 
 // Function Widget_MouseMoveChecker.Widget_MouseMoveChecker_C.ExecuteUbergraph_Widget_MouseMoveChecker
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MouseMoveChecker_C::ExecuteUbergraph_Widget_MouseMoveChecker(int EntryPoint)
+void UWidget_MouseMoveChecker_C::ExecuteUbergraph_Widget_MouseMoveChecker(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MouseMoveChecker.Widget_MouseMoveChecker_C.ExecuteUbergraph_Widget_MouseMoveChecker");
 
@@ -84,7 +84,7 @@ void UWidget_MouseMoveChecker_C::ExecuteUbergraph_Widget_MouseMoveChecker(int En
 
 
 // Function Widget_MouseMoveChecker.Widget_MouseMoveChecker_C.OnMouseMoved__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_MouseMoveChecker_C::OnMouseMoved__DelegateSignature()
 {

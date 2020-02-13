@@ -57,10 +57,16 @@ struct UWidget_ManualManufacturing_Container_C_LoopSmoke_Params
 {
 };
 
+// Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.BndEvt__mManufacturingWidget_K2Node_ComponentBoundEvent_0_OnRelevantClassesUpdated__DelegateSignature
+struct UWidget_ManualManufacturing_Container_C_BndEvt__mManufacturingWidget_K2Node_ComponentBoundEvent_0_OnRelevantClassesUpdated__DelegateSignature_Params
+{
+	TArray<class UClass*>                              relevantClasses;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function Widget_ManualManufacturing_Container.Widget_ManualManufacturing_Container_C.ExecuteUbergraph_Widget_ManualManufacturing_Container
 struct UWidget_ManualManufacturing_Container_C_ExecuteUbergraph_Widget_ManualManufacturing_Container_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

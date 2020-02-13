@@ -12,12 +12,30 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.GetStatsVisibility
-// ()
+// Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.GetByProductIconVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool*                          IsValid                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-ESlateVisibility UWidget_BuildMenu_InfoBox_C::GetStatsVisibility()
+void UWidget_BuildMenu_InfoBox_C::GetByProductIconVisibility(bool* IsValid)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.GetByProductIconVisibility");
+
+	UWidget_BuildMenu_InfoBox_C_GetByProductIconVisibility_Params params;
+	params.IsValid = IsValid;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.GetStatsVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_BuildMenu_InfoBox_C::GetStatsVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.GetStatsVisibility");
 
@@ -28,19 +46,17 @@ ESlateVisibility UWidget_BuildMenu_InfoBox_C::GetStatsVisibility()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
-// Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.AnimateCostSlots
-// ()
+// Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.AnimateCostslots
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_BuildMenu_InfoBox_C::AnimateCostSlots()
+void UWidget_BuildMenu_InfoBox_C::AnimateCostslots()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.AnimateCostSlots");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.AnimateCostslots");
 
-	UWidget_BuildMenu_InfoBox_C_AnimateCostSlots_Params params;
+	UWidget_BuildMenu_InfoBox_C_AnimateCostslots_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -51,11 +67,11 @@ void UWidget_BuildMenu_InfoBox_C::AnimateCostSlots()
 
 
 // Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.ExecuteUbergraph_Widget_BuildMenu_InfoBox
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_BuildMenu_InfoBox_C::ExecuteUbergraph_Widget_BuildMenu_InfoBox(int EntryPoint)
+void UWidget_BuildMenu_InfoBox_C::ExecuteUbergraph_Widget_BuildMenu_InfoBox(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_BuildMenu_InfoBox.Widget_BuildMenu_InfoBox_C.ExecuteUbergraph_Widget_BuildMenu_InfoBox");
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_MessageNotifier.Widget_MessageNotifier_C.GetKeyForAction
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   keyText                        (Parm, OutParm)
 
@@ -35,7 +35,7 @@ void UWidget_MessageNotifier_C::GetKeyForAction(struct FText* keyText)
 
 
 // Function Widget_MessageNotifier.Widget_MessageNotifier_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -55,7 +55,7 @@ void UWidget_MessageNotifier_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_MessageNotifier.Widget_MessageNotifier_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_MessageNotifier_C::Construct()
 {
@@ -72,7 +72,7 @@ void UWidget_MessageNotifier_C::Construct()
 
 
 // Function Widget_MessageNotifier.Widget_MessageNotifier_C.RemoveNotifier
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_MessageNotifier_C::RemoveNotifier()
 {
@@ -89,11 +89,11 @@ void UWidget_MessageNotifier_C::RemoveNotifier()
 
 
 // Function Widget_MessageNotifier.Widget_MessageNotifier_C.ExecuteUbergraph_Widget_MessageNotifier
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_MessageNotifier_C::ExecuteUbergraph_Widget_MessageNotifier(int EntryPoint)
+void UWidget_MessageNotifier_C::ExecuteUbergraph_Widget_MessageNotifier(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_MessageNotifier.Widget_MessageNotifier_C.ExecuteUbergraph_Widget_MessageNotifier");
 

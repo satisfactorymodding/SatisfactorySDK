@@ -56,7 +56,7 @@ struct UWidget_Crate_C_OnGrabAll_Params
 // Function Widget_Crate.Widget_Crate_C.ExecuteUbergraph_Widget_Crate
 struct UWidget_Crate_C_ExecuteUbergraph_Widget_Crate_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

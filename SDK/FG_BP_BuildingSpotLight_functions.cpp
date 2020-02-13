@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BuildingSpotLight.BP_BuildingSpotLight_C.ReceiveBeginPlay
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildingSpotLight_C::ReceiveBeginPlay()
 {
@@ -30,11 +30,11 @@ void UBP_BuildingSpotLight_C::ReceiveBeginPlay()
 
 
 // Function BP_BuildingSpotLight.BP_BuildingSpotLight_C.HasPowerChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_BuildingSpotLight_C::HasPowerChanged(bool State)
+void UBP_BuildingSpotLight_C::HasPowerChanged(bool* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildingSpotLight.BP_BuildingSpotLight_C.HasPowerChanged");
 
@@ -50,11 +50,11 @@ void UBP_BuildingSpotLight_C::HasPowerChanged(bool State)
 
 
 // Function BP_BuildingSpotLight.BP_BuildingSpotLight_C.ExecuteUbergraph_BP_BuildingSpotLight
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_BuildingSpotLight_C::ExecuteUbergraph_BP_BuildingSpotLight(int EntryPoint)
+void UBP_BuildingSpotLight_C::ExecuteUbergraph_BP_BuildingSpotLight(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildingSpotLight.BP_BuildingSpotLight_C.ExecuteUbergraph_BP_BuildingSpotLight");
 

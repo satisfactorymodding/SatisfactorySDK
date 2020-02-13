@@ -64,7 +64,7 @@ struct UBP_SpaceRabbitAnim_C_AnimNotify_AudioNotify_SpaceBunny_ReleaseBreath_Par
 // Function BP_SpaceRabbitAnim.BP_SpaceRabbitAnim_C.ExecuteUbergraph_BP_SpaceRabbitAnim
 struct UBP_SpaceRabbitAnim_C_ExecuteUbergraph_BP_SpaceRabbitAnim_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

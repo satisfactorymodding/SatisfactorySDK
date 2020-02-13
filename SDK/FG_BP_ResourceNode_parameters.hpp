@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_ResourceNode.BP_ResourceNode_C.UserConstructionScript
-struct ABP_ResourceNode_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_ResourceNode.BP_ResourceNode_C.GainedSignificance
 struct ABP_ResourceNode_C_GainedSignificance_Params
 {
@@ -32,7 +27,7 @@ struct ABP_ResourceNode_C_LostSignificance_Params
 // Function BP_ResourceNode.BP_ResourceNode_C.ExecuteUbergraph_BP_ResourceNode
 struct ABP_ResourceNode_C_ExecuteUbergraph_BP_ResourceNode_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Hint.Widget_Hint_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UWidget_Hint_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Hint.Widget_Hint_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Hint_C::Construct()
 {
@@ -50,11 +50,11 @@ void UWidget_Hint_C::Construct()
 
 
 // Function Widget_Hint.Widget_Hint_C.ExecuteUbergraph_Widget_Hint
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Hint_C::ExecuteUbergraph_Widget_Hint(int EntryPoint)
+void UWidget_Hint_C::ExecuteUbergraph_Widget_Hint(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Hint.Widget_Hint_C.ExecuteUbergraph_Widget_Hint");
 

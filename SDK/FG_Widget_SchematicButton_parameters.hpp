@@ -134,11 +134,6 @@ struct UWidget_SchematicButton_C_GetSchematicName_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Widget_SchematicButton.Widget_SchematicButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature
-struct UWidget_SchematicButton_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature_Params
-{
-};
-
 // Function Widget_SchematicButton.Widget_SchematicButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_102_OnButtonClickedEvent__DelegateSignature
 struct UWidget_SchematicButton_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_102_OnButtonClickedEvent__DelegateSignature_Params
 {
@@ -149,15 +144,15 @@ struct UWidget_SchematicButton_C_Construct_Params
 {
 };
 
-// Function Widget_SchematicButton.Widget_SchematicButton_C.ActivateSelectedSchematic
-struct UWidget_SchematicButton_C_ActivateSelectedSchematic_Params
+// Function Widget_SchematicButton.Widget_SchematicButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature
+struct UWidget_SchematicButton_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature_Params
 {
 };
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.ExecuteUbergraph_Widget_SchematicButton
 struct UWidget_SchematicButton_C_ExecuteUbergraph_Widget_SchematicButton_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

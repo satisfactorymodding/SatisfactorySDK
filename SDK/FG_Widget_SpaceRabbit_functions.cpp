@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SpaceRabbit.Widget_SpaceRabbit_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -37,7 +37,7 @@ void UWidget_SpaceRabbit_C::DropInventorySlotStack(class UWidget_InventorySlot_C
 
 
 // Function Widget_SpaceRabbit.Widget_SpaceRabbit_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpaceRabbit_C::Cleanup()
 {
@@ -54,7 +54,7 @@ void UWidget_SpaceRabbit_C::Cleanup()
 
 
 // Function Widget_SpaceRabbit.Widget_SpaceRabbit_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_SpaceRabbit_C::Init()
 {
@@ -71,7 +71,7 @@ void UWidget_SpaceRabbit_C::Init()
 
 
 // Function Widget_SpaceRabbit.Widget_SpaceRabbit_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SpaceRabbit_C::Construct()
 {
@@ -88,7 +88,7 @@ void UWidget_SpaceRabbit_C::Construct()
 
 
 // Function Widget_SpaceRabbit.Widget_SpaceRabbit_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SpaceRabbit_C::Destruct()
 {
@@ -105,11 +105,11 @@ void UWidget_SpaceRabbit_C::Destruct()
 
 
 // Function Widget_SpaceRabbit.Widget_SpaceRabbit_C.ExecuteUbergraph_Widget_SpaceRabbit
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SpaceRabbit_C::ExecuteUbergraph_Widget_SpaceRabbit(int EntryPoint)
+void UWidget_SpaceRabbit_C::ExecuteUbergraph_Widget_SpaceRabbit(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceRabbit.Widget_SpaceRabbit_C.ExecuteUbergraph_Widget_SpaceRabbit");
 

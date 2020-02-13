@@ -32,11 +32,6 @@ struct ABP_NobeliskExplosive_C_NeedTransform_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.UserConstructionScript
-struct ABP_NobeliskExplosive_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.PlayExplosionEffects
 struct ABP_NobeliskExplosive_C_PlayExplosionEffects_Params
 {
@@ -58,7 +53,7 @@ struct ABP_NobeliskExplosive_C_ReceiveHit_Params
 // Function BP_NobeliskExplosive.BP_NobeliskExplosive_C.ExecuteUbergraph_BP_NobeliskExplosive
 struct ABP_NobeliskExplosive_C_ExecuteUbergraph_BP_NobeliskExplosive_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

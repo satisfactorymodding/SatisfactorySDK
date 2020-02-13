@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Holo_TrainPlatformCargo.Holo_TrainPlatformCargo_C
-// 0x0008 (0x04A8 - 0x04A0)
+// 0x0008 (0x04F8 - 0x04F0)
 class AHolo_TrainPlatformCargo_C : public AFGTrainStationHologram
 {
 public:
-	class UStaticMeshComponent*                        BuildingMeshProxy;                                        // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        BuildingMeshProxy;                                        // 0x04F0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,8 +27,6 @@ public:
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
 };
 
 

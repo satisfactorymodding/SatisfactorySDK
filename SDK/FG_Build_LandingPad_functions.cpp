@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Build_LandingPad.Build_LandingPad_C.UpdateAudioState
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABuild_LandingPad_C::UpdateAudioState()
 {
@@ -30,7 +30,7 @@ void ABuild_LandingPad_C::UpdateAudioState()
 
 
 // Function Build_LandingPad.Build_LandingPad_C.CanProduce
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -50,25 +50,8 @@ bool ABuild_LandingPad_C::CanProduce()
 }
 
 
-// Function Build_LandingPad.Build_LandingPad_C.UserConstructionScript
-// ()
-
-void ABuild_LandingPad_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_LandingPad.Build_LandingPad_C.UserConstructionScript");
-
-	ABuild_LandingPad_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_LandingPad.Build_LandingPad_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -88,16 +71,16 @@ void ABuild_LandingPad_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Build_LandingPad.Build_LandingPad_C.BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent**    OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor**                 OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent**    OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult*             SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABuild_LandingPad_C::BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABuild_LandingPad_C::BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent** OverlappedComponent, class AActor** OtherActor, class UPrimitiveComponent** OtherComp, int* OtherBodyIndex, bool* bFromSweep, struct FHitResult* SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_LandingPad.Build_LandingPad_C.BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -118,14 +101,14 @@ void ABuild_LandingPad_C::BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_0_Compo
 
 
 // Function Build_LandingPad.Build_LandingPad_C.BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent**    OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor**                 OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent**    OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_LandingPad_C::BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABuild_LandingPad_C::BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent** OverlappedComponent, class AActor** OtherActor, class UPrimitiveComponent** OtherComp, int* OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_LandingPad.Build_LandingPad_C.BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -144,7 +127,7 @@ void ABuild_LandingPad_C::BndEvt__StaticMesh1_K2Node_ComponentBoundEvent_1_Compo
 
 
 // Function Build_LandingPad.Build_LandingPad_C.Factory_ReceiveStartProducing
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_LandingPad_C::Factory_ReceiveStartProducing()
 {
@@ -161,7 +144,7 @@ void ABuild_LandingPad_C::Factory_ReceiveStartProducing()
 
 
 // Function Build_LandingPad.Build_LandingPad_C.Factory_ReceiveStopProducing
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_LandingPad_C::Factory_ReceiveStopProducing()
 {
@@ -178,7 +161,7 @@ void ABuild_LandingPad_C::Factory_ReceiveStopProducing()
 
 
 // Function Build_LandingPad.Build_LandingPad_C.OnHasPowerChanged
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // bool*                          newHasPower                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -198,7 +181,7 @@ void ABuild_LandingPad_C::OnHasPowerChanged(bool* newHasPower)
 
 
 // Function Build_LandingPad.Build_LandingPad_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_LandingPad_C::ReceiveDestroyed()
 {
@@ -215,7 +198,7 @@ void ABuild_LandingPad_C::ReceiveDestroyed()
 
 
 // Function Build_LandingPad.Build_LandingPad_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_LandingPad_C::ReceiveBeginPlay()
 {
@@ -232,11 +215,11 @@ void ABuild_LandingPad_C::ReceiveBeginPlay()
 
 
 // Function Build_LandingPad.Build_LandingPad_C.ExecuteUbergraph_Build_LandingPad
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_LandingPad_C::ExecuteUbergraph_Build_LandingPad(int EntryPoint)
+void ABuild_LandingPad_C::ExecuteUbergraph_Build_LandingPad(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_LandingPad.Build_LandingPad_C.ExecuteUbergraph_Build_LandingPad");
 

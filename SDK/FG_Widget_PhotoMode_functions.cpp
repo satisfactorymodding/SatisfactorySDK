@@ -12,8 +12,59 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_PhotoMode.Widget_PhotoMode_C.UpdateHiResToggle
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PhotoMode_C::UpdateHiResToggle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PhotoMode.Widget_PhotoMode_C.UpdateHiResToggle");
+
+	UWidget_PhotoMode_C_UpdateHiResToggle_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PhotoMode.Widget_PhotoMode_C.UpdateFOVSlider
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PhotoMode_C::UpdateFOVSlider()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PhotoMode.Widget_PhotoMode_C.UpdateFOVSlider");
+
+	UWidget_PhotoMode_C_UpdateFOVSlider_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PhotoMode.Widget_PhotoMode_C.SetInputKeyTexts
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PhotoMode_C::SetInputKeyTexts()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PhotoMode.Widget_PhotoMode_C.SetInputKeyTexts");
+
+	UWidget_PhotoMode_C_SetInputKeyTexts_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_PhotoMode.Widget_PhotoMode_C.ToggleVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PhotoMode_C::ToggleVisibility()
 {
@@ -30,11 +81,11 @@ void UWidget_PhotoMode_C::ToggleVisibility()
 
 
 // Function Widget_PhotoMode.Widget_PhotoMode_C.FadePhotoTakenText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PhotoMode_C::FadePhotoTakenText(float DeltaTime)
+void UWidget_PhotoMode_C::FadePhotoTakenText(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PhotoMode.Widget_PhotoMode_C.FadePhotoTakenText");
 
@@ -50,7 +101,7 @@ void UWidget_PhotoMode_C::FadePhotoTakenText(float DeltaTime)
 
 
 // Function Widget_PhotoMode.Widget_PhotoMode_C.PhotoTaken
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PhotoMode_C::PhotoTaken()
 {
@@ -66,50 +117,8 @@ void UWidget_PhotoMode_C::PhotoTaken()
 }
 
 
-// Function Widget_PhotoMode.Widget_PhotoMode_C.UpdateHiResMode
-// ()
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UWidget_PhotoMode_C::UpdateHiResMode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_PhotoMode.Widget_PhotoMode_C.UpdateHiResMode");
-
-	UWidget_PhotoMode_C_UpdateHiResMode_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Widget_PhotoMode.Widget_PhotoMode_C.UpdateFOV
-// ()
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UWidget_PhotoMode_C::UpdateFOV()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_PhotoMode.Widget_PhotoMode_C.UpdateFOV");
-
-	UWidget_PhotoMode_C_UpdateFOV_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Widget_PhotoMode.Widget_PhotoMode_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PhotoMode_C::Construct()
 {
@@ -126,7 +135,7 @@ void UWidget_PhotoMode_C::Construct()
 
 
 // Function Widget_PhotoMode.Widget_PhotoMode_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -148,11 +157,11 @@ void UWidget_PhotoMode_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_PhotoMode.Widget_PhotoMode_C.ExecuteUbergraph_Widget_PhotoMode
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PhotoMode_C::ExecuteUbergraph_Widget_PhotoMode(int EntryPoint)
+void UWidget_PhotoMode_C::ExecuteUbergraph_Widget_PhotoMode(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PhotoMode.Widget_PhotoMode_C.ExecuteUbergraph_Widget_PhotoMode");
 

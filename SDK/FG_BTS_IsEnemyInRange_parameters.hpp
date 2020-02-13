@@ -31,7 +31,7 @@ struct UBTS_IsEnemyInRange_C_ReceiveActivationAI_Params
 // Function BTS_IsEnemyInRange.BTS_IsEnemyInRange_C.ExecuteUbergraph_BTS_IsEnemyInRange
 struct UBTS_IsEnemyInRange_C_ExecuteUbergraph_BTS_IsEnemyInRange_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

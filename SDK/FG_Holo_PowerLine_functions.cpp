@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Holo_PowerLine.Holo_PowerLine_C.UserConstructionScript
-// ()
-
-void AHolo_PowerLine_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Holo_PowerLine.Holo_PowerLine_C.UserConstructionScript");
-
-	AHolo_PowerLine_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Holo_PowerLine.Holo_PowerLine_C.OnAutomaticPoleDisableToggle
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // bool*                          Disabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,11 +33,11 @@ void AHolo_PowerLine_C::OnAutomaticPoleDisableToggle(bool* Disabled)
 
 
 // Function Holo_PowerLine.Holo_PowerLine_C.ExecuteUbergraph_Holo_PowerLine
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AHolo_PowerLine_C::ExecuteUbergraph_Holo_PowerLine(int EntryPoint)
+void AHolo_PowerLine_C::ExecuteUbergraph_Holo_PowerLine(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Holo_PowerLine.Holo_PowerLine_C.ExecuteUbergraph_Holo_PowerLine");
 

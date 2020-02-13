@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_FoundryMk1.Anim_FoundryMk1_C.AnimNotify_SmelterEnteredProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_FoundryMk1_C::AnimNotify_SmelterEnteredProducingState()
 {
@@ -30,7 +30,7 @@ void UAnim_FoundryMk1_C::AnimNotify_SmelterEnteredProducingState()
 
 
 // Function Anim_FoundryMk1.Anim_FoundryMk1_C.AnimNotify_SmelterEnteredOfflineState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_FoundryMk1_C::AnimNotify_SmelterEnteredOfflineState()
 {
@@ -47,7 +47,7 @@ void UAnim_FoundryMk1_C::AnimNotify_SmelterEnteredOfflineState()
 
 
 // Function Anim_FoundryMk1.Anim_FoundryMk1_C.AnimNotify_SmelterLeftProducingState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_FoundryMk1_C::AnimNotify_SmelterLeftProducingState()
 {
@@ -64,7 +64,7 @@ void UAnim_FoundryMk1_C::AnimNotify_SmelterLeftProducingState()
 
 
 // Function Anim_FoundryMk1.Anim_FoundryMk1_C.AnimNotify_SmelterLeftOfflineState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_FoundryMk1_C::AnimNotify_SmelterLeftOfflineState()
 {
@@ -81,11 +81,11 @@ void UAnim_FoundryMk1_C::AnimNotify_SmelterLeftOfflineState()
 
 
 // Function Anim_FoundryMk1.Anim_FoundryMk1_C.ExecuteUbergraph_Anim_FoundryMk1
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_FoundryMk1_C::ExecuteUbergraph_Anim_FoundryMk1(int EntryPoint)
+void UAnim_FoundryMk1_C::ExecuteUbergraph_Anim_FoundryMk1(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_FoundryMk1.Anim_FoundryMk1_C.ExecuteUbergraph_Anim_FoundryMk1");
 

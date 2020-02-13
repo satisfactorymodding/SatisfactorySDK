@@ -14,6 +14,38 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateRelevantClasses
+struct UWidget_ManualManufacturing_C_UpdateRelevantClasses_Params
+{
+};
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnMouseButtonDown
+struct UWidget_ManualManufacturing_C_OnMouseButtonDown_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FPointerEvent*                              MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateAffordableCategories
+struct UWidget_ManualManufacturing_C_UpdateAffordableCategories_Params
+{
+};
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.GetCategoryWidgetFromRecipe
+struct UWidget_ManualManufacturing_C_GetCategoryWidgetFromRecipe_Params
+{
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_CraftBench_Category_C*               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.AddUniqueRecipe
+struct UWidget_ManualManufacturing_C_AddUniqueRecipe_Params
+{
+	TArray<struct FItemCategoryRecipeStruct>           CategorizedRecipes;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	class UClass**                                     Recipe;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ClearAndHideSearchResults
 struct UWidget_ManualManufacturing_C_ClearAndHideSearchResults_Params
 {
@@ -22,13 +54,13 @@ struct UWidget_ManualManufacturing_C_ClearAndHideSearchResults_Params
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnSearchCreateResults
 struct UWidget_ManualManufacturing_C_OnSearchCreateResults_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ShowOnlyAffordableRecipes
 struct UWidget_ManualManufacturing_C_ShowOnlyAffordableRecipes_Params
 {
-	bool                                               OnlyShowAffordable;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              OnlyShowAffordable;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SpaceBarOverride
@@ -52,8 +84,10 @@ struct UWidget_ManualManufacturing_C_OnPreviewKeyDown_Params
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.CreateCategoryHeader
 struct UWidget_ManualManufacturing_C_CreateCategoryHeader_Params
 {
-	class UPanelWidget*                                InScrollbox;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FText                                       Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	class UPanelWidget**                               InScrollbox;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FText*                                      Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	bool*                                              mIsCollapsed;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_CraftBench_Category_C*               Category_Widget;                                          // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.UpdateLeds
@@ -113,7 +147,7 @@ struct UWidget_ManualManufacturing_C_GetCraftingFeedbackVisibility_Params
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SetWorkingAtWorkbenchOnServer
 struct UWidget_ManualManufacturing_C_SetWorkingAtWorkbenchOnServer_Params
 {
-	class AFGPlayerController*                         FGPlayerController;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGPlayerController**                        FGPlayerController;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnCraftCompleted
@@ -124,7 +158,7 @@ struct UWidget_ManualManufacturing_C_OnCraftCompleted_Params
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.CreateInfoBox
 struct UWidget_ManualManufacturing_C_CreateInfoBox_Params
 {
-	class UClass*                                      mRecipe;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     mRecipe;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.Cleanup
@@ -141,7 +175,7 @@ struct UWidget_ManualManufacturing_C_GetAvailableRecipes_Params
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.SetSelectedRecipe
 struct UWidget_ManualManufacturing_C_SetSelectedRecipe_Params
 {
-	class UClass*                                      mRecipe;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     mRecipe;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.InitRecipeList
@@ -167,7 +201,7 @@ struct UWidget_ManualManufacturing_C_SetupProductionMode_Params
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnNewRecipeSet
 struct UWidget_ManualManufacturing_C_OnNewRecipeSet_Params
 {
-	class UClass*                                      mNewRecipe;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     mNewRecipe;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.Init
@@ -178,7 +212,7 @@ struct UWidget_ManualManufacturing_C_Init_Params
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StartProducing
 struct UWidget_ManualManufacturing_C_StartProducing_Params
 {
-	float                                              produceSpeed;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             dt;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.EndProducing
@@ -195,11 +229,6 @@ struct UWidget_ManualManufacturing_C_Tick_Params
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnCraftingProgressbarAnimationLoop
 struct UWidget_ManualManufacturing_C_OnCraftingProgressbarAnimationLoop_Params
-{
-};
-
-// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.StartHold
-struct UWidget_ManualManufacturing_C_StartHold_Params
 {
 };
 
@@ -246,7 +275,7 @@ struct UWidget_ManualManufacturing_C_WarningMessageCheck_Params
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ProductionStartupDelay
 struct UWidget_ManualManufacturing_C_ProductionStartupDelay_Params
 {
-	float                                              produceSpeed;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             ProduceSpeed;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.PlayLEDSound
@@ -272,19 +301,36 @@ struct UWidget_ManualManufacturing_C_BndEvt__Button_0_K2Node_ComponentBoundEvent
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.BndEvt__mOnlyShowAffordableCheckbox_K2Node_ComponentBoundEvent_3_OnCheckChanged__DelegateSignature
 struct UWidget_ManualManufacturing_C_BndEvt__mOnlyShowAffordableCheckbox_K2Node_ComponentBoundEvent_3_OnCheckChanged__DelegateSignature_Params
 {
-	bool                                               IsChecked;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              IsChecked;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.BndEvt__mSearchbar_K2Node_ComponentBoundEvent_4_OnTextChanged__DelegateSignature
 struct UWidget_ManualManufacturing_C_BndEvt__mSearchbar_K2Node_ComponentBoundEvent_4_OnTextChanged__DelegateSignature_Params
 {
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.InitOnlyShowAffordable
+struct UWidget_ManualManufacturing_C_InitOnlyShowAffordable_Params
+{
+};
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnCategoryClicked
+struct UWidget_ManualManufacturing_C_OnCategoryClicked_Params
+{
+	class UWidget_CraftBench_Category_C**              Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.ExecuteUbergraph_Widget_ManualManufacturing
 struct UWidget_ManualManufacturing_C_ExecuteUbergraph_Widget_ManualManufacturing_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_ManualManufacturing.Widget_ManualManufacturing_C.OnRelevantClassesUpdated__DelegateSignature
+struct UWidget_ManualManufacturing_C_OnRelevantClassesUpdated__DelegateSignature_Params
+{
+	TArray<class UClass*>                              relevantClasses;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 }

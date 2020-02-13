@@ -27,7 +27,7 @@ struct UAnim_GeneratorFuel_C_AnimNotify_FuelGenLeftProducingState_Params
 // Function Anim_GeneratorFuel.Anim_GeneratorFuel_C.ExecuteUbergraph_Anim_GeneratorFuel
 struct UAnim_GeneratorFuel_C_ExecuteUbergraph_Anim_GeneratorFuel_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

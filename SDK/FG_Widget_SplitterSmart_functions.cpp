@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SplitterSmart.Widget_SplitterSmart_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SplitterSmart_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_SplitterSmart_C::Construct()
 
 
 // Function Widget_SplitterSmart.Widget_SplitterSmart_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SplitterSmart_C::Destruct()
 {
@@ -47,7 +47,7 @@ void UWidget_SplitterSmart_C::Destruct()
 
 
 // Function Widget_SplitterSmart.Widget_SplitterSmart_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,11 +67,11 @@ void UWidget_SplitterSmart_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SplitterSmart.Widget_SplitterSmart_C.ExecuteUbergraph_Widget_SplitterSmart
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SplitterSmart_C::ExecuteUbergraph_Widget_SplitterSmart(int EntryPoint)
+void UWidget_SplitterSmart_C::ExecuteUbergraph_Widget_SplitterSmart(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SplitterSmart.Widget_SplitterSmart_C.ExecuteUbergraph_Widget_SplitterSmart");
 

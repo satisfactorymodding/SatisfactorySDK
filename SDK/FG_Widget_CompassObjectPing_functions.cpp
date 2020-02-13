@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_CompassObjectPing.Widget_CompassObjectPing_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_CompassObjectPing_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_CompassObjectPing_C::Construct()
 
 
 // Function Widget_CompassObjectPing.Widget_CompassObjectPing_C.ExecuteUbergraph_Widget_CompassObjectPing
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_CompassObjectPing_C::ExecuteUbergraph_Widget_CompassObjectPing(int EntryPoint)
+void UWidget_CompassObjectPing_C::ExecuteUbergraph_Widget_CompassObjectPing(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_CompassObjectPing.Widget_CompassObjectPing_C.ExecuteUbergraph_Widget_CompassObjectPing");
 

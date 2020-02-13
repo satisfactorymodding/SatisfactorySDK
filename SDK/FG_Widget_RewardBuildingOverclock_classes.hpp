@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_RewardBuildingOverclock.Widget_RewardBuildingOverclock_C
-// 0x0090 (0x03C0 - 0x0330)
+// 0x0090 (0x03E8 - 0x0358)
 class UWidget_RewardBuildingOverclock_C : public UWidget_SchematicRewardItem_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0330(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FSlateBrush                                 mOverclockBrush;                                          // 0x0338(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0358(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FSlateBrush                                 mOverclockBrush;                                          // 0x0360(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -30,13 +30,10 @@ public:
 
 
 	void IsValidRewardItem(bool* IsValid);
-	void UpdateVisibility();
 	struct FText GetName();
 	struct FSlateBrush GetIcon();
-	void PreConstruct(bool* IsDesignTime);
-	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
-	void OnRewardClicked();
-	void ExecuteUbergraph_Widget_RewardBuildingOverclock(int EntryPoint);
+	void Construct();
+	void ExecuteUbergraph_Widget_RewardBuildingOverclock(int* EntryPoint);
 };
 
 

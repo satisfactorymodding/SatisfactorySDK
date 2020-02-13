@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MaterialEffect_Dismantle.BP_MaterialEffect_Dismantle_C
-// 0x0088 (0x01E8 - 0x0160)
+// 0x0098 (0x0200 - 0x0168)
 class UBP_MaterialEffect_Dismantle_C : public UFGMaterialEffect_Build
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0160(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	float                                              mElapsedTime;                                             // 0x0168(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              mMaterializeDuration;                                     // 0x016C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRuntimeFloatCurve                          mMaterializeCurve;                                        // 0x0170(0x0078) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0168(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	float                                              mElapsedTime;                                             // 0x0170(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              mMaterializeDuration;                                     // 0x0174(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRuntimeFloatCurve                          mMaterializeCurve;                                        // 0x0178(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -34,7 +34,7 @@ public:
 	void OnStarted();
 	void OnUpdate(float* DeltaTime);
 	void PreStarted();
-	void ExecuteUbergraph_BP_MaterialEffect_Dismantle(int EntryPoint);
+	void ExecuteUbergraph_BP_MaterialEffect_Dismantle(int* EntryPoint);
 };
 
 

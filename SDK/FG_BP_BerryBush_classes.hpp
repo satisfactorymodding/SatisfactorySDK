@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BerryBush.BP_BerryBush_C
-// 0x0011 (0x03C9 - 0x03B8)
+// 0x0011 (0x0401 - 0x03F0)
 class ABP_BerryBush_C : public ABP_Edible_C
 {
 public:
-	TArray<struct FBerryAlternatives>                  mBerryVariation;                                          // 0x03B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               mLockVariation;                                           // 0x03C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FBerryAlternatives>                  mBerryVariation;                                          // 0x03F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               mLockVariation;                                           // 0x0400(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

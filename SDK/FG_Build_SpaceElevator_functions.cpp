@@ -12,13 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorRepresentationText
-// ()
+// Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABuild_SpaceElevator_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorCompassViewDistance");
+
+	ABuild_SpaceElevator_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABuild_SpaceElevator_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorCompassViewDistance");
+
+	ABuild_SpaceElevator_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABuild_SpaceElevator_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABuild_SpaceElevator_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorRepresentationText");
 
@@ -36,7 +80,7 @@ struct FText ABuild_SpaceElevator_C::SetActorRepresentationText(const struct FTe
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +101,7 @@ bool ABuild_SpaceElevator_C::UpdateRepresentation()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +122,7 @@ struct FLinearColor ABuild_SpaceElevator_C::GetActorRepresentationColor()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -99,7 +143,7 @@ struct FText ABuild_SpaceElevator_C::GetActorRepresentationText()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -120,7 +164,7 @@ class UTexture2D* ABuild_SpaceElevator_C::GetActorRepresentationTexture()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -141,7 +185,7 @@ ERepresentationType ABuild_SpaceElevator_C::GetActorRepresentationType()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +206,7 @@ bool ABuild_SpaceElevator_C::GetActorShouldShowInCompass()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -183,7 +227,7 @@ bool ABuild_SpaceElevator_C::AddAsRepresentation()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +248,7 @@ float ABuild_SpaceElevator_C::GetActorFogOfWarRevealRadius()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +269,7 @@ EFogOfWarRevealType ABuild_SpaceElevator_C::GetActorFogOfWarRevealType()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -246,7 +290,7 @@ bool ABuild_SpaceElevator_C::GetActorShouldShowOnMap()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -267,7 +311,7 @@ struct FVector ABuild_SpaceElevator_C::GetRealActorLocation()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -288,7 +332,7 @@ struct FRotator ABuild_SpaceElevator_C::GetRealActorRotation()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -309,7 +353,7 @@ bool ABuild_SpaceElevator_C::IsActorStatic()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -329,14 +373,17 @@ bool ABuild_SpaceElevator_C::RemoveAsRepresentation()
 }
 
 
-// Function Build_SpaceElevator.Build_SpaceElevator_C.UserConstructionScript
-// ()
+// Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_SpaceElevator_C::UserConstructionScript()
+void ABuild_SpaceElevator_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Build_SpaceElevator.Build_SpaceElevator_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function Build_SpaceElevator.Build_SpaceElevator_C.SetActorRepresentationColor");
 
-	ABuild_SpaceElevator_C_UserConstructionScript_Params params;
+	ABuild_SpaceElevator_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -347,7 +394,7 @@ void ABuild_SpaceElevator_C::UserConstructionScript()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.CamShake_01
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::CamShake_01()
 {
@@ -364,7 +411,7 @@ void ABuild_SpaceElevator_C::CamShake_01()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.CamShake_02
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::CamShake_02()
 {
@@ -381,7 +428,7 @@ void ABuild_SpaceElevator_C::CamShake_02()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.CamShake_03
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::CamShake_03()
 {
@@ -398,7 +445,7 @@ void ABuild_SpaceElevator_C::CamShake_03()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.CamShake_04
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::CamShake_04()
 {
@@ -415,7 +462,7 @@ void ABuild_SpaceElevator_C::CamShake_04()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.UpperlineVisible
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::UpperlineVisible()
 {
@@ -432,7 +479,7 @@ void ABuild_SpaceElevator_C::UpperlineVisible()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.Event_StartSound
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::Event_StartSound()
 {
@@ -449,7 +496,7 @@ void ABuild_SpaceElevator_C::Event_StartSound()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::ReceiveBeginPlay()
 {
@@ -466,11 +513,11 @@ void ABuild_SpaceElevator_C::ReceiveBeginPlay()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.OnPhaseChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EGamePhase>        gamePhase                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EGamePhase>*       gamePhase                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_SpaceElevator_C::OnPhaseChanged(TEnumAsByte<EGamePhase> gamePhase)
+void ABuild_SpaceElevator_C::OnPhaseChanged(TEnumAsByte<EGamePhase>* gamePhase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_SpaceElevator.Build_SpaceElevator_C.OnPhaseChanged");
 
@@ -486,7 +533,7 @@ void ABuild_SpaceElevator_C::OnPhaseChanged(TEnumAsByte<EGamePhase> gamePhase)
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.PlayUpgradeSequence
-// ()
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::PlayUpgradeSequence()
 {
@@ -503,7 +550,7 @@ void ABuild_SpaceElevator_C::PlayUpgradeSequence()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.Event_SE_SendOff
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::Event_SE_SendOff()
 {
@@ -520,7 +567,7 @@ void ABuild_SpaceElevator_C::Event_SE_SendOff()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.ReceiveDestroyed
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABuild_SpaceElevator_C::ReceiveDestroyed()
 {
@@ -537,7 +584,7 @@ void ABuild_SpaceElevator_C::ReceiveDestroyed()
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.ReceiveEndPlay
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -557,11 +604,11 @@ void ABuild_SpaceElevator_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlay
 
 
 // Function Build_SpaceElevator.Build_SpaceElevator_C.ExecuteUbergraph_Build_SpaceElevator
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_SpaceElevator_C::ExecuteUbergraph_Build_SpaceElevator(int EntryPoint)
+void ABuild_SpaceElevator_C::ExecuteUbergraph_Build_SpaceElevator(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_SpaceElevator.Build_SpaceElevator_C.ExecuteUbergraph_Build_SpaceElevator");
 

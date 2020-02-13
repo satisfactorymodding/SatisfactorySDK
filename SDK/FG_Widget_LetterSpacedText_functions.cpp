@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UWidget_LetterSpacedText_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.SetTitle
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                  Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class FString*                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UWidget_LetterSpacedText_C::SetTitle(const class FString& Text)
+void UWidget_LetterSpacedText_C::SetTitle(class FString* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.SetTitle");
 
@@ -53,7 +53,7 @@ void UWidget_LetterSpacedText_C::SetTitle(const class FString& Text)
 
 
 // Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.OnAnimateText
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_LetterSpacedText_C::OnAnimateText()
 {
@@ -70,7 +70,7 @@ void UWidget_LetterSpacedText_C::OnAnimateText()
 
 
 // Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_LetterSpacedText_C::Construct()
 {
@@ -87,11 +87,11 @@ void UWidget_LetterSpacedText_C::Construct()
 
 
 // Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.ExecuteUbergraph_Widget_LetterSpacedText
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_LetterSpacedText_C::ExecuteUbergraph_Widget_LetterSpacedText(int EntryPoint)
+void UWidget_LetterSpacedText_C::ExecuteUbergraph_Widget_LetterSpacedText(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_LetterSpacedText.Widget_LetterSpacedText_C.ExecuteUbergraph_Widget_LetterSpacedText");
 

@@ -7,10 +7,10 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_CoreUObject_classes.hpp"
-#include "FG_AudioMixer_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_CoreUObject_classes.hpp"
 #include "FG_MediaUtils_classes.hpp"
+#include "FG_AudioMixer_classes.hpp"
 
 namespace SDK
 {
@@ -65,6 +65,17 @@ enum class EMediaPlayerTrack : uint8_t
 };
 
 
+// Enum MediaAssets.EMediaSoundComponentFFTSize
+enum class EMediaSoundComponentFFTSize : uint8_t
+{
+	Min                            = 0,
+	Small                          = 1,
+	Medium                         = 2,
+	Large                          = 3,
+	EMediaSoundComponentFFTSize_MAX = 4
+};
+
+
 // Enum MediaAssets.EMediaSoundChannels
 enum class EMediaSoundChannels : uint8_t
 {
@@ -86,6 +97,14 @@ struct FMediaCaptureDevice
 {
 	struct FText                                       DisplayName;                                              // 0x0000(0x0028) (BlueprintVisible, BlueprintReadOnly, Transient)
 	class FString                                      URL;                                                      // 0x0018(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient)
+};
+
+// ScriptStruct MediaAssets.MediaSoundComponentSpectralData
+// 0x0008
+struct FMediaSoundComponentSpectralData
+{
+	float                                              FrequencyHz;                                              // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Magnitude;                                                // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

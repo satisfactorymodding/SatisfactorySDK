@@ -14,12 +14,19 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function CableComponent.CableComponent.SetAttachEndToComponent
+struct UCableComponent_SetAttachEndToComponent_Params
+{
+	class USceneComponent**                            component;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName*                                      SocketName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function CableComponent.CableComponent.SetAttachEndTo
 struct UCableComponent_SetAttachEndTo_Params
 {
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ComponentProperty;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SocketName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      ComponentProperty;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      SocketName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CableComponent.CableComponent.GetCableParticleLocations

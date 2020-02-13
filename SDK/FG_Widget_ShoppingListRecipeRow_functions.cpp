@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetShoppingListButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_ShoppingListRecipeRow_C::GetShoppingListButtonVisibilit
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +55,7 @@ struct FSlateColor UWidget_ShoppingListRecipeRow_C::GetTextColor()
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetAddButtonIconColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ struct FLinearColor UWidget_ShoppingListRecipeRow_C::GetAddButtonIconColor()
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetAddButtonColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,7 +97,7 @@ struct FLinearColor UWidget_ShoppingListRecipeRow_C::GetAddButtonColor()
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetRemoveButtonIconColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -118,7 +118,7 @@ struct FLinearColor UWidget_ShoppingListRecipeRow_C::GetRemoveButtonIconColor()
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetRemoveButtonColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -139,7 +139,7 @@ struct FLinearColor UWidget_ShoppingListRecipeRow_C::GetRemoveButtonColor()
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetAmount
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            mAmount                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -161,7 +161,7 @@ void UWidget_ShoppingListRecipeRow_C::GetAmount(int* mAmount)
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetRecipe
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UClass*                  Recipe                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -183,7 +183,7 @@ void UWidget_ShoppingListRecipeRow_C::GetRecipe(class UClass** Recipe)
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetTitleText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -204,7 +204,7 @@ struct FText UWidget_ShoppingListRecipeRow_C::GetTitleText()
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.GetNumberText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -225,7 +225,7 @@ struct FText UWidget_ShoppingListRecipeRow_C::GetNumberText()
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ShoppingListRecipeRow_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -242,7 +242,7 @@ void UWidget_ShoppingListRecipeRow_C::BndEvt__Button_1_K2Node_ComponentBoundEven
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.BndEvt__mButtonRemove_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ShoppingListRecipeRow_C::BndEvt__mButtonRemove_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 {
@@ -259,11 +259,11 @@ void UWidget_ShoppingListRecipeRow_C::BndEvt__mButtonRemove_K2Node_ComponentBoun
 
 
 // Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.ExecuteUbergraph_Widget_ShoppingListRecipeRow
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ShoppingListRecipeRow_C::ExecuteUbergraph_Widget_ShoppingListRecipeRow(int EntryPoint)
+void UWidget_ShoppingListRecipeRow_C::ExecuteUbergraph_Widget_ShoppingListRecipeRow(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ShoppingListRecipeRow.Widget_ShoppingListRecipeRow_C.ExecuteUbergraph_Widget_ShoppingListRecipeRow");
 

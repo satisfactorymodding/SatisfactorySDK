@@ -25,8 +25,8 @@ struct UWidget_KeyBindFocus_C_OnKeyUp_Params
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.HandleInput
 struct UWidget_KeyBindFocus_C_HandleInput_Params
 {
-	struct FInputEvent                                 InputEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FKey                                        keyPressed;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FInputEvent*                                InputEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       keyPressed;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FEventReply                                 Handled;                                                  // (Parm, OutParm)
 };
 
@@ -68,7 +68,7 @@ struct UWidget_KeyBindFocus_C_Construct_Params
 // Function Widget_KeyBindFocus.Widget_KeyBindFocus_C.ExecuteUbergraph_Widget_KeyBindFocus
 struct UWidget_KeyBindFocus_C_ExecuteUbergraph_Widget_KeyBindFocus_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -12,30 +12,13 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Controller_HogCharge.Controller_HogCharge_C.UserConstructionScript
-// ()
-
-void AController_HogCharge_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Controller_HogCharge.Controller_HogCharge_C.UserConstructionScript");
-
-	AController_HogCharge_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Controller_HogCharge.Controller_HogCharge_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_2_ActorPerceptionUpdatedDelegate__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIStimulus             Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class AActor**                 Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIStimulus*            Stimulus                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AController_HogCharge_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_2_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus)
+void AController_HogCharge_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_2_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor** Actor, struct FAIStimulus* Stimulus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_HogCharge.Controller_HogCharge_C.BndEvt__PerceptionComponent_K2Node_ComponentBoundEvent_2_ActorPerceptionUpdatedDelegate__DelegateSignature");
 
@@ -52,7 +35,7 @@ void AController_HogCharge_C::BndEvt__PerceptionComponent_K2Node_ComponentBoundE
 
 
 // Function Controller_HogCharge.Controller_HogCharge_C.StartPanic
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AController_HogCharge_C::StartPanic()
 {
@@ -69,11 +52,11 @@ void AController_HogCharge_C::StartPanic()
 
 
 // Function Controller_HogCharge.Controller_HogCharge_C.ExecuteUbergraph_Controller_HogCharge
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AController_HogCharge_C::ExecuteUbergraph_Controller_HogCharge(int EntryPoint)
+void AController_HogCharge_C::ExecuteUbergraph_Controller_HogCharge(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Controller_HogCharge.Controller_HogCharge_C.ExecuteUbergraph_Controller_HogCharge");
 

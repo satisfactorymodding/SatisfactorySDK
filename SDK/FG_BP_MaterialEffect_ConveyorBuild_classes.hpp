@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MaterialEffect_ConveyorBuild.BP_MaterialEffect_ConveyorBuild_C
-// 0x0010 (0x0170 - 0x0160)
+// 0x0010 (0x0178 - 0x0168)
 class UBP_MaterialEffect_ConveyorBuild_C : public UFGMaterialEffect_Build
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0160(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class ABP_BuildEffect_ConveyorBelt_C*              mBuildEffectActor;                                        // 0x0168(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0168(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class ABP_BuildEffect_ConveyorBelt_C*              mBuildEffectActor;                                        // 0x0170(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,7 +31,7 @@ public:
 
 	void PreStarted();
 	void OnStarted();
-	void ExecuteUbergraph_BP_MaterialEffect_ConveyorBuild(int EntryPoint);
+	void ExecuteUbergraph_BP_MaterialEffect_ConveyorBuild(int* EntryPoint);
 };
 
 

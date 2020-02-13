@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HUDBox_ColorGun.Widget_HUDBox_ColorGun_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_HUDBox_ColorGun_C::Construct()
 {
@@ -30,7 +30,7 @@ void UWidget_HUDBox_ColorGun_C::Construct()
 
 
 // Function Widget_HUDBox_ColorGun.Widget_HUDBox_ColorGun_C.UpdateColors
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDBox_ColorGun_C::UpdateColors()
 {
@@ -47,11 +47,11 @@ void UWidget_HUDBox_ColorGun_C::UpdateColors()
 
 
 // Function Widget_HUDBox_ColorGun.Widget_HUDBox_ColorGun_C.ExecuteUbergraph_Widget_HUDBox_ColorGun
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HUDBox_ColorGun_C::ExecuteUbergraph_Widget_HUDBox_ColorGun(int EntryPoint)
+void UWidget_HUDBox_ColorGun_C::ExecuteUbergraph_Widget_HUDBox_ColorGun(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HUDBox_ColorGun.Widget_HUDBox_ColorGun_C.ExecuteUbergraph_Widget_HUDBox_ColorGun");
 

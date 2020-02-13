@@ -43,7 +43,7 @@ struct UAnim_ColorGun_C_BlueprintUpdateAnimation_Params
 // Function Anim_ColorGun.Anim_ColorGun_C.ExecuteUbergraph_Anim_ColorGun
 struct UAnim_ColorGun_C_ExecuteUbergraph_Anim_ColorGun_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

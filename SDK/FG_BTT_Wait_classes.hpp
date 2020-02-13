@@ -33,7 +33,7 @@ public:
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
 	void ReceiveTickAI(class AAIController** OwnerController, class APawn** ControlledPawn, float* DeltaSeconds);
 	void ReceiveAbort(class AActor** OwnerActor);
-	void ExecuteUbergraph_BTT_Wait(int EntryPoint);
+	void ExecuteUbergraph_BTT_Wait(int* EntryPoint);
 };
 
 

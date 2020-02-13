@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.CalculateAnimGraphValues
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_TrainDockingStation_C::CalculateAnimGraphValues()
 {
@@ -30,7 +30,7 @@ void UAnim_TrainDockingStation_C::CalculateAnimGraphValues()
 
 
 // Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +50,7 @@ void UAnim_TrainDockingStation_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.AnimNotify_StartOffset
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_TrainDockingStation_C::AnimNotify_StartOffset()
 {
@@ -67,7 +67,7 @@ void UAnim_TrainDockingStation_C::AnimNotify_StartOffset()
 
 
 // Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.AnimNotify_EndOffset
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_TrainDockingStation_C::AnimNotify_EndOffset()
 {
@@ -84,11 +84,11 @@ void UAnim_TrainDockingStation_C::AnimNotify_EndOffset()
 
 
 // Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.ExecuteUbergraph_Anim_TrainDockingStation
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_TrainDockingStation_C::ExecuteUbergraph_Anim_TrainDockingStation(int EntryPoint)
+void UAnim_TrainDockingStation_C::ExecuteUbergraph_Anim_TrainDockingStation(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_TrainDockingStation.Anim_TrainDockingStation_C.ExecuteUbergraph_Anim_TrainDockingStation");
 

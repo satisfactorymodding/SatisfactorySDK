@@ -30,11 +30,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void ClientPlayReloadEffect();
 	void PlayFireEffect(struct FVector* flashLocation);
 	void PlayAttachEffects3P();
-	void ExecuteUbergraph_Attach_ColorGun(int EntryPoint);
+	void ExecuteUbergraph_Attach_ColorGun(int* EntryPoint);
 };
 
 

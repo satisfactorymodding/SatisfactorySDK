@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.UpdateShortcutText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_KeyShortcuts_C::UpdateShortcutText()
 {
@@ -30,12 +30,12 @@ void UWidget_KeyShortcuts_C::UpdateShortcutText()
 
 
 // Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.GetKeyForAction
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FName                   ActionName                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  ActionName                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   keyText                        (Parm, OutParm)
 
-void UWidget_KeyShortcuts_C::GetKeyForAction(const struct FName& ActionName, struct FText* keyText)
+void UWidget_KeyShortcuts_C::GetKeyForAction(struct FName* ActionName, struct FText* keyText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.GetKeyForAction");
 
@@ -54,7 +54,7 @@ void UWidget_KeyShortcuts_C::GetKeyForAction(const struct FName& ActionName, str
 
 
 // Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_KeyShortcuts_C::Construct()
 {
@@ -71,11 +71,11 @@ void UWidget_KeyShortcuts_C::Construct()
 
 
 // Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.UpdateShortcutAvilability
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  Unused                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 Unused                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_KeyShortcuts_C::UpdateShortcutAvilability(class UClass* Unused)
+void UWidget_KeyShortcuts_C::UpdateShortcutAvilability(class UClass** Unused)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.UpdateShortcutAvilability");
 
@@ -91,11 +91,11 @@ void UWidget_KeyShortcuts_C::UpdateShortcutAvilability(class UClass* Unused)
 
 
 // Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.ExecuteUbergraph_Widget_KeyShortcuts
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_KeyShortcuts_C::ExecuteUbergraph_Widget_KeyShortcuts(int EntryPoint)
+void UWidget_KeyShortcuts_C::ExecuteUbergraph_Widget_KeyShortcuts(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_KeyShortcuts.Widget_KeyShortcuts_C.ExecuteUbergraph_Widget_KeyShortcuts");
 

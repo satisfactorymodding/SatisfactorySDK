@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.UserConstructionScript
-struct ABP_SpitterProjectileVolley_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.ReceiveBeginPlay
 struct ABP_SpitterProjectileVolley_C_ReceiveBeginPlay_Params
 {
@@ -32,7 +27,7 @@ struct ABP_SpitterProjectileVolley_C_PlayExplosionEffects_Params
 // Function BP_SpitterProjectileVolley.BP_SpitterProjectileVolley_C.ExecuteUbergraph_BP_SpitterProjectileVolley
 struct ABP_SpitterProjectileVolley_C_ExecuteUbergraph_BP_SpitterProjectileVolley_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

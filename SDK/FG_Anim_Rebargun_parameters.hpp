@@ -33,7 +33,7 @@ struct UAnim_Rebargun_C_AnimNotify_RebargunIsLoaded_Notify_Params
 // Function Anim_Rebargun.Anim_Rebargun_C.ExecuteUbergraph_Anim_Rebargun
 struct UAnim_Rebargun_C_ExecuteUbergraph_Anim_Rebargun_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

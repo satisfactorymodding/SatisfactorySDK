@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Build_RailroadTrackIntegrated.Build_RailroadTrackIntegrated_C
-// 0x0008 (0x05C8 - 0x05C0)
+// 0x0008 (0x05C0 - 0x05B8)
 class ABuild_RailroadTrackIntegrated_C : public AFGBuildableRailroadTrack
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x05C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x05B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -29,9 +29,8 @@ public:
 
 
 	bool CanDismantle();
-	void UserConstructionScript();
 	void PlayConstructSound();
-	void ExecuteUbergraph_Build_RailroadTrackIntegrated(int EntryPoint);
+	void ExecuteUbergraph_Build_RailroadTrackIntegrated(int* EntryPoint);
 };
 
 

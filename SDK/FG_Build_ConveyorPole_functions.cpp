@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_ConveyorPole.Build_ConveyorPole_C.UserConstructionScript
-// ()
-
-void ABuild_ConveyorPole_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_ConveyorPole.Build_ConveyorPole_C.UserConstructionScript");
-
-	ABuild_ConveyorPole_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Build_ConveyorPole.Build_ConveyorPole_C.PlayConstructSound
-// ()
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
 void ABuild_ConveyorPole_C::PlayConstructSound()
 {
@@ -47,11 +30,11 @@ void ABuild_ConveyorPole_C::PlayConstructSound()
 
 
 // Function Build_ConveyorPole.Build_ConveyorPole_C.ExecuteUbergraph_Build_ConveyorPole
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_ConveyorPole_C::ExecuteUbergraph_Build_ConveyorPole(int EntryPoint)
+void ABuild_ConveyorPole_C::ExecuteUbergraph_Build_ConveyorPole(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_ConveyorPole.Build_ConveyorPole_C.ExecuteUbergraph_Build_ConveyorPole");
 

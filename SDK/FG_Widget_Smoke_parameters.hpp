@@ -40,7 +40,7 @@ struct UWidget_Smoke_C_PreConstruct_Params
 // Function Widget_Smoke.Widget_Smoke_C.ExecuteUbergraph_Widget_Smoke
 struct UWidget_Smoke_C_ExecuteUbergraph_Widget_Smoke_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_BuildingPreview.BP_BuildingPreview_C.UserConstructionScript
-struct ABP_BuildingPreview_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_BuildingPreview.BP_BuildingPreview_C.ReceiveTick
 struct ABP_BuildingPreview_C_ReceiveTick_Params
 {
@@ -28,7 +23,7 @@ struct ABP_BuildingPreview_C_ReceiveTick_Params
 // Function BP_BuildingPreview.BP_BuildingPreview_C.ExecuteUbergraph_BP_BuildingPreview
 struct ABP_BuildingPreview_C_ExecuteUbergraph_BP_BuildingPreview_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

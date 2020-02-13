@@ -17,7 +17,7 @@ namespace SDK
 // Function Anim_Medkit.Anim_Medkit_C.ExecuteUbergraph_Anim_Medkit
 struct UAnim_Medkit_C_ExecuteUbergraph_Anim_Medkit_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

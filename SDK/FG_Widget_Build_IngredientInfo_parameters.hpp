@@ -22,7 +22,7 @@ struct UWidget_Build_IngredientInfo_C_Construct_Params
 // Function Widget_Build_IngredientInfo.Widget_Build_IngredientInfo_C.ExecuteUbergraph_Widget_Build_IngredientInfo
 struct UWidget_Build_IngredientInfo_C_ExecuteUbergraph_Widget_Build_IngredientInfo_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

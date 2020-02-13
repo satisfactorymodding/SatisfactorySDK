@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Update Button Angles
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          MenuAngle                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         MenuAngle                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadialMenu_C::Update_Button_Angles(float MenuAngle)
+void UWidget_RadialMenu_C::Update_Button_Angles(float* MenuAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadialMenu.Widget_RadialMenu_C.Update Button Angles");
 
@@ -33,7 +33,7 @@ void UWidget_RadialMenu_C::Update_Button_Angles(float MenuAngle)
 
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Set Angle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadialMenu_C::Set_Angle()
 {
@@ -50,7 +50,7 @@ void UWidget_RadialMenu_C::Set_Angle()
 
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Close Radial Menu
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadialMenu_C::Close_Radial_Menu()
 {
@@ -67,7 +67,7 @@ void UWidget_RadialMenu_C::Close_Radial_Menu()
 
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Open Radial Menu
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadialMenu_C::Open_Radial_Menu()
 {
@@ -84,7 +84,7 @@ void UWidget_RadialMenu_C::Open_Radial_Menu()
 
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Generate Radial Menu
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadialMenu_C::Generate_Radial_Menu()
 {
@@ -101,7 +101,7 @@ void UWidget_RadialMenu_C::Generate_Radial_Menu()
 
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_RadialMenu_C::Destruct()
 {
@@ -118,7 +118,7 @@ void UWidget_RadialMenu_C::Destruct()
 
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -140,7 +140,7 @@ void UWidget_RadialMenu_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime
 
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.Create Radial Menu
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_RadialMenu_C::Create_Radial_Menu()
 {
@@ -157,11 +157,11 @@ void UWidget_RadialMenu_C::Create_Radial_Menu()
 
 
 // Function Widget_RadialMenu.Widget_RadialMenu_C.ExecuteUbergraph_Widget_RadialMenu
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_RadialMenu_C::ExecuteUbergraph_Widget_RadialMenu(int EntryPoint)
+void UWidget_RadialMenu_C::ExecuteUbergraph_Widget_RadialMenu(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_RadialMenu.Widget_RadialMenu_C.ExecuteUbergraph_Widget_RadialMenu");
 

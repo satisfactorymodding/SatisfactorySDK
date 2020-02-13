@@ -17,7 +17,7 @@ namespace SDK
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.SetSelected
 struct UWidget_SessionSaveRow_C_SetSelected_Params
 {
-	bool                                               isSelected;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              isSelected;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.GetIconColor
@@ -65,9 +65,20 @@ struct UWidget_SessionSaveRow_C_GetSaveNameText_Params
 {
 };
 
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-struct UWidget_SessionSaveRow_C_BndEvt__mSaveButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+struct UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params
 {
+};
+
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+struct UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.PreConstruct
+struct UWidget_SessionSaveRow_C_PreConstruct_Params
+{
+	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mDeleteButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
@@ -80,21 +91,10 @@ struct UWidget_SessionSaveRow_C_ConfirmDeleteSavePopUp_Params
 {
 };
 
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.PreConstruct
-struct UWidget_SessionSaveRow_C_PreConstruct_Params
-{
-	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.Event DeleteSave
 struct UWidget_SessionSaveRow_C_Event_DeleteSave_Params
 {
-	bool                                               confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-struct UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params
-{
+	bool*                                              confirm;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature
@@ -102,15 +102,16 @@ struct UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEven
 {
 };
 
-// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-struct UWidget_SessionSaveRow_C_BndEvt__mSaveRowButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params
+// Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.OnDeleteSaveDone
+struct UWidget_SessionSaveRow_C_OnDeleteSaveDone_Params
 {
+	bool*                                              success;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SessionSaveRow.Widget_SessionSaveRow_C.ExecuteUbergraph_Widget_SessionSaveRow
 struct UWidget_SessionSaveRow_C_ExecuteUbergraph_Widget_SessionSaveRow_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

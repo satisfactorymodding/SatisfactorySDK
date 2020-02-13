@@ -54,7 +54,7 @@ struct ABP_VolumeFogSmall_C_ReceiveBeginPlay_Params
 // Function BP_VolumeFogSmall.BP_VolumeFogSmall_C.ExecuteUbergraph_BP_VolumeFogSmall
 struct ABP_VolumeFogSmall_C_ExecuteUbergraph_BP_VolumeFogSmall_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

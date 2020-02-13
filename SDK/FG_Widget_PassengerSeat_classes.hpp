@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_PassengerSeat.Widget_PassengerSeat_C
-// 0x0008 (0x0210 - 0x0208)
+// 0x0008 (0x0238 - 0x0230)
 class UWidget_PassengerSeat_C : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0208(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0230(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +29,7 @@ public:
 
 
 	void Construct();
-	void ExecuteUbergraph_Widget_PassengerSeat(int EntryPoint);
+	void ExecuteUbergraph_Widget_PassengerSeat(int* EntryPoint);
 };
 
 

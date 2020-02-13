@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MaterialEffect_Dismantle.BP_MaterialEffect_Dismantle_C.OnStarted
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_MaterialEffect_Dismantle_C::OnStarted()
 {
@@ -30,7 +30,7 @@ void UBP_MaterialEffect_Dismantle_C::OnStarted()
 
 
 // Function BP_MaterialEffect_Dismantle.BP_MaterialEffect_Dismantle_C.OnUpdate
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +50,7 @@ void UBP_MaterialEffect_Dismantle_C::OnUpdate(float* DeltaTime)
 
 
 // Function BP_MaterialEffect_Dismantle.BP_MaterialEffect_Dismantle_C.PreStarted
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_MaterialEffect_Dismantle_C::PreStarted()
 {
@@ -67,11 +67,11 @@ void UBP_MaterialEffect_Dismantle_C::PreStarted()
 
 
 // Function BP_MaterialEffect_Dismantle.BP_MaterialEffect_Dismantle_C.ExecuteUbergraph_BP_MaterialEffect_Dismantle
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MaterialEffect_Dismantle_C::ExecuteUbergraph_BP_MaterialEffect_Dismantle(int EntryPoint)
+void UBP_MaterialEffect_Dismantle_C::ExecuteUbergraph_BP_MaterialEffect_Dismantle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MaterialEffect_Dismantle.BP_MaterialEffect_Dismantle_C.ExecuteUbergraph_BP_MaterialEffect_Dismantle");
 

@@ -14,10 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.FormatNumbers
+struct UWidget_CostSlotWrapper_C_FormatNumbers_Params
+{
+	int*                                               NumItems;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Out_Text;                                                 // (Parm, OutParm)
+};
+
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.SetIconBrush
 struct UWidget_CostSlotWrapper_C_SetIconBrush_Params
 {
-	class UTexture*                                    IconTexture;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UTexture**                                   IconTexture;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.GetProgressbarPercent
@@ -35,7 +42,7 @@ struct UWidget_CostSlotWrapper_C_GetOrange_Params
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.SetTextboxFormating
 struct UWidget_CostSlotWrapper_C_SetTextboxFormating_Params
 {
-	bool                                               HasItems;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              HasItems;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.GetDarkGray
@@ -53,14 +60,14 @@ struct UWidget_CostSlotWrapper_C_SetPartsNumbers_Params
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.Setup CostIcon
 struct UWidget_CostSlotWrapper_C_Setup_CostIcon_Params
 {
-	class UTexture*                                    IconTexture;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FItemAmount                                 ItemAmount;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
-	class UFGInventoryComponent*                       CachedInventoryComponent;                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                SlotIdx;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                CurrentNumInSlot;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               SmallSlot;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               BigSlot;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ForceOrangeTextbox;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UTexture**                                   IconTexture;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FItemAmount*                                ItemAmount;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	class UFGInventoryComponent**                      CachedInventoryComponent;                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int*                                               SlotIdx;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               CurrentNumInSlot;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              SmallSlot;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              BigSlot;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              ForceOrangeTextbox;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.Tick
@@ -79,7 +86,7 @@ struct UWidget_CostSlotWrapper_C_PreConstruct_Params
 // Function Widget_CostSlotWrapper.Widget_CostSlotWrapper_C.ExecuteUbergraph_Widget_CostSlotWrapper
 struct UWidget_CostSlotWrapper_C_ExecuteUbergraph_Widget_CostSlotWrapper_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

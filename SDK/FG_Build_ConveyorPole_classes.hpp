@@ -29,9 +29,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void PlayConstructSound();
-	void ExecuteUbergraph_Build_ConveyorPole(int EntryPoint);
+	void ExecuteUbergraph_Build_ConveyorPole(int* EntryPoint);
 };
 
 

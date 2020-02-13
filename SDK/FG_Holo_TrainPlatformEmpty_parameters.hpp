@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Holo_TrainPlatformEmpty.Holo_TrainPlatformEmpty_C.UserConstructionScript
-struct AHolo_TrainPlatformEmpty_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

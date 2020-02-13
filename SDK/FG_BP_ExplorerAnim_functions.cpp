@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_ExplorerAnim.BP_ExplorerAnim_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_ExplorerAnim_AnimGraphNode_ModifyBone_CAE5F4CD4693937037AB489F6E27CEAD
-// ()
-
-void UBP_ExplorerAnim_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_ExplorerAnim_AnimGraphNode_ModifyBone_CAE5F4CD4693937037AB489F6E27CEAD()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ExplorerAnim.BP_ExplorerAnim_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_ExplorerAnim_AnimGraphNode_ModifyBone_CAE5F4CD4693937037AB489F6E27CEAD");
-
-	UBP_ExplorerAnim_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_ExplorerAnim_AnimGraphNode_ModifyBone_CAE5F4CD4693937037AB489F6E27CEAD_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ExplorerAnim.BP_ExplorerAnim_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,11 +33,11 @@ void UBP_ExplorerAnim_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function BP_ExplorerAnim.BP_ExplorerAnim_C.ExecuteUbergraph_BP_ExplorerAnim
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_ExplorerAnim_C::ExecuteUbergraph_BP_ExplorerAnim(int EntryPoint)
+void UBP_ExplorerAnim_C::ExecuteUbergraph_BP_ExplorerAnim(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExplorerAnim.BP_ExplorerAnim_C.ExecuteUbergraph_BP_ExplorerAnim");
 

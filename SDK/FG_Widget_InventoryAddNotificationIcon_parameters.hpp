@@ -22,7 +22,7 @@ struct UWidget_InventoryAddNotificationIcon_C_Animate_Icon_Params
 // Function Widget_InventoryAddNotificationIcon.Widget_InventoryAddNotificationIcon_C.ExecuteUbergraph_Widget_InventoryAddNotificationIcon
 struct UWidget_InventoryAddNotificationIcon_C_ExecuteUbergraph_Widget_InventoryAddNotificationIcon_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

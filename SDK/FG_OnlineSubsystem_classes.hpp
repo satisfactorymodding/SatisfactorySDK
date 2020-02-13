@@ -45,8 +45,8 @@ public:
 	}
 
 
-	void OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive);
-	void OnMatchEnded(const class FString& Match);
+	void OnMatchReceivedTurn(class FString* Match, bool* bDidBecomeActive);
+	void OnMatchEnded(class FString* Match);
 };
 
 

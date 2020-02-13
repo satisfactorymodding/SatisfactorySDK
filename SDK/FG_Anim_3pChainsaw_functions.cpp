@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_3pChainsaw.Anim_3pChainsaw_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UAnim_3pChainsaw_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_3pChainsaw.Anim_3pChainsaw_C.ExecuteUbergraph_Anim_3pChainsaw
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_3pChainsaw_C::ExecuteUbergraph_Anim_3pChainsaw(int EntryPoint)
+void UAnim_3pChainsaw_C::ExecuteUbergraph_Anim_3pChainsaw(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_3pChainsaw.Anim_3pChainsaw_C.ExecuteUbergraph_Anim_3pChainsaw");
 

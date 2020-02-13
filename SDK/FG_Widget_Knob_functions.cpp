@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Knob.Widget_Knob_C.BndEvt__ValueSlider_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Knob_C::BndEvt__ValueSlider_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWidget_Knob_C::BndEvt__ValueSlider_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Knob.Widget_Knob_C.BndEvt__ValueSlider_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature");
 
@@ -33,11 +33,11 @@ void UWidget_Knob_C::BndEvt__ValueSlider_K2Node_ComponentBoundEvent_1_OnFloatVal
 
 
 // Function Widget_Knob.Widget_Knob_C.SetupValue
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Knob_C::SetupValue(float Value)
+void UWidget_Knob_C::SetupValue(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Knob.Widget_Knob_C.SetupValue");
 
@@ -53,7 +53,7 @@ void UWidget_Knob_C::SetupValue(float Value)
 
 
 // Function Widget_Knob.Widget_Knob_C.BndEvt__Slider_75_K2Node_ComponentBoundEvent_0_OnMouseCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Knob_C::BndEvt__Slider_75_K2Node_ComponentBoundEvent_0_OnMouseCaptureEndEvent__DelegateSignature()
 {
@@ -70,7 +70,7 @@ void UWidget_Knob_C::BndEvt__Slider_75_K2Node_ComponentBoundEvent_0_OnMouseCaptu
 
 
 // Function Widget_Knob.Widget_Knob_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Knob_C::Construct()
 {
@@ -87,11 +87,11 @@ void UWidget_Knob_C::Construct()
 
 
 // Function Widget_Knob.Widget_Knob_C.ExecuteUbergraph_Widget_Knob
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Knob_C::ExecuteUbergraph_Widget_Knob(int EntryPoint)
+void UWidget_Knob_C::ExecuteUbergraph_Widget_Knob(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Knob.Widget_Knob_C.ExecuteUbergraph_Widget_Knob");
 

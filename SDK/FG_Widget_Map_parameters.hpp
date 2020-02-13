@@ -27,37 +27,38 @@ struct UWidget_Map_C_ListenForInputActions_Params
 // Function Widget_Map.Widget_Map_C.UpdateObjectOnMap
 struct UWidget_Map_C_UpdateObjectOnMap_Params
 {
-	class UFGActorRepresentation*                      actorRepresentation;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UFGActorRepresentation**                     actorRepresentation;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.CenterMapOnPlayer
 struct UWidget_Map_C_CenterMapOnPlayer_Params
 {
-	struct FVector2D                                   normalizedWorldLocation;                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D*                                  normalizedWorldLocation;                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.OnIconUnhover
 struct UWidget_Map_C_OnIconUnhover_Params
 {
-	class UWidget_MapObject_C*                         MapObject;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_MapObject_C**                        MapObject;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.OnIconHover
 struct UWidget_Map_C_OnIconHover_Params
 {
-	class UWidget_MapObject_C*                         MapObject;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_MapObject_C**                        MapObject;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.AddObjectToMap
 struct UWidget_Map_C_AddObjectToMap_Params
 {
-	class UFGActorRepresentation*                      actorRepresentation;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UFGActorRepresentation**                     actorRepresentation;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_MapObject_C*                         WidgetMapObject;                                          // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.RemoveObjectFromMap
 struct UWidget_Map_C_RemoveObjectFromMap_Params
 {
-	class UFGActorRepresentation*                      ActorRepresentationToRemove;                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UFGActorRepresentation**                     ActorRepresentationToRemove;                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.ClearScrollMap
@@ -76,8 +77,8 @@ struct UWidget_Map_C_OnMouseButtonUp_Params
 // Function Widget_Map.Widget_Map_C.ScrollMap
 struct UWidget_Map_C_ScrollMap_Params
 {
-	struct FVector2D                                   MouseOrigin;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   MapOrigin;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D*                                  MouseOrigin;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D*                                  MapOrigin;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.OnMouseButtonDown
@@ -91,7 +92,7 @@ struct UWidget_Map_C_OnMouseButtonDown_Params
 // Function Widget_Map.Widget_Map_C.ZoomMap
 struct UWidget_Map_C_ZoomMap_Params
 {
-	struct FVector2D                                   ZoomValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D*                                  ZoomValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.OnMouseWheel
@@ -158,7 +159,26 @@ struct UWidget_Map_C_OnMapCentered_Params
 // Function Widget_Map.Widget_Map_C.ExecuteUbergraph_Widget_Map
 struct UWidget_Map_C_ExecuteUbergraph_Widget_Map_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Map.Widget_Map_C.OnObjectRemovedFromMapDispatch__DelegateSignature
+struct UWidget_Map_C_OnObjectRemovedFromMapDispatch__DelegateSignature_Params
+{
+	class UFGActorRepresentation**                     ActorRespresentation;                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Map.Widget_Map_C.OnObjectUpdatedOnMapDispatch__DelegateSignature
+struct UWidget_Map_C_OnObjectUpdatedOnMapDispatch__DelegateSignature_Params
+{
+	class UFGActorRepresentation**                     actorRepresentation;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Map.Widget_Map_C.OnObjectAddedToMapDispatch__DelegateSignature
+struct UWidget_Map_C_OnObjectAddedToMapDispatch__DelegateSignature_Params
+{
+	class UFGActorRepresentation**                     actorRepresentation;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_MapObject_C**                        WidgetMapObject;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Map.Widget_Map_C.ZoomChanged__DelegateSignature

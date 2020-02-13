@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Char_Stinger_Child.Char_Stinger_Child_C
-// 0x0000 (0x09B8 - 0x09B8)
+// 0x0000 (0x09D8 - 0x09D8)
 class AChar_Stinger_Child_C : public AChar_Stinger_C
 {
 public:

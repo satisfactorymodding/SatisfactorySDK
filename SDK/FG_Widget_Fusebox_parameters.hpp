@@ -41,7 +41,7 @@ struct UWidget_Fusebox_C_Tick_Params
 // Function Widget_Fusebox.Widget_Fusebox_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature
 struct UWidget_Fusebox_C_BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature_Params
 {
-	float                                              Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Fusebox.Widget_Fusebox_C.Construct
@@ -72,7 +72,7 @@ struct UWidget_Fusebox_C_RestFuseWithAnimation_Params
 // Function Widget_Fusebox.Widget_Fusebox_C.ExecuteUbergraph_Widget_Fusebox
 struct UWidget_Fusebox_C_ExecuteUbergraph_Widget_Fusebox_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Fusebox.Widget_Fusebox_C.ResetFuse__DelegateSignature

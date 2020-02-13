@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Attach_GasMask.Attach_GasMask_C.UserConstructionScript
-struct AAttach_GasMask_C_UserConstructionScript_Params
-{
-};
-
 // Function Attach_GasMask.Attach_GasMask_C.ReceiveTick
 struct AAttach_GasMask_C_ReceiveTick_Params
 {
@@ -33,7 +28,7 @@ struct AAttach_GasMask_C_PlayAttachEffects3P_Params
 // Function Attach_GasMask.Attach_GasMask_C.ExecuteUbergraph_Attach_GasMask
 struct AAttach_GasMask_C_ExecuteUbergraph_Attach_GasMask_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

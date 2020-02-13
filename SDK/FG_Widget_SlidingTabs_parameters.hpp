@@ -27,8 +27,8 @@ struct UWidget_SlidingTabs_C_SetupIndexOffset_Params
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.SetActiveIndex
 struct UWidget_SlidingTabs_C_SetActiveIndex_Params
 {
-	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Animate;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              Animate;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.Construct
@@ -50,7 +50,7 @@ struct UWidget_SlidingTabs_C_PreConstruct_Params
 // Function Widget_SlidingTabs.Widget_SlidingTabs_C.ExecuteUbergraph_Widget_SlidingTabs
 struct UWidget_SlidingTabs_C_ExecuteUbergraph_Widget_SlidingTabs_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

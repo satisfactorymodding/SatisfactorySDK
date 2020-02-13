@@ -20,11 +20,6 @@ struct ABP_BuildGun_C_GetInstigatorPlayerController_Params
 	class APlayerController*                           PlayerController;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_BuildGun.BP_BuildGun_C.UserConstructionScript
-struct ABP_BuildGun_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_BuildGun.BP_BuildGun_C.WasEquipped
 struct ABP_BuildGun_C_WasEquipped_Params
 {
@@ -38,7 +33,7 @@ struct ABP_BuildGun_C_WasUnEquipped_Params
 // Function BP_BuildGun.BP_BuildGun_C.ExecuteUbergraph_BP_BuildGun
 struct ABP_BuildGun_C_ExecuteUbergraph_BP_BuildGun_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

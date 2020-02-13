@@ -23,9 +23,9 @@ struct UWidget_AggroText_C_Get_Text_Text_1_Params
 // Function Widget_AggroText.Widget_AggroText_C.SetAggroData
 struct UWidget_AggroText_C_SetAggroData_Params
 {
-	float                                              Aggro;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class FString                                      ActorName;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	class FString                                      Status;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	float*                                             Aggro;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class FString*                                     ActorName;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class FString*                                     Status;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function Widget_AggroText.Widget_AggroText_C.Tick
@@ -38,7 +38,7 @@ struct UWidget_AggroText_C_Tick_Params
 // Function Widget_AggroText.Widget_AggroText_C.ExecuteUbergraph_Widget_AggroText
 struct UWidget_AggroText_C_ExecuteUbergraph_Widget_AggroText_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

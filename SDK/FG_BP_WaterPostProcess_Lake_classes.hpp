@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterPostProcess_Lake.BP_WaterPostProcess_Lake_C
-// 0x0000 (0x0520 - 0x0520)
+// 0x0000 (0x0570 - 0x0570)
 class UBP_WaterPostProcess_Lake_C : public UFGSharedPostProcessSettings
 {
 public:

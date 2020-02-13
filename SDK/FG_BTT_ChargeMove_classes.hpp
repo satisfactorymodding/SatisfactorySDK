@@ -34,7 +34,7 @@ public:
 	void ReceiveExecute(class AActor** OwnerActor);
 	void ChargeComplete();
 	void ReceiveAbortAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_ChargeMove(int EntryPoint);
+	void ExecuteUbergraph_BTT_ChargeMove(int* EntryPoint);
 };
 
 

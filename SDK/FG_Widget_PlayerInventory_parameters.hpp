@@ -14,13 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Widget_PlayerInventory.Widget_PlayerInventory_C.SetupArmInventoryResize
-struct UWidget_PlayerInventory_C_SetupArmInventoryResize_Params
+// Function Widget_PlayerInventory.Widget_PlayerInventory_C.OnKeyUp
+struct UWidget_PlayerInventory_C_OnKeyUp_Params
 {
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Widget_PlayerInventory.Widget_PlayerInventory_C.CheckInventorySizes
-struct UWidget_PlayerInventory_C_CheckInventorySizes_Params
+// Function Widget_PlayerInventory.Widget_PlayerInventory_C.SetupArmInventoryResize
+struct UWidget_PlayerInventory_C_SetupArmInventoryResize_Params
 {
 };
 
@@ -68,11 +71,11 @@ struct UWidget_PlayerInventory_C_Cleanup_Params
 // Function Widget_PlayerInventory.Widget_PlayerInventory_C.SetInventoryComponents
 struct UWidget_PlayerInventory_C_SetInventoryComponents_Params
 {
-	class UFGInventoryComponent*                       InventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGInventoryComponent*                       arms;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGInventoryComponent*                       Back;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGInventoryComponent*                       head;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGInventoryComponent*                       Trash;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      InventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      arms;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      Back;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      head;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      trash;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_PlayerInventory.Widget_PlayerInventory_C.Init
@@ -98,7 +101,7 @@ struct UWidget_PlayerInventory_C_Construct_Params
 // Function Widget_PlayerInventory.Widget_PlayerInventory_C.CentralStorageButtonClicked
 struct UWidget_PlayerInventory_C_CentralStorageButtonClicked_Params
 {
-	class UWidget_Button_C*                            ClickedButton;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Button_C**                           ClickedButton;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_PlayerInventory.Widget_PlayerInventory_C.OnCentralStorageAddedOrRemoved
@@ -111,10 +114,22 @@ struct UWidget_PlayerInventory_C_BndEvt__Widget_StandardButton_K2Node_ComponentB
 {
 };
 
+// Function Widget_PlayerInventory.Widget_PlayerInventory_C.PreConstruct
+struct UWidget_PlayerInventory_C_PreConstruct_Params
+{
+	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_PlayerInventory.Widget_PlayerInventory_C.BndEvt__mInventory_K2Node_ComponentBoundEvent_0_OnRelevantShortcutPressed__DelegateSignature
+struct UWidget_PlayerInventory_C_BndEvt__mInventory_K2Node_ComponentBoundEvent_0_OnRelevantShortcutPressed__DelegateSignature_Params
+{
+	class UWidget_InventorySlot_C**                    InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
 // Function Widget_PlayerInventory.Widget_PlayerInventory_C.ExecuteUbergraph_Widget_PlayerInventory
 struct UWidget_PlayerInventory_C_ExecuteUbergraph_Widget_PlayerInventory_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_JetPack.Widget_JetPack_C.GetFuelText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -34,7 +34,7 @@ struct FText UWidget_JetPack_C::GetFuelText()
 
 
 // Function Widget_JetPack.Widget_JetPack_C.GetJetPack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AEquip_JetPack_C*        Jetpack                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -56,7 +56,7 @@ void UWidget_JetPack_C::GetJetPack(class AEquip_JetPack_C** Jetpack)
 
 
 // Function Widget_JetPack.Widget_JetPack_C.GetFuelColor
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -77,7 +77,7 @@ struct FLinearColor UWidget_JetPack_C::GetFuelColor()
 
 
 // Function Widget_JetPack.Widget_JetPack_C.GetFuelPct
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -98,7 +98,7 @@ float UWidget_JetPack_C::GetFuelPct()
 
 
 // Function Widget_JetPack.Widget_JetPack_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -120,11 +120,11 @@ void UWidget_JetPack_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_JetPack.Widget_JetPack_C.ExecuteUbergraph_Widget_JetPack
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_JetPack_C::ExecuteUbergraph_Widget_JetPack(int EntryPoint)
+void UWidget_JetPack_C::ExecuteUbergraph_Widget_JetPack(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_JetPack.Widget_JetPack_C.ExecuteUbergraph_Widget_JetPack");
 

@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_ResourceDeposit.BP_ResourceDeposit_C.UserConstructionScript
-// ()
-
-void ABP_ResourceDeposit_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ResourceDeposit.BP_ResourceDeposit_C.UserConstructionScript");
-
-	ABP_ResourceDeposit_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ResourceDeposit.BP_ResourceDeposit_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_ResourceDeposit_C::ReceiveBeginPlay()
 {
@@ -47,7 +30,7 @@ void ABP_ResourceDeposit_C::ReceiveBeginPlay()
 
 
 // Function BP_ResourceDeposit.BP_ResourceDeposit_C.PlayDepletedEffect
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UClass**                 Descriptor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,11 +50,11 @@ void ABP_ResourceDeposit_C::PlayDepletedEffect(class UClass** Descriptor)
 
 
 // Function BP_ResourceDeposit.BP_ResourceDeposit_C.ExecuteUbergraph_BP_ResourceDeposit
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ResourceDeposit_C::ExecuteUbergraph_BP_ResourceDeposit(int EntryPoint)
+void ABP_ResourceDeposit_C::ExecuteUbergraph_BP_ResourceDeposit(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ResourceDeposit.BP_ResourceDeposit_C.ExecuteUbergraph_BP_ResourceDeposit");
 

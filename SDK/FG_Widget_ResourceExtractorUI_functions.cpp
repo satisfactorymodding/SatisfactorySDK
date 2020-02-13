@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.DropInventorySlotStack
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           WasStackMoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -37,11 +37,11 @@ void UWidget_ResourceExtractorUI_C::DropInventorySlotStack(class UWidget_Invento
 
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.GetWarningVisibility
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGBuildableResourceExtractor* buildableResourceExtractor     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGBuildableResourceExtractor** buildableResourceExtractor     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ResourceExtractorUI_C::GetWarningVisibility(class AFGBuildableResourceExtractor* buildableResourceExtractor)
+void UWidget_ResourceExtractorUI_C::GetWarningVisibility(class AFGBuildableResourceExtractor** buildableResourceExtractor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.GetWarningVisibility");
 
@@ -57,7 +57,7 @@ void UWidget_ResourceExtractorUI_C::GetWarningVisibility(class AFGBuildableResou
 
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.UpdateOutputInfo
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ResourceExtractorUI_C::UpdateOutputInfo()
 {
@@ -74,7 +74,7 @@ void UWidget_ResourceExtractorUI_C::UpdateOutputInfo()
 
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.UpdateExtractorStats
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ResourceExtractorUI_C::UpdateExtractorStats()
 {
@@ -91,7 +91,7 @@ void UWidget_ResourceExtractorUI_C::UpdateExtractorStats()
 
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.UpdateExtractorProgress
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ResourceExtractorUI_C::UpdateExtractorProgress()
 {
@@ -108,7 +108,7 @@ void UWidget_ResourceExtractorUI_C::UpdateExtractorProgress()
 
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.GetOverclockWidgetVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -129,7 +129,7 @@ ESlateVisibility UWidget_ResourceExtractorUI_C::GetOverclockWidgetVisibility()
 
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ResourceExtractorUI_C::Construct()
 {
@@ -146,7 +146,7 @@ void UWidget_ResourceExtractorUI_C::Construct()
 
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -168,7 +168,7 @@ void UWidget_ResourceExtractorUI_C::Tick(struct FGeometry* MyGeometry, float* In
 
 
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_0_OnStandbyClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ResourceExtractorUI_C::BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_0_OnStandbyClicked__DelegateSignature()
 {
@@ -184,25 +184,8 @@ void UWidget_ResourceExtractorUI_C::BndEvt__Widget_StandbyButton_K2Node_Componen
 }
 
 
-// Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Init
-// ()
-
-void UWidget_ResourceExtractorUI_C::Init()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Init");
-
-	UWidget_ResourceExtractorUI_C_Init_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_2_OnClose__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ResourceExtractorUI_C::BndEvt__Widget_Window_DarkMode_K2Node_ComponentBoundEvent_2_OnClose__DelegateSignature()
 {
@@ -218,12 +201,46 @@ void UWidget_ResourceExtractorUI_C::BndEvt__Widget_Window_DarkMode_K2Node_Compon
 }
 
 
-// Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.ExecuteUbergraph_Widget_ResourceExtractorUI
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Init
+// (Event, Public, BlueprintEvent)
 
-void UWidget_ResourceExtractorUI_C::ExecuteUbergraph_Widget_ResourceExtractorUI(int EntryPoint)
+void UWidget_ResourceExtractorUI_C::Init()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Init");
+
+	UWidget_ResourceExtractorUI_C_Init_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_ResourceExtractorUI_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.Destruct");
+
+	UWidget_ResourceExtractorUI_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.ExecuteUbergraph_Widget_ResourceExtractorUI
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_ResourceExtractorUI_C::ExecuteUbergraph_Widget_ResourceExtractorUI(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ResourceExtractorUI.Widget_ResourceExtractorUI_C.ExecuteUbergraph_Widget_ResourceExtractorUI");
 

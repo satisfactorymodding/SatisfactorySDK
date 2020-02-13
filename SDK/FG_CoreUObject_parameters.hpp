@@ -17,7 +17,7 @@ namespace SDK
 // Function CoreUObject.Object.ExecuteUbergraph
 struct UObject_ExecuteUbergraph_Params
 {
-	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

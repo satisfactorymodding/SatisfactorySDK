@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.SetValue
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_AnalougeMeter_C::SetValue(float Value)
+void UWidget_AnalougeMeter_C::SetValue(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.SetValue");
 
@@ -33,7 +33,7 @@ void UWidget_AnalougeMeter_C::SetValue(float Value)
 
 
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -53,7 +53,7 @@ void UWidget_AnalougeMeter_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.LerpMeter
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_AnalougeMeter_C::LerpMeter()
 {
@@ -70,7 +70,7 @@ void UWidget_AnalougeMeter_C::LerpMeter()
 
 
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.Wobble
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_AnalougeMeter_C::Wobble()
 {
@@ -87,7 +87,7 @@ void UWidget_AnalougeMeter_C::Wobble()
 
 
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_AnalougeMeter_C::Destruct()
 {
@@ -104,11 +104,11 @@ void UWidget_AnalougeMeter_C::Destruct()
 
 
 // Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.ExecuteUbergraph_Widget_AnalougeMeter
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_AnalougeMeter_C::ExecuteUbergraph_Widget_AnalougeMeter(int EntryPoint)
+void UWidget_AnalougeMeter_C::ExecuteUbergraph_Widget_AnalougeMeter(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_AnalougeMeter.Widget_AnalougeMeter_C.ExecuteUbergraph_Widget_AnalougeMeter");
 

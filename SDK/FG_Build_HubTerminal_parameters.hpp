@@ -37,11 +37,6 @@ struct ABuild_HubTerminal_C_GetLookAtDecription_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Build_HubTerminal.Build_HubTerminal_C.UserConstructionScript
-struct ABuild_HubTerminal_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

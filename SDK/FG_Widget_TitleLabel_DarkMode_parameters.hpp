@@ -22,7 +22,7 @@ struct UWidget_TitleLabel_DarkMode_C_SetFicsItDriverText_Params
 // Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.SetTitle
 struct UWidget_TitleLabel_DarkMode_C_SetTitle_Params
 {
-	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.PreConstruct
@@ -34,7 +34,7 @@ struct UWidget_TitleLabel_DarkMode_C_PreConstruct_Params
 // Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.ExecuteUbergraph_Widget_TitleLabel_DarkMode
 struct UWidget_TitleLabel_DarkMode_C_ExecuteUbergraph_Widget_TitleLabel_DarkMode_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

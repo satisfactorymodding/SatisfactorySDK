@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Equip_ColorGun.Equip_ColorGun_C.UserConstructionScript
-struct AEquip_ColorGun_C_UserConstructionScript_Params
-{
-};
-
 // Function Equip_ColorGun.Equip_ColorGun_C.ToggleColorPickerUI
 struct AEquip_ColorGun_C_ToggleColorPickerUI_Params
 {
@@ -52,7 +47,7 @@ struct AEquip_ColorGun_C_WasUnEquipped_Params
 // Function Equip_ColorGun.Equip_ColorGun_C.ExecuteUbergraph_Equip_ColorGun
 struct AEquip_ColorGun_C_ExecuteUbergraph_Equip_ColorGun_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

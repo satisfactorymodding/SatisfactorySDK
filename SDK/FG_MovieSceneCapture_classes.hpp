@@ -21,8 +21,7 @@ class UMovieSceneCaptureProtocolBase : public UObject
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
 	EMovieSceneCaptureProtocolState                    State;                                                    // 0x0050(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               bFrameRequested;                                          // 0x0051(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0052(0x0006) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -161,7 +160,7 @@ public:
 class UCompressedImageSequenceProtocol : public UImageSequenceProtocol
 {
 public:
-	int                                                CompressionQuality;                                       // 0x00D8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int                                                CompressionQuality;                                       // 0x00D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -252,7 +251,7 @@ public:
 
 
 // Class MovieSceneCapture.MovieSceneCapture
-// 0x01C8 (0x01F0 - 0x0028)
+// 0x01D8 (0x0200 - 0x0028)
 class UMovieSceneCapture : public UObject
 {
 public:
@@ -261,13 +260,13 @@ public:
 	struct FSoftClassPath                              AudioCaptureProtocolType;                                 // 0x0050(0x0018) (Edit, ZeroConstructor, Config, NoClear)
 	class UMovieSceneImageCaptureProtocolBase*         ImageCaptureProtocol;                                     // 0x0068(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData)
 	class UMovieSceneAudioCaptureProtocolBase*         AudioCaptureProtocol;                                     // 0x0070(0x0008) (Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData)
-	struct FMovieSceneCaptureSettings                  Settings;                                                 // 0x0078(0x0050) (Edit, BlueprintVisible, Config)
-	bool                                               bUseSeparateProcess;                                      // 0x00C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bCloseEditorWhenCaptureStarts;                            // 0x00C9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x00CA(0x0006) MISSED OFFSET
-	class FString                                      AdditionalCommandLineArguments;                           // 0x00D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, Config)
-	class FString                                      InheritedCommandLineArguments;                            // 0x00E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData02[0x100];                                     // 0x00F0(0x0100) MISSED OFFSET
+	struct FMovieSceneCaptureSettings                  Settings;                                                 // 0x0078(0x0060) (Edit, BlueprintVisible, Config)
+	bool                                               bUseSeparateProcess;                                      // 0x00D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bCloseEditorWhenCaptureStarts;                            // 0x00D9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x00DA(0x0006) MISSED OFFSET
+	class FString                                      AdditionalCommandLineArguments;                           // 0x00E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, Config)
+	class FString                                      InheritedCommandLineArguments;                            // 0x00F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, Transient)
+	unsigned char                                      UnknownData02[0x100];                                     // 0x0100(0x0100) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -276,22 +275,22 @@ public:
 	}
 
 
-	void SetImageCaptureProtocolType(class UClass* ProtocolType);
-	void SetAudioCaptureProtocolType(class UClass* ProtocolType);
+	void SetImageCaptureProtocolType(class UClass** ProtocolType);
+	void SetAudioCaptureProtocolType(class UClass** ProtocolType);
 	class UMovieSceneCaptureProtocolBase* GetImageCaptureProtocol();
 	class UMovieSceneCaptureProtocolBase* GetAudioCaptureProtocol();
 };
 
 
 // Class MovieSceneCapture.LevelCapture
-// 0x0020 (0x0210 - 0x01F0)
+// 0x0020 (0x0220 - 0x0200)
 class ULevelCapture : public UMovieSceneCapture
 {
 public:
-	bool                                               bAutoStartCapture;                                        // 0x01F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB];                                       // 0x01F1(0x000B) MISSED OFFSET
-	struct FGuid                                       PrerequisiteActorId;                                      // 0x01FC(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x020C(0x0004) MISSED OFFSET
+	bool                                               bAutoStartCapture;                                        // 0x0200(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB];                                       // 0x0201(0x000B) MISSED OFFSET
+	struct FGuid                                       PrerequisiteActorId;                                      // 0x020C(0x0010) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x021C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -315,21 +314,21 @@ public:
 	}
 
 
-	bool IsCaptureInProgress();
-	int GetCaptureFrameNumber();
-	float GetCaptureElapsedTime();
-	class UMovieSceneImageCaptureProtocolBase* FindImageCaptureProtocol();
-	class UMovieSceneAudioCaptureProtocolBase* FindAudioCaptureProtocol();
+	bool STATIC_IsCaptureInProgress();
+	int STATIC_GetCaptureFrameNumber();
+	float STATIC_GetCaptureElapsedTime();
+	class UMovieSceneImageCaptureProtocolBase* STATIC_FindImageCaptureProtocol();
+	class UMovieSceneAudioCaptureProtocolBase* STATIC_FindAudioCaptureProtocol();
 };
 
 
 // Class MovieSceneCapture.UserDefinedCaptureProtocol
-// 0x0088 (0x00E0 - 0x0058)
+// 0x0080 (0x00D8 - 0x0058)
 class UUserDefinedCaptureProtocol : public UMovieSceneImageCaptureProtocolBase
 {
 public:
 	class UWorld*                                      World;                                                    // 0x0058(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0060(0x0080) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x78];                                      // 0x0060(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -339,34 +338,33 @@ public:
 
 
 	void StopCapturingFinalPixels();
-	void StartCapturingFinalPixels(const struct FName& StreamName);
-	void ResolveBuffer(class UTexture* Buffer, const struct FName& BufferName, const struct FScriptDelegate& Handler);
-	void PushBufferToStream(class UTexture* Buffer, const struct FName& StreamName);
+	void StartCapturingFinalPixels(struct FCapturedPixelsID* StreamID);
+	void ResolveBuffer(class UTexture** Buffer, struct FCapturedPixelsID* BufferID);
 	void OnWarmUp();
 	void OnTick();
 	void OnStartCapture();
 	bool OnSetup();
 	void OnPreTick();
+	void OnPixelsReceived(struct FCapturedPixels* Pixels, struct FCapturedPixelsID* ID, struct FFrameMetrics* FrameMetrics);
 	void OnPauseCapture();
 	void OnFinalize();
 	void OnCaptureFrame();
 	bool OnCanFinalize();
 	void OnBeginFinalize();
 	struct FFrameMetrics GetCurrentFrameMetrics();
-	class FString GenerateFilename(const struct FFrameMetrics& InFrameMetrics);
-	void BindToStream(const struct FName& StreamName, const struct FScriptDelegate& Handler);
+	class FString GenerateFilename(struct FFrameMetrics* InFrameMetrics);
 };
 
 
 // Class MovieSceneCapture.UserDefinedImageCaptureProtocol
-// 0x0008 (0x00E8 - 0x00E0)
+// 0x0008 (0x00E0 - 0x00D8)
 class UUserDefinedImageCaptureProtocol : public UUserDefinedCaptureProtocol
 {
 public:
-	EDesiredImageFormat                                Format;                                                   // 0x00E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bEnableCompression;                                       // 0x00E1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x00E2(0x0002) MISSED OFFSET
-	int                                                CompressionQuality;                                       // 0x00E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	EDesiredImageFormat                                Format;                                                   // 0x00D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bEnableCompression;                                       // 0x00D9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x00DA(0x0002) MISSED OFFSET
+	int                                                CompressionQuality;                                       // 0x00DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -375,22 +373,21 @@ public:
 	}
 
 
-	void WriteImageToDisk(const struct FCapturedPixels& PixelData, const struct FName& StreamName, const struct FFrameMetrics& FrameMetrics, bool bCopyImageData);
+	void WriteImageToDisk(struct FCapturedPixels* PixelData, struct FCapturedPixelsID* StreamID, struct FFrameMetrics* FrameMetrics, bool* bCopyImageData);
 	class FString GenerateFilenameForCurrentFrame();
-	class FString GenerateFilenameForBuffer(class UTexture* Buffer, const struct FName& StreamName);
+	class FString GenerateFilenameForBuffer(class UTexture** Buffer, struct FCapturedPixelsID* StreamID);
 };
 
 
 // Class MovieSceneCapture.VideoCaptureProtocol
-// 0x0028 (0x0090 - 0x0068)
+// 0x0018 (0x0080 - 0x0068)
 class UVideoCaptureProtocol : public UFrameGrabberProtocol
 {
 public:
 	bool                                               bUseCompression;                                          // 0x0068(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0069(0x0003) MISSED OFFSET
 	float                                              CompressionQuality;                                       // 0x006C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      VideoCodec;                                               // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0080(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0070(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

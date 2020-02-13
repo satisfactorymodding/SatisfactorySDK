@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tile_X1_Y4.Tile_X1_Y4_C
-// 0x0000 (0x0330 - 0x0330)
+// 0x0000 (0x0338 - 0x0338)
 class ATile_X1_Y4_C : public ALevelScriptActor
 {
 public:

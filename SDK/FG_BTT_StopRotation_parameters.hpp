@@ -24,7 +24,7 @@ struct UBTT_StopRotation_C_ReceiveExecuteAI_Params
 // Function BTT_StopRotation.BTT_StopRotation_C.ExecuteUbergraph_BTT_StopRotation
 struct UBTT_StopRotation_C_ExecuteUbergraph_BTT_StopRotation_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

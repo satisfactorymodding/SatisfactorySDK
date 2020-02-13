@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.AddInviteToInviteList
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FPendingInvite          invite                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -35,7 +35,7 @@ void UWidget_ManageInvites_C::AddInviteToInviteList(struct FPendingInvite* invit
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.UpdateFriendInviteButton
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FUniqueNetIdRepl        netId                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -57,12 +57,12 @@ void UWidget_ManageInvites_C::UpdateFriendInviteButton(struct FUniqueNetIdRepl* 
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.SetupButtonForJoinInvite
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Multiplayer_ListButton_C* Button                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
+// class UWidget_Multiplayer_ListButton_C** Button                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
 // struct FPendingInvite          invite                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_ManageInvites_C::SetupButtonForJoinInvite(class UWidget_Multiplayer_ListButton_C* Button, struct FPendingInvite* invite)
+void UWidget_ManageInvites_C::SetupButtonForJoinInvite(class UWidget_Multiplayer_ListButton_C** Button, struct FPendingInvite* invite)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.SetupButtonForJoinInvite");
 
@@ -81,12 +81,12 @@ void UWidget_ManageInvites_C::SetupButtonForJoinInvite(class UWidget_Multiplayer
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.SetupButtonForSendInvite
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Multiplayer_ListButton_C* Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FFGOnlineFriend         onlineFriend                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UWidget_Multiplayer_ListButton_C** Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FFGOnlineFriend*        onlineFriend                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_ManageInvites_C::SetupButtonForSendInvite(class UWidget_Multiplayer_ListButton_C* Button, const struct FFGOnlineFriend& onlineFriend)
+void UWidget_ManageInvites_C::SetupButtonForSendInvite(class UWidget_Multiplayer_ListButton_C** Button, struct FFGOnlineFriend* onlineFriend)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.SetupButtonForSendInvite");
 
@@ -103,7 +103,7 @@ void UWidget_ManageInvites_C::SetupButtonForSendInvite(class UWidget_Multiplayer
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.UpdateOrAddFriendsToInvite
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FFGOnlineFriend> UpdatedFriends                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -125,11 +125,11 @@ void UWidget_ManageInvites_C::UpdateOrAddFriendsToInvite(TArray<struct FFGOnline
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.UpdateInviteFriendButton
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUniqueNetIdRepl        friendId                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FUniqueNetIdRepl*       friendId                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_ManageInvites_C::UpdateInviteFriendButton(const struct FUniqueNetIdRepl& friendId)
+void UWidget_ManageInvites_C::UpdateInviteFriendButton(struct FUniqueNetIdRepl* friendId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.UpdateInviteFriendButton");
 
@@ -145,7 +145,7 @@ void UWidget_ManageInvites_C::UpdateInviteFriendButton(const struct FUniqueNetId
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.PopulateInviteList
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::PopulateInviteList()
 {
@@ -162,7 +162,7 @@ void UWidget_ManageInvites_C::PopulateInviteList()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.ClearInviteList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::ClearInviteList()
 {
@@ -179,7 +179,7 @@ void UWidget_ManageInvites_C::ClearInviteList()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.ClearInvitePlayerList
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::ClearInvitePlayerList()
 {
@@ -196,7 +196,7 @@ void UWidget_ManageInvites_C::ClearInvitePlayerList()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.PopulateFriendsToInvite
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::PopulateFriendsToInvite()
 {
@@ -213,7 +213,7 @@ void UWidget_ManageInvites_C::PopulateFriendsToInvite()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.OnEscape
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::OnEscape()
 {
@@ -230,7 +230,7 @@ void UWidget_ManageInvites_C::OnEscape()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManageInvites_C::Construct()
 {
@@ -247,11 +247,11 @@ void UWidget_ManageInvites_C::Construct()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.OnJoinInvite
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Multiplayer_ListButton_C* Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Multiplayer_ListButton_C** Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ManageInvites_C::OnJoinInvite(class UWidget_Multiplayer_ListButton_C* Button)
+void UWidget_ManageInvites_C::OnJoinInvite(class UWidget_Multiplayer_ListButton_C** Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.OnJoinInvite");
 
@@ -267,7 +267,7 @@ void UWidget_ManageInvites_C::OnJoinInvite(class UWidget_Multiplayer_ListButton_
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.AddInvitePlayersDelegates
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::AddInvitePlayersDelegates()
 {
@@ -284,11 +284,11 @@ void UWidget_ManageInvites_C::AddInvitePlayersDelegates()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.FriendListUpdated_InvitePlayerss
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUpdatedFriends         UpdatedFriends                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FUpdatedFriends*        UpdatedFriends                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_ManageInvites_C::FriendListUpdated_InvitePlayerss(const struct FUpdatedFriends& UpdatedFriends)
+void UWidget_ManageInvites_C::FriendListUpdated_InvitePlayerss(struct FUpdatedFriends* UpdatedFriends)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.FriendListUpdated_InvitePlayerss");
 
@@ -304,11 +304,11 @@ void UWidget_ManageInvites_C::FriendListUpdated_InvitePlayerss(const struct FUpd
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.PresenceUpdated_InvitePlayers
-// ()
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUniqueNetIdRepl        updatedId                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FUniqueNetIdRepl*       updatedId                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_ManageInvites_C::PresenceUpdated_InvitePlayers(const struct FUniqueNetIdRepl& updatedId)
+void UWidget_ManageInvites_C::PresenceUpdated_InvitePlayers(struct FUniqueNetIdRepl* updatedId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.PresenceUpdated_InvitePlayers");
 
@@ -324,7 +324,7 @@ void UWidget_ManageInvites_C::PresenceUpdated_InvitePlayers(const struct FUnique
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.RemoveInvitePlayersDelegates
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::RemoveInvitePlayersDelegates()
 {
@@ -341,7 +341,7 @@ void UWidget_ManageInvites_C::RemoveInvitePlayersDelegates()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.AddManageInvitesDelegates
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::AddManageInvitesDelegates()
 {
@@ -358,11 +358,11 @@ void UWidget_ManageInvites_C::AddManageInvitesDelegates()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.FriendsPresenceUpdate_ManageInvites
-// ()
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUniqueNetIdRepl        updatedId                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FUniqueNetIdRepl*       updatedId                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_ManageInvites_C::FriendsPresenceUpdate_ManageInvites(const struct FUniqueNetIdRepl& updatedId)
+void UWidget_ManageInvites_C::FriendsPresenceUpdate_ManageInvites(struct FUniqueNetIdRepl* updatedId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.FriendsPresenceUpdate_ManageInvites");
 
@@ -378,7 +378,7 @@ void UWidget_ManageInvites_C::FriendsPresenceUpdate_ManageInvites(const struct F
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.RemoveManageInvitesDelegates
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ManageInvites_C::RemoveManageInvitesDelegates()
 {
@@ -395,11 +395,11 @@ void UWidget_ManageInvites_C::RemoveManageInvitesDelegates()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.InviteReceived_ManageInvites
-// ()
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPendingInvite          receivedInvite                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FPendingInvite*         receivedInvite                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_ManageInvites_C::InviteReceived_ManageInvites(const struct FPendingInvite& receivedInvite)
+void UWidget_ManageInvites_C::InviteReceived_ManageInvites(struct FPendingInvite* receivedInvite)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.InviteReceived_ManageInvites");
 
@@ -415,7 +415,7 @@ void UWidget_ManageInvites_C::InviteReceived_ManageInvites(const struct FPending
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.OnMenuExit
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UWidget**                prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool*                          noAnimation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -437,12 +437,12 @@ void UWidget_ManageInvites_C::OnMenuExit(class UWidget** prevMenu, bool* noAnima
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_0_OnActiveWidgetSet__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class UWidget*                 oldWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UWidget*                 newWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget**                oldWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget**                newWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ManageInvites_C::BndEvt__mSwitcher_K2Node_ComponentBoundEvent_0_OnActiveWidgetSet__DelegateSignature(class UWidget* oldWidget, class UWidget* newWidget)
+void UWidget_ManageInvites_C::BndEvt__mSwitcher_K2Node_ComponentBoundEvent_0_OnActiveWidgetSet__DelegateSignature(class UWidget** oldWidget, class UWidget** newWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.BndEvt__mSwitcher_K2Node_ComponentBoundEvent_0_OnActiveWidgetSet__DelegateSignature");
 
@@ -459,7 +459,7 @@ void UWidget_ManageInvites_C::BndEvt__mSwitcher_K2Node_ComponentBoundEvent_0_OnA
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.OnMenuEnter
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UWidget**                prevMenu                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -479,7 +479,7 @@ void UWidget_ManageInvites_C::OnMenuEnter(class UWidget** prevMenu)
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ManageInvites_C::Destruct()
 {
@@ -496,11 +496,11 @@ void UWidget_ManageInvites_C::Destruct()
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.OnInvite
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Multiplayer_ListButton_C* ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Multiplayer_ListButton_C** ClickedButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_ManageInvites_C::OnInvite(class UWidget_Multiplayer_ListButton_C* ClickedButton)
+void UWidget_ManageInvites_C::OnInvite(class UWidget_Multiplayer_ListButton_C** ClickedButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.OnInvite");
 
@@ -516,11 +516,11 @@ void UWidget_ManageInvites_C::OnInvite(class UWidget_Multiplayer_ListButton_C* C
 
 
 // Function Widget_ManageInvites.Widget_ManageInvites_C.ExecuteUbergraph_Widget_ManageInvites
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ManageInvites_C::ExecuteUbergraph_Widget_ManageInvites(int EntryPoint)
+void UWidget_ManageInvites_C::ExecuteUbergraph_Widget_ManageInvites(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ManageInvites.Widget_ManageInvites_C.ExecuteUbergraph_Widget_ManageInvites");
 

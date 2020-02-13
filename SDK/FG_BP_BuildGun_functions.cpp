@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BuildGun.BP_BuildGun_C.GetInstigatorPlayerController
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController*       PlayerController               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -34,25 +34,8 @@ void ABP_BuildGun_C::GetInstigatorPlayerController(class APlayerController** Pla
 }
 
 
-// Function BP_BuildGun.BP_BuildGun_C.UserConstructionScript
-// ()
-
-void ABP_BuildGun_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildGun.BP_BuildGun_C.UserConstructionScript");
-
-	ABP_BuildGun_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_BuildGun.BP_BuildGun_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_BuildGun_C::WasEquipped()
 {
@@ -69,7 +52,7 @@ void ABP_BuildGun_C::WasEquipped()
 
 
 // Function BP_BuildGun.BP_BuildGun_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_BuildGun_C::WasUnEquipped()
 {
@@ -86,11 +69,11 @@ void ABP_BuildGun_C::WasUnEquipped()
 
 
 // Function BP_BuildGun.BP_BuildGun_C.ExecuteUbergraph_BP_BuildGun
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BuildGun_C::ExecuteUbergraph_BP_BuildGun(int EntryPoint)
+void ABP_BuildGun_C::ExecuteUbergraph_BP_BuildGun(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildGun.BP_BuildGun_C.ExecuteUbergraph_BP_BuildGun");
 

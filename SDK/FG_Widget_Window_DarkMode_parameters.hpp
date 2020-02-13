@@ -14,6 +14,37 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnMouseButtonUp
+struct UWidget_Window_DarkMode_C_OnMouseButtonUp_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FPointerEvent*                              MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnNumKeyDown
+struct UWidget_Window_DarkMode_C_OnNumKeyDown_Params
+{
+	struct FKeyEvent*                                  KeyEvent;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnKeyUp
+struct UWidget_Window_DarkMode_C_OnKeyUp_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnMouseButtonDown
+struct UWidget_Window_DarkMode_C_OnMouseButtonDown_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FPointerEvent*                              MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.InitTabs
 struct UWidget_Window_DarkMode_C_InitTabs_Params
 {
@@ -22,8 +53,8 @@ struct UWidget_Window_DarkMode_C_InitTabs_Params
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetInventoryVisibility
 struct UWidget_Window_DarkMode_C_SetInventoryVisibility_Params
 {
-	bool                                               mShowInventory;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Animate;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              mShowInventory;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              Animate;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.GetDividerButtonSlotVisibility
@@ -62,7 +93,7 @@ struct UWidget_Window_DarkMode_C_OnDrop_Params
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetTitle
 struct UWidget_Window_DarkMode_C_SetTitle_Params
 {
-	struct FText                                       Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText*                                      Title;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.Construct
@@ -111,7 +142,7 @@ struct UWidget_Window_DarkMode_C_LerpShowInventory_Params
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature
 struct UWidget_Window_DarkMode_C_BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature_Params
 {
-	int                                                ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.BndEvt__Widget_TabsContainer_K2Node_ComponentBoundEvent_0_OnNoTabsGenerated__DelegateSignature
@@ -124,16 +155,28 @@ struct UWidget_Window_DarkMode_C_BndEvt__Widget_TabsContainer_K2Node_ComponentBo
 {
 };
 
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.SetupRelevantInventory
+struct UWidget_Window_DarkMode_C_SetupRelevantInventory_Params
+{
+	TArray<class UClass*>*                             relevantClasses;                                          // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.ExecuteUbergraph_Widget_Window_DarkMode
 struct UWidget_Window_DarkMode_C_ExecuteUbergraph_Widget_Window_DarkMode_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnRelevantShortcutPressed__DelegateSignature
+struct UWidget_Window_DarkMode_C_OnRelevantShortcutPressed__DelegateSignature_Params
+{
+	class UWidget_InventorySlot_C**                    InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnTabButtonClicked__DelegateSignature
 struct UWidget_Window_DarkMode_C_OnTabButtonClicked__DelegateSignature_Params
 {
-	int                                                ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ButtonIndex;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Window_DarkMode.Widget_Window_DarkMode_C.OnClose__DelegateSignature

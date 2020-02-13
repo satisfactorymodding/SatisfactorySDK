@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_AttentionPingActor.BP_AttentionPingActor_C.UserConstructionScript
-// ()
-
-void ABP_AttentionPingActor_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionPingActor.BP_AttentionPingActor_C.UserConstructionScript");
-
-	ABP_AttentionPingActor_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_AttentionPingActor.BP_AttentionPingActor_C.SpawnAttentionPingEffects
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_AttentionPingActor_C::SpawnAttentionPingEffects()
 {
@@ -47,11 +30,11 @@ void ABP_AttentionPingActor_C::SpawnAttentionPingEffects()
 
 
 // Function BP_AttentionPingActor.BP_AttentionPingActor_C.ExecuteUbergraph_BP_AttentionPingActor
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AttentionPingActor_C::ExecuteUbergraph_BP_AttentionPingActor(int EntryPoint)
+void ABP_AttentionPingActor_C::ExecuteUbergraph_BP_AttentionPingActor(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionPingActor.BP_AttentionPingActor_C.ExecuteUbergraph_BP_AttentionPingActor");
 

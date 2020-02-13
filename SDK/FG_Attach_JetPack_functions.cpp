@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_JetPack.Attach_JetPack_C.UserConstructionScript
-// ()
-
-void AAttach_JetPack_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_JetPack.Attach_JetPack_C.UserConstructionScript");
-
-	AAttach_JetPack_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_JetPack.Attach_JetPack_C.OnStopThrusting
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_JetPack_C::OnStopThrusting()
 {
@@ -47,7 +30,7 @@ void AAttach_JetPack_C::OnStopThrusting()
 
 
 // Function Attach_JetPack.Attach_JetPack_C.OnStartThrusting
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_JetPack_C::OnStartThrusting()
 {
@@ -64,7 +47,7 @@ void AAttach_JetPack_C::OnStartThrusting()
 
 
 // Function Attach_JetPack.Attach_JetPack_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AAttach_JetPack_C::ReceiveBeginPlay()
 {
@@ -81,11 +64,11 @@ void AAttach_JetPack_C::ReceiveBeginPlay()
 
 
 // Function Attach_JetPack.Attach_JetPack_C.ExecuteUbergraph_Attach_JetPack
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_JetPack_C::ExecuteUbergraph_Attach_JetPack(int EntryPoint)
+void AAttach_JetPack_C::ExecuteUbergraph_Attach_JetPack(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_JetPack.Attach_JetPack_C.ExecuteUbergraph_Attach_JetPack");
 

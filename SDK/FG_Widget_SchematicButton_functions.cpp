@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetResearchTextVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ ESlateVisibility UWidget_SchematicButton_C::GetResearchTextVisibility()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetLockedLockVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ ESlateVisibility UWidget_SchematicButton_C::GetLockedLockVisibility()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetLockedIconVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ ESlateVisibility UWidget_SchematicButton_C::GetLockedIconVisibility()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetIsButtonClickable
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,7 +97,7 @@ ESlateVisibility UWidget_SchematicButton_C::GetIsButtonClickable()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetButtonIsEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -118,7 +118,7 @@ bool UWidget_SchematicButton_C::GetButtonIsEnabled()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSchematicEnabledInPhase
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -139,7 +139,7 @@ bool UWidget_SchematicButton_C::GetSchematicEnabledInPhase()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.IsActivateButtonEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -160,7 +160,7 @@ bool UWidget_SchematicButton_C::IsActivateButtonEnabled()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetActivateButtonVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -181,7 +181,7 @@ ESlateVisibility UWidget_SchematicButton_C::GetActivateButtonVisibility()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSelectedSchematicFeedback
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -202,7 +202,7 @@ struct FLinearColor UWidget_SchematicButton_C::GetSelectedSchematicFeedback()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.IsActiveSchematic
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsActive                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -224,7 +224,7 @@ void UWidget_SchematicButton_C::IsActiveSchematic(bool* IsActive)
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetCategoryIconColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -245,7 +245,7 @@ struct FLinearColor UWidget_SchematicButton_C::GetCategoryIconColor()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSchematicActivatedBorderVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -266,7 +266,7 @@ ESlateVisibility UWidget_SchematicButton_C::GetSchematicActivatedBorderVisibilit
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSchematicBoughtTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -287,7 +287,7 @@ struct FSlateColor UWidget_SchematicButton_C::GetSchematicBoughtTextColor()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSchematicBoughtBorderColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -308,7 +308,7 @@ struct FLinearColor UWidget_SchematicButton_C::GetSchematicBoughtBorderColor()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSchematicBoughtContentColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -329,7 +329,7 @@ struct FLinearColor UWidget_SchematicButton_C::GetSchematicBoughtContentColor()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSchematicBoughtColorFeedback
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -350,7 +350,7 @@ struct FLinearColor UWidget_SchematicButton_C::GetSchematicBoughtColorFeedback()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetCategoryIcon
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -371,7 +371,7 @@ struct FSlateBrush UWidget_SchematicButton_C::GetCategoryIcon()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSchematicBoughtCheckImageFeedback
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -392,7 +392,7 @@ ESlateVisibility UWidget_SchematicButton_C::GetSchematicBoughtCheckImageFeedback
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetActivatedText
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -413,7 +413,7 @@ struct FText UWidget_SchematicButton_C::GetActivatedText()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.GetSchematicName
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -433,25 +433,8 @@ struct FText UWidget_SchematicButton_C::GetSchematicName()
 }
 
 
-// Function Widget_SchematicButton.Widget_SchematicButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature
-// ()
-
-void UWidget_SchematicButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicButton.Widget_SchematicButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature");
-
-	UWidget_SchematicButton_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Widget_SchematicButton.Widget_SchematicButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_102_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_SchematicButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_102_OnButtonClickedEvent__DelegateSignature()
 {
@@ -468,7 +451,7 @@ void UWidget_SchematicButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_102_
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_SchematicButton_C::Construct()
 {
@@ -484,14 +467,14 @@ void UWidget_SchematicButton_C::Construct()
 }
 
 
-// Function Widget_SchematicButton.Widget_SchematicButton_C.ActivateSelectedSchematic
-// ()
+// Function Widget_SchematicButton.Widget_SchematicButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_SchematicButton_C::ActivateSelectedSchematic()
+void UWidget_SchematicButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicButton.Widget_SchematicButton_C.ActivateSelectedSchematic");
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicButton.Widget_SchematicButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature");
 
-	UWidget_SchematicButton_C_ActivateSelectedSchematic_Params params;
+	UWidget_SchematicButton_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_68_OnButtonHoverEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -502,11 +485,11 @@ void UWidget_SchematicButton_C::ActivateSelectedSchematic()
 
 
 // Function Widget_SchematicButton.Widget_SchematicButton_C.ExecuteUbergraph_Widget_SchematicButton
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SchematicButton_C::ExecuteUbergraph_Widget_SchematicButton(int EntryPoint)
+void UWidget_SchematicButton_C::ExecuteUbergraph_Widget_SchematicButton(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SchematicButton.Widget_SchematicButton_C.ExecuteUbergraph_Widget_SchematicButton");
 

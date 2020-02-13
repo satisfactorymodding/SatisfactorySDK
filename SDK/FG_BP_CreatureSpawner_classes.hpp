@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CreatureSpawner.BP_CreatureSpawner_C
-// 0x0000 (0x0390 - 0x0390)
+// 0x0000 (0x0398 - 0x0398)
 class ABP_CreatureSpawner_C : public AFGCreatureSpawner
 {
 public:
@@ -28,7 +28,6 @@ public:
 
 
 	void CallCalculateSpawnLocations();
-	void UserConstructionScript();
 };
 
 

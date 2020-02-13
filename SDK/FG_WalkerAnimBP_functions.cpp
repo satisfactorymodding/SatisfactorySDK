@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WalkerAnimBP.WalkerAnimBP_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UWalkerAnimBP_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function WalkerAnimBP.WalkerAnimBP_C.ExecuteUbergraph_WalkerAnimBP
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWalkerAnimBP_C::ExecuteUbergraph_WalkerAnimBP(int EntryPoint)
+void UWalkerAnimBP_C::ExecuteUbergraph_WalkerAnimBP(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WalkerAnimBP.WalkerAnimBP_C.ExecuteUbergraph_WalkerAnimBP");
 

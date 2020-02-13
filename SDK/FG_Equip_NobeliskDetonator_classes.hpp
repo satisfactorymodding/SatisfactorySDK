@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Equip_NobeliskDetonator.Equip_NobeliskDetonator_C
-// 0x0018 (0x0498 - 0x0480)
+// 0x0018 (0x04B8 - 0x04A0)
 class AEquip_NobeliskDetonator_C : public AFGNobeliskDetonator
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0480(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                      NobeliskDetonator_Skl_01;                                 // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                      NobeliskDetonator_Skl_01;                                 // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,14 +30,13 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void PlayReloadEffects();
 	void PlayFireEffect();
 	void WasUnEquipped();
 	void WasEquipped();
 	void OnSecondaryFirePressed();
 	void PlayFireReleasedEffects();
-	void ExecuteUbergraph_Equip_NobeliskDetonator(int EntryPoint);
+	void ExecuteUbergraph_Equip_NobeliskDetonator(int* EntryPoint);
 };
 
 

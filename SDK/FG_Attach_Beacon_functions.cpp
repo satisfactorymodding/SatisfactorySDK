@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Attach_Beacon.Attach_Beacon_C.UserConstructionScript
-// ()
-
-void AAttach_Beacon_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Attach_Beacon.Attach_Beacon_C.UserConstructionScript");
-
-	AAttach_Beacon_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Attach_Beacon.Attach_Beacon_C.PlayAttachEffects3P
-// ()
+// (Event, Public, BlueprintEvent)
 
 void AAttach_Beacon_C::PlayAttachEffects3P()
 {
@@ -47,11 +30,11 @@ void AAttach_Beacon_C::PlayAttachEffects3P()
 
 
 // Function Attach_Beacon.Attach_Beacon_C.ExecuteUbergraph_Attach_Beacon
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAttach_Beacon_C::ExecuteUbergraph_Attach_Beacon(int EntryPoint)
+void AAttach_Beacon_C::ExecuteUbergraph_Attach_Beacon(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Attach_Beacon.Attach_Beacon_C.ExecuteUbergraph_Attach_Beacon");
 

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Holo_PowerLine.Holo_PowerLine_C
-// 0x0010 (0x0430 - 0x0420)
+// 0x0010 (0x0480 - 0x0470)
 class AHolo_PowerLine_C : public AFGWireHologram
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0420(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        ConnectionMesh;                                           // 0x0428(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0470(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                        ConnectionMesh;                                           // 0x0478(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,9 +29,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void OnAutomaticPoleDisableToggle(bool* Disabled);
-	void ExecuteUbergraph_Holo_PowerLine(int EntryPoint);
+	void ExecuteUbergraph_Holo_PowerLine(int* EntryPoint);
 };
 
 

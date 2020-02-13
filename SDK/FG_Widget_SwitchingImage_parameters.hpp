@@ -28,18 +28,18 @@ struct UWidget_SwitchingImage_C_EventImageSwitch_Params
 // Function Widget_SwitchingImage.Widget_SwitchingImage_C.SwitchImage
 struct UWidget_SwitchingImage_C_SwitchImage_Params
 {
-	class UTexture*                                    newTexture;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UTexture**                                   newTexture;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Widget_SwitchingImage.Widget_SwitchingImage_C.BndEvt__mSwitchImageAnim_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-struct UWidget_SwitchingImage_C_BndEvt__mSwitchImageAnim_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params
+// Function Widget_SwitchingImage.Widget_SwitchingImage_C.WidgetAnimationEvt_mSwitchImageAnim_K2Node_WidgetAnimationEvent_1
+struct UWidget_SwitchingImage_C_WidgetAnimationEvt_mSwitchImageAnim_K2Node_WidgetAnimationEvent_1_Params
 {
 };
 
 // Function Widget_SwitchingImage.Widget_SwitchingImage_C.ExecuteUbergraph_Widget_SwitchingImage
 struct UWidget_SwitchingImage_C_ExecuteUbergraph_Widget_SwitchingImage_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_SwitchingImage.Widget_SwitchingImage_C.OnSwitchAnimationFinished__DelegateSignature

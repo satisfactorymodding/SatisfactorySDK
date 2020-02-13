@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass Widget_CodexContent.Widget_CodexContent_C
-// 0x0000 (0x0208 - 0x0208)
+// 0x0000 (0x0230 - 0x0230)
 class UWidget_CodexContent_C : public UUserWidget
 {
 public:
@@ -26,8 +26,6 @@ public:
 		return ptr;
 	}
 
-
-	void Habada(bool* NewParam);
 };
 
 

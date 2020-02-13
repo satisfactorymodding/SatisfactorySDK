@@ -32,15 +32,14 @@ public:
 
 
 // Class ActorSequence.ActorSequenceComponent
-// 0x0058 (0x0148 - 0x00F0)
+// 0x0028 (0x0120 - 0x00F8)
 class UActorSequenceComponent : public UActorComponent
 {
 public:
-	bool                                               bAutoPlay;                                                // 0x00F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
-	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                         // 0x00F8(0x0040) (Edit)
-	class UActorSequence*                              Sequence;                                                 // 0x0138(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UActorSequencePlayer*                        SequencePlayer;                                           // 0x0140(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                         // 0x00F8(0x0014) (Edit)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
+	class UActorSequence*                              Sequence;                                                 // 0x0110(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UActorSequencePlayer*                        SequencePlayer;                                           // 0x0118(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

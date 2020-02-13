@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Desc_Shroom.Desc_Shroom_C
-// 0x0000 (0x016C - 0x016C)
+// 0x0000 (0x018C - 0x018C)
 class UDesc_Shroom_C : public UBP_HealthGainDescriptor_C
 {
 public:

@@ -23,7 +23,7 @@ struct UBTT_UpdateTarget_C_ReceiveExecute_Params
 // Function BTT_UpdateTarget.BTT_UpdateTarget_C.ExecuteUbergraph_BTT_UpdateTarget
 struct UBTT_UpdateTarget_C_ExecuteUbergraph_BTT_UpdateTarget_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

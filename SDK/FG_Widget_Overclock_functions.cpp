@@ -12,12 +12,91 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Widget_Overclock.Widget_Overclock_C.UpdateDropArea
-// ()
+// Function Widget_Overclock.Widget_Overclock_C.SetSuffix
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_CostSlotWrapper_C* NewActiveCostslot              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FText*                  suffix                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_Overclock_C::UpdateDropArea(class UWidget_CostSlotWrapper_C* NewActiveCostslot)
+void UWidget_Overclock_C::SetSuffix(struct FText* suffix)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.SetSuffix");
+
+	UWidget_Overclock_C_SetSuffix_Params params;
+	params.suffix = suffix;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Overclock.Widget_Overclock_C.UpdateTargetProductionSpeed
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Overclock_C::UpdateTargetProductionSpeed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.UpdateTargetProductionSpeed");
+
+	UWidget_Overclock_C_UpdateTargetProductionSpeed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Overclock.Widget_Overclock_C.SetDefaultProductionSpeed
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Overclock_C::SetDefaultProductionSpeed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.SetDefaultProductionSpeed");
+
+	UWidget_Overclock_C_SetDefaultProductionSpeed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Overclock.Widget_Overclock_C.OnMouseButtonDown
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_Overclock_C::OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.OnMouseButtonDown");
+
+	UWidget_Overclock_C_OnMouseButtonDown_Params params;
+	params.MyGeometry = MyGeometry;
+	params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_Overclock.Widget_Overclock_C.UpdateDropArea
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_CostSlotWrapper_C** NewActiveCostslot              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Overclock_C::UpdateDropArea(class UWidget_CostSlotWrapper_C** NewActiveCostslot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.UpdateDropArea");
 
@@ -33,7 +112,7 @@ void UWidget_Overclock_C::UpdateDropArea(class UWidget_CostSlotWrapper_C* NewAct
 
 
 // Function Widget_Overclock.Widget_Overclock_C.SetPercentText
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Overclock_C::SetPercentText()
 {
@@ -50,7 +129,7 @@ void UWidget_Overclock_C::SetPercentText()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.CheckIsOverclockUnlocked
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Overclock_C::CheckIsOverclockUnlocked()
 {
@@ -67,12 +146,12 @@ void UWidget_Overclock_C::CheckIsOverclockUnlocked()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.SetCrystalSlotUsable
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            SlotIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_CostSlotWrapper_C* CostSlot                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           SlotIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_CostSlotWrapper_C** CostSlot                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Overclock_C::SetCrystalSlotUsable(int SlotIndex, class UWidget_CostSlotWrapper_C* CostSlot)
+void UWidget_Overclock_C::SetCrystalSlotUsable(int* SlotIndex, class UWidget_CostSlotWrapper_C** CostSlot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.SetCrystalSlotUsable");
 
@@ -89,12 +168,12 @@ void UWidget_Overclock_C::SetCrystalSlotUsable(int SlotIndex, class UWidget_Cost
 
 
 // Function Widget_Overclock.Widget_Overclock_C.IsCrystalSlotEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            SlotIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           SlotIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsEnabled                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::IsCrystalSlotEnabled(int SlotIndex, bool* IsEnabled)
+void UWidget_Overclock_C::IsCrystalSlotEnabled(int* SlotIndex, bool* IsEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.IsCrystalSlotEnabled");
 
@@ -113,13 +192,13 @@ void UWidget_Overclock_C::IsCrystalSlotEnabled(int SlotIndex, bool* IsEnabled)
 
 
 // Function Widget_Overclock.Widget_Overclock_C.InitCostSlots
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            idx                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget_CostSlotWrapper_C* CostSlot                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int*                           idx                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_CostSlotWrapper_C** CostSlot                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::InitCostSlots(int idx, class UWidget_CostSlotWrapper_C* CostSlot, bool* IsValid)
+void UWidget_Overclock_C::InitCostSlots(int* idx, class UWidget_CostSlotWrapper_C** CostSlot, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.InitCostSlots");
 
@@ -139,7 +218,7 @@ void UWidget_Overclock_C::InitCostSlots(int idx, class UWidget_CostSlotWrapper_C
 
 
 // Function Widget_Overclock.Widget_Overclock_C.SetActiveProgressbars
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Overclock_C::SetActiveProgressbars()
 {
@@ -156,7 +235,7 @@ void UWidget_Overclock_C::SetActiveProgressbars()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.GetClampedSliderValue
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ClampedOvercklock              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -178,12 +257,12 @@ void UWidget_Overclock_C::GetClampedSliderValue(float* ClampedOvercklock)
 
 
 // Function Widget_Overclock.Widget_Overclock_C.ScaleToOverclock
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          Normalized_Overclock           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Normalized_Overclock           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Scaled_Overclock               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::ScaleToOverclock(float Normalized_Overclock, float* Scaled_Overclock)
+void UWidget_Overclock_C::ScaleToOverclock(float* Normalized_Overclock, float* Scaled_Overclock)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.ScaleToOverclock");
 
@@ -202,12 +281,12 @@ void UWidget_Overclock_C::ScaleToOverclock(float Normalized_Overclock, float* Sc
 
 
 // Function Widget_Overclock.Widget_Overclock_C.NormalizeOverclock
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          ScaledOverclock                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         ScaledOverclock                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          NormalizedOverclock            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::NormalizeOverclock(float ScaledOverclock, float* NormalizedOverclock)
+void UWidget_Overclock_C::NormalizeOverclock(float* ScaledOverclock, float* NormalizedOverclock)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.NormalizeOverclock");
 
@@ -226,7 +305,7 @@ void UWidget_Overclock_C::NormalizeOverclock(float ScaledOverclock, float* Norma
 
 
 // Function Widget_Overclock.Widget_Overclock_C.GetPercentText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -247,7 +326,7 @@ struct FText UWidget_Overclock_C::GetPercentText()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.GetMAXColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -268,7 +347,7 @@ struct FSlateColor UWidget_Overclock_C::GetMAXColor()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.Get200%Color
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -289,7 +368,7 @@ struct FSlateColor UWidget_Overclock_C::Get200_Color()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.Get150%Color
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -310,7 +389,7 @@ struct FSlateColor UWidget_Overclock_C::Get150_Color()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.Get100%Color
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -331,7 +410,7 @@ struct FSlateColor UWidget_Overclock_C::Get100_Color()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.Get0%Color
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -352,7 +431,7 @@ struct FSlateColor UWidget_Overclock_C::Get0_Color()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.SetBarValue
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Overclock_C::SetBarValue()
 {
@@ -369,7 +448,7 @@ void UWidget_Overclock_C::SetBarValue()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Overclock_C::Construct()
 {
@@ -386,11 +465,11 @@ void UWidget_Overclock_C::Construct()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.SetOvercklockAmountWithKnob
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::SetOvercklockAmountWithKnob(float Value)
+void UWidget_Overclock_C::SetOvercklockAmountWithKnob(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.SetOvercklockAmountWithKnob");
 
@@ -406,7 +485,7 @@ void UWidget_Overclock_C::SetOvercklockAmountWithKnob(float Value)
 
 
 // Function Widget_Overclock.Widget_Overclock_C.SetOverclockOnServer
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Overclock_C::SetOverclockOnServer()
 {
@@ -423,7 +502,7 @@ void UWidget_Overclock_C::SetOverclockOnServer()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -445,7 +524,7 @@ void UWidget_Overclock_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Overclock.Widget_Overclock_C.SetupCostslots
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_Overclock_C::SetupCostslots()
 {
@@ -462,11 +541,11 @@ void UWidget_Overclock_C::SetupCostslots()
 
 
 // Function Widget_Overclock.Widget_Overclock_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWidget_Overclock_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature");
 
@@ -482,7 +561,7 @@ void UWidget_Overclock_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_1_OnFloatV
 
 
 // Function Widget_Overclock.Widget_Overclock_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_2_OnMouseCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Overclock_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_2_OnMouseCaptureEndEvent__DelegateSignature()
 {
@@ -499,7 +578,7 @@ void UWidget_Overclock_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_2_OnMouseC
 
 
 // Function Widget_Overclock.Widget_Overclock_C.BndEvt__Slider_0_K2Node_ComponentBoundEvent_3_OnControllerCaptureEndEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Overclock_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_3_OnControllerCaptureEndEvent__DelegateSignature()
 {
@@ -516,11 +595,11 @@ void UWidget_Overclock_C::BndEvt__Slider_0_K2Node_ComponentBoundEvent_3_OnContro
 
 
 // Function Widget_Overclock.Widget_Overclock_C.BndEvt__PercentText_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_Overclock_C::BndEvt__PercentText_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature(const struct FText& Text)
+void UWidget_Overclock_C::BndEvt__PercentText_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature(struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.BndEvt__PercentText_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature");
 
@@ -536,12 +615,12 @@ void UWidget_Overclock_C::BndEvt__PercentText_K2Node_ComponentBoundEvent_4_OnEdi
 
 
 // Function Widget_Overclock.Widget_Overclock_C.BndEvt__PercentText_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature
-// ()
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::BndEvt__PercentText_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UWidget_Overclock_C::BndEvt__PercentText_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.BndEvt__PercentText_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature");
 
@@ -558,11 +637,11 @@ void UWidget_Overclock_C::BndEvt__PercentText_K2Node_ComponentBoundEvent_5_OnEdi
 
 
 // Function Widget_Overclock.Widget_Overclock_C.OnPercentageTextConfirmed
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::OnPercentageTextConfirmed(float Value)
+void UWidget_Overclock_C::OnPercentageTextConfirmed(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.OnPercentageTextConfirmed");
 
@@ -578,7 +657,7 @@ void UWidget_Overclock_C::OnPercentageTextConfirmed(float Value)
 
 
 // Function Widget_Overclock.Widget_Overclock_C.OnMouseEnter
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -600,7 +679,7 @@ void UWidget_Overclock_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPoi
 
 
 // Function Widget_Overclock.Widget_Overclock_C.OnMouseLeave
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -620,7 +699,7 @@ void UWidget_Overclock_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 
 
 // Function Widget_Overclock.Widget_Overclock_C.BndEvt__MainSlider_K2Node_ComponentBoundEvent_0_OnMouseCaptureBeginEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_Overclock_C::BndEvt__MainSlider_K2Node_ComponentBoundEvent_0_OnMouseCaptureBeginEvent__DelegateSignature()
 {
@@ -637,11 +716,11 @@ void UWidget_Overclock_C::BndEvt__MainSlider_K2Node_ComponentBoundEvent_0_OnMous
 
 
 // Function Widget_Overclock.Widget_Overclock_C.SetupOverclock
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          OvecklockAmount                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         OvecklockAmount                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::SetupOverclock(float OvecklockAmount)
+void UWidget_Overclock_C::SetupOverclock(float* OvecklockAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.SetupOverclock");
 
@@ -657,11 +736,11 @@ void UWidget_Overclock_C::SetupOverclock(float OvecklockAmount)
 
 
 // Function Widget_Overclock.Widget_Overclock_C.OnPotentialInventoryReplicated
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  replicationDetailActorOwner    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 replicationDetailActorOwner    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::OnPotentialInventoryReplicated(class AActor* replicationDetailActorOwner)
+void UWidget_Overclock_C::OnPotentialInventoryReplicated(class AActor** replicationDetailActorOwner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.OnPotentialInventoryReplicated");
 
@@ -676,12 +755,54 @@ void UWidget_Overclock_C::OnPotentialInventoryReplicated(class AActor* replicati
 }
 
 
-// Function Widget_Overclock.Widget_Overclock_C.ExecuteUbergraph_Widget_Overclock
-// ()
+// Function Widget_Overclock.Widget_Overclock_C.BndEvt__mPartsPerMinutes_K2Node_ComponentBoundEvent_6_OnEditableTextCommittedEvent__DelegateSignature
+// (HasOutParms, BlueprintEvent)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>*      CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Overclock_C::ExecuteUbergraph_Widget_Overclock(int EntryPoint)
+void UWidget_Overclock_C::BndEvt__mPartsPerMinutes_K2Node_ComponentBoundEvent_6_OnEditableTextCommittedEvent__DelegateSignature(struct FText* Text, TEnumAsByte<ETextCommit>* CommitMethod)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.BndEvt__mPartsPerMinutes_K2Node_ComponentBoundEvent_6_OnEditableTextCommittedEvent__DelegateSignature");
+
+	UWidget_Overclock_C_BndEvt__mPartsPerMinutes_K2Node_ComponentBoundEvent_6_OnEditableTextCommittedEvent__DelegateSignature_Params params;
+	params.Text = Text;
+	params.CommitMethod = CommitMethod;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Overclock.Widget_Overclock_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Overclock_C::PreConstruct(bool* IsDesignTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.PreConstruct");
+
+	UWidget_Overclock_C_PreConstruct_Params params;
+	params.IsDesignTime = IsDesignTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Overclock.Widget_Overclock_C.ExecuteUbergraph_Widget_Overclock
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Overclock_C::ExecuteUbergraph_Widget_Overclock(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Overclock.Widget_Overclock_C.ExecuteUbergraph_Widget_Overclock");
 
@@ -697,7 +818,7 @@ void UWidget_Overclock_C::ExecuteUbergraph_Widget_Overclock(int EntryPoint)
 
 
 // Function Widget_Overclock.Widget_Overclock_C.UpdateBarFill__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Overclock_C::UpdateBarFill__DelegateSignature()
 {

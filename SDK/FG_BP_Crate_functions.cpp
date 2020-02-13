@@ -12,13 +12,57 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Crate.BP_Crate_C.SetActorRepresentationText
-// ()
+// Function BP_Crate.BP_Crate_C.GetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_Crate_C::GetActorCompassViewDistance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Crate.BP_Crate_C.GetActorCompassViewDistance");
+
+	ABP_Crate_C_GetActorCompassViewDistance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Crate.BP_Crate_C.SetActorCompassViewDistance
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECompassViewDistance*          compassViewDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECompassViewDistance           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECompassViewDistance ABP_Crate_C::SetActorCompassViewDistance(ECompassViewDistance* compassViewDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Crate.BP_Crate_C.SetActorCompassViewDistance");
+
+	ABP_Crate_C_SetActorCompassViewDistance_Params params;
+	params.compassViewDistance = compassViewDistance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Crate.BP_Crate_C.SetActorRepresentationText
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText*                  newText                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ABP_Crate_C::SetActorRepresentationText(const struct FText& newText)
+struct FText ABP_Crate_C::SetActorRepresentationText(struct FText* newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Crate.BP_Crate_C.SetActorRepresentationText");
 
@@ -36,7 +80,7 @@ struct FText ABP_Crate_C::SetActorRepresentationText(const struct FText& newText
 
 
 // Function BP_Crate.BP_Crate_C.UpdateRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +101,7 @@ bool ABP_Crate_C::UpdateRepresentation()
 
 
 // Function BP_Crate.BP_Crate_C.GetActorFogOfWarRevealRadius
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +122,7 @@ float ABP_Crate_C::GetActorFogOfWarRevealRadius()
 
 
 // Function BP_Crate.BP_Crate_C.GetActorFogOfWarRevealType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFogOfWarRevealType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -99,7 +143,7 @@ EFogOfWarRevealType ABP_Crate_C::GetActorFogOfWarRevealType()
 
 
 // Function BP_Crate.BP_Crate_C.GetActorRepresentationColor
-// ()
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -120,7 +164,7 @@ struct FLinearColor ABP_Crate_C::GetActorRepresentationColor()
 
 
 // Function BP_Crate.BP_Crate_C.GetActorRepresentationText
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -141,7 +185,7 @@ struct FText ABP_Crate_C::GetActorRepresentationText()
 
 
 // Function BP_Crate.BP_Crate_C.GetActorRepresentationTexture
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -162,7 +206,7 @@ class UTexture2D* ABP_Crate_C::GetActorRepresentationTexture()
 
 
 // Function BP_Crate.BP_Crate_C.GetActorRepresentationType
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERepresentationType            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -183,7 +227,7 @@ ERepresentationType ABP_Crate_C::GetActorRepresentationType()
 
 
 // Function BP_Crate.BP_Crate_C.GetActorShouldShowInCompass
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -204,7 +248,7 @@ bool ABP_Crate_C::GetActorShouldShowInCompass()
 
 
 // Function BP_Crate.BP_Crate_C.AddAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -225,7 +269,7 @@ bool ABP_Crate_C::AddAsRepresentation()
 
 
 // Function BP_Crate.BP_Crate_C.GetActorShouldShowOnMap
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -246,7 +290,7 @@ bool ABP_Crate_C::GetActorShouldShowOnMap()
 
 
 // Function BP_Crate.BP_Crate_C.GetRealActorLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -267,7 +311,7 @@ struct FVector ABP_Crate_C::GetRealActorLocation()
 
 
 // Function BP_Crate.BP_Crate_C.GetRealActorRotation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -288,7 +332,7 @@ struct FRotator ABP_Crate_C::GetRealActorRotation()
 
 
 // Function BP_Crate.BP_Crate_C.IsActorStatic
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -309,7 +353,7 @@ bool ABP_Crate_C::IsActorStatic()
 
 
 // Function BP_Crate.BP_Crate_C.RemoveAsRepresentation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -329,14 +373,17 @@ bool ABP_Crate_C::RemoveAsRepresentation()
 }
 
 
-// Function BP_Crate.BP_Crate_C.UserConstructionScript
-// ()
+// Function BP_Crate.BP_Crate_C.SetActorRepresentationColor
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           NewColor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Crate_C::UserConstructionScript()
+void ABP_Crate_C::SetActorRepresentationColor(struct FLinearColor* NewColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Crate.BP_Crate_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Crate.BP_Crate_C.SetActorRepresentationColor");
 
-	ABP_Crate_C_UserConstructionScript_Params params;
+	ABP_Crate_C_SetActorRepresentationColor_Params params;
+	params.NewColor = NewColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -347,7 +394,7 @@ void ABP_Crate_C::UserConstructionScript()
 
 
 // Function BP_Crate.BP_Crate_C.StartIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -369,7 +416,7 @@ void ABP_Crate_C::StartIsLookedAt(class AFGCharacterPlayer** byCharacter, struct
 
 
 // Function BP_Crate.BP_Crate_C.StopIsLookedAt
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -391,7 +438,7 @@ void ABP_Crate_C::StopIsLookedAt(class AFGCharacterPlayer** byCharacter, struct 
 
 
 // Function BP_Crate.BP_Crate_C.OnUse
-// ()
+// (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FUseState*              State                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -413,11 +460,11 @@ void ABP_Crate_C::OnUse(class AFGCharacterPlayer** byCharacter, struct FUseState
 
 
 // Function BP_Crate.BP_Crate_C.SwitchHUD
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFGCharacterPlayer*      byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AFGCharacterPlayer**     byCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Crate_C::SwitchHUD(class AFGCharacterPlayer* byCharacter)
+void ABP_Crate_C::SwitchHUD(class AFGCharacterPlayer** byCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Crate.BP_Crate_C.SwitchHUD");
 
@@ -433,7 +480,7 @@ void ABP_Crate_C::SwitchHUD(class AFGCharacterPlayer* byCharacter)
 
 
 // Function BP_Crate.BP_Crate_C.OnRequestReprecentMarker
-// ()
+// (Event, Public, BlueprintEvent)
 
 void ABP_Crate_C::OnRequestReprecentMarker()
 {
@@ -450,7 +497,7 @@ void ABP_Crate_C::OnRequestReprecentMarker()
 
 
 // Function BP_Crate.BP_Crate_C.ReceiveEndPlay
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -470,7 +517,7 @@ void ABP_Crate_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
 
 
 // Function BP_Crate.BP_Crate_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Crate_C::ReceiveBeginPlay()
 {
@@ -487,12 +534,12 @@ void ABP_Crate_C::ReceiveBeginPlay()
 
 
 // Function BP_Crate.BP_Crate_C.checkForClearAndRemove
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            numRemoved                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 ItemClass                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           numRemoved                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Crate_C::checkForClearAndRemove(class UClass* ItemClass, int numRemoved)
+void ABP_Crate_C::checkForClearAndRemove(class UClass** ItemClass, int* numRemoved)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Crate.BP_Crate_C.checkForClearAndRemove");
 
@@ -509,11 +556,11 @@ void ABP_Crate_C::checkForClearAndRemove(class UClass* ItemClass, int numRemoved
 
 
 // Function BP_Crate.BP_Crate_C.ExecuteUbergraph_BP_Crate
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Crate_C::ExecuteUbergraph_BP_Crate(int EntryPoint)
+void ABP_Crate_C::ExecuteUbergraph_BP_Crate(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Crate.BP_Crate_C.ExecuteUbergraph_BP_Crate");
 

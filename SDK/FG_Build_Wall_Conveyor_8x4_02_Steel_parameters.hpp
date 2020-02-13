@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_Wall_Conveyor_8x4_02_Steel.Build_Wall_Conveyor_8x4_02_Steel_C.UserConstructionScript
-struct ABuild_Wall_Conveyor_8x4_02_Steel_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

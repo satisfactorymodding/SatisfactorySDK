@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Sparks.Widget_Sparks_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -35,7 +35,7 @@ void UWidget_Sparks_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Sparks.Widget_Sparks_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -55,11 +55,11 @@ void UWidget_Sparks_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_Sparks.Widget_Sparks_C.ExecuteUbergraph_Widget_Sparks
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Sparks_C::ExecuteUbergraph_Widget_Sparks(int EntryPoint)
+void UWidget_Sparks_C::ExecuteUbergraph_Widget_Sparks(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Sparks.Widget_Sparks_C.ExecuteUbergraph_Widget_Sparks");
 
@@ -75,12 +75,12 @@ void UWidget_Sparks_C::ExecuteUbergraph_Widget_Sparks(int EntryPoint)
 
 
 // Function Widget_Sparks.Widget_Sparks_C.OnParticleBounce__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D               Position                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              Position                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Sparks_C::OnParticleBounce__DelegateSignature(const struct FVector2D& Position, const struct FVector2D& Scale)
+void UWidget_Sparks_C::OnParticleBounce__DelegateSignature(struct FVector2D* Position, struct FVector2D* Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Sparks.Widget_Sparks_C.OnParticleBounce__DelegateSignature");
 

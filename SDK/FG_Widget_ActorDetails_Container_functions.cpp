@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.SetShowPointer
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ShowPointer                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ShowPointer                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActorDetails_Container_C::SetShowPointer(bool ShowPointer)
+void UWidget_ActorDetails_Container_C::SetShowPointer(bool* ShowPointer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.SetShowPointer");
 
@@ -33,11 +33,11 @@ void UWidget_ActorDetails_Container_C::SetShowPointer(bool ShowPointer)
 
 
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.SetTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   mTitle                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  mTitle                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_ActorDetails_Container_C::SetTitle(const struct FText& mTitle)
+void UWidget_ActorDetails_Container_C::SetTitle(struct FText* mTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.SetTitle");
 
@@ -53,7 +53,7 @@ void UWidget_ActorDetails_Container_C::SetTitle(const struct FText& mTitle)
 
 
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -73,7 +73,7 @@ void UWidget_ActorDetails_Container_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActorDetails_Container_C::Construct()
 {
@@ -90,11 +90,11 @@ void UWidget_ActorDetails_Container_C::Construct()
 
 
 // Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.ExecuteUbergraph_Widget_ActorDetails_Container
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActorDetails_Container_C::ExecuteUbergraph_Widget_ActorDetails_Container(int EntryPoint)
+void UWidget_ActorDetails_Container_C::ExecuteUbergraph_Widget_ActorDetails_Container(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActorDetails_Container.Widget_ActorDetails_Container_C.ExecuteUbergraph_Widget_ActorDetails_Container");
 

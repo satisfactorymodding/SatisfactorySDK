@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_HUDCameraShake.Widget_HUDCameraShake_C.Get Cam and View Position Difference
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Scale                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -35,7 +35,7 @@ void UWidget_HUDCameraShake_C::Get_Cam_and_View_Position_Difference(float* Scale
 
 
 // Function Widget_HUDCameraShake.Widget_HUDCameraShake_C.Get Cam and View Rotation Difference
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          X                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Y                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -60,7 +60,7 @@ void UWidget_HUDCameraShake_C::Get_Cam_and_View_Rotation_Difference(float* X, fl
 
 
 // Function Widget_HUDCameraShake.Widget_HUDCameraShake_C.HUD Lerp
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_HUDCameraShake_C::HUD_Lerp()
 {
@@ -77,7 +77,7 @@ void UWidget_HUDCameraShake_C::HUD_Lerp()
 
 
 // Function Widget_HUDCameraShake.Widget_HUDCameraShake_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -99,11 +99,11 @@ void UWidget_HUDCameraShake_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 
 
 // Function Widget_HUDCameraShake.Widget_HUDCameraShake_C.ExecuteUbergraph_Widget_HUDCameraShake
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_HUDCameraShake_C::ExecuteUbergraph_Widget_HUDCameraShake(int EntryPoint)
+void UWidget_HUDCameraShake_C::ExecuteUbergraph_Widget_HUDCameraShake(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_HUDCameraShake.Widget_HUDCameraShake_C.ExecuteUbergraph_Widget_HUDCameraShake");
 

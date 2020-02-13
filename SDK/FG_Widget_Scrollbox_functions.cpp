@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Scrollbox.Widget_Scrollbox_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Scrollbox_C::Construct()
 {
@@ -30,11 +30,11 @@ void UWidget_Scrollbox_C::Construct()
 
 
 // Function Widget_Scrollbox.Widget_Scrollbox_C.ExecuteUbergraph_Widget_Scrollbox
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Scrollbox_C::ExecuteUbergraph_Widget_Scrollbox(int EntryPoint)
+void UWidget_Scrollbox_C::ExecuteUbergraph_Widget_Scrollbox(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Scrollbox.Widget_Scrollbox_C.ExecuteUbergraph_Widget_Scrollbox");
 

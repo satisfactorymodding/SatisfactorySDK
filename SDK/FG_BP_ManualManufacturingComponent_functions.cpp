@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ManualManufacturingComponent.BP_ManualManufacturingComponent_C.AwardRewards
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_ManualManufacturingComponent_C::AwardRewards()
 {
@@ -30,7 +30,7 @@ void UBP_ManualManufacturingComponent_C::AwardRewards()
 
 
 // Function BP_ManualManufacturingComponent.BP_ManualManufacturingComponent_C.CraftComplete
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_ManualManufacturingComponent_C::CraftComplete()
 {
@@ -47,11 +47,11 @@ void UBP_ManualManufacturingComponent_C::CraftComplete()
 
 
 // Function BP_ManualManufacturingComponent.BP_ManualManufacturingComponent_C.ExecuteUbergraph_BP_ManualManufacturingComponent
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_ManualManufacturingComponent_C::ExecuteUbergraph_BP_ManualManufacturingComponent(int EntryPoint)
+void UBP_ManualManufacturingComponent_C::ExecuteUbergraph_BP_ManualManufacturingComponent(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ManualManufacturingComponent.BP_ManualManufacturingComponent_C.ExecuteUbergraph_BP_ManualManufacturingComponent");
 
@@ -67,7 +67,7 @@ void UBP_ManualManufacturingComponent_C::ExecuteUbergraph_BP_ManualManufacturing
 
 
 // Function BP_ManualManufacturingComponent.BP_ManualManufacturingComponent_C.OnCraftCompleted__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBP_ManualManufacturingComponent_C::OnCraftCompleted__DelegateSignature()
 {

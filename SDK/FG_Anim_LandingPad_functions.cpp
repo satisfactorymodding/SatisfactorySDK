@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_LandingPad.Anim_LandingPad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_LandingPad_AnimGraphNode_TransitionResult_1EB610874256993492C21CB7314D49F1
-// ()
+// (BlueprintEvent)
 
 void UAnim_LandingPad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_LandingPad_AnimGraphNode_TransitionResult_1EB610874256993492C21CB7314D49F1()
 {
@@ -30,7 +30,7 @@ void UAnim_LandingPad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Landin
 
 
 // Function Anim_LandingPad.Anim_LandingPad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_LandingPad_AnimGraphNode_TransitionResult_E4A0A1484FD618C09AC43E9C16D4A37B
-// ()
+// (BlueprintEvent)
 
 void UAnim_LandingPad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_LandingPad_AnimGraphNode_TransitionResult_E4A0A1484FD618C09AC43E9C16D4A37B()
 {
@@ -47,11 +47,11 @@ void UAnim_LandingPad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Landin
 
 
 // Function Anim_LandingPad.Anim_LandingPad_C.HasPowerChanged
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_LandingPad_C::HasPowerChanged(bool State)
+void UAnim_LandingPad_C::HasPowerChanged(bool* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_LandingPad.Anim_LandingPad_C.HasPowerChanged");
 
@@ -67,7 +67,7 @@ void UAnim_LandingPad_C::HasPowerChanged(bool State)
 
 
 // Function Anim_LandingPad.Anim_LandingPad_C.BlueprintInitializeAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UAnim_LandingPad_C::BlueprintInitializeAnimation()
 {
@@ -84,11 +84,11 @@ void UAnim_LandingPad_C::BlueprintInitializeAnimation()
 
 
 // Function Anim_LandingPad.Anim_LandingPad_C.ExecuteUbergraph_Anim_LandingPad
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_LandingPad_C::ExecuteUbergraph_Anim_LandingPad(int EntryPoint)
+void UAnim_LandingPad_C::ExecuteUbergraph_Anim_LandingPad(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_LandingPad.Anim_LandingPad_C.ExecuteUbergraph_Anim_LandingPad");
 

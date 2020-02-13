@@ -12,34 +12,14 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Build_RailroadSwitchControl.Build_RailroadSwitchControl_C.UserConstructionScript
-// ()
+// Function Build_RailroadSwitchControl.Build_RailroadSwitchControl_C.UpdateSwitchPositionVisuals
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void ABuild_RailroadSwitchControl_C::UserConstructionScript()
+void ABuild_RailroadSwitchControl_C::UpdateSwitchPositionVisuals()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Build_RailroadSwitchControl.Build_RailroadSwitchControl_C.UserConstructionScript");
+	static auto fn = UObject::FindObject<UFunction>("Function Build_RailroadSwitchControl.Build_RailroadSwitchControl_C.UpdateSwitchPositionVisuals");
 
-	ABuild_RailroadSwitchControl_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Build_RailroadSwitchControl.Build_RailroadSwitchControl_C.ReceiveTick
-// ()
-// Parameters:
-// float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABuild_RailroadSwitchControl_C::ReceiveTick(float* DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Build_RailroadSwitchControl.Build_RailroadSwitchControl_C.ReceiveTick");
-
-	ABuild_RailroadSwitchControl_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ABuild_RailroadSwitchControl_C_UpdateSwitchPositionVisuals_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -50,11 +30,11 @@ void ABuild_RailroadSwitchControl_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Build_RailroadSwitchControl.Build_RailroadSwitchControl_C.ExecuteUbergraph_Build_RailroadSwitchControl
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuild_RailroadSwitchControl_C::ExecuteUbergraph_Build_RailroadSwitchControl(int EntryPoint)
+void ABuild_RailroadSwitchControl_C::ExecuteUbergraph_Build_RailroadSwitchControl(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Build_RailroadSwitchControl.Build_RailroadSwitchControl_C.ExecuteUbergraph_Build_RailroadSwitchControl");
 

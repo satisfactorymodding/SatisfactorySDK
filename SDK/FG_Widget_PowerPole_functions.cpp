@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_PowerPole.Widget_PowerPole_C.UpdateHeaderText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PowerPole_C::UpdateHeaderText()
 {
@@ -30,7 +30,7 @@ void UWidget_PowerPole_C::UpdateHeaderText()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.GetFuseVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -51,7 +51,7 @@ ESlateVisibility UWidget_PowerPole_C::GetFuseVisibility()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.OnGetPowerCircuit
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFGPowerCircuit*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -72,7 +72,7 @@ class UFGPowerCircuit* UWidget_PowerPole_C::OnGetPowerCircuit()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.IsConnected
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsConnected                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -94,7 +94,7 @@ void UWidget_PowerPole_C::IsConnected(bool* IsConnected)
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.Cleanup
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PowerPole_C::Cleanup()
 {
@@ -111,7 +111,7 @@ void UWidget_PowerPole_C::Cleanup()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.GetPowerCircuitGraphVisibility
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -132,7 +132,7 @@ ESlateVisibility UWidget_PowerPole_C::GetPowerCircuitGraphVisibility()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.Init
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UWidget_PowerPole_C::Init()
 {
@@ -149,7 +149,7 @@ void UWidget_PowerPole_C::Init()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PowerPole_C::Construct()
 {
@@ -166,7 +166,7 @@ void UWidget_PowerPole_C::Construct()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_PowerPole_C::Destruct()
 {
@@ -183,7 +183,7 @@ void UWidget_PowerPole_C::Destruct()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.ResetFuse
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_PowerPole_C::ResetFuse()
 {
@@ -200,11 +200,11 @@ void UWidget_PowerPole_C::ResetFuse()
 
 
 // Function Widget_PowerPole.Widget_PowerPole_C.ExecuteUbergraph_Widget_PowerPole
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_PowerPole_C::ExecuteUbergraph_Widget_PowerPole(int EntryPoint)
+void UWidget_PowerPole_C::ExecuteUbergraph_Widget_PowerPole(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerPole.Widget_PowerPole_C.ExecuteUbergraph_Widget_PowerPole");
 

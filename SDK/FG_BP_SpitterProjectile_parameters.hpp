@@ -19,11 +19,6 @@ struct ABP_SpitterProjectile_C_GetNewTarget_Params
 {
 };
 
-// Function BP_SpitterProjectile.BP_SpitterProjectile_C.UserConstructionScript
-struct ABP_SpitterProjectile_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.ReceiveBeginPlay
 struct ABP_SpitterProjectile_C_ReceiveBeginPlay_Params
 {
@@ -43,8 +38,8 @@ struct ABP_SpitterProjectile_C_ReceiveTick_Params
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature
 struct ABP_SpitterProjectile_C_BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature_Params
 {
-	class UActorComponent*                             component;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bReset;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UActorComponent**                            component;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool*                                              bReset;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.PlayExplosionEffects
@@ -52,10 +47,15 @@ struct ABP_SpitterProjectile_C_PlayExplosionEffects_Params
 {
 };
 
+// Function BP_SpitterProjectile.BP_SpitterProjectile_C.ReceiveDestroyed
+struct ABP_SpitterProjectile_C_ReceiveDestroyed_Params
+{
+};
+
 // Function BP_SpitterProjectile.BP_SpitterProjectile_C.ExecuteUbergraph_BP_SpitterProjectile
 struct ABP_SpitterProjectile_C_ExecuteUbergraph_BP_SpitterProjectile_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

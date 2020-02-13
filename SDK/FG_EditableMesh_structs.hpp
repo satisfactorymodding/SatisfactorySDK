@@ -264,24 +264,16 @@ struct FVertexInstanceToCreate
 	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct EditableMesh.PolygonHoleVertices
-// 0x0010
-struct FPolygonHoleVertices
-{
-	TArray<struct FVertexAndAttributes>                HoleVertices;                                             // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
-};
-
 // ScriptStruct EditableMesh.PolygonToCreate
-// 0x0030
+// 0x0020
 struct FPolygonToCreate
 {
 	struct FPolygonGroupID                             PolygonGroupID;                                           // 0x0000(0x0004) (BlueprintVisible)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	TArray<struct FVertexAndAttributes>                PerimeterVertices;                                        // 0x0008(0x0010) (BlueprintVisible, ZeroConstructor)
-	TArray<struct FPolygonHoleVertices>                PolygonHoles;                                             // 0x0018(0x0010) (BlueprintVisible, ZeroConstructor)
-	struct FPolygonID                                  OriginalPolygonID;                                        // 0x0028(0x0004) (BlueprintVisible)
-	EPolygonEdgeHardness                               PolygonEdgeHardness;                                      // 0x002C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
+	struct FPolygonID                                  OriginalPolygonID;                                        // 0x0018(0x0004) (BlueprintVisible)
+	EPolygonEdgeHardness                               PolygonEdgeHardness;                                      // 0x001C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct EditableMesh.PolygonGroupToCreate
@@ -336,6 +328,32 @@ struct FPolygonGroupForPolygon
 {
 	struct FPolygonID                                  PolygonID;                                                // 0x0000(0x0004) (BlueprintVisible)
 	struct FPolygonGroupID                             PolygonGroupID;                                           // 0x0004(0x0004) (BlueprintVisible)
+};
+
+// ScriptStruct EditableMesh.AdaptorPolygon2Group
+// 0x0048
+struct FAdaptorPolygon2Group
+{
+	uint32_t                                           RenderingSectionIndex;                                    // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MaterialIndex;                                            // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxTriangles;                                             // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3C];                                      // 0x000C(0x003C) MISSED OFFSET
+};
+
+// ScriptStruct EditableMesh.AdaptorTriangleID
+// 0x0000 (0x0004 - 0x0004)
+struct FAdaptorTriangleID : public FElementID
+{
+
+};
+
+// ScriptStruct EditableMesh.AdaptorPolygon
+// 0x0018
+struct FAdaptorPolygon
+{
+	struct FPolygonGroupID                             PolygonGroupID;                                           // 0x0000(0x0004)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	TArray<struct FAdaptorTriangleID>                  TriangulatedPolygonTriangleIndices;                       // 0x0008(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct EditableMesh.RenderingPolygonGroup

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetProgressBarBorderColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -34,7 +34,7 @@ struct FLinearColor UWidget_ShoppingList_IngredientRow_C::GetProgressBarBorderCo
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetTextColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,7 +55,7 @@ struct FSlateColor UWidget_ShoppingList_IngredientRow_C::GetTextColor()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetIconBGColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +76,7 @@ struct FLinearColor UWidget_ShoppingList_IngredientRow_C::GetIconBGColor()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetBorderVisibility
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,7 +97,7 @@ ESlateVisibility UWidget_ShoppingList_IngredientRow_C::GetBorderVisibility()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetProgressBGColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -118,7 +118,7 @@ struct FLinearColor UWidget_ShoppingList_IngredientRow_C::GetProgressBGColor()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetIconVisibility
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -139,7 +139,7 @@ ESlateVisibility UWidget_ShoppingList_IngredientRow_C::GetIconVisibility()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetCheckboxVisibility
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -160,7 +160,7 @@ ESlateVisibility UWidget_ShoppingList_IngredientRow_C::GetCheckboxVisibility()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetProgressBarColor
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -181,7 +181,7 @@ struct FLinearColor UWidget_ShoppingList_IngredientRow_C::GetProgressBarColor()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetToDoListProgressBarPercentage
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -202,7 +202,7 @@ float UWidget_ShoppingList_IngredientRow_C::GetToDoListProgressBarPercentage()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetNumIngredientsOwned
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            NumItems                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -224,7 +224,7 @@ void UWidget_ShoppingList_IngredientRow_C::GetNumIngredientsOwned(int* NumItems)
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetNumberIngredientsInInventoryText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -245,7 +245,7 @@ struct FText UWidget_ShoppingList_IngredientRow_C::GetNumberIngredientsInInvento
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetIngredient
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FItemAmount             ingredient                     (Parm, OutParm)
 
@@ -267,7 +267,7 @@ void UWidget_ShoppingList_IngredientRow_C::GetIngredient(struct FItemAmount* ing
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetIcon
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -288,7 +288,7 @@ struct FSlateBrush UWidget_ShoppingList_IngredientRow_C::GetIcon()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetIngredientTitleText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -309,7 +309,7 @@ struct FText UWidget_ShoppingList_IngredientRow_C::GetIngredientTitleText()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.GetIngredientNumberText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -330,7 +330,7 @@ struct FText UWidget_ShoppingList_IngredientRow_C::GetIngredientNumberText()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ShoppingList_IngredientRow_C::Construct()
 {
@@ -347,7 +347,7 @@ void UWidget_ShoppingList_IngredientRow_C::Construct()
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -369,11 +369,11 @@ void UWidget_ShoppingList_IngredientRow_C::Tick(struct FGeometry* MyGeometry, fl
 
 
 // Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.ExecuteUbergraph_Widget_ShoppingList_IngredientRow
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ShoppingList_IngredientRow_C::ExecuteUbergraph_Widget_ShoppingList_IngredientRow(int EntryPoint)
+void UWidget_ShoppingList_IngredientRow_C::ExecuteUbergraph_Widget_ShoppingList_IngredientRow(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ShoppingList_IngredientRow.Widget_ShoppingList_IngredientRow_C.ExecuteUbergraph_Widget_ShoppingList_IngredientRow");
 

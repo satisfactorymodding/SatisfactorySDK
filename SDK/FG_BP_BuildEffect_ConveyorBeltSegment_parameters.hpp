@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.UserConstructionScript
-struct ABP_BuildEffect_ConveyorBeltSegment_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.Materialize__FinishedFunc
 struct ABP_BuildEffect_ConveyorBeltSegment_C_Materialize__FinishedFunc_Params
 {
@@ -52,7 +47,7 @@ struct ABP_BuildEffect_ConveyorBeltSegment_C_AddMesh_Params
 // Function BP_BuildEffect_ConveyorBeltSegment.BP_BuildEffect_ConveyorBeltSegment_C.ExecuteUbergraph_BP_BuildEffect_ConveyorBeltSegment
 struct ABP_BuildEffect_ConveyorBeltSegment_C_ExecuteUbergraph_BP_BuildEffect_ConveyorBeltSegment_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

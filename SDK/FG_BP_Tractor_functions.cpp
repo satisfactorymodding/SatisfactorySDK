@@ -12,8 +12,62 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Tractor.BP_Tractor_C.UpdateOutline
+// (Protected, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// bool*                          aimingAtWorkbench              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Tractor_C::UpdateOutline(bool* aimingAtWorkbench)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.UpdateOutline");
+
+	ABP_Tractor_C_UpdateOutline_Params params;
+	params.aimingAtWorkbench = aimingAtWorkbench;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Tractor.BP_Tractor_C.StopDrivingEffects
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Tractor_C::StopDrivingEffects()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.StopDrivingEffects");
+
+	ABP_Tractor_C_StopDrivingEffects_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Tractor.BP_Tractor_C.StartDrivingEffects
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Tractor_C::StartDrivingEffects()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.StartDrivingEffects");
+
+	ABP_Tractor_C_StartDrivingEffects_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_Tractor.BP_Tractor_C.OnRep_mFlashlightOn
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Tractor_C::OnRep_mFlashlightOn()
 {
@@ -30,7 +84,7 @@ void ABP_Tractor_C::OnRep_mFlashlightOn()
 
 
 // Function BP_Tractor.BP_Tractor_C.ToggleFlashlight
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Tractor_C::ToggleFlashlight()
 {
@@ -47,7 +101,7 @@ void ABP_Tractor_C::ToggleFlashlight()
 
 
 // Function BP_Tractor.BP_Tractor_C.GetEnemyTargetDesirability
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFGEnemyController**     forController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -70,7 +124,7 @@ float ABP_Tractor_C::GetEnemyTargetDesirability(class AFGEnemyController** forCo
 
 
 // Function BP_Tractor.BP_Tractor_C.GetAttackLocation
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -91,7 +145,7 @@ struct FVector ABP_Tractor_C::GetAttackLocation()
 
 
 // Function BP_Tractor.BP_Tractor_C.ShouldAutoregisterAsTargetable
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -111,29 +165,12 @@ bool ABP_Tractor_C::ShouldAutoregisterAsTargetable()
 }
 
 
-// Function BP_Tractor.BP_Tractor_C.UserConstructionScript
-// ()
-
-void ABP_Tractor_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.UserConstructionScript");
-
-	ABP_Tractor_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Tractor.BP_Tractor_C.InpActEvt_Flashlight_K2Node_InputActionEvent_1
-// ()
+// (BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FKey*                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Tractor_C::InpActEvt_Flashlight_K2Node_InputActionEvent_1(const struct FKey& Key)
+void ABP_Tractor_C::InpActEvt_Flashlight_K2Node_InputActionEvent_1(struct FKey* Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.InpActEvt_Flashlight_K2Node_InputActionEvent_1");
 
@@ -149,7 +186,7 @@ void ABP_Tractor_C::InpActEvt_Flashlight_K2Node_InputActionEvent_1(const struct 
 
 
 // Function BP_Tractor.BP_Tractor_C.ToggleFreeCamera
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Tractor_C::ToggleFreeCamera()
 {
@@ -165,42 +202,8 @@ void ABP_Tractor_C::ToggleFreeCamera()
 }
 
 
-// Function BP_Tractor.BP_Tractor_C.ReceiveBeginPlay
-// ()
-
-void ABP_Tractor_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.ReceiveBeginPlay");
-
-	ABP_Tractor_C_ReceiveBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_Tractor.BP_Tractor_C.CloseTrunk
-// ()
-
-void ABP_Tractor_C::CloseTrunk()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.CloseTrunk");
-
-	ABP_Tractor_C_CloseTrunk_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Tractor.BP_Tractor_C.ReceiveOnVehicleStartup
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Tractor_C::ReceiveOnVehicleStartup()
 {
@@ -217,7 +220,7 @@ void ABP_Tractor_C::ReceiveOnVehicleStartup()
 
 
 // Function BP_Tractor.BP_Tractor_C.ReceiveOnVehicleShutDown
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Tractor_C::ReceiveOnVehicleShutDown()
 {
@@ -233,14 +236,14 @@ void ABP_Tractor_C::ReceiveOnVehicleShutDown()
 }
 
 
-// Function BP_Tractor.BP_Tractor_C.OpenTrunk
-// ()
+// Function BP_Tractor.BP_Tractor_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Tractor_C::OpenTrunk()
+void ABP_Tractor_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.OpenTrunk");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.ReceiveBeginPlay");
 
-	ABP_Tractor_C_OpenTrunk_Params params;
+	ABP_Tractor_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -251,11 +254,11 @@ void ABP_Tractor_C::OpenTrunk()
 
 
 // Function BP_Tractor.BP_Tractor_C.Server_SetFlashlightOn
-// ()
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           FlashlightOn                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          FlashlightOn                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Tractor_C::Server_SetFlashlightOn(bool FlashlightOn)
+void ABP_Tractor_C::Server_SetFlashlightOn(bool* FlashlightOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.Server_SetFlashlightOn");
 
@@ -270,12 +273,80 @@ void ABP_Tractor_C::Server_SetFlashlightOn(bool FlashlightOn)
 }
 
 
-// Function BP_Tractor.BP_Tractor_C.ExecuteUbergraph_BP_Tractor
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_Tractor.BP_Tractor_C.GainedSignificance
+// (Event, Public, BlueprintEvent)
 
-void ABP_Tractor_C::ExecuteUbergraph_BP_Tractor(int EntryPoint)
+void ABP_Tractor_C::GainedSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.GainedSignificance");
+
+	ABP_Tractor_C_GainedSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Tractor.BP_Tractor_C.LostSignificance
+// (Event, Public, BlueprintEvent)
+
+void ABP_Tractor_C::LostSignificance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.LostSignificance");
+
+	ABP_Tractor_C_LostSignificance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Tractor.BP_Tractor_C.Multicast_CloseTrunk
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_Tractor_C::Multicast_CloseTrunk()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.Multicast_CloseTrunk");
+
+	ABP_Tractor_C_Multicast_CloseTrunk_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Tractor.BP_Tractor_C.Multicast_OpenTrunk
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_Tractor_C::Multicast_OpenTrunk()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.Multicast_OpenTrunk");
+
+	ABP_Tractor_C_Multicast_OpenTrunk_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Tractor.BP_Tractor_C.ExecuteUbergraph_BP_Tractor
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Tractor_C::ExecuteUbergraph_BP_Tractor(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Tractor.BP_Tractor_C.ExecuteUbergraph_BP_Tractor");
 

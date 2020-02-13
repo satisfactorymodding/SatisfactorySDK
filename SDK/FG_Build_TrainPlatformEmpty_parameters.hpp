@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Build_TrainPlatformEmpty.Build_TrainPlatformEmpty_C.UserConstructionScript
-struct ABuild_TrainPlatformEmpty_C_UserConstructionScript_Params
-{
-};
-
 }
 
 #ifdef _MSC_VER

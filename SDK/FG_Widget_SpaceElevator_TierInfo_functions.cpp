@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_SpaceElevator_TierInfo.Widget_SpaceElevator_TierInfo_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,11 +33,11 @@ void UWidget_SpaceElevator_TierInfo_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_SpaceElevator_TierInfo.Widget_SpaceElevator_TierInfo_C.ExecuteUbergraph_Widget_SpaceElevator_TierInfo
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_SpaceElevator_TierInfo_C::ExecuteUbergraph_Widget_SpaceElevator_TierInfo(int EntryPoint)
+void UWidget_SpaceElevator_TierInfo_C::ExecuteUbergraph_Widget_SpaceElevator_TierInfo(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_SpaceElevator_TierInfo.Widget_SpaceElevator_TierInfo_C.ExecuteUbergraph_Widget_SpaceElevator_TierInfo");
 

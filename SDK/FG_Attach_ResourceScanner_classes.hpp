@@ -30,10 +30,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void CustomEvent_1();
 	void PlayUseEffect(struct FVector* UseLocation);
-	void ExecuteUbergraph_Attach_ResourceScanner(int EntryPoint);
+	void ExecuteUbergraph_Attach_ResourceScanner(int* EntryPoint);
 };
 
 

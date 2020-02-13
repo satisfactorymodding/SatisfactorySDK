@@ -14,27 +14,22 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_CreatureSeat.BP_CreatureSeat_C.UserConstructionScript
-struct ABP_CreatureSeat_C_UserConstructionScript_Params
-{
-};
-
 // Function BP_CreatureSeat.BP_CreatureSeat_C.InpActEvt_Use_K2Node_InputActionEvent_2
 struct ABP_CreatureSeat_C_InpActEvt_Use_K2Node_InputActionEvent_2_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.InpActEvt_Jump_Drift_K2Node_InputActionEvent_1
 struct ABP_CreatureSeat_C_InpActEvt_Jump_Drift_K2Node_InputActionEvent_1_Params
 {
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FKey*                                       Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1
 struct ABP_CreatureSeat_C_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1_Params
 {
-	float                                              AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             AxisValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.UpdateCamera
@@ -57,7 +52,7 @@ struct ABP_CreatureSeat_C_ReceivePossessed_Params
 // Function BP_CreatureSeat.BP_CreatureSeat_C.ClientSetupHUD
 struct ABP_CreatureSeat_C_ClientSetupHUD_Params
 {
-	class AFGPlayerController*                         Controller;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AFGPlayerController**                        Controller;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_CreatureSeat.BP_CreatureSeat_C.Server_Leave
@@ -88,7 +83,7 @@ struct ABP_CreatureSeat_C_PlayClap_Params
 // Function BP_CreatureSeat.BP_CreatureSeat_C.ExecuteUbergraph_BP_CreatureSeat
 struct ABP_CreatureSeat_C_ExecuteUbergraph_BP_CreatureSeat_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

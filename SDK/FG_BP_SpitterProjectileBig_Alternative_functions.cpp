@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.GetNewTarget
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SpitterProjectileBig_Alternative_C::GetNewTarget()
 {
@@ -30,7 +30,7 @@ void ABP_SpitterProjectileBig_Alternative_C::GetNewTarget()
 
 
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.GetNewTargetLocation
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SpitterProjectileBig_Alternative_C::GetNewTargetLocation()
 {
@@ -46,25 +46,8 @@ void ABP_SpitterProjectileBig_Alternative_C::GetNewTargetLocation()
 }
 
 
-// Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.UserConstructionScript
-// ()
-
-void ABP_SpitterProjectileBig_Alternative_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.UserConstructionScript");
-
-	ABP_SpitterProjectileBig_Alternative_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.ReceiveBeginPlay
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void ABP_SpitterProjectileBig_Alternative_C::ReceiveBeginPlay()
 {
@@ -81,7 +64,7 @@ void ABP_SpitterProjectileBig_Alternative_C::ReceiveBeginPlay()
 
 
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.SplitProjectile
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_SpitterProjectileBig_Alternative_C::SplitProjectile()
 {
@@ -98,7 +81,7 @@ void ABP_SpitterProjectileBig_Alternative_C::SplitProjectile()
 
 
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -118,12 +101,12 @@ void ABP_SpitterProjectileBig_Alternative_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature
-// ()
+// (BlueprintEvent)
 // Parameters:
-// class UActorComponent*         component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bReset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent**        component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool*                          bReset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterProjectileBig_Alternative_C::BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent* component, bool bReset)
+void ABP_SpitterProjectileBig_Alternative_C::BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent** component, bool* bReset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.BndEvt__mProjectileMovement_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature");
 
@@ -140,7 +123,7 @@ void ABP_SpitterProjectileBig_Alternative_C::BndEvt__mProjectileMovement_K2Node_
 
 
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.PlayExplosionEffects
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void ABP_SpitterProjectileBig_Alternative_C::PlayExplosionEffects()
 {
@@ -157,24 +140,24 @@ void ABP_SpitterProjectileBig_Alternative_C::PlayExplosionEffects()
 
 
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.OnTakeAnyDamage_Event_1
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  damagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UDamageType*             DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamagedActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterProjectileBig_Alternative_C::OnTakeAnyDamage_Event_1(class AActor* damagedActor, float Damage, class UDamageType* DamageType, class AController* instigatedBy, class AActor* damageCauser)
+void ABP_SpitterProjectileBig_Alternative_C::OnTakeAnyDamage_Event_1(class AActor** DamagedActor, float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.OnTakeAnyDamage_Event_1");
 
 	ABP_SpitterProjectileBig_Alternative_C_OnTakeAnyDamage_Event_1_Params params;
-	params.damagedActor = damagedActor;
+	params.DamagedActor = DamagedActor;
 	params.Damage = Damage;
 	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -185,11 +168,11 @@ void ABP_SpitterProjectileBig_Alternative_C::OnTakeAnyDamage_Event_1(class AActo
 
 
 // Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.ExecuteUbergraph_BP_SpitterProjectileBig_Alternative
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpitterProjectileBig_Alternative_C::ExecuteUbergraph_BP_SpitterProjectileBig_Alternative(int EntryPoint)
+void ABP_SpitterProjectileBig_Alternative_C::ExecuteUbergraph_BP_SpitterProjectileBig_Alternative(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpitterProjectileBig_Alternative.BP_SpitterProjectileBig_Alternative_C.ExecuteUbergraph_BP_SpitterProjectileBig_Alternative");
 

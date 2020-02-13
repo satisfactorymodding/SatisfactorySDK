@@ -39,17 +39,6 @@ struct AChar_Hog_C_UpdateChargeDirection_Params
 {
 };
 
-// Function Char_Hog.Char_Hog_C.UserConstructionScript
-struct AChar_Hog_C_UserConstructionScript_Params
-{
-};
-
-// Function Char_Hog.Char_Hog_C.ReceiveTick
-struct AChar_Hog_C_ReceiveTick_Params
-{
-	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Char_Hog.Char_Hog_C.ReceiveHit
 struct AChar_Hog_C_ReceiveHit_Params
 {
@@ -66,16 +55,22 @@ struct AChar_Hog_C_ReceiveHit_Params
 // Function Char_Hog.Char_Hog_C.NotifyOnTakeDamage
 struct AChar_Hog_C_NotifyOnTakeDamage_Params
 {
-	class AActor**                                     damagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             damageAmount;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UDamageType**                                DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AController**                                instigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class AActor**                                     damageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AController**                                InstigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Hog.Char_Hog_C.CheckTargetHeight
 struct AChar_Hog_C_CheckTargetHeight_Params
 {
+};
+
+// Function Char_Hog.Char_Hog_C.ReceiveTick
+struct AChar_Hog_C_ReceiveTick_Params
+{
+	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Hog.Char_Hog_C.circle
@@ -86,7 +81,7 @@ struct AChar_Hog_C_circle_Params
 // Function Char_Hog.Char_Hog_C.StartCircling
 struct AChar_Hog_C_StartCircling_Params
 {
-	class UBTT_CircleMove_C*                           BTTCircleMove;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UBTT_CircleMove_C**                          BTTCircleMove;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Hog.Char_Hog_C.StopCircling
@@ -99,10 +94,50 @@ struct AChar_Hog_C_ReceiveDied_Params
 {
 };
 
+// Function Char_Hog.Char_Hog_C.ReceiveBeginPlay
+struct AChar_Hog_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function Char_Hog.Char_Hog_C.GainedSignificance
+struct AChar_Hog_C_GainedSignificance_Params
+{
+};
+
+// Function Char_Hog.Char_Hog_C.LostSignificance
+struct AChar_Hog_C_LostSignificance_Params
+{
+};
+
+// Function Char_Hog.Char_Hog_C.ReceiveEndPlay
+struct AChar_Hog_C_ReceiveEndPlay_Params
+{
+	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Char_Hog.Char_Hog_C.NotifyOnWeakspotHit
+struct AChar_Hog_C_NotifyOnWeakspotHit_Params
+{
+};
+
+// Function Char_Hog.Char_Hog_C.NotifyOnTakePointDamage
+struct AChar_Hog_C_NotifyOnTakePointDamage_Params
+{
+	class AActor**                                     DamagedActor;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Damage;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AController**                                InstigatedBy;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector*                                    HitLocation;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent**                        HitComponent;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName*                                      BoneName;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector*                                    ShotFromDirection;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UDamageType**                                DamageType;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Char_Hog.Char_Hog_C.ExecuteUbergraph_Char_Hog
 struct AChar_Hog_C_ExecuteUbergraph_Char_Hog_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Char_Hog.Char_Hog_C.OnChargeMovementStopped__DelegateSignature

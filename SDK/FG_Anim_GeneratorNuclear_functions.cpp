@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.SetupReloadTimer
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorNuclear_C::SetupReloadTimer()
 {
@@ -30,7 +30,7 @@ void UAnim_GeneratorNuclear_C::SetupReloadTimer()
 
 
 // Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.ReloadTimer
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorNuclear_C::ReloadTimer()
 {
@@ -47,7 +47,7 @@ void UAnim_GeneratorNuclear_C::ReloadTimer()
 
 
 // Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.AnimNotify_GenNuclearEnteredReloadState
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearEnteredReloadState()
 {
@@ -64,7 +64,7 @@ void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearEnteredReloadState()
 
 
 // Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.AnimNotify_GenNuclearStartupVfx
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearStartupVfx()
 {
@@ -81,7 +81,7 @@ void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearStartupVfx()
 
 
 // Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.AnimNotify_GenNuclearShutdownVfx
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearShutdownVfx()
 {
@@ -98,7 +98,7 @@ void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearShutdownVfx()
 
 
 // Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.AnimNotify_GenNuclearEnteredProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearEnteredProducing()
 {
@@ -115,7 +115,7 @@ void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearEnteredProducing()
 
 
 // Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.AnimNotify_GenNuclearLeftProducing
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearLeftProducing()
 {
@@ -131,29 +131,12 @@ void UAnim_GeneratorNuclear_C::AnimNotify_GenNuclearLeftProducing()
 }
 
 
-// Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.AnimNotify_PlayWatersplashvfx_notify
-// ()
-
-void UAnim_GeneratorNuclear_C::AnimNotify_PlayWatersplashvfx_notify()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.AnimNotify_PlayWatersplashvfx_notify");
-
-	UAnim_GeneratorNuclear_C_AnimNotify_PlayWatersplashvfx_notify_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.ExecuteUbergraph_Anim_GeneratorNuclear
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_GeneratorNuclear_C::ExecuteUbergraph_Anim_GeneratorNuclear(int EntryPoint)
+void UAnim_GeneratorNuclear_C::ExecuteUbergraph_Anim_GeneratorNuclear(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_GeneratorNuclear.Anim_GeneratorNuclear_C.ExecuteUbergraph_Anim_GeneratorNuclear");
 

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MaterialEffect_Build_Hub.BP_MaterialEffect_Build_Hub_C
-// 0x0008 (0x0520 - 0x0518)
+// 0x0008 (0x0598 - 0x0590)
 class UBP_MaterialEffect_Build_Hub_C : public UBP_MaterialEffect_Build_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0518(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0590(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +29,7 @@ public:
 
 
 	void PlayThumpSound();
-	void ExecuteUbergraph_BP_MaterialEffect_Build_Hub(int EntryPoint);
+	void ExecuteUbergraph_BP_MaterialEffect_Build_Hub(int* EntryPoint);
 };
 
 

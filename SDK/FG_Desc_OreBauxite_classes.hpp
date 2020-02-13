@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Desc_OreBauxite.Desc_OreBauxite_C
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01B0 - 0x01B0)
 class UDesc_OreBauxite_C : public UFGResourceDescriptor
 {
 public:

@@ -51,7 +51,7 @@ struct UBP_MusicManager_C_Stop_Params
 // Function BP_MusicManager.BP_MusicManager_C.ExecuteUbergraph_BP_MusicManager
 struct UBP_MusicManager_C_ExecuteUbergraph_BP_MusicManager_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -32,7 +32,7 @@ public:
 
 
 	void ReceiveExecuteAI(class AAIController** OwnerController, class APawn** ControlledPawn);
-	void ExecuteUbergraph_BTT_SetSpeed(int EntryPoint);
+	void ExecuteUbergraph_BTT_SetSpeed(int* EntryPoint);
 };
 
 

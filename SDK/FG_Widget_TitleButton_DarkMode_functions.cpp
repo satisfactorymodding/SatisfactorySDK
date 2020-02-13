@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature()
 {
@@ -30,7 +30,7 @@ void UWidget_TitleButton_DarkMode_C::BndEvt__Button_26_K2Node_ComponentBoundEven
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_597_OnButtonPressedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_597_OnButtonPressedEvent__DelegateSignature()
 {
@@ -47,7 +47,7 @@ void UWidget_TitleButton_DarkMode_C::BndEvt__Button_26_K2Node_ComponentBoundEven
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.BndEvt__Button_26_K2Node_ComponentBoundEvent_642_OnButtonReleasedEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::BndEvt__Button_26_K2Node_ComponentBoundEvent_642_OnButtonReleasedEvent__DelegateSignature()
 {
@@ -64,7 +64,7 @@ void UWidget_TitleButton_DarkMode_C::BndEvt__Button_26_K2Node_ComponentBoundEven
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::Construct()
 {
@@ -81,7 +81,7 @@ void UWidget_TitleButton_DarkMode_C::Construct()
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::BndEvt__mButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 {
@@ -98,7 +98,7 @@ void UWidget_TitleButton_DarkMode_C::BndEvt__mButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::Destruct()
 {
@@ -115,7 +115,7 @@ void UWidget_TitleButton_DarkMode_C::Destruct()
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::BndEvt__mButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
@@ -132,11 +132,11 @@ void UWidget_TitleButton_DarkMode_C::BndEvt__mButton_K2Node_ComponentBoundEvent_
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.ExecuteUbergraph_Widget_TitleButton_DarkMode
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TitleButton_DarkMode_C::ExecuteUbergraph_Widget_TitleButton_DarkMode(int EntryPoint)
+void UWidget_TitleButton_DarkMode_C::ExecuteUbergraph_Widget_TitleButton_DarkMode(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.ExecuteUbergraph_Widget_TitleButton_DarkMode");
 
@@ -152,7 +152,7 @@ void UWidget_TitleButton_DarkMode_C::ExecuteUbergraph_Widget_TitleButton_DarkMod
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.OnReleased__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::OnReleased__DelegateSignature()
 {
@@ -169,7 +169,7 @@ void UWidget_TitleButton_DarkMode_C::OnReleased__DelegateSignature()
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.OnPressed__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::OnPressed__DelegateSignature()
 {
@@ -186,7 +186,7 @@ void UWidget_TitleButton_DarkMode_C::OnPressed__DelegateSignature()
 
 
 // Function Widget_TitleButton_DarkMode.Widget_TitleButton_DarkMode_C.OnClicked__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TitleButton_DarkMode_C::OnClicked__DelegateSignature()
 {

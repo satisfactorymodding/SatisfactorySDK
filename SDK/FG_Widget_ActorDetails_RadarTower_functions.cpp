@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ActorDetails_RadarTower.Widget_ActorDetails_RadarTower_C.GetScannedPercentText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   Result                         (Parm, OutParm)
 
@@ -35,7 +35,7 @@ void UWidget_ActorDetails_RadarTower_C::GetScannedPercentText(struct FText* Resu
 
 
 // Function Widget_ActorDetails_RadarTower.Widget_ActorDetails_RadarTower_C.GetTimeLeftInText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   Result                         (Parm, OutParm)
 
@@ -57,7 +57,7 @@ void UWidget_ActorDetails_RadarTower_C::GetTimeLeftInText(struct FText* Result)
 
 
 // Function Widget_ActorDetails_RadarTower.Widget_ActorDetails_RadarTower_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActorDetails_RadarTower_C::Construct()
 {
@@ -74,7 +74,7 @@ void UWidget_ActorDetails_RadarTower_C::Construct()
 
 
 // Function Widget_ActorDetails_RadarTower.Widget_ActorDetails_RadarTower_C.UpdateDetails
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_ActorDetails_RadarTower_C::UpdateDetails()
 {
@@ -91,7 +91,7 @@ void UWidget_ActorDetails_RadarTower_C::UpdateDetails()
 
 
 // Function Widget_ActorDetails_RadarTower.Widget_ActorDetails_RadarTower_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_ActorDetails_RadarTower_C::Destruct()
 {
@@ -108,11 +108,11 @@ void UWidget_ActorDetails_RadarTower_C::Destruct()
 
 
 // Function Widget_ActorDetails_RadarTower.Widget_ActorDetails_RadarTower_C.ExecuteUbergraph_Widget_ActorDetails_RadarTower
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ActorDetails_RadarTower_C::ExecuteUbergraph_Widget_ActorDetails_RadarTower(int EntryPoint)
+void UWidget_ActorDetails_RadarTower_C::ExecuteUbergraph_Widget_ActorDetails_RadarTower(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ActorDetails_RadarTower.Widget_ActorDetails_RadarTower_C.ExecuteUbergraph_Widget_ActorDetails_RadarTower");
 

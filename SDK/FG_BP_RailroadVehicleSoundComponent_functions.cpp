@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.mSpeedKmH
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Speed                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -34,25 +34,8 @@ void UBP_RailroadVehicleSoundComponent_C::mSpeedKmH(float* Speed)
 }
 
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMoving
-// ()
-
-void UBP_RailroadVehicleSoundComponent_C::OnStoppedMoving()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMoving");
-
-	UBP_RailroadVehicleSoundComponent_C_OnStoppedMoving_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStartedMoving
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::OnStartedMoving()
 {
@@ -68,8 +51,25 @@ void UBP_RailroadVehicleSoundComponent_C::OnStartedMoving()
 }
 
 
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMoving
+// (Event, Protected, BlueprintEvent)
+
+void UBP_RailroadVehicleSoundComponent_C::OnStoppedMoving()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMoving");
+
+	UBP_RailroadVehicleSoundComponent_C_OnStoppedMoving_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.UpdateRTPCs
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::UpdateRTPCs()
 {
@@ -86,7 +86,7 @@ void UBP_RailroadVehicleSoundComponent_C::UpdateRTPCs()
 
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnDynamicBrakesApplied
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::OnDynamicBrakesApplied()
 {
@@ -103,7 +103,7 @@ void UBP_RailroadVehicleSoundComponent_C::OnDynamicBrakesApplied()
 
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnAirBrakesApplied
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::OnAirBrakesApplied()
 {
@@ -120,7 +120,7 @@ void UBP_RailroadVehicleSoundComponent_C::OnAirBrakesApplied()
 
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnAirBrakesReleased
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::OnAirBrakesReleased()
 {
@@ -137,7 +137,7 @@ void UBP_RailroadVehicleSoundComponent_C::OnAirBrakesReleased()
 
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnDynamicBrakesReleased
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::OnDynamicBrakesReleased()
 {
@@ -154,7 +154,7 @@ void UBP_RailroadVehicleSoundComponent_C::OnDynamicBrakesReleased()
 
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnThrottleReleased
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::OnThrottleReleased()
 {
@@ -171,7 +171,7 @@ void UBP_RailroadVehicleSoundComponent_C::OnThrottleReleased()
 
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnThrottleApplied
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::OnThrottleApplied()
 {
@@ -188,7 +188,7 @@ void UBP_RailroadVehicleSoundComponent_C::OnThrottleApplied()
 
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.OnStoppedMovingRelay
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_RailroadVehicleSoundComponent_C::OnStoppedMovingRelay()
 {
@@ -204,14 +204,31 @@ void UBP_RailroadVehicleSoundComponent_C::OnStoppedMovingRelay()
 }
 
 
-// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay
-// ()
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.StartIdleSounds
+// (Event, Protected, BlueprintEvent)
 
-void UBP_RailroadVehicleSoundComponent_C::ReceiveBeginPlay()
+void UBP_RailroadVehicleSoundComponent_C::StartIdleSounds()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ReceiveBeginPlay");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.StartIdleSounds");
 
-	UBP_RailroadVehicleSoundComponent_C_ReceiveBeginPlay_Params params;
+	UBP_RailroadVehicleSoundComponent_C_StartIdleSounds_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.StopAllSounds
+// (Event, Public, BlueprintEvent)
+
+void UBP_RailroadVehicleSoundComponent_C::StopAllSounds()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.StopAllSounds");
+
+	UBP_RailroadVehicleSoundComponent_C_StopAllSounds_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -222,11 +239,11 @@ void UBP_RailroadVehicleSoundComponent_C::ReceiveBeginPlay()
 
 
 // Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ExecuteUbergraph_BP_RailroadVehicleSoundComponent
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_RailroadVehicleSoundComponent_C::ExecuteUbergraph_BP_RailroadVehicleSoundComponent(int EntryPoint)
+void UBP_RailroadVehicleSoundComponent_C::ExecuteUbergraph_BP_RailroadVehicleSoundComponent(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RailroadVehicleSoundComponent.BP_RailroadVehicleSoundComponent_C.ExecuteUbergraph_BP_RailroadVehicleSoundComponent");
 

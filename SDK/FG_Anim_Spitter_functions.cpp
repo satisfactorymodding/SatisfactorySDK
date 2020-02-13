@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_Spitter.Anim_Spitter_C.CalculateAnimGraphVariables
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_Spitter_C::CalculateAnimGraphVariables()
 {
@@ -30,7 +30,7 @@ void UAnim_Spitter_C::CalculateAnimGraphVariables()
 
 
 // Function Anim_Spitter.Anim_Spitter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_AnimGraphNode_TransitionResult_C9A2C4744CC31A8CA3DA6398B7FABFD2
-// ()
+// (BlueprintEvent)
 
 void UAnim_Spitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_AnimGraphNode_TransitionResult_C9A2C4744CC31A8CA3DA6398B7FABFD2()
 {
@@ -47,7 +47,7 @@ void UAnim_Spitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_A
 
 
 // Function Anim_Spitter.Anim_Spitter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_AnimGraphNode_TransitionResult_F59AB4D046321D1D1D4ED6BFFA4CE266
-// ()
+// (BlueprintEvent)
 
 void UAnim_Spitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_AnimGraphNode_TransitionResult_F59AB4D046321D1D1D4ED6BFFA4CE266()
 {
@@ -64,7 +64,7 @@ void UAnim_Spitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_A
 
 
 // Function Anim_Spitter.Anim_Spitter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_AnimGraphNode_TransitionResult_E5A14AC943454B0D928B91923D852F46
-// ()
+// (BlueprintEvent)
 
 void UAnim_Spitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_AnimGraphNode_TransitionResult_E5A14AC943454B0D928B91923D852F46()
 {
@@ -81,7 +81,7 @@ void UAnim_Spitter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Anim_Spitter_A
 
 
 // Function Anim_Spitter.Anim_Spitter_C.AnimNotify_SpitterWalkToRunNotify
-// ()
+// (BlueprintCallable, BlueprintEvent)
 
 void UAnim_Spitter_C::AnimNotify_SpitterWalkToRunNotify()
 {
@@ -98,7 +98,7 @@ void UAnim_Spitter_C::AnimNotify_SpitterWalkToRunNotify()
 
 
 // Function Anim_Spitter.Anim_Spitter_C.OnRadialDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UAnim_Spitter_C::OnRadialDamageTaken()
 {
@@ -115,7 +115,7 @@ void UAnim_Spitter_C::OnRadialDamageTaken()
 
 
 // Function Anim_Spitter.Anim_Spitter_C.OnPointDamageTaken
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector*                shootDIrection                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -135,7 +135,7 @@ void UAnim_Spitter_C::OnPointDamageTaken(struct FVector* shootDIrection)
 
 
 // Function Anim_Spitter.Anim_Spitter_C.BlueprintUpdateAnimation
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -155,11 +155,11 @@ void UAnim_Spitter_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 
 // Function Anim_Spitter.Anim_Spitter_C.ExecuteUbergraph_Anim_Spitter
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_Spitter_C::ExecuteUbergraph_Anim_Spitter(int EntryPoint)
+void UAnim_Spitter_C::ExecuteUbergraph_Anim_Spitter(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_Spitter.Anim_Spitter_C.ExecuteUbergraph_Anim_Spitter");
 

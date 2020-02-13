@@ -12,25 +12,8 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Char_Spitter_Alternative.Char_Spitter_Alternative_C.UserConstructionScript
-// ()
-
-void AChar_Spitter_Alternative_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Char_Spitter_Alternative.Char_Spitter_Alternative_C.UserConstructionScript");
-
-	AChar_Spitter_Alternative_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Char_Spitter_Alternative.Char_Spitter_Alternative_C.OnStrafeEnded_0__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void AChar_Spitter_Alternative_C::OnStrafeEnded_0__DelegateSignature()
 {

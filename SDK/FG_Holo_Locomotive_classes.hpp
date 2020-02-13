@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Holo_Locomotive.Holo_Locomotive_C
-// 0x0008 (0x03E0 - 0x03D8)
+// 0x0008 (0x0418 - 0x0410)
 class AHolo_Locomotive_C : public AFGRailroadVehicleHologram
 {
 public:
-	class UStaticMeshComponent*                        Arrow;                                                    // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        Arrow;                                                    // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,8 +27,6 @@ public:
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
 };
 
 

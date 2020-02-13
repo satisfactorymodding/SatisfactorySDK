@@ -12,8 +12,91 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.ZeroGraphStats
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PowerCircuitGraph_C::ZeroGraphStats()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.ZeroGraphStats");
+
+	UWidget_PowerCircuitGraph_C_ZeroGraphStats_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.UpdateStats
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PowerCircuitGraph_C::UpdateStats()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.UpdateStats");
+
+	UWidget_PowerCircuitGraph_C_UpdateStats_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.OnMouseMove
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWidget_PowerCircuitGraph_C::OnMouseMove(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.OnMouseMove");
+
+	UWidget_PowerCircuitGraph_C_OnMouseMove_Params params;
+	params.MyGeometry = MyGeometry;
+	params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.SetHoverStyle
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTextBlock**             TextObject                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UImage**                 BackgroundObject               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool*                          IsHovered                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_PowerCircuitGraph_C::SetHoverStyle(class UTextBlock** TextObject, class UImage** BackgroundObject, bool* IsHovered)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.SetHoverStyle");
+
+	UWidget_PowerCircuitGraph_C_SetHoverStyle_Params params;
+	params.TextObject = TextObject;
+	params.BackgroundObject = BackgroundObject;
+	params.IsHovered = IsHovered;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.GetCurrentlyUsingText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -34,7 +117,7 @@ struct FText UWidget_PowerCircuitGraph_C::GetCurrentlyUsingText()
 
 
 // Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.GetResetFuseButtonEnabled
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +138,7 @@ bool UWidget_PowerCircuitGraph_C::GetResetFuseButtonEnabled()
 
 
 // Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.GetCapacityText
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -76,7 +159,7 @@ struct FText UWidget_PowerCircuitGraph_C::GetCapacityText()
 
 
 // Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.UpdatePoints
-// ()
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_PowerCircuitGraph_C::UpdatePoints()
 {
@@ -93,7 +176,7 @@ void UWidget_PowerCircuitGraph_C::UpdatePoints()
 
 
 // Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.GetCapacityColorAndOpacity
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -114,7 +197,7 @@ struct FSlateColor UWidget_PowerCircuitGraph_C::GetCapacityColorAndOpacity()
 
 
 // Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.GetProductionColorAndOpacity
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -135,7 +218,7 @@ struct FSlateColor UWidget_PowerCircuitGraph_C::GetProductionColorAndOpacity()
 
 
 // Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.GetConsumptionColorAndOpacity
-// ()
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -156,7 +239,7 @@ struct FSlateColor UWidget_PowerCircuitGraph_C::GetConsumptionColorAndOpacity()
 
 
 // Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -177,12 +260,131 @@ void UWidget_PowerCircuitGraph_C::Tick(struct FGeometry* MyGeometry, float* InDe
 }
 
 
-// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.ExecuteUbergraph_Widget_PowerCircuitGraph
-// ()
-// Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mConsumptionButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_PowerCircuitGraph_C::ExecuteUbergraph_Widget_PowerCircuitGraph(int EntryPoint)
+void UWidget_PowerCircuitGraph_C::BndEvt__mConsumptionButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mConsumptionButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_PowerCircuitGraph_C_BndEvt__mConsumptionButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mProductionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_PowerCircuitGraph_C::BndEvt__mProductionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mProductionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_PowerCircuitGraph_C_BndEvt__mProductionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mCapacityButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_PowerCircuitGraph_C::BndEvt__mCapacityButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mCapacityButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_PowerCircuitGraph_C_BndEvt__mCapacityButton_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mCapacityButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_PowerCircuitGraph_C::BndEvt__mCapacityButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mCapacityButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_PowerCircuitGraph_C_BndEvt__mCapacityButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mProductionButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_PowerCircuitGraph_C::BndEvt__mProductionButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mProductionButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_PowerCircuitGraph_C_BndEvt__mProductionButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mConsumptionButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_PowerCircuitGraph_C::BndEvt__mConsumptionButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.BndEvt__mConsumptionButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature");
+
+	UWidget_PowerCircuitGraph_C_BndEvt__mConsumptionButton_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_PowerCircuitGraph_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.Construct");
+
+	UWidget_PowerCircuitGraph_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.ExecuteUbergraph_Widget_PowerCircuitGraph
+// (Final, HasDefaults)
+// Parameters:
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_PowerCircuitGraph_C::ExecuteUbergraph_Widget_PowerCircuitGraph(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PowerCircuitGraph.Widget_PowerCircuitGraph_C.ExecuteUbergraph_Widget_PowerCircuitGraph");
 

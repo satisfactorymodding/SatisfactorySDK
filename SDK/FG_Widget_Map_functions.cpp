@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_Map.Widget_Map_C.DiscardInput
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Map_C::DiscardInput()
 {
@@ -30,7 +30,7 @@ void UWidget_Map_C::DiscardInput()
 
 
 // Function Widget_Map.Widget_Map_C.ListenForInputActions
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Map_C::ListenForInputActions()
 {
@@ -47,11 +47,11 @@ void UWidget_Map_C::ListenForInputActions()
 
 
 // Function Widget_Map.Widget_Map_C.UpdateObjectOnMap
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGActorRepresentation*  actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Map_C::UpdateObjectOnMap(class UFGActorRepresentation* actorRepresentation)
+void UWidget_Map_C::UpdateObjectOnMap(class UFGActorRepresentation** actorRepresentation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.UpdateObjectOnMap");
 
@@ -67,11 +67,11 @@ void UWidget_Map_C::UpdateObjectOnMap(class UFGActorRepresentation* actorReprese
 
 
 // Function Widget_Map.Widget_Map_C.CenterMapOnPlayer
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D               normalizedWorldLocation        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              normalizedWorldLocation        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Map_C::CenterMapOnPlayer(const struct FVector2D& normalizedWorldLocation)
+void UWidget_Map_C::CenterMapOnPlayer(struct FVector2D* normalizedWorldLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.CenterMapOnPlayer");
 
@@ -87,11 +87,11 @@ void UWidget_Map_C::CenterMapOnPlayer(const struct FVector2D& normalizedWorldLoc
 
 
 // Function Widget_Map.Widget_Map_C.OnIconUnhover
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_MapObject_C*     MapObject                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_MapObject_C**    MapObject                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Map_C::OnIconUnhover(class UWidget_MapObject_C* MapObject)
+void UWidget_Map_C::OnIconUnhover(class UWidget_MapObject_C** MapObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.OnIconUnhover");
 
@@ -107,11 +107,11 @@ void UWidget_Map_C::OnIconUnhover(class UWidget_MapObject_C* MapObject)
 
 
 // Function Widget_Map.Widget_Map_C.OnIconHover
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_MapObject_C*     MapObject                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_MapObject_C**    MapObject                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Map_C::OnIconHover(class UWidget_MapObject_C* MapObject)
+void UWidget_Map_C::OnIconHover(class UWidget_MapObject_C** MapObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.OnIconHover");
 
@@ -127,11 +127,12 @@ void UWidget_Map_C::OnIconHover(class UWidget_MapObject_C* MapObject)
 
 
 // Function Widget_Map.Widget_Map_C.AddObjectToMap
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGActorRepresentation*  actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_MapObject_C*     WidgetMapObject                (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_Map_C::AddObjectToMap(class UFGActorRepresentation* actorRepresentation)
+void UWidget_Map_C::AddObjectToMap(class UFGActorRepresentation** actorRepresentation, class UWidget_MapObject_C** WidgetMapObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.AddObjectToMap");
 
@@ -143,15 +144,18 @@ void UWidget_Map_C::AddObjectToMap(class UFGActorRepresentation* actorRepresenta
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	if (WidgetMapObject != nullptr)
+		*WidgetMapObject = params.WidgetMapObject;
 }
 
 
 // Function Widget_Map.Widget_Map_C.RemoveObjectFromMap
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGActorRepresentation*  ActorRepresentationToRemove    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UFGActorRepresentation** ActorRepresentationToRemove    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Map_C::RemoveObjectFromMap(class UFGActorRepresentation* ActorRepresentationToRemove)
+void UWidget_Map_C::RemoveObjectFromMap(class UFGActorRepresentation** ActorRepresentationToRemove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.RemoveObjectFromMap");
 
@@ -167,7 +171,7 @@ void UWidget_Map_C::RemoveObjectFromMap(class UFGActorRepresentation* ActorRepre
 
 
 // Function Widget_Map.Widget_Map_C.ClearScrollMap
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Map_C::ClearScrollMap()
 {
@@ -184,7 +188,7 @@ void UWidget_Map_C::ClearScrollMap()
 
 
 // Function Widget_Map.Widget_Map_C.OnMouseButtonUp
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -209,12 +213,12 @@ struct FEventReply UWidget_Map_C::OnMouseButtonUp(struct FGeometry* MyGeometry, 
 
 
 // Function Widget_Map.Widget_Map_C.ScrollMap
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D               MouseOrigin                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               MapOrigin                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              MouseOrigin                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              MapOrigin                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Map_C::ScrollMap(const struct FVector2D& MouseOrigin, const struct FVector2D& MapOrigin)
+void UWidget_Map_C::ScrollMap(struct FVector2D* MouseOrigin, struct FVector2D* MapOrigin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.ScrollMap");
 
@@ -231,7 +235,7 @@ void UWidget_Map_C::ScrollMap(const struct FVector2D& MouseOrigin, const struct 
 
 
 // Function Widget_Map.Widget_Map_C.OnMouseButtonDown
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -256,11 +260,11 @@ struct FEventReply UWidget_Map_C::OnMouseButtonDown(struct FGeometry* MyGeometry
 
 
 // Function Widget_Map.Widget_Map_C.ZoomMap
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D               ZoomValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D*              ZoomValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Map_C::ZoomMap(const struct FVector2D& ZoomValue)
+void UWidget_Map_C::ZoomMap(struct FVector2D* ZoomValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.ZoomMap");
 
@@ -276,7 +280,7 @@ void UWidget_Map_C::ZoomMap(const struct FVector2D& ZoomValue)
 
 
 // Function Widget_Map.Widget_Map_C.OnMouseWheel
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -301,7 +305,7 @@ struct FEventReply UWidget_Map_C::OnMouseWheel(struct FGeometry* MyGeometry, str
 
 
 // Function Widget_Map.Widget_Map_C.OnMouseLeave
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -321,7 +325,7 @@ void UWidget_Map_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 
 
 // Function Widget_Map.Widget_Map_C.Construct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Map_C::Construct()
 {
@@ -338,7 +342,7 @@ void UWidget_Map_C::Construct()
 
 
 // Function Widget_Map.Widget_Map_C.OnFocusLost
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FFocusEvent*            InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -358,7 +362,7 @@ void UWidget_Map_C::OnFocusLost(struct FFocusEvent* InFocusEvent)
 
 
 // Function Widget_Map.Widget_Map_C.Tick
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -380,7 +384,7 @@ void UWidget_Map_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 
 // Function Widget_Map.Widget_Map_C.OnObjectAddedToMap
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -400,7 +404,7 @@ void UWidget_Map_C::OnObjectAddedToMap(class UFGActorRepresentation** actorRepre
 
 
 // Function Widget_Map.Widget_Map_C.OnObjectRemovedFromMap
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -420,7 +424,7 @@ void UWidget_Map_C::OnObjectRemovedFromMap(class UFGActorRepresentation** actorR
 
 
 // Function Widget_Map.Widget_Map_C.Destruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWidget_Map_C::Destruct()
 {
@@ -437,7 +441,7 @@ void UWidget_Map_C::Destruct()
 
 
 // Function Widget_Map.Widget_Map_C.OnObjectUpdatedOnMap
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -457,7 +461,7 @@ void UWidget_Map_C::OnObjectUpdatedOnMap(class UFGActorRepresentation** actorRep
 
 
 // Function Widget_Map.Widget_Map_C.OnMapCentered
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FVector2D*              normalizedWorldLocation        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -477,11 +481,11 @@ void UWidget_Map_C::OnMapCentered(struct FVector2D* normalizedWorldLocation)
 
 
 // Function Widget_Map.Widget_Map_C.ExecuteUbergraph_Widget_Map
-// ()
+// (Final, HasDefaults)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_Map_C::ExecuteUbergraph_Widget_Map(int EntryPoint)
+void UWidget_Map_C::ExecuteUbergraph_Widget_Map(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.ExecuteUbergraph_Widget_Map");
 
@@ -496,8 +500,70 @@ void UWidget_Map_C::ExecuteUbergraph_Widget_Map(int EntryPoint)
 }
 
 
+// Function Widget_Map.Widget_Map_C.OnObjectRemovedFromMapDispatch__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFGActorRepresentation** ActorRespresentation           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Map_C::OnObjectRemovedFromMapDispatch__DelegateSignature(class UFGActorRepresentation** ActorRespresentation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.OnObjectRemovedFromMapDispatch__DelegateSignature");
+
+	UWidget_Map_C_OnObjectRemovedFromMapDispatch__DelegateSignature_Params params;
+	params.ActorRespresentation = ActorRespresentation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map.Widget_Map_C.OnObjectUpdatedOnMapDispatch__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidget_Map_C::OnObjectUpdatedOnMapDispatch__DelegateSignature(class UFGActorRepresentation** actorRepresentation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.OnObjectUpdatedOnMapDispatch__DelegateSignature");
+
+	UWidget_Map_C_OnObjectUpdatedOnMapDispatch__DelegateSignature_Params params;
+	params.actorRepresentation = actorRepresentation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Widget_Map.Widget_Map_C.OnObjectAddedToMapDispatch__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFGActorRepresentation** actorRepresentation            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget_MapObject_C**    WidgetMapObject                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidget_Map_C::OnObjectAddedToMapDispatch__DelegateSignature(class UFGActorRepresentation** actorRepresentation, class UWidget_MapObject_C** WidgetMapObject)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Widget_Map.Widget_Map_C.OnObjectAddedToMapDispatch__DelegateSignature");
+
+	UWidget_Map_C_OnObjectAddedToMapDispatch__DelegateSignature_Params params;
+	params.actorRepresentation = actorRepresentation;
+	params.WidgetMapObject = WidgetMapObject;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Widget_Map.Widget_Map_C.ZoomChanged__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWidget_Map_C::ZoomChanged__DelegateSignature()
 {

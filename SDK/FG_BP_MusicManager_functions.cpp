@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MusicManager.BP_MusicManager_C.OnPlayerNearBaseChanged
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // bool*                          isNear                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UBP_MusicManager_C::OnPlayerNearBaseChanged(bool* isNear)
 
 
 // Function BP_MusicManager.BP_MusicManager_C.OnPlayerEnteredArea
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UClass**                 mapArea                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -53,7 +53,7 @@ void UBP_MusicManager_C::OnPlayerEnteredArea(class UClass** mapArea)
 
 
 // Function BP_MusicManager.BP_MusicManager_C.NotifyPostLoadMap
-// ()
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UWorld**                 loadedWorld                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AWorldSettings**         WorldSettings                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -75,7 +75,7 @@ void UBP_MusicManager_C::NotifyPostLoadMap(class UWorld** loadedWorld, class AWo
 
 
 // Function BP_MusicManager.BP_MusicManager_C.Play
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MusicManager_C::Play()
 {
@@ -92,7 +92,7 @@ void UBP_MusicManager_C::Play()
 
 
 // Function BP_MusicManager.BP_MusicManager_C.Pause
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MusicManager_C::Pause()
 {
@@ -109,7 +109,7 @@ void UBP_MusicManager_C::Pause()
 
 
 // Function BP_MusicManager.BP_MusicManager_C.Stop
-// ()
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MusicManager_C::Stop()
 {
@@ -126,11 +126,11 @@ void UBP_MusicManager_C::Stop()
 
 
 // Function BP_MusicManager.BP_MusicManager_C.ExecuteUbergraph_BP_MusicManager
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MusicManager_C::ExecuteUbergraph_BP_MusicManager(int EntryPoint)
+void UBP_MusicManager_C::ExecuteUbergraph_BP_MusicManager(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MusicManager.BP_MusicManager_C.ExecuteUbergraph_BP_MusicManager");
 

@@ -14,6 +14,13 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_GameUI.BP_GameUI_C.PopWidget
+struct UBP_GameUI_C_PopWidget_Params
+{
+	class UFGInteractWidget**                          WidgetToRemove;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_GameUI.BP_GameUI_C.OnPreviewKeyDown
 struct UBP_GameUI_C_OnPreviewKeyDown_Params
 {
@@ -41,7 +48,7 @@ struct UBP_GameUI_C_GetChildUIVisibility_Params
 // Function BP_GameUI.BP_GameUI_C.PrePopWidget
 struct UBP_GameUI_C_PrePopWidget_Params
 {
-	class UFGInteractWidget*                           WidgetBeingRemoved;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInteractWidget**                          WidgetBeingRemoved;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.ShowTutorialHint
@@ -49,8 +56,8 @@ struct UBP_GameUI_C_ShowTutorialHint_Params
 {
 };
 
-// Function BP_GameUI.BP_GameUI_C.GetFGHUD
-struct UBP_GameUI_C_GetFGHUD_Params
+// Function BP_GameUI.BP_GameUI_C.GetFGHud
+struct UBP_GameUI_C_GetFGHud_Params
 {
 	class AFGHUD*                                      HUD;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -58,38 +65,33 @@ struct UBP_GameUI_C_GetFGHUD_Params
 // Function BP_GameUI.BP_GameUI_C.SetPrototypeCameraVisibility
 struct UBP_GameUI_C_SetPrototypeCameraVisibility_Params
 {
-	bool                                               New_Visibility;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              New_Visibility;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.SetPrototypeVisibility
 struct UBP_GameUI_C_SetPrototypeVisibility_Params
 {
-	bool                                               NewVisibility;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              NewVisibility;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.OnInventorySlotStackMove
 struct UBP_GameUI_C_OnInventorySlotStackMove_Params
 {
-	class UWidget_InventorySlot_C*                     InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TEnumAsByte<EInteractionDirection>                 InteractionDirection;                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget_InventorySlot_C**                    InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TEnumAsByte<EInteractionDirection>*                InteractionDirection;                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.CreateAddOnPlayerInventory
 struct UBP_GameUI_C_CreateAddOnPlayerInventory_Params
 {
-	class UPanelWidget*                                Container;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPanelWidget**                               Container;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_PlayerInventoryAddon_C*              CachedPlayerInventoryAddon;                               // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.IsChatWindowVisible
 struct UBP_GameUI_C_IsChatWindowVisible_Params
 {
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BP_GameUI.BP_GameUI_C.PlayAudioMessage
-struct UBP_GameUI_C_PlayAudioMessage_Params
-{
-	class UClass*                                      MessageClass;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.GetUIVisibility
@@ -101,7 +103,7 @@ struct UBP_GameUI_C_GetUIVisibility_Params
 // Function BP_GameUI.BP_GameUI_C.GetEquipmentHUDParent
 struct UBP_GameUI_C_GetEquipmentHUDParent_Params
 {
-	EEquipmentSlot                                     slotType;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	EEquipmentSlot*                                    SlotType;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UOverlay*                                    overlayParent;                                            // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
@@ -139,7 +141,7 @@ struct UBP_GameUI_C_GetSchematicPopupVisibility_Params
 // Function BP_GameUI.BP_GameUI_C.AddMessageNotification
 struct UBP_GameUI_C_AddMessageNotification_Params
 {
-	class UClass*                                      newMessage;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     newMessage;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.GetItemDropLocation
@@ -186,41 +188,23 @@ struct UBP_GameUI_C_PopAllWidgets_Internal_Params
 {
 };
 
-// Function BP_GameUI.BP_GameUI_C.FindWidgetByClass
-struct UBP_GameUI_C_FindWidgetByClass_Params
-{
-	class UClass*                                      WidgetClass;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UFGInteractWidget*                           Widget;                                                   // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
 // Function BP_GameUI.BP_GameUI_C.DoesWidgetExist
 struct UBP_GameUI_C_DoesWidgetExist_Params
 {
-	class UClass*                                      WidgetClass;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     WidgetClass;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               doesExist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.FindWidgetToPop
 struct UBP_GameUI_C_FindWidgetToPop_Params
 {
-	class UFGInteractWidget*                           WidgetToPop;                                              // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function BP_GameUI.BP_GameUI_C.PopWidget
-struct UBP_GameUI_C_PopWidget_Params
-{
-	class UFGInteractWidget*                           widgetToRemove;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInteractWidget*                           widgetToPop;                                              // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.GetPlayerInteractionVisibility
 struct UBP_GameUI_C_GetPlayerInteractionVisibility_Params
 {
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BP_GameUI.BP_GameUI_C.PopAllWidgets
-struct UBP_GameUI_C_PopAllWidgets_Params
-{
 };
 
 // Function BP_GameUI.BP_GameUI_C.ClosePopup
@@ -236,13 +220,12 @@ struct UBP_GameUI_C_Destruct_Params
 // Function BP_GameUI.BP_GameUI_C.Play Landed Effect
 struct UBP_GameUI_C_Play_Landed_Effect_Params
 {
-	float                                              Velocity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Velocity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_GameUI.BP_GameUI_C.PushWidget
-struct UBP_GameUI_C_PushWidget_Params
+// Function BP_GameUI.BP_GameUI_C.PopAllWidgets
+struct UBP_GameUI_C_PopAllWidgets_Params
 {
-	class UFGInteractWidget*                           Widget;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function BP_GameUI.BP_GameUI_C.ReceivedMessage
@@ -265,7 +248,7 @@ struct UBP_GameUI_C_AddIntroTutorialInfo_Params
 // Function BP_GameUI.BP_GameUI_C.UpdateTutorialInfo
 struct UBP_GameUI_C_UpdateTutorialInfo_Params
 {
-	struct FTutorialHintData                           hintData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FTutorialHintData*                          hintData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_GameUI.BP_GameUI_C.HandleFocusLost
@@ -310,13 +293,13 @@ struct UBP_GameUI_C_ClearHintOnTutorialStepCompleted_Params
 {
 };
 
-// Function BP_GameUI.BP_GameUI_C.ResetInput
-struct UBP_GameUI_C_ResetInput_Params
+// Function BP_GameUI.BP_GameUI_C.ShowRespawnMessage
+struct UBP_GameUI_C_ShowRespawnMessage_Params
 {
 };
 
-// Function BP_GameUI.BP_GameUI_C.ShowRespawnMessage
-struct UBP_GameUI_C_ShowRespawnMessage_Params
+// Function BP_GameUI.BP_GameUI_C.ResetInput
+struct UBP_GameUI_C_ResetInput_Params
 {
 };
 
@@ -342,10 +325,53 @@ struct UBP_GameUI_C_ForceStopRadiationUI_Params
 {
 };
 
+// Function BP_GameUI.BP_GameUI_C.StopSubtitle_dep
+struct UBP_GameUI_C_StopSubtitle_dep_Params
+{
+	class AActor**                                     Instigator;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function BP_GameUI.BP_GameUI_C.PushWidget
+struct UBP_GameUI_C_PushWidget_Params
+{
+	class UFGInteractWidget**                          Widget;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function BP_GameUI.BP_GameUI_C.ShowDirectionalSubtitle
+struct UBP_GameUI_C_ShowDirectionalSubtitle_Params
+{
+	struct FText*                                      Subtitle;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class AActor**                                     Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bUseDuration;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_GameUI.BP_GameUI_C.StopSubtitle
+struct UBP_GameUI_C_StopSubtitle_Params
+{
+	class AActor**                                     Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_GameUI.BP_GameUI_C.EventUpdateHUDScaling
+struct UBP_GameUI_C_EventUpdateHUDScaling_Params
+{
+};
+
+// Function BP_GameUI.BP_GameUI_C.PlayAudioMessage
+struct UBP_GameUI_C_PlayAudioMessage_Params
+{
+	class UClass**                                     MessageClass;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_GameUI.BP_GameUI_C.OnResumeGame
+struct UBP_GameUI_C_OnResumeGame_Params
+{
+};
+
 // Function BP_GameUI.BP_GameUI_C.ExecuteUbergraph_BP_GameUI
 struct UBP_GameUI_C_ExecuteUbergraph_BP_GameUI_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

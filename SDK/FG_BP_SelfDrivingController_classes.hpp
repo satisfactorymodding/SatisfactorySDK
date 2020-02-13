@@ -29,10 +29,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void OnPossess(class APawn** PossessedPawn);
-	void OnUnpossess(class APawn** UnpossessedPawn);
-	void ExecuteUbergraph_BP_SelfDrivingController(int EntryPoint);
+	void ReceivePossess(class APawn** PossessedPawn);
+	void ReceiveUnPossess(class APawn** UnpossessedPawn);
+	void ExecuteUbergraph_BP_SelfDrivingController(int* EntryPoint);
 };
 
 

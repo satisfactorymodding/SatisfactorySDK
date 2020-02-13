@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UWidget_ColorPicker_EditPreset_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.BndEvt__mEditPresetAccept_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_EditPreset_C::BndEvt__mEditPresetAccept_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
@@ -50,7 +50,7 @@ void UWidget_ColorPicker_EditPreset_C::BndEvt__mEditPresetAccept_K2Node_Componen
 
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.BndEvt__mEditPresetCanel_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_EditPreset_C::BndEvt__mEditPresetCanel_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
@@ -67,11 +67,11 @@ void UWidget_ColorPicker_EditPreset_C::BndEvt__mEditPresetCanel_K2Node_Component
 
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.OnPopupConfirm
-// ()
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ConfirmClicked                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          ConfirmClicked                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_EditPreset_C::OnPopupConfirm(bool ConfirmClicked)
+void UWidget_ColorPicker_EditPreset_C::OnPopupConfirm(bool* ConfirmClicked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.OnPopupConfirm");
 
@@ -87,7 +87,7 @@ void UWidget_ColorPicker_EditPreset_C::OnPopupConfirm(bool ConfirmClicked)
 
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.BndEvt__mPrimaryColorPicker_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_EditPreset_C::BndEvt__mPrimaryColorPicker_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature()
 {
@@ -104,7 +104,7 @@ void UWidget_ColorPicker_EditPreset_C::BndEvt__mPrimaryColorPicker_K2Node_Compon
 
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.BndEvt__mSecondaryColorPicker_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
-// ()
+// (BlueprintEvent)
 
 void UWidget_ColorPicker_EditPreset_C::BndEvt__mSecondaryColorPicker_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature()
 {
@@ -121,11 +121,11 @@ void UWidget_ColorPicker_EditPreset_C::BndEvt__mSecondaryColorPicker_K2Node_Comp
 
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.ExecuteUbergraph_Widget_ColorPicker_EditPreset
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_EditPreset_C::ExecuteUbergraph_Widget_ColorPicker_EditPreset(int EntryPoint)
+void UWidget_ColorPicker_EditPreset_C::ExecuteUbergraph_Widget_ColorPicker_EditPreset(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.ExecuteUbergraph_Widget_ColorPicker_EditPreset");
 
@@ -141,12 +141,12 @@ void UWidget_ColorPicker_EditPreset_C::ExecuteUbergraph_Widget_ColorPicker_EditP
 
 
 // Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.OnAccept__DelegateSignature
-// ()
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            PrimaryColor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            SecondaryColor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           PrimaryColor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           SecondaryColor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_ColorPicker_EditPreset_C::OnAccept__DelegateSignature(const struct FLinearColor& PrimaryColor, const struct FLinearColor& SecondaryColor)
+void UWidget_ColorPicker_EditPreset_C::OnAccept__DelegateSignature(struct FLinearColor* PrimaryColor, struct FLinearColor* SecondaryColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_ColorPicker_EditPreset.Widget_ColorPicker_EditPreset_C.OnAccept__DelegateSignature");
 

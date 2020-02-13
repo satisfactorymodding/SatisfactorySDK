@@ -30,10 +30,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void ReceiveTick(float* DeltaSeconds);
 	void PlayAttachEffects3P();
-	void ExecuteUbergraph_Attach_GasMask(int EntryPoint);
+	void ExecuteUbergraph_Attach_GasMask(int* EntryPoint);
 };
 
 

@@ -22,7 +22,7 @@ struct UWidget_SchematicList_C_GetTradingPostWidget_Params
 // Function Widget_SchematicList.Widget_SchematicList_C.PopulateSchematicForTier
 struct UWidget_SchematicList_C_PopulateSchematicForTier_Params
 {
-	int                                                inTier;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               inTier;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<class UClass*>                              schematicsInRing;                                         // (Parm, OutParm, ZeroConstructor)
 };
 
@@ -44,7 +44,7 @@ struct UWidget_SchematicList_C_Destruct_Params
 // Function Widget_SchematicList.Widget_SchematicList_C.ExecuteUbergraph_Widget_SchematicList
 struct UWidget_SchematicList_C_ExecuteUbergraph_Widget_SchematicList_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

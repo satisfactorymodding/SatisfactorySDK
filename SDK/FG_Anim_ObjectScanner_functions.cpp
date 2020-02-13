@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Anim_ObjectScanner.Anim_ObjectScanner_C.ExecuteUbergraph_Anim_ObjectScanner
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAnim_ObjectScanner_C::ExecuteUbergraph_Anim_ObjectScanner(int EntryPoint)
+void UAnim_ObjectScanner_C::ExecuteUbergraph_Anim_ObjectScanner(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Anim_ObjectScanner.Anim_ObjectScanner_C.ExecuteUbergraph_Anim_ObjectScanner");
 

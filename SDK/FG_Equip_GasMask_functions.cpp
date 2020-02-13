@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Equip_GasMask.Equip_GasMask_C.EnablePostProcessing
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           mEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          mEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_GasMask_C::EnablePostProcessing(bool mEnabled)
+void AEquip_GasMask_C::EnablePostProcessing(bool* mEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_GasMask.Equip_GasMask_C.EnablePostProcessing");
 
@@ -33,23 +33,23 @@ void AEquip_GasMask_C::EnablePostProcessing(bool mEnabled)
 
 
 // Function Equip_GasMask.Equip_GasMask_C.AdjustDamage
-// ()
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float*                         damageAmount                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UDamageType**            DamageType                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AController**            instigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor**                 damageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AController**            InstigatedBy                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AEquip_GasMask_C::AdjustDamage(float* damageAmount, class UDamageType** DamageType, class AController** instigatedBy, class AActor** damageCauser)
+float AEquip_GasMask_C::AdjustDamage(float* damageAmount, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_GasMask.Equip_GasMask_C.AdjustDamage");
 
 	AEquip_GasMask_C_AdjustDamage_Params params;
 	params.damageAmount = damageAmount;
 	params.DamageType = DamageType;
-	params.instigatedBy = instigatedBy;
-	params.damageCauser = damageCauser;
+	params.InstigatedBy = InstigatedBy;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -61,25 +61,8 @@ float AEquip_GasMask_C::AdjustDamage(float* damageAmount, class UDamageType** Da
 }
 
 
-// Function Equip_GasMask.Equip_GasMask_C.UserConstructionScript
-// ()
-
-void AEquip_GasMask_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Equip_GasMask.Equip_GasMask_C.UserConstructionScript");
-
-	AEquip_GasMask_C_UserConstructionScript_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Equip_GasMask.Equip_GasMask_C.WasUnEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_GasMask_C::WasUnEquipped()
 {
@@ -96,7 +79,7 @@ void AEquip_GasMask_C::WasUnEquipped()
 
 
 // Function Equip_GasMask.Equip_GasMask_C.ReceiveTick
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -116,7 +99,7 @@ void AEquip_GasMask_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Equip_GasMask.Equip_GasMask_C.WasEquipped
-// ()
+// (Event, Protected, BlueprintEvent)
 
 void AEquip_GasMask_C::WasEquipped()
 {
@@ -133,11 +116,11 @@ void AEquip_GasMask_C::WasEquipped()
 
 
 // Function Equip_GasMask.Equip_GasMask_C.ExecuteUbergraph_Equip_GasMask
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AEquip_GasMask_C::ExecuteUbergraph_Equip_GasMask(int EntryPoint)
+void AEquip_GasMask_C::ExecuteUbergraph_Equip_GasMask(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equip_GasMask.Equip_GasMask_C.ExecuteUbergraph_Equip_GasMask");
 

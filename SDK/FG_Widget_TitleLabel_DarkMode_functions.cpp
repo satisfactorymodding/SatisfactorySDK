@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.SetFicsItDriverText
-// ()
+// (Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UWidget_TitleLabel_DarkMode_C::SetFicsItDriverText()
 {
@@ -30,11 +30,11 @@ void UWidget_TitleLabel_DarkMode_C::SetFicsItDriverText()
 
 
 // Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.SetTitle
-// ()
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText*                  Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TitleLabel_DarkMode_C::SetTitle(const struct FText& Title)
+void UWidget_TitleLabel_DarkMode_C::SetTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.SetTitle");
 
@@ -50,7 +50,7 @@ void UWidget_TitleLabel_DarkMode_C::SetTitle(const struct FText& Title)
 
 
 // Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.PreConstruct
-// ()
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool*                          IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,11 +70,11 @@ void UWidget_TitleLabel_DarkMode_C::PreConstruct(bool* IsDesignTime)
 
 
 // Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.ExecuteUbergraph_Widget_TitleLabel_DarkMode
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_TitleLabel_DarkMode_C::ExecuteUbergraph_Widget_TitleLabel_DarkMode(int EntryPoint)
+void UWidget_TitleLabel_DarkMode_C::ExecuteUbergraph_Widget_TitleLabel_DarkMode(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_TitleLabel_DarkMode.Widget_TitleLabel_DarkMode_C.ExecuteUbergraph_Widget_TitleLabel_DarkMode");
 

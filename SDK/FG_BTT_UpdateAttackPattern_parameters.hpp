@@ -24,7 +24,7 @@ struct UBTT_UpdateAttackPattern_C_ReceiveExecuteAI_Params
 // Function BTT_UpdateAttackPattern.BTT_UpdateAttackPattern_C.ExecuteUbergraph_BTT_UpdateAttackPattern
 struct UBTT_UpdateAttackPattern_C_ExecuteUbergraph_BTT_UpdateAttackPattern_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

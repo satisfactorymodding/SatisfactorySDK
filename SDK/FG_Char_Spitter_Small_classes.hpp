@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Char_Spitter_Small.Char_Spitter_Small_C
-// 0x000B (0x09C8 - 0x09BD)
+// 0x000B (0x09E8 - 0x09DD)
 class AChar_Spitter_Small_C : public AChar_Spitter_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x09BD(0x0003) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x09C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x09DD(0x0003) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x09E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -29,9 +29,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
 	void OnCurrentAggroTargetReplicated();
-	void ExecuteUbergraph_Char_Spitter_Small(int EntryPoint);
+	void ExecuteUbergraph_Char_Spitter_Small(int* EntryPoint);
 };
 
 

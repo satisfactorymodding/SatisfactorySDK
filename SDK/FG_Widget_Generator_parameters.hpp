@@ -14,21 +14,25 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Widget_Generator.Widget_Generator_C.UpdateFluidStats
+struct UWidget_Generator_C_UpdateFluidStats_Params
+{
+};
+
+// Function Widget_Generator.Widget_Generator_C.SetupInputs
+struct UWidget_Generator_C_SetupInputs_Params
+{
+};
+
 // Function Widget_Generator.Widget_Generator_C.OnReplicationDetailActorCreated
 struct UWidget_Generator_C_OnReplicationDetailActorCreated_Params
 {
-	class AActor*                                      ReplicationDetailActor;                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     ReplicationDetailActor;                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Generator.Widget_Generator_C.InitModule
 struct UWidget_Generator_C_InitModule_Params
 {
-};
-
-// Function Widget_Generator.Widget_Generator_C.InitNuclearGenerator
-struct UWidget_Generator_C_InitNuclearGenerator_Params
-{
-	class AFGBuildableGeneratorNuclear*                NuclearGenerator;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Generator.Widget_Generator_C.UpdateHeaderText
@@ -102,13 +106,6 @@ struct UWidget_Generator_C_Destruct_Params
 {
 };
 
-// Function Widget_Generator.Widget_Generator_C.Tick
-struct UWidget_Generator_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Widget_Generator.Widget_Generator_C.BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_1_OnStandbyClicked__DelegateSignature
 struct UWidget_Generator_C_BndEvt__Widget_StandbyButton_K2Node_ComponentBoundEvent_1_OnStandbyClicked__DelegateSignature_Params
 {
@@ -132,13 +129,19 @@ struct UWidget_Generator_C_SpawnSmoke_Params
 // Function Widget_Generator.Widget_Generator_C.OnProductionChanged
 struct UWidget_Generator_C_OnProductionChanged_Params
 {
-	bool                                               State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              State;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Widget_Generator.Widget_Generator_C.OnCustomTick
+struct UWidget_Generator_C_OnCustomTick_Params
+{
+	float*                                             UpdateTime;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Widget_Generator.Widget_Generator_C.ExecuteUbergraph_Widget_Generator
 struct UWidget_Generator_C_ExecuteUbergraph_Widget_Generator_Params
 {
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

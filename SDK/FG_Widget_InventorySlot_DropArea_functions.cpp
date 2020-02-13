@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Widget_InventorySlot_DropArea.Widget_InventorySlot_DropArea_C.OnDropInventorySlot
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_InventorySlot_C* InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventorySlot_DropArea_C::OnDropInventorySlot(class UWidget_InventorySlot_C* InventorySlot, bool* Result)
+void UWidget_InventorySlot_DropArea_C::OnDropInventorySlot(class UWidget_InventorySlot_C** InventorySlot, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventorySlot_DropArea.Widget_InventorySlot_DropArea_C.OnDropInventorySlot");
 
@@ -37,13 +37,13 @@ void UWidget_InventorySlot_DropArea_C::OnDropInventorySlot(class UWidget_Invento
 
 
 // Function Widget_InventorySlot_DropArea.Widget_InventorySlot_DropArea_C.FindCorrectSlot
-// ()
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UWidget_InventorySlot_C* payload                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_InventorySlot_C** payload                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UWidget_InventorySlot_C* InventorySlot                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_InventorySlot_DropArea_C::FindCorrectSlot(class UWidget_InventorySlot_C* payload, class UWidget_InventorySlot_C** InventorySlot, bool* Success)
+void UWidget_InventorySlot_DropArea_C::FindCorrectSlot(class UWidget_InventorySlot_C** payload, class UWidget_InventorySlot_C** InventorySlot, bool* success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_InventorySlot_DropArea.Widget_InventorySlot_DropArea_C.FindCorrectSlot");
 
@@ -58,13 +58,13 @@ void UWidget_InventorySlot_DropArea_C::FindCorrectSlot(class UWidget_InventorySl
 
 	if (InventorySlot != nullptr)
 		*InventorySlot = params.InventorySlot;
-	if (Success != nullptr)
-		*Success = params.Success;
+	if (success != nullptr)
+		*success = params.success;
 }
 
 
 // Function Widget_InventorySlot_DropArea.Widget_InventorySlot_DropArea_C.OnDrop
-// ()
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent*          PointerEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)

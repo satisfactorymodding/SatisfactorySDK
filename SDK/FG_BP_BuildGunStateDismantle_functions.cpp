@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.TickState
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UBP_BuildGunStateDismantle_C::TickState(float* DeltaTime)
 
 
 // Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.SecondaryFire
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildGunStateDismantle_C::SecondaryFire()
 {
@@ -50,7 +50,7 @@ void UBP_BuildGunStateDismantle_C::SecondaryFire()
 
 
 // Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.BeginState
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildGunStateDismantle_C::BeginState()
 {
@@ -67,7 +67,7 @@ void UBP_BuildGunStateDismantle_C::BeginState()
 
 
 // Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.EndState
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildGunStateDismantle_C::EndState()
 {
@@ -84,7 +84,7 @@ void UBP_BuildGunStateDismantle_C::EndState()
 
 
 // Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.OnStartDismantle
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildGunStateDismantle_C::OnStartDismantle()
 {
@@ -101,7 +101,7 @@ void UBP_BuildGunStateDismantle_C::OnStartDismantle()
 
 
 // Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.OnStopDismantle
-// ()
+// (Event, Public, BlueprintEvent)
 
 void UBP_BuildGunStateDismantle_C::OnStopDismantle()
 {
@@ -118,11 +118,11 @@ void UBP_BuildGunStateDismantle_C::OnStopDismantle()
 
 
 // Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.ExecuteUbergraph_BP_BuildGunStateDismantle
-// ()
+// (Final)
 // Parameters:
-// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int*                           EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_BuildGunStateDismantle_C::ExecuteUbergraph_BP_BuildGunStateDismantle(int EntryPoint)
+void UBP_BuildGunStateDismantle_C::ExecuteUbergraph_BP_BuildGunStateDismantle(int* EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BuildGunStateDismantle.BP_BuildGunStateDismantle_C.ExecuteUbergraph_BP_BuildGunStateDismantle");
 
