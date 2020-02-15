@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_UMG_classes.hpp"
 #include "FG_MAMTree_Vector2D_Array_classes.hpp"
+#include "FG_UMG_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 
 namespace SDK

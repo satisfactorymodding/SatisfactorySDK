@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_FUnlockDataStruct_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
+#include "FG_FUnlockDataStruct_classes.hpp"
 
 namespace SDK
 {

@@ -8,11 +8,11 @@
 
 #include "FG_Basic.hpp"
 #include "FG_FactoryGame_classes.hpp"
-#include "FG_LandSoundMapStruct_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
 #include "FG_FootstepSoundMapStruct_classes.hpp"
 #include "FG_AnimGraphRuntime_classes.hpp"
+#include "FG_LandSoundMapStruct_classes.hpp"
 #include "FG_EVehicleAnimations_classes.hpp"
 
 namespace SDK

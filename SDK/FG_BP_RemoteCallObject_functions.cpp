@@ -63,16 +63,16 @@ void UBP_RemoteCallObject_C::Server_SetRecipeOnManufacturingProxy(class AFGBuild
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SplitResource
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int*                           sourceIdx                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int*                           numResourceToMove              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::Server_SplitResource(class UFGInventoryComponent** InventoryComponent, int* sourceIdx, int* numResourceToMove)
+void UBP_RemoteCallObject_C::Server_SplitResource(class UFGInventoryComponent** inventoryComponent, int* sourceIdx, int* numResourceToMove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SplitResource");
 
 	UBP_RemoteCallObject_C_Server_SplitResource_Params params;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 	params.sourceIdx = sourceIdx;
 	params.numResourceToMove = numResourceToMove;
 
@@ -244,17 +244,17 @@ void UBP_RemoteCallObject_C::ServerPickUpBeacon(class AFGBeacon** Beacon, class 
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DropItem
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int*                           sourceIdx                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                SpawnLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator*               spawnRotation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::Server_DropItem(class UFGInventoryComponent** InventoryComponent, int* sourceIdx, struct FVector* SpawnLocation, struct FRotator* spawnRotation)
+void UBP_RemoteCallObject_C::Server_DropItem(class UFGInventoryComponent** inventoryComponent, int* sourceIdx, struct FVector* SpawnLocation, struct FRotator* spawnRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DropItem");
 
 	UBP_RemoteCallObject_C_Server_DropItem_Params params;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 	params.sourceIdx = sourceIdx;
 	params.SpawnLocation = SpawnLocation;
 	params.spawnRotation = spawnRotation;
@@ -1042,14 +1042,14 @@ void UBP_RemoteCallObject_C::Server_SetSignWallData(class AFGBuildableSignWall**
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SortInventory
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::Server_SortInventory(class UFGInventoryComponent** InventoryComponent)
+void UBP_RemoteCallObject_C::Server_SortInventory(class UFGInventoryComponent** inventoryComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_SortInventory");
 
 	UBP_RemoteCallObject_C_Server_SortInventory_Params params;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1062,17 +1062,17 @@ void UBP_RemoteCallObject_C::Server_SortInventory(class UFGInventoryComponent** 
 // Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DropItemIntoStack
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int*                           sourceIdx                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                SpawnLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator*               spawnRotation                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_RemoteCallObject_C::Server_DropItemIntoStack(class UFGInventoryComponent** InventoryComponent, int* sourceIdx, struct FVector* SpawnLocation, struct FRotator* spawnRotation)
+void UBP_RemoteCallObject_C::Server_DropItemIntoStack(class UFGInventoryComponent** inventoryComponent, int* sourceIdx, struct FVector* SpawnLocation, struct FRotator* spawnRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RemoteCallObject.BP_RemoteCallObject_C.Server_DropItemIntoStack");
 
 	UBP_RemoteCallObject_C_Server_DropItemIntoStack_Params params;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 	params.sourceIdx = sourceIdx;
 	params.SpawnLocation = SpawnLocation;
 	params.spawnRotation = spawnRotation;

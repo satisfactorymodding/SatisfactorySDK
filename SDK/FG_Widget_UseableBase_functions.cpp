@@ -66,16 +66,16 @@ struct FEventReply UWidget_UseableBase_C::OnKeyUp(struct FGeometry* MyGeometry, 
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget_InventorySlot_C** InventorySlot                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWidget_UseableBase_C::DropInventoryStackOnInventoryComponent(class UWidget_InventorySlot_C** InventorySlot, class UFGInventoryComponent** InventoryComponent, bool* Result)
+void UWidget_UseableBase_C::DropInventoryStackOnInventoryComponent(class UWidget_InventorySlot_C** InventorySlot, class UFGInventoryComponent** inventoryComponent, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.DropInventoryStackOnInventoryComponent");
 
 	UWidget_UseableBase_C_DropInventoryStackOnInventoryComponent_Params params;
 	params.InventorySlot = InventorySlot;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 
 	auto flags = fn->FunctionFlags;
 
@@ -117,14 +117,14 @@ void UWidget_UseableBase_C::DropInventoryStackOnInventoryWidget(class UWidget_In
 // Function Widget_UseableBase.Widget_UseableBase_C.InitInventoryWidgetCallbacks
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget_Inventory_C**    InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget_Inventory_C**    inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_UseableBase_C::InitInventoryWidgetCallbacks(class UWidget_Inventory_C** InventoryComponent)
+void UWidget_UseableBase_C::InitInventoryWidgetCallbacks(class UWidget_Inventory_C** inventoryComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_UseableBase.Widget_UseableBase_C.InitInventoryWidgetCallbacks");
 
 	UWidget_UseableBase_C_InitInventoryWidgetCallbacks_Params params;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 
 	auto flags = fn->FunctionFlags;
 

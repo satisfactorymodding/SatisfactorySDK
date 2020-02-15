@@ -37,9 +37,9 @@ public:
 
 	struct FEventReply OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent);
 	struct FEventReply OnKeyUp(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent);
-	void DropInventoryStackOnInventoryComponent(class UWidget_InventorySlot_C** InventorySlot, class UFGInventoryComponent** InventoryComponent, bool* Result);
+	void DropInventoryStackOnInventoryComponent(class UWidget_InventorySlot_C** InventorySlot, class UFGInventoryComponent** inventoryComponent, bool* Result);
 	void DropInventoryStackOnInventoryWidget(class UWidget_InventorySlot_C** InventorySlot, class UWidget_Inventory_C** WidgetInventory, bool* Result);
-	void InitInventoryWidgetCallbacks(class UWidget_Inventory_C** InventoryComponent);
+	void InitInventoryWidgetCallbacks(class UWidget_Inventory_C** inventoryComponent);
 	void OnInventorySlotStackMove(class UWidget_InventorySlot_C** InventorySlot);
 	void DropInventorySlotStack(class UWidget_InventorySlot_C** InventorySlot, bool* WasStackMoved);
 	void SetInventoryVisibility(bool* visible);

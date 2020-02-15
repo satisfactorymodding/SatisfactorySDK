@@ -190,18 +190,18 @@ void UWidget_PlayerInventory_C::Cleanup()
 // Function Widget_PlayerInventory.Widget_PlayerInventory_C.SetInventoryComponents
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UFGInventoryComponent**  arms                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UFGInventoryComponent**  Back                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UFGInventoryComponent**  head                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UFGInventoryComponent**  trash                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_PlayerInventory_C::SetInventoryComponents(class UFGInventoryComponent** InventoryComponent, class UFGInventoryComponent** arms, class UFGInventoryComponent** Back, class UFGInventoryComponent** head, class UFGInventoryComponent** trash)
+void UWidget_PlayerInventory_C::SetInventoryComponents(class UFGInventoryComponent** inventoryComponent, class UFGInventoryComponent** arms, class UFGInventoryComponent** Back, class UFGInventoryComponent** head, class UFGInventoryComponent** trash)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerInventory.Widget_PlayerInventory_C.SetInventoryComponents");
 
 	UWidget_PlayerInventory_C_SetInventoryComponents_Params params;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 	params.arms = arms;
 	params.Back = Back;
 	params.head = head;

@@ -126,8 +126,8 @@ public:
 	}
 
 private:
-	int Index;
 	FNameEntry* HashNext;
+	int Index;
 
 	union
 	{
@@ -157,7 +157,7 @@ public:
 private:
 	enum {
 		ElementsPerChunk = 16 * 1024,
-		ChunkTableSize = (2 * 1024 * 1024 + ElementsPerChunk - 1) / ElementsPerChunk
+		ChunkTableSize = (4 * 1024 * 1024 + ElementsPerChunk - 1) / ElementsPerChunk
 	};
 
 	inline FNameEntry const* const* GetItemPtr(int Index) const

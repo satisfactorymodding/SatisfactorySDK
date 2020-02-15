@@ -7,10 +7,10 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_GeometryCollectionSimulationCore_classes.hpp"
-#include "FG_GeometryCollectionCore_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_GeometryCollectionCore_classes.hpp"
+#include "FG_GeometryCollectionSimulationCore_classes.hpp"
 
 namespace SDK
 {

@@ -7,8 +7,8 @@
 #endif
 
 #include "FG_Basic.hpp"
-#include "FG_FUnlockDataStruct_classes.hpp"
 #include "FG_Engine_classes.hpp"
+#include "FG_FUnlockDataStruct_classes.hpp"
 #include "FG_FactoryGame_classes.hpp"
 
 namespace SDK

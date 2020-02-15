@@ -17,7 +17,7 @@ namespace SDK
 // Function BPW_ResourceSinkCoupon.BPW_ResourceSinkCoupon_C.InitInventorySlot
 struct UBPW_ResourceSinkCoupon_C_InitInventorySlot_Params
 {
-	class UFGInventoryComponent**                      InventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      inventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function BPW_ResourceSinkCoupon.BPW_ResourceSinkCoupon_C.PrintCoupon

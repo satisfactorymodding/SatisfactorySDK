@@ -49,7 +49,7 @@ public:
 	}
 
 
-	void InitInventorySlot(class UFGInventoryComponent** InventoryComponent);
+	void InitInventorySlot(class UFGInventoryComponent** inventoryComponent);
 	void PrintCoupon();
 	float CurveLerp(class UCurveFloat** Curve, float* Start, float* End, float* Alpha);
 	void Lerp();

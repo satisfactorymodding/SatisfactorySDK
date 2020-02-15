@@ -31,7 +31,7 @@ public:
 
 	void GetRemainingCostForSchematic(class UClass** schematic, class UClass** ForItem, int* Cost);
 	void Server_SetRecipeOnManufacturingProxy(class AFGBuildableManufacturer** Manufacturer, class UClass** Recipe);
-	void Server_SplitResource(class UFGInventoryComponent** InventoryComponent, int* sourceIdx, int* numResourceToMove);
+	void Server_SplitResource(class UFGInventoryComponent** inventoryComponent, int* sourceIdx, int* numResourceToMove);
 	void Server_MoveItem(class UFGInventoryComponent** SourceComponent, class UFGInventoryComponent** destinationComponent, int* sourceIdx, int* destinationIdx);
 	void Server_MoveItemIfSpace(class UFGInventoryComponent** SourceComponent, int* sourceIdx, class UFGInventoryComponent** destinationComponent);
 	void ServerSetWorkingAtBench(class AFGPlayerController** PlayerWorking, class UFGWorkBench** ResearchMachine);
@@ -39,7 +39,7 @@ public:
 	void ServerExtractResourceToPlayer(class AFGResourceNode** resourceNode, class AFGCharacterPlayer** Player, int* amount);
 	void Server_RemoveAllFromIndex(class UFGInventoryComponent** SourceComponent, int* sourceIdx);
 	void ServerPickUpBeacon(class AFGBeacon** Beacon, class AFGCharacterPlayer** toPlayer);
-	void Server_DropItem(class UFGInventoryComponent** InventoryComponent, int* sourceIdx, struct FVector* SpawnLocation, struct FRotator* spawnRotation);
+	void Server_DropItem(class UFGInventoryComponent** inventoryComponent, int* sourceIdx, struct FVector* SpawnLocation, struct FRotator* spawnRotation);
 	void Server_RemoveIngredientsAndAwardRewards(class UFGWorkBench** Workbench, class UFGInventoryComponent** inventory, class UClass** Recipe);
 	void ServerSetPendingPotentialOnFactory(class AFGBuildableFactory** FACTORY, float* newPotential);
 	void ServerOpenVehicleTrunk(class AFGWheeledVehicle** inVehicle, class AFGCharacterPlayer** inPlayer);
@@ -75,8 +75,8 @@ public:
 	void ServerSetWaitTime(class AFGTargetPoint** inTargetPoint, float* newWaitTime);
 	void Server_SetStandaloneSignData(TScriptInterface<class UFGSignInterface>* SignInterface, struct FSignData* SignData, bool* Update);
 	void Server_SetSignWallData(class AFGBuildableSignWall** SignWall, struct FSignWallData* SignData, bool* Update);
-	void Server_SortInventory(class UFGInventoryComponent** InventoryComponent);
-	void Server_DropItemIntoStack(class UFGInventoryComponent** InventoryComponent, int* sourceIdx, struct FVector* SpawnLocation, struct FRotator* spawnRotation);
+	void Server_SortInventory(class UFGInventoryComponent** inventoryComponent);
+	void Server_DropItemIntoStack(class UFGInventoryComponent** inventoryComponent, int* sourceIdx, struct FVector* SpawnLocation, struct FRotator* spawnRotation);
 	void Server_SetLoadModeOnTrainCargoPlatform(class AFGBuildableTrainPlatformCargo** CargoPlatform, bool* isInLoadMode);
 	void Server_SetTimeTableStops(class AFGRailroadTimeTable** TimeTable, TArray<struct FTimeTableStop>* stops);
 	void Server_SetTimeTableCurrentStop(class AFGRailroadTimeTable** TimeTable, int* Index);

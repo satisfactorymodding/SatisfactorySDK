@@ -10,8 +10,8 @@
 #include "FG_FactoryGame_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
-#include "FG_AnimGraphRuntime_classes.hpp"
 #include "FG_EnemyFootstepStruct_classes.hpp"
+#include "FG_AnimGraphRuntime_classes.hpp"
 
 namespace SDK
 {

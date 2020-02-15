@@ -34,7 +34,7 @@ struct UWidget_UseableBase_C_OnKeyUp_Params
 struct UWidget_UseableBase_C_DropInventoryStackOnInventoryComponent_Params
 {
 	class UWidget_InventorySlot_C**                    InventorySlot;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UFGInventoryComponent**                      InventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UFGInventoryComponent**                      inventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -49,7 +49,7 @@ struct UWidget_UseableBase_C_DropInventoryStackOnInventoryWidget_Params
 // Function Widget_UseableBase.Widget_UseableBase_C.InitInventoryWidgetCallbacks
 struct UWidget_UseableBase_C_InitInventoryWidgetCallbacks_Params
 {
-	class UWidget_Inventory_C**                        InventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWidget_Inventory_C**                        inventoryComponent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Widget_UseableBase.Widget_UseableBase_C.OnInventorySlotStackMove

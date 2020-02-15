@@ -51,7 +51,7 @@ public:
 	void SetupRelevantInventory(TArray<class UClass*>* mRelevantClasses);
 	void UpdateRelevantInventory();
 	void OnInventorySlotMoveStack(class UWidget_InventorySlot_C** InventorySlotSender);
-	void SetInventoryComponents(class UFGInventoryComponent** InventoryComponent, class UFGInventoryComponent** trash);
+	void SetInventoryComponents(class UFGInventoryComponent** inventoryComponent, class UFGInventoryComponent** trash);
 	void Construct();
 	void BndEvt__mSortButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
 	void OnUpdateRelevantInventory(class UClass** ItemClass, int* numAdded);

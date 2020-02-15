@@ -15,14 +15,14 @@ namespace SDK
 // Function BPW_ResourceSinkCoupon.BPW_ResourceSinkCoupon_C.InitInventorySlot
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPW_ResourceSinkCoupon_C::InitInventorySlot(class UFGInventoryComponent** InventoryComponent)
+void UBPW_ResourceSinkCoupon_C::InitInventorySlot(class UFGInventoryComponent** inventoryComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ResourceSinkCoupon.BPW_ResourceSinkCoupon_C.InitInventorySlot");
 
 	UBPW_ResourceSinkCoupon_C_InitInventorySlot_Params params;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 
 	auto flags = fn->FunctionFlags;
 

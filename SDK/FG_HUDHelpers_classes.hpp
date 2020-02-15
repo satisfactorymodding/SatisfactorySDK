@@ -40,7 +40,7 @@ public:
 	void STATIC_SetSliderSteps(class USlider** mSlider, int* mSteps, class UObject** __WorldContext);
 	void STATIC_GetScanningObjectName(class APawn** OwningPawn, class UObject** __WorldContext, struct FText* Object_Name);
 	void STATIC_ShowHideHUD(bool* isMenuOpen, class APawn** OwningPawn, class AController** Controller, class UObject** __WorldContext);
-	void STATIC_GetNumItemsFromInventory(class UFGInventoryComponent** InventoryComponent, class UClass** mItemClass, class UObject** __WorldContext, int* NumItems);
+	void STATIC_GetNumItemsFromInventory(class UFGInventoryComponent** inventoryComponent, class UClass** mItemClass, class UObject** __WorldContext, int* NumItems);
 	void STATIC_GetFactoryGameOrange(class UObject** __WorldContext, struct FLinearColor* Orange, struct FSlateColor* OrangeText);
 	void STATIC_GetFactoryGameWhite(class UObject** __WorldContext, struct FSlateColor* TextWhite, struct FLinearColor* GraphicsWhite);
 	void STATIC_GetNumItemsFromPlayerInventory(class APawn** OwningPawn, class UClass** mItemClass, class UObject** __WorldContext, int* NumItems);

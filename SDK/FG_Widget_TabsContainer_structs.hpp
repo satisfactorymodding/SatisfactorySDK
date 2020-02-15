@@ -10,8 +10,8 @@
 #include "FG_UMG_classes.hpp"
 #include "FG_CoreUObject_classes.hpp"
 #include "FG_Engine_classes.hpp"
-#include "FG_ImageAndText_classes.hpp"
 #include "FG_Slate_classes.hpp"
+#include "FG_ImageAndText_classes.hpp"
 
 namespace SDK
 {

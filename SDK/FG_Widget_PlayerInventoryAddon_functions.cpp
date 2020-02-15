@@ -138,15 +138,15 @@ void UWidget_PlayerInventoryAddon_C::OnInventorySlotMoveStack(class UWidget_Inve
 // Function Widget_PlayerInventoryAddon.Widget_PlayerInventoryAddon_C.SetInventoryComponents
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFGInventoryComponent**  InventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UFGInventoryComponent**  inventoryComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UFGInventoryComponent**  trash                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWidget_PlayerInventoryAddon_C::SetInventoryComponents(class UFGInventoryComponent** InventoryComponent, class UFGInventoryComponent** trash)
+void UWidget_PlayerInventoryAddon_C::SetInventoryComponents(class UFGInventoryComponent** inventoryComponent, class UFGInventoryComponent** trash)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Widget_PlayerInventoryAddon.Widget_PlayerInventoryAddon_C.SetInventoryComponents");
 
 	UWidget_PlayerInventoryAddon_C_SetInventoryComponents_Params params;
-	params.InventoryComponent = InventoryComponent;
+	params.inventoryComponent = inventoryComponent;
 	params.trash = trash;
 
 	auto flags = fn->FunctionFlags;
